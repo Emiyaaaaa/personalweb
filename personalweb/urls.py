@@ -18,8 +18,11 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 from diary.views import DiaryView
+import xadmin
+
 
 urlpatterns = [
+    url('^xadmin/', xadmin.site.urls),
     url(r'^admin/', admin.site.urls),
     url(r'^diary/', DiaryView.as_view())
 ]

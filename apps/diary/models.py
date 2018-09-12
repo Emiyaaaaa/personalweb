@@ -11,3 +11,10 @@ class Diary(models.Model):
     update_at = models.DateTimeField(verbose_name=u'更新时间', auto_now=True, null=False)
     is_display = models.IntegerField(verbose_name='展示', choices=((0, '显示'), (1, '隐藏')), default=1)
     is_delete = models.IntegerField(choices=((0, '已删除'), (1, '未删除')), default=1)
+
+    class Meta:
+        verbose_name = u"日记"
+        verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return self.username

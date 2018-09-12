@@ -1,0 +1,46 @@
+.left-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+.left-menu a
+{
+	display:block;
+    /*文本*/
+    font-size: 19px;
+    letter-spacing: 2px;
+	color: #000000;
+	text-align:center;
+	text-decoration:none;
+    /*形状*/
+	border-radius: 30px;
+    background-color: #FFFFFF;
+    padding: 17px 20px;
+    width: 40%;
+    height: 20px;
+    margin-left: 43%;
+    margin-top: 10px;
+    /*阴影*/
+    -moz-box-shadow:2px 2px 6px #bfbfbf; 
+    -webkit-box-shadow:2px 2px 6px #bfbfbf;
+    box-shadow:2px 2px 6px #bfbfbf;
+    /*渐变*/
+    transition:background-color 0.4s, color 0.3s;
+}
+
+.left-menu a:hover:not(.active) {
+    box-shadow: 1px 1px 3px #F7F7F7;
+    background-color: #B5B5B5;
+    color: white;
+}
+
+.left-menu a.active {
+    box-shadow: 1px 1px 3px #F7F7F7;
+    background-color: #B5B5B5;
+    color: white;
+}

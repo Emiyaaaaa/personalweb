@@ -88,7 +88,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'personalweb',
+        'NAME': 'personalweb1',
         'USER': "root",
         'PASSWORD': "1234",
         'HOST': "127.0.0.1",

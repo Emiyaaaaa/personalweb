@@ -2,15 +2,16 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 50%;
+    width: 75%;
     position: fixed;
     height: 100%;
     overflow: auto;
 }
 
-#matter0 ul::-webkit-scrollbar {
+/*#matter0 ul::-webkit-scrollbar {
         display: none;
-    }
+    }*/
+
 
 #matter0 ul li {
 	display: none;
@@ -27,12 +28,12 @@
 	border-radius: 15px;
     background-color: #FFFFFF;
     padding: 17px 20px;
-    width: 85%;
+    width: 68%;
     height: 84px;
     margin-left: 5%;
     margin-top: 10px;
     /*阴影*/
-    -moz-box-shadow:2px 2px 6px #bfbfbf; 
+    -moz-box-shadow:2px 2px 6px #bfbfbf;
     -webkit-box-shadow:2px 2px 6px #bfbfbf;
     box-shadow:2px 2px 6px #bfbfbf;
     /*渐变*/
@@ -74,9 +75,9 @@
     overflow: auto;
 }
 
-#matter1 ul::-webkit-scrollbar {
+/*#matter1 ul::-webkit-scrollbar {
         display: none;
-    }
+    }*/
 
 #matter1 a
 {

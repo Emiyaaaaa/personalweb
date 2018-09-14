@@ -8,6 +8,10 @@
     overflow: auto;
 }
 
+.left-menu ul::-webkit-scrollbar {
+        display: none;
+    }
+
 .left-menu a
 {
 	display:block;

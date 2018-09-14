@@ -5,6 +5,9 @@ $(document).ready(function() {
 			liNum = $(".matter0 ul li").length;
 			for (var i = 0; i < liNum; i++) {
 				$(".matter0 ul li:eq(" + i +")").delay(70*i).fadeIn();
+				if (i > 10){
+					$(".matter0 ul li:eq(" + i +")").fadeIn();
+				}
 			}
 		}
 		divFadeIn();
@@ -19,6 +22,9 @@ $(document).ready(function() {
 					}, openMatter);
 				}
 		    function openMatter(obj) {
+		    	// alert($("#matter0 > ul").outerHeight(true));
+		    	// alert($(document).height())
+		    	// alert($(window).height())
 		        for (var i = 0; i < liNum; i++) {
 		            if (i == obj.data.index) {
 		                document.getElementById("matter" + i).style.display = "block";
@@ -35,4 +41,8 @@ $(document).ready(function() {
 	    	$(".left-menu a").removeClass("active");
 			$(this).addClass("active");
 	    });
+	    function abc(){
+				alert($("#matter0 > ul").outerHeight(true));
+			}
+		''
 	});

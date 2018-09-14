@@ -13,7 +13,7 @@ xadmin.site.register(views.BaseAdminView,BaseSetting)
 
 
 class GlobalSettings(object):
-    site_title='personalweb'
+    site_title='PersonalWeb'
     site_footer='Emiya'
     menu_style='accordion'
 

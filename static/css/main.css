@@ -1,11 +1,9 @@
-/*html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dd, dl, dt, li, ol, ul, fieldset, form, label, legend{
-
-margin: 0; padding: 0; border: 0; outline: 0; font-weight: inherit; font-style: inherit; font-family: inherit; font-size:100%; text-align: left;
-
-vertical-align: baseline;
-
+a, abbr, address, blockquote, body, caption, cite, code, dd, del, dfn, div, dl, dt, em, fieldset, form, h1, h2, h3, h4, h5, h6, html, iframe, img, ins, label, legend, li, object, ol, p, pre, q, small, span, strong, sub, sup, table, tbody, td, tfoot, th, thead, tr, ul {
+    border: 0;
+    margin: 0;
+    padding: 0;
 }
-*/
+
 img {
 
 	border:none;
@@ -18,14 +16,23 @@ ul {
 
 }
 
-body {
+html, body {
+	height: 100%;
+	min-width: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
 	background-color:#FFFFFF;
+
 }
 
+
 .middle{
-    height:50%;
+	width:75%;
+    height:100%;
     margin-left:25%;
-    margin-right: 25%;
+    overflow-y: auto;
 }
 
 .left {
@@ -34,8 +41,25 @@ body {
 	height:100%;
 }
 
-.right{
-	float: right;
-	width:25%;
-	height:100%;
+
+::-webkit-scrollbar {
+	width:10px;
+	height:10px;
+}
+::-webkit-scrollbar-track-piece {
+	background-color:#F7F7F7;
+}
+::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background-color:#cfcece;
+	background-clip:padding-box;
+	min-height:28px;
+}
+::-webkit-scrollbar-thumb:hover {
+	border-radius: 10px;
+	background-color:#bbb;
+}
+::-webkit-scrollbar-track {
+	border-radius: 10px;
+	background: #EDEDED;
 }

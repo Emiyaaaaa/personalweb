@@ -91,8 +91,7 @@ DATABASES = {
         'NAME': 'personalweb1',
         'USER': "root",
         'PASSWORD': "1234",
-        'HOST': "127.0.0.1",
-        'POST': '3306'
+        'HOST': ""
     }
 }
 

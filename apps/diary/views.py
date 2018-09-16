@@ -4,9 +4,18 @@ from .models import Diary
 
 class DiaryView(View):
     def get(self,request):
-        all_diary = Diary.objects.all()
-        print(all_diary)
-        return render(request, 'personalweb.html')
+        diary_info = []
+        all_diary = Diary.objects.all().order_by('-text_id')
+        for diary in all_diary:
+            if diary.text_id <= 10:
+                diary_info.append({'content':diary.content,
+                                    'date':diary.date
+                                    })
+            else:
+                break
+
+
+        return render(request, 'personalweb.html',{'diary_info':diary_info})
 
     def post(self,request):
         return render(request, 'personalweb.html')

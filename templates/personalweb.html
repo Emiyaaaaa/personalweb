@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	
+
 	<meta charset="utf-8">
 	<title>Emiya</title>
 	<script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
@@ -34,245 +34,53 @@
 	        </ul>
 		</div>
 	</div>
-	<div class="right">1</div>
-
     <div class="middle">
-        <div id="matter0" class="matter0" style="display: none">
+        <div id="matter0" class="matter0" style="display: block">
             <ul>
+                {% for diary in diary_info %}
 	            <li>
 	            	<a href="#">
-						<h4>2018.9.91 晴</h4>
-						<p>文字wenzi123</p>
+						<h4>{{ diary.date }}</h4>
+						<p>{{ diary.content }}</p>
 	            	</a>
 	            </li>
-	            <li>
-					<a href="#">
-						<h4>2018.9.92 晴</h4>
-						<p>文字wenzi123</p>
-	            	</a>
-	            </li>
-	            <li>
-	            	<a href="#">
-						<h4>2018.9.9 晴</h4>
-						<p>文字wenzi123</p>
-	            	</a>
-	            </li>
-	            <li>
-					<a href="#">
-						<h4>2018.9.9 晴</h4>
-						<p>文字wenzi123</p>
-	            	</a>
-	            </li>
-	            <li>
-					<a href="#">
-						<h4>2018.9.9 晴</h4>
-						<p>文字wenzi123</p>
-	            	</a>
-	            </li>
-	            <li>
-					<a href="#">
-						<h4>2018.9.9 晴</h4>
-						<p>文字wenzi123</p>
-	            	</a>
-	            </li>
-	            <li>
-					<a href="#">
-						<h4>2018.9.9 晴</h4>
-						<p>文字wenzi123</p>
-	            	</a>
-	            </li>
-	            <li>
-					<a href="#">
-						<h4>2018.9.9 晴</h4>
-						<p>文字wenzi123</p>
-	            	</a>
-	            </li>
-	            <li>
-					<a href="#">
-						<h4>2018.9.9 晴</h4>
-						<p>文字wenzi123</p>
-	            	</a>
-	            </li>
-	        </ul>
+                {% endfor %}
+            </ul>
         </div>
 
-        <div id="matter1" class="matter1" style="display: block">
+        <div id="matter1" class="matter1" style="display: none">
 			<ul>
 	            <li>
 	            	<a href="#">
-						<h4>2018.9.9 晴</h4>
-						<p>文字wenzi123</p>
+						<h4></h4>
+						<p>尚未开发</p>
 	            	</a>
 	            </li>
-	            <li>
-					<a href="#">
-						<h4>2018.9.9 晴</h4>
-						<p>文字wenzi123</p>
-	            	</a>
-	            </li>
-	            <li>
-	            	<a href="#">
-						<h4>2018.9.9 晴</h4>
-						<p>文字wenzi123</p>
-	            	</a>
-	            </li>
-	            <li>
-					<a href="#">
-						<h4>2018.9.9 晴</h4>
-						<p>文字wenzi123</p>
-	            	</a>
-	            </li>
-	            <li>
-					<a href="#">
-						<h4>2018.9.9 晴</h4>
-						<p>文字wenzi123</p>
-	            	</a>
-	            </li>
-	            <li>
-					<a href="#">
-						<h4>2018.9.9 晴</h4>
-						<p>文字wenzi123</p>
-	            	</a>
-	            </li>
-	            <li>
-					<a href="#">
-						<h4>2018.9.9 晴</h4>
-						<p>文字wenzi123</p>
-	            	</a>
-	            </li>
-	            <li>
-					<a href="#">
-						<h4>2018.9.9 晴</h4>
-						<p>文字wenzi123</p>
-	            	</a>
-	            </li>
-	            <li>
-					<a href="#">
-						<h4>2018.9.9 晴</h4>
-						<p>文字wenzi123</p>
-	            	</a>
-	            </li>
-	        </ul>
+            </ul>
         </div>
 
 		<div id="matter2" class="matter2" style="display: none">
 			<ul>
 	            <li>
 	            	<a href="#">
-						<h4>2018.9.9 晴</h4>
-						<p>文字wenzi123</p>
+						<h4></h4>
+						<p>尚未开发</p>
 	            	</a>
 	            </li>
-	            <li>
-					<a href="#">
-						<h4>2018.9.9 晴</h4>
-						<p>文字wenzi123</p>
-	            	</a>
-	            </li>
-	            <li>
-	            	<a href="#">
-						<h4>2018.9.9 晴</h4>
-						<p>文字wenzi123</p>
-	            	</a>
-	            </li>
-	            <li>
-					<a href="#">
-						<h4>2018.9.9 晴</h4>
-						<p>文字wenzi123</p>
-	            	</a>
-	            </li>
-	            <li>
-					<a href="#">
-						<h4>2018.9.9 晴</h4>
-						<p>文字wenzi123</p>
-	            	</a>
-	            </li>
-	            <li>
-					<a href="#">
-						<h4>2018.9.9 晴</h4>
-						<p>文字wenzi123</p>
-	            	</a>
-	            </li>
-	            <li>
-					<a href="#">
-						<h4>2018.9.9 晴</h4>
-						<p>文字wenzi123</p>
-	            	</a>
-	            </li>
-	            <li>
-					<a href="#">
-						<h4>2018.9.9 晴</h4>
-						<p>文字wenzi123</p>
-	            	</a>
-	            </li>
-	            <li>
-					<a href="#">
-						<h4>2018.9.9 晴</h4>
-						<p>文字wenzi123</p>
-	            	</a>
-	            </li>
-	        </ul>
+            </ul>
         </div>
 
         <div id="matter3" class="matter3" style="display: none">
 			<ul>
 	            <li>
 	            	<a href="#">
-						<h4>2018.9.9 晴</h4>
-						<p>文字wenzi123</p>
+						<h4></h4>
+						<p>尚未开发</p>
 	            	</a>
 	            </li>
-	            <li>
-					<a href="#">
-						<h4>2018.9.9 晴</h4>
-						<p>文字wenzi123</p>
-	            	</a>
-	            </li>
-	            <li>
-	            	<a href="#">
-						<h4>2018.9.9 晴</h4>
-						<p>文字wenzi123</p>
-	            	</a>
-	            </li>
-	            <li>
-					<a href="#">
-						<h4>2018.9.9 晴</h4>
-						<p>文字wenzi123</p>
-	            	</a>
-	            </li>
-	            <li>
-					<a href="#">
-						<h4>2018.9.9 晴</h4>
-						<p>文字wenzi123</p>
-	            	</a>
-	            </li>
-	            <li>
-					<a href="#">
-						<h4>2018.9.9 晴</h4>
-						<p>文字wenzi123</p>
-	            	</a>
-	            </li>
-	            <li>
-					<a href="#">
-						<h4>2018.9.9 晴</h4>
-						<p>文字wenzi123</p>
-	            	</a>
-	            </li>
-	            <li>
-					<a href="#">
-						<h4>2018.9.9 晴</h4>
-						<p>文字wenzi123</p>
-	            	</a>
-	            </li>
-	            <li>
-					<a href="#">
-						<h4>2018.9.9 晴</h4>
-						<p>文字wenzi123</p>
-	            	</a>
-	            </li>
-	        </ul>
+            </ul>
 	    </div>
-	    
+    </div>
 	<script type="text/javascript" src="{% static 'js/main.js' %}"></script>
  
 </body>

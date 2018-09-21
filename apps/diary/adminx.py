@@ -3,6 +3,7 @@
 import xadmin
 from xadmin import views
 from .models import Diary
+from .models import DiaryComment
 
 #以下代码为后台管理系统的主题，logo配置代码
 
@@ -18,7 +19,7 @@ class GlobalSettings(object):
     menu_style='accordion'
 
 
-class Diaryadmin(object):
+class DiaryAdmin(object):
     # 设置列表显示字段
     list_display = ['content', 'date','weather','is_display']
     # 设置列表查询字段
@@ -34,6 +35,13 @@ class Diaryadmin(object):
     # 自动刷新列表页面（秒数）
     # refresh_times = [3, 5]
 
+class DiaryCommentAdmin(object):
+    list_display = ['comment','content','created_at','is_display']
+    search_field = ['comment','content','created_at','is_display']
+    list_editable = ['is_display']
+    exclude = ['comment_id','is_display']
 
 xadmin.site.register(views.CommAdminView,GlobalSettings)
-xadmin.site.register(Diary,Diaryadmin)
+xadmin.site.register(Diary,DiaryAdmin)
+xadmin.site.register(DiaryComment,DiaryCommentAdmin)
+

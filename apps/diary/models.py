@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-from django.db import models
 from datetime import datetime
 import urllib.request
 import json
 import gzip
+from django.db import models
 
 class WeatherField(models.CharField):
     def get_weather(self,city = '榆次'):
@@ -38,3 +38,21 @@ class Diary(models.Model):
 
     def __str__(self):
         return self.content
+
+
+class DiaryComment(models.Model):
+    comment = models.ForeignKey(Diary,on_delete=models.CASCADE,verbose_name='主题')
+    nick_name = models.CharField(max_length=50,verbose_name='昵称',null=True,blank=True)
+    e_mail = models.CharField(max_length=50,verbose_name='邮箱',null=True,blank=True)
+    content = models.TextField(verbose_name='评论')
+    comment_to = models.CharField(max_length=50,verbose_name='评论对象',null=True,blank=True)
+    created_at = models.DateTimeField(verbose_name=u'发布时间', auto_now_add=True, null=False)
+    update_at = models.DateTimeField(verbose_name=u'更新时间', auto_now=True, null=False)
+    is_display = models.IntegerField(verbose_name='展示', choices=((0, '显示'), (1, '隐藏')), default=0)
+
+    class Meta:
+        verbose_name = u"动态评论"
+        verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return self.comment.content

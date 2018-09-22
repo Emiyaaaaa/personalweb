@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 from datetime import datetime
-import urllib.request
+import urllib.request,urllib.parse
 import json
 import gzip
 from django.db import models
@@ -30,6 +30,7 @@ class Diary(models.Model):
     like_num = models.IntegerField(verbose_name=u'点赞数',default='0')
     created_at = models.DateTimeField(verbose_name=u'创建时间', auto_now_add=True, null=False)
     update_at = models.DateTimeField(verbose_name=u'更新时间', auto_now=True, null=False)
+    stick = models.IntegerField(verbose_name='置顶',choices=((0, '未置顶'), (1, '置顶')), default=0)
     is_display = models.IntegerField(verbose_name='展示', choices=((0, '显示'), (1, '隐藏')), default=0)
 
     class Meta:

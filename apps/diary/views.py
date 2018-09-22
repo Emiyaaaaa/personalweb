@@ -5,6 +5,7 @@ from .models import Diary
 class DiaryView(View):
     def get(self,request):
         diary_info = []
+        diary_list = []
         week_dict = {
             'Mon':'星期一',
             'Tues':'星期二',
@@ -14,9 +15,12 @@ class DiaryView(View):
             'Sat':'星期六',
             'Sun':'星期日'
         }
+        stick_diary = Diary.objects.filter(stick=1)
         all_diary = Diary.objects.all().order_by('-text_id')
+        diary = stick_diary|all_diary
         i = 0
-        for diary in all_diary:
+        print(diary)
+        for diary in diary:
             date = diary.date
             year = date.strftime('%Y')
             month = date.strftime('%m')
@@ -28,13 +32,12 @@ class DiaryView(View):
             except:
                 weather = ''
             diary_info.append({'content':diary.content,
-                                'date':year + '年' + month + '月' + day + '日' + ' ' + cn_week + ' ' + weather
+                                'date':year + '年' + month + '月' + day + '日' + ' ' + cn_week + ' ' + weather,
+                                'is_display':diary.is_display
                                 })
-            print(diary.date)
             i = i + 1
             if i >= 20:
                 break
-
 
         return render(request, 'personalweb.html',{'diary_info':diary_info})
 

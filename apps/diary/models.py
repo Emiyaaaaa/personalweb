@@ -24,6 +24,7 @@ class Diary(models.Model):
     text_id = models.AutoField(primary_key = True)
     username = models.CharField(max_length=50, default='Emiya')
     content = models.TextField(verbose_name=u'正文')
+    tag = models.CharField(verbose_name='标签',null=True,blank=True)
     weather = WeatherField(max_length=100,verbose_name='天气',default='')
     author = models.CharField(verbose_name=u'作者', max_length=100,default='Emiya')
     date = models.DateTimeField(verbose_name=u'日期',default= datetime.now)

@@ -5,7 +5,6 @@ from .models import Diary
 class DiaryView(View):
     def get(self,request):
         diary_info = []
-        diary_list = []
         week_dict = {
             'Mon':'星期一',
             'Tues':'星期二',
@@ -19,7 +18,6 @@ class DiaryView(View):
         all_diary = Diary.objects.all().order_by('-text_id')
         diary = stick_diary|all_diary
         i = 0
-        print(diary)
         for diary in diary:
             date = diary.date
             year = date.strftime('%Y')

@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'diary',
     'xadmin',
-    'crispy_forms'
+    'crispy_forms',
+    'personalcenter'
 ]
 
 MIDDLEWARE = [

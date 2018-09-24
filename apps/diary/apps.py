@@ -1,5 +1,6 @@
 from django.apps import AppConfig
 
 
-class PersonalwebAppConfig(AppConfig):
-    name = 'personalweb_app'
+class DiaryConfig(AppConfig):
+    name = 'diary'
+    verbose_name = '动态'

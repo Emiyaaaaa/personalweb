@@ -15,7 +15,7 @@ xadmin.site.register(views.BaseAdminView,BaseSetting)
 
 class GlobalSettings(object):
     site_title='PersonalWeb'
-    site_footer='Emiya'
+    site_footer='www.emiya.com.cn'
     menu_style='accordion'
 
 
@@ -35,11 +35,13 @@ class DiaryAdmin(object):
     # 自动刷新列表页面（秒数）
     # refresh_times = [3, 5]
 
+
 class DiaryCommentAdmin(object):
     list_display = ['comment','content','created_at','is_display']
     search_field = ['comment','content','created_at','is_display']
     list_editable = ['is_display']
     exclude = ['comment_id','is_display']
+    # model_icon = 'fa fa-user-circle'
 
 xadmin.site.register(views.CommAdminView,GlobalSettings)
 xadmin.site.register(Diary,DiaryAdmin)

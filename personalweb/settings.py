@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'diary',
     'xadmin',
     'crispy_forms',
-    'personalcenter'
+    'personalcenter',
+    'changeLog'
 ]
 
 MIDDLEWARE = [

@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 import xadmin
-from xadmin import views
 from .models import ChangeLog,Version
 
 class VersionAdmin(object):

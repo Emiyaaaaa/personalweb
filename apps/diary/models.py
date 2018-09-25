@@ -23,16 +23,17 @@ class WeatherField(models.CharField):
 class Diary(models.Model):
     text_id = models.AutoField(primary_key = True)
     username = models.CharField(max_length=50, default='Emiya')
+    title = models.CharField(max_length=50,verbose_name=u'标题',null=True,blank=True)
     content = models.TextField(verbose_name=u'正文')
-    tag = models.CharField(max_length=50,verbose_name='标签',null=True,blank=True)
-    weather = WeatherField(max_length=100,verbose_name='天气',default='')
+    tag = models.CharField(max_length=50,verbose_name=u'标签',null=True,blank=True)
+    weather = WeatherField(max_length=100,verbose_name=u'天气',default='')
     author = models.CharField(verbose_name=u'作者', max_length=100,default='Emiya')
     date = models.DateTimeField(verbose_name=u'日期',default= datetime.now)
     like_num = models.IntegerField(verbose_name=u'点赞数',default='0')
     created_at = models.DateTimeField(verbose_name=u'创建时间', auto_now_add=True, null=False)
     update_at = models.DateTimeField(verbose_name=u'更新时间', auto_now=True, null=False)
-    stick = models.IntegerField(verbose_name='置顶',choices=((0, '未置顶'), (1, '置顶')), default=0)
-    is_display = models.IntegerField(verbose_name='展示', choices=((0, '显示'), (1, '隐藏')), default=0)
+    stick = models.IntegerField(verbose_name=u'置顶',choices=((0, '未置顶'), (1, '置顶')), default=0)
+    is_display = models.IntegerField(verbose_name=u'展示', choices=((0, '显示'), (1, '隐藏')), default=0)
 
     class Meta:
         verbose_name = u"动态"

@@ -12,6 +12,7 @@ class SmallVersionAdmin(object):
     list_display = ['version','small_version','update_at']
     exclude = ['update_at','created_at']
 
+
 class ChangeLogAdmin(object):
     list_display = ['small_version','Introduction','update_at']
     exclude = ['update_at','created_at']

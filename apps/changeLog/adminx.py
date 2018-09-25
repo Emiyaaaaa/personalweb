@@ -5,16 +5,19 @@ from .models import ChangeLog,Version,SmallVersion
 
 class VersionAdmin(object):
     list_display = ['version','Introduction','update_at']
+    search_field = ['version']
     exclude = ['update_at','created_at']
 
 
 class SmallVersionAdmin(object):
     list_display = ['version','small_version','update_at']
+    search_field = ['version','small_version']
     exclude = ['update_at','created_at']
 
 
 class ChangeLogAdmin(object):
-    list_display = ['small_version','Introduction','update_at']
+    list_display = ['version','Introduction','update_at']
+    search_field = ['version']
     exclude = ['update_at','created_at']
 
 xadmin.site.register(Version,VersionAdmin)

@@ -17,6 +17,7 @@ class SmallVersionAdmin(object):
 
 class ChangeLogAdmin(object):
     list_display = ['version','Introduction','update_at']
+    list_editable = ['version']
     search_field = ['version']
     exclude = ['update_at','created_at']
 

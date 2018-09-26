@@ -13,6 +13,8 @@ class PersonalCenter(models.Model):
     microBlog = models.CharField(max_length=50,verbose_name='微博',null=True,blank=True)
     weChat = models.CharField(max_length=50,verbose_name='微信',null=True,blank=True)
     jike = models.CharField(max_length=50,verbose_name='即刻',null=True,blank=True)
+    update_at = models.DateTimeField(verbose_name=u'更新时间', auto_now=True, null=False)
+
 
     class Meta:
         verbose_name = u"个人中心"
@@ -20,4 +22,11 @@ class PersonalCenter(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class toDo(models.Model):
+    things = models.CharField(max_length=100,verbose_name='代办事项')
+    status = models.IntegerField(verbose_name='状态', choices=((0, '未完成'), (1, '已完成')), default=0)
+    created_at = models.DateTimeField(verbose_name=u'创建时间', auto_now_add=True, null=False)
+    update_at = models.DateTimeField(verbose_name=u'更新时间', auto_now=True, null=False)
 

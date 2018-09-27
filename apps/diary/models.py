@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-from datetime import datetime
 import urllib.request,urllib.parse
 import json
 import gzip
 from django.db import models
+from datetime import datetime
+import warnings
+from django.conf import settings
+from django.utils import timezone
 
 class WeatherField(models.CharField):
     def get_weather(self,city = '榆次'):
@@ -14,10 +17,26 @@ class WeatherField(models.CharField):
         weather_dict = json.loads(weather_data)
         forecast = weather_dict.get('data').get('forecast')
         weather = forecast[0].get('type')
-        return weather
+        return '  '+weather
 
     def get_prep_value(self, value):
         return self.get_weather()
+
+
+class MyDateField(models.CharField):
+    def get_prep_value(self, value):
+        week_dict = {
+            'Mon': '星期一',
+            'Tues': '星期二',
+            'Wed': '星期三',
+            'Thu': '星期四',
+            'Fri': '星期五',
+            'Sat': '星期六',
+            'Sun': '星期日'
+        }
+        strftime = datetime.now().strftime
+        cn_week = week_dict[strftime('%a')]
+        return str(strftime('%Y') + '年' + strftime('%m') + '月' + strftime('%d') + '日  ' + cn_week)
 
 
 class Diary(models.Model):
@@ -26,9 +45,9 @@ class Diary(models.Model):
     title = models.CharField(max_length=50,verbose_name=u'标题',null=True,blank=True)
     content = models.TextField(verbose_name=u'正文')
     tag = models.CharField(max_length=50,verbose_name=u'标签',null=True,blank=True)
-    weather = WeatherField(max_length=100,verbose_name=u'天气',default='')
+    weather = WeatherField(max_length=50,verbose_name=u'天气',default='',null=True,blank=True)
+    date = MyDateField(max_length=100,verbose_name=u'日期',null=True,blank=True)
     author = models.CharField(verbose_name=u'作者', max_length=100,default='Emiya')
-    date = models.DateTimeField(verbose_name=u'日期',default= datetime.now)
     like_num = models.IntegerField(verbose_name=u'点赞数',default='0')
     created_at = models.DateTimeField(verbose_name=u'创建时间', auto_now_add=True, null=False)
     update_at = models.DateTimeField(verbose_name=u'更新时间', auto_now=True, null=False)

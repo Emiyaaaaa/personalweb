@@ -11,6 +11,7 @@ class PersonalCenterAdmin(object):
 class ToDoAdmin(object):
     list_display = ['things','status','created_at','update_at']
     search_field = ['status ','things']
+    list_editable = ['status']
 
 
 xadmin.site.register(PersonalCenter,PersonalCenterAdmin)

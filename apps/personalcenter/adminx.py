@@ -10,6 +10,8 @@ class PersonalCenterAdmin(object):
 
 class ToDoAdmin(object):
     list_display = ['things','status','created_at','update_at']
+    search_field = ['status ','things']
 
 
 xadmin.site.register(PersonalCenter,PersonalCenterAdmin)
+xadmin.site.register(ToDo,ToDoAdmin)

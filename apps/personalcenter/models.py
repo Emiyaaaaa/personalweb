@@ -30,3 +30,10 @@ class ToDo(models.Model):
     created_at = models.DateTimeField(verbose_name=u'创建时间', auto_now_add=True, null=False)
     update_at = models.DateTimeField(verbose_name=u'完成时间', auto_now=True, null=False)
 
+    class Meta:
+        verbose_name = u"个人中心"
+        verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return self.things
+

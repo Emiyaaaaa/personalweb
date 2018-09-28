@@ -8,7 +8,7 @@ import time
 try:
     while True:
         os.system('git pull origin master')
-        print('\n'+str(datetime.now()))
+        print(str(datetime.now())+'\n')
         time.sleep(120)
 except BaseException as e:
     print(str(datetime.now()) + ' ' + str(e))

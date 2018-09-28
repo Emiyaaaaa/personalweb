@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'personalweb.wsgi.application'
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),os.path.join(BASE_DIR, 'media')]
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -96,6 +96,17 @@ DATABASES = {
         'HOST': ""
     }
 }
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'personalweb1',
+#         'USER': "root",
+#         'PASSWORD': "1234",
+#         'HOST': "60.205.207.236"
+#     }
+# }
 
 AUTH_PASSWORD_VALIDATORS = [
     {

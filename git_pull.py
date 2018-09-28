@@ -3,7 +3,7 @@
 # @Author  : Li Haozheng
 # @Time    : 2018/9/28 11:15
 from git import Repo
-repoPath = r'E:\python\personalweb'
+repoPath = r'C:\personalweb'
 repo = Repo(repoPath)
 repo.git.checkout('.')
 

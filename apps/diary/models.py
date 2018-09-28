@@ -17,7 +17,7 @@ class WeatherField(models.CharField):
         weather_dict = json.loads(weather_data)
         forecast = weather_dict.get('data').get('forecast')
         weather = forecast[0].get('type')
-        return '  '+weather
+        return weather
 
     def get_prep_value(self, value):
         return self.get_weather()

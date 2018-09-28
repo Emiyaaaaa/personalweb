@@ -6,4 +6,5 @@ from git import Repo
 repoPath = r'E:\python\personalweb'
 repo = Repo(repoPath)
 repo.git.checkout('.')
+
 repo.git.clean('-df')

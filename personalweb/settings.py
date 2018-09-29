@@ -100,7 +100,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 #     }
 # }
 
-with open('personalWeb.pwd', 'rb') as file:
+with open('./tools/personalWeb.pwd', 'rb') as file:
     dict = pickle.load(file)
 
 DATABASES = {

@@ -9,10 +9,10 @@ import time
 i = 0
 try:
     while True:
+        print(i)
         os.system('git pull origin master')
         print(str(datetime.now())+'\n')
         time.sleep(120)
-        print(i)
         i = i + 1
 except BaseException as e:
     print(str(datetime.now()) + ' ' + str(e))

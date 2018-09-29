@@ -3,9 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://E:/2345下载/txy (3)/apps/.idea/apps.iml" filepath="E:/2345下载/txy (3)/apps/.idea/apps.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../draft/.idea/draft.iml" filepath="$PROJECT_DIR$/../draft/.idea/draft.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/personalweb.iml" filepath="$PROJECT_DIR$/.idea/personalweb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../untitled/qzone/.idea/qzone.iml" filepath="$PROJECT_DIR$/../untitled/qzone/.idea/qzone.iml" />
       <module fileurl="file://E:/2345下载/txy (3)/venv/.idea/venv.iml" filepath="E:/2345下载/txy (3)/venv/.idea/venv.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../untitled/草稿箱/.idea/草稿箱.iml" filepath="$PROJECT_DIR$/../untitled/草稿箱/.idea/草稿箱.iml" />
     </modules>
   </component>
 </project>

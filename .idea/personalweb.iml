@@ -22,7 +22,8 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="apps" />
     <orderEntry type="module" module-name="venv" />
-    <orderEntry type="module" module-name="draft" />
+    <orderEntry type="module" module-name="草稿箱" />
+    <orderEntry type="module" module-name="qzone" />
   </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_CONFIGURATION" value="Django" />

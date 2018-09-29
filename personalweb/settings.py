@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 
 import os
 import sys
+import urllib.request
+import re
+import pickle
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -87,26 +90,29 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'personalweb1',
-        'USER': "root",
-        'PASSWORD': "1234",
-        'HOST': ""
-    }
-}
-
-
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
 #         'NAME': 'personalweb1',
 #         'USER': "root",
 #         'PASSWORD': "1234",
-#         'HOST': "60.205.207.236"
+#         'HOST': ""
 #     }
 # }
+
+with open('personalWeb.pwd', 'rb') as file:
+    dict = pickle.load(file)
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'personalweb1',
+        'USER': "root",
+        'PASSWORD': dict['password'],
+        'HOST': "60.205.207.236"
+    }
+}
+
 
 AUTH_PASSWORD_VALIDATORS = [
     {

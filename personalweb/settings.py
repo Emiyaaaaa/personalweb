@@ -15,6 +15,7 @@ import sys
 import urllib.request
 import re
 import pickle
+import tools
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -47,7 +48,8 @@ INSTALLED_APPS = [
     'xadmin',
     'crispy_forms',
     'personalcenter',
-    'changeLog'
+    'changeLog',
+    'codeDiary'
 ]
 
 MIDDLEWARE = [
@@ -100,7 +102,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 #     }
 # }
 
-with open('./tools/personalWeb.pwd', 'rb') as file:
+
+with open(os.path.join(BASE_DIR, 'tools','personalWeb.pwd'), 'rb') as file:
     dict = pickle.load(file)
 
 DATABASES = {

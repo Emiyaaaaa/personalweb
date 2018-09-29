@@ -73,7 +73,7 @@ class DiaryComment(models.Model):
     is_display = models.IntegerField(verbose_name='展示', choices=((0, '显示'), (1, '隐藏')), default=0)
 
     class Meta:
-        verbose_name = u"动态评论"
+        verbose_name = u"评论"
         verbose_name_plural = verbose_name
 
     def __str__(self):

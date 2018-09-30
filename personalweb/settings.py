@@ -92,17 +92,6 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'personalweb1',
-#         'USER': "root",
-#         'PASSWORD': "1234",
-#         'HOST': ""
-#     }
-# }
-
-
 with open(os.path.join(BASE_DIR, 'tools','personalWeb.pwd'), 'rb') as file:
     dict = pickle.load(file)
 

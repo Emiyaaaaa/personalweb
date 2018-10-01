@@ -9,11 +9,12 @@ import time
 i = 0
 try:
     while True:
-        a = os.system('git pull origin master')
-        print(a)
+        output = os.popen('git pull origin master')
+        if output.read() ！= 'Already up to date.\n'：
+        	os.system('net stop apache24')
+        	os.system('net start apache24')
         print(str(datetime.now())+'\n')
         time.sleep(120)
-        i = i + 1
 except BaseException as e:
     print(str(datetime.now()) + ' ' + str(e))
     os._exit(1)

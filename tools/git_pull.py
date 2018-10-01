@@ -9,8 +9,8 @@ import time
 i = 0
 try:
     while True:
-        print(i)
-        os.system('git pull origin master')
+        a = os.system('git pull origin master')
+        print(a)
         print(str(datetime.now())+'\n')
         time.sleep(120)
         i = i + 1

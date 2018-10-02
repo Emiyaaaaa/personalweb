@@ -13,6 +13,8 @@ try:
         if output.read() != 'Already up to date.\n':
         	os.system('net stop Apache2.4')
         	os.system('net start Apache2.4')
+            with open() as f:
+                pass
         print(str(datetime.now())+'\n')
         time.sleep(60)
 except BaseException as e:

@@ -9,13 +9,20 @@ import time
 i = 0
 try:
     while True:
-        output = os.popen('git pull origin master')
-        if output.read() != 'Already up to date.\n':
-        	os.system('net stop Apache2.4')
-        	os.system('net start Apache2.4')
-            with open() as f:
-                pass
-        print(str(datetime.now())+'\n')
+        pull = os.popen('git pull origin master')
+        if pull.read() != 'Already up to date.\n':
+            stop_server = os.popen('net stop Apache2.4')
+            start_server = os.popen('net start Apache2.4')
+            with open('github.log','r') as f:
+                f.write(str(datetime.now())+
+                        '\n$ git pull\n'+
+                        pull.read()+
+                        '\n> net stop Apache2.4\n'+
+                        stop_server.read()+
+                        '\n> net start Apache2.4\n'+
+                        start_server.read()+
+                        '\n')
+        print(str(datetime.now()) + '\n' + pull.read())
         time.sleep(60)
 except BaseException as e:
     print(str(datetime.now()) + ' ' + str(e))

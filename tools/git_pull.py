@@ -6,6 +6,7 @@ import os
 from  datetime import datetime
 import time
 
+
 try:
     while True:
         pull = os.popen('git pull origin master')

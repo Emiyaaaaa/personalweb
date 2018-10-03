@@ -22,6 +22,10 @@ try:
                         '\n> net start Apache2.4\n'+
                         start_server.read()+
                         '\n')
+            print(stop_server.read()+
+                  '\n'+
+                  start_server.read()+
+                  '\n')
         print(str(datetime.now()) + '\n' + pull.read())
         time.sleep(60)
 except BaseException as e:

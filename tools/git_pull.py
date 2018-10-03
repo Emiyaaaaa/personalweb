@@ -12,6 +12,7 @@ try:
         pull = os.popen('git pull origin master')
         if pull.read() != 'Already up to date.\n':
             stop_server = os.popen('net stop Apache2.4')
+            time.sleep(5)
             start_server = os.popen('net start Apache2.4')
             with open('github.log','w') as f:
                 f.write(str(datetime.now())+

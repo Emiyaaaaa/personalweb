@@ -4,7 +4,7 @@ $(document).ready(function() {
 		function divFadeIn() {
 			liNum = $(".matter0 ul li").length;
 			for (var i = 0; i < liNum; i++) {
-				$(".matter0 ul li:eq(" + i +")").delay(70*i).fadeIn();
+				$(".matter0 ul li:eq(" + i +")").delay(140*i).fadeIn();
 				if (i > 10){
 					$(".matter0 ul li:eq(" + i +")").fadeIn();
 				}

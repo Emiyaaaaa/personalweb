@@ -39,12 +39,14 @@
         <div id="matter0" class="matter0" style="display: block">
             <ul>
                 {% for diary in diary_info %}
-	            <li>
-	            	<a href="#">
-						<h4>{{ diary.date }}</h4>
-						<p>{{ diary.content }}</p>
-	            	</a>
-	            </li>
+                    {% if diary.is_display == 0 %}
+                        <li>
+                            <a href="#">
+                                <h4>{{ diary.date_weather }}</h4>
+                                <p>{{ diary.content }}</p>
+                            </a>
+                        </li>
+                    {% endif %}
                 {% endfor %}
             </ul>
         </div>

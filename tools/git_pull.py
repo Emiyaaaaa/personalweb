@@ -14,7 +14,7 @@ try:
             stop_server = os.popen('net stop Apache2.4')
             time.sleep(5)
             start_server = os.popen('net start Apache2.4')
-            with open('github.log','w') as f:
+            with open('github.log','a') as f:
                 f.write(str(datetime.now())+
                         '\n$ git pull\n'+
                         pull.read()+

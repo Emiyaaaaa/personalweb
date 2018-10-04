@@ -27,6 +27,9 @@ html, body {
 
 }
 
+body {
+    min-height: 100%
+}
 
 .middle{
 	width:75%;

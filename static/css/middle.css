@@ -1,5 +1,6 @@
 .matter1 {
-    width: 75%;
+    margin: 30px 5px 0 5px;
+    padding: 0 5px 0 0
 }
 
 .matter1 ul {
@@ -29,14 +30,14 @@
 	border-radius: 15px;
     background-color: #FFFFFF;
     padding: 17px 20px;
-    width: 68%;
+    width: 80%;
     height: 84px;
     margin-left: 5%;
-    margin-top: 10px;
+    margin-top: 15px;
     /*阴影*/
-    -moz-box-shadow:2px 2px 6px #bfbfbf;
-    -webkit-box-shadow:2px 2px 6px #bfbfbf;
-    box-shadow:2px 2px 6px #bfbfbf;
+    -moz-box-shadow:2px 2px 10px #C4C4C4;
+    -webkit-box-shadow:2px 2px 10px #C4C4C4;
+    box-shadow:2px 2px 10px #C4C4C4;
     /*渐变*/
     transition:background-color 0.4s;
 

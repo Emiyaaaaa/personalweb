@@ -17,7 +17,7 @@ ul {
 }
 
 html, body {
-	height: 100%;
+	overflow:auto;
 	min-width: 0;
     margin-left: 0;
     margin-right: 0;
@@ -27,21 +27,19 @@ html, body {
 
 }
 
-body {
-    min-height: 100%
-}
 
 .middle{
-	width:75%;
-    height:100%;
-    margin-left:25%;
-    overflow-y: auto;
+	width:68%;
+    overflow:auto;
+    margin-left:22%;
+    overflow-y: auto
 }
 
 .left {
+	width:22%;
 	float: left;
-	width:25%;
-	height:100%;
+	overflow:auto;
+	overflow-y: auto
 }
 
 

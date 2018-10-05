@@ -1,23 +1,24 @@
-#matter0 ul {
+.matter1 {
+    width: 75%;
+}
+
+.matter1 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 75%;
-    position: fixed;
-    height: 100%;
-    overflow: auto;
+    width: 100%;
 }
 
-/*#matter0 ul::-webkit-scrollbar {
+/*.matter1 ul::-webkit-scrollbar {
         display: none;
     }*/
 
 
-#matter0 ul li {
+.matter1 ul li {
 	display: none;
 }
 
-#matter0 a
+.matter1 a
 {
 	display:block;
     /*文本*/
@@ -41,25 +42,25 @@
 
 }
 
-#matter0 a:hover:not(.active) {
+.matter1 a:hover:not(.active) {
     box-shadow: 1px 1px 3px #F7F7F7;
     background-color: #ededed;
 }
 
-#matter0 h4{
+.matter1 h4{
 	margin: 0 auto;
 	padding: 0px 10px;
 	font-weight: lighter;
 	font-size: 12px;
 }
 
-#matter0 p{
+.matter1 p{
 	padding: 0px 10px;
 	font-size: 14px;
 
 }
 
-#matter0 a.active {
+.matter1 a.active {
 	box-shadow: 1px 1px 3px #F7F7F7;
     background-color: #ededed;
 }

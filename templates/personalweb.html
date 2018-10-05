@@ -21,23 +21,33 @@
 		<div class="left-menu" id="left-menu">
 			<ul>
 	            <li id="li-0" data-toggle="collapse">
-					<a href="#" class="active">列表1</a>
+					<a href="#" class="active">开发笔记</a>
 	            </li>
 	            <li id="li-1" data-toggle="collapse">
-					<a href="#">列表2</a>
+					<a href="#">我的动态</a>
 	            </li>
 	            <li id="li-2" data-toggle="collapse">
-	            	<a href="#">列表3</a>
+	            	<a href="#">我的应用</a>
 	            </li>
 	            <li id="li-3" data-toggle="collapse">
-					<a href="#">列表4</a>
+					<a href="#">关于我<span style="text-decoration:line-through">们</span></a>
 	            </li>
 	        </ul>
 		</div>
 	</div>
     <div class="middle">
-        <div id="matter0" class="matter0" style="display: block">
+        <div id="matter0" class="matter0" style="display: block;overflow:auto">
             <ul>
+	            <li>
+	            	<a href="#">
+						<h4></h4>
+						<p>尚未开发</p>
+	            	</a>
+	            </li>
+            </ul>
+        </div>
+        <div id="matter1" class="matter1" style="display: none">
+			<ul>
                 {% for diary in diary_info %}
                     {% if diary.is_display == 0 %}
                         <li>
@@ -50,18 +60,6 @@
                 {% endfor %}
             </ul>
         </div>
-
-        <div id="matter1" class="matter1" style="display: none">
-			<ul>
-	            <li>
-	            	<a href="#">
-						<h4></h4>
-						<p>尚未开发</p>
-	            	</a>
-	            </li>
-            </ul>
-        </div>
-
 		<div id="matter2" class="matter2" style="display: none">
 			<ul>
 	            <li>
@@ -72,7 +70,6 @@
 	            </li>
             </ul>
         </div>
-
         <div id="matter3" class="matter3" style="display: none">
 			<ul>
 	            <li>
@@ -85,6 +82,5 @@
 	    </div>
     </div>
 	<script type="text/javascript" src="{% static 'js/main.js' %}"></script>
- 
 </body>
 </html>

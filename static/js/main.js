@@ -2,11 +2,11 @@ $(document).ready(function() {
 		
 		// 透明度变化
 		function divFadeIn() {
-			liNum = $(".matter0 ul li").length;
+			liNum = $(".matter1 ul li").length;
 			for (var i = 0; i < liNum; i++) {
-				$(".matter0 ul li:eq(" + i +")").delay(140*i).fadeIn();
+				$(".matter1 ul li:eq(" + i +")").delay(140*i).fadeIn();
 				if (i > 10){
-					$(".matter0 ul li:eq(" + i +")").fadeIn();
+					$(".matter1 ul li:eq(" + i +")").fadeIn();
 				}
 			}
 		}

@@ -13,11 +13,15 @@
     </script>
     <link rel="icon" type="image/png" href="{% static 'websiteIcon/website_icon.jpg'%}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
-	<link rel="stylesheet" type="text/css" href="{% static 'css/left.css' %}">
-	<link rel="stylesheet" type="text/css" href="{% static 'css/middle.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/left/left.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/middle/matter0.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/middle/matter1.css' %}">
 </head>
 <body>
 	<div class="left">
+		<div class="left-avatar">
+			<img src="{% static 'avatar/123.jpg'%}" width="150" height="140"/>
+		</div>
 		<div class="left-menu" id="left-menu">
 			<ul>
 	            <li id="li-0" data-toggle="collapse">
@@ -30,7 +34,7 @@
 	            	<a href="#">我的应用</a>
 	            </li>
 	            <li id="li-3" data-toggle="collapse">
-					<a href="#">关于我<span style="text-decoration:line-through">们</span></a>
+					<a href="#">关于我<span class="line-through">们</span></a>
 	            </li>
 	        </ul>
 		</div>

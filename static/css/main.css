@@ -28,6 +28,7 @@ html, body {
 }
 
 
+
 .middle{
 	width:55%;
     overflow:auto;
@@ -39,9 +40,13 @@ html, body {
 	width:22%;
 	float: left;
 	overflow:auto;
-	overflow-y: auto
+	overflow-y: auto;
+	position:fixed
 }
 
+.line-through {
+	text-decoration:line-through
+}
 
 ::-webkit-scrollbar {
 	width:10px;

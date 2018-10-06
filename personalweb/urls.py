@@ -26,8 +26,8 @@ urlpatterns = [
     url(r'^$', DiaryView.as_view()),
     url(r'^xadmin/', xadmin.site.urls),
     url(r'^admin/', admin.site.urls),
-    url(r'^#codeDiary/', CodeDiaryView.as_view()),
-    url(r'^#diary/',DiaryView.as_view())
+    url(r'^#codeDiary', CodeDiaryView.as_view()),
+    url(r'^#diary',DiaryView.as_view())
 ]
 urlpatterns += static(settings.MEDIA_URL , document_root = settings.MEDIA_ROOT )
 urlpatterns += static(settings.STATIC_URL, document_root = settings.STATIC_ROOT )

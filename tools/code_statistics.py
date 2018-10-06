@@ -6,6 +6,7 @@
 # Be applicable to Django project
 
 import os
+import re
 
 # Settings
 project_name = r'PersonalWeb'
@@ -59,8 +60,14 @@ for file in fileList:
         for line in f:
             code_line = code_line + 1
 
+print('Project: {}\nCode line: {}'.format(str(project_name),str(code_line)))
+
+
+# Project size
 project_size = 0
 for root, dirs, files in os.walk(project_path):
         project_size += sum([os.path.getsize(os.path.join(root, name)) for name in files])
+project_size = project_size / 1024 /1024
+project_size = str(project_size)[:str(project_size).find('.')+3] + 'Mb'
 
-print('Project: {}\nCode line: {}\nProject size: {}'.format(str(project_name),str(code_line),str(project_size)))
+print('Project size: {}'.format(project_size))

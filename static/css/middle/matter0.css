@@ -1,6 +1,6 @@
 .matter0 {
     margin: 30px 5px 0 5px;
-    padding: 0 5px 0 0
+    padding: 0 5px 50px 0
 }
 
 .matter0 ul {
@@ -15,9 +15,6 @@
     }*/
 
 
-.matter0 ul li {
-	display: none;
-}
 
 .matter0 a
 {

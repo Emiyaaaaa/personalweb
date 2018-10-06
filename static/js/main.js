@@ -11,7 +11,7 @@ $(document).ready(function() {
 			}
 		}
 		divFadeIn();
-		$('.demo').flashy();
+		
 
 		// 导航栏交互
 		function navInteraction() {

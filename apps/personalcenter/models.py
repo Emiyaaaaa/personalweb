@@ -6,6 +6,7 @@ from django.db import models
 class PersonalCenter(models.Model):
     name = models.CharField(max_length=30,verbose_name='名字')
     avatar = models.ImageField(max_length=100,verbose_name='头像',upload_to='avatar')
+    website_icon = models.ImageField(max_length=100,verbose_name=u'网站图标',upload_to='websiteIcon')
     sex = models.IntegerField(verbose_name=u'性别', choices=((0, '男'), (1, '女')), default=0)
     job = models.CharField(max_length=100,verbose_name='工作',null=True,blank=True)
     about = models.TextField(verbose_name='简介',null=True,blank=True)

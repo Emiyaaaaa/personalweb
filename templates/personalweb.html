@@ -5,17 +5,20 @@
 
 	<meta charset="utf-8">
 	<title>Emiya</title>
-	<script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
-	<script type="text/javascript" src="http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
-	<script type="text/javascript">
-   		$youziku.load("body", "4b25254045ca4c748e0bc0a81fff289d", "Source-Han-Light");
-   		$youziku.draw();
-    </script>
-    <link rel="icon" type="image/png" href="{% static 'websiteIcon/website_icon.jpg'%}">
+	<link rel="icon" type="image/png" href="{% static 'websiteIcon/website_icon.jpg'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/middle/flashy.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/middle/effect.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/left/left.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/middle/matter0.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/middle/matter1.css' %}">
+	<script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript" src="http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
+	<script type="text/javascript" src="{% static 'js/jquery.flashy.min.js' %}"></script>
+	<script type="text/javascript">
+   		$youziku.load("body", "4b25254045ca4c748e0bc0a81fff289d", "Source-Han-Light");
+   		$youziku.draw();
+    </script>                  
 </head>
 <body>
 	<div class="left">
@@ -40,7 +43,7 @@
 		</div>
 	</div>
     <div class="middle">
-        <div id="matter0" class="matter0" style="display: block;overflow:auto">
+        <div id="matter0" class="matter0" style="display: block">
             <ul>
 	            <li>
 	            	<a href="#">
@@ -63,6 +66,11 @@
                     {% endif %}
                 {% endfor %}
             </ul>
+            <a class="demo" data-flashy-type="inline" href="#inline">Inline</a>
+			<div id="inline" style="display:block;">
+			  <div class="inline">
+			   <!--内联内容-->
+			</div>
         </div>
 		<div id="matter2" class="matter2" style="display: none">
 			<ul>

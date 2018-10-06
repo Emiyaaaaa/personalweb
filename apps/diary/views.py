@@ -13,6 +13,7 @@ class DiaryView(View):
             diary_info.append({'content':diary.content,
                                 'date_weather':diary.date+ ' ' +diary.weather,
                                 'is_display':diary.is_display,
+                                'text_id':diary.text_id
                                 })
             i = i + 1
             if i >= 20:

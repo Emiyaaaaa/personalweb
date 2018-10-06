@@ -19,10 +19,8 @@ ul {
 html, body {
 	overflow:auto;
 	min-width: 0;
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 0;
-    padding-right: 0;
+    margin: 0;
+    padding:0;
 	background-color:#FFFFFF;
 
 }
@@ -49,7 +47,7 @@ html, body {
 }
 
 ::-webkit-scrollbar {
-	width:10px;
+	width:8px;
 	height:10px;
 }
 ::-webkit-scrollbar-track-piece {

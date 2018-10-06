@@ -31,7 +31,7 @@
 					<a href="#" class="active">开发笔记</a>
 	            </li>
 	            <li id="li-1" data-toggle="collapse">
-					<a href="#">我的动态</a>
+					<a href="#1">我的动态</a>
 	            </li>
 	            <li id="li-2" data-toggle="collapse">
 	            	<a href="#">我的应用</a>
@@ -54,17 +54,11 @@
             </ul>
         </div>
         <div id="matter1" class="matter1" style="display: none">
-        	<a class="demo" data-flashy-type="inline" href="#inline">Inline</a>
-			<div id="inline" style="display:block;">
-			    <div class="inline">
-			    <!--内联内容-->
-				</div>
-			</div>
 			<ul>
                 {% for diary in diary_info %}
                     {% if diary.is_display == 0 %}
                         <li>
-                            <a href="#">
+                            <a class="window" href="#">
                                 <h4>{{ diary.date_weather }}</h4>
                                 <p>{{ diary.content }}</p>
                             </a>

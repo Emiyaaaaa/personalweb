@@ -48,13 +48,13 @@
 	margin: 0 auto;
 	padding: 0px 10px;
 	font-weight: lighter;
-	font-size: 12px;
+	font-size: 13px;
 }
 
 .matter1 p{
-	padding: 0px 10px;
-	font-size: 14px;
-
+	padding: 8px 10px;
+	font-size: 15px;
+    color: #333333
 }
 
 .matter1 a:hover {

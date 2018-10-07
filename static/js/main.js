@@ -46,6 +46,8 @@ $(document).ready(function() {
 			}
 		//matter1点击变大效果函数
 		$(".matter1 li").click(function () {
-			$(this).html("")
+			var date = $(this).children("div:eq(0)").children("a:eq(0)").children("h4:eq(0)").text()
+			var content = $(this).children("div:eq(0)").children("a:eq(0)").children("p:eq(0)").text()
+			$(this).html("<div>"+"</div>")
 		});
 	});

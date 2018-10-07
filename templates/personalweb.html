@@ -58,7 +58,7 @@
                 {% for diary in diary_info %}
                     {% if diary.is_display == 0 %}
                         <li>
-                            <a class="window" href="#matter1&{{diary.text_id}}">
+                            <a class="window" href="#diary/text_id={{diary.text_id}}">
                                 <h4>{{ diary.date_weather }}</h4>
                                 <p>{{ diary.content }}</p>
                             </a>

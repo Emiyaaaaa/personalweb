@@ -44,5 +44,8 @@ $(document).ready(function() {
 	    function abc(){
 				alert($("#matter0 > ul").outerHeight(true));
 			}
-		''
+		//matter1点击变大效果函数
+		$(".matter1 li").click(function () {
+			$(this).html("")
+		});
 	});

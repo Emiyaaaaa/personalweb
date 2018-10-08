@@ -19,8 +19,7 @@
 	display: none;
 }
 
-.matter1 a
-{
+.matter1 a {
 	display:block;
     /*文本*/
     letter-spacing: 2px;
@@ -38,25 +37,47 @@
     -moz-box-shadow:2px 2px 10px #C4C4C4;
     -webkit-box-shadow:2px 2px 10px #C4C4C4;
     box-shadow:2px 2px 10px #C4C4C4;
-    /*渐变*/
+    /*渐变动画*/
     transition:transform 0.25s ease
 
 }
 
+.matter1 a:hover {
+    transform: scale(1.08,1.15)
+}
 
-.matter1 h4{
+#beforWindow {
+    /*position:absolute;*/
+    display:none;
+    /*文本*/
+    letter-spacing: 2px;
+    color: #000000;
+    text-decoration:none;
+    /*形状*/
+    border-radius: 15px;
+    background-color: #FFFFFF;
+    padding: 17px 20px;
+    width: 80%;
+    height: 84px;
+    margin-left: 5%;
+    margin-top: 15px;
+    /*阴影*/
+    -moz-box-shadow:2px 2px 10px #C4C4C4;
+    -webkit-box-shadow:2px 2px 10px #C4C4C4;
+    box-shadow:2px 2px 10px #C4C4C4;
+    transform: scale(1.08,1.15)
+}
+
+.matter1 h4 {
 	margin: 0 auto;
 	padding: 0px 10px;
 	font-weight: lighter;
 	font-size: 13px;
 }
 
-.matter1 p{
+.matter1 p {
 	padding: 8px 10px;
 	font-size: 15px;
     color: #333333
 }
 
-.matter1 a:hover {
-	transform: scale(1.08,1.15)
-}

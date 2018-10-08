@@ -57,12 +57,11 @@
                 {% for diary in diary_info %}
                     {% if diary.is_display == 0 %}
                         <li>
-                        	<div class="window">
-	                            <a href="#diary/text_id={{diary.text_id}}">
-	                                <h4>{{ diary.date_weather }}</h4>
-	                                <p>{{ diary.content }}</p>
-	                            </a>
-                            </div>
+                        	<div id='beforWindow'></div>
+                            <a href="#diary/text_id={{diary.text_id}}">
+                                <h4>{{ diary.date_weather }}</h4>
+                                <p>{{ diary.content }}</p>
+                            </a>
                         </li>
                     {% endif %}
                 {% endfor %}

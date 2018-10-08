@@ -19,7 +19,7 @@
 	display: none;
 }
 
-.matter1 a {
+.content {
 	display:block;
     /*文本*/
     letter-spacing: 2px;
@@ -31,7 +31,7 @@
     padding: 17px 20px;
     width: 80%;
     height: 84px;
-    margin-left: 5%;
+    margin-left: 41px;
     margin-top: 15px;
     /*阴影*/
     -moz-box-shadow:2px 2px 10px #C4C4C4;
@@ -42,12 +42,11 @@
 
 }
 
-.matter1 a:hover {
+.content:hover {
     transform: scale(1.08,1.15)
 }
 
-#beforWindow {
-    /*position:absolute;*/
+#window {
     display:none;
     /*文本*/
     letter-spacing: 2px;
@@ -57,15 +56,11 @@
     border-radius: 15px;
     background-color: #FFFFFF;
     padding: 17px 20px;
-    width: 80%;
-    height: 84px;
-    margin-left: 5%;
-    margin-top: 15px;
     /*阴影*/
     -moz-box-shadow:2px 2px 10px #C4C4C4;
     -webkit-box-shadow:2px 2px 10px #C4C4C4;
     box-shadow:2px 2px 10px #C4C4C4;
-    transform: scale(1.08,1.15)
+    transform: scale(1.08,1.15);
 }
 
 .matter1 h4 {

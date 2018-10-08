@@ -57,8 +57,8 @@
                 {% for diary in diary_info %}
                     {% if diary.is_display == 0 %}
                         <li>
-                        	<div id='beforWindow'></div>
-                            <a href="#diary/text_id={{diary.text_id}}">
+                        	<div id='window'></div>
+                            <a class="content" href="#diary/text_id={{diary.text_id}}">
                                 <h4>{{ diary.date_weather }}</h4>
                                 <p>{{ diary.content }}</p>
                             </a>

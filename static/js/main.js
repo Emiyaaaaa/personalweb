@@ -48,11 +48,26 @@ $(document).ready(function() {
 		$(".matter1 li").click(function () {
 			var date = $(this).children("a:eq(0)").children("h4:eq(0)").text()
 			var content = $(this).children("a:eq(0)").children("p:eq(0)").text()
-			var X = $(this).children("a:eq(0)").offset().top;
-			var Y = $(this).children("a:eq(0)").offset().left;
-			$(this).children("div:eq(0)").css("display","block")
-			// $(this).children("div:eq(0)").css("top",X)
-			// $(this).children("div:eq(0)").css("left",Y)
+			var a = $(this).children("a:eq(0)")
+			var top = a.offset().top
+			var left = a.offset().left
+			var width = a.width()
+			var height = a.height()
+    		var marginLeft = a.outerWidth(true) - a.outerWidth()
+			var marginTop = a.outerHeight(true) - a.outerHeight()
+
+			var windowcss ={"position":"fixed",
+							"display":"block",
+							"top":top,
+							"left":left,
+							"width":width,
+							"height":height,
+							"margin-left":marginLeft,
+							"margin-top":marginTop
+							}
+			$(this).children("div:eq(0)").css(windowcss)
+			// alert(event.x)
+			// $(this).children("a:eq(0)").css("display","none")
 			$(this).children("div:eq(0)").html("<h4>"+date+"</h4><p>"+content+"</p></div>")
 			// alert(css)
 		});

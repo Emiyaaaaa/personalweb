@@ -42,7 +42,7 @@
 
 }
 
-.content:hover {
+.content:hover: {
     transform: scale(1.08,1.15)
 }
 

@@ -36,16 +36,16 @@ $(document).ready(function() {
 		}
 		navInteraction();
 
+
 	    // 导航栏选中状态实现
 	    $(".left-menu a").click(function () {
 	    	$(".left-menu a").removeClass("active");
 			$(this).addClass("active");
 	    });
-	    function abc(){
-				alert($("#matter0 > ul").outerHeight(true));
-			}
+
+
 		//matter1点击变大效果函数
-		$(".matter1 li").click(function () {
+		$(".matter1 li").click(function openWindows() {
 			var date = $(this).children("a:eq(0)").children("h4:eq(0)").text()
 			var content = $(this).children("a:eq(0)").children("p:eq(0)").text()
 			var a = $(this).children("a:eq(0)")
@@ -69,13 +69,14 @@ $(document).ready(function() {
 							"margin-top":marginTop,
 							}
 			$(this).children("div:eq(0)").css(windowcss)
-			$(this).children("a:eq(0)").css("display","none")
+			// $(this).children("a:eq(0)").css("display","none")
 			$(this).children("div:eq(0)").html("<h4>"+date+"</h4><p>"+content+"</p></div>")
 			$(this).children("div:eq(0)").animate({
-												    top:'250px',
+												    top:'100px',
 												    left:'250px',
-												    height:'500px',
+												    height:'300px',
 												    width:'800px'
-												  });
+												  },350);
+			$(this).children("a:eq(0)").addClass("active");
 		});
 	});

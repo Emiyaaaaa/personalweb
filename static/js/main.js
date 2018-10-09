@@ -49,12 +49,15 @@ $(document).ready(function() {
 			var date = $(this).children("a:eq(0)").children("h4:eq(0)").text()
 			var content = $(this).children("a:eq(0)").children("p:eq(0)").text()
 			var a = $(this).children("a:eq(0)")
-			var top = a.offset().top
-			var left = a.offset().left
+
+			var scaleX = 1.085
+			var scaleY = 1.195
 			var width = a.width()
 			var height = a.height()
     		var marginLeft = a.outerWidth(true) - a.outerWidth()
 			var marginTop = a.outerHeight(true) - a.outerHeight()
+			var top = a.offset().top - (marginTop - (height * scaleY - height)/2)
+			var left = a.offset().left - (marginLeft - (width * scaleX - width)/2)
 
 			var windowcss ={"position":"fixed",
 							"display":"block",
@@ -63,12 +66,16 @@ $(document).ready(function() {
 							"width":width,
 							"height":height,
 							"margin-left":marginLeft,
-							"margin-top":marginTop
+							"margin-top":marginTop,
 							}
 			$(this).children("div:eq(0)").css(windowcss)
-			// alert(event.x)
-			// $(this).children("a:eq(0)").css("display","none")
+			$(this).children("a:eq(0)").css("display","none")
 			$(this).children("div:eq(0)").html("<h4>"+date+"</h4><p>"+content+"</p></div>")
-			// alert(css)
+			$(this).children("div:eq(0)").animate({
+												    top:'250px',
+												    left:'250px',
+												    height:'500px',
+												    width:'800px'
+												  });
 		});
 	});

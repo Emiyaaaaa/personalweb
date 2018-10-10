@@ -54,29 +54,40 @@ $(document).ready(function() {
 			var scaleY = 1.195
 			var width = a.width()
 			var height = a.height()
+			var windowWidth = $(window).width()
+			var windowHeight = $(window).height()
     		var marginLeft = a.outerWidth(true) - a.outerWidth()
 			var marginTop = a.outerHeight(true) - a.outerHeight()
 			var top = a.offset().top - (marginTop - (height * scaleY - height)/2)
 			var left = a.offset().left - (marginLeft - (width * scaleX - width)/2)
 
-			var windowcss ={"position":"fixed",
-							"display":"block",
-							"top":top,
-							"left":left,
-							"width":width,
-							"height":height,
-							"margin-left":marginLeft,
-							"margin-top":marginTop,
-							}
-			$(this).children("div:eq(0)").css(windowcss)
-			// $(this).children("a:eq(0)").css("display","none")
+			var windowcss = {
+				"position":"fixed",
+				"display":"block",
+				"top":top,
+				"left":left,
+				"width":width,
+				"height":height,
+				"margin-left":marginLeft,
+				"margin-top":marginTop,
+			}
+
+			var windowAnimate = {
+			   top: windowHeight/7,
+			   height: windowHeight/2,
+			   left: windowWidth/6,
+			   width: windowWidth*4/6-(a.outerWidth(true)-width)
+			}
+
+			$("#allDiv").addClass("backgroundBlir")
+			$("#window").css(windowcss)
+			$(this).children("a:eq(0)").css("display","none")
+			$("#windowBackground").css({"display":"block","height":windowWidth})
+			$("#window").html("<h4>"+date+"</h4><p>"+content+"</p></div>")
+			$("#window").animate(windowAnimate,350);
+			$(this).children("div:eq(0)").css("display","block")
 			$(this).children("div:eq(0)").html("<h4>"+date+"</h4><p>"+content+"</p></div>")
-			$(this).children("div:eq(0)").animate({
-												    top:'100px',
-												    left:'250px',
-												    height:'300px',
-												    width:'800px'
-												  },350);
-			$(this).children("a:eq(0)").addClass("active");
+			
+
 		});
 	});

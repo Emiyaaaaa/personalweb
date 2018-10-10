@@ -17,15 +17,14 @@ ul {
 }
 
 html, body {
+	/*overflow: hidden;*/
 	overflow:auto;
 	min-width: 0;
     margin: 0;
-    padding:0;
+    padding: 0;
 	background-color:#FFFFFF;
 
 }
-
-
 
 .middle{
 	width:55%;
@@ -39,7 +38,7 @@ html, body {
 	float: left;
 	overflow:auto;
 	overflow-y: auto;
-	position:fixed
+	position:absolute;
 }
 
 .line-through {

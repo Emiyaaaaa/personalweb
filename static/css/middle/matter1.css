@@ -19,8 +19,7 @@
 	display: none;
 }
 
-.content {
-	display:block;
+.content, #aCopy{
     /*文本*/
     letter-spacing: 2px;
 	color: #000000;
@@ -42,7 +41,15 @@
 
 }
 
-.content:hover: {
+.content {
+    display: block;
+}
+
+#aCopy {
+    display: none;
+}
+
+.content:hover {
     transform: scale(1.08,1.15)
 }
 
@@ -63,15 +70,49 @@
     transform: scale(1.08,1.15);
 }
 
-.matter1 h4 {
+.matter1 h4, #window h4{
 	margin: 0 auto;
 	padding: 0px 10px;
 	font-weight: lighter;
 	font-size: 13px;
 }
 
-.matter1 p {
+.matter1 p, #window p{
 	padding: 8px 10px;
 	font-size: 15px;
     color: #333333
+}
+
+@keyframes backgroundBlir
+{
+    from {filter: blur(0px);}
+    to {filter: blur(2px);}
+}
+ 
+@-webkit-keyframes backgroundBlir
+{
+    from {filter: blur(0px);}
+    to {filter: blur(2px);}
+}
+
+.backgroundBlir{
+    animation: backgroundBlir 0.35s;
+    -webkit-animation: backgroundBlir 0.35s;
+    animation-fill-mode: forwards;
+}
+
+.clearBlir{
+    filter: none;
+}
+
+#windowBackground {
+    display: none;
+    position:absolute;
+    overflow:hidden;
+    top: 0;
+    left: 0;
+    height: 723px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }

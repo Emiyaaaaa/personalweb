@@ -47,6 +47,7 @@ $(document).ready(function() {
 		//matter1点击变大效果函数
 		$(".matter1 li").click(function openWindows() {
 			var aHtml = $(this).children("a:eq(0)").html()
+			var windowHtml = $(this).children("div:eq(0)").html()
 			var a = $(this).children("a:eq(0)")
 
 			var scaleX = 1.085
@@ -82,9 +83,13 @@ $(document).ready(function() {
 			$("#window").css(windowcss)
 			$(this).children("a:eq(0)").css("display","none")
 			$("#windowBackground").css({"display":"block","height":windowWidth})
-			$("#window").html(aHtml)
-			$("#window").animate(windowAnimate,350);
+			$("#window").html(windowHtml + aHtml)
+			$("#window").animate(windowAnimate,350)
 			$(this).children("div:eq(0)").css("display","block")
 			$(this).children("div:eq(0)").html(aHtml)
+		});
+
+		$(".windowClose").click(function () {
+			
 		});
 	});

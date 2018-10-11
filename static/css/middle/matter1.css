@@ -19,7 +19,7 @@
 	display: none;
 }
 
-.content, #aCopy{
+.content, .aCopy{
     /*文本*/
     letter-spacing: 2px;
 	color: #000000;
@@ -37,15 +37,15 @@
     -webkit-box-shadow:2px 2px 10px #C4C4C4;
     box-shadow:2px 2px 10px #C4C4C4;
     /*渐变动画*/
-    transition:transform 0.25s ease
-
+    transition: transform 0.25s;
+    -webkit-transition: transform 0.25s
 }
 
 .content {
     display: block;
 }
 
-#aCopy {
+.aCopy {
     display: none;
 }
 

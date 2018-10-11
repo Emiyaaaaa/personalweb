@@ -45,10 +45,10 @@ $(document).ready(function() {
 
 
 		//matter1点击变大效果函数
-		$(".matter1 li").click(function openWindows() {
-			var aHtml = $(this).children("a:eq(0)").html()
-			var windowHtml = $(this).children("div:eq(0)").html()
-			var a = $(this).children("a:eq(0)")
+		$(".conten").click(function openWindows() {
+			var aHtml = $(this).html()
+			var windowHtml = $(this).parent().children("div:eq(0)").html()
+			var a = $(this)
 
 			var scaleX = 1.085
 			var scaleY = 1.195
@@ -58,8 +58,8 @@ $(document).ready(function() {
 			var windowHeight = $(window).height()
     		var marginLeft = a.outerWidth(true) - a.outerWidth()
 			var marginTop = a.outerHeight(true) - a.outerHeight()
-			var top = a.offset().top - (marginTop - (height * scaleY - height)/2)
-			var left = a.offset().left - (marginLeft - (width * scaleX - width)/2)
+			var top = a.offset().top
+			var left = a.offset().left
 
 			var windowcss = {
 				"position":"fixed",
@@ -81,15 +81,109 @@ $(document).ready(function() {
 
 			$("#allDiv").addClass("backgroundBlir")
 			$("#window").css(windowcss)
-			$(this).children("a:eq(0)").css("display","none")
+			$(this).css("display","none")
 			$("#windowBackground").css({"display":"block","height":windowWidth})
 			$("#window").html(windowHtml + aHtml)
+			$(this).parent().children("div:eq(0)").css("display","block")
+			$(this).parent().children("div:eq(0)").children("a:eq(0)").addClass("windowClose")
+			$(this).parent().children("div:eq(0)").html(aHtml)
 			$("#window").animate(windowAnimate,350)
-			$(this).children("div:eq(0)").css("display","block")
-			$(this).children("div:eq(0)").html(aHtml)
 		});
 
+				//matter1点击变大效果函数
+		function openWindow(text) {
+			var aHtml = text.innerHTML
+			alert(aHtml)
+			// var windowHtml = $(this).parent().children("div:eq(0)").html()
+			// var a = $(this)
+
+			// var scaleX = 1.085
+			// var scaleY = 1.195
+			// var width = a.width()
+			// var height = a.height()
+			// var windowWidth = $(window).width()
+			// var windowHeight = $(window).height()
+   //  		var marginLeft = a.outerWidth(true) - a.outerWidth()
+			// var marginTop = a.outerHeight(true) - a.outerHeight()
+			// var top = a.offset().top
+			// var left = a.offset().left
+
+			// var windowcss = {
+			// 	"position":"fixed",
+			// 	"display":"block",
+			// 	"top":top,
+			// 	"left":left,
+			// 	"width":width,
+			// 	"height":height,
+			// 	"margin-left":marginLeft,
+			// 	"margin-top":marginTop,
+			// }
+
+			// var windowAnimate = {
+			//    top: windowHeight/7,
+			//    height: windowHeight/2,
+			//    left: windowWidth/6,
+			//    width: windowWidth*4/6-(a.outerWidth(true)-width)
+			// }
+
+			// $("#allDiv").addClass("backgroundBlir")
+			// $("#window").css(windowcss)
+			// $(this).css("display","none")
+			// $("#windowBackground").css({"display":"block","height":windowWidth})
+			// $("#window").html(windowHtml + aHtml)
+			// $(this).parent().children("div:eq(0)").css("display","block")
+			// $(this).parent().children("div:eq(0)").children("a:eq(0)").addClass("windowClose")
+			// $(this).parent().children("div:eq(0)").html(aHtml)
+			// $("#window").animate(windowAnimate,350)
+		};
+
 		$(".windowClose").click(function () {
-			
+			$("#windowBackground").css("display","none")
+			$("#allDiv").removeClass("backgroundBlir")
 		});
 	});
+function openWindow(text) {
+			var aHtml = text.innerHTML
+			alert(aHtml)
+			// var windowHtml = $(this).parent().children("div:eq(0)").html()
+			// var a = $(this)
+
+			// var scaleX = 1.085
+			// var scaleY = 1.195
+			// var width = a.width()
+			// var height = a.height()
+			// var windowWidth = $(window).width()
+			// var windowHeight = $(window).height()
+   //  		var marginLeft = a.outerWidth(true) - a.outerWidth()
+			// var marginTop = a.outerHeight(true) - a.outerHeight()
+			// var top = a.offset().top
+			// var left = a.offset().left
+
+			// var windowcss = {
+			// 	"position":"fixed",
+			// 	"display":"block",
+			// 	"top":top,
+			// 	"left":left,
+			// 	"width":width,
+			// 	"height":height,
+			// 	"margin-left":marginLeft,
+			// 	"margin-top":marginTop,
+			// }
+
+			// var windowAnimate = {
+			//    top: windowHeight/7,
+			//    height: windowHeight/2,
+			//    left: windowWidth/6,
+			//    width: windowWidth*4/6-(a.outerWidth(true)-width)
+			// }
+
+			// $("#allDiv").addClass("backgroundBlir")
+			// $("#window").css(windowcss)
+			// $(this).css("display","none")
+			// $("#windowBackground").css({"display":"block","height":windowWidth})
+			// $("#window").html(windowHtml + aHtml)
+			// $(this).parent().children("div:eq(0)").css("display","block")
+			// $(this).parent().children("div:eq(0)").children("a:eq(0)").addClass("windowClose")
+			// $(this).parent().children("div:eq(0)").html(aHtml)
+			// $("#window").animate(windowAnimate,350)
+		};

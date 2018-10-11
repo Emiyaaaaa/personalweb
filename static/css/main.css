@@ -20,6 +20,14 @@ ul {
 
 }
 
+button {
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;
+	background-color:transparent
+}
+
 html, body {
 	/*overflow: hidden;*/
 	overflow:auto;
@@ -50,7 +58,7 @@ html, body {
 }
 
 .windowClose {
-	display: block;
+	display: none;
     color: #B5B5B5;
     text-align: center;
     height: 30px;

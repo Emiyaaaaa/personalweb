@@ -59,9 +59,9 @@
 	                    {% if diary.is_display == 0 %}
 	                        <li>
 	                        	<div class="aCopy">
-	                        		<a href="javascript:void(0)" class="windowClose"></a>
+	                        		<a href="javascript:void(0)"></a>
 	                        	</div>
-	                            <a class="content" href="#diary/text_id={{diary.text_id}}">
+	                            <a class="content"  onclick="openWindow(this)" href="#diary/text_id={{diary.text_id}}">
 	                                <h4>{{ diary.date_weather }}</h4>
 	                                <p>{{ diary.content }}</p>
 	                            </a>

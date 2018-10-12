@@ -44,22 +44,30 @@ $(document).ready(function() {
 	    });
 
 
-		//matter1点击变大效果函数
-		$(".conten").click(function openWindows() {
-			var aHtml = $(this).html()
-			var windowHtml = $(this).parent().children("div:eq(0)").html()
-			var a = $(this)
 
+	    function getDivPosition(id){
+			var left = document.getElementById(id).getBoundingClientRect().left
+			var top = document.getElementById(id).getBoundingClientRect().top
+			return [left,top]
+		
+		}
+
+		// matter1打开窗口效果
+		$(".content").click(function openWindows() {
+			var obj = $(this)
 			var scaleX = 1.085
 			var scaleY = 1.195
-			var width = a.width()
-			var height = a.height()
+			var width = obj.width()
+			var height = obj.height()
 			var windowWidth = $(window).width()
 			var windowHeight = $(window).height()
-    		var marginLeft = a.outerWidth(true) - a.outerWidth()
-			var marginTop = a.outerHeight(true) - a.outerHeight()
-			var top = a.offset().top
-			var left = a.offset().left
+    		var marginLeft = obj.outerWidth(true) - obj.outerWidth()
+			var marginTop = obj.outerHeight(true) - obj.outerHeight()
+			var id = obj.attr('id')
+			var left = getDivPosition(id)[0]
+			var top = getDivPosition(id)[1]
+			var top = top - (marginTop - (height * scaleY - height)/2)
+			var left = left - (marginLeft - (width * scaleX - width)/2)
 
 			var windowcss = {
 				"position":"fixed",
@@ -76,48 +84,45 @@ $(document).ready(function() {
 			   top: windowHeight/7,
 			   height: windowHeight/2,
 			   left: windowWidth/6,
-			   width: windowWidth*4/6-(a.outerWidth(true)-width)
+			   width: windowWidth*4/6-(obj.outerWidth(true)-width)
 			}
 
 			$("#allDiv").addClass("backgroundBlir")
 			$("#window").css(windowcss)
 			$(this).css("display","none")
 			$("#windowBackground").css({"display":"block","height":windowWidth})
-			$("#window").html(windowHtml + aHtml)
+			
 			$(this).parent().children("div:eq(0)").css("display","block")
 			$(this).parent().children("div:eq(0)").children("a:eq(0)").addClass("windowClose")
+			$(this).parent().children("div:eq(0)").children("a:eq(0)").attr("id","close"+id)
+
+			var aHtml = $(this).html()
+			var windowHtml = $(this).parent().children("div:eq(0)").html()
+
 			$(this).parent().children("div:eq(0)").html(aHtml)
+			$("#window").html(windowHtml + aHtml)
 			$("#window").animate(windowAnimate,350)
 		});
 
-				//matter1点击变大效果函数
-		function openWindow(text) {
-			var aHtml = text.innerHTML
-			alert(aHtml)
-			// var windowHtml = $(this).parent().children("div:eq(0)").html()
-			// var a = $(this)
+		// matter1关闭窗口效果
+		$('#window').on('click','.windowClose',function(){
+			var idNum = $(this).attr("id").match(/\d+/)
+			var aObj = $("#diary"+idNum)
 
+			// var obj = 
 			// var scaleX = 1.085
 			// var scaleY = 1.195
-			// var width = a.width()
-			// var height = a.height()
+			// var width = obj.width()
+			// var height = obj.height()
 			// var windowWidth = $(window).width()
 			// var windowHeight = $(window).height()
-   //  		var marginLeft = a.outerWidth(true) - a.outerWidth()
-			// var marginTop = a.outerHeight(true) - a.outerHeight()
-			// var top = a.offset().top
-			// var left = a.offset().left
-
-			// var windowcss = {
-			// 	"position":"fixed",
-			// 	"display":"block",
-			// 	"top":top,
-			// 	"left":left,
-			// 	"width":width,
-			// 	"height":height,
-			// 	"margin-left":marginLeft,
-			// 	"margin-top":marginTop,
-			// }
+   //  		var marginLeft = obj.outerWidth(true) - obj.outerWidth()
+			// var marginTop = obj.outerHeight(true) - obj.outerHeight()
+			// var id = obj.attr('id')
+			// var left = getDivPosition(id)[0]
+			// var top = getDivPosition(id)[1]
+			// var top = top - (marginTop - (height * scaleY - height)/2)
+			// var left = left - (marginLeft - (width * scaleX - width)/2)
 
 			// var windowAnimate = {
 			//    top: windowHeight/7,
@@ -126,64 +131,9 @@ $(document).ready(function() {
 			//    width: windowWidth*4/6-(a.outerWidth(true)-width)
 			// }
 
-			// $("#allDiv").addClass("backgroundBlir")
-			// $("#window").css(windowcss)
-			// $(this).css("display","none")
-			// $("#windowBackground").css({"display":"block","height":windowWidth})
-			// $("#window").html(windowHtml + aHtml)
-			// $(this).parent().children("div:eq(0)").css("display","block")
-			// $(this).parent().children("div:eq(0)").children("a:eq(0)").addClass("windowClose")
-			// $(this).parent().children("div:eq(0)").html(aHtml)
 			// $("#window").animate(windowAnimate,350)
-		};
-
-		$(".windowClose").click(function () {
-			$("#windowBackground").css("display","none")
-			$("#allDiv").removeClass("backgroundBlir")
+			// $("#windowBackground").css("display","none")
+			// $("#allDiv").removeClass("backgroundBlir")
 		});
 	});
-function openWindow(text) {
-			var aHtml = text.innerHTML
-			alert(aHtml)
-			// var windowHtml = $(this).parent().children("div:eq(0)").html()
-			// var a = $(this)
 
-			// var scaleX = 1.085
-			// var scaleY = 1.195
-			// var width = a.width()
-			// var height = a.height()
-			// var windowWidth = $(window).width()
-			// var windowHeight = $(window).height()
-   //  		var marginLeft = a.outerWidth(true) - a.outerWidth()
-			// var marginTop = a.outerHeight(true) - a.outerHeight()
-			// var top = a.offset().top
-			// var left = a.offset().left
-
-			// var windowcss = {
-			// 	"position":"fixed",
-			// 	"display":"block",
-			// 	"top":top,
-			// 	"left":left,
-			// 	"width":width,
-			// 	"height":height,
-			// 	"margin-left":marginLeft,
-			// 	"margin-top":marginTop,
-			// }
-
-			// var windowAnimate = {
-			//    top: windowHeight/7,
-			//    height: windowHeight/2,
-			//    left: windowWidth/6,
-			//    width: windowWidth*4/6-(a.outerWidth(true)-width)
-			// }
-
-			// $("#allDiv").addClass("backgroundBlir")
-			// $("#window").css(windowcss)
-			// $(this).css("display","none")
-			// $("#windowBackground").css({"display":"block","height":windowWidth})
-			// $("#window").html(windowHtml + aHtml)
-			// $(this).parent().children("div:eq(0)").css("display","block")
-			// $(this).parent().children("div:eq(0)").children("a:eq(0)").addClass("windowClose")
-			// $(this).parent().children("div:eq(0)").html(aHtml)
-			// $("#window").animate(windowAnimate,350)
-		};

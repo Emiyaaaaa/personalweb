@@ -67,6 +67,9 @@
     -moz-box-shadow:2px 2px 10px #C4C4C4;
     -webkit-box-shadow:2px 2px 10px #C4C4C4;
     box-shadow:2px 2px 10px #C4C4C4;
+}
+
+.beforeOpenWindow{
     transform: scale(1.08,1.15);
 }
 
@@ -83,31 +86,53 @@
     color: #333333
 }
 
-@keyframes backgroundBlir
-{
-    from {filter: blur(0px);}
-    to {filter: blur(2px);}
-}
- 
-@-webkit-keyframes backgroundBlir
+@keyframes backgroundBlur
 {
     from {filter: blur(0px);}
     to {filter: blur(2px);}
 }
 
-.backgroundBlir{
-    animation: backgroundBlir 0.35s;
-    -webkit-animation: backgroundBlir 0.35s;
+@keyframes backgroundBlurFixed
+{
+    from {filter: blur(0px);position: fixed;}
+    to {filter: blur(2px);position: fixed;}
+}
+ 
+.backgroundBlur{
+    animation: backgroundBlur 0.35s;
     animation-fill-mode: forwards;
 }
 
-.clearBlir{
-    filter: none;
+.backgroundBlurFixed{
+    animation: backgroundBlurFixed 0.35s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes backgroundUnblur
+{
+    from {filter: blur(2px);}
+    to {filter: blur(0px);}
+}
+
+@keyframes backgroundUnblurFixed
+{
+    from {filter: blur(2px);position: fixed;}
+    to {filter: blur(0px);position: fixed;}
+}
+
+.backgroundUnblur{
+    animation: backgroundUnblur 0.35s;
+    animation-fill-mode: forwards;
+}
+
+.backgroundUnblurFixed{
+    animation: backgroundUnblurFixed 0.35s;
+    animation-fill-mode: forwards;
 }
 
 #windowBackground {
     display: none;
-    position:absolute;
+    position:fixed;
     overflow:hidden;
     top: 0;
     left: 0;

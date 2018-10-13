@@ -18,83 +18,80 @@
     </script>                  
 </head>
 <body>
-	<div id="allDiv">
-		<div class="left" id="left">
-			<div class="left-avatar">
-				<a href=jacascript::void(0)>
-					<img src="{% static 'avatar/123.jpg'%}" width="150" height="140"/>
-				</a>
-			</div>
-			<div class="left-menu" id="left-menu">
-				<ul>
-		            <li id="li-0" data-toggle="collapse">
-						<a href="#codeDiary" class="active">开发笔记</a>
-		            </li>
-		            <li id="li-1" data-toggle="collapse">
-						<a href="#diary">我的动态</a>
-		            </li>
-		            <li id="li-2" data-toggle="collapse">
-		            	<a href="#application">我的应用</a>
-		            </li>
-		            <li id="li-3" data-toggle="collapse">
-						<a href="#personalCenter">关于我<span class="line-through">们</span></a>
-		            </li>
-		        </ul>
-			</div>
+	<div class="left" id="left">
+		<div class="left-avatar">
+			<a href=jacascript::void(0)>
+				<img src="{% static 'avatar/123.jpg'%}" width="150" height="140"/>
+			</a>
 		</div>
-	    <div class="middle" id="middle">
-	        <div id="matter0" class="matter0" style="display: block">
-	            <ul>
-		            <li>
-		            	<a href="#">
-							<h4></h4>
-							<p>尚未开发</p>
-		            	</a>
-		            </li>
-	            </ul>
-	        </div>
-	        <div id="matter1" class="matter1" style="display: none">
-				<ul>
-	                {% for diary in diary_info %}
-	                    {% if diary.is_display == 0 %}
-	                        <li>
-	                        	<div class="aCopy" id="copyone{{diary.text_id}}">
-	                        		<a href="javascript:void(0)" id="close{{diary.text_id}}"></a>
-	                        	</div>
-	                        	<!-- <div class="aCopy" id="copytwo{{diary.text_id}}"></div> -->
-	                            <a class="content" id="diary{{diary.text_id}}" href="#diary/text_id={{diary.text_id}}">
-	                                <h4>{{ diary.date_weather }}</h4>
-	                                <p>{{ diary.content }}</p>
-	                            </a>
-	                        </li>
-	                    {% endif %}
-	                {% endfor %}
-	            </ul>
-	        </div>
-			<div id="matter2" class="matter2" style="display: none">
-				<ul>
-		            <li>
-		            	<a href="#">
-							<h4></h4>
-							<p>尚未开发</p>
-		            	</a>
-		            </li>
-	            </ul>
-	        </div>
-	        <div id="matter3" class="matter3" style="display: none">
-				<ul>
-		            <li>
-		            	<a href="#">
-							<h4></h4>
-							<p>尚未开发</p>
-		            	</a>
-		            </li>
-	            </ul>
-		    </div>
-	    </div>
+		<div class="left-menu" id="left-menu">
+			<ul>
+	            <li id="li-0" data-toggle="collapse">
+					<a href="#codeDiary" class="active">开发笔记</a>
+	            </li>
+	            <li id="li-1" data-toggle="collapse">
+					<a href="#diary">我的动态</a>
+	            </li>
+	            <li id="li-2" data-toggle="collapse">
+	            	<a href="#application">我的应用</a>
+	            </li>
+	            <li id="li-3" data-toggle="collapse">
+					<a href="#personalCenter">关于我<span class="line-through">们</span></a>
+	            </li>
+	        </ul>
+		</div>
 	</div>
+    <div class="middle" id="middle">
+        <div id="matter0" class="matter0" style="display: block">
+            <ul>
+	            <li>
+	            	<a href="#">
+						<h4></h4>
+						<p>尚未开发</p>
+	            	</a>
+	            </li>
+            </ul>
+        </div>
+        <div id="matter1" class="matter1" style="display: none">
+			<ul>
+                {% for diary in diary_info %}
+                    {% if diary.is_display == 0 %}
+                        <li>
+                        	<div class="aCopy" id="copyone{{diary.text_id}}">
+                        		<a href="javascript:void(0)" id="close{{diary.text_id}}" class="windowCloseButton"></a>
+                        	</div>
+                            <a class="content" id="diary{{diary.text_id}}" href="#diary/text_id={{diary.text_id}}">
+                                <h4>{{ diary.date_weather }}</h4>
+                                <p>{{ diary.content }}</p>
+                            </a>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+		<div id="matter2" class="matter2" style="display: none">
+			<ul>
+	            <li>
+	            	<a href="#">
+						<h4></h4>
+						<p>尚未开发</p>
+	            	</a>
+	            </li>
+            </ul>
+        </div>
+        <div id="matter3" class="matter3" style="display: none">
+			<ul>
+	            <li>
+	            	<a href="#">
+						<h4></h4>
+						<p>尚未开发</p>
+	            	</a>
+	            </li>
+            </ul>
+	    </div>
+    </div>
     <div id="windowBackground"></div>
-    <div id='window'></div>
+    <div id='window' class="beforeOpenWindow"></div>
 	<script type="text/javascript" src="{% static 'js/main.js' %}"></script>
 </body>
 </html>

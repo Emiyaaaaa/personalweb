@@ -70,7 +70,6 @@ $(document).ready(function() {
 			var top = getDivPosition(id)[1]
 			var top = top - (marginTop - (height * scaleY - height)/2)
 			var left = left - (marginLeft - (width * scaleX - width)/2)
-
 			var windowcss = {
 				"position":"fixed",
 				"display":"block",
@@ -82,66 +81,59 @@ $(document).ready(function() {
 				"margin-top":marginTop,
 			}
 
-			var windowAnimate = {
+			var openWindowAnimate = {
 			   top: windowHeight/7,
 			   height: windowHeight/2,
 			   left: windowWidth/6,
-			   width: windowWidth*4/6-(obj.outerWidth(true)-width)
+			   width: windowWidth*4/6-(obj.outerWidth(true)-width),
 			}
 
-			$("#allDiv").addClass("backgroundBlir")
+			$("#matter1").addClass("backgroundBlur")
+			$("#left").addClass("backgroundBlurFixed")
 			$("html").css("overflow","hidden")
 			$("#window").css(windowcss)
-			$(this).css("display","none")
+			obj.css("display","none")
 			$("#windowBackground").css({"display":"block","height":windowWidth})
 			
 			copyone.css("display","block")
-			$("#close"+idNum).addClass("windowCloseButton")
 
-			var aHtml = $(this).html()
+			var aHtml = obj.html()
 			var windowHtml = copyone.html()
 
 			copyone.html(aHtml)
 			$("#window").html(windowHtml + aHtml)
-			$("#window").animate(windowAnimate,350)
+			$("#window").animate(openWindowAnimate,350)
 		});
 
 		// matter1关闭窗口效果
 		$('#window').on('click','.windowCloseButton',function(){
 			var idNum = $(this).attr("id").match(/\d+/)
 			var aObj = $("#diary"+idNum)
-			// var 
-			// var windowAnimate = {
-			//    top: 
-			//    height: 
-			//    left: 
-			//    width: 
-			// }
-			// var obj = 
-			// var scaleX = 1.085
-			// var scaleY = 1.195
-			// var width = obj.width()
-			// var height = obj.height()
-			// var windowWidth = $(window).width()
-			// var windowHeight = $(window).height()
-   //  		var marginLeft = obj.outerWidth(true) - obj.outerWidth()
-			// var marginTop = obj.outerHeight(true) - obj.outerHeight()
-			// var id = obj.attr('id')
-			// var left = getDivPosition(id)[0]
-			// var top = getDivPosition(id)[1]
-			// var top = top - (marginTop - (height * scaleY - height)/2)
-			// var left = left - (marginLeft - (width * scaleX - width)/2)
+			var aCopyObj = $("#copyone"+idNum)
+			var windowObj = $("#window")
+			var aCopyWidth = aCopyObj.width()
+			var aCopyHeight = aCopyObj.height()
+			var id = aCopyObj.attr('id')
+			var aCopyLeft = getDivPosition(id)[0]
+			var aCopyTop = getDivPosition(id)[1]
 
-			// var windowAnimate = {
-			//    top: windowHeight/7,
-			//    height: windowHeight/2,
-			//    left: windowWidth/6,
-			//    width: windowWidth*4/6-(a.outerWidth(true)-width)
-			// }
+			var closeWindowAnimate = {
+			    top: aCopyTop,
+			    height: aCopyHeight,
+			    left: aCopyLeft,
+			    width: aCopyWidth,
+			    marginLeft: 0,
+				marginTop:0
+			}
 
-			// $("#window").animate(windowAnimate,350)
-			// $("#windowBackground").css("display","none")
-			// $("#allDiv").removeClass("backgroundBlir")
+			windowObj.removeClass("beforeOpenWindow")
+			windowObj.animate(closeWindowAnimate,350)
+			aCopyObj.css("display","none")
+			$("#windowBackground").css("display","none")
+			$("#diary"+idNum).css("display","block")
+			$("#window").css("display","block")
+			$("#matter1").addClass("backgroundUnblur")
+			$("#left").addClass("backgroundUnblurFixed")
+			$("html").css("overflow","auto")
 		});
 	});
-

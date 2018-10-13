@@ -50,7 +50,7 @@
 }
 
 .content:hover {
-    transform: scale(1.08,1.15)
+    transform: scale(1.08,1.15);
 }
 
 #window {

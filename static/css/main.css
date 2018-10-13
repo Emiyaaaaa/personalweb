@@ -50,33 +50,34 @@ html, body {
 	float: left;
 	overflow:auto;
 	overflow-y: auto;
-	position:absolute;
+	position: fixed;
 }
 
 .line-through {
 	text-decoration:line-through
 }
 
-.windowClose {
+.windowCloseButton {
+    position: absolute;
     color: #B5B5B5;
-    text-align: center;
+    /*text-align: center;*/
     height: 30px;
-    width: 30px;
+    width: 31.95px;
     font-size: 21px;
-    padding: 1px;
     top: 8px;
     right: 10px;
-    position: absolute;
     transition: all 0.3s;
 	-webkit-transition: all 0.3s;
 }
 
-.windowClose::before {
+.windowCloseButton::before {
     content: "\2716";
+    margin: 7px 0 0 7px
 }
 
-.windowClose:hover{
-	transform: rotate(90deg) scale(1.05);
+.windowCloseButton:hover{
+	transform: rotate(90deg) scale(1.1);
+	/*text-shadow:1px -1px 2px #D9D9D9;*/
 }
 
 ::-webkit-scrollbar {

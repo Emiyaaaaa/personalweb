@@ -55,6 +55,8 @@ $(document).ready(function() {
 		// matter1打开窗口效果
 		$(".content").click(function openWindows() {
 			var obj = $(this)
+			var idNum = obj.attr("id").match(/\d+/)
+			var copyone = $("#copyone"+idNum)
 			var scaleX = 1.085
 			var scaleY = 1.195
 			var width = obj.width()
@@ -88,27 +90,33 @@ $(document).ready(function() {
 			}
 
 			$("#allDiv").addClass("backgroundBlir")
+			$("html").css("overflow","hidden")
 			$("#window").css(windowcss)
 			$(this).css("display","none")
 			$("#windowBackground").css({"display":"block","height":windowWidth})
 			
-			$(this).parent().children("div:eq(0)").css("display","block")
-			$(this).parent().children("div:eq(0)").children("a:eq(0)").addClass("windowClose")
-			$(this).parent().children("div:eq(0)").children("a:eq(0)").attr("id","close"+id)
+			copyone.css("display","block")
+			$("#close"+idNum).addClass("windowCloseButton")
 
 			var aHtml = $(this).html()
-			var windowHtml = $(this).parent().children("div:eq(0)").html()
+			var windowHtml = copyone.html()
 
-			$(this).parent().children("div:eq(0)").html(aHtml)
+			copyone.html(aHtml)
 			$("#window").html(windowHtml + aHtml)
 			$("#window").animate(windowAnimate,350)
 		});
 
 		// matter1关闭窗口效果
-		$('#window').on('click','.windowClose',function(){
+		$('#window').on('click','.windowCloseButton',function(){
 			var idNum = $(this).attr("id").match(/\d+/)
 			var aObj = $("#diary"+idNum)
-
+			// var 
+			// var windowAnimate = {
+			//    top: 
+			//    height: 
+			//    left: 
+			//    width: 
+			// }
 			// var obj = 
 			// var scaleX = 1.085
 			// var scaleY = 1.195

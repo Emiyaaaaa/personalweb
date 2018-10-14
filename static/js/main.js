@@ -131,8 +131,8 @@ $(document).ready(function() {
 			aCopyObj.css('display','none')
 			$('#windowBackground').css('display','none')
 			$('#diary'+idNum).css('display','block')
-			setTimeout(function(){windowObj.toggleClass('beforeOpenWindow');},350)
-			setTimeout(function(){$('#window').css('display','none');windowObj.empty();windowObj.toggleClass('beforeOpenWindow')},800)
+			setTimeout(function(){windowObj.toggleClass('beforeOpenWindow');},10)
+			setTimeout(function(){$('#window').css('display','none');windowObj.empty();windowObj.toggleClass('beforeOpenWindow')},350)
 			aCopyObj.empty()
 			aCopyObj.html('<a href=\'javascript:void(0)\' id=\'close'+idNum+'\' class=\'windowCloseButton\'></a>')
 

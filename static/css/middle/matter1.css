@@ -67,7 +67,7 @@
     -moz-box-shadow:2px 2px 10px #C4C4C4;
     -webkit-box-shadow:2px 2px 10px #C4C4C4;
     box-shadow:2px 2px 10px #C4C4C4;
-    transition: transform 0.5s
+    transition: transform 0.34s
 }
 
 .beforeOpenWindow{
@@ -90,13 +90,13 @@
 @keyframes backgroundBlur
 {
     from {filter: blur(0px);}
-    to {filter: blur(2px);}
+    to {filter: blur(3px);}
 }
 
 @keyframes backgroundBlurFixed
 {
     from {filter: blur(0px);position: fixed;}
-    to {filter: blur(2px);position: fixed;}
+    to {filter: blur(3px);position: fixed;}
 }
  
 .backgroundBlur{
@@ -111,13 +111,13 @@
 
 @keyframes backgroundUnblur
 {
-    from {filter: blur(2px);}
+    from {filter: blur(3px);}
     to {filter: blur(0px);}
 }
 
 @keyframes backgroundUnblurFixed
 {
-    from {filter: blur(2px);position: fixed;}
+    from {filter: blur(3px);position: fixed;}
     to {filter: blur(0px);position: fixed;}
 }
 

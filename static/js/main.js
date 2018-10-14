@@ -22,9 +22,6 @@ $(document).ready(function() {
 					}, openMatter);
 				}
 		    function openMatter(obj) {
-		    	// alert($("#matter0 > ul").outerHeight(true));
-		    	// alert($(document).height())
-		    	// alert($(window).height())
 		        for (var i = 0; i < liNum; i++) {
 		            if (i == obj.data.index) {
 		                document.getElementById("matter" + i).style.display = "block";
@@ -56,7 +53,7 @@ $(document).ready(function() {
 		$(".content").click(function openWindows() {
 			var obj = $(this)
 			var idNum = obj.attr("id").match(/\d+/)
-			var copyone = $("#copyone"+idNum)
+			var aCopyObj = $("#copyone"+idNum)
 			var scaleX = 1.085
 			var scaleY = 1.195
 			var width = obj.width()
@@ -88,19 +85,23 @@ $(document).ready(function() {
 			   width: windowWidth*4/6-(obj.outerWidth(true)-width),
 			}
 
+			// 背景效果
+			$("#matter1").removeClass("backgroundUnblur")
+			$("#left").removeClass("backgroundUnblurFixed")
 			$("#matter1").addClass("backgroundBlur")
 			$("#left").addClass("backgroundBlurFixed")
 			$("html").css("overflow","hidden")
+
 			$("#window").css(windowcss)
+			$("#window").addClass("beforeOpenWindow")
 			obj.css("display","none")
 			$("#windowBackground").css({"display":"block","height":windowWidth})
-			
-			copyone.css("display","block")
+			aCopyObj.css("display","block")
 
 			var aHtml = obj.html()
-			var windowHtml = copyone.html()
+			var windowHtml = aCopyObj.html()
 
-			copyone.html(aHtml)
+			aCopyObj.html(aHtml)
 			$("#window").html(windowHtml + aHtml)
 			$("#window").animate(openWindowAnimate,350)
 		});
@@ -131,9 +132,15 @@ $(document).ready(function() {
 			aCopyObj.css("display","none")
 			$("#windowBackground").css("display","none")
 			$("#diary"+idNum).css("display","block")
-			$("#window").css("display","block")
+			setTimeout(function(){$('#window').css("display","none");windowObj.empty();},350)
+			aCopyObj.empty()
+			aCopyObj.html("<a href=\"javascript:void(0)\" id=\"close"+idNum+"\" class=\"windowCloseButton\"></a>")
+
+			// 背景效果
 			$("#matter1").addClass("backgroundUnblur")
 			$("#left").addClass("backgroundUnblurFixed")
+			$("#matter1").removeClass("backgroundBlur")
+			$("#left").removeClass("backgroundBlurFixed")
 			$("html").css("overflow","auto")
 		});
 	});

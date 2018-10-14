@@ -67,6 +67,7 @@
     -moz-box-shadow:2px 2px 10px #C4C4C4;
     -webkit-box-shadow:2px 2px 10px #C4C4C4;
     box-shadow:2px 2px 10px #C4C4C4;
+    transition: transform 0.5s
 }
 
 .beforeOpenWindow{

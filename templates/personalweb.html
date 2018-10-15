@@ -44,12 +44,15 @@
     <div class="middle" id="middle">
         <div id="matter0" class="matter0" style="display: block">
             <ul>
-	            <li>
-	            	<a href="#">
-						<h4></h4>
-						<p>尚未开发</p>
-	            	</a>
-	            </li>
+                {% for codeDiary in codeDiary_info %}
+                    {% if codeDiary.is_display == 0 %}
+                        <li>
+                            <a class="content" id="diary{{codeDiary.text_id}}" href="#codeDiary/text_id={{codeDiary.text_id}}">
+                                <p>{{ codeDiary.content }}</p>
+                            </a>
+                        </li>
+                    {% endif %}
+                {% endfor %}
             </ul>
         </div>
         <div id="matter1" class="matter1" style="display: none">
@@ -92,6 +95,7 @@
     </div>
     <div id="windowBackground"></div>
     <div id='window' class="beforeOpenWindow"></div>
+    <script type="text/javascript" src="{% static 'js/ajax.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/jquery-animate-css-rotate-scale.js' %}"></script>
 	<script type="text/javascript" src="{% static 'js/main.js' %}"></script>
 </body>

@@ -30,7 +30,8 @@ button {
 
 html, body {
 	/*overflow: hidden;*/
-	overflow:auto;
+	overflow-y:scroll;
+	overflow-x: hidden;
 	min-width: 0;
     margin: 0;
     padding: 0;
@@ -86,7 +87,7 @@ html, body {
 	height:10px;
 }
 ::-webkit-scrollbar-track-piece {
-	background-color:#F7F7F7;
+	background-color:#FFFFFF;
 }
 ::-webkit-scrollbar-thumb {
 	border-radius: 10px;

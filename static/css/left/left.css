@@ -3,8 +3,8 @@
 }
 
 .left-avatar img{
-    
-    margin:  58px 0 0 154px;
+    float: right;
+    margin:  58px 33px 0 0;
     border-radius: 10px;
     -moz-box-shadow:2px 2px 9px #bfbfbf; 
     -webkit-box-shadow:2px 2px 9px #bfbfbf;
@@ -12,14 +12,15 @@
 }
 
 .left-menu {
-    margin: 20px 0 0 135px;
+    float: right;
+    margin: 20px 41px 0 0;
     padding: 0 0 20px 0
 }
 
 .left-menu ul {
     list-style-type: none;
     padding: 0;
-    width: 80%
+    width: 160px
 }
 
 .left-menu ul::-webkit-scrollbar {

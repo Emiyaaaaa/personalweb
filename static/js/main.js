@@ -132,9 +132,8 @@ $(document).ready(function() {
 			$('#windowBackground').css('display','none')
 			$('#diary'+idNum).css('display','block')
 			setTimeout(function(){windowObj.toggleClass('beforeOpenWindow');},10)
-			setTimeout(function(){$('#window').css('display','none');windowObj.empty();windowObj.toggleClass('beforeOpenWindow')},350)
-			aCopyObj.empty()
-			aCopyObj.html('<a href=\'javascript:void(0)\' id=\'close'+idNum+'\' class=\'windowCloseButton\'></a>')
+			setTimeout(function(){windowObj.css('display','none').empty()},350)
+			aCopyObj.empty().html('<a href=\'javascript:void(0)\' id=\'close'+idNum+'\' class=\'windowCloseButton\'></a>')
 
 			// 背景效果
 			$('#matter1').addClass('backgroundUnblur')

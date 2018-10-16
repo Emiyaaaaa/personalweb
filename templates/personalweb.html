@@ -21,7 +21,7 @@
 	<div class="left" id="left">
 		<div class="left-avatar">
 			<a href=jacascript::void(0)>
-				<img src="{% static 'avatar/123.jpg'%}" width="150" height="140"/>
+				<img src="{% static ''%}{{ avatar }}" width="150" height="140"/>
 			</a>
 		</div>
 		<div class="left-menu" id="left-menu">
@@ -47,7 +47,7 @@
                 {% for codeDiary in codeDiary_info %}
                     {% if codeDiary.is_display == 0 %}
                         <li>
-                            <a class="content" id="diary{{codeDiary.text_id}}" href="#codeDiary/text_id={{codeDiary.text_id}}">
+                            <a class="content" id="CodeDiary{{codeDiary.text_id}}" href="#codeDiary/text_id={{codeDiary.text_id}}">
                                 <p>{{ codeDiary.content }}</p>
                             </a>
                         </li>

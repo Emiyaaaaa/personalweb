@@ -1,11 +1,9 @@
-from django.shortcuts import render
-from django.views.generic import View
 from .models import CodeDiary
-from personalcenter import views
+from personalcenter.views import PersonalCenterView
 
-class CodeDiaryView(View):
-    def get(self,request):
-        simple_personal_info = views.get_simple_personal_info()
+class CodeDiaryView():
+    def get(self):
+        simple_personal_info = PersonalCenterView().get_simple_personal_info()
         avatar = simple_personal_info['avatar']
         codeDiary_info = []
         stick_diary = CodeDiary.objects.filter(stick=1)
@@ -21,10 +19,7 @@ class CodeDiaryView(View):
             i = i + 1
             if i >= 20:
                 break
-        print(avatar)
-        return render(request, 'personalweb.html',{'codeDiary_info':codeDiary_info,
-                                                    'avatar': avatar,
-                                                   })
 
-    def post(self,request):
-        return render(request, 'personalweb.html')
+        return {'codeDiary_info':codeDiary_info,
+                'avatar': avatar,
+                }

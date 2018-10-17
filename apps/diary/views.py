@@ -1,9 +1,13 @@
 from django.shortcuts import render
 from django.views.generic import View
 from .models import Diary
+from django.http import JsonResponse
+from personalcenter.views import PersonalCenterView
 
-class DiaryView(View):
-    def get(self,request):
+class DiaryView():
+    def get(self):
+        simple_personal_info = PersonalCenterView().get_simple_personal_info()
+        avatar = simple_personal_info['avatar']
         diary_info = []
         stick_diary = Diary.objects.filter(stick=1)
         all_diary = Diary.objects.all().order_by('-text_id')
@@ -13,14 +17,13 @@ class DiaryView(View):
             diary_info.append({'content':diary.content,
                                 'date_weather':diary.date+ ' ' +diary.weather,
                                 'is_display':diary.is_display,
-                                'text_id':diary.text_id
+                                'text_id':diary.text_id,
                                 })
             i = i + 1
             if i >= 20:
                 break
+        return {'diary_info':diary_info,
+                     'avatar': avatar,
+                                                   }
 
-        return render(request, 'personalweb.html',{'diary_info':diary_info})
-
-    def post(self,request):
-        return render(request, 'personalweb.html')
 

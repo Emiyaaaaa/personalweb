@@ -6,8 +6,6 @@ from personalcenter.views import PersonalCenterView
 
 class DiaryView():
     def get(self):
-        simple_personal_info = PersonalCenterView().get_simple_personal_info()
-        avatar = simple_personal_info['avatar']
         diary_info = []
         stick_diary = Diary.objects.filter(stick=1)
         all_diary = Diary.objects.all().order_by('-text_id')
@@ -23,7 +21,6 @@ class DiaryView():
             if i >= 20:
                 break
         return {'diary_info':diary_info,
-                     'avatar': avatar,
-                                                   }
+                }
 
 

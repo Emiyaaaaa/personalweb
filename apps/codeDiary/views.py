@@ -21,5 +21,4 @@ class CodeDiaryView():
                 break
 
         return {'codeDiary_info':codeDiary_info,
-                'avatar': avatar,
                 }

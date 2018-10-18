@@ -1,24 +1,27 @@
 $(document).ready(function() {
 
 	function main() {
-		$.ajax({
-        url:"/",
-        type:"GET",
-        data:{"li":window.location.hash},
-        success:function(data1){
-        console.log(data1)
-    	}
-    })
+		if (window.location.hash != '') {
+			$.ajax({
+		        url:"/",
+		        type:"GET",
+		        data:{"matter":window.location.hash},
+		        success:function(data1){
+		        			console.log(data1)
+		    				}
+		    })
+		}
 	}
 	main()
 	$('.left-menu a').click(function () {
+		console.log($(this).attr('href'))
 	    $.ajax({
-        url:"/123",
+        url:"/",
         type:"GET",
-        data:{"k1":"v1","k2":"v2"},
+        data:{"matter":$(this).attr('href')},
         success:function(data1){ 
         console.log(data1)
     	}
-    })
-	    })
+    	})
+})
 })

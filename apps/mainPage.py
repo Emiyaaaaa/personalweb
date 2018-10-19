@@ -25,7 +25,7 @@ def ajax_main(request):
         main_page = CodeDiaryView().get()
 
     elif matter == '#diary':
-        main_page = DiaryView().get()
+        main_page = DiaryView().get()# diary_info = {...}
 
 
     elif matter == '#application':

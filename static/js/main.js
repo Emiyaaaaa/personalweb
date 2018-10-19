@@ -1,5 +1,5 @@
 $(document).ready(function() {
-		
+	
 		// 透明度变化
 		function divFadeIn() {
 			liNum = $('.matter1 ul li').length;
@@ -34,19 +34,10 @@ $(document).ready(function() {
 		navInteraction();
 
 
-	    // 导航栏选中状态实现
-	    $('.left-menu a').click(function () {
-	    	$('.left-menu a').removeClass('active');
-			$(this).addClass('active');
-	    });
-
-
-
 	    function getDivPosition(id){
 			var left = document.getElementById(id).getBoundingClientRect().left
 			var top = document.getElementById(id).getBoundingClientRect().top
 			return [left,top]
-		
 		}
 
 		// matter1打开窗口效果
@@ -142,4 +133,6 @@ $(document).ready(function() {
 			$('#left').removeClass('backgroundBlurFixed')
 			$('html').css('overflow','auto')
 		});
+
+		$('')
 	});

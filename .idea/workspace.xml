@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="97ee085e-0965-47c9-afdd-5d7ddcf1463c" name="Default" comment="js优化">
-      <change afterPath="$PROJECT_DIR$/apps/notFoundPage/migrations/__init__.py" afterDir="false" />
+    <list default="true" id="97ee085e-0965-47c9-afdd-5d7ddcf1463c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/mainPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/mainPage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/avatar/123_UxT7FUt.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/avatar/123_igxjM40.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/personalweb/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/personalweb/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/personalweb/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/personalweb/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/ajax.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/ajax.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/personalweb.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/personalweb.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -66,7 +64,7 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/personalweb/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
+            <state relative-caret-position="1175">
               <caret line="52" column="17" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
             </state>
           </provider>
@@ -75,7 +73,7 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/notFoundPage/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
+            <state relative-caret-position="100">
               <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
@@ -87,8 +85,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://E:/2345下载/txy (3)/apps/userinfo/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3950">
-              <caret line="1" selection-start-line="1" selection-end-line="2" />
+            <state relative-caret-position="25">
+              <caret line="1" selection-start-line="1" selection-end-line="10" selection-end-column="57" />
               <folding>
                 <element signature="e#23#58#0" expanded="true" />
               </folding>
@@ -99,8 +97,11 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/diary/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="37" />
+            <state relative-caret-position="225">
+              <caret line="14" column="22" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -120,8 +121,8 @@
       <file leaf-file-name="mainPage.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/mainPage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-188">
-              <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+            <state relative-caret-position="12">
+              <caret line="27" column="38" lean-forward="true" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
               <folding>
                 <element signature="e#102#137#0" expanded="true" />
               </folding>
@@ -263,7 +264,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -360,6 +360,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -705,20 +706,6 @@
       <option name="presentableId" value="Default" />
       <updated>1535974839541</updated>
     </task>
-    <task id="LOCAL-00046" summary="update">
-      <created>1538131186666</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1538131186666</updated>
-    </task>
-    <task id="LOCAL-00047" summary="update">
-      <created>1538195563576</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1538195563576</updated>
-    </task>
     <task id="LOCAL-00048" summary="update">
       <created>1538195737671</created>
       <option name="number" value="00048" />
@@ -1048,7 +1035,21 @@
       <option name="project" value="LOCAL" />
       <updated>1539862439478</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="update">
+      <created>1539919415539</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1539919415539</updated>
+    </task>
+    <task id="LOCAL-00096" summary="添加状态码">
+      <created>1539920604677</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1539920604677</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1071,21 +1072,21 @@
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32952926" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49865952" weight="0.38088444" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32952926" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49787235" visible="true" weight="0.3538874" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49787235" visible="true" weight="0.3585791" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" weight="0.24664879" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="manage.py@personalweb" order="13" weight="0.40085593" />
       <window_info anchor="right" id="SciView" order="3" weight="0.23123324" />
       <window_info id="Structure" order="1" sideWeight="0.50212765" side_tool="true" weight="0.27010724" />
       <window_info id="Favorites" order="2" sideWeight="0.50212765" side_tool="true" weight="0.27010724" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39942938" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="manage.py@personalweb" order="13" weight="0.40085593" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1148,7 +1149,8 @@
     <MESSAGE value="js优化" />
     <MESSAGE value="bug修复" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="添加状态码" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加状态码" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1388,13 +1390,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/diary/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://E:/2345下载/txy (3)/apps/news/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1375">
@@ -1404,8 +1399,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/personalweb/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
+        <state relative-caret-position="1175">
           <caret line="52" column="17" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/2345下载/txy (3)/apps/userinfo/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" selection-start-line="1" selection-end-line="10" selection-end-column="57" />
+          <folding>
+            <element signature="e#23#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/notFoundPage/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/diary/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="14" column="22" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1419,30 +1444,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://E:/2345下载/txy (3)/apps/userinfo/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3950">
-          <caret line="1" selection-start-line="1" selection-end-line="2" />
-          <folding>
-            <element signature="e#23#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/notFoundPage/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/mainPage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-188">
-          <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+        <state relative-caret-position="12">
+          <caret line="27" column="38" lean-forward="true" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
           <folding>
             <element signature="e#102#137#0" expanded="true" />
           </folding>

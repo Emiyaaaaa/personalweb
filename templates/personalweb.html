@@ -41,7 +41,7 @@
 		</div>
 	</div>
     <div class="middle" id="middle">
-        <div id="matter0" class="matter0" style="display: block;">
+        <div id="matter0" class="matter0 odeDiary" style="display: block;">
             <ul>
                 {% for codeDiary in codeDiary_info %}
                     {% if codeDiary.is_display == 0 %}
@@ -54,7 +54,7 @@
                 {% endfor %}
             </ul>
         </div>
-        <div id="matter1" class="matter1" style="display: none;">
+        <div id="matter1" class="matter1 diary" style="display: none;">
 			<ul>
                 {% for diary in diary_info %}
                     {% if diary.is_display == 0 %}

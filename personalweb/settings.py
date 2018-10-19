@@ -49,7 +49,8 @@ INSTALLED_APPS = [
     'crispy_forms',
     'personalcenter',
     'changeLog',
-    'codeDiary'
+    'codeDiary',
+    'notFoundPage'
 ]
 
 MIDDLEWARE = [

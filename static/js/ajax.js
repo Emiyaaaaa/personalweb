@@ -1,6 +1,9 @@
 $(document).ready(function() {
 
-	function main() {
+	url = 'http://127.0.0.1:8000'
+
+	function mainPage() {
+		// window.location.href = url + '/404'
 		if (window.location.hash != '') {
 			$.ajax({
 		        url:"/",
@@ -12,14 +15,13 @@ $(document).ready(function() {
 		    })
 		}
 	}
-	main()
+	mainPage()
 	$('.left-menu a').click(function () {
-		console.log($(this).attr('href'))
 	    $.ajax({
         url:"/",
         type:"GET",
-        data:{"matter":$(this).attr('href')},
-        success:function(data1){ 
+        data:{"matter":$(this).attr('href'),"operation":"click"},
+        success:function(data1){
         console.log(data1)
     	}
     	})

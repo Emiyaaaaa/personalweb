@@ -20,24 +20,26 @@ def ajax_main(request):
     simple_personal_info = PersonalCenterView().get_simple_personal_info()
     avatar = simple_personal_info['avatar']
     # print(matter)
+
     if matter == '#codeDiary':
-        matter_content = CodeDiaryView().get()
-        matter_content['avatar'] = avatar
+        main_page = CodeDiaryView().get()
 
     elif matter == '#diary':
-        matter_content = DiaryView().get()
-        matter_content['avatar'] = avatar
+        main_page = DiaryView().get()
+
 
     elif matter == '#application':
-        pass
+        main_page = {}
 
     elif matter == '#personalCenter':
-        pass
+        main_page = {}
 
     elif matter == None:
-        return render(request,'personalweb.html',CodeDiaryView().get())
+        main_page = CodeDiaryView().get()
+        main_page['avatar'] = avatar
+        return render(request,'personalweb.html',main_page)
 
     else:
-        return render(request,'404.html')
+        return JsonResponse({'statusCode':'404'})
 
-    return render(request, 'personalweb.html',matter_content)
+    return JsonResponse(main_page)

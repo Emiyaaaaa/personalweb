@@ -9,8 +9,8 @@ $(document).ready(function() {
 		        url:"/",
 		        type:"GET",
 		        data:{"matter":window.location.hash},
-		        success:function(data1){
-		        			console.log(data1)
+		        success:function(data){
+		        			console.log(data.statusCode)
 		    				}
 		    })
 		}

@@ -37,9 +37,11 @@ def ajax_main(request):
     elif matter == None:
         main_page = CodeDiaryView().get()
         main_page['avatar'] = avatar
+        main_page['statusCode'] = '200'
         return render(request,'personalweb.html',main_page)
 
     else:
         return JsonResponse({'statusCode':'404'})
 
+    main_page['statusCode'] = '200'
     return JsonResponse(main_page)

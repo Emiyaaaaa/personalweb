@@ -85,9 +85,9 @@ $(document).ready(function() {
 
 	function needAjax(urlHash){
 		var num = $(urlHash).parent().attr('id').split('-')[1]
-		var content = $('matter'+num).html()
-		if (content == '<ul></ul>')
-			alert('123')
+		var content = $('#matter'+num).html().replace(/\s/g, "")
+		if (content == '<ul></ul>'){
 			return 'true'
+		}
 	}
 })

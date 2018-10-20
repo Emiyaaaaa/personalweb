@@ -21,7 +21,7 @@ $(document).ready(function() {
 		}
 
 		// matter1打开窗口效果
-		$('.content').click(function openWindows() {
+		$(document).on("click",'.content',function openWindows(){
 			var obj = $(this)
 			var idNum = obj.attr('id').match(/\d+/)
 			var aCopyObj = $('#diaryCopyone'+idNum)

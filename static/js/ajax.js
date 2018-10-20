@@ -45,8 +45,8 @@ $(document).ready(function() {
 	        		var htm = ''
 	        		$.each(data.diary_info,function(i,data){
 	        			htm += '<li>\
-                    	<div class="aCopy" id="copyone'+ data.text_id +'">\
-                    		<a href="javascript:void(0)" id="close'+ data.text_id +'" class="windowCloseButton"></a>\
+                    	<div class="aCopy" id="diaryCopyone'+ data.text_id +'">\
+                    		<a href="javascript:void(0)" id="diaryClose'+ data.text_id +'" class="windowCloseButton"></a>\
                     	</div>\
                         <a class="content" id="diary'+ data.text_id +'" href="#diary?text_id='+ data.text_id +'">\
                             <h4>'+ data.date_weather +'</h4>\
@@ -58,18 +58,7 @@ $(document).ready(function() {
         		}
 
         		else if (urlHash == '#codeDiary'){
-	        		var htm = ''
-	        		$.each(data.codeDiary_info,function(i,data){
-	        			htm += '<li>\
-                    	<div class="aCopy" id="codeCopyone'+ data.text_id +'">\
-                    		<a href="javascript:void(0)" id="close'+ data.text_id +'" class="windowCloseButton"></a>\
-                    	</div>\
-                        <a class="content" id="codeDiary'+ data.text_id +'" href="#codeDiary?text_id='+ data.text_id +'">\
-                            <p>'+ data.content +'</p>\
-                        </a>\
-                    </li>'
-	        		})
-	        		$('.codeDiary ul').html(htm)
+	        		;
         		}
         		else {
         		window.location.href = url + '/404'

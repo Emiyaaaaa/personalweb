@@ -1,8 +1,8 @@
 $(document).ready(function() {
 	
 		// 透明度变化
-		function divFadeIn(num) {
-			console.log(num)
+		function divFadeIn(urlHush) {
+			var num = $(urlHush).parent().attr('id').split('-')[1]
 			var liNum = $('#matter'+num+' ul li').length;
 			for (var i = 0; i < liNum; i++) {
 				$('#matter'+num+' ul li:eq(' + i +')').delay(140*i).fadeIn();
@@ -10,7 +10,6 @@ $(document).ready(function() {
 					$('#matter'+num+' ul li:eq(' + i +')').fadeIn();
 				}
 			}
-
 		}
 		window.divFadeIn = divFadeIn
 		

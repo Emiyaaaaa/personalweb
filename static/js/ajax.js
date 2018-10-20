@@ -18,16 +18,14 @@ $(document).ready(function() {
 
 	$('.left-menu a').click(function () {
 		var urlHash = $(this).attr('href')
-		console.log(urlHash)
 	    $.ajax({
-        url:"/",
-        type:"GET",
-        async: false,
-        data:{"matter":urlHash,"operation":"click"},
-        success:function(data){fillHtml(data,urlHash)}
+	        url:"/",
+	        type:"GET",
+	        async: false,
+	        data:{"matter":urlHash,"operation":"click"},
+	        success:function(data){fillHtml(data,urlHash)}
     	})
-		divFadeIn('1')
-			
+		divFadeIn(urlHash)
 	})
 
 	function fillHtml(data,urlHash){

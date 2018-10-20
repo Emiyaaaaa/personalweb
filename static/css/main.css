@@ -31,7 +31,7 @@ button {
 html, body {
 	/*overflow: hidden;*/
 	overflow-y:scroll;
-	overflow-x: hidden;
+	overflow-x:hidden;
 	min-width: 0;
     margin: 0;
     padding: 0;

@@ -35,8 +35,8 @@ $(document).ready(function() {
 		        data:{"matter":urlHash},
 		        success:function(data){fillHtml(data,urlHash)}
     		})
+    		divFadeIn(urlHash)
 		}
-		divFadeIn(urlHash)
 	})
 
 	function fillHtml(data,urlHash){
@@ -44,15 +44,18 @@ $(document).ready(function() {
         		if (urlHash == '#diary'){
 	        		var htm = ''
 	        		$.each(data.diary_info,function(i,data){
-	        			htm += '<li>\
-                    	<div class="aCopy" id="diaryCopyone'+ data.text_id +'">\
-                    		<a href="javascript:void(0)" id="diaryClose'+ data.text_id +'" class="windowCloseButton"></a>\
-                    	</div>\
-                        <a class="content" id="diary'+ data.text_id +'" href="#diary?text_id='+ data.text_id +'">\
-                            <h4>'+ data.date_weather +'</h4>\
-                            <p>'+ data.content +'</p>\
-                        </a>\
-                    </li>'
+	        			if (data.is_display != 0){
+	        				htm += '<li>\
+                    					<div class="aCopy" id="diaryCopyone'+ data.text_id +'">\
+                    						<a href="javascript:void(0)" id="diaryClose'+ data.text_id +'" class="windowCloseButton"></a>\
+                    					</div>\
+                        				<a class="content" id="diary'+ data.text_id +'" href="#diary?text_id='+ data.text_id +'">\
+                            				<h4>'+ data.date_weather +'</h4>\
+                            				<p>'+ data.content +'</p>\
+                        				</a>\
+                    				</li>'
+	        			}
+	        			
 	        		})
 	        		$('.diary ul').html(htm)
         		}

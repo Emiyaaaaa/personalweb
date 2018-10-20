@@ -7,6 +7,7 @@ from django.http import JsonResponse
 from personalcenter.views import PersonalCenterView
 from codeDiary.views import CodeDiaryView
 from diary.views import DiaryView
+import time
 
 """
 注：输入url按回车后，js加载之前，ajax_main会被 urls.py 调用一次，
@@ -24,7 +25,7 @@ def ajax_main(request):
         main_page = CodeDiaryView().get()
 
     elif matter == '#diary':
-        main_page = DiaryView().get()# diary_info = {...}
+        main_page = DiaryView().get()
 
     elif matter == '#application':
         main_page = {}

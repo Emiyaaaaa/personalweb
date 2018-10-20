@@ -17,14 +17,25 @@ $(document).ready(function() {
 	mainPage()
 
 	$('.left-menu a').click(function () {
+		//导航栏交互
+		$('.left-menu a').removeClass('active');
+		$(this).addClass('active');
+		var liNum = $(this).parent().attr('id').split('-')[1]
+		$('#middle > div').css('display','none')
+		$('#matter'+liNum).css('display','block')
+		//END
 		var urlHash = $(this).attr('href')
-	    $.ajax({
-	        url:"/",
-	        type:"GET",
-	        async: false,
-	        data:{"matter":urlHash,"operation":"click"},
-	        success:function(data){fillHtml(data,urlHash)}
-    	})
+
+		//判断是否需要ajax
+		if (needAjax(urlHash) == 'true'){
+			$.ajax({
+		        url:"/",
+		        type:"GET",
+		        async: false,
+		        data:{"matter":urlHash},
+		        success:function(data){fillHtml(data,urlHash)}
+    		})
+		}
 		divFadeIn(urlHash)
 	})
 
@@ -45,6 +56,21 @@ $(document).ready(function() {
 	        		})
 	        		$('.diary ul').html(htm)
         		}
+
+        		else if (urlHash == '#codeDiary'){
+	        		var htm = ''
+	        		$.each(data.codeDiary_info,function(i,data){
+	        			htm += '<li>\
+                    	<div class="aCopy" id="codeCopyone'+ data.text_id +'">\
+                    		<a href="javascript:void(0)" id="close'+ data.text_id +'" class="windowCloseButton"></a>\
+                    	</div>\
+                        <a class="content" id="codeDiary'+ data.text_id +'" href="#codeDiary?text_id='+ data.text_id +'">\
+                            <p>'+ data.content +'</p>\
+                        </a>\
+                    </li>'
+	        		})
+	        		$('.codeDiary ul').html(htm)
+        		}
         		else {
         		window.location.href = url + '/404'
         		}
@@ -55,5 +81,13 @@ $(document).ready(function() {
         	else {
         		window.location.href = url + '/404'
         	}
+	}
+
+	function needAjax(urlHash){
+		var num = $(urlHash).parent().attr('id').split('-')[1]
+		var content = $('matter'+num).html()
+		if (content == '<ul></ul>')
+			alert('123')
+			return 'true'
 	}
 })

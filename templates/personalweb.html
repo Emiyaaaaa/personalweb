@@ -46,6 +46,9 @@
                 {% for codeDiary in codeDiary_info %}
                     {% if codeDiary.is_display == 0 %}
                         <li>
+                        	<div class="aCopy" id="codeDiaryCopyone{{codeDiary.text_id}}">
+                        		<a href="javascript:void(0)" id="close{{codeDiary.text_id}}" class="windowCloseButton"></a>
+                        	</div>
                             <a class="content" id="CodeDiary{{codeDiary.text_id}}" href="#codeDiary?text_id={{codeDiary.text_id}}">
                                 <p>{{ codeDiary.content }}</p>
                             </a>
@@ -59,7 +62,7 @@
                 {% for diary in diary_info %}
                     {% if diary.is_display == 0 %}
                         <li>
-                        	<div class="aCopy" id="copyone{{diary.text_id}}">
+                        	<div class="aCopy" id="diaryCopyone{{diary.text_id}}">
                         		<a href="javascript:void(0)" id="close{{diary.text_id}}" class="windowCloseButton"></a>
                         	</div>
                             <a class="content" id="diary{{diary.text_id}}" href="#diary?text_id={{diary.text_id}}">

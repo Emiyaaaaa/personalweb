@@ -14,18 +14,6 @@ $(document).ready(function() {
 		window.divFadeIn = divFadeIn
 		
 
-		// 导航栏交互
-		$('.left-menu a').click(function () {
-
-			$('.left-menu a').removeClass('active');
-			$(this).addClass('active');
-
-			var liNum = $(this).parent().attr('id').split('-')[1]
-			$('#middle > div').css('display','none')
-			$('#matter'+liNum).css('display','block')
-		})
-
-
 	    function getDivPosition(id){
 			var left = document.getElementById(id).getBoundingClientRect().left
 			var top = document.getElementById(id).getBoundingClientRect().top
@@ -36,7 +24,7 @@ $(document).ready(function() {
 		$('.content').click(function openWindows() {
 			var obj = $(this)
 			var idNum = obj.attr('id').match(/\d+/)
-			var aCopyObj = $('#copyone'+idNum)
+			var aCopyObj = $('#diaryCopyone'+idNum)
 			var scaleX = 1.085
 			var scaleY = 1.195
 			var width = obj.width()
@@ -93,7 +81,7 @@ $(document).ready(function() {
 		$('#window').on('click','.windowCloseButton',function(){
 			var idNum = $(this).attr('id').match(/\d+/)
 			var aObj = $('#diary'+idNum)
-			var aCopyObj = $('#copyone'+idNum)
+			var aCopyObj = $('#diaryCopyone'+idNum)
 			var windowObj = $('#window')
 			var aCopyWidth = aCopyObj.width()
 			var aCopyHeight = aCopyObj.height()

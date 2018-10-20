@@ -1,37 +1,30 @@
 $(document).ready(function() {
 	
 		// 透明度变化
-		function divFadeIn() {
-			liNum = $('.matter1 ul li').length;
+		function divFadeIn(num) {
+			console.log(num)
+			var liNum = $('#matter'+num+' ul li').length;
 			for (var i = 0; i < liNum; i++) {
-				$('.matter1 ul li:eq(' + i +')').delay(140*i).fadeIn();
+				$('#matter'+num+' ul li:eq(' + i +')').delay(140*i).fadeIn();
 				if (i > 10){
-					$('.matter1 ul li:eq(' + i +')').fadeIn();
+					$('#matter'+num+' ul li:eq(' + i +')').fadeIn();
 				}
 			}
+
 		}
-		divFadeIn();
+		window.divFadeIn = divFadeIn
 		
 
 		// 导航栏交互
-		function navInteraction() {
-			liNum = $('.left-menu ul li').length;
-			for(var i = 0; i < liNum; i++) {
-					$('#li-' + i).bind('click', {
-						index: i
-					}, openMatter);
-				}
-		    function openMatter(obj) {
-		        for (var i = 0; i < liNum; i++) {
-		            if (i == obj.data.index) {
-		                document.getElementById('matter' + i).style.display = 'block';
-		            } else {
-		                document.getElementById('matter' + i).style.display = 'none';
-		            }
-		        }
-		    }
-		}
-		navInteraction();
+		$('.left-menu a').click(function () {
+
+			$('.left-menu a').removeClass('active');
+			$(this).addClass('active');
+
+			var liNum = $(this).parent().attr('id').split('-')[1]
+			$('#middle > div').css('display','none')
+			$('#matter'+liNum).css('display','block')
+		})
 
 
 	    function getDivPosition(id){

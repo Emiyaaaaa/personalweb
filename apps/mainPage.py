@@ -19,14 +19,13 @@ def ajax_main(request):
 
     simple_personal_info = PersonalCenterView().get_simple_personal_info()
     avatar = simple_personal_info['avatar']
-    # print(matter)
+    print(matter)
 
     if matter == '#codeDiary':
         main_page = CodeDiaryView().get()
 
     elif matter == '#diary':
         main_page = DiaryView().get()# diary_info = {...}
-
 
     elif matter == '#application':
         main_page = {}
@@ -41,7 +40,9 @@ def ajax_main(request):
         return render(request,'personalweb.html',main_page)
 
     else:
+        print(4)
         return JsonResponse({'statusCode':'404'})
 
     main_page['statusCode'] = '200'
+    print(1)
     return JsonResponse(main_page)

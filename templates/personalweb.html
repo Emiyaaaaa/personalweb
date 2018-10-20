@@ -41,12 +41,12 @@
 		</div>
 	</div>
     <div class="middle" id="middle">
-        <div id="matter0" class="matter0 odeDiary" style="display: block;">
+        <div id="matter0" class="matter0 codeDiary" style="display: block;">
             <ul>
                 {% for codeDiary in codeDiary_info %}
                     {% if codeDiary.is_display == 0 %}
                         <li>
-                            <a class="content" id="CodeDiary{{codeDiary.text_id}}" href="#codeDiary/text_id={{codeDiary.text_id}}">
+                            <a class="content" id="CodeDiary{{codeDiary.text_id}}" href="#codeDiary?text_id={{codeDiary.text_id}}">
                                 <p>{{ codeDiary.content }}</p>
                             </a>
                         </li>
@@ -62,7 +62,7 @@
                         	<div class="aCopy" id="copyone{{diary.text_id}}">
                         		<a href="javascript:void(0)" id="close{{diary.text_id}}" class="windowCloseButton"></a>
                         	</div>
-                            <a class="content" id="diary{{diary.text_id}}" href="#diary/text_id={{diary.text_id}}">
+                            <a class="content" id="diary{{diary.text_id}}" href="#diary?text_id={{diary.text_id}}">
                                 <h4>{{ diary.date_weather }}</h4>
                                 <p>{{ diary.content }}</p>
                             </a>
@@ -94,8 +94,8 @@
     </div>
     <div id="windowBackground"></div>
     <div id='window' class="beforeOpenWindow"></div>
+    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/ajax.js' %}"></script>
     <!-- <script type="text/javascript" src="{% static 'js/jquery-animate-css-rotate-scale.js' %}"></script> -->
-	<script type="text/javascript" src="{% static 'js/main.js' %}"></script>
 </body>
 </html>

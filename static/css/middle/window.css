@@ -1,0 +1,70 @@
+.windowCloseButton {
+    position: absolute;
+    color: #B5B5B5;
+    /*text-align: center;*/
+    height: 30px;
+    width: 31.95px;
+    font-size: 21px;
+    top: 8px;
+    right: 10px;
+    transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+}
+
+.windowCloseButton::before {
+    content: "\2716";
+    margin: 7px 0 0 7px
+}
+
+.windowCloseButton:hover{
+	transform: rotate(90deg) /*scale(1.1)*/;
+	/*text-shadow:1px -1px 2px #D9D9D9;*/
+}
+
+#window {
+    display: none;
+    position: fixed;
+    left: var(--left);
+    top: var(--top);
+    width: var(--width);
+    height: var(--height);
+    margin-top: var(--marginTop);
+    margin-left: var(--marginLeft);
+    /*文本*/
+    letter-spacing: 2px;
+    color: #000000;
+    text-decoration:none;
+    /*形状*/
+    border-radius: 15px;
+    background-color: #FFFFFF;
+    padding: 17px 20px;
+    /*阴影*/
+    -moz-box-shadow:2px 2px 10px #C4C4C4;
+    -webkit-box-shadow:2px 2px 10px #C4C4C4;
+    box-shadow:2px 2px 10px #C4C4C4;
+    transition: all 1s
+}
+
+.beforeOpenWindow{
+    transform: scale(1.08,1.15);
+}
+
+.afterOpenWindow{
+    left: var(--changeLeft) !important;
+    top: var(--changeTop) !important;
+    width: var(--changeWidth) !important;
+    height: var(--changeHeight) !important;
+}
+
+.matter1 h4, #window h4{
+	margin: 0 auto;
+	padding: 0px 10px;
+	font-weight: lighter;
+	font-size: 13px;
+}
+
+.matter1 p, #window p{
+	padding: 8px 10px;
+	font-size: 15px;
+    color: #333333
+}

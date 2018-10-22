@@ -12,7 +12,6 @@ $(document).ready(function() {
 		}
 	}
 	window.divFadeIn = divFadeIn
-	
 
     function getDivPosition(id){
 		var left = document.getElementById(id).getBoundingClientRect().left
@@ -20,17 +19,27 @@ $(document).ready(function() {
 		return [left,top]
 	}
 
+	function getClientSize(){
+		clientWidth = document.documentElement.clientWidth
+		clientHeight = document.documentElement.clientHeight
+	}
+	getClientSize()
+
 	// matter1打开窗口效果
-	$(document).on("click",'.content',function openWindows(){
+	$(document).on("click",'.content',function openWindow(){
+		
 		var obj = $(this)
+		var windowObj = $('#window')
 		var idNum = obj.attr('id').match(/\d+/)
 		var aCopyObj = $('#diaryCopyone'+idNum)
 		var scaleX = 1.085
 		var scaleY = 1.195
 		var width = obj.width()
 		var height = obj.height()
-		var windowWidth = $(window).width()
-		var windowHeight = $(window).height()
+		var windowHeight = clientHeight/2
+		var windowWidth = clientWidth*4/6
+		var windowTop = clientHeight/7
+		var windowLeft = clientWidth/6
 		var marginLeft = obj.outerWidth(true) - obj.outerWidth()
 		var marginTop = obj.outerHeight(true) - obj.outerHeight()
 		var id = obj.attr('id')
@@ -38,79 +47,38 @@ $(document).ready(function() {
 		var top = getDivPosition(id)[1]
 		var top = top - (marginTop - (height * scaleY - height)/2)
 		var left = left - (marginLeft - (width * scaleX - width)/2)
-		var windowcss = {
-			'position':'fixed',
-			'display':'block',
-			'top':top,
-			'left':left,
-			'width':width,
-			'height':height,
-			'margin-left':marginLeft,
-			'margin-top':marginTop,
+		
+		var setPripertyDict1 = {
+			'top':top+'px',
+			'left':left+'px',
+			'width':width+'px',
+			'height':height+'px',
+			'marginTop':marginTop+'px',
+			'marginLeft':marginLeft+'px'
 		}
+	 	setProperty("window",setPripertyDict1)
+	 	windowObj.css('display','block')
+	 	var setPripertyDict2 = {
+	 		'changeLeft':windowLeft+'px',
+			'changeTop':windowTop+'px',
+			'changeWidth':windowWidth+'px',
+			'changeHeight':windowHeight+'px'
+	 	}
+	 	setProperty("window",setPripertyDict2)
+	 	setTimeout(function(){windowObj.toggleClass('afterOpenWindow');},5)
+		
 
-		var openWindowAnimate = {
-		   top: windowHeight/7,
-		   height: windowHeight/2,
-		   left: windowWidth/6,
-		   width: windowWidth*4/6-(obj.outerWidth(true)-width),
-		}
-
-		// 背景效果
-		$('#matter1').removeClass('backgroundUnblur')
-		$('#left').removeClass('backgroundUnblurFixed')
-		$('#matter1').addClass('backgroundBlur')
-		$('#left').addClass('backgroundBlurFixed')
-		$('html').css('overflow','hidden')
-
-		$('#window').css(windowcss)
-		$('#window').addClass('beforeOpenWindow')
-		obj.css('display','none')
-		$('#windowBackground').css({'display':'block','height':windowWidth})
-		aCopyObj.css('display','block')
-
-		var aHtml = obj.html()
-		var windowHtml = aCopyObj.html()
-
-		aCopyObj.html(aHtml)
-		$('#window').html(windowHtml + aHtml)
-		$('#window').animate(openWindowAnimate,350)
 	});
 
-	// matter1关闭窗口效果
-	$('#window').on('click','.windowCloseButton',function(){
-		var idNum = $(this).attr('id').match(/\d+/)
-		var aObj = $('#diary'+idNum)
-		var aCopyObj = $('#diaryCopyone'+idNum)
-		var windowObj = $('#window')
-		var aCopyWidth = aCopyObj.width()
-		var aCopyHeight = aCopyObj.height()
-		var id = aCopyObj.attr('id')
-		var aCopyLeft = getDivPosition(id)[0]
-		var aCopyTop = getDivPosition(id)[1]
-
-		var closeWindowAnimate = {
-		    top: aCopyTop,
-		    height: aCopyHeight,
-		    left: aCopyLeft,
-		    width: aCopyWidth,
-		    marginLeft: 0,
-			marginTop:0
+	function setProperty(documentObjId,dictObj){
+		var obj = document.getElementById(documentObjId)
+		for(var key in dictObj) {
+   			obj.style.setProperty('--'+key,dictObj[key])
 		}
+	}
 
-		windowObj.animate(closeWindowAnimate,350)
-		aCopyObj.css('display','none')
-		$('#windowBackground').css('display','none')
-		$('#diary'+idNum).css('display','block')
-		setTimeout(function(){windowObj.toggleClass('beforeOpenWindow');},10)
-		setTimeout(function(){windowObj.css('display','none').empty()},350)
-		aCopyObj.empty().html('<a href=\'javascript:void(0)\' id=\'close'+idNum+'\' class=\'windowCloseButton\'></a>')
+	// matter1关闭窗口效果
+	$(document).on('click','.windowCloseButton',function closeWindow(){
 
-		// 背景效果
-		$('#matter1').addClass('backgroundUnblur')
-		$('#left').addClass('backgroundUnblurFixed')
-		$('#matter1').removeClass('backgroundBlur')
-		$('#left').removeClass('backgroundBlurFixed')
-		$('html').css('overflow','auto')
 	});
 });

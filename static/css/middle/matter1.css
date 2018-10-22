@@ -54,40 +54,6 @@
     transform: scale(1.08,1.15);
 }
 
-#window {
-    display:none;
-    /*文本*/
-    letter-spacing: 2px;
-    color: #000000;
-    text-decoration:none;
-    /*形状*/
-    border-radius: 15px;
-    background-color: #FFFFFF;
-    padding: 17px 20px;
-    /*阴影*/
-    -moz-box-shadow:2px 2px 10px #C4C4C4;
-    -webkit-box-shadow:2px 2px 10px #C4C4C4;
-    box-shadow:2px 2px 10px #C4C4C4;
-    transition: transform 0.34s
-}
-
-.beforeOpenWindow{
-    transform: scale(1.08,1.15);
-}
-
-.matter1 h4, #window h4{
-	margin: 0 auto;
-	padding: 0px 10px;
-	font-weight: lighter;
-	font-size: 13px;
-}
-
-.matter1 p, #window p{
-	padding: 8px 10px;
-	font-size: 15px;
-    color: #333333
-}
-
 @keyframes backgroundBlur
 {
     from {filter: blur(0px);}
@@ -135,7 +101,7 @@
 #windowBackground {
     display: none;
     position:fixed;
-    overflow:hidden;
+    overflow:scroll;
     top: 0;
     left: 0;
     height: 723px;

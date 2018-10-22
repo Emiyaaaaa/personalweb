@@ -44,7 +44,7 @@ $(document).ready(function() {
         		if (urlHash == '#diary'){
 	        		var htm = ''
 	        		$.each(data.diary_info,function(i,data){
-	        			if (data.is_display != 0){
+	        			if (data.is_display == 0){
 	        				htm += '<li>\
                     					<div class="aCopy" id="diaryCopyone'+ data.text_id +'">\
                     						<a href="javascript:void(0)" id="diaryClose'+ data.text_id +'" class="windowCloseButton"></a>\

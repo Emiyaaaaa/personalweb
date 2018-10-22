@@ -49,7 +49,7 @@ html, body {
 .left {
 	width:22%;
 	float: left;
-	overflow:auto;
+	overflow: auto;
 	overflow-y: auto;
 	overflow-x: hidden;
 	position: fixed;
@@ -59,28 +59,6 @@ html, body {
 	text-decoration:line-through
 }
 
-.windowCloseButton {
-    position: absolute;
-    color: #B5B5B5;
-    /*text-align: center;*/
-    height: 30px;
-    width: 31.95px;
-    font-size: 21px;
-    top: 8px;
-    right: 10px;
-    transition: all 0.3s;
-	-webkit-transition: all 0.3s;
-}
-
-.windowCloseButton::before {
-    content: "\2716";
-    margin: 7px 0 0 7px
-}
-
-.windowCloseButton:hover{
-	transform: rotate(90deg) /*scale(1.1)*/;
-	/*text-shadow:1px -1px 2px #D9D9D9;*/
-}
 
 ::-webkit-scrollbar {
 	width:8px;

@@ -23,11 +23,11 @@ $(document).ready(function() {
 		clientWidth = document.documentElement.clientWidth
 		clientHeight = document.documentElement.clientHeight
 	}
-	getClientSize()
+	
 
 	// matter1打开窗口效果
 	$(document).on("click",'.content',function openWindow(){
-		
+		getClientSize()
 		var obj = $(this)
 		var windowObj = $('#window')
 		var idNum = obj.attr('id').match(/\d+/)
@@ -48,37 +48,66 @@ $(document).ready(function() {
 		var top = top - (marginTop - (height * scaleY - height)/2)
 		var left = left - (marginLeft - (width * scaleX - width)/2)
 		
-		var setPripertyDict1 = {
-			'top':top+'px',
-			'left':left+'px',
-			'width':width+'px',
-			'height':height+'px',
-			'marginTop':marginTop+'px',
-			'marginLeft':marginLeft+'px'
+		var setPripertyDict = {
+			'top':top,
+			'left':left,
+			'width':width,
+			'height':height,
+			'marginTop':marginTop,
+			'marginLeft':marginLeft,
+			'changeLeft':windowLeft,
+			'changeTop':windowTop,
+			'changeWidth':windowWidth-(obj.outerWidth(true)-width),
+			'changeHeight':windowHeight
 		}
-	 	setProperty("window",setPripertyDict1)
-	 	windowObj.css('display','block')
-	 	var setPripertyDict2 = {
-	 		'changeLeft':windowLeft+'px',
-			'changeTop':windowTop+'px',
-			'changeWidth':windowWidth+'px',
-			'changeHeight':windowHeight+'px'
-	 	}
-	 	setProperty("window",setPripertyDict2)
-	 	setTimeout(function(){windowObj.toggleClass('afterOpenWindow');},5)
-		
+	 	setProperty("window",setPripertyDict)
+
+		$('#matter1').removeClass('backgroundUnblur')
+		$('#left').removeClass('backgroundUnblurFixed')
+		$('#matter1').addClass('backgroundBlur')
+		$('#left').addClass('backgroundBlurFixed')
+		$('html').css('overflow','hidden')
+		windowObj.addClass('beforeOpenWindow')
+		obj.css('display','none')
+		$('#windowBackground').css({'display':'block','height':windowWidth})
+		aCopyObj.css('display','block')
+		var aHtml = obj.html()
+		var windowHtml = aCopyObj.html()
+		aCopyObj.html(aHtml)
+		windowObj.html(windowHtml + aHtml)
+		windowObj.css('display','block')
+	 	setTimeout(function(){windowObj.toggleClass('afterOpenWindow');},8)//不设置延时会有bug,延时>=8mm(可能与浏览器性能有关)
 
 	});
-
-	function setProperty(documentObjId,dictObj){
-		var obj = document.getElementById(documentObjId)
-		for(var key in dictObj) {
-   			obj.style.setProperty('--'+key,dictObj[key])
-		}
-	}
 
 	// matter1关闭窗口效果
 	$(document).on('click','.windowCloseButton',function closeWindow(){
+		getClientSize()
+		var obj = $(this)
+		var windowObj = $('#window')
+		var idNum = obj.attr('id').match(/\d+/)
+		var aObj = $('#diary'+idNum)
+		var aCopyObj = $('#diaryCopyone'+idNum)
 
+		windowObj.toggleClass('afterOpenWindow')
+		windowObj.toggleClass('beforeOpenWindow')
+		aCopyObj.css('display','none')
+		$('#windowBackground').css('display','none')
+		$('#diary'+idNum).css('display','block')
+		setTimeout(function(){windowObj.css('display','none').empty()},340)
+		aCopyObj.empty().html('<a href=\'javascript:void(0)\' id=\'close'+idNum+'\' class=\'windowCloseButton\'></a>')
+
+		// 背景效果
+		$('#matter1').addClass('backgroundUnblur')
+		$('#left').addClass('backgroundUnblurFixed')
+		$('#matter1').removeClass('backgroundBlur')
+		$('#left').removeClass('backgroundBlurFixed')
+		$('html').css({'overflow-y':'scroll','overflow-x':'hidden'})
 	});
+	function setProperty(documentObjId,dictObj){
+		var obj = document.getElementById(documentObjId)
+		for(var key in dictObj) {
+   			obj.style.setProperty('--'+key,dictObj[key]+'px')
+		}
+	}
 });

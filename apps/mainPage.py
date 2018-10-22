@@ -8,6 +8,7 @@ from personalcenter.views import PersonalCenterView
 from codeDiary.views import CodeDiaryView
 from diary.views import DiaryView
 import time
+import re
 
 """
 注：输入url按回车后，js加载之前，ajax_main会被 urls.py 调用一次，
@@ -17,30 +18,30 @@ import time
 
 def ajax_main(request):
     matter = request.GET.get('matter')
-
     simple_personal_info = PersonalCenterView().get_simple_personal_info()
     avatar = simple_personal_info['avatar']
 
-    if matter == '#codeDiary':
-        main_page = CodeDiaryView().get()
-
-    elif matter == '#diary':
-        main_page = DiaryView().get()
-
-    elif matter == '#application':
-        main_page = {}
-
-    elif matter == '#personalCenter':
-        main_page = {}
-
-    elif matter == None:
+    if matter == None:
         main_page = CodeDiaryView().get()
         main_page['avatar'] = avatar
         main_page['statusCode'] = '200'
         return render(request,'personalweb.html',main_page)
 
     else:
-        return JsonResponse({'statusCode':'404'})
+        if matter == '#codeDiary':
+            main_page = CodeDiaryView().get()
+
+        elif matter == '#diary':
+            main_page = DiaryView().get()
+
+        elif matter == '#application':
+            main_page = {}
+
+        elif matter == '#personalCenter':
+            main_page = {}
+
+        else:
+            return JsonResponse({'statusCode': '404'})
 
     main_page['statusCode'] = '200'
     return JsonResponse(main_page)

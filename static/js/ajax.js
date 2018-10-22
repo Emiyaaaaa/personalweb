@@ -4,6 +4,8 @@ $(document).ready(function() {
 
 	function mainPage() {
 		var urlHash = window.location.hash
+		var urlHash = urlHash.split('?')[0]
+		var urlHashAfterQuestionMark = urlHash.split('?')[1]
 		if (urlHash != '' && urlHash != '#codeDiary') {
 			$.ajax({
 		        url:"/",
@@ -37,6 +39,9 @@ $(document).ready(function() {
     		})
     		divFadeIn(urlHash)
 		}
+		if ($('#matter1 ul li').css('display') == 'none'){
+			divFadeIn(urlHash)
+		}
 	})
 
 	function fillHtml(data,urlHash){
@@ -55,13 +60,12 @@ $(document).ready(function() {
                         				</a>\
                     				</li>'
 	        			}
-	        			
 	        		})
 	        		$('.diary ul').html(htm)
         		}
-
-        		else if (urlHash == '#codeDiary'){
-	        		;
+        		else if (urlHash == '#application'){
+        		}
+        		else if (urlHash == '#personalCenter'){
         		}
         		else {
         		window.location.href = url + '/404'

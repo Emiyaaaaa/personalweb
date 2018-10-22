@@ -25,13 +25,15 @@ $(document).ready(function() {
 	}
 	
 
-	// matter1打开窗口效果
+	// matter0，1打开窗口效果
+	// !!!!!!!!!!! 记得适配
 	$(document).on("click",'.content',function openWindow(){
 		getClientSize()
 		var obj = $(this)
-		var windowObj = $('#window')
-		var idNum = obj.attr('id').match(/\d+/)
-		var aCopyObj = $('#diaryCopyone'+idNum)
+		windowObj = $('#window')
+		idNum = obj.attr('id').match(/\d+/)
+		objName = obj.attr('id').split(/Close/)[0].split(/\d/)[0]
+		aCopyObj = $('#'+objName+'Copyone'+idNum)
 		var scaleX = 1.085
 		var scaleY = 1.195
 		var width = obj.width()
@@ -74,26 +76,23 @@ $(document).ready(function() {
 		var aHtml = obj.html()
 		var windowHtml = aCopyObj.html()
 		aCopyObj.html(aHtml)
+		//在这里加打开窗口后增加的html
 		windowObj.html(windowHtml + aHtml)
 		windowObj.css('display','block')
 	 	setTimeout(function(){windowObj.toggleClass('afterOpenWindow');},8)//不设置延时会有bug,延时>=8mm(可能与浏览器性能有关)
 
 	});
 
-	// matter1关闭窗口效果
+	// matter0，1关闭窗口效果
 	$(document).on('click','.windowCloseButton',function closeWindow(){
-		getClientSize()
 		var obj = $(this)
-		var windowObj = $('#window')
-		var idNum = obj.attr('id').match(/\d+/)
-		var aObj = $('#diary'+idNum)
-		var aCopyObj = $('#diaryCopyone'+idNum)
+		var aObj = $('#'+objName+idNum)
 
 		windowObj.toggleClass('afterOpenWindow')
 		windowObj.toggleClass('beforeOpenWindow')
 		aCopyObj.css('display','none')
 		$('#windowBackground').css('display','none')
-		$('#diary'+idNum).css('display','block')
+		aObj.css('display','block')
 		setTimeout(function(){windowObj.css('display','none').empty()},340)
 		aCopyObj.empty().html('<a href=\'javascript:void(0)\' id=\'close'+idNum+'\' class=\'windowCloseButton\'></a>')
 

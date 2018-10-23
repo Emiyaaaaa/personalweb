@@ -50,6 +50,7 @@
 }
 
 .afterOpenWindow{
+    transition-timing-function: linear;
     left: var(--changeLeft) !important;
     top: var(--changeTop) !important;
     width: var(--changeWidth) !important;

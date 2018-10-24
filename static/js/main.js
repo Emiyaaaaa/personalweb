@@ -1,6 +1,6 @@
 
 $(document).ready(function() {
-
+	nowMatter = 'matter0'
 	// 透明度变化
 	function divFadeIn(urlHush) {
 		var num = $(urlHush).parent().attr('id').split('-')[1]
@@ -28,10 +28,22 @@ $(document).ready(function() {
 
 	// matter0，1打开窗口效果
 	// !!!!!!!!!!! 记得适配
+
+	$('.left-menu a').click(function () {
+		//导航栏交互
+		$('.left-menu a').removeClass('active');
+		$(this).addClass('active');
+		var liNum = $(this).parent().attr('id').split('-')[1]
+		$('#middle > div').css('display','none')
+		$('#matter'+liNum).css('display','block')
+		nowMatter = 'matter'+liNum
+	})
+
 	$(document).on("click",'.content',function openWindow(){
 		getClientSize()
 		var obj = $(this)
 		windowObj = $('#window')
+		matterObj = $('#'+nowMatter)
 		idNum = obj.attr('id').match(/\d+/)
 		objName = obj.attr('id').split(/Close/)[0].split(/\d/)[0]
 		aCopyObj = $('#'+objName+'Copyone'+idNum)
@@ -65,9 +77,7 @@ $(document).ready(function() {
 		}
 	 	setProperty("window",setPripertyDict)
 
-		$('#matter1').removeClass('backgroundUnblur')
-		$('#left').removeClass('backgroundUnblurFixed')
-		$('#matter1').addClass('backgroundBlur')
+		matterObj.addClass('backgroundBlur')
 		$('#left').addClass('backgroundBlurFixed')
 		$('html').css('overflow','hidden')
 		windowObj.addClass('beforeOpenWindow')
@@ -98,11 +108,12 @@ $(document).ready(function() {
 		aCopyObj.empty().html('<a href=\'javascript:void(0)\' id=\'close'+idNum+'\' class=\'windowCloseButton\'></a>')
 
 		// 背景效果
-		$('#matter1').addClass('backgroundUnblur')
+		matterObj.addClass('backgroundUnblur')
 		$('#left').addClass('backgroundUnblurFixed')
-		$('#matter1').removeClass('backgroundBlur')
+		matterObj.removeClass('backgroundBlur')
 		$('#left').removeClass('backgroundBlurFixed')
 		$('html').css({'overflow-y':'scroll','overflow-x':'hidden'})
+		setTimeout(function(){matterObj.removeClass('backgroundUnblur');$('#left').removeClass('backgroundUnblurFixed')},360)
 	});
 	function setProperty(documentObjId,dictObj){
 		var obj = document.getElementById(documentObjId)

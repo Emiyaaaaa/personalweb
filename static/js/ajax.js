@@ -19,13 +19,6 @@ $(document).ready(function() {
 	mainPage()
 
 	$('.left-menu a').click(function () {
-		//导航栏交互
-		$('.left-menu a').removeClass('active');
-		$(this).addClass('active');
-		var liNum = $(this).parent().attr('id').split('-')[1]
-		$('#middle > div').css('display','none')
-		$('#matter'+liNum).css('display','block')
-		//END
 		var urlHash = $(this).attr('href')
 
 		//判断是否需要ajax
@@ -56,7 +49,7 @@ $(document).ready(function() {
                     					</div>\
                         				<a class="content" id="diary'+ data.text_id +'" href="#diary?text_id='+ data.text_id +'">\
                             				<h4>'+ data.date_weather +'</h4>\
-                            				<p>'+ data.content +'</p>\
+                            				<p class="p">'+ data.content +'</p>\
                         				</a>\
                     				</li>'
 	        			}

@@ -1,0 +1,12 @@
+.matter0 h4, .matter1 h4, #window h4{
+	margin: 0 auto;
+	padding: 0px 10px;
+	font-weight: lighter;
+	font-size: 13px;
+}
+
+.matter0 p, .matter1 p, #window p{
+	padding: 8px 10px;
+	font-size: 15px;
+    color: #333333
+}

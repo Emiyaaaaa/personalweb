@@ -57,15 +57,58 @@
     height: var(--changeHeight) !important;
 }
 
-.matter1 h4, #window h4{
-	margin: 0 auto;
-	padding: 0px 10px;
-	font-weight: lighter;
-	font-size: 13px;
+@keyframes backgroundBlur
+{
+    from {filter: blur(0px);}
+    to {filter: blur(3px);}
 }
 
-.matter1 p, #window p{
-	padding: 8px 10px;
-	font-size: 15px;
-    color: #333333
+@keyframes backgroundBlurFixed
+{
+    from {filter: blur(0px);position: fixed;}
+    to {filter: blur(3px);position: fixed;}
+}
+ 
+.backgroundBlur{
+    animation: backgroundBlur 0.35s;
+    animation-fill-mode: forwards;
+}
+
+.backgroundBlurFixed{
+    animation: backgroundBlurFixed 0.35s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes backgroundUnblur
+{
+    from {filter: blur(3px);}
+    to {filter: blur(0px);}
+}
+
+@keyframes backgroundUnblurFixed
+{
+    from {filter: blur(3px);position: fixed;}
+    to {filter: blur(0px);position: fixed;}
+}
+
+.backgroundUnblur{
+    animation: backgroundUnblur 0.35s;
+    animation-fill-mode: forwards;
+}
+
+.backgroundUnblurFixed{
+    animation: backgroundUnblurFixed 0.35s;
+    animation-fill-mode: forwards;
+}
+
+#windowBackground {
+    display: none;
+    position:fixed;
+    overflow:scroll;
+    top: 0;
+    left: 0;
+    height: 723px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }

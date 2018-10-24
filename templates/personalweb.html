@@ -6,6 +6,7 @@
 	<title>Emiya</title>
 	<link rel="icon" type="image/png" href="{% static 'websiteIcon/website_icon.jpg'%}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/font.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/left/left.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/middle/matter0.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/middle/matter1.css' %}">
@@ -50,7 +51,7 @@
                         	<div class="aCopy" id="codeDiaryCopyone{{codeDiary.text_id}}">
                         		<a href="javascript:void(0)" id="codeDiaryClose{{codeDiary.text_id}}" class="windowCloseButton"></a>
                         	</div>
-                            <a class="content" id="CodeDiary{{codeDiary.text_id}}" href="#codeDiary?text_id={{codeDiary.text_id}}">
+                            <a class="content" id="codeDiary{{codeDiary.text_id}}" href="#codeDiary?text_id={{codeDiary.text_id}}">
                                 <p>{{ codeDiary.content }}</p>
                             </a>
                         </li>

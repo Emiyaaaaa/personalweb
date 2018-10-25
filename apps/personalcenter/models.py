@@ -39,3 +39,17 @@ class ToDo(models.Model):
     def __str__(self):
         return self.things
 
+class Message(models.Model):
+    message = models.TextField(max_length=100,verbose_name='留言')
+    contact = models.CharField(verbose_name=u'联系方式',max_length=50,null=True,blank=True)
+    name = models.CharField(verbose_name=u'姓名',max_length=30,null=True,blank=True)
+    created_at = models.DateTimeField(auto_now_add=True, null=False)
+    update_at = models.DateTimeField(auto_now=True, null=False)
+
+    class Meta:
+        verbose_name = u"访客留言"
+        verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return self.message
+

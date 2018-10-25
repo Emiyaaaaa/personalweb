@@ -8,6 +8,7 @@ from personalcenter.views import PersonalCenterView
 from codeDiary.views import CodeDiaryView
 from diary.views import DiaryView
 from django.views.decorators.csrf import csrf_exempt
+from personalcenter.models import Message
 import time
 import re
 
@@ -19,9 +20,9 @@ import re
 @csrf_exempt
 def ajax_main(request):
     if request.method == 'GET':
-        ajax_get(request)
+        return ajax_get(request)
     elif request.method == 'POST':
-        ajax_post(request)
+        return ajax_post(request)
 
 
 def ajax_get(request):
@@ -55,5 +56,10 @@ def ajax_get(request):
     return JsonResponse(main_page)
 
 def ajax_post(request):
-    massage = request.POST.get('massage')
+    message = request.POST.get('message')
     contact = request.POST.get('contact')
+    try:
+        Message.objects.create(message = message,contact=contact)
+        return JsonResponse({'statusCode': '1'})
+    except:
+        return JsonResponse({'statusCode': '0'})

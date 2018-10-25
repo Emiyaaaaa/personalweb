@@ -80,3 +80,21 @@ $(document).ready(function() {
 		}
 	}
 })
+function submitMassage(){
+		var massage = $('#massage').val()
+		var contact = $('#contact').val()
+		$.ajax({
+		        url:"/",
+		        type:"POST",
+		        async: false,
+		        data:{"massage":massage,"contact":contact},
+		        success:function(data){
+		        	if (data.statusCode == '1'){
+		        		alert('提交成功！感谢您的建议ღ( ´･ᴗ･` )比心')
+		        	}
+		        	else {
+		        		alert('提交失败！请再试一次')
+		        	}
+		        }
+    		})
+	}

@@ -7,6 +7,7 @@ from django.http import JsonResponse
 from personalcenter.views import PersonalCenterView
 from codeDiary.views import CodeDiaryView
 from diary.views import DiaryView
+from django.views.decorators.csrf import csrf_exempt
 import time
 import re
 
@@ -15,8 +16,15 @@ import re
     js加载之后，ajax_main会被调用第二次并带有各种参数，故在第一次调用时传入头像等首页信息，第二次调用时根据url #后的内容传入相应文本
 优化：在第一次调用时传入首页所有信息，并阻止第二次调用
 """
-
+@csrf_exempt
 def ajax_main(request):
+    if request.method == 'GET':
+        ajax_get(request)
+    elif request.method == 'POST':
+        ajax_post(request)
+
+
+def ajax_get(request):
     matter = request.GET.get('matter')
     simple_personal_info = PersonalCenterView().get_simple_personal_info()
     avatar = simple_personal_info['avatar']
@@ -25,7 +33,7 @@ def ajax_main(request):
         main_page = CodeDiaryView().get()
         main_page['avatar'] = avatar
         main_page['statusCode'] = '200'
-        return render(request,'personalweb.html',main_page)
+        return render(request, 'personalweb.html', main_page)
 
     else:
         if matter == '#codeDiary':
@@ -45,3 +53,7 @@ def ajax_main(request):
 
     main_page['statusCode'] = '200'
     return JsonResponse(main_page)
+
+def ajax_post(request):
+    massage = request.POST.get('massage')
+    contact = request.POST.get('contact')

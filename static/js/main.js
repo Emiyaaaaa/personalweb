@@ -1,38 +1,48 @@
+function matterClick(){
+	if (URLHASH == undefined){
+		return 0
+	}
+	$(URLHASH).addClass('active');
+	$('#matter'+LINUM).css('display','block')
+	nowMatter = 'matter'+LINUM
+	divFadeIn(URLHASH)
+}
 
-$(document).ready(function() {
-	nowMatter = 'matter0'
-	// 透明度变化
-	function divFadeIn(urlHush) {
-		var num = $(urlHush).parent().attr('id').split('-')[1]
-		var liNum = $('#matter'+num+' ul li').length;
-		for (var i = 0; i < liNum; i++) {
-			$('#matter'+num+' ul li:eq(' + i +')').delay(140*i).fadeIn();
-			if (i > 10){
-				$('#matter'+num+' ul li:eq(' + i +')').fadeIn();
-			}
+function divFadeIn(urlHash) {
+	var num = hashToMatterNum(urlHash)
+	var liLength = $('#matter'+num+' ul li').length;
+	console.log($('#matter0 ul li'))
+	console.log($('#matter1 ul li'))
+	for (var i = 0; i < liLength; i++) {
+		$('#matter'+num+' ul li:eq(' + i +')').delay(140*i).fadeIn();
+		if (i > 10){
+			$('#matter'+num+' ul li:eq(' + i +')').fadeIn();
 		}
 	}
-	window.divFadeIn = divFadeIn
+}
 
-    function getDivPosition(id){
-		var left = document.getElementById(id).getBoundingClientRect().left
-		var top = document.getElementById(id).getBoundingClientRect().top
-		return [left,top]
-	}
+function getDivPosition(id){
+	var left = document.getElementById(id).getBoundingClientRect().left
+	var top = document.getElementById(id).getBoundingClientRect().top
+	return [left,top]
+}
 
-	function getClientSize(){
-		clientWidth = document.documentElement.clientWidth
-		clientHeight = document.documentElement.clientHeight
-	}
-	
+function getClientSize(){
+	clientWidth = document.documentElement.clientWidth
+	clientHeight = document.documentElement.clientHeight
+}
 
-	// matter0，1打开窗口效果
-	// !!!!!!!!!!! 记得适配
+
+function hashToMatterNum(urlHash){
+	return $(urlHash).parent().attr('id').split('-')[1]
+}
+
+$(document).ready(function() {
 
 	$('.left-menu a').click(function () {
 		//导航栏交互
-		$('.left-menu a').removeClass('active');
-		$(this).addClass('active');
+		$('.left-menu a').removeClass('active')
+		$(this).addClass('active')
 		var liNum = $(this).parent().attr('id').split('-')[1]
 		$('#middle > div').css('display','none')
 		$('#matter'+liNum).css('display','block')

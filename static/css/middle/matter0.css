@@ -10,6 +10,10 @@
     width: 100%;
 }
 
+.matter0 ul li {
+    display: none;
+}
+
 .content, .aCopy{
     /*文本*/
     letter-spacing: 2px;

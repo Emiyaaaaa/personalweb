@@ -23,6 +23,8 @@ def ajax_main(request):
         return ajax_get(request)
     elif request.method == 'POST':
         return ajax_post(request)
+    else:
+        return HttpResponseRedirect('/')
 
 
 def ajax_get(request):

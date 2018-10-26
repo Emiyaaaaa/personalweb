@@ -1,26 +1,22 @@
 $(document).ready(function() {
 
-	var url = 'http://127.0.0.1:8000'
-
 	function mainPage() {
-		var urlHash = window.location.hash
-		var urlHash = urlHash.split('?')[0]
-		var urlHashAfterQuestionMark = urlHash.split('?')[1]
-		if (urlHash != '' && urlHash != '#codeDiary') {
+		var urlHashAfterQuestionMark = URLHASH.split('?')[1]
+		if (URLHASH != '#codeDiary') {
 			$.ajax({
 		        url:"/",
 		        type:"GET",
 		        async: false,
-		        data:{"matter":urlHash},
-		        success:function(data){fillHtml(data,urlHash)}
+		        data:{"matter":URLHASH},
+		        success:function(data){fillHtml(data,URLHASH)}
 		    })
 		}
 	}
 	mainPage()
+	matterClick()
 
 	$('.left-menu a').click(function () {
 		var urlHash = $(this).attr('href')
-
 		//判断是否需要ajax
 		if (needAjax(urlHash) == 'true'){
 			$.ajax({
@@ -32,7 +28,8 @@ $(document).ready(function() {
     		})
     		divFadeIn(urlHash)
 		}
-		if ($('#matter1 ul li').css('display') == 'none'){
+		var num = hashToMatterNum(urlHash)
+		if ($('#matter'+num+' ul li').css('display') == 'none'){
 			divFadeIn(urlHash)
 		}
 	})
@@ -61,14 +58,14 @@ $(document).ready(function() {
         		else if (urlHash == '#personalCenter'){
         		}
         		else {
-        		window.location.href = url + '/404'
+        		window.location.href = url + '404'
         		}
         	}
         	else if (data.statusCode == '404') {
-        		window.location.href = url + '/404'
+        		window.location.href = url + '404'
         	}
         	else {
-        		window.location.href = url + '/404'
+        		window.location.href = url + '404'
         	}
 	}
 
@@ -104,7 +101,7 @@ function submitMessage(){
 		})
 }
 
-function isNull( str ){
+function isNull(str){
 	if (str == null){
 		return true
 	}

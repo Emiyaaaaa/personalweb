@@ -28,7 +28,7 @@
 		<div class="left-menu" id="left-menu">
 			<ul>
 	            <li id="li-0" data-toggle="collapse">
-					<a href="#codeDiary" id="codeDiary" class="active">开发笔记</a>
+					<a href="#codeDiary" id="codeDiary">开发笔记</a>
 	            </li>
 	            <li id="li-1" data-toggle="collapse">
 					<a href="#diary" id="diary">我的动态</a>
@@ -43,7 +43,7 @@
 		</div>
 	</div>
     <div class="middle" id="middle">
-        <div id="matter0" class="matter0 codeDiary" style="display: block;">
+        <div id="matter0" class="matter0 codeDiary" style="display: none;">
             <ul>
                 {% for codeDiary in codeDiary_info %}
                     {% if codeDiary.is_display == 0 %}
@@ -88,6 +88,19 @@
     </div>
     <div id="windowBackground"></div>
     <div id='window' class="beforeOpenWindow"></div>
+    <script type="text/javascript">
+    	MAINURL = 'http://127.0.0.1:8000/'
+		URLHREF = window.location.href
+		if (URLHREF.split('#')[0] == MAINURL){
+			URLHASH = URLHREF.split('?')[0].split('/')[3]
+			if (URLHASH == ''){
+				URLHASH = '#codeDiary'
+			}
+			LINUM = $(URLHASH).parent().attr('id').split('-')[1]
+		}
+
+		nowMatter = 'matter0'
+    </script>
     <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/ajax.js' %}"></script>
     <!-- <script type="text/javascript" src="{% static 'js/jquery-animate-css-rotate-scale.js' %}"></script> -->

@@ -68,6 +68,6 @@ project_size = 0
 for root, dirs, files in os.walk(project_path):
         project_size += sum([os.path.getsize(os.path.join(root, name)) for name in files])
 project_size = project_size / 1024 /1024
-project_size = str(project_size)[:str(project_size).find('.')+3] + 'Mb'
+project_size = str(project_size)[:str(project_size).find('.')+3] + ' Mb'
 
 print('Project size: {}'.format(project_size))

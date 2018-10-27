@@ -50,7 +50,8 @@ INSTALLED_APPS = [
     'personalcenter',
     'changeLog',
     'codeDiary',
-    'notFoundPage'
+    'notFoundPage',
+    'markdown'
 ]
 
 MIDDLEWARE = [
@@ -134,3 +135,7 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = False
+
+MARKDOWN_IMAGE_FLODER='markdown'
+
+MARKDOWN_IMAGE_FORMATS=["jpg", "jpeg", "gif", "png", "bmp", "webp"]

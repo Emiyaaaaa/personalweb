@@ -9,6 +9,7 @@ from codeDiary.views import CodeDiaryView
 from diary.views import DiaryView
 from django.views.decorators.csrf import csrf_exempt
 from personalcenter.models import Message
+from django.http import HttpResponse,HttpResponseRedirect
 import time
 import re
 

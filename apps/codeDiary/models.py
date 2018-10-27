@@ -1,5 +1,6 @@
 from django.db import models
 from diary.models import MyDateField
+from markdown.forms import MarkdownField
 
 class CodeDiary(models.Model):
     text_id = models.AutoField(primary_key=True)
@@ -13,7 +14,6 @@ class CodeDiary(models.Model):
     update_at = models.DateTimeField(verbose_name=u'更新时间', auto_now=True, null=False)
     stick = models.IntegerField(verbose_name=u'置顶', choices=((0, '未置顶'), (1, '置顶')), default=0)
     is_display = models.IntegerField(verbose_name=u'展示', choices=((0, '显示'), (1, '隐藏')), default=0)
-
 
     class Meta:
         verbose_name = u"代码"

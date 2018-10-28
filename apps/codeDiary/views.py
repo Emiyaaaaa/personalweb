@@ -3,8 +3,6 @@ from personalcenter.views import PersonalCenterView
 
 class CodeDiaryView():
     def get(self):
-        simple_personal_info = PersonalCenterView().get_simple_personal_info()
-        avatar = simple_personal_info['avatar']
         codeDiary_info = []
         stick_diary = CodeDiary.objects.filter(stick=1)
         all_diary = CodeDiary.objects.all().order_by('-text_id')

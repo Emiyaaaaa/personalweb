@@ -61,7 +61,7 @@ html, body {
 	height:10px;
 }
 ::-webkit-scrollbar-track-piece {
-	background-color:#FFFFFF;
+	background-color:var(--webkit-scrollbar-track-piece-backgroung-color,#FFFFFF);
 }
 ::-webkit-scrollbar-thumb {
 	border-radius: 10px;

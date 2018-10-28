@@ -38,10 +38,6 @@
     border-radius: 15px;
     background-color: #FFFFFF;
     padding: 17px 20px;
-    /*阴影*/
-    -moz-box-shadow:2px 2px 10px #C4C4C4;
-    -webkit-box-shadow:2px 2px 10px #C4C4C4;
-    box-shadow:2px 2px 10px #C4C4C4;
     transition: all 0.34s
 }
 
@@ -55,60 +51,25 @@
     top: var(--changeTop) !important;
     width: var(--changeWidth) !important;
     height: var(--changeHeight) !important;
+    /*transform: scale(1.3,3) translateX(var(--translateX)) translateY(var(--translateY))*/
+
 }
 
-@keyframes backgroundBlur
-{
-    from {filter: blur(0px);}
-    to {filter: blur(3px);}
-}
-
-@keyframes backgroundBlurFixed
-{
-    from {filter: blur(0px);position: fixed;}
-    to {filter: blur(3px);position: fixed;}
-}
- 
-.backgroundBlur{
-    animation: backgroundBlur 0.35s;
-    animation-fill-mode: forwards;
-}
-
-.backgroundBlurFixed{
-    animation: backgroundBlurFixed 0.35s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes backgroundUnblur
-{
-    from {filter: blur(3px);}
-    to {filter: blur(0px);}
-}
-
-@keyframes backgroundUnblurFixed
-{
-    from {filter: blur(3px);position: fixed;}
-    to {filter: blur(0px);position: fixed;}
-}
-
-.backgroundUnblur{
-    animation: backgroundUnblur 0.35s;
-    animation-fill-mode: forwards;
-}
-
-.backgroundUnblurFixed{
-    animation: backgroundUnblurFixed 0.35s;
-    animation-fill-mode: forwards;
-}
-
-#windowBackground {
+.windowBackground {
     display: none;
     position:fixed;
     overflow:scroll;
+    background:#333333;
     top: 0;
     left: 0;
     height: 723px;
     width: 100%;
     margin: 0;
     padding: 0;
+    opacity: 0;
+    transition: opacity 0.34s;
+}
+
+.windowOpacity{
+    opacity:0.5;
 }

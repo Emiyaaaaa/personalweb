@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Emiya</title>
-	<link rel="icon" type="image/png" href="{% static 'websiteIcon/website_icon.jpg'%}">
+	<link rel="icon" type="image/png" href="/media/{{ website_icon }}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/font.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/left/left.css' %}">
@@ -80,13 +80,14 @@
 			<p>有任何问题请联系邮箱emiya@emiya.com.cn</p> 	
         </div>
         <div id="matter3" class="matter3" style="display: none">
+        	<div id="about"></div>
 			<p>项目尚未开发完成，bug反馈或提意见请留言，希望可以留下您的联系方式，感谢Thanks♪(･ω･)ﾉ</p>
 			<input type="text" id="message" placeholder="留言(必填)" />
 			<input type="text" id="contact" placeholder="联系方式(非必填)" />
             <button class="btn" tpye = "submit" onclick="submitMessage()">提交</button>
 	    </div>
     </div>
-    <div id="windowBackground"></div>
+    <div id="windowBackground" class="windowBackground"></div>
     <div id='window' class="beforeOpenWindow"></div>
     <script type="text/javascript">
     	MAINURL = 'http://127.0.0.1:8000/'

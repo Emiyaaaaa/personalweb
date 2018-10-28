@@ -32,10 +32,12 @@ def ajax_get(request):
     matter = request.GET.get('matter')
     simple_personal_info = PersonalCenterView().get_simple_personal_info()
     avatar = simple_personal_info['avatar']
+    website_icon = simple_personal_info['website_icon']
 
     if matter == None:
         main_page = CodeDiaryView().get()
         main_page['avatar'] = avatar
+        main_page['website_icon'] = website_icon
         main_page['statusCode'] = '200'
         return render(request, 'personalweb.html', main_page)
 

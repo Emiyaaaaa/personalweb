@@ -2,407 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97ee085e-0965-47c9-afdd-5d7ddcf1463c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/css/editormd.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/css/editormd.logo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/css/editormd.logo.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/css/editormd.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/css/editormd.preview.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/css/editormd.preview.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/fonts/editormd-logo.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/fonts/editormd-logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/fonts/editormd-logo.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/fonts/editormd-logo.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/images/loading.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/images/loading@2x.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/images/loading@3x.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/images/logos/editormd-favicon-16x16.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/images/logos/editormd-favicon-24x24.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/images/logos/editormd-favicon-32x32.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/images/logos/editormd-favicon-48x48.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/images/logos/editormd-favicon-64x64.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/images/logos/editormd-logo-114x114.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/images/logos/editormd-logo-120x120.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/images/logos/editormd-logo-144x144.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/images/logos/editormd-logo-16x16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/images/logos/editormd-logo-180x180.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/images/logos/editormd-logo-240x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/images/logos/editormd-logo-24x24.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/images/logos/editormd-logo-320x320.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/images/logos/editormd-logo-32x32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/images/logos/editormd-logo-48x48.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/images/logos/editormd-logo-57x57.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/images/logos/editormd-logo-64x64.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/images/logos/editormd-logo-72x72.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/images/logos/editormd-logo-96x96.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/images/logos/vi.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/js/editormd.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/js/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/AUTHORS" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/comment/comment.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/comment/continuecomment.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/dialog/dialog.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/dialog/dialog.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/display/fullscreen.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/display/fullscreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/display/panel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/display/placeholder.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/display/rulers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/edit/closebrackets.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/edit/closetag.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/edit/continuelist.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/edit/matchbrackets.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/edit/matchtags.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/edit/trailingspace.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/fold/brace-fold.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/fold/comment-fold.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/fold/foldcode.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/fold/foldgutter.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/fold/foldgutter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/fold/indent-fold.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/fold/markdown-fold.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/fold/xml-fold.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/hint/anyword-hint.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/hint/css-hint.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/hint/html-hint.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/hint/javascript-hint.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/hint/show-hint.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/hint/show-hint.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/hint/sql-hint.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/hint/xml-hint.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/lint/coffeescript-lint.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/lint/css-lint.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/lint/javascript-lint.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/lint/json-lint.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/lint/lint.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/lint/lint.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/lint/yaml-lint.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/merge/merge.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/merge/merge.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/mode/loadmode.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/mode/multiplex.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/mode/multiplex_test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/mode/overlay.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/mode/simple.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/runmode/colorize.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/runmode/runmode-standalone.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/runmode/runmode.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/runmode/runmode.node.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/scroll/annotatescrollbar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/scroll/scrollpastend.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/scroll/simplescrollbars.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/scroll/simplescrollbars.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/search/match-highlighter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/search/matchesonscrollbar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/search/matchesonscrollbar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/search/search.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/search/searchcursor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/selection/active-line.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/selection/mark-selection.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/selection/selection-pointer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/tern/tern.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/tern/tern.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/tern/worker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addon/wrap/hardwrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/addons.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/bower.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/codemirror.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/codemirror.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/lib/codemirror.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/lib/codemirror.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/apl/apl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/apl/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/asterisk/asterisk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/asterisk/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/clike/clike.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/clike/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/clike/scala.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/clojure/clojure.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/clojure/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/cobol/cobol.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/cobol/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/coffeescript/coffeescript.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/coffeescript/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/commonlisp/commonlisp.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/commonlisp/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/css/css.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/css/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/css/less.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/css/less_test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/css/scss.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/css/scss_test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/css/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/cypher/cypher.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/cypher/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/d/d.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/d/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/dart/dart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/dart/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/diff/diff.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/diff/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/django/django.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/django/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/dockerfile/dockerfile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/dockerfile/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/dtd/dtd.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/dtd/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/dylan/dylan.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/dylan/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/ebnf/ebnf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/ebnf/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/ecl/ecl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/ecl/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/eiffel/eiffel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/eiffel/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/erlang/erlang.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/erlang/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/forth/forth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/forth/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/fortran/fortran.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/fortran/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/gas/gas.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/gas/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/gfm/gfm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/gfm/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/gfm/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/gherkin/gherkin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/gherkin/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/go/go.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/go/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/groovy/groovy.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/groovy/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/haml/haml.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/haml/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/haml/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/haskell/haskell.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/haskell/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/haxe/haxe.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/haxe/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/htmlembedded/htmlembedded.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/htmlembedded/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/htmlmixed/htmlmixed.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/htmlmixed/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/http/http.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/http/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/idl/idl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/idl/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/jade/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/jade/jade.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/javascript/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/javascript/javascript.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/javascript/json-ld.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/javascript/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/javascript/typescript.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/jinja2/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/jinja2/jinja2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/julia/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/julia/julia.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/kotlin/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/kotlin/kotlin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/livescript/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/livescript/livescript.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/lua/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/lua/lua.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/markdown/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/markdown/markdown.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/markdown/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/meta.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/mirc/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/mirc/mirc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/mllike/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/mllike/mllike.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/modelica/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/modelica/modelica.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/nginx/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/nginx/nginx.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/ntriples/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/ntriples/ntriples.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/octave/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/octave/octave.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/pascal/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/pascal/pascal.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/pegjs/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/pegjs/pegjs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/perl/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/perl/perl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/php/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/php/php.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/php/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/pig/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/pig/pig.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/properties/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/properties/properties.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/puppet/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/puppet/puppet.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/python/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/python/python.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/q/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/q/q.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/r/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/r/r.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/rpm/changes/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/rpm/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/rpm/rpm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/rst/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/rst/rst.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/ruby/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/ruby/ruby.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/ruby/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/rust/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/rust/rust.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/sass/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/sass/sass.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/scheme/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/scheme/scheme.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/shell/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/shell/shell.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/shell/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/sieve/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/sieve/sieve.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/slim/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/slim/slim.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/slim/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/smalltalk/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/smalltalk/smalltalk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/smarty/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/smarty/smarty.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/smartymixed/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/smartymixed/smartymixed.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/solr/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/solr/solr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/soy/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/soy/soy.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/sparql/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/sparql/sparql.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/spreadsheet/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/spreadsheet/spreadsheet.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/sql/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/sql/sql.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/stex/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/stex/stex.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/stex/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/stylus/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/stylus/stylus.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/tcl/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/tcl/tcl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/textile/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/textile/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/textile/textile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/tiddlywiki/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/tiddlywiki/tiddlywiki.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/tiddlywiki/tiddlywiki.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/tiki/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/tiki/tiki.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/tiki/tiki.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/toml/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/toml/toml.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/tornado/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/tornado/tornado.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/turtle/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/turtle/turtle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/vb/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/vb/vb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/vbscript/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/vbscript/vbscript.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/velocity/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/velocity/velocity.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/verilog/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/verilog/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/verilog/verilog.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/xml/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/xml/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/xml/xml.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/xquery/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/xquery/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/xquery/xquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/yaml/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/yaml/yaml.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/z80/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/mode/z80/z80.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/modes.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/theme/3024-day.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/theme/3024-night.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/theme/ambiance-mobile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/theme/ambiance.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/theme/base16-dark.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/theme/base16-light.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/theme/blackboard.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/theme/cobalt.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/theme/colorforth.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/theme/eclipse.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/theme/elegant.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/theme/erlang-dark.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/theme/lesser-dark.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/theme/mbo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/theme/mdn-like.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/theme/midnight.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/theme/monokai.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/theme/neat.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/theme/neo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/theme/night.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/theme/paraiso-dark.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/theme/paraiso-light.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/theme/pastel-on-dark.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/theme/rubyblue.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/theme/solarized.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/theme/the-matrix.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/theme/tomorrow-night-bright.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/theme/tomorrow-night-eighties.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/theme/twilight.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/theme/vibrant-ink.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/theme/xq-dark.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/theme/xq-light.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/codemirror/theme/zenburn.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/flowchart.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/jquery.flowchart.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/marked.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/prettify.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/raphael.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/sequence-diagram.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/lib/underscore.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/plugins/code-block-dialog/code-block-dialog.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/plugins/emoji-dialog/emoji-dialog.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/plugins/emoji-dialog/emoji.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/plugins/goto-line-dialog/goto-line-dialog.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/plugins/help-dialog/help-dialog.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/plugins/help-dialog/help.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/plugins/html-entities-dialog/html-entities-dialog.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/plugins/html-entities-dialog/html-entities.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/plugins/image-dialog/image-dialog.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/plugins/link-dialog/link-dialog.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/plugins/plugin-template.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/plugins/preformatted-text-dialog/preformatted-text-dialog.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/plugins/reference-link-dialog/reference-link-dialog.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/plugins/table-dialog/table-dialog.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/static/markdown/plugins/test-plugin/test-plugin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/templates/markdown/widgets/markdown.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/extra_apps/markdown/widgets.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/personalcenter/migrations/0011_auto_20181028_1920.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/codeDiary/adminx.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/codeDiary/adminx.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/codeDiary/migrations/0002_auto_20181010_1822.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/codeDiary/migrations/0002_auto_20181027_1811.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/codeDiary/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/codeDiary/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/mainPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/mainPage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/personalweb/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/personalweb/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/jquery-animate-css-rotate-scale.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/personalcenter/adminx.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/personalcenter/adminx.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/personalcenter/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/personalcenter/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/personalcenter/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/personalcenter/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/middle/window.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/middle/window.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/personalweb.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/personalweb.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/code_line.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/code_line.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -449,17 +58,41 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/personalweb/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
+            <state relative-caret-position="2748">
               <caret line="140" column="67" selection-start-line="140" selection-start-column="67" selection-end-line="140" selection-end-column="67" />
+              <folding>
+                <element signature="e#312#321#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mainPage.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/mainPage.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="39" column="36" lean-forward="true" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="48" />
+              <folding>
+                <element signature="e#102#137#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/apps/personalcenter/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="501">
+              <caret line="29" column="33" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="adminx.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/codeDiary/adminx.py">
+        <entry file="file://$PROJECT_DIR$/apps/personalcenter/adminx.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="401">
+              <caret line="28" column="56" lean-forward="true" selection-start-line="28" selection-start-column="56" selection-end-line="28" selection-end-column="56" />
               <folding>
                 <element signature="e#47#60#0" expanded="true" />
               </folding>
@@ -467,11 +100,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/codeDiary/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="16" column="26" lean-forward="true" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+            <state relative-caret-position="325">
+              <caret line="13" column="85" lean-forward="true" selection-start-line="13" selection-start-column="85" selection-end-line="13" selection-end-column="85" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -479,9 +112,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="0001_initial.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/codeDiary/migrations/0001_initial.py">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/personalcenter/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="36" column="16" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="16" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -555,19 +192,19 @@
         <option value="$PROJECT_DIR$/tools/code_statistics.py" />
         <option value="$PROJECT_DIR$/apps/changeLog/views.py" />
         <option value="$PROJECT_DIR$/templates/personalweb.html" />
-        <option value="$PROJECT_DIR$/apps/personalcenter/views.py" />
         <option value="$PROJECT_DIR$/apps/diary/views.py" />
         <option value="$PROJECT_DIR$/apps/codeDiary/views.py" />
         <option value="$PROJECT_DIR$/personalweb/urls.py" />
         <option value="$PROJECT_DIR$/apps/notFoundPage/views.py" />
         <option value="$PROJECT_DIR$/../untitled/草稿箱/12.py" />
-        <option value="$PROJECT_DIR$/apps/personalcenter/adminx.py" />
-        <option value="$PROJECT_DIR$/apps/personalcenter/models.py" />
-        <option value="$PROJECT_DIR$/apps/mainPage.py" />
         <option value="$PROJECT_DIR$/tools/code_line.py" />
         <option value="$PROJECT_DIR$/apps/codeDiary/adminx.py" />
         <option value="$PROJECT_DIR$/personalweb/settings.py" />
+        <option value="$PROJECT_DIR$/apps/personalcenter/adminx.py" />
+        <option value="$PROJECT_DIR$/apps/personalcenter/models.py" />
         <option value="$PROJECT_DIR$/apps/codeDiary/models.py" />
+        <option value="$PROJECT_DIR$/apps/mainPage.py" />
+        <option value="$PROJECT_DIR$/apps/personalcenter/views.py" />
       </list>
     </option>
   </component>
@@ -623,6 +260,12 @@
             <path>
               <item name="personalweb" type="b2602c69:ProjectViewProjectNode" />
               <item name="personalweb" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="personalcenter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="personalweb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="personalweb" type="462c0819:PsiDirectoryNode" />
               <item name="extra_apps" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -635,6 +278,12 @@
               <item name="personalweb" type="b2602c69:ProjectViewProjectNode" />
               <item name="personalweb" type="462c0819:PsiDirectoryNode" />
               <item name="media" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="personalweb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="personalweb" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
+              <item name="websiteIcon" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="personalweb" type="b2602c69:ProjectViewProjectNode" />
@@ -1032,13 +681,6 @@
       <option name="presentableId" value="Default" />
       <updated>1535974839541</updated>
     </task>
-    <task id="LOCAL-00057" summary="test">
-      <created>1538565843153</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1538565843153</updated>
-    </task>
     <task id="LOCAL-00058" summary="update">
       <created>1538567875448</created>
       <option name="number" value="00058" />
@@ -1375,7 +1017,14 @@
       <option name="project" value="LOCAL" />
       <updated>1540551320077</updated>
     </task>
-    <option name="localTasksCounter" value="106" />
+    <task id="LOCAL-00106" summary="xadmin添加markdown支持">
+      <created>1540635384887</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1540635384889</updated>
+    </task>
+    <option name="localTasksCounter" value="107" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1396,12 +1045,12 @@
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.9201141" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32952926" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49865952" visible="true" weight="0.33951497" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49865952" weight="0.33951497" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32952926" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49787235" visible="true" weight="0.21380697" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49787235" visible="true" weight="0.24664879" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" weight="0.24664879" />
-      <window_info anchor="bottom" id="manage.py@personalweb" order="13" weight="0.33380884" />
+      <window_info anchor="bottom" id="manage.py@personalweb" order="13" weight="0.19543509" />
       <window_info anchor="right" id="SciView" order="3" weight="0.23123324" />
       <window_info id="Structure" order="1" sideWeight="0.50212765" side_tool="true" weight="0.27010724" />
       <window_info id="Favorites" order="2" sideWeight="0.50212765" side_tool="true" weight="0.27010724" />
@@ -1451,7 +1100,6 @@
     <ignored-roots>
       <path value="E:/2345下载/txy (3)" />
     </ignored-roots>
-    <MESSAGE value="models 更新，css更新" />
     <MESSAGE value="更新环境" />
     <MESSAGE value="更新" />
     <MESSAGE value="添加自定义field WeatherField;修改xadmin Flatly主题" />
@@ -1476,7 +1124,8 @@
     <MESSAGE value="bug修复" />
     <MESSAGE value="添加状态码" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="xadmin添加markdown支持" />
+    <option name="LAST_COMMIT_MESSAGE" value="xadmin添加markdown支持" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1484,13 +1133,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/apps/codeDiary/apps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/diary/apps.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
@@ -1590,20 +1232,10 @@
     <entry file="file://$PROJECT_DIR$/apps/personalcenter/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/personalcenter/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/codeDiary/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
           <caret line="22" column="48" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1652,16 +1284,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/personalcenter/adminx.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="21" column="42" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
-          <folding>
-            <element signature="e#47#60#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://E:/2345下载/txy (3)/apps/userinfo/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
@@ -1676,23 +1298,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1750">
           <caret line="70" column="72" selection-start-line="70" selection-start-column="72" selection-end-line="70" selection-end-column="72" />
-          <folding>
-            <element signature="e#137#146#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/personalcenter/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="16" column="58" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/mainPage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-899">
-          <caret line="11" column="57" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
         </state>
       </provider>
     </entry>
@@ -1700,9 +1305,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="401">
           <caret line="32" column="40" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
-          <folding>
-            <element signature="e#644#676#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1710,9 +1312,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1721,35 +1320,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/extra_apps/markdown/widgets.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2574">
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/extra_apps/markdown/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-263" />
+        <state relative-caret-position="-2574" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/extra_apps/markdown/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/extra_apps/markdown/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/extra_apps/markdown/tests.py">
       <provider selected="true" editor-type-id="text-editor" />
@@ -1757,42 +1335,79 @@
     <entry file="file://$PROJECT_DIR$/extra_apps/markdown/settings.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/personalweb/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="140" column="67" selection-start-line="140" selection-start-column="67" selection-end-line="140" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/extra_apps/markdown/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/codeDiary/migrations/0001_initial.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/codeDiary/migrations/0002_auto_20181027_1811.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/codeDiary/adminx.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="675">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
           <folding>
             <element signature="e#47#60#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/codeDiary/migrations/0001_initial.py">
+    <entry file="file://$PROJECT_DIR$/extra_apps/markdown/views.py">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/personalweb/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2748">
+          <caret line="140" column="67" selection-start-line="140" selection-start-column="67" selection-end-line="140" selection-end-column="67" />
+          <folding>
+            <element signature="e#312#321#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/personalcenter/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="36" column="16" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="16" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/codeDiary/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="16" column="26" lean-forward="true" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+        <state relative-caret-position="325">
+          <caret line="13" column="85" lean-forward="true" selection-start-line="13" selection-start-column="85" selection-end-line="13" selection-end-column="85" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/personalcenter/adminx.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="28" column="56" lean-forward="true" selection-start-line="28" selection-start-column="56" selection-end-line="28" selection-end-column="56" />
+          <folding>
+            <element signature="e#47#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/mainPage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="39" column="36" lean-forward="true" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="48" />
+          <folding>
+            <element signature="e#102#137#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/personalcenter/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="29" column="33" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
         </state>
       </provider>
     </entry>

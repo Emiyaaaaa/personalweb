@@ -74,33 +74,31 @@ $(document).ready(function() {
 		var left = left - (marginLeft - (width * scaleX - width)/2)
 		
 		var setPripertyDict = {
-			'top':top,
-			'left':left,
-			'width':width,
-			'height':height,
-			'marginTop':marginTop,
-			'marginLeft':marginLeft,
-			'changeLeft':windowLeft,
-			'changeTop':windowTop,
-			'changeWidth':windowWidth-(obj.outerWidth(true)-width),
-			'changeHeight':windowHeight
+			'top':top+'px',
+			'left':left+'px',
+			'width':width+'px',
+			'height':height+'px',
+			'marginTop':marginTop+'px',
+			'marginLeft':marginLeft+'px',
+			'changeLeft':windowLeft+'px',
+			'changeTop':windowTop+'px',
+			'changeWidth':windowWidth-(obj.outerWidth(true)-width)+'px',
+			'changeHeight':windowHeight+'px',
+			'webkit-scrollbar-track-piece-backgroung-color':'#333333'
 		}
 	 	setProperty("window",setPripertyDict)
-
-		matterObj.addClass('backgroundBlur')
-		$('#left').addClass('backgroundBlurFixed')
 		$('html').css('overflow','hidden')
 		windowObj.addClass('beforeOpenWindow')
 		obj.css('display','none')
-		$('#windowBackground').css({'display':'block','height':windowWidth})
+		$('#windowBackground').css({'display':'block','height':clientHeight})
 		aCopyObj.css('display','block')
 		var aHtml = obj.html()
 		var windowHtml = aCopyObj.html()
 		aCopyObj.html(aHtml)
-		//在这里加打开窗口后增加的html
+		// //在这里加打开窗口后增加的html
 		windowObj.html(windowHtml + aHtml)
 		windowObj.css('display','block')
-	 	setTimeout(function(){windowObj.toggleClass('afterOpenWindow');},8)//不设置延时会有bug,延时>=8mm(可能与浏览器性能有关)
+	 	setTimeout(function(){windowObj.toggleClass('afterOpenWindow');$('#windowBackground').toggleClass('windowOpacity');},8)//不设置延时会有bug,延时>=8mm(可能与浏览器性能有关)
 
 	});
 
@@ -116,19 +114,13 @@ $(document).ready(function() {
 		aObj.css('display','block')
 		setTimeout(function(){windowObj.css('display','none').empty()},340)
 		aCopyObj.empty().html('<a href=\'javascript:void(0)\' id=\'close'+idNum+'\' class=\'windowCloseButton\'></a>')
-
-		// 背景效果
-		matterObj.addClass('backgroundUnblur')
-		$('#left').addClass('backgroundUnblurFixed')
-		matterObj.removeClass('backgroundBlur')
-		$('#left').removeClass('backgroundBlurFixed')
 		$('html').css({'overflow-y':'scroll','overflow-x':'hidden'})
-		setTimeout(function(){matterObj.removeClass('backgroundUnblur');$('#left').removeClass('backgroundUnblurFixed')},360)
+		setTimeout(function(){$('#windowBackground').toggleClass('windowOpacity');},8)
 	});
 	function setProperty(documentObjId,dictObj){
 		var obj = document.getElementById(documentObjId)
 		for(var key in dictObj) {
-   			obj.style.setProperty('--'+key,dictObj[key]+'px')
+   			obj.style.setProperty('--'+key,dictObj[key])
 		}
 	}
 });

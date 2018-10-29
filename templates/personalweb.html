@@ -90,9 +90,9 @@
     <div id="windowBackground" class="windowBackground"></div>
     <div id='window' class="beforeOpenWindow"></div>
     <script type="text/javascript">
-    	MAINURL = 'http://127.0.0.1:8000/'
+    	MAINURL = ['http://127.0.0.1:8000/','http://60.205.207.236/','http://www.emiya.com.cn/'] //记得最后加斜杠
 		URLHREF = window.location.href
-		if (URLHREF.split('#')[0] == MAINURL){
+		if ($.inArray(URLHREF.split('#')[0],MAINURL) != -1){
 			URLHASH = URLHREF.split('?')[0].split('/')[3]
 			if (URLHASH == ''){
 				URLHASH = '#codeDiary'

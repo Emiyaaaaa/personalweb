@@ -7,7 +7,7 @@ from personalcenter.views import PersonalCenterView
 class DiaryView():
     def get(self):
         diary_info = []
-        stick_diary = Diary.objects.filter(stick=1)
+        stick_diary = Diary.objects.filter(is_stick=1)
         all_diary = Diary.objects.all().order_by('-text_id')
         diary = stick_diary|all_diary
         i = 0

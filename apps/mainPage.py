@@ -43,7 +43,7 @@ def ajax_get(request):
 
     else:
         if matter == '#codeDiary':
-            pass
+            main_page = CodeDiaryView().get()
 
         elif matter == '#diary':
             main_page = DiaryView().get()

@@ -7,6 +7,7 @@
 	<link rel="icon" type="image/png" href="/media/{{ website_icon }}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/font.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/color.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/left/left.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/middle/matter0.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/middle/matter1.css' %}">
@@ -45,35 +46,10 @@
     <div class="middle" id="middle">
         <div id="matter0" class="matter0 codeDiary" style="display: none;">
             <ul>
-                {% for codeDiary in codeDiary_info %}
-                    {% if codeDiary.is_display == 0 %}
-                        <li>
-                        	<div class="aCopy" id="codeDiaryCopyone{{codeDiary.text_id}}">
-                        		<a href="javascript:void(0)" id="codeDiaryClose{{codeDiary.text_id}}" class="windowCloseButton"></a>
-                        	</div>
-                            <a class="content" id="codeDiary{{codeDiary.text_id}}" href="#codeDiary?text_id={{codeDiary.text_id}}">
-                                <p>{{ codeDiary.content }}</p>
-                            </a>
-                        </li>
-                    {% endif %}
-                {% endfor %}
             </ul>
         </div>
         <div id="matter1" class="matter1 diary" style="display: none;">
 			<ul>
-                {% for diary in diary_info %}
-                    {% if diary.is_display == 0 %}
-                        <li>
-                        	<div class="aCopy" id="diaryCopyone{{diary.text_id}}">
-                        		<a href="javascript:void(0)" id="diaryClose{{diary.text_id}}" class="windowCloseButton"></a>
-                        	</div>
-                            <a class="content" id="diary{{diary.text_id}}" href="#diary?text_id={{diary.text_id}}">
-                                <h4>{{ diary.date_weather }}</h4>
-                                <p>{{ diary.content }}</p>
-                            </a>
-                        </li>
-                    {% endif %}
-                {% endfor %}
             </ul>
         </div>
 		<div id="matter2" class="matter2" style="display: none">

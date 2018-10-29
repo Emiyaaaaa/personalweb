@@ -1,9 +1,7 @@
 $(document).ready(function() {
 
 	function mainPage() {
-		var urlHashAfterQuestionMark = URLHASH.split('?')[1]
-		if (URLHASH != '#codeDiary') {
-			$.ajax({
+		$.ajax({
 		        url:"/",
 		        type:"GET",
 		        async: false,
@@ -12,7 +10,6 @@ $(document).ready(function() {
 		        	fillHtml(data,URLHASH)
 		        }
 		    })
-		}
 	}
 	mainPage()
 	matterClick()
@@ -38,15 +35,38 @@ $(document).ready(function() {
 
 	function fillHtml(data,urlHash){
         	if (data.statusCode == '200'){
-        		if (urlHash == '#diary'){
+        		if (urlHash == '#codeDiary'){
+        			var htm = ''
+	        		$.each(data.codeDiary_info,function(i,data){
+
+	        			if (data.is_display == 1){
+	        				var id = data.text_id
+	        				htm += '<li>\
+                        				<div class="aCopy" id="codeDiaryCopyone'+ id +'">\
+                        					<a href="javascript:void(0)" id="codeDiaryClose'+ id +'" class="windowCloseButton">\
+                        						<img src="/media/close.png"/>\
+                        					</a>\
+                        				</div>\
+                            			<a class="content" id="codeDiary'+ id +'" href="#codeDiary?text_id='+ id +'">\
+                                			<p>'+ data.content +'</p>\
+                            			</a>\
+                        			</li>'
+	        			}
+	        		})
+	        		$('.codeDiary ul').html(htm)
+        		}
+        		else if (urlHash == '#diary'){
 	        		var htm = ''
 	        		$.each(data.diary_info,function(i,data){
-	        			if (data.is_display == 0){
+	        			if (data.is_display == 1){
+	        				var id = data.text_id
 	        				htm += '<li>\
-                    					<div class="aCopy" id="diaryCopyone'+ data.text_id +'">\
-                    						<a href="javascript:void(0)" id="diaryClose'+ data.text_id +'" class="windowCloseButton"></a>\
+                    					<div class="aCopy" id="diaryCopyone'+ id +'">\
+                    						<a href="javascript:void(0)" id="diaryClose'+ id +'" class="windowCloseButton">\
+                    							<img src="/media/close.png"/>\
+                        					</a>\
                     					</div>\
-                        				<a class="content" id="diary'+ data.text_id +'" href="#diary?text_id='+ data.text_id +'">\
+                        				<a class="content" id="diary'+ id +'" href="#diary?text_id='+ id +'">\
                             				<h4>'+ data.date_weather +'</h4>\
                             				<p class="p">'+ data.content +'</p>\
                         				</a>\

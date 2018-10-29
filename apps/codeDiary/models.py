@@ -12,8 +12,8 @@ class CodeDiary(models.Model):
     like_num = models.IntegerField(verbose_name=u'点赞数', default='0')
     created_at = models.DateTimeField(verbose_name=u'创建时间', auto_now_add=True, null=False)
     update_at = models.DateTimeField(verbose_name=u'更新时间', auto_now=True, null=False)
-    stick = models.IntegerField(verbose_name=u'置顶', choices=((0, '未置顶'), (1, '置顶')), default=0)
-    is_display = models.IntegerField(verbose_name=u'展示', choices=((0, '显示'), (1, '隐藏')), default=0)
+    is_stick = models.IntegerField(verbose_name=u'置顶', choices=((0, '未置顶'), (1, '置顶')), default=0)
+    is_display = models.IntegerField(verbose_name=u'展示', choices=((0, '隐藏'), (1, '显示')), default=1)
 
     class Meta:
         verbose_name = u"代码"
@@ -31,7 +31,7 @@ class CodeComment(models.Model):
     comment_to = models.CharField(max_length=50,verbose_name='评论对象',null=True,blank=True)
     created_at = models.DateTimeField(verbose_name=u'发布时间', auto_now_add=True, null=False)
     update_at = models.DateTimeField(verbose_name=u'更新时间', auto_now=True, null=False)
-    is_display = models.IntegerField(verbose_name='展示', choices=((0, '显示'), (1, '隐藏')), default=0)
+    is_display = models.IntegerField(verbose_name='展示', choices=((0, '隐藏'), (1, '显示')), default=1)
 
     class Meta:
         verbose_name = u"评论"

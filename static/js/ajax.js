@@ -8,7 +8,9 @@ $(document).ready(function() {
 		        type:"GET",
 		        async: false,
 		        data:{"matter":URLHASH},
-		        success:function(data){fillHtml(data,URLHASH)}
+		        success:function(data){
+		        	fillHtml(data,URLHASH)
+		        }
 		    })
 		}
 	}

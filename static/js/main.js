@@ -11,8 +11,6 @@ function matterClick(){
 function divFadeIn(urlHash) {
 	var num = hashToMatterNum(urlHash)
 	var liLength = $('#matter'+num+' ul li').length;
-	console.log($('#matter0 ul li'))
-	console.log($('#matter1 ul li'))
 	for (var i = 0; i < liLength; i++) {
 		$('#matter'+num+' ul li:eq(' + i +')').delay(140*i).fadeIn();
 		if (i > 10){

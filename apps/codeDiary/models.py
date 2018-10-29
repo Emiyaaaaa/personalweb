@@ -4,7 +4,7 @@ from markdown.forms import MarkdownField
 
 class CodeDiary(models.Model):
     text_id = models.AutoField(primary_key=True)
-    title = models.CharField(max_length=200, verbose_name=u'标题')
+    title = models.CharField(max_length=200, verbose_name=u'标题', null=True, blank=True)
     content = models.TextField(verbose_name=u'正文')
     tag = models.CharField(max_length=50, verbose_name=u'标签', null=True, blank=True)
     author = models.CharField(verbose_name=u'作者', max_length=100, default='Emiya')
@@ -20,7 +20,7 @@ class CodeDiary(models.Model):
         verbose_name_plural = verbose_name
 
     def __str__(self):
-        return self.title
+        return self.content
 
 
 class CodeComment(models.Model):

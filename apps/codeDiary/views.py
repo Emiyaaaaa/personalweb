@@ -1,5 +1,5 @@
 from .models import CodeDiary
-from personalcenter.views import PersonalCenterView
+from django.shortcuts import render
 
 class CodeDiaryView():
     def get(self):

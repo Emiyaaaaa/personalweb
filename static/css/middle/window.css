@@ -58,11 +58,11 @@
 .windowBackground {
     display: none;
     position:fixed;
-    overflow:scroll;
+    overflow:hidden;
     background:#333333;
     top: 0;
     left: 0;
-    height: 723px;
+    height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;

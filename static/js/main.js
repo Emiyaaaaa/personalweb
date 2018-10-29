@@ -90,7 +90,7 @@ $(document).ready(function() {
 		$('html').css('overflow','hidden')
 		windowObj.addClass('beforeOpenWindow')
 		obj.css('display','none')
-		$('#windowBackground').css({'display':'block','height':clientHeight})
+		$('#windowBackground').css({'display':'block','width':clientWidth+28,'height':clientHeight+10})
 		aCopyObj.css('display','block')
 		var aHtml = obj.html()
 		var windowHtml = aCopyObj.html()
@@ -109,13 +109,15 @@ $(document).ready(function() {
 
 		windowObj.toggleClass('afterOpenWindow')
 		windowObj.toggleClass('beforeOpenWindow')
+		$('#windowBackground').toggleClass('windowOpacity')
+		setTimeout(function(){$('#windowBackground').css('display','none')},348)
 		aCopyObj.css('display','none')
-		$('#windowBackground').css('display','none')
+		
 		aObj.css('display','block')
 		setTimeout(function(){windowObj.css('display','none').empty()},340)
 		aCopyObj.empty().html('<a href=\'javascript:void(0)\' id=\'close'+idNum+'\' class=\'windowCloseButton\'></a>')
 		$('html').css({'overflow-y':'scroll','overflow-x':'hidden'})
-		setTimeout(function(){$('#windowBackground').toggleClass('windowOpacity');},8)
+		
 	});
 	function setProperty(documentObjId,dictObj){
 		var obj = document.getElementById(documentObjId)

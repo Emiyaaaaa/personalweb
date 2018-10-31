@@ -1,0 +1,10 @@
+ {% for codeDiary in codeDiary_info %}
+    {% if codeDiary.is_display == 1 %}
+        <li>
+            <div class="aCopy" id="codeDiaryCopyone{{ codeDiary.text_id }}"></div>
+            <a class="content" id="codeDiary{{ codeDiary.text_id }}" href="#codeDiary?text_id={{ codeDiary.text_id }}">
+                <p>{{ codeDiary.content }}</p>
+            </a>
+        </li>
+     {% endif %}
+ {% endfor %}

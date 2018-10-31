@@ -139,3 +139,7 @@ USE_TZ = False
 MARKDOWN_IMAGE_FLODER='markdown'
 
 MARKDOWN_IMAGE_FORMATS=["jpg", "jpeg", "gif", "png", "bmp", "webp"]
+
+# text
+MAX_LINE = 2
+LOOK_MORE_LENGTH = 9

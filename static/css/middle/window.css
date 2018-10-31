@@ -16,10 +16,9 @@
     margin: 7px 0 0 7px
 }
 
-.windowCloseButton:hover{
-	transform: rotate(90deg) /*scale(1.1)*/;
-	/*text-shadow:1px -1px 2px #D9D9D9;*/
-}
+/*.windowCloseButton:hover{
+	transform: rotate(90deg);
+}*/
 
 #window {
     display: none;

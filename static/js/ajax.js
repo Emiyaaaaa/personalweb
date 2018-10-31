@@ -15,6 +15,14 @@ $(document).ready(function() {
 	matterClick()
 
 	$('.left-menu a').click(function () {
+		//导航栏交互
+		$('.left-menu a').removeClass('active')
+		$(this).addClass('active')
+		var liNum = $(this).parent().attr('id').split('-')[1]
+		$('#middle > div').css('display','none')
+		$('#matter'+liNum).css('display','block')
+		nowMatter = 'matter'+liNum
+		//ajax
 		var urlHash = $(this).attr('href')
 		//判断是否需要ajax
 		if (needAjax(urlHash) == 'true'){
@@ -34,61 +42,20 @@ $(document).ready(function() {
 	})
 
 	function fillHtml(data,urlHash){
-        	if (data.statusCode == '200'){
-        		if (urlHash == '#codeDiary'){
-        			var htm = ''
-	        		$.each(data.codeDiary_info,function(i,data){
-
-	        			if (data.is_display == 1){
-	        				var id = data.text_id
-	        				htm += '<li>\
-                        				<div class="aCopy" id="codeDiaryCopyone'+ id +'">\
-                        					<a href="javascript:void(0)" id="codeDiaryClose'+ id +'" class="windowCloseButton">\
-                        						<img src="/media/close.png"/>\
-                        					</a>\
-                        				</div>\
-                            			<a class="content" id="codeDiary'+ id +'" href="#codeDiary?text_id='+ id +'">\
-                                			<p>'+ data.content +'</p>\
-                            			</a>\
-                        			</li>'
-	        			}
-	        		})
-	        		$('.codeDiary ul').html(htm)
-        		}
-        		else if (urlHash == '#diary'){
-	        		var htm = ''
-	        		$.each(data.diary_info,function(i,data){
-	        			if (data.is_display == 1){
-	        				var id = data.text_id
-	        				htm += '<li>\
-                    					<div class="aCopy" id="diaryCopyone'+ id +'">\
-                    						<a href="javascript:void(0)" id="diaryClose'+ id +'" class="windowCloseButton">\
-                    							<img src="/media/close.png"/>\
-                        					</a>\
-                    					</div>\
-                        				<a class="content" id="diary'+ id +'" href="#diary?text_id='+ id +'">\
-                            				<h4>'+ data.date_weather +'</h4>\
-                            				<p class="p">'+ data.content +'</p>\
-                        				</a>\
-                    				</li>'
-	        			}
-	        		})
-	        		$('.diary ul').html(htm)
-        		}
-        		else if (urlHash == '#application'){
-        		}
-        		else if (urlHash == '#personalCenter'){
-        		}
-        		else {
-        		window.location.href = url + '404'
-        		}
-        	}
-        	else if (data.statusCode == '404') {
-        		window.location.href = url + '404'
-        	}
-        	else {
-        		window.location.href = url + '404'
-        	}
+		if (urlHash == '#codeDiary'){
+    		$('.codeDiary ul').html(data)
+		}
+		else if (urlHash == '#diary'){
+    		$('.diary ul').html(data)
+		}
+		else if (urlHash == '#application'){
+		}
+		else if (urlHash == '#personalCenter'){
+		}
+		else {
+		window.location.href = url + '404'
+		}
+        	
 	}
 
 	function needAjax(urlHash){

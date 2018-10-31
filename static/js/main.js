@@ -35,17 +35,8 @@ function hashToMatterNum(urlHash){
 	return $(urlHash).parent().attr('id').split('-')[1]
 }
 
-$(document).ready(function() {
 
-	$('.left-menu a').click(function () {
-		//导航栏交互
-		$('.left-menu a').removeClass('active')
-		$(this).addClass('active')
-		var liNum = $(this).parent().attr('id').split('-')[1]
-		$('#middle > div').css('display','none')
-		$('#matter'+liNum).css('display','block')
-		nowMatter = 'matter'+liNum
-	})
+$(document).ready(function() {
 
 	$(document).on("click",'.content',function openWindow(){
 		getClientSize()
@@ -53,7 +44,7 @@ $(document).ready(function() {
 		windowObj = $('#window')
 		matterObj = $('#'+nowMatter)
 		idNum = obj.attr('id').match(/\d+/)
-		objName = obj.attr('id').split(/Close/)[0].split(/\d/)[0]
+		objName = obj.attr('id').split(/\d/)[0]
 		aCopyObj = $('#'+objName+'Copyone'+idNum)
 		var scaleX = 1.085
 		var scaleY = 1.195
@@ -70,6 +61,7 @@ $(document).ready(function() {
 		var top = getDivPosition(id)[1]
 		var top = top - (marginTop - (height * scaleY - height)/2)
 		var left = left - (marginLeft - (width * scaleX - width)/2)
+		closeWindowHtml = '<a href="javascript:void(0)" class="windowCloseButton"></a>'
 		
 		var setPripertyDict = {
 			'top':top+'px',
@@ -91,10 +83,9 @@ $(document).ready(function() {
 		$('#windowBackground').css({'display':'block','width':clientWidth+28,'height':clientHeight+10})
 		aCopyObj.css('display','block')
 		var aHtml = obj.html()
-		var windowHtml = aCopyObj.html()
 		aCopyObj.html(aHtml)
-		// //在这里加打开窗口后增加的html
-		windowObj.html(windowHtml + aHtml)
+		//在这里加打开窗口后增加的html
+		windowObj.html(closeWindowHtml + aHtml)
 		windowObj.css('display','block')
 	 	setTimeout(function(){windowObj.toggleClass('afterOpenWindow');$('#windowBackground').toggleClass('windowOpacity');},8)//不设置延时会有bug,延时>=8mm(可能与浏览器性能有关)
 
@@ -113,7 +104,6 @@ $(document).ready(function() {
 		
 		aObj.css('display','block')
 		setTimeout(function(){windowObj.css('display','none').empty()},340)
-		aCopyObj.empty().html('<a href=\'javascript:void(0)\' id=\'close'+idNum+'\' class=\'windowCloseButton\'></a>')
 		$('html').css({'overflow-y':'scroll','overflow-x':'hidden'})
 		
 	});

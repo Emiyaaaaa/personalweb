@@ -6,7 +6,9 @@
 }
 
 .matter0 p, .matter1 p, #window p{
-	padding: 8px 10px;
+	padding: 9px 10px;
+	line-height:25px;
 	font-size: 15px;
+	letter-spacing: 2px;
     color: #333333
 }

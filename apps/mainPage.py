@@ -31,7 +31,6 @@ def ajax_main(request):
 def ajax_get(request):
     matter = request.GET.get('matter')
     text_max_length = request.GET.get('text_max_length')
-    print(text_max_length)
     simple_personal_info = PersonalCenterView().get_simple_personal_info()
     avatar = simple_personal_info['avatar']
     website_icon = simple_personal_info['website_icon']
@@ -45,12 +44,12 @@ def ajax_get(request):
 
     else:
         if matter == '#codeDiary':
-            page_info = CodeDiaryView().get(text_max_length)
-            return render(request,'matter0.html',{'codeDiary_info':page_info})
+            render_page = CodeDiaryView().get(request,text_max_length)
+            return render_page
 
         elif matter == '#diary':
-            page_info = DiaryView().get(text_max_length)
-            return render(request, 'matter1.html', {'diary_info': page_info})
+            render_page = DiaryView().get(request,text_max_length)
+            return render_page
 
         elif matter == '#application':
             main_page = {}

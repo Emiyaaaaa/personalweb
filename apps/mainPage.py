@@ -31,6 +31,7 @@ def ajax_main(request):
 def ajax_get(request):
     matter = request.GET.get('matter')
     text_max_length = request.GET.get('text_max_length')
+    print(text_max_length)
     simple_personal_info = PersonalCenterView().get_simple_personal_info()
     avatar = simple_personal_info['avatar']
     website_icon = simple_personal_info['website_icon']

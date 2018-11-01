@@ -1,11 +1,9 @@
  {% for diary in diary_info %}
-    {% if diary.is_display == 1 %}
-        <li>
-            <div class="aCopy" id="diaryCopyone{{ diary.text_id }}"></div>
-            <a class="content" id="diary{{ diary.text_id }}" href="#diary?text_id={{ diary.text_id }}">
-                <h4>{{ diary.date_weather }}</h4>
-                <p>{{ diary.content }}</p>
-            </a>
-        </li>
-     {% endif %}
+    <li>
+        <div class="aCopy" id="diaryCopyone{{ diary.text_id }}"></div>
+        <a class="content" id="diary{{ diary.text_id }}" href="#diary?text_id={{ diary.text_id }}">
+            <h4>{{ diary.date_weather }}</h4>
+            <p>{{ diary.content }}</p>
+        </a>
+    </li>
  {% endfor %}

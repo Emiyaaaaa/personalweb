@@ -23,7 +23,8 @@ class CodeDiaryView():
         return codeDiary_info
 
     def getBriefText(self,text,text_max_length):
-        if text >= text_max_length * 2 - 9:
-            return {'is_brief': 'true', 'briefText': text[:text_max_length * 2 - 9]}
+        text_max_length = int(text_max_length)
+        if len(text) >= text_max_length * 2 - 9:
+            return {'is_brief': 'true', 'brief_text': text[:text_max_length * 2 - 9]}
         else:
-            return {'is_brief': 'false','briefText': text}
+            return {'is_brief': 'false','brief_text': text}

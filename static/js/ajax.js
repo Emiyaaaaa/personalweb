@@ -5,7 +5,7 @@ $(document).ready(function() {
 		        url:"/",
 		        type:"GET",
 		        async: false,
-		        data:{"matter":URLHASH},
+		        data:{"matter":URLHASH,"text_max_length":TEXTMAXLENGTH},
 		        success:function(data){
 		        	fillHtml(data,URLHASH)
 		        }
@@ -30,7 +30,7 @@ $(document).ready(function() {
 		        url:"/",
 		        type:"GET",
 		        async: false,
-		        data:{"matter":urlHash},
+		        data:{"matter":urlHash,"text_max_length":TEXTMAXLENGTH},
 		        success:function(data){fillHtml(data,urlHash)}
     		})
     		divFadeIn(urlHash)

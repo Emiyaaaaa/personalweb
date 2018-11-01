@@ -14,7 +14,8 @@ class DiaryView():
                 diary_info.append({
                     'content':brief_text['brief_text'],
                     'date_weather':diary.date+ ' ' +diary.weather,
-                    'text_id':diary.text_id
+                    'text_id':diary.text_id,
+                    'is_brief':brief_text['is_brief']
                 })
                 i = i + 1
                 if i >= 20:
@@ -23,7 +24,7 @@ class DiaryView():
 
     def getBriefText(self,text,text_max_length):
         text_max_length = int(text_max_length)
-        if len(text) >= text_max_length * 2 - 9:
-            return {'is_brief': 'true', 'brief_text': text[:text_max_length * 2 - 9]}
+        if len(text) > text_max_length * 2 - 5:
+            return {'is_brief': 'true', 'brief_text': text[:text_max_length * 2 - 5]}
         else:
             return {'is_brief': 'false','brief_text': text}

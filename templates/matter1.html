@@ -3,7 +3,11 @@
         <div class="aCopy" id="diaryCopyone{{ diary.text_id }}"></div>
         <a class="content" id="diary{{ diary.text_id }}" href="#diary?text_id={{ diary.text_id }}">
             <h4>{{ diary.date_weather }}</h4>
-            <p>{{ diary.content }}</p>
+            <p>{{ diary.content }}
+                {% if diary.is_brief == 'true' %}
+                    <span class="look-more">[查看更多]</span>
+                {% endif %}
+            </p>
         </a>
     </li>
  {% endfor %}

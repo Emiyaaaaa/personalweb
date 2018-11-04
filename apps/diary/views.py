@@ -1,4 +1,4 @@
-from .models import Diary
+from .models import Diary,DiaryImg
 from django.shortcuts import render
 
 class DiaryView():
@@ -10,12 +10,15 @@ class DiaryView():
         i = 0
         for diary in diary:
             if diary.is_display == 1:
+                text_id = diary.text_id
                 brief_text = self.getBriefText(diary.content, text_max_length)
+                diaryImg = DiaryImg.objects.filter(codeDiary=text_id)
                 diary_info.append({
                     'content':brief_text['brief_text'],
                     'date_weather':diary.date+ ' ' +diary.weather,
-                    'text_id':diary.text_id,
-                    'is_brief':brief_text['is_brief']
+                    'text_id':text_id,
+                    'is_brief':brief_text['is_brief'],
+                    'img_num': len(diaryImg)
                 })
                 i = i + 1
                 if i >= 20:

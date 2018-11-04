@@ -1,4 +1,4 @@
-from .models import CodeDiary
+from .models import CodeDiary,CodeDiaryImg
 from django.shortcuts import render
 
 class CodeDiaryView():
@@ -7,15 +7,19 @@ class CodeDiaryView():
         stick_diary = CodeDiary.objects.filter(is_stick=1)
         all_diary = CodeDiary.objects.all().order_by('-text_id')
         codeDiary = stick_diary|all_diary
+
         i = 0
         for codeDiary in codeDiary:
             if codeDiary.is_display == 1:
+                text_id = codeDiary.text_id
                 brief_text = self.getBriefText(codeDiary.content, text_max_length)
+                codeDiaryImg = CodeDiaryImg.objects.filter(codeDiary=text_id)
                 codeDiary_info.append({
                     'content':brief_text['brief_text'],
-                    'text_id':codeDiary.text_id,
+                    'text_id':text_id,
                     'title':codeDiary.title,
-                    'is_brief':brief_text['is_brief']
+                    'is_brief':brief_text['is_brief'],
+                    'img_num':len(codeDiaryImg)
                 })
                 i = i + 1
                 if i >= 20:

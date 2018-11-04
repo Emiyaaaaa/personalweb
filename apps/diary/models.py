@@ -62,6 +62,19 @@ class Diary(models.Model):
         return self.content
 
 
+class DiaryImg(models.Model):
+    diary = models.ForeignKey(Diary, on_delete=models.CASCADE, verbose_name='正文')
+    img = models.ImageField(max_length=100,verbose_name='动态图片',upload_to='diary_img')
+    update_at = models.DateTimeField(verbose_name=u'更新时间', auto_now=True, null=False)
+
+    class Meta:
+        verbose_name = u"动态图片"
+        verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return self.diary.content
+
+
 class DiaryComment(models.Model):
     comment = models.ForeignKey(Diary,on_delete=models.CASCADE,verbose_name='主题')
     nick_name = models.CharField(max_length=50,verbose_name='昵称',null=True,blank=True)

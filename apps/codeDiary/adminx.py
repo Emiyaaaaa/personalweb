@@ -3,8 +3,7 @@
 import xadmin
 from django.contrib import admin
 from django.db import models
-from .models import CodeDiary
-from .models import CodeComment
+from .models import CodeDiary,CodeComment,CodeDiaryImg
 from markdown.widgets import XAdminMarkdownWidget
 
 
@@ -26,6 +25,12 @@ class CodeCommentAdmin(object):
     # model_icon = 'fa fa-user-circle'
 
 
+class CodeDiaryImgAdmin(object):
+    list_display = ['codeDiary','img','update_at']
+    search_field = ['codeDiary','img','update_at']
+
+
+xadmin.site.register(CodeDiaryImg,CodeDiaryImgAdmin)
 xadmin.site.register(CodeDiary,CodeDiaryAdmin)
 xadmin.site.register(CodeComment,CodeCommentAdmin)
 

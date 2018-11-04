@@ -23,6 +23,19 @@ class CodeDiary(models.Model):
         return self.content
 
 
+class CodeDiaryImg(models.Model):
+    codeDiary = models.ForeignKey(CodeDiary, on_delete=models.CASCADE, verbose_name='正文')
+    img = models.ImageField(max_length=100,verbose_name='代码图片',upload_to='codeDiary_img')
+    update_at = models.DateTimeField(verbose_name=u'更新时间', auto_now=True, null=False)
+
+    class Meta:
+        verbose_name = u"代码图片"
+        verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return self.codeDiary.content
+
+
 class CodeComment(models.Model):
     comment = models.ForeignKey(CodeDiary,on_delete=models.CASCADE,verbose_name='主题')
     nick_name = models.CharField(max_length=50,verbose_name='昵称',null=True,blank=True)

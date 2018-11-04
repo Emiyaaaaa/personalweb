@@ -92,7 +92,7 @@ $(document).ready(function() {
 		windowObj.css('display','block')
 		windowObj.html('<div id="windowContent">'+closeWindowHtml+aHtml+'</div>')
 	 	setTimeout(function(){windowObj.toggleClass('openWindow');$('#windowBackground').toggleClass('windowOpacity');},8)//不设置延时会有bug,延时>=8mm(可能与浏览器性能有关)
-	 	setTimeout(function(){$('#windowContent').delay(100).fadeIn(140);},100)
+	 	setTimeout(function(){$('#windowContent').delay(80).fadeIn(140);},100)
 	});
 
 	// matter0，1关闭窗口效果

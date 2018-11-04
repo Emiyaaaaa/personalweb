@@ -2,8 +2,7 @@
 # -*- coding: utf-8 -*-
 import xadmin
 from xadmin import views
-from .models import Diary
-from .models import DiaryComment
+from .models import Diary,DiaryImg,DiaryComment
 
 #以下代码为后台管理系统的主题，logo配置代码
 
@@ -43,6 +42,13 @@ class DiaryCommentAdmin(object):
     exclude = ['comment_id','is_display']
     # model_icon = 'fa fa-user-circle'
 
+
+class DiaryImgAdmin(object):
+    list_display = ['diary','img','update_at']
+    search_field = ['diary','img','update_at']
+
+
+xadmin.site.register(DiaryImg,DiaryImgAdmin)
 xadmin.site.register(views.CommAdminView,GlobalSettings)
 xadmin.site.register(Diary,DiaryAdmin)
 xadmin.site.register(DiaryComment,DiaryCommentAdmin)

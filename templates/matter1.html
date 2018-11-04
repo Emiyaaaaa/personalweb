@@ -4,6 +4,9 @@
         <a class="content" id="diary{{ diary.text_id }}" href="#diary?text_id={{ diary.text_id }}">
             <h4>{{ diary.date_weather }}</h4>
             <p>{{ diary.content }}
+                {% if diary.img_num != 0 %}
+                    [图片]
+                {% endif %}
                 {% if diary.is_brief == 'true' %}
                     <span class="look-more">[查看更多]</span>
                 {% endif %}

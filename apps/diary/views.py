@@ -12,7 +12,7 @@ class DiaryView():
             if diary.is_display == 1:
                 text_id = diary.text_id
                 brief_text = self.getBriefText(diary.content, text_max_length)
-                diaryImg = DiaryImg.objects.filter(codeDiary=text_id)
+                diaryImg = DiaryImg.objects.filter(diary=text_id)
                 diary_info.append({
                     'content':brief_text['brief_text'],
                     'date_weather':diary.date+ ' ' +diary.weather,

@@ -46,64 +46,69 @@ $(document).ready(function() {
 		idNum = obj.attr('id').match(/\d+/)
 		objName = obj.attr('id').split(/\d/)[0]
 		aCopyObj = $('#'+objName+'Copyone'+idNum)
-		var scaleX = 1.085
-		var scaleY = 1.195
+		var scale_X = 1.08
+		var scale_Y = 1.15
 		var width = obj.width()
 		var height = obj.height()
+		var marginLeft = obj.outerWidth(true) - obj.outerWidth()
+		var marginTop = obj.outerHeight(true) - obj.outerHeight()
+		var paddingLeft = (obj.outerWidth()-width)/2
+		var paddingTop = (obj.outerHeight()-height)/2
 		var windowHeight = clientHeight/2
 		var windowWidth = clientWidth*4/6
 		var windowTop = clientHeight/7
-		var windowLeft = clientWidth/6
-		var marginLeft = obj.outerWidth(true) - obj.outerWidth()
-		var marginTop = obj.outerHeight(true) - obj.outerHeight()
+		var windowLeft = clientWidth/6 - marginLeft/2
 		var id = obj.attr('id')
 		var left = getDivPosition(id)[0]
 		var top = getDivPosition(id)[1]
-		var top = top - (marginTop - (height * scaleY - height)/2)
-		var left = left - (marginLeft - (width * scaleX - width)/2)
+		console.log(top)
+		var scaleX = (windowWidth-(obj.outerWidth(true)-width)+paddingLeft*2)/((width+paddingLeft*2))
+		var scaleY = (windowHeight+paddingTop*2)/((height+paddingTop*2))
+		var unknowParameterY = 21.15
+		var unknowParameterX = 2.087
 		closeWindowHtml = '<a href="javascript:void(0)" class="windowCloseButton"></a>'
 		
 		var setPripertyDict = {
-			'top':top+'px',
-			'left':left+'px',
-			'width':width+'px',
-			'height':height+'px',
+			'top':windowTop+'px',
+			'left':windowLeft+'px',
+			'width':windowWidth-(obj.outerWidth(true)-width)+'px',
+			'height':windowHeight+'px',
 			'marginTop':marginTop+'px',
 			'marginLeft':marginLeft+'px',
-			'changeLeft':windowLeft+'px',
-			'changeTop':windowTop+'px',
-			'changeWidth':windowWidth-(obj.outerWidth(true)-width)+'px',
-			'changeHeight':windowHeight+'px',
-			'webkit-scrollbar-track-piece-backgroung-color':'#333333'
+			'scaleX':1/scaleX,
+			'scaleY':1/scaleY,
+			'translateX':-(clientWidth/unknowParameterX-(width+34)/2-left)+'px',
+			'translateY':-(clientHeight*2.75/7-(height+paddingTop*2)/2-top+unknowParameterY)+'px'
 		}
 	 	setProperty("window",setPripertyDict)
 		$('html').css('overflow','hidden')
-		windowObj.addClass('beforeOpenWindow')
+		// windowObj.addClass('openWindow')
 		obj.css('display','none')
 		$('#windowBackground').css({'display':'block','width':clientWidth+28,'height':clientHeight+10})
 		aCopyObj.css('display','block')
 		var aHtml = obj.html()
 		aCopyObj.html(aHtml)
 		//在这里加打开窗口后增加的html
-		windowObj.html(closeWindowHtml + aHtml)
 		windowObj.css('display','block')
-	 	setTimeout(function(){windowObj.toggleClass('afterOpenWindow');$('#windowBackground').toggleClass('windowOpacity');},8)//不设置延时会有bug,延时>=8mm(可能与浏览器性能有关)
-
+		windowObj.html('<div id="windowContent">'+closeWindowHtml+aHtml+'</div>')
+	 	setTimeout(function(){windowObj.toggleClass('openWindow');$('#windowBackground').toggleClass('windowOpacity');},8)//不设置延时会有bug,延时>=8mm(可能与浏览器性能有关)
+	 	setTimeout(function(){$('#windowContent').delay(100).fadeIn(140);},100)
 	});
 
 	// matter0，1关闭窗口效果
 	$(document).on('click','.windowCloseButton',function closeWindow(){
 		var obj = $(this)
 		var aObj = $('#'+objName+idNum)
+		var windowBackground = $('#windowBackground')
 
-		windowObj.toggleClass('afterOpenWindow')
-		windowObj.toggleClass('beforeOpenWindow')
-		$('#windowBackground').toggleClass('windowOpacity')
-		setTimeout(function(){$('#windowBackground').css('display','none')},348)
+		$('#windowContent').css('display','none');
+		windowObj.toggleClass('openWindow')
+		windowObj.fadeOut(280)
+		windowBackground.toggleClass('windowOpacity')
+		setTimeout(function(){windowBackground.css('display','none')},280)
 		aCopyObj.css('display','none')
-		
 		aObj.css('display','block')
-		setTimeout(function(){windowObj.css('display','none').empty()},340)
+		setTimeout(function(){windowObj.css('display','none').empty()},280)
 		$('html').css({'overflow-y':'scroll','overflow-x':'hidden'})
 		
 	});

@@ -60,7 +60,7 @@
 	    </div>
     </div>
     <div id="windowBackground" class="windowBackground"></div>
-    <div id='window' class="beforeOpenWindow"></div>
+    <div id='window' class="openWindow"></div>
     <script type="text/javascript">
     	MAINURL = ['http://127.0.0.1:8000/','http://60.205.207.236/','http://www.emiya.com.cn/'] //记得最后加斜杠
 		URLHREF = window.location.href
@@ -77,8 +77,6 @@
 		var font_size = 15
 		TEXTMAXLENGTH = Math.floor((textWidth+letter_spacing)/(letter_spacing+font_size))
 		// TEXMAXLENGTH = 37
-		
-
 		nowMatter = 'matter0'
     </script>
     <script type="text/javascript" src="{% static 'js/main.js' %}"></script>

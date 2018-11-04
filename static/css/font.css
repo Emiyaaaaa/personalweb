@@ -9,6 +9,10 @@
 	padding: 9px 10px;
 	line-height:25px;
 	font-size: 15px;
-	letter-spacing: 2px;
+	letter-spacing:2px;
     color: #333333
+}
+
+.look-more{
+	font-size: 14px
 }

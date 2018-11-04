@@ -37,21 +37,15 @@
     border-radius: 15px;
     background-color: #FFFFFF;
     padding: 17px 20px;
-    transition: all 0.34s
+    transition: all 0.28s;
 }
 
-.beforeOpenWindow{
-    transform: scale(1.08,1.15);
+#windowContent{
+    display: none;
 }
 
-.afterOpenWindow{
-    transition-timing-function: linear;
-    left: var(--changeLeft) !important;
-    top: var(--changeTop) !important;
-    width: var(--changeWidth) !important;
-    height: var(--changeHeight) !important;
-    /*transform: scale(1.3,3) translateX(var(--translateX)) translateY(var(--translateY))*/
-
+.openWindow{
+    transform:  translate(var(--translateX),var(--translateY)) scale(var(--scaleX),var(--scaleY));
 }
 
 .windowBackground {
@@ -66,7 +60,7 @@
     margin: 0;
     padding: 0;
     opacity: 0;
-    transition: opacity 0.34s;
+    transition: opacity 0.28s;
 }
 
 .windowOpacity{

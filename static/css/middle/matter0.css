@@ -45,5 +45,9 @@
 }
 
 .content:hover {
-    transform: scale(1.08,1.15);
+    transform: scale(1.08,1.15) translate3d(0,0,0);
+}
+
+.look-more{
+    color: #348ae6
 }

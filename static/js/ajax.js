@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
 	function mainPage() {
 		$.ajax({
 		        url:"/",
@@ -7,7 +6,6 @@ $(document).ready(function() {
 		        async: false,
 		        data:{"matter":URLHASH,"text_max_length":TEXTMAXLENGTH},
 		        success:function(data){
-		        	console.log(data)
 		        	fillHtml(data,URLHASH)
 		        }
 		    })

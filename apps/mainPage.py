@@ -48,7 +48,11 @@ def ajax_get(request):
             return render_page
 
         elif matter == '#diary':
-            render_page = DiaryView().get(request,text_max_length)
+            text_id = request.GET.get('text_id')
+            if text_id == None:
+                render_page = DiaryView().get_main_page(request,text_max_length)
+            else:
+                render_page = DiaryView().get_content(request, text_id)
             return render_page
 
         elif matter == '#application':

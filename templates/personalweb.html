@@ -62,15 +62,13 @@
     <div id="windowBackground" class="windowBackground"></div>
     <div id='window' class="openWindow"></div>
     <script type="text/javascript">
-    	MAINURL = ['http://127.0.0.1:8000/','http://60.205.207.236/','http://www.emiya.com.cn/'] //记得最后加斜杠
 		URLHREF = window.location.href
-		if ($.inArray(URLHREF.split('#')[0],MAINURL) != -1){
-			URLHASH = URLHREF.split('?')[0].split('/')[3]
-			if (URLHASH == ''){
-				URLHASH = '#codeDiary'
-			}
-			LINUM = $(URLHASH).parent().attr('id').split('-')[1]
+		MAINURL = URLHREF.split('#')[0]
+		URLHASH = URLHREF.split('?')[0].split('/')[3]
+		if (URLHASH == ''){
+			URLHASH = '#codeDiary'
 		}
+		LINUM = $(URLHASH).parent().attr('id').split('-')[1]
 		var clientWidth = document.documentElement.clientWidth
 		var textWidth = Math.round((Math.round(clientWidth*0.55)-19)*0.8-20)
 		var letter_spacing = 2

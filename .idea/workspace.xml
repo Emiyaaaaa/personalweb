@@ -2,18 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97ee085e-0965-47c9-afdd-5d7ddcf1463c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/apps/codeDiary/migrations/0008_codediaryimg.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/diary/migrations/0005_diaryimg.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/matter0Content.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/matter1Content.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/codeDiary/adminx.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/codeDiary/adminx.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/codeDiary/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/codeDiary/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/codeDiary/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/codeDiary/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/diary/adminx.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/diary/adminx.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/diary/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/diary/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/diary/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/diary/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/mainPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/mainPage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/font.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/font.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/ajax.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/ajax.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/matter0.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/matter0.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/matter1.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/matter1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/personalweb.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/personalweb.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,7 +23,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/personalweb$12.coverage" NAME="12 Coverage Results" MODIFIED="1540194829992" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../untitled/草稿箱" />
-    <SUITE FILE_PATH="coverage/personalweb$15.coverage" NAME="15 Coverage Results" MODIFIED="1538823994026" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../untitled/草稿箱" />
+    <SUITE FILE_PATH="coverage/personalweb$15.coverage" NAME="15 Coverage Results" MODIFIED="1541388069696" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../untitled/草稿箱" />
     <SUITE FILE_PATH="coverage/personalweb$settings.coverage" NAME="settings Coverage Results" MODIFIED="1538219360923" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/personalweb" />
     <SUITE FILE_PATH="coverage/personalweb$ali.coverage" NAME="ali Coverage Results" MODIFIED="1537155812300" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="E:/2345下载/txy (3)/apps/donate" />
     <SUITE FILE_PATH="coverage/personalweb$git_pull__1_.coverage" NAME="git_pull (1) Coverage Results" MODIFIED="1538630856103" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
@@ -60,8 +59,8 @@
       <file leaf-file-name="mainPage.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/mainPage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="925">
-              <caret line="46" column="70" selection-start-line="46" selection-start-column="70" selection-end-line="46" selection-end-column="70" />
+            <state relative-caret-position="121">
+              <caret line="46" selection-start-line="46" selection-end-line="46" />
               <folding>
                 <element signature="e#102#137#0" expanded="true" />
               </folding>
@@ -69,23 +68,53 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ajax.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/ajax.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="60" column="13" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="window.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/window.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="51" column="21" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-860" />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/diary/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="19" column="54" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
+            <state relative-caret-position="215">
+              <caret line="68" column="59" selection-start-line="68" selection-start-column="59" selection-end-line="68" selection-end-column="59" />
               <folding>
-                <element signature="e#0#34#0" expanded="true" />
+                <element signature="e#0#47#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="matter1.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/matter1.html">
+      <file leaf-file-name="matter1Content.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/matter1Content.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/diary/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="6" column="43" lean-forward="true" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
+            <state relative-caret-position="242">
+              <caret line="48" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -93,8 +122,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/codeDiary/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="47" />
+            <state relative-caret-position="121">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
               </folding>
@@ -105,8 +134,8 @@
       <file leaf-file-name="matter0.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/matter0.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="7" selection-end-column="27" />
+            <state relative-caret-position="150">
+              <caret line="6" column="24" lean-forward="true" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -145,9 +174,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/apps/personalcenter/__init__.py" />
-        <option value="$PROJECT_DIR$/apps/personalcenter/migrations/0003_auto_20180924_1557.py" />
-        <option value="$PROJECT_DIR$/apps/personalcenter/migrations/0002_personalcenter.py" />
         <option value="$PROJECT_DIR$/apps/changeLog/apps.py" />
         <option value="$PROJECT_DIR$/apps/changeLog/__init__.py" />
         <option value="$PROJECT_DIR$/apps/changeLog/migrations/0001_initial.py" />
@@ -168,7 +194,6 @@
         <option value="$PROJECT_DIR$/apps/codeDiary/__init__.py" />
         <option value="$PROJECT_DIR$/apps/diary/apps.py" />
         <option value="$PROJECT_DIR$/apps/personalcenter/apps.py" />
-        <option value="$PROJECT_DIR$/../untitled/草稿箱/15.py" />
         <option value="$PROJECT_DIR$/static/js/jquery.flashy.min.js" />
         <option value="$PROJECT_DIR$/tools/code_statistics.py" />
         <option value="$PROJECT_DIR$/apps/changeLog/views.py" />
@@ -187,15 +212,19 @@
         <option value="$PROJECT_DIR$/venv/Lib/site-packages/xadmin/views/base.py" />
         <option value="$PROJECT_DIR$/apps/personalcenter/models.py" />
         <option value="$PROJECT_DIR$/venv/Lib/site-packages/django/forms/boundfield.py" />
-        <option value="$PROJECT_DIR$/apps/mainPage.py" />
         <option value="$PROJECT_DIR$/apps/diary/models.py" />
         <option value="$PROJECT_DIR$/apps/diary/adminx.py" />
-        <option value="$PROJECT_DIR$/apps/codeDiary/models.py" />
         <option value="$PROJECT_DIR$/apps/codeDiary/adminx.py" />
         <option value="$PROJECT_DIR$/apps/codeDiary/views.py" />
         <option value="$PROJECT_DIR$/templates/matter0.html" />
+        <option value="$PROJECT_DIR$/apps/mainPage.py" />
+        <option value="$PROJECT_DIR$/../untitled/草稿箱/15.py" />
+        <option value="$PROJECT_DIR$/apps/codeDiary/models.py" />
+        <option value="$PROJECT_DIR$/templates/matter0Content.html" />
         <option value="$PROJECT_DIR$/templates/matter1.html" />
+        <option value="$PROJECT_DIR$/static/js/ajax.js" />
         <option value="$PROJECT_DIR$/apps/diary/views.py" />
+        <option value="$PROJECT_DIR$/templates/matter1Content.html" />
       </list>
     </option>
   </component>
@@ -290,6 +319,12 @@
               <item name="personalweb" type="b2602c69:ProjectViewProjectNode" />
               <item name="personalweb" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="personalweb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="personalweb" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="personalweb" type="b2602c69:ProjectViewProjectNode" />
@@ -664,10 +699,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.15" />
         <item itemvalue="Python.code_line" />
         <item itemvalue="Python.12" />
         <item itemvalue="Python.code_statistics" />
-        <item itemvalue="Python.15" />
         <item itemvalue="Python.git_pull (1)" />
       </list>
     </recent_temporary>
@@ -682,20 +717,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1535974839541</updated>
-    </task>
-    <task id="LOCAL-00067" summary="css更新">
-      <created>1538740723727</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1538740723727</updated>
-    </task>
-    <task id="LOCAL-00068" summary="前端更新">
-      <created>1538806876055</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1538806876056</updated>
     </task>
     <task id="LOCAL-00069" summary="前端更新">
       <created>1538809219900</created>
@@ -1026,7 +1047,21 @@
       <option name="project" value="LOCAL" />
       <updated>1541317972700</updated>
     </task>
-    <option name="localTasksCounter" value="116" />
+    <task id="LOCAL-00116" summary="添加多图支持">
+      <created>1541321356444</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1541321356444</updated>
+    </task>
+    <task id="LOCAL-00117" summary="js调整">
+      <created>1541321779346</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1541321779346</updated>
+    </task>
+    <option name="localTasksCounter" value="118" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1049,15 +1084,15 @@
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32952926" />
       <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49865952" visible="true" weight="0.40798858" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32952926" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49787235" visible="true" weight="0.26675603" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49787235" visible="true" weight="0.27010724" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" weight="0.24664879" />
-      <window_info anchor="bottom" id="manage.py@personalweb" order="13" weight="0.4208274" />
       <window_info anchor="right" id="SciView" order="3" weight="0.23123324" />
       <window_info id="Structure" order="1" sideWeight="0.50212765" side_tool="true" weight="0.27010724" />
       <window_info id="Favorites" order="2" sideWeight="0.50212765" side_tool="true" weight="0.27010724" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39942938" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="manage.py@personalweb" order="13" weight="0.4208274" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -1102,8 +1137,6 @@
     <ignored-roots>
       <path value="E:/2345下载/txy (3)" />
     </ignored-roots>
-    <MESSAGE value="更新评论" />
-    <MESSAGE value="成功在服务器上运行，纪念一下hhh" />
     <MESSAGE value="新增个人中心" />
     <MESSAGE value="更新更新日志" />
     <MESSAGE value="添加todo表" />
@@ -1127,7 +1160,9 @@
     <MESSAGE value="textfield的bug修复，django更新至2.1.2" />
     <MESSAGE value="django bug修复" />
     <MESSAGE value="打开窗口部分的代码重构" />
-    <option name="LAST_COMMIT_MESSAGE" value="打开窗口部分的代码重构" />
+    <MESSAGE value="添加多图支持" />
+    <MESSAGE value="js调整" />
+    <option name="LAST_COMMIT_MESSAGE" value="js调整" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1135,38 +1170,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/extra_apps/markdown/urls.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/extra_apps/markdown/tests.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/extra_apps/markdown/forms.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/codeDiary/migrations/0001_initial.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/codeDiary/migrations/0002_auto_20181027_1811.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/extra_apps/markdown/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/notFoundPage/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" selection-start-line="2" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/2345下载/txy (3)/apps/donate/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-375" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/codeDiary/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -1389,16 +1392,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/mainPage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="925">
-          <caret line="46" column="70" selection-start-line="46" selection-start-column="70" selection-end-line="46" selection-end-column="70" />
-          <folding>
-            <element signature="e#102#137#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/personalcenter/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -1410,9 +1403,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1125">
           <caret line="45" selection-start-line="45" selection-end-line="47" selection-end-column="46" />
-          <folding>
-            <element signature="e#47#60#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1420,59 +1410,108 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="326">
           <caret line="23" column="41" lean-forward="true" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
-          <folding>
-            <element signature="e#47#60#0" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../untitled/草稿箱/14.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../untitled/草稿箱/15.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/matter1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/codeDiary/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="26" column="14" lean-forward="true" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+        <state relative-caret-position="301">
+          <caret line="45" column="78" selection-start-line="45" selection-start-column="78" selection-end-line="45" selection-end-column="78" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/matter0.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="7" selection-end-column="27" />
+        <state relative-caret-position="150">
+          <caret line="6" column="24" lean-forward="true" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/diary/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
+        <state relative-caret-position="242">
+          <caret line="48" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/matter0Content.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/codeDiary/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="47" />
+        <state relative-caret-position="121">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
           <folding>
             <element signature="e#0#42#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/matter1.html">
+    <entry file="file://$PROJECT_DIR$/apps/mainPage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+          <folding>
+            <element signature="e#102#137#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/openmatter.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-860" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/window.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="6" column="43" lean-forward="true" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
+          <caret line="51" column="21" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/ajax.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="60" column="13" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/diary/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="19" column="54" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
+        <state relative-caret-position="215">
+          <caret line="68" column="59" selection-start-line="68" selection-start-column="59" selection-end-line="68" selection-end-column="59" />
           <folding>
-            <element signature="e#0#34#0" expanded="true" />
+            <element signature="e#0#47#0" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/matter1Content.html">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

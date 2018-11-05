@@ -24,7 +24,7 @@ $(document).ready(function() {
 		//ajax
 		var urlHash = $(this).attr('href')
 		//判断是否需要ajax
-		if (needAjax(urlHash) == 'true'){
+		if (leftClickNeedAjax(urlHash) == 'true'){
 			$.ajax({
 		        url:"/",
 		        type:"GET",
@@ -52,18 +52,31 @@ $(document).ready(function() {
 		else if (urlHash == '#personalCenter'){
 		}
 		else {
-		window.location.href = url + '404'
+		window.location.href = MAINURL + '404'
 		}
         	
 	}
 
-	function needAjax(urlHash){
+	
+	function getMattersContent(href){
+		$.ajax({
+			url:'/',
+	        type:"GET",
+	        async: true,
+	        data:{'matter':href.split('?')[0],'text_id':href.split('?')[1].split('=')[1]},
+	        success:function(data){console.log(data)}
+		})
+	}
+	window.getMattersContent = getMattersContent
+
+	function leftClickNeedAjax(urlHash){
 		var num = $(urlHash).parent().attr('id').split('-')[1]
 		var content = $('#matter'+num).html().replace(/\s/g, "")
 		if (content == '<ul></ul>'){
 			return 'true'
 		}
 	}
+
 })
 
 function submitMessage(){
@@ -87,19 +100,4 @@ function submitMessage(){
 	        	}
 	        }
 		})
-}
-
-function isNull(str){
-	if (str == null){
-		return true
-	}
-	else {
-		if (str == ""){
-			return true
-		}
-		var regu = "^[ ]+$";
-		var re = new RegExp(regu);
-		return re.test(str);
-	}
-	
 }

@@ -51,4 +51,4 @@ class CodeComment(models.Model):
         verbose_name_plural = verbose_name
 
     def __str__(self):
-        return self.comment.title
+        return self.comment.content

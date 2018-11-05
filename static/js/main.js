@@ -34,3 +34,17 @@ function getClientSize(){
 function hashToMatterNum(urlHash){
 	return $(urlHash).parent().attr('id').split('-')[1]
 }
+
+function isNull(str){
+	if (str == null){
+		return true
+	}
+	else {
+		if (str == ""){
+			return true
+		}
+		var regu = "^[ ]+$";
+		var re = new RegExp(regu);
+		return re.test(str);
+	}
+}

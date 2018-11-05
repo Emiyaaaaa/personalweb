@@ -1,4 +1,4 @@
-.matter0 h4, .matter1 h4, #window h4{
+.matter0 h6, .matter1 h6, #window h6{
 	margin: 0 auto;
 	padding: 0px 10px;
 	font-weight: lighter;
@@ -15,4 +15,19 @@
 
 .look-more{
 	font-size: 14px
+}
+
+#window h6{
+	margin: 0 auto;
+	padding: 0px 10px;
+	font-weight: lighter;
+	font-size: 13px;
+}
+
+#window p{
+	padding: 9px 10px;
+	line-height:25px;
+	font-size: 15px;
+	letter-spacing:2px;
+    color: #333333
 }

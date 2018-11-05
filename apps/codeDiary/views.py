@@ -65,4 +65,4 @@ class CodeDiaryView():
             content_info['comment'] = comment
             break
 
-        return render(request,'matter1Content.html',{'codeDiary':content_info})
+        return render(request,'matter0Content.html',{'codeDiary':content_info})

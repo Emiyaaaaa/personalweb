@@ -46,13 +46,10 @@ $(document).ready(function() {
 		obj.css('display','none')
 		$('#windowBackground').css({'display':'block','width':clientWidth+28,'height':clientHeight+10})
 		aCopyObj.css('display','block')
-		var aHtml = obj.html()
-		aCopyObj.html(aHtml)
-		//在这里加打开窗口后增加的html
-		getMattersContent($(this).attr('href'))
-		//end
+		aCopyObj.html(obj.html())
 		windowObj.css('display','block')
-		windowObj.html('<div id="windowContent">'+closeWindowHtml+aHtml+'</div>')
+		windowObj.html('<div id="windowContent">'+closeWindowHtml+'<div id="ajax_html"></div></div>')
+		getMattersContent($(this).attr('href'))
 	 	setTimeout(function(){windowObj.toggleClass('openWindow');$('#windowBackground').toggleClass('windowOpacity');},8)//不设置延时会有bug,延时>=8mm(可能与浏览器性能有关)
 	 	setTimeout(function(){$('#windowContent').delay(80).fadeIn(140);},100)
 	});

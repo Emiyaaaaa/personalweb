@@ -61,9 +61,7 @@ class DiaryView():
                     'content':diaryComment.content,
                     'comment_to':diaryComment.comment_to
                 })
-                print(diaryComment.comment_to == None)
             content_info['comment'] = comment
-            print(content_info)
             break
 
         return render(request,'matter1Content.html',{'diary':content_info})

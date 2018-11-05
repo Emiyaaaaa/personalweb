@@ -1,13 +1,17 @@
 <h6>{{ diary.date }}</h6>
 <p>{{ diary.content }}</p>
 {% for imgs in diary.img %}
-    <img src="{{ imgs }}">
+    <img src="/media/{{ imgs }}">
 {% endfor %}
 <ul>
 {% for comment in diary.comment %}
     <li>
         <div id="nickname">
             {{ comment.nickname }}
+            {% if comment.comment_to != None %}
+                <span class="reply">回复</span>
+                {{ comment.comment_to }}
+            {% endif %}
         </div>
         <div id="commentContent">
             {{ comment.content }}

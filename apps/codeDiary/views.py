@@ -1,4 +1,4 @@
-from .models import CodeDiary,CodeDiaryImg
+from .models import CodeDiary,CodeDiaryImg,CodeComment
 from django.shortcuts import render
 
 class CodeDiaryView():
@@ -32,3 +32,37 @@ class CodeDiaryView():
             return {'is_brief': 'true', 'brief_text': text[:text_max_length - 5]}
         else:
             return {'is_brief': 'false','brief_text': text}
+
+    def get_content(self,request,text_id):
+        codeDiary = CodeDiary.objects.filter(text_id=text_id)
+        codeDiaryImg = CodeDiaryImg.objects.filter(codeDiary=text_id)
+        codeComment = CodeComment.objects.filter(comment = text_id)
+        content_info = [{'content':'加载失败'}]
+        for codeDiary in codeDiary:
+            content_info = {
+                'date':codeDiary.date,
+                'content':codeDiary.content
+            }
+
+            img = []
+            for codeDiaryImg in codeDiaryImg:
+                img.append(codeDiaryImg.img)
+            content_info['img'] = img
+
+            comment = []
+            not_nick_name = ['作者', 'emiya', 'Emiya']
+            i = 0
+            for codeComment in codeComment:
+                nick_name = codeComment.nick_name
+                if nick_name.strip() == '' or nick_name == None or nick_name in not_nick_name:
+                    nick_name = '路人'+ str(i)
+                    i = i+1
+                comment.append({
+                    'nickname':nick_name,
+                    'content':codeComment.content,
+                    'comment_to':codeComment.comment_to
+                })
+            content_info['comment'] = comment
+            break
+
+        return render(request,'matter1Content.html',{'codeDiary':content_info})

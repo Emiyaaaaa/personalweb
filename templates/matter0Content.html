@@ -1,10 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+<h6>{{ codeDiary.date }}</h6>
+<p>{{ codeDiary.content }}</p>
+{% for imgs in codeDiary.img %}
+    <img src="/media/{{ imgs }}">
+{% endfor %}
+<ul>
+{% for comment in codeDiary.comment %}
+    <li>
+        <div id="nickname">
+            {{ comment.nickname }}
+            {% if comment.comment_to != None %}
+                <span class="reply">回复</span>
+                {{ comment.comment_to }}
+            {% endif %}
+        </div>
+        <div id="commentContent">
+            {{ comment.content }}
+        </div>
+    </li>
+{% endfor %}
+</ul>

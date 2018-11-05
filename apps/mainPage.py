@@ -44,7 +44,11 @@ def ajax_get(request):
 
     else:
         if matter == '#codeDiary':
-            render_page = CodeDiaryView().get(request,text_max_length)
+            text_id = request.GET.get('text_id')
+            if text_id == None:
+                render_page = CodeDiaryView().get(request,text_max_length)
+            else:
+                render_page = CodeDiaryView().get_content(request, text_id)
             return render_page
 
         elif matter == '#diary':

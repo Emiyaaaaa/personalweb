@@ -48,7 +48,7 @@ $(document).ready(function() {
 		aCopyObj.css('display','block')
 		aCopyObj.html(obj.html())
 		windowObj.css('display','block')
-		windowObj.html('<div id="windowContent">'+closeWindowHtml+'<div id="ajax_html"></div></div>')
+		windowObj.html('<div id="windowContent">'+closeWindowHtml+'<div id="ajax_window_html"></div></div>')
 		getMattersContent($(this).attr('href'))
 	 	setTimeout(function(){windowObj.toggleClass('openWindow');$('#windowBackground').toggleClass('windowOpacity');},8)//不设置延时会有bug,延时>=8mm(可能与浏览器性能有关)
 	 	setTimeout(function(){$('#windowContent').delay(80).fadeIn(140);},100)

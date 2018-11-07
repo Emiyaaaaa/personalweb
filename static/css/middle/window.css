@@ -9,20 +9,19 @@
     right: 10px;
     transition: all 0.3s;
 	-webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
 }
 
 .windowCloseButton::before {
     content: "\2716";
-    margin: 7px 0 0 7px
+    margin: 7px 0 0 7px;
 }
-
-/*.windowCloseButton:hover{
-	transform: rotate(90deg);
-}*/
 
 #window {
     display: none;
     position: fixed;
+    overflow: auto;
     left: var(--left);
     top: var(--top);
     width: var(--width);
@@ -38,6 +37,13 @@
     background-color: #FFFFFF;
     padding: 17px 20px;
     transition: all 0.28s;
+    -webkit-transition: all 0.28s;
+    -moz-transition: all 0.28s;
+    -o-transition: all 0.28s;
+}
+
+#window::-webkit-scrollbar {
+    display: none;
 }
 
 #windowContent{
@@ -50,9 +56,9 @@
 
 .windowBackground {
     display: none;
-    position:fixed;
-    overflow:hidden;
-    background:#333333;
+    position: fixed;
+    overflow: hidden;
+    background: #333333;
     top: 0;
     left: 0;
     height: 100%;
@@ -61,8 +67,11 @@
     padding: 0;
     opacity: 0;
     transition: opacity 0.28s;
+    -webkit-transition: opacity 0.28s;
+    -moz-transition: opacity 0.28s;
+    -o-transition: opacity 0.28s;
 }
 
 .windowOpacity{
-    opacity:0.5;
+    opacity: 0.5;
 }

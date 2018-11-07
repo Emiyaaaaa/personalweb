@@ -1,8 +1,10 @@
 <h6>{{ codeDiary.date }}</h6>
 <p>{{ codeDiary.content }}</p>
+<div class="windowImg">
 {% for imgs in codeDiary.img %}
     <img src="/media/{{ imgs }}">
 {% endfor %}
+</div>
 <ul>
 {% for comment in codeDiary.comment %}
     <li>

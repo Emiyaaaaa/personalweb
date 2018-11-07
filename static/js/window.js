@@ -39,7 +39,8 @@ $(document).ready(function() {
 			'scaleX':1/scaleX,
 			'scaleY':1/scaleY,
 			'translateX':-(clientWidth/unknowParameterX-(width+34)/2-left)+'px',
-			'translateY':-(clientHeight*2.75/7-(height+paddingTop*2)/2-top+unknowParameterY)+'px'
+			'translateY':-(clientHeight*2.75/7-(height+paddingTop*2)/2-top+unknowParameterY)+'px',
+			'contentHeight':windowHeight-34+'px'
 		}
 	 	setProperty("window",setPripertyDict)
 		$('html').css('overflow','hidden')
@@ -48,7 +49,14 @@ $(document).ready(function() {
 		aCopyObj.css('display','block')
 		aCopyObj.html(obj.html())
 		windowObj.css('display','block')
-		windowObj.html('<div id="windowContent">'+closeWindowHtml+'<div id="ajax_window_html"></div></div>')
+		windowObj.html(
+			'<div id="windowContent">\
+				<div id="mainContent">\
+					<div id="ajax_window_html">\
+					</div>\
+				</div>'+
+				closeWindowHtml+
+			'</div>')
 		getMattersContent($(this).attr('href'))
 	 	setTimeout(function(){windowObj.toggleClass('openWindow');$('#windowBackground').toggleClass('windowOpacity');},8)//不设置延时会有bug,延时>=8mm(可能与浏览器性能有关)
 	 	setTimeout(function(){$('#windowContent').delay(80).fadeIn(140);},100)

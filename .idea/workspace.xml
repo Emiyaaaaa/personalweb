@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="97ee085e-0965-47c9-afdd-5d7ddcf1463c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/font.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/font.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/middle/window.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/middle/window.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/left/left.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/left/left.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/window.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/window.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/matter0Content.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/matter0Content.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/matter1Content.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/matter1Content.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/personalweb.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/personalweb.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -713,13 +709,6 @@
       <option name="presentableId" value="Default" />
       <updated>1535974839541</updated>
     </task>
-    <task id="LOCAL-00073" summary="update">
-      <created>1538825989614</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1538825989614</updated>
-    </task>
     <task id="LOCAL-00074" summary="update">
       <created>1538826028262</created>
       <option name="number" value="00074" />
@@ -1056,7 +1045,14 @@
       <option name="project" value="LOCAL" />
       <updated>1541577514713</updated>
     </task>
-    <option name="localTasksCounter" value="122" />
+    <task id="LOCAL-00122" summary="window css优化">
+      <created>1541586722264</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1541586722265</updated>
+    </task>
+    <option name="localTasksCounter" value="123" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1069,7 +1065,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32952926" />
@@ -1132,7 +1128,6 @@
     <ignored-roots>
       <path value="E:/2345下载/txy (3)" />
     </ignored-roots>
-    <MESSAGE value="更新更新日志" />
     <MESSAGE value="添加todo表" />
     <MESSAGE value="test" />
     <MESSAGE value="前端页面更新" />
@@ -1157,7 +1152,8 @@
     <MESSAGE value="js调整" />
     <MESSAGE value="开始做分页面的内容获取" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="window css优化" />
+    <option name="LAST_COMMIT_MESSAGE" value="window css优化" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

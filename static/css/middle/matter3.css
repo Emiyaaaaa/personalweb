@@ -1,0 +1,77 @@
+.matter3 {
+    margin: 30px 5px 0 5px;
+    padding: 0 5px 50px 0
+}
+
+.personalCenter-menu ul{
+	list-style-type: none;
+}
+
+.personalCenter-menu ul li{
+	float:left;
+}
+
+/*.personalCenter-menu ul{
+	display:block;
+    font-size: 19px;
+    letter-spacing: 2px;
+	color: #000000;
+	text-align:center;
+	text-decoration:none;
+	border-radius: 30px;
+    background-color: #FFFFFF;
+    padding: 15px 20px 18px 20px;
+    width: 88%;
+    height: 20px;
+    margin-left: 20px;
+    margin-top: 10px;
+    -moz-box-shadow:2px 2px 6px #bfbfbf;
+    -webkit-box-shadow:2px 2px 6px #bfbfbf;
+    box-shadow:2px 2px 6px #bfbfbf;
+}*/
+
+
+.personalCenter-menu ul {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	list-style-type: none;
+	padding: 0;
+}
+
+.personalCenter-menu li:not(:last-child) {
+	margin-right: 20px;
+}
+
+.personalCenter-menu a {
+	display: block;
+	font-size: 20px;
+	color: black;
+	text-decoration: none;
+	padding: 7px 15px;
+}
+
+.target {
+	position: absolute;
+	border-bottom: 4px solid transparent;
+	z-index: -1;
+	transform: translateX(-60px);
+	-webkit-transform: translateX(-60px);
+	-ms-transform:translateX(-60px);
+	-moz-transform:translateX(-60px);
+	-o-transform:translateX(-60px);
+          
+}
+
+.personalCenter-menu a, .target {
+	transition: all .35s ease-in-out;
+	-webkit-transition: all .35s ease-in-out;
+	-ms-transition: all .35s ease-in-out;
+	-moz-transition: all .35s ease-in-out;
+	-o-transition: all .35s ease-in-out;
+

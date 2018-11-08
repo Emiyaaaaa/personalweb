@@ -39,6 +39,10 @@
     -webkit-transition: all 0.28s;
     -moz-transition: all 0.28s;
     -o-transition: all 0.28s;
+    box-shadow:2px 2px 9px #bfbfbf; 
+    -moz-box-shadow:2px 2px 9px #bfbfbf; 
+    -webkit-box-shadow:2px 2px 9px #bfbfbf;
+    box-shadow:2px 2px 9px #bfbfbf
 }
 
 #window #mainContent{
@@ -54,9 +58,14 @@
     width: 300px;
     margin: 20px 0 0 10px;
     border-radius: 15px;
+    box-shadow:2px 2px 9px #bfbfbf;
+    -o-box-shadow:2px 2px 9px #bfbfbf;
     -moz-box-shadow:2px 2px 9px #bfbfbf; 
     -webkit-box-shadow:2px 2px 9px #bfbfbf;
-    box-shadow:2px 2px 9px #bfbfbf
+}
+
+.windowComment{
+    border: 2px
 }
 
 /*.windowImg{

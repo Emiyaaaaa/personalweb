@@ -1,82 +1,100 @@
+$(document).ready(function() {
+
+	closeWindowHtml = '<a href="javascript:void(0)" class="windowCloseButton"></a>'
+	commentHtml =   '<div class="windowComment">\
+						<input type="text" id="contact" placeholder="发表您的想法" />\
+            			<button class="windowSendCommentButton" tpye = "submit" onclick="windowSendComment()">发送</button>\
+					</div>'
+	turn_bigger = true
+	setWindowWidth = 0.60
+	setWindowHeight = 0.80
 	$(document).on("click",'.content',function openWindow(){
 		getClientSize()
 		var obj = $(this)
 		windowObj = $('#window')
 		matterObj = $('#'+nowMatter)
 		idNum = obj.attr('id').match(/\d+/)
-		objName = obj.attr('id').split(/Close/)[0].split(/\d/)[0]
+		objName = obj.attr('id').split(/\d/)[0]
 		aCopyObj = $('#'+objName+'Copyone'+idNum)
-		var scaleX = 1.085
-		var scaleY = 1.195
+		var scale_X = 1.08
+		var scale_Y = 1.15
+		var unknowParameterY = -19.5
+		var unknowParameterX = 2.087
 		var width = obj.width()
 		var height = obj.height()
-		var windowHeight = clientHeight/2
-		var windowWidth = clientWidth*4/6
-		var windowTop = clientHeight/7
-		var windowLeft = clientWidth/6
 		var marginLeft = obj.outerWidth(true) - obj.outerWidth()
 		var marginTop = obj.outerHeight(true) - obj.outerHeight()
+		var paddingLeft = (obj.outerWidth()-width)/2
+		var paddingTop = (obj.outerHeight()-height)/2
+		var windowHeight = clientHeight*setWindowHeight
+		var windowWidth = clientWidth*setWindowWidth
+		var windowTop = clientHeight*(1-setWindowWidth)/2
+		var windowLeft = (clientWidth-clientWidth*setWindowWidth-marginLeft-paddingLeft*2)/2
+		console.log(clientWidth,paddingLeft,obj.outerWidth())
+
 		var id = obj.attr('id')
 		var left = getDivPosition(id)[0]
 		var top = getDivPosition(id)[1]
-		var top = top - (marginTop - (height * scaleY - height)/2)
-		var left = left - (marginLeft - (width * scaleX - width)/2)
-		
+		var scaleX = (windowWidth-(obj.outerWidth(true)-width)+paddingLeft*2)/((width+paddingLeft*2))
+		var scaleY = (windowHeight+paddingTop*2)/((height+paddingTop*2))
+		var translateX = -(clientWidth*0.2-left)
+		var translateY = -(clientHeight*setWindowHeight-(height+paddingTop)/2-top+unknowParameterY)
 		var setPripertyDict = {
-			'top':top,
-			'left':left,
-			'width':width,
-			'height':height,
-			'marginTop':marginTop,
-			'marginLeft':marginLeft,
-			'changeLeft':windowLeft,
-			'changeTop':windowTop,
-			'changeWidth':windowWidth-(obj.outerWidth(true)-width),
-			'changeHeight':windowHeight
+			'top':windowTop+'px',
+			'left':windowLeft+'px',
+			'width':windowWidth+'px',
+			'height':windowHeight+'px',
+			'marginTop':marginTop+'px',
+			'marginLeft':marginLeft+'px',
+			'scaleX':1/scaleX,
+			'scaleY':1/scaleY,
+			'translateX':translateX+'px',
+			'translateY':translateY+'px',
+			'contentHeight':windowHeight-34+'px'
 		}
 	 	setProperty("window",setPripertyDict)
-
-		matterObj.addClass('backgroundBlur')
-		$('#left').addClass('backgroundBlurFixed')
 		$('html').css('overflow','hidden')
-		windowObj.addClass('beforeOpenWindow')
 		obj.css('display','none')
-		$('#windowBackground').css({'display':'block','height':windowWidth})
+		$('#windowBackground').css({'display':'block','width':clientWidth+28,'height':clientHeight+10})
 		aCopyObj.css('display','block')
-		var aHtml = obj.html()
-		var windowHtml = aCopyObj.html()
-		aCopyObj.html(aHtml)
-		//在这里加打开窗口后增加的html
-		windowObj.html(windowHtml + aHtml)
+		aCopyObj.html(obj.html())
 		windowObj.css('display','block')
-	 	setTimeout(function(){windowObj.toggleClass('afterOpenWindow');},8)//不设置延时会有bug,延时>=8mm(可能与浏览器性能有关)
-
+		windowObj.html(
+			'<div id="windowContent">\
+				<div id="mainContent">\
+					<div id="ajax_window_html">\
+					</div>\
+				</div>'+
+				// commentHtml+
+				closeWindowHtml+
+			'</div>')
+		getMattersContent($(this).attr('href'))
+	 	setTimeout(function(){windowObj.toggleClass('openWindow');$('#windowBackground').toggleClass('windowOpacity');},8)//不设置延时会有bug,延时>=8mm(可能与浏览器性能有关)
+	 	setTimeout(function(){$('#windowContent').delay(80).fadeIn(140);},100)
 	});
 
 	// matter0，1关闭窗口效果
 	$(document).on('click','.windowCloseButton',function closeWindow(){
 		var obj = $(this)
 		var aObj = $('#'+objName+idNum)
+		var windowBackground = $('#windowBackground')
 
-		windowObj.toggleClass('afterOpenWindow')
-		windowObj.toggleClass('beforeOpenWindow')
+		$('#windowContent').css('display','none');
+		windowObj.toggleClass('openWindow')
+		windowObj.fadeOut(280)
+		windowBackground.toggleClass('windowOpacity')
+		setTimeout(function(){windowBackground.css('display','none')},280)
 		aCopyObj.css('display','none')
-		$('#windowBackground').css('display','none')
 		aObj.css('display','block')
-		setTimeout(function(){windowObj.css('display','none').empty()},340)
-		aCopyObj.empty().html('<a href=\'javascript:void(0)\' id=\'close'+idNum+'\' class=\'windowCloseButton\'></a>')
-
-		// 背景效果
-		matterObj.addClass('backgroundUnblur')
-		$('#left').addClass('backgroundUnblurFixed')
-		matterObj.removeClass('backgroundBlur')
-		$('#left').removeClass('backgroundBlurFixed')
+		setTimeout(function(){windowObj.css('display','none').empty()},280)
 		$('html').css({'overflow-y':'scroll','overflow-x':'hidden'})
-		setTimeout(function(){matterObj.removeClass('backgroundUnblur');$('#left').removeClass('backgroundUnblurFixed')},360)
+		
 	});
+	
 	function setProperty(documentObjId,dictObj){
 		var obj = document.getElementById(documentObjId)
 		for(var key in dictObj) {
-   			obj.style.setProperty('--'+key,dictObj[key]+'px')
+   			obj.style.setProperty('--'+key,dictObj[key])
 		}
 	}
+});

@@ -3,34 +3,6 @@
     padding: 0 5px 50px 0
 }
 
-.personalCenter-menu ul{
-	list-style-type: none;
-}
-
-.personalCenter-menu ul li{
-	float:left;
-}
-
-/*.personalCenter-menu ul{
-	display:block;
-    font-size: 19px;
-    letter-spacing: 2px;
-	color: #000000;
-	text-align:center;
-	text-decoration:none;
-	border-radius: 30px;
-    background-color: #FFFFFF;
-    padding: 15px 20px 18px 20px;
-    width: 88%;
-    height: 20px;
-    margin-left: 20px;
-    margin-top: 10px;
-    -moz-box-shadow:2px 2px 6px #bfbfbf;
-    -webkit-box-shadow:2px 2px 6px #bfbfbf;
-    box-shadow:2px 2px 6px #bfbfbf;
-}*/
-
-
 .personalCenter-menu ul {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -50,7 +22,7 @@
 
 .personalCenter-menu a {
 	display: block;
-	font-size: 20px;
+	font-size: 18px;
 	color: black;
 	text-decoration: none;
 	padding: 7px 15px;
@@ -59,7 +31,6 @@
 .target {
 	position: absolute;
 	border-bottom: 4px solid transparent;
-	z-index: -1;
 	transform: translateX(-60px);
 	-webkit-transform: translateX(-60px);
 	-ms-transform:translateX(-60px);

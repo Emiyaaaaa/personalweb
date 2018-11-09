@@ -4,7 +4,6 @@
 # @Time    : 2018/10/29 13:14
 
 from django import forms
-
 from markdown.forms import MarkdownField
 
 

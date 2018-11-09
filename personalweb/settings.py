@@ -51,7 +51,8 @@ INSTALLED_APPS = [
     'changeLog',
     'codeDiary',
     'notFoundPage',
-    'markdown'
+    'markdown',
+    'markdown_deux'
 ]
 
 MIDDLEWARE = [

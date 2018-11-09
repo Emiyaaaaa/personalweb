@@ -64,7 +64,9 @@ $(document).ready(function() {
 	        type:"GET",
 	        async: true,
 	        data:{'matter':href.split('?')[0],'text_id':href.split('?')[1].split('=')[1]},
-	        success:function(data){$('#ajax_window_html').html(data)}
+	        success:function(data){
+	        	$('#ajax_window_html').html(data)
+	    }
 		})
 	}
 	window.getMattersContent = getMattersContent

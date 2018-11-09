@@ -54,7 +54,7 @@ function isNull(str){
 
   var target = document.querySelector(".target");
   var links = document.querySelectorAll(".personalCenter-menu a");
-  var colors = ["deepskyblue", "orange", "firebrick", "gold", "magenta", "black", "darkblue"];
+  var colors = ["#75f966", "#f88c5b", "#5bf8d4", "#4b88dc", "#d2e633", "#97adfb", "#f970fa"];
 
   function mouseenterFunc() {
     if (!this.parentNode.classList.contains("active")) {

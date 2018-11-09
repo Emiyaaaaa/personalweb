@@ -1,5 +1,8 @@
+{% load markdown_deux_tags %}
 <h6>{{ codeDiary.date }}</h6>
-<p>{{ codeDiary.content }}</p>
+<div class="markdown-body">
+    {{ codeDiary.content | markdown}}
+</div>
 <div class="windowImg">
 {% for imgs in codeDiary.img %}
     <img src="/media/{{ imgs }}">

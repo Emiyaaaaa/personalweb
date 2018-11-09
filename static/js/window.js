@@ -1,13 +1,22 @@
 $(document).ready(function() {
+
 	setWindowHeight = 0.70
 	setWindowWidth = 0.60
+
+	closeWindowHtml = '<a href="javascript:void(0)" class="windowCloseButton"></a>'
+	commentHtml =   '<div class="windowComment">\
+						<input type="text" id="contact" placeholder="发表您的想法" />\
+            			<button class="windowSendCommentButton" tpye = "submit" onclick="windowSendComment()">发送</button>\
+					</div>'
+
 	$(document).on("click",'.content',function openWindow(){
 		getClientSize()
 		var obj = $(this)
+		var id = obj.attr('id')
 		windowObj = $('#window')
 		matterObj = $('#'+nowMatter)
-		idNum = obj.attr('id').match(/\d+/)
-		objName = obj.attr('id').split(/\d/)[0]
+		idNum = id.match(/\d+/)
+		objName = id.split(/\d/)[0]
 		aCopyObj = $('#'+objName+'Copyone'+idNum)
 		var scale_X = 1.08
 		var scale_Y = 1.15
@@ -31,23 +40,14 @@ $(document).ready(function() {
 		}
 		var windowTop = (clientHeight-windowHeight-windowPaddingTop*2)/2-windowMarginTop
 		var windowLeft =(clientWidth-windowWidth-windowPaddingLeft*2)/2-windowMarginLeft
-		
-		
-		var id = obj.attr('id')
 		var left = getDivPosition(id)[0]
 		var top = getDivPosition(id)[1]
 		var scaleX = (windowWidth+windowPaddingLeft*2)/((width+paddingLeft*2))
 		var scaleY = (windowHeight+windowPaddingTop*2)/((height+paddingTop*2))
 		var parameterY = (height+paddingTop*2)*(scale_Y-1)/2
 		var parameterX = 10.5
-		translateY = -((clientHeight-height)/2-marginTop-(top+parameterY))
-		translateX = -((clientWidth-width)/2-marginLeft-(left+parameterX))
-		console.log(parameterX,(width+paddingLeft*2),(width+paddingLeft*2)*(scale_X-1),left,width)
-		closeWindowHtml = '<a href="javascript:void(0)" class="windowCloseButton"></a>'
-		commentHtml =   '<div class="windowComment">\
-							<input type="text" id="contact" placeholder="发表您的想法" />\
-            				<button class="windowSendCommentButton" tpye = "submit" onclick="windowSendComment()">发送</button>\
-						</div>'
+		var translateY = -((clientHeight-height)/2-marginTop-(top+parameterY))
+		var translateX = -((clientWidth-width)/2-marginLeft-(left+parameterX))
 		
 		var setPripertyDict = {
 			'top':windowTop+'px',
@@ -63,6 +63,7 @@ $(document).ready(function() {
 			'contentHeight':windowHeight-34+'px'
 		}
 	 	setProperty("window",setPripertyDict)
+	 	
 		$('html').css('overflow','hidden')
 		obj.css('display','none')
 		$('#windowBackground').css({'display':'block','width':clientWidth+28,'height':clientHeight+10})

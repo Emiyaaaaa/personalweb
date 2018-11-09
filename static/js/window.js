@@ -1,5 +1,6 @@
 $(document).ready(function() {
-
+	setWindowHeight = 0.70
+	setWindowWidth = 0.60
 	$(document).on("click",'.content',function openWindow(){
 		getClientSize()
 		var obj = $(this)
@@ -16,17 +17,32 @@ $(document).ready(function() {
 		var marginTop = obj.outerHeight(true) - obj.outerHeight()
 		var paddingLeft = (obj.outerWidth()-width)/2
 		var paddingTop = (obj.outerHeight()-height)/2
-		var windowHeight = clientHeight/2
-		var windowWidth = clientWidth*4/6
-		var windowTop = clientHeight/7
-		var windowLeft = clientWidth/6 - marginLeft/2
+		var windowMarginTop = marginTop
+		var windowMarginLeft = marginLeft
+		var windowPaddingTop = windowObj.outerHeight()/2
+		var windowPaddingLeft = windowObj.outerWidth()/2
+		var windowHeight = clientHeight*setWindowHeight
+		var windowWidth = clientWidth*setWindowWidth
+		if (windowObj.outerWidth(true) - windowObj.outerWidth() != 0){
+			var windowPaddingLeft = (windowObj.outerWidth()-windowWidth)/2
+			var windowPaddingTop = (windowObj.outerHeight()-windowHeight)/2
+			var windowMarginLeft = windowObj.outerWidth(true) - windowObj.outerWidth()
+			var windowMarginTop = windowObj.outerHeight(true) - windowObj.outerHeight()
+		}
+		var windowTop = (clientHeight-windowHeight-windowPaddingTop*2)/2-windowMarginTop
+		var windowLeft =(clientWidth-windowWidth-windowPaddingLeft*2)/2-windowMarginLeft
+		
+		
 		var id = obj.attr('id')
 		var left = getDivPosition(id)[0]
 		var top = getDivPosition(id)[1]
-		var scaleX = (windowWidth-(obj.outerWidth(true)-width)+paddingLeft*2)/((width+paddingLeft*2))
-		var scaleY = (windowHeight+paddingTop*2)/((height+paddingTop*2))
-		var unknowParameterY = 21.15
-		var unknowParameterX = 2.087
+		var scaleX = (windowWidth+windowPaddingLeft*2)/((width+paddingLeft*2))
+		var scaleY = (windowHeight+windowPaddingTop*2)/((height+paddingTop*2))
+		var parameterY = (height+paddingTop*2)*(scale_Y-1)/2
+		var parameterX = 10.5
+		translateY = -((clientHeight-height)/2-marginTop-(top+parameterY))
+		translateX = -((clientWidth-width)/2-marginLeft-(left+parameterX))
+		console.log(parameterX,(width+paddingLeft*2),(width+paddingLeft*2)*(scale_X-1),left,width)
 		closeWindowHtml = '<a href="javascript:void(0)" class="windowCloseButton"></a>'
 		commentHtml =   '<div class="windowComment">\
 							<input type="text" id="contact" placeholder="发表您的想法" />\
@@ -36,14 +52,14 @@ $(document).ready(function() {
 		var setPripertyDict = {
 			'top':windowTop+'px',
 			'left':windowLeft+'px',
-			'width':windowWidth-(obj.outerWidth(true)-width)+'px',
+			'width':windowWidth+'px',
 			'height':windowHeight+'px',
 			'marginTop':marginTop+'px',
 			'marginLeft':marginLeft+'px',
 			'scaleX':1/scaleX,
 			'scaleY':1/scaleY,
-			'translateX':-(clientWidth/unknowParameterX-(width+34)/2-left)+'px',
-			'translateY':-(clientHeight*2.75/7-(height+paddingTop*2)/2-top+unknowParameterY)+'px',
+			'translateX':translateX+'px',
+			'translateY':translateY+'px',
 			'contentHeight':windowHeight-34+'px'
 		}
 	 	setProperty("window",setPripertyDict)

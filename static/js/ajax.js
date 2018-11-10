@@ -86,14 +86,41 @@ function submitMessage(){
 	var message = $('#message').val()
 	if (isNull(message)){
 		alert('留言不能为空')
-		return 0
 	}
 	var contact = $('#contact').val()
 	$.ajax({
 	        url:"/",
 	        type:"POST",
 	        async: false,
-	        data:{"message":message,"contact":contact},
+	        data:{"type":"submitMessage","message":message,"contact":contact},
+	        success:function(data){
+	        	if (data.statusCode == '1'){
+	        		alert('提交成功！感谢您的建议ღ( ´･ᴗ･` )比心')
+	        	}
+	        	else {
+	        		alert('提交失败！请再试一次')
+	        	}
+	        }
+		})
+}
+
+function windowSendComment(){
+
+	var href = window.location.href
+	var nickname = $('#nike_name').val()
+	var email = $('#user_email').val()
+	var comment = $('#comment').val()
+	var contact = $('#contact').val()
+	var matter = href.split('?')[0]
+	var text_id = href.split('?')[1].split('=')[1]
+	if (isNull(comment)){
+		alert('留言不能为空')
+	}
+	$.ajax({
+	        url:"/",
+	        type:"POST",
+	        async: false,
+	        data:{"type":"windowSendComment","nickname":nickname,"email":email,"comment":comment,"matter":matter,"text_id":text_id},
 	        success:function(data){
 	        	if (data.statusCode == '1'){
 	        		alert('提交成功！感谢您的建议ღ( ´･ᴗ･` )比心')

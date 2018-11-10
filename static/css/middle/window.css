@@ -133,7 +133,9 @@
 /*input*/
 
 .windowComment{
+
     position: relative;
+    
 }
 
 .input-field *{

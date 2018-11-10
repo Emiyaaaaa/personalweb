@@ -3,15 +3,17 @@
 # @Author  : Li Haozheng
 # @Time    : 2018/10/17 18:38
 from django.shortcuts import render
+from django.views.decorators.csrf import csrf_exempt
 from django.http import JsonResponse
+from django.http import HttpResponse,HttpResponseRedirect
+
 from personalcenter.views import PersonalCenterView
 from codeDiary.views import CodeDiaryView
 from diary.views import DiaryView
-from django.views.decorators.csrf import csrf_exempt
+
 from personalcenter.models import Message
-from django.http import HttpResponse,HttpResponseRedirect
-import time
-import re
+from diary.models import DiaryComment
+from codeDiary.models import CodeComment
 
 """
 注：输入url按回车后，js加载之前，ajax_main会被 urls.py 调用一次，
@@ -72,10 +74,32 @@ def ajax_get(request):
     return JsonResponse(main_page)
 
 def ajax_post(request):
-    message = request.POST.get('message')
-    contact = request.POST.get('contact')
-    try:
-        Message.objects.create(message = message,contact=contact)
-        return JsonResponse({'statusCode': '1'})
-    except:
-        return JsonResponse({'statusCode': '0'})
+
+    type = request.POST.get('type')
+
+    if type == 'submitMessage':
+        message = request.POST.get('message')
+        contact = request.POST.get('contact')
+        try:
+            Message.objects.create(message = message,contact=contact)
+            return JsonResponse({'statusCode': '1'})
+        except:
+            return JsonResponse({'statusCode': '0'})
+
+
+    if type == 'windowSendComment':
+        nickname = request.POST.get('nickname')
+        email = request.POST.get('email')
+        comment = request.POST.get('comment')
+        matter = request.POST.get('matter')
+        text_id = request.POST.get('text_id')
+        comment_to =
+        if matter == 'diary':
+            object = DiaryComment.objects
+        elif matter == 'codeDiary':
+            object = CodeComment.objects
+        else:
+            return JsonResponse({'statusCode': '0'})
+
+        try:
+            pass

@@ -12,6 +12,7 @@ $(document).ready(function() {
 	}
 	mainPage()
 	matterClick()
+	
 
 	$('.left-menu a').click(function () {
 		//导航栏交互

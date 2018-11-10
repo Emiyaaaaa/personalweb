@@ -1,5 +1,6 @@
+<div style="margin: 20px 5px 0 10px">
 <h6>{{ diary.date }}</h6>
-<div class="markdown-body">{{ diary.content }}</div>
+<p>{{ diary.content }}</p>
 <div class="windowImg">
 {% for imgs in diary.img %}
     <img src="/media/{{ imgs }}">
@@ -21,3 +22,40 @@
     </li>
 {% endfor %}
 </ul>
+<div class="windowComment">
+    <div class="input-field">
+        <input id="nike_name" type="text" placeholder="昵称 (选填)">
+        <span></span>
+    </div>
+    <div class="input-field">
+        <input id="user_email" type="text" placeholder="邮箱 (选填)">
+        <span></span>
+    </div>
+    <div class="input-field input-comment">
+        <input id="comment" type="text" placeholder="发表您的观点">
+        <span></span>
+    </div>
+    <div class="submit-button">
+        <button class="bubbly-button" onclick="windowSendComment()">发送</button>
+        <script>
+            var animateButton = function(e) {
+
+                e.preventDefault;
+                //reset animation
+                e.target.classList.remove('animate');
+                e.target.classList.add('animate');
+                setTimeout(function(){
+                    e.target.classList.remove('animate');
+                },700);
+
+            };
+
+            var classname = document.getElementsByClassName("bubbly-button");
+
+            for (var i = 0; i < classname.length; i++) {
+                classname[i].addEventListener('click', animateButton, false);
+            }
+        </script>
+    </div>
+</div>
+</div>

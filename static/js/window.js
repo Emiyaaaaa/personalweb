@@ -4,10 +4,6 @@ $(document).ready(function() {
 	setWindowWidth = 0.60
 
 	closeWindowHtml = '<a href="javascript:void(0)" class="windowCloseButton"></a>'
-	commentHtml =   '<div class="windowComment">\
-						<input type="text" id="contact" placeholder="发表您的想法" />\
-            			<button class="windowSendCommentButton" tpye = "submit" onclick="windowSendComment()">发送</button>\
-					</div>'
 
 	$(document).on("click",'.content',function openWindow(){
 		getClientSize()
@@ -77,7 +73,6 @@ $(document).ready(function() {
 					</div>\
 				</div>'+
 				closeWindowHtml+
-				// commentHtml+
 			'</div>')
 		getMattersContent($(this).attr('href'))
 	 	setTimeout(function(){windowObj.toggleClass('openWindow');$('#windowBackground').toggleClass('windowOpacity');},8)//不设置延时会有bug,延时>=8mm(可能与浏览器性能有关)

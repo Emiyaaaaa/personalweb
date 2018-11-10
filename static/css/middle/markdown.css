@@ -7,20 +7,24 @@
 .markdown-body ul ul ol,
 .markdown-body ol ul ul,
 .markdown-body ul ul ul {
+
   margin-top: 0;
   margin-bottom: 0;
+
 }
 .markdown-body {
+
   font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   color: #333;
   line-height: 1.6;
   word-wrap: break-word;
-  padding: 45px;
+  padding: 30px 30px 30px 35px;
   background: #fff;
-  border: 1px solid #ddd;
+  border-top: 1px solid #ddd;
   -webkit-border-radius: 0 0 3px 3px;
   border-radius: 0 0 3px 3px;
+
 }
 .markdown-body > *:first-child {
   margin-top: 0 !important;

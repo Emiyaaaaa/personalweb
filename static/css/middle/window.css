@@ -1,4 +1,5 @@
 .windowCloseButton {
+
     position: absolute;
     color: #B5B5B5;
     /*text-align: center;*/
@@ -7,18 +8,24 @@
     font-size: 25px;
     top: 6px;
     right: 11px;
+
     transition: all 0.3s;
 	-webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -o-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+
 }
 
 .windowCloseButton::before {
+
     content: "\2716";
     margin: 7px 0 0 7px;
+
 }
 
 #window {
+
     display: none;
     position: fixed;
     left: var(--left);
@@ -35,42 +42,47 @@
     border-radius: 15px;
     background-color: #FFFFFF;
     padding: 13px 30px;
+
     transition: all 0.28s;
     -webkit-transition: all 0.28s;
     -moz-transition: all 0.28s;
     -o-transition: all 0.28s;
-    box-shadow:2px 2px 9px #bfbfbf; 
-    -moz-box-shadow:2px 2px 9px #bfbfbf; 
-    -webkit-box-shadow:2px 2px 9px #bfbfbf;
-    box-shadow:2px 2px 9px #bfbfbf
+    -ms-transition: all 0.28s;
+
+    /*box-shadow:2px 2px 9px #bfbfbf;*/
+
 }
 
 #window #mainContent{
+
     position: absolute;
     overflow: auto;
-    padding: 17px 0;
+    padding: 17px 3px;
     height: var(--contentHeight);
     width: 92.3%;
+
 }
 
 #window img{
+
     height: 300px;
     width: 300px;
-    margin: 20px 0 0 10px;
+    margin: 20px 0 0 5px;
     border-radius: 15px;
+
     box-shadow:2px 2px 9px #bfbfbf;
+    -ms-box-shadow:2px 2px 9px #bfbfbf;
     -o-box-shadow:2px 2px 9px #bfbfbf;
     -moz-box-shadow:2px 2px 9px #bfbfbf; 
     -webkit-box-shadow:2px 2px 9px #bfbfbf;
+
 }
 
 .windowComment{
-    border: 2px
-}
 
-/*.windowImg{
-    text-align: center;
-}*/
+    border-top: 1px solid #ddd;
+
+}
 
 #window::-webkit-scrollbar {
     display: none;
@@ -81,10 +93,17 @@
 }
 
 .openWindow{
+
     transform:  translate(var(--translateX),var(--translateY)) scale(var(--scaleX),var(--scaleY));
+    -webkit-transform:  translate(var(--translateX),var(--translateY)) scale(var(--scaleX),var(--scaleY));
+    -ms-transform:  translate(var(--translateX),var(--translateY)) scale(var(--scaleX),var(--scaleY));
+    -moz-transform:  translate(var(--translateX),var(--translateY)) scale(var(--scaleX),var(--scaleY));
+    -o-transform:  translate(var(--translateX),var(--translateY)) scale(var(--scaleX),var(--scaleY));
+
 }
 
 .windowBackground {
+
     display: none;
     position: fixed;
     overflow: hidden;
@@ -96,12 +115,180 @@
     margin: 0;
     padding: 0;
     opacity: 0;
+
     transition: opacity 0.28s;
     -webkit-transition: opacity 0.28s;
     -moz-transition: opacity 0.28s;
     -o-transition: opacity 0.28s;
+    -ms-transition: opacity 0.28s;
+
 }
 
 .windowOpacity{
+
     opacity: 0.5;
+
+}
+
+/*input*/
+
+.windowComment{
+    position: relative;
+}
+
+.input-field *{
+        
+    box-sizing:border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:border-box;
+    -o-box-sizing:border-box;
+    -ms-box-sizing:border-box;
+
+}
+
+.input-field {
+
+    position: relative;
+    width: 180px;
+    margin: 20px 25px;
+
+}
+
+.input-field input {
+
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    height: 35px;
+    width: 100%;
+    padding: 0;
+    box-shadow: none;
+    outline: none;
+    
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+
+}
+
+.input-field input+span {
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: inline-block;
+    max-width: 100%;
+    z-index: 0;
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid #d9d9d9;
+
+}
+
+.input-field span:after {
+
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #adadad;
+
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -o-transform: scale(0);
+    -ms-transform: scale(0);
+    
+    transition: all .2s ease-out;
+    -webkit-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    -ms-transition: all .2s ease-out;
+
+}
+
+.input-field input:focus+span:after {
+    
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+
+}
+
+.input-field.input-field-icon i{
+
+    position:absolute;
+    right:0;
+    top:50%;
+    padding:0 5px;
+    font-size:1.5em;
+
+    transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+
+}
+
+.input-field.input-field-icon input{
+
+    padding-right:30px;
+
+}
+
+.input-field.error input+span{
+
+    border-color: #fccbc7;
+
+}
+
+.input-field.error span:after{
+
+    background:#f44336;
+
+}
+
+.input-field.input-field-icon.error i{
+
+    color: #f44336;
+
+}
+
+.input-field.linear span:after {
+
+    background:linear-gradient(left, #8C0044 20%, #00FFFF 50%, #7700FF 80%);
+    background:-webkit-linear-gradient(left, #8C0044 20%, #00FFFF 50%, #7700FF 80%);
+    background:-moz-linear-gradient(left, #8C0044 20%, #00FFFF 50%, #7700FF 80%);
+    background:-o-linear-gradient(left, #8C0044 20%, #00FFFF 50%, #7700FF 80%);
+    background:-ms-linear-gradient(left, #8C0044 20%, #00FFFF 50%, #7700FF 80%);
+
+}
+
+.input-comment{
+    
+    position: absolute;
+    left: 230px;
+    top: 0px;
+    
+}
+
+.input-comment{
+
+    width: 550px
+
+}
+
+.submit-button{
+
+    position: absolute;
+    left: 745px;
+    top: 80px;
+    
 }

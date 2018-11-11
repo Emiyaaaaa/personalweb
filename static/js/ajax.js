@@ -106,13 +106,13 @@ function submitMessage(){
 
 function windowSendComment(){
 
-	var href = window.location.href
+	var hash = window.location.hash
 	var nickname = $('#nike_name').val()
 	var email = $('#user_email').val()
 	var comment = $('#comment').val()
 	var contact = $('#contact').val()
-	var matter = href.split('?')[0]
-	var text_id = href.split('?')[1].split('=')[1]
+	var matter = hash.split('?')[0]
+	var text_id = hash.split('?')[1].split('=')[1]
 	if (isNull(comment)){
 		alert('留言不能为空')
 	}
@@ -120,7 +120,7 @@ function windowSendComment(){
 	        url:"/",
 	        type:"POST",
 	        async: false,
-	        data:{"type":"windowSendComment","nickname":nickname,"email":email,"comment":comment,"matter":matter,"text_id":text_id},
+	        data:{"type":"windowSendComment","nickname":nickname,"email":email,"comment":comment,"matter":matter,"text_id":text_id,'comment_to':''},
 	        success:function(data){
 	        	if (data.statusCode == '1'){
 	        		alert('提交成功！感谢您的建议ღ( ´･ᴗ･` )比心')

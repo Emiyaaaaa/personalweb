@@ -12,8 +12,8 @@ from codeDiary.views import CodeDiaryView
 from diary.views import DiaryView
 
 from personalcenter.models import Message
-from diary.models import DiaryComment
-from codeDiary.models import CodeComment
+from diary.models import DiaryComment,Diary
+from codeDiary.models import CodeComment,CodeDiary
 
 """
 注：输入url按回车后，js加载之前，ajax_main会被 urls.py 调用一次，
@@ -90,16 +90,25 @@ def ajax_post(request):
     if type == 'windowSendComment':
         nickname = request.POST.get('nickname')
         email = request.POST.get('email')
-        comment = request.POST.get('comment')
+        comment_content = request.POST.get('comment')
         matter = request.POST.get('matter')
         text_id = request.POST.get('text_id')
-        comment_to =
-        if matter == 'diary':
-            object = DiaryComment.objects
-        elif matter == 'codeDiary':
-            object = CodeComment.objects
+        comment_to = request.POST.get('comment_to')
+        if matter == '#diary':
+            object = Diary.objects
+            comment_object = DiaryComment.objects
+        elif matter == '#codeDiary':
+            object = CodeDiary.objects
+            comment_object = CodeComment.objects
         else:
+            print(matter)
             return JsonResponse({'statusCode': '0'})
 
         try:
-            pass
+            comment = object.get(text_id=text_id)
+            comment_object.create(comment=comment,nick_name=nickname,e_mail=email,content=comment_content,comment_to=comment_to)
+            print(2)
+            return JsonResponse({'statusCode': '1'})
+        except:
+            print(3)
+            return JsonResponse({'statusCode': '0'})

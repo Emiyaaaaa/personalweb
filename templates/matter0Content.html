@@ -9,18 +9,16 @@
         <img src="/media/{{ imgs }}">
     {% endfor %}
     </div>
-    <ul>
+    <ul class="comment_list">
     {% for comment in codeDiary.comment %}
-        <li>
+        <li class="comment">
             <div id="nickname">
-                {{ comment.nickname }}
-                {% if comment.comment_to != None %}
+                <span class="nickname">{{ comment.nickname }}</span>
+                {% if comment.comment_to != None and comment.comment_to != '' %}
                     <span class="reply">回复</span>
-                    {{ comment.comment_to }}
+                    <span class="comment_to">{{ comment.comment_to }}</span>
                 {% endif %}
-            </div>
-            <div id="commentContent">
-                {{ comment.content }}
+                :<span class="comment_content">{{ comment.content }}</span>
             </div>
         </li>
     {% endfor %}

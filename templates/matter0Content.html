@@ -1,5 +1,5 @@
 {% load markdown_deux_tags %}
-<h6>{{ codeDiary.date }}</h6>
+<div class="date">{{ codeDiary.date }}</div>
 <div style="margin: 20px 5px 0 10px">
     <div class="markdown-body">
         {{ codeDiary.content | markdown}}
@@ -18,7 +18,8 @@
                     <span class="reply">回复</span>
                     <span class="comment_to">{{ comment.comment_to }}</span>
                 {% endif %}
-                :<span class="comment_content">{{ comment.content }}</span>
+                <span>:</span>
+                <span class="comment_content">{{ comment.content }}</span>
             </div>
         </li>
     {% endfor %}

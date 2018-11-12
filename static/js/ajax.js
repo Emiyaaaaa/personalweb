@@ -116,7 +116,8 @@ function windowSendComment(){
 	if (isNull(comment)){
 		alert('留言不能为空')
 	}
-	$.ajax({
+	else{
+		$.ajax({
 	        url:"/",
 	        type:"POST",
 	        async: false,
@@ -130,4 +131,5 @@ function windowSendComment(){
 	        	}
 	        }
 		})
+	}
 }

@@ -295,7 +295,7 @@
     
 }
 
-.comment_list{
+.comment{
 
     border-top: 1px solid #ddd;
     padding: 20px 0 20px 25px;
@@ -312,6 +312,14 @@
 
 }
 
-.comment_list{
+.windowImg{
+
+    padding: 0 0 20px 20px;
+
+}
+
+.matter1_content{
+
+    border-top: 1px solid #ddd
     
 }

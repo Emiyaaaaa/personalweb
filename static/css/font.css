@@ -1,11 +1,11 @@
-.matter0 h6, .matter1 h6, #window h6{
+.brief_date{
 	margin: 0 auto;
 	padding: 0px 10px;
 	font-weight: lighter;
 	font-size: 13px;
 }
 
-.matter0 p, .matter1 p, #window p{
+.brief-content{
 	padding: 9px 10px;
 	line-height:25px;
 	font-size: 15px;
@@ -17,14 +17,14 @@
 	font-size: 14px
 }
 
-#window h6{
+.date{
 	margin: 0 auto;
 	padding: 0px 10px;
 	font-weight: lighter;
 	font-size: 15px;
 }
 
-#window p{
+.matter1_content{
 	padding: 9px 10px;
 	line-height:25px;
 	font-size: 19px;

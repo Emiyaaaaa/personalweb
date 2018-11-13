@@ -1,13 +1,14 @@
 <div class="date">{{ diary.date }}</div>
 <div style="margin: 20px 5px 0 10px">
-<div class="matter1_content">{{ diary.content }}</div>
-<div class="windowImg">
-{% for imgs in diary.img %}
+    <div class="matter1_content">{{ diary.content }}</div>
+    <div class="windowImg">
+    {% for imgs in diary.img %}
     <img src="/media/{{ imgs }}">
-{% endfor %}
-</div>
-<ul class="comment_list">
-{% for comment in diary.comment %}
+    {% endfor %}
+    </div>
+    <div class="fill-window"></div>
+    <ul class="comment_list">
+    {% for comment in diary.comment %}
     <li class="comment">
         <div id="nickname">
             <span class="nickname">{{ comment.nickname }}</span>
@@ -19,42 +20,42 @@
             <span class="comment_content">{{ comment.content }}</span>
         </div>
     </li>
-{% endfor %}
-</ul>
-<div class="windowComment">
-    <div class="input-field">
-        <input id="nike_name" type="text" placeholder="昵称 (选填)">
-        <span></span>
-    </div>
-    <div class="input-field">
-        <input id="user_email" type="text" placeholder="邮箱 (选填)">
-        <span></span>
-    </div>
-    <div class="input-field input-comment">
-        <input id="comment" type="text" placeholder="发表您的观点">
-        <span></span>
-    </div>
-    <div class="submit-button">
-        <button class="bubbly-button" onclick="windowSendComment()">发送</button>
-        <script>
-            var animateButton = function(e) {
+    {% endfor %}
+    </ul>
+    <div class="windowComment">
+        <div class="input-field">
+            <input id="nike_name" type="text" placeholder="昵称 (选填)">
+            <span></span>
+        </div>
+        <div class="input-field">
+            <input id="user_email" type="text" placeholder="邮箱 (选填)">
+            <span></span>
+        </div>
+        <div class="input-field input-comment">
+            <input id="comment" type="text" placeholder="发表您的观点">
+            <span></span>
+        </div>
+        <div class="submit-button">
+            <button class="bubbly-button" onclick="windowSendComment()">发送</button>
+            <script>
+                var animateButton = function(e) {
 
-                e.preventDefault;
-                //reset animation
-                e.target.classList.remove('animate');
-                e.target.classList.add('animate');
-                setTimeout(function(){
+                    e.preventDefault;
+                    //reset animation
                     e.target.classList.remove('animate');
-                },700);
+                    e.target.classList.add('animate');
+                    setTimeout(function(){
+                        e.target.classList.remove('animate');
+                    },700);
 
-            };
+                };
 
-            var classname = document.getElementsByClassName("bubbly-button");
+                var classname = document.getElementsByClassName("bubbly-button");
 
-            for (var i = 0; i < classname.length; i++) {
-                classname[i].addEventListener('click', animateButton, false);
-            }
-        </script>
+                for (var i = 0; i < classname.length; i++) {
+                    classname[i].addEventListener('click', animateButton, false);
+                }
+            </script>
+        </div>
     </div>
-</div>
 </div>

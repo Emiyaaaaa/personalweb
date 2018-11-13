@@ -135,7 +135,7 @@
 .windowComment{
 
     position: relative;
-    
+
 }
 
 .input-field *{
@@ -321,5 +321,11 @@
 .matter1_content{
 
     border-top: 1px solid #ddd
-    
+
+}
+
+.fill-window{
+
+    padding-top: 0px; 
+
 }

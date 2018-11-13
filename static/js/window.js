@@ -2,15 +2,23 @@ $(document).ready(function() {
 
 	setWindowHeight = 0.70
 	setWindowWidth = 0.60
-
 	closeWindowHtml = '<a href="javascript:void(0)" class="windowCloseButton"></a>'
 
 	$(document).on("click",'.content',function openWindow(){
+
+		hash = window.location.hash.split('?')[0]
+		if (hash == '#codeDiary'){
+			setWindowHeight = 0.80
+		}
+		else if (hash == '#diary'){
+			setWindowHeight = 0.50
+		}
+
 		getClientSize()
 		var obj = $(this)
 		var id = obj.attr('id')
 		windowObj = $('#window')
-		matterObj = $('#'+nowMatter)
+		matterObj = $(hash)
 		idNum = id.match(/\d+/)
 		objName = id.split(/\d/)[0]
 		aCopyObj = $('#'+objName+'Copyone'+idNum)
@@ -29,11 +37,13 @@ $(document).ready(function() {
 		var windowHeight = clientHeight*setWindowHeight
 		var windowWidth = clientWidth*setWindowWidth
 		if (windowObj.outerWidth(true) - windowObj.outerWidth() != 0){
+			console.log('yes')
 			var windowPaddingLeft = (windowObj.outerWidth()-windowWidth)/2
 			var windowPaddingTop = (windowObj.outerHeight()-windowHeight)/2
 			var windowMarginLeft = windowObj.outerWidth(true) - windowObj.outerWidth()
 			var windowMarginTop = windowObj.outerHeight(true) - windowObj.outerHeight()
 		}
+		console.log(windowObj.outerHeight(),windowPaddingTop,windowMarginTop)
 		var windowTop = (clientHeight-windowHeight-windowPaddingTop*2)/2-windowMarginTop
 		var windowLeft =(clientWidth-windowWidth-windowPaddingLeft*2)/2-windowMarginLeft
 		var left = getDivPosition(id)[0]

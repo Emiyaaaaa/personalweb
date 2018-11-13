@@ -43,6 +43,7 @@ html, body {
 
 .left {
 	width:22%;
+	height: 100%;
 	float: left;
 	overflow: auto;
 	overflow-y: auto;

@@ -64,3 +64,20 @@
     background-color: #B5B5B5;
     color: white;
 }
+
+.beian{
+    
+    position: absolute;
+    width: 100%;
+    bottom: 15px;
+
+}
+
+.beian a{
+
+    float: right;
+    margin: 0 33px 0 0;
+    color: #4f4f4f;
+    font-size: 14px;
+
+}

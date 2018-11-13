@@ -24,8 +24,7 @@ ul {
 	background-color:transparent
 }*/
 
-html, body {
-	/*overflow: hidden;*/
+body {
 	overflow-y:scroll;
 	overflow-x:hidden;
 	min-width: 0;

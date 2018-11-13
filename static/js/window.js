@@ -36,14 +36,20 @@ $(document).ready(function() {
 		var windowPaddingLeft = windowObj.outerWidth()/2
 		var windowHeight = clientHeight*setWindowHeight
 		var windowWidth = clientWidth*setWindowWidth
+		var setPripertyDict = {
+			'width':windowWidth+'px',
+			'height':windowHeight+'px',
+			'marginTop':marginTop+'px',
+			'marginLeft':marginLeft+'px',
+			'contentHeight':windowHeight-34+'px'
+		}
+	 	setProperty("window",setPripertyDict)
 		if (windowObj.outerWidth(true) - windowObj.outerWidth() != 0){
-			console.log('yes')
 			var windowPaddingLeft = (windowObj.outerWidth()-windowWidth)/2
 			var windowPaddingTop = (windowObj.outerHeight()-windowHeight)/2
 			var windowMarginLeft = windowObj.outerWidth(true) - windowObj.outerWidth()
 			var windowMarginTop = windowObj.outerHeight(true) - windowObj.outerHeight()
 		}
-		console.log(windowObj.outerHeight(),windowPaddingTop,windowMarginTop)
 		var windowTop = (clientHeight-windowHeight-windowPaddingTop*2)/2-windowMarginTop
 		var windowLeft =(clientWidth-windowWidth-windowPaddingLeft*2)/2-windowMarginLeft
 		var left = getDivPosition(id)[0]
@@ -58,15 +64,10 @@ $(document).ready(function() {
 		var setPripertyDict = {
 			'top':windowTop+'px',
 			'left':windowLeft+'px',
-			'width':windowWidth+'px',
-			'height':windowHeight+'px',
-			'marginTop':marginTop+'px',
-			'marginLeft':marginLeft+'px',
 			'scaleX':1/scaleX,
 			'scaleY':1/scaleY,
 			'translateX':translateX+'px',
-			'translateY':translateY+'px',
-			'contentHeight':windowHeight-34+'px'
+			'translateY':translateY+'px'
 		}
 	 	setProperty("window",setPripertyDict)
 	 	
@@ -103,7 +104,7 @@ $(document).ready(function() {
 		aCopyObj.css('display','none')
 		aObj.css('display','block')
 		setTimeout(function(){windowObj.css('display','none').empty()},280)
-		$('html').css({'overflow-y':'scroll','overflow-x':'hidden'})
+		$('body').css({'overflow-y':'scroll','overflow-x':'hidden'})
 		
 	});
 	

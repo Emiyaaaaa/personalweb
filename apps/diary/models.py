@@ -28,6 +28,7 @@ class MyDateField(models.CharField):
         week_dict = {
             'Mon': '星期一',
             'Tues': '星期二',
+            'Tue':'星期二',
             'Wed': '星期三',
             'Thu': '星期四',
             'Fri': '星期五',

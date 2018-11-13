@@ -152,7 +152,7 @@
 
     position: relative;
     width: 20.5%;
-    margin: 20px 25px;
+    margin: 2.278% 2.847%;
 
 }
 
@@ -276,7 +276,7 @@
 .input-comment{
     
     position: absolute;
-    left: 230px;
+    left: 26.2%;
     top: 0px;
     
 }
@@ -327,5 +327,15 @@
 .fill-window{
 
     padding-top: 0; 
+
+}
+
+.window-comment-hint{
+    
+    position: absolute;
+    left: 29%;
+    top: 80px;
+    font-size: 14px;
+    color: #adadad;
 
 }

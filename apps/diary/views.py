@@ -20,9 +20,9 @@ class DiaryView():
                     'is_brief':brief_text['is_brief'],
                     'img_num': len(diaryImg)
                 })
-                i = i + 1
-                if i >= 20:
-                    break
+                # i = i + 1
+                # if i >= 20:
+                #     break
         return render(request, 'matter1.html', {'diary_info': diary_info})
 
     def getBriefText(self,text,text_max_length):

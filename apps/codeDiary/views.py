@@ -1,5 +1,6 @@
 from .models import CodeDiary,CodeDiaryImg,CodeComment
 from django.shortcuts import render
+import re
 
 class CodeDiaryView():
     def get(self,request,text_max_length=37):
@@ -12,7 +13,9 @@ class CodeDiaryView():
         for codeDiary in codeDiary:
             if codeDiary.is_display == 1:
                 text_id = codeDiary.text_id
-                brief_text = self.getBriefText(codeDiary.content, text_max_length)
+                markdown_text = codeDiary.content
+                unmarkdown_text = re.sub('[#`-]', '', markdown_text).replace(' ', '')
+                brief_text = self.getBriefText(unmarkdown_text, text_max_length)
                 codeDiaryImg = CodeDiaryImg.objects.filter(codeDiary=text_id)
                 codeDiary_info.append({
                     'content':brief_text['brief_text'],
@@ -21,9 +24,9 @@ class CodeDiaryView():
                     'is_brief':brief_text['is_brief'],
                     'img_num':len(codeDiaryImg)
                 })
-                i = i + 1
-                if i >= 20:
-                    break
+                # i = i + 1
+                # if i >= 20:
+                #     break
         return render(request,'matter0.html',{'codeDiary_info':codeDiary_info})
 
     def getBriefText(self,text,text_max_length):

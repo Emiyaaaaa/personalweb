@@ -104,7 +104,8 @@ $(document).ready(function() {
 		aCopyObj.css('display','none')
 		aObj.css('display','block')
 		setTimeout(function(){windowObj.css('display','none').empty()},280)
-		$('body').css({'overflow-y':'scroll','overflow-x':'hidden'})
+		$('body').css({'overflow-y':'scroll','overflow-x':'auto'})
+		$('html').css('overflow','')
 		
 	});
 	

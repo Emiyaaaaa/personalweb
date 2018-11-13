@@ -67,6 +67,7 @@ $(document).ready(function() {
 	        data:{'matter':href.split('?')[0],'text_id':href.split('?')[1].split('=')[1]},
 	        success:function(data){
 	        	$('#ajax_window_html').html(data)
+	        	console.log(data)
 	        	$('.markdown-body').html(marked($('.markdown-body').html()))
 	    }
 		})
@@ -125,10 +126,10 @@ function windowSendComment(){
 	        data:{"type":"windowSendComment","nickname":nickname,"email":email,"comment":comment,"matter":matter,"text_id":text_id,'comment_to':''},
 	        success:function(data){
 	        	if (data.statusCode == '1'){
-	        		alert('提交成功！感谢您的建议ღ( ´･ᴗ･` )比心')
+	        		$('.window-comment-hint').html('提交成功！感谢您的建议ღ( ´･ᴗ･` )比心')
 	        	}
 	        	else {
-	        		alert('提交失败！请再试一次')
+	        		$('.window-comment-hint').html('提示：提交失败，请再试一次~')
 	        	}
 	        }
 		})

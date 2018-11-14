@@ -104,3 +104,18 @@ function isNull(str){
 
   window.addEventListener("resize", resizeFunc);
 })();
+
+function fillWindow(){
+  
+  var ajaxHtml = document.getElementById('ajax_window_html')
+  var mainContent = document.getElementById('mainContent')
+  var fill_window = document.getElementById('fill_window')
+  var ajaxHtmlHeight = ajaxHtml.offsetHeight + 14
+  var mainContentHeight = mainContent.offsetHeight-17-17//17为padding
+  var fillWindowHeight = mainContentHeight-ajaxHtmlHeight-10//再减10是为了防止计算误差导致的滚动条出现
+  console.log(fillWindowHeight)
+  if (fillWindowHeight <= 0){
+    fillWindowHeight = 0
+  }
+  fill_window.style.setProperty('--padding-top',fillWindowHeight+'px')
+}

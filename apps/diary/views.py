@@ -42,7 +42,7 @@ class DiaryView():
                 'date':diary.date+ ' ' +diary.weather,
                 'content':diary.content
             }
-            diary.visit_num = diary.visit_num+1
+            diary.visit_num = diary.visit_num + 1
             diary.save()
             img = []
             for diaryImg in diaryImg:

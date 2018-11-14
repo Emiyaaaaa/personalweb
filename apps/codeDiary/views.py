@@ -47,7 +47,8 @@ class CodeDiaryView():
                 'date':codeDiary.date,
                 'content':codeDiary.content
             }
-
+            codeDiary.visit_num = codeDiary.visit_num + 1
+            codeDiary.save()
             img = []
             for codeDiaryImg in codeDiaryImg:
                 img.append(codeDiaryImg.img)

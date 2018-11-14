@@ -10,6 +10,7 @@ class CodeDiary(models.Model):
     author = models.CharField(verbose_name=u'作者', max_length=100, default='Emiya')
     date = MyDateField(max_length=100, verbose_name=u'日期', null=True, blank=True,default='1')
     like_num = models.IntegerField(verbose_name=u'点赞数', default='0')
+    visit_num = models.IntegerField(verbose_name='浏览量',default='0')
     created_at = models.DateTimeField(verbose_name=u'创建时间', auto_now_add=True, null=False)
     update_at = models.DateTimeField(verbose_name=u'更新时间', auto_now=True, null=False)
     is_stick = models.IntegerField(verbose_name=u'置顶', choices=((0, '未置顶'), (1, '置顶')), default=0)

@@ -88,7 +88,7 @@ $(document).ready(function() {
 			'</div>')
 		getMattersContent($(this).attr('href'))
 	 	setTimeout(function(){windowObj.toggleClass('openWindow');$('#windowBackground').toggleClass('windowOpacity');},8)//不设置延时会有bug,延时>=8mm(可能与浏览器性能有关)
-	 	setTimeout(function(){$('#windowContent').delay(80).fadeIn(140);},100)
+	 	setTimeout(function(){$('#windowContent').fadeIn(140);},100)
 	 	
 	});
 

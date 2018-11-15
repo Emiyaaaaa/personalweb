@@ -116,6 +116,7 @@ function fillWindow(){
   if (fillWindowHeight <= 0){
     fillWindowHeight = 0
   }
+  // console.log(ajaxHtmlHeight,mainContentHeight)
   fill_window.style.setProperty('--padding-top',fillWindowHeight+'px')
 
 }
@@ -150,6 +151,8 @@ function clickReplyButton(obj) {
 }
 
 function cancelReply(){
+
   $('.window-comment-hint').html('')
   reply = 'false'
+
 }

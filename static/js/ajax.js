@@ -114,13 +114,6 @@ function submitMessage(){
 		})
 }
 
-//回复
-function windowReplyComment(){
-
-	
-	
-}
-
 //评论
 function windowSendComment(){
 
@@ -146,7 +139,7 @@ function windowSendComment(){
 	        data:{"type":"windowSendComment","nickname":nickname,"email":email,"comment":comment,"matter":matter,"text_id":text_id,'comment_to':comment_to},
 	        success:function(data){
 	        	if (data.statusCode == '1'){
-	        		$('.window-comment-hint').html('提交成功！感谢您的建议ღ( ´･ᴗ･` )比心')
+	        		$('.window-comment-hint').html('提示：评论成功！ ღ( ´･ᴗ･` )比心')
 	        		$('#nike_name').val('')
 					$('#user_email').val('')
 					$('#comment').val('')

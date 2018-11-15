@@ -335,7 +335,12 @@
     position: absolute;
     left: 29%;
     top: 80px;
-    font-size: 14px;
-    color: #adadad;
+
+}
+
+.windowReplyButton{
+
+    display: none;
+    margin: 0 5px; 
 
 }

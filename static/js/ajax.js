@@ -1,4 +1,6 @@
 $(document).ready(function() {
+
+	//主页面
 	function mainPage() {
 		$.ajax({
 		        url:"/",
@@ -14,6 +16,7 @@ $(document).ready(function() {
 	matterClick()
 	
 
+	//其他页面
 	$('.left-menu a').click(function () {
 		//导航栏交互
 		$('.left-menu a').removeClass('active')
@@ -58,7 +61,7 @@ $(document).ready(function() {
         	
 	}
 
-	
+	//获取全文	
 	function getMattersContent(href){
 		$.ajax({
 			url:'/',
@@ -72,6 +75,7 @@ $(document).ready(function() {
 	        	}
 	        	catch(err){}
 	        	fillWindow()
+	        	replyButton()
 	    }
 		})
 	}
@@ -87,6 +91,7 @@ $(document).ready(function() {
 
 })
 
+//建议
 function submitMessage(){
 	var message = $('#message').val()
 	if (isNull(message)){
@@ -109,8 +114,20 @@ function submitMessage(){
 		})
 }
 
+//回复
+function windowReplyComment(){
+
+	
+	
+}
+
+//评论
 function windowSendComment(){
 
+	var comment_to = ''
+	if (reply == 'true'){
+		var comment_to = reply_nickname
+	}
 	var hash = window.location.hash
 	var nickname = $('#nike_name').val()
 	var email = $('#user_email').val()
@@ -119,17 +136,21 @@ function windowSendComment(){
 	var matter = hash.split('?')[0]
 	var text_id = hash.split('?')[1].split('=')[1]
 	if (isNull(comment)){
-		alert('留言不能为空')
+		$('.window-comment-hint').html('提示：评论不能为空哦~')
 	}
 	else{
 		$.ajax({
 	        url:"/",
 	        type:"POST",
 	        async: false,
-	        data:{"type":"windowSendComment","nickname":nickname,"email":email,"comment":comment,"matter":matter,"text_id":text_id,'comment_to':''},
+	        data:{"type":"windowSendComment","nickname":nickname,"email":email,"comment":comment,"matter":matter,"text_id":text_id,'comment_to':comment_to},
 	        success:function(data){
 	        	if (data.statusCode == '1'){
 	        		$('.window-comment-hint').html('提交成功！感谢您的建议ღ( ´･ᴗ･` )比心')
+	        		$('#nike_name').val('')
+					$('#user_email').val('')
+					$('#comment').val('')
+					$('#contact').val('')
 	        	}
 	        	else {
 	        		$('.window-comment-hint').html('提示：提交失败，请再试一次~')
@@ -137,4 +158,5 @@ function windowSendComment(){
 	        }
 		})
 	}
+	reply = 'false'
 }

@@ -31,3 +31,40 @@
 	letter-spacing:2px;
     color: #333333
 }
+
+.windowReplyButton a{
+
+    font-size: 14px;
+    color: #adadad;
+
+}
+
+.input-field input {
+
+	font-size: 13px
+	color: #bababa;
+
+}
+
+.window-comment-hint{
+
+    font-size: 13px;
+    color: #999999;
+
+}
+
+.bubbly-button {
+
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-size: 14px;
+  background-color: #ababab;
+  color: #fff;
+
+}
+
+.windowReply{
+
+	font-size: 13px;
+	color: #ababab
+
+}

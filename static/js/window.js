@@ -71,6 +71,7 @@ $(document).ready(function() {
 		}
 	 	setProperty("window",setPripertyDict)
 	 	
+	 	reply = 'false'
 		$('html').css('overflow','hidden')
 		obj.css('display','none')
 		$('#windowBackground').css({'display':'block','width':clientWidth+28,'height':clientHeight+10})
@@ -88,6 +89,7 @@ $(document).ready(function() {
 		getMattersContent($(this).attr('href'))
 	 	setTimeout(function(){windowObj.toggleClass('openWindow');$('#windowBackground').toggleClass('windowOpacity');},8)//不设置延时会有bug,延时>=8mm(可能与浏览器性能有关)
 	 	setTimeout(function(){$('#windowContent').delay(80).fadeIn(140);},100)
+	 	
 	});
 
 	// matter0，1关闭窗口效果
@@ -107,6 +109,7 @@ $(document).ready(function() {
 		setTimeout(function(){windowObj.css('display','none').empty()},280)
 		$('body').css({'overflow-y':'scroll','overflow-x':'auto'})
 		$('html').css('overflow','')
+		reply = 'false'
 	});
 	
 	function setProperty(documentObjId,dictObj){

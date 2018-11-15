@@ -10,19 +10,18 @@
     <ul class="comment_list">
     {% for comment in diary.comment %}
     <li class="comment">
-        <div id="nickname">
-            <span class="nickname">{{ comment.nickname }}</span>
-            {% if comment.comment_to != None and comment.comment_to != '' %}
-                <span class="reply">回复</span>
-                <span class="comment_to">{{ comment.comment_to }}</span>
-            {% endif %}
-            <span class="comment-colon">:</span>
-            <span class="comment_content">{{ comment.content }}</span>
-        </div>
+        <span class="nickname">{{ comment.nickname }}</span>
+        {% if comment.comment_to != None and comment.comment_to != '' %}
+            <span class="windowReply">回复</span>
+            <span class="comment_to">{{ comment.comment_to }}</span>
+        {% endif %}
+        <span class="comment-colon">:</span>
+        <span class="comment_content">{{ comment.content }}</span>
+        <span class="windowReplyButton"><a href="javascript:void(0)" onclick="clickReplyButton(this)">回复</a></span>
     </li>
     {% endfor %}
     </ul>
-    <div class="windowComment">
+    <div class="windowComment" id="windowComment">
         <div class="input-field">
             <input id="nike_name" type="text" placeholder="昵称 (选填)">
             <span></span>

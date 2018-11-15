@@ -22,7 +22,7 @@
 <body>
 	<div class="left" id="left">
 		<div class="left-avatar">
-			<a href="javascript::void(0)">
+			<a href="javascript:void(0)">
 				<img src="/media/{{ avatar }}" width="150" height="140"/>
 			</a>
 		</div>
@@ -64,16 +64,16 @@
         	<nav class="personalCenter-menu">
         		<ul>
         			<li id="hli-0" data-toggle="collapse">
-        				<a href="javascript::void(0)">网站简介</a>
+        				<a href="javascript:void(0)">网站简介</a>
         			</li>
         			<li id="hli-1" data-toggle="collapse">
-        				<a href="javascript::void(0)">开发人员</a>
+        				<a href="javascript:void(0)">开发人员</a>
         			</li>
         			<li id="hli-2" data-toggle="collapse">
-        				<a href="javascript::void(0)">联系我们</a>
+        				<a href="javascript:void(0)">联系我们</a>
         			</li>
         			<li id="hli-3" data-toggle="collapse">
-        				<a href="javascript::void(0)">赞助我们</a>
+        				<a href="javascript:void(0)">赞助我们</a>
         			</li>
         		</ul>
         	</nav>
@@ -89,7 +89,12 @@
 		if (URLHASH == ''){
 			URLHASH = '#codeDiary'
 		}
-		LINUM = $(URLHASH).parent().attr('id').split('-')[1]
+		try{
+			LINUM = $(URLHASH).parent().attr('id').split('-')[1]
+		}
+		catch(err){
+			window.location.href = MAINURL + '404'
+		}
 		var clientWidth = document.documentElement.clientWidth
 		var textWidth = Math.round((Math.round(clientWidth*0.55)-19)*0.8-20)
 		var letter_spacing = 2

@@ -82,11 +82,11 @@ function isNull(str){
       target.style.transform = "none";
     }
   }
-
+  function text() {
+      console.log(1);
+    }
   for (var i = 0; i < links.length; i++) {
-    links[i].addEventListener("click", function (e) {
-      return e.preventDefault();
-    });
+    links[i].addEventListener("click", text);
     links[i].addEventListener("mouseenter", mouseenterFunc);
   }
 
@@ -113,9 +113,38 @@ function fillWindow(){
   var ajaxHtmlHeight = ajaxHtml.offsetHeight + 14
   var mainContentHeight = mainContent.offsetHeight-17-17//17为padding
   var fillWindowHeight = mainContentHeight-ajaxHtmlHeight-10//再减10是为了防止计算误差导致的滚动条出现
-  console.log(fillWindowHeight)
   if (fillWindowHeight <= 0){
     fillWindowHeight = 0
   }
   fill_window.style.setProperty('--padding-top',fillWindowHeight+'px')
+
+}
+
+function replyButton() {
+
+  var comment = document.getElementsByClassName('comment')
+  var replyButton = document.getElementsByClassName('windowReplyButton')
+  for (var i = 0; i < comment.length; i++) {
+    !function(i){
+
+      comment[i].onmouseover = function (){
+        replyButton[i].style.display = 'inline'
+      }
+
+      comment[i].onmouseout = function (){
+        replyButton[i].style.display = 'none'
+      }
+
+    }(i)
+  }
+}
+
+function clickReplyButton(obj) {
+
+  document.getElementById("windowComment").scrollIntoView()
+  var nickname = obj.parentNode.parentNode.children[0].innerText
+  $('.window-comment-hint').html('回复：'+ nickname)
+  reply = 'true'
+  reply_nickname = nickname
+
 }

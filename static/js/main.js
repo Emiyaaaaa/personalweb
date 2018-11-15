@@ -143,8 +143,13 @@ function clickReplyButton(obj) {
 
   document.getElementById("windowComment").scrollIntoView()
   var nickname = obj.parentNode.parentNode.children[0].innerText
-  $('.window-comment-hint').html('回复：'+ nickname)
+  $('.window-comment-hint').html('回复：'+ nickname + '<span class="cancelReply"><a href="javascript:void(0)" onclick="cancelReply()">取消回复</a></span>')
   reply = 'true'
   reply_nickname = nickname
 
+}
+
+function cancelReply(){
+  $('.window-comment-hint').html('')
+  reply = 'false'
 }

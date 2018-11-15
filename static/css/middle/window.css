@@ -344,3 +344,21 @@
     margin: 0 5px; 
 
 }
+
+.cancelReply{
+
+    margin: 0 5px;
+
+}
+
+.cancelReply a:hover{
+
+    color: #737373
+
+}
+
+.windowReplyButton a:hover{
+
+    color: #737373
+
+}

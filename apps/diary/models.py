@@ -10,6 +10,7 @@ from django.conf import settings
 from django.utils import timezone
 
 class WeatherField(models.CharField):
+
     def get_weather(self,city = '榆次'):
         url = 'http://wthrcdn.etouch.cn/weather_mini?city=' + urllib.parse.quote(city)
         weather_data = urllib.request.urlopen(url).read()
@@ -20,11 +21,15 @@ class WeatherField(models.CharField):
         return weather
 
     def get_prep_value(self, value):
+        if value:
+            return value
         return self.get_weather()
 
 
 class MyDateField(models.CharField):
     def get_prep_value(self, value):
+        if value:
+            return value
         week_dict = {
             'Mon': '星期一',
             'Tues': '星期二',
@@ -46,8 +51,8 @@ class Diary(models.Model):
     title = models.CharField(max_length=50,verbose_name=u'标题',null=True,blank=True)
     content = models.TextField(verbose_name=u'正文')
     tag = models.CharField(max_length=50,verbose_name=u'标签',null=True,blank=True)
-    weather = WeatherField(max_length=50,verbose_name=u'天气',default='',null=True,blank=True)
-    date = MyDateField(max_length=100,verbose_name=u'日期',null=True,blank=True)
+    weather = WeatherField(max_length=50, verbose_name=u'天气', default='', null=True, blank=True)
+    date = MyDateField(max_length=100, verbose_name=u'日期', null=True, blank=True)
     author = models.CharField(verbose_name=u'作者', max_length=100,default='Emiya')
     like_num = models.IntegerField(verbose_name=u'点赞数',default='0')
     visit_num = models.IntegerField(verbose_name='浏览量',default='0')
@@ -63,6 +68,20 @@ class Diary(models.Model):
     def __str__(self):
         return self.content
 
+#
+# class DiaryDate(models.Model):
+#
+#     diary = models.ForeignKey(Diary, on_delete=models.CASCADE, verbose_name='正文')
+#     weather = WeatherField(max_length=50, verbose_name=u'天气', default='', null=True, blank=True)
+#     date = MyDateField(max_length=100, verbose_name=u'日期', null=True, blank=True)
+#
+#     class Meta:
+#         verbose_name = u"日期与天气"
+#         verbose_name_plural = verbose_name
+#
+#     def __str__(self):
+#         return self.diary.content
+#
 
 class DiaryImg(models.Model):
     diary = models.ForeignKey(Diary, on_delete=models.CASCADE, verbose_name='正文')

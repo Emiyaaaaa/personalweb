@@ -8,7 +8,7 @@ class CodeDiary(models.Model):
     content = models.TextField(verbose_name=u'正文')
     tag = models.CharField(max_length=50, verbose_name=u'标签', null=True, blank=True)
     author = models.CharField(verbose_name=u'作者', max_length=100, default='Emiya')
-    date = MyDateField(max_length=100, verbose_name=u'日期', null=True, blank=True,default='1')
+    date = MyDateField(max_length=100, verbose_name=u'日期', null=True, blank=True)
     like_num = models.IntegerField(verbose_name=u'点赞数', default='0')
     visit_num = models.IntegerField(verbose_name='浏览量',default='0')
     created_at = models.DateTimeField(verbose_name=u'创建时间', auto_now_add=True, null=False)

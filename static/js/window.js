@@ -95,9 +95,8 @@ $(document).ready(function() {
 		var aObj = $('#'+objName+idNum)
 		var windowBackground = $('#windowBackground')
 
-		$('#windowContent').css('display','none');
+		$('#windowContent').fadeOut(100)
 		windowObj.toggleClass('openWindow')
-		windowObj.fadeOut(280)
 		windowBackground.toggleClass('windowOpacity')
 		setTimeout(function(){windowBackground.css('display','none')},280)
 		aCopyObj.css('display','none')

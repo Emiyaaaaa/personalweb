@@ -15,7 +15,9 @@ class CodeDiaryView():
                 text_id = codeDiary.text_id
                 markdown_text = codeDiary.content
                 unmarkdown_text = re.sub('[#`-]', '', markdown_text).replace(' ', '').replace('\n','')
-                brief_text = self.getBriefText(unmarkdown_text, text_max_length)
+                line = 2
+                if codeDiary.title != None:line = 1
+                brief_text = self.getBriefText(unmarkdown_text, text_max_length,line)
                 codeDiaryImg = CodeDiaryImg.objects.filter(codeDiary=text_id)
                 codeDiary_info.append({
                     'date':codeDiary.date,
@@ -30,10 +32,10 @@ class CodeDiaryView():
                 #     break
         return render(request,'matter0.html',{'codeDiary_info':codeDiary_info})
 
-    def getBriefText(self,text,text_max_length):
+    def getBriefText(self,text,text_max_length,line=2):
         text_max_length = int(text_max_length)
-        if len(text) > text_max_length * 2 - 5:
-            return {'is_brief': 'true', 'brief_text': text[:text_max_length * 2 - 5]}
+        if len(text) > text_max_length * line - 5:
+            return {'is_brief': 'true', 'brief_text': text[:text_max_length * line - 5]}
         else:
             return {'is_brief': 'false','brief_text': text}
 

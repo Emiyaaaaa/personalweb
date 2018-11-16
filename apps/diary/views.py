@@ -11,12 +11,15 @@ class DiaryView():
         for diary in diary:
             if diary.is_display == 1:
                 text_id = diary.text_id
-                brief_text = self.getBriefText(diary.content, text_max_length)
+                line = 2
+                if diary.title != None: line = 1
+                brief_text = self.getBriefText(diary.content, text_max_length,line)
                 diaryImg = DiaryImg.objects.filter(diary=text_id)
                 diary_info.append({
                     'content':brief_text['brief_text'],
                     'date_weather':diary.date+ ' ' +diary.weather,
                     'text_id':text_id,
+                    'title':diary.title,
                     'is_brief':brief_text['is_brief'],
                     'img_num': len(diaryImg)
                 })
@@ -25,10 +28,10 @@ class DiaryView():
                 #     break
         return render(request, 'matter1.html', {'diary_info': diary_info})
 
-    def getBriefText(self,text,text_max_length):
+    def getBriefText(self,text,text_max_length,line=2):
         text_max_length = int(text_max_length)
-        if len(text) > text_max_length * 2 - 5:
-            return {'is_brief': 'true', 'brief_text': text[:text_max_length * 2 - 5]}
+        if len(text) > text_max_length * line - 5:
+            return {'is_brief': 'true', 'brief_text': text[:text_max_length * line - 5]}
         else:
             return {'is_brief': 'false','brief_text': text}
 

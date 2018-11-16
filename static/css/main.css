@@ -54,6 +54,10 @@ body {
 	text-decoration:line-through
 }
 
+.bold{
+	font-weight:600;
+}
+
 
 ::-webkit-scrollbar {
 	width:8px;

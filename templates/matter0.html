@@ -3,7 +3,11 @@
         <div class="aCopy" id="codeDiaryCopyone{{ codeDiary.text_id }}"></div>
         <a class="content" id="codeDiary{{ codeDiary.text_id }}" href="#codeDiary?text_id={{ codeDiary.text_id }}">
             <div class="brief_date">{{ codeDiary.date }}</div>
-            <div class="brief-content">{{ codeDiary.content }}
+            <div class="brief-content">
+                {% if codeDiary.title != None %}
+                    <span class="bold">{{ codeDiary.title }}</span><br>
+                {% endif %}
+                {{ codeDiary.content }}
                 {% if codeDiary.img_num != 0 %}
                     [图片]
                 {% endif %}

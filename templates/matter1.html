@@ -3,7 +3,11 @@
         <div class="aCopy" id="diaryCopyone{{ diary.text_id }}"></div>
         <a class="content" id="diary{{ diary.text_id }}" href="#diary?text_id={{ diary.text_id }}">
             <div class="brief_date">{{ diary.date_weather }}</div>
-            <div class="brief-content">{{ diary.content }}
+            <div class="brief-content">
+                {% if diary.title != None %}
+                    <span class="bold">{{ diary.title }}</span><br>
+                {% endif %}
+                {{ diary.content }}
                 {% if diary.img_num != 0 %}
                     [图片]
                 {% endif %}

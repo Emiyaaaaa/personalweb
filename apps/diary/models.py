@@ -45,6 +45,41 @@ class MyDateField(models.CharField):
         return str(strftime('%Y') + '年' + strftime('%m') + '月' + strftime('%d') + '日  ' + cn_week)
 
 
+class MyTimeField(models.CharField):
+    def get_prep_value(self, value):
+        if value:
+            return value
+        week_dict = {
+            'Mon': '星期一',
+            'Tues': '星期二',
+            'Tue': '星期二',
+            'Wed': '星期三',
+            'Thu': '星期四',
+            'Fri': '星期五',
+            'Sat': '星期六',
+            'Sun': '星期日'
+        }
+        strftime = datetime.now().strftime
+        hour_24 = int(strftime('%H'))
+        a = ''
+        if hour_24 >= 5 and hour_24 <= 8:
+            a = '早上'
+        elif hour_24 >= 9 and hour_24 <= 10:
+            a = '上午'
+        elif hour_24 >= 11 and hour_24 <= 2:
+            a = '中午'
+        elif hour_24 >= 15 and hour_24 <= 18:
+            a = '下午'
+        elif hour_24 >= 19 and hour_24 <= 22:
+            a = '晚上'
+        elif (hour_24 >= 23 and hour_24 <= 24) or hour_24 == 0:
+            a = '深夜'
+        elif hour_24 >= 1 and hour_24 <= 4:
+            a = '凌晨'
+        cn_week = week_dict[strftime('%a')]
+        return str(strftime('%Y') + '年' + strftime('%m') + '月' + strftime('%d') + '日 ' + cn_week +' '+ a + ' ' + strftime('%I') + ':' + strftime('%M')+' ')
+
+
 class Diary(models.Model):
     text_id = models.AutoField(primary_key = True)
     username = models.CharField(max_length=50, default='Emiya')
@@ -53,6 +88,7 @@ class Diary(models.Model):
     tag = models.CharField(max_length=50,verbose_name=u'标签',null=True,blank=True)
     weather = WeatherField(max_length=50, verbose_name=u'天气', default='', null=True, blank=True)
     date = MyDateField(max_length=100, verbose_name=u'日期', null=True, blank=True)
+    dateTime = MyTimeField(max_length=100, verbose_name=u'时间', null=True, blank=True)
     author = models.CharField(verbose_name=u'作者', max_length=100,default='Emiya')
     like_num = models.IntegerField(verbose_name=u'点赞数',default='0')
     visit_num = models.IntegerField(verbose_name='浏览量',default='0')

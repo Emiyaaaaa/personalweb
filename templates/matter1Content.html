@@ -1,4 +1,10 @@
-<div class="date">{{ diary.date }}</div>
+<div class="date">
+    {% if diary.dateTime != ' ' and diary.dateTime != None %}
+        {{ diary.dateTime }}
+    {% else %}
+        {{ diary.date }}
+    {% endif %}
+</div>
 <div style="margin: 20px 5px 0 10px">
     <div class="matter1_content">{{ diary.content }}</div>
     <div class="windowImg">

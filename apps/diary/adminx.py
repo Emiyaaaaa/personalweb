@@ -26,7 +26,7 @@ class DiaryAdmin(object):
     # 设置字段可以直接在列表页修改
     list_editable = ['is_display']
     # 设置详情页面不显示某个字段
-    exclude = ['username','like_num','visit_num','is_display','date','weather','author']
+    exclude = ['username','like_num','visit_num','is_display','date','weather','dateTime','author']
     # 设置默认排序
     # ordering = ['-click_nums']
     # 设置详情页面只读显示

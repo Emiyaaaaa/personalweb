@@ -43,6 +43,7 @@ class DiaryView():
         for diary in diary:
             content_info = {
                 'date':diary.date+ ' ' +diary.weather,
+                'dateTime':diary.dateTime,
                 'content':diary.content
             }
             diary.visit_num = diary.visit_num + 1

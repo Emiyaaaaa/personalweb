@@ -11,7 +11,7 @@ class CodeDiaryAdmin(object):
     list_display = ['title','content','date','is_display']
     search_field = ['title','date','stick','author']
     list_editable = ['is_display']
-    exclude = ['like_num','visit_num','is_display','date','author']
+    exclude = ['like_num','visit_num','is_display','dateTime','date','author']
     formfield_overrides = {
         models.TextField: {'widget': XAdminMarkdownWidget()},
     }

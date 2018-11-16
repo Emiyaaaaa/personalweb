@@ -68,20 +68,6 @@ class Diary(models.Model):
     def __str__(self):
         return self.content
 
-#
-# class DiaryDate(models.Model):
-#
-#     diary = models.ForeignKey(Diary, on_delete=models.CASCADE, verbose_name='正文')
-#     weather = WeatherField(max_length=50, verbose_name=u'天气', default='', null=True, blank=True)
-#     date = MyDateField(max_length=100, verbose_name=u'日期', null=True, blank=True)
-#
-#     class Meta:
-#         verbose_name = u"日期与天气"
-#         verbose_name_plural = verbose_name
-#
-#     def __str__(self):
-#         return self.diary.content
-#
 
 class DiaryImg(models.Model):
     diary = models.ForeignKey(Diary, on_delete=models.CASCADE, verbose_name='正文')

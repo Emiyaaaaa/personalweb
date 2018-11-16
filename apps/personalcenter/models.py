@@ -69,3 +69,16 @@ class Message(models.Model):
     def __str__(self):
         return self.message
 
+
+class Signature(models.Model):
+    signature = models.CharField(max_length=200,verbose_name='个人签名')
+    created_at = models.DateTimeField(auto_now_add=True, null=False)
+    update_at = models.DateTimeField(auto_now=True, null=False)
+
+    class Meta:
+        verbose_name = u"个人签名"
+        verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return self.signature
+

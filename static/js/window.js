@@ -80,15 +80,12 @@ $(document).ready(function() {
 		windowObj.css('display','block')
 		windowObj.html(
 			'<div id="windowContent">\
-				<div id="mainContent">\
-					<div id="ajax_window_html">\
-					</div>\
-				</div>'+
+				<div id="mainContent"><div id="ajax_window_html"></div></div>'+
 				closeWindowHtml+
 			'</div>')
 		getMattersContent($(this).attr('href'))
 	 	setTimeout(function(){windowObj.toggleClass('openWindow');$('#windowBackground').toggleClass('windowOpacity');},8)//不设置延时会有bug,延时>=8mm(可能与浏览器性能有关)
-	 	setTimeout(function(){$('#windowContent').fadeIn(140);},100)
+	 	setTimeout(function(){$('#windowContent').fadeIn(140);},20)
 	 	
 	});
 

@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97ee085e-0965-47c9-afdd-5d7ddcf1463c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/apps/codeDiary/migrations/0011_codediary_datetime.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/codeDiary/migrations/0012_auto_20181116_1941.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/diary/migrations/0007_diary_time.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/diary/migrations/0008_auto_20181116_1855.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/diary/migrations/0009_auto_20181116_1905.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/codeDiary/adminx.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/codeDiary/adminx.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/codeDiary/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/codeDiary/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/diary/adminx.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/diary/adminx.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/diary/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/diary/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/diary/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/diary/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/rightSidebar/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/rightSidebar/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/matter0Content.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/matter0Content.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/matter1Content.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/matter1Content.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/personalweb.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/personalweb.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/window.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/window.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -704,13 +690,6 @@
       <option name="presentableId" value="Default" />
       <updated>1535974839541</updated>
     </task>
-    <task id="LOCAL-00088" summary="js优化">
-      <created>1539431791118</created>
-      <option name="number" value="00088" />
-      <option name="presentableId" value="LOCAL-00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1539431791118</updated>
-    </task>
     <task id="LOCAL-00089" summary="js优化，实现窗口关闭">
       <created>1539495616316</created>
       <option name="number" value="00089" />
@@ -1047,7 +1026,14 @@
       <option name="project" value="LOCAL" />
       <updated>1542349478378</updated>
     </task>
-    <option name="localTasksCounter" value="137" />
+    <task id="LOCAL-00137" summary="细节优化">
+      <created>1542368595312</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1542368595312</updated>
+    </task>
+    <option name="localTasksCounter" value="138" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1061,6 +1047,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32952926" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5013405" side_tool="true" weight="0.37945792" />
@@ -1122,7 +1109,6 @@
     <ignored-roots>
       <path value="E:/2345下载/txy (3)" />
     </ignored-roots>
-    <MESSAGE value="js优化，实现窗口关闭" />
     <MESSAGE value="js优化" />
     <MESSAGE value="bug修复" />
     <MESSAGE value="添加状态码" />
@@ -1147,7 +1133,8 @@
     <MESSAGE value="日期bug修复" />
     <MESSAGE value="添加标题" />
     <MESSAGE value="将个人签名独立出来" />
-    <option name="LAST_COMMIT_MESSAGE" value="将个人签名独立出来" />
+    <MESSAGE value="细节优化" />
+    <option name="LAST_COMMIT_MESSAGE" value="细节优化" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

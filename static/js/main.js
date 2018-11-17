@@ -156,3 +156,11 @@ function cancelReply(){
   reply = 'false'
 
 }
+
+function isInArray(arr,value){
+    var index = $.inArray(value,arr);
+    if(index >= 0){
+        return true;
+    }
+    return false;
+}

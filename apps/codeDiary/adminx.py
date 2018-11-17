@@ -3,7 +3,7 @@
 import xadmin
 from django.contrib import admin
 from django.db import models
-from .models import CodeDiary,CodeComment,CodeDiaryImg
+from .models import CodeDiary,CodeComment,CodeDiaryImg,WebsitePsd
 from markdown.widgets import XAdminMarkdownWidget
 
 
@@ -30,7 +30,12 @@ class CodeDiaryImgAdmin(object):
     search_field = ['codeDiary','img','update_at']
 
 
+class WebsitePsdAdmin(object):
+    list_display = ['nick_name','password']
+
+
 xadmin.site.register(CodeDiaryImg,CodeDiaryImgAdmin)
 xadmin.site.register(CodeDiary,CodeDiaryAdmin)
 xadmin.site.register(CodeComment,CodeCommentAdmin)
+xadmin.site.register(WebsitePsd,WebsitePsdAdmin)
 

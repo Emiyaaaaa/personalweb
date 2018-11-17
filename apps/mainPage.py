@@ -13,7 +13,7 @@ from diary.views import DiaryView
 
 from personalcenter.models import Message
 from diary.models import DiaryComment,Diary
-from codeDiary.models import CodeComment,CodeDiary
+from codeDiary.models import CodeComment,CodeDiary,WebsitePsd
 
 """
 注：输入url按回车后，js加载之前，ajax_main会被 urls.py 调用一次，
@@ -87,7 +87,7 @@ def ajax_post(request):
             return JsonResponse({'statusCode': '0'})
 
 
-    if type == 'windowSendComment':
+    elif type == 'windowSendComment':
         nickname = request.POST.get('nickname')
         email = request.POST.get('email')
         comment_content = request.POST.get('comment')
@@ -101,14 +101,23 @@ def ajax_post(request):
             object = CodeDiary.objects
             comment_object = CodeComment.objects
         else:
-            print(matter)
             return JsonResponse({'statusCode': '0'})
 
         try:
             comment = object.get(text_id=text_id)
             comment_object.create(comment=comment,nick_name=nickname,e_mail=email,content=comment_content,comment_to=comment_to)
-            print(2)
             return JsonResponse({'statusCode': '1'})
         except:
-            print(3)
             return JsonResponse({'statusCode': '0'})
+
+    elif type == 'validatePassword':
+        password = ''
+        get_password = request.POST.get('password')
+        psd = WebsitePsd.objects.filter(nick_name='Emiya')
+        for psd in psd:
+            password = psd.password
+            break
+        if password == get_password:
+            return JsonResponse({'password':'right'})
+        else:
+            return JsonResponse({'password':'wrong'})

@@ -54,3 +54,15 @@ class CodeComment(models.Model):
 
     def __str__(self):
         return self.comment.content
+
+
+class WebsitePsd(models.Model):
+    nick_name = models.CharField(max_length=50,verbose_name='昵称',null=True,blank=True,default='Emiya')
+    password = models.CharField(max_length=50,verbose_name='密码')
+
+    class Meta:
+        verbose_name = u"密码"
+        verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return self.nick_name

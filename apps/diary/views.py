@@ -54,11 +54,10 @@ class DiaryView():
             content_info['img'] = img
 
             comment = []
-            not_nick_name = ['作者', 'emiya', 'Emiya']
             i = 0
             for diaryComment in diaryComment:
                 nick_name = diaryComment.nick_name
-                if nick_name.strip() == '' or nick_name == None or nick_name in not_nick_name:
+                if nick_name.strip() == '' or nick_name == None:
                     nick_name = '路人'+ str(i)
                     i = i+1
                 comment.append({

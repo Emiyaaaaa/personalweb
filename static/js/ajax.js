@@ -118,6 +118,8 @@ function submitMessage(){
 function windowSendComment(){
 
 	var comment_to = ''
+	var password = ''
+	var disabled_name = new Array('Emiya','emiya')
 	if (reply == 'true'){
 		var comment_to = reply_nickname
 	}
@@ -128,28 +130,60 @@ function windowSendComment(){
 	var contact = $('#contact').val()
 	var matter = hash.split('?')[0]
 	var text_id = hash.split('?')[1].split('=')[1]
-	if (isNull(comment)){
-		$('.window-comment-hint').html('提示：评论不能为空哦~')
-	}
-	else{
-		$.ajax({
+	if (isInArray(disabled_name,nickname) == true){
+		password = prompt("使用此昵称需要输入密码","")
+    	$.ajax({
 	        url:"/",
 	        type:"POST",
 	        async: false,
-	        data:{"type":"windowSendComment","nickname":nickname,"email":email,"comment":comment,"matter":matter,"text_id":text_id,'comment_to':comment_to},
+	        data:{"type":"validatePassword",'password':password},
 	        success:function(data){
-	        	if (data.statusCode == '1'){
-	        		$('.window-comment-hint').html('提示：评论成功！ ღ( ´･ᴗ･` )比心')
+	        	if (data.password == 'right'){
+	        		alert('密码正确！')
+	        		$('#nike_name').parent().removeClass("error")
+					windowSendCommentAjax(nickname,email,comment,matter,text_id,comment_to)
+	        	}
+	        	else{
+	        		alert('密码错误！')
 	        		$('#nike_name').val('')
-					$('#user_email').val('')
-					$('#comment').val('')
-					$('#contact').val('')
+	        		$('#nike_name').parent().addClass("error")
+	        		$('#nike_name').focus()
 	        	}
-	        	else {
-	        		$('.window-comment-hint').html('提示：提交失败，请再试一次~')
-	        	}
-	        }
+			}
 		})
 	}
-	reply = 'false'
+	else{
+		if (isNull(comment)){
+			$('.window-comment-hint').html('提示：评论不能为空哦~')
+			$('#comment').parent().addClass("error")
+	        $('#comment').focus()
+		}
+		else{
+			$('#comment').parent().removeClass("error")
+			windowSendCommentAjax(nickname,email,comment,matter,text_id,comment_to)
+		}
+		reply = 'false'
+	}
+}
+
+
+function windowSendCommentAjax(nickname,email,comment,matter,text_id,comment_to){
+	$.ajax({
+        url:"/",
+        type:"POST",
+        async: false,
+        data:{"type":"windowSendComment","nickname":nickname,"email":email,"comment":comment,"matter":matter,"text_id":text_id,'comment_to':comment_to},
+        success:function(data){
+        	if (data.statusCode == '1'){
+        		$('.window-comment-hint').html('提示：评论成功！ ღ( ´･ᴗ･` )比心')
+        		$('#nike_name').val('')
+				$('#user_email').val('')
+				$('#comment').val('')
+				$('#contact').val('')
+        	}
+        	else {
+        		$('.window-comment-hint').html('提示：提交失败，请再试一次~')
+        	}
+        }
+	})
 }

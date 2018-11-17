@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="97ee085e-0965-47c9-afdd-5d7ddcf1463c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/apps/codeDiary/migrations/0013_websitepsd.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/codeDiary/adminx.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/codeDiary/adminx.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/codeDiary/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/codeDiary/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/codeDiary/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/codeDiary/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/diary/test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/diary/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/diary/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/mainPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/mainPage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/font.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/font.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/middle/window.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/middle/window.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/ajax.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/ajax.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/main.js" afterDir="false" />
-    </list>
+    <list default="true" id="97ee085e-0965-47c9-afdd-5d7ddcf1463c" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -716,13 +703,6 @@
       <option name="presentableId" value="Default" />
       <updated>1535974839541</updated>
     </task>
-    <task id="LOCAL-00092" summary="js优化">
-      <created>1539668270545</created>
-      <option name="number" value="00092" />
-      <option name="presentableId" value="LOCAL-00092" />
-      <option name="project" value="LOCAL" />
-      <updated>1539668270545</updated>
-    </task>
     <task id="LOCAL-00093" summary="bug修复">
       <created>1539668764088</created>
       <option name="number" value="00093" />
@@ -1059,7 +1039,14 @@
       <option name="project" value="LOCAL" />
       <updated>1542369575207</updated>
     </task>
-    <option name="localTasksCounter" value="141" />
+    <task id="LOCAL-00141" summary="添加评论密码">
+      <created>1542442573428</created>
+      <option name="number" value="00141" />
+      <option name="presentableId" value="LOCAL-00141" />
+      <option name="project" value="LOCAL" />
+      <updated>1542442573429</updated>
+    </task>
+    <option name="localTasksCounter" value="142" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1135,7 +1122,6 @@
     <ignored-roots>
       <path value="E:/2345下载/txy (3)" />
     </ignored-roots>
-    <MESSAGE value="bug修复" />
     <MESSAGE value="添加状态码" />
     <MESSAGE value="xadmin添加markdown支持" />
     <MESSAGE value="css弹窗更新（重构）" />
@@ -1160,7 +1146,8 @@
     <MESSAGE value="评论靠底部显示bug修复" />
     <MESSAGE value="update" />
     <MESSAGE value="细节优化" />
-    <option name="LAST_COMMIT_MESSAGE" value="细节优化" />
+    <MESSAGE value="添加评论密码" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加评论密码" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

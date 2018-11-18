@@ -140,6 +140,7 @@
 				url: 'http://api.shujuzhihui.cn/api/weather/ip',
 				data: {'appKey':'9057ff088d24450b93d896cf317835f4','ip':returnCitySN["cip"],'n7':1},
 				success:function(data){
+					console.log(data)
 					if (data.ERRORCODE == '0')
 						var city = data.RESULT.area_maybe
 						if (city = []){
@@ -156,7 +157,7 @@
 						console.log(day1.date+': '+day1.weather+' '+day1.tem+' '+day1.wdp)
 						console.log(day2.date+': '+day2.weather+' '+day2.tem+' '+day2.wdp)
 						console.log(day3.date+': '+day3.weather+' '+day3.tem+' '+day3.wdp)
-						console.log(data)
+
 	        	}
 	    	})
 		})()

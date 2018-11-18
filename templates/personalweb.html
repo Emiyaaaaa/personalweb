@@ -116,13 +116,13 @@
 					date = data.date
 				}
 				if (parseInt(data.tem_day) > parseInt(data.tem_night)){
-					var tem = data.tem_night + '~' + data.tem_day
+					var tem = data.tem_night + '~' + data.tem_day + '°C'
 				}
 				else if (parseInt(data.tem_day) < parseInt(data.tem_night)){
-					var tem = data.tem_day + '~' + data.tem_night
+					var tem = data.tem_day + '~' + data.tem_night + '°C'
 				}
 				else{
-					var tem = data.tem_day
+					var tem = data.tem_day + '°C'
 				}
 
 				if (data.weather_day == data.weather_night){

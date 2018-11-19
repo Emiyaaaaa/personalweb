@@ -3,32 +3,17 @@
 	position: relative;
 	margin:  58px 0 0 0;
 	height: 88px;
-	z-index: 1;
 
 }
 
-.signature-text{
+.signature-text1{
 	
 	position: relative;
 	text-align: center;
-	height: auto;
+	z-index: 1;
+	height: 25px;
 	margin: 20px 20px 20px 2px;
 	padding: 10px 10px 10px 13px;
-
-}
-
-.signature2{
-	
-	position: relative;
-	top: -146px;
-	margin:  58px 0 0 0;
-	height: 88px;
-
-}
-
-.qm2{
-
-	opacity:0;
 
 }
 
@@ -36,55 +21,117 @@
 	
 	position: relative;
 	text-align: center;
-	height: auto;
-	margin: 20px 20px 20px 2px;
+	height: 25px;
+	margin: -65px 20px 0 2px;
 	padding: 10px 10px 10px 13px;
 
 }
-/*.signature-text:before {
-    content: '';
-    position: absolute;
-    left: 42%;
-    top: 0;
-    bottom: auto;
-    right: auto;
-    height: 7px;
-    width: 50%;
-    background-color: #8796a9;
-}
 
-.signature-text2:before {
+/*left horizontal line*/
+.signature-text1:before {
+
     content: '';
     position: absolute;
     left: 0;
-    top: 6%;
+    top: 0;
     bottom: auto;
     right: auto;
-    height: 52%;
-    width: 5px;
-    background-color: #a89d9e;
+    height: 3px;
+    width: 20%;
+    background-color: #bfbfbf;
+
+    transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+
 }
 
-.signature-text:after {
+.signature-text:hover .signature-text1:before{
+
+	width: 100%
+
+}
+
+/*left vertical line*/
+.signature-text2:before {
+
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: auto;
+    right: auto;
+    height: 45%;
+    width: 3px;
+    background-color: #bfbfbf;
+
+    transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+
+}
+
+.signature-text:hover .signature-text2:before{
+
+	height: 100%
+	
+}
+
+/*right vertical line*/
+.signature-text1:after {
+
     content: '';
     position: absolute;
     left: auto;
     top: auto;
-    bottom: 5px;
+    bottom: 0;
     right: 0;
-    height: 52%;
-    width: 5px;
-    background-color: #f39c81;
+    height: 45%;
+    width: 3px;
+    background-color: #bfbfbf;
+
+    transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+
 }
 
-.signature-text:after {
+.signature-text:hover .signature-text1:after{
+
+	height: 100%
+	
+}
+
+/*right horizontal line*/
+.signature-text2:after {
+
     content: '';
     position: absolute;
-    left: 18px;
+    left: 80%;
     top: auto;
     bottom: 0;
     right: auto;
-    height: 6px;
-    width: 105px;
-    background-color: #32b66b;
-}*/
+    height: 3px;
+    width: 20%;
+    background-color: #bfbfbf;
+
+    transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+
+}
+
+.signature-text:hover .signature-text2:after{
+
+	width: 100%;
+	left: 0;
+	
+}

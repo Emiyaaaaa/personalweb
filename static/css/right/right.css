@@ -1,0 +1,90 @@
+.signature{
+	
+	position: relative;
+	margin:  58px 0 0 0;
+	height: 88px;
+	z-index: 1;
+
+}
+
+.signature-text{
+	
+	position: relative;
+	text-align: center;
+	height: auto;
+	margin: 20px 20px 20px 2px;
+	padding: 10px 10px 10px 13px;
+
+}
+
+.signature2{
+	
+	position: relative;
+	top: -146px;
+	margin:  58px 0 0 0;
+	height: 88px;
+
+}
+
+.qm2{
+
+	opacity:0;
+
+}
+
+.signature-text2{
+	
+	position: relative;
+	text-align: center;
+	height: auto;
+	margin: 20px 20px 20px 2px;
+	padding: 10px 10px 10px 13px;
+
+}
+/*.signature-text:before {
+    content: '';
+    position: absolute;
+    left: 42%;
+    top: 0;
+    bottom: auto;
+    right: auto;
+    height: 7px;
+    width: 50%;
+    background-color: #8796a9;
+}
+
+.signature-text2:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 6%;
+    bottom: auto;
+    right: auto;
+    height: 52%;
+    width: 5px;
+    background-color: #a89d9e;
+}
+
+.signature-text:after {
+    content: '';
+    position: absolute;
+    left: auto;
+    top: auto;
+    bottom: 5px;
+    right: 0;
+    height: 52%;
+    width: 5px;
+    background-color: #f39c81;
+}
+
+.signature-text:after {
+    content: '';
+    position: absolute;
+    left: 18px;
+    top: auto;
+    bottom: 0;
+    right: auto;
+    height: 6px;
+    width: 105px;
+    background-color: #32b66b;
+}*/

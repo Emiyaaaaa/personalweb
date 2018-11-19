@@ -36,9 +36,11 @@ def ajax_get(request):
     simple_personal_info = PersonalCenterView().get_simple_personal_info()
     avatar = simple_personal_info['avatar']
     website_icon = simple_personal_info['website_icon']
+    signature = simple_personal_info['signature']
 
     if matter == None:
         main_page = {}
+        main_page['signature'] = signature
         main_page['avatar'] = avatar
         main_page['website_icon'] = website_icon
         main_page['statusCode'] = '200'

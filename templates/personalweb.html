@@ -9,6 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="{% static 'css/font.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/color.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/left/left.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/right/right.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/middle/matter0.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/middle/matter1.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/middle/matter2.css' %}">
@@ -81,6 +82,16 @@
 			<span class="target"></span>
 	    </div>
     </div>
+    <div class="right">
+    	<div class="signature">
+    		<span class="qm">签名</span>
+    		<div class="signature-text">{{ signature }}</div>
+    	</div>
+    	<div class="signature2">
+    		<span class="qm2">签名</span>
+    		<div class="signature-text2"><span style="opacity:0;">{{ signature }}</span></div>
+    	</div>
+    </div>
     <div id="windowBackground" class="windowBackground"></div>
     <div id='window' class="openWindow"></div>
     <script type="text/javascript">
@@ -115,25 +126,54 @@
 				if (date == ''){
 					date = data.date
 				}
-				// console.log(data.tem_day)
-				if (parseInt(data.tem_day) > parseInt(data.tem_night)){
+				if (data.tem_day == null && data.tem_night == null){
+					var tem = ''
+				}
+				else if (data.tem_day == null){
+					var tem = data.tem_night + '°C'
+				}
+				else if (data.tem_night == null){
+					var tem = data.tem_day + '°C'
+				}
+				else if (parseInt(data.tem_day) > parseInt(data.tem_night)){
 					var tem = data.tem_night + '~' + data.tem_day + '°C'
 				}
 				else if (parseInt(data.tem_day) < parseInt(data.tem_night)){
 					var tem = data.tem_day + '~' + data.tem_night + '°C'
 				}
-				else{
+				else if (parseInt(data.tem_day) == parseInt(data.tem_night)){
 					var tem = data.tem_day + '°C'
 				}
-
-				if (data.weather_day == data.weather_night){
+				else{
+					var tem = ''
+				}
+				if (data.weather_day == null && data.weather_night == null){
+					var weather = ''
+				}
+				else if (data.weather_day == null){
+					var weather = data.weather_night
+				}
+				else if (data.weather_night == null){
+					var weather = data.weather_day
+				}
+				else if (data.weather_day == data.weather_night){
 					var weather = data.weather_day
 				}
 				else{
 					var weather = data.weather_day + '转' + data.weather_night
 				}
-
-				var wdp = data.wdp_day
+				if (data.wdp_day == null && data.wdp_night == null){
+					var wdp = ''
+				}
+				else if (data.wdp_day == null){
+					var wdp = data.wdp_night
+				}
+				else if (data.wdp_night == null){
+					var wdp = data.wdp_day
+				}
+				else{
+					var wdp = data.wdp_day
+				}
 				return {'weather':weather,'tem':tem,'date':date,'wdp':wdp}
 			}
 			$.ajax({
@@ -154,7 +194,7 @@
 						var day2 = json2str(d2)
 						var day3 = json2str(d3)
 						console.log(city)
-						// console.log(day1.date+': '+day1.weather+' '+day1.tem+' '+day1.wdp)
+						console.log(day1.date+': '+day1.weather+' '+day1.tem+' '+day1.wdp)
 						console.log(day2.date+': '+day2.weather+' '+day2.tem+' '+day2.wdp)
 						console.log(day3.date+': '+day3.weather+' '+day3.tem+' '+day3.wdp)
 						console.log(data)

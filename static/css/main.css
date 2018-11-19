@@ -25,33 +25,54 @@ ul {
 }*/
 
 body {
+
 	overflow-y:scroll;
 	overflow-x:hidden;
+	font-family:"\5FAE\8F6F\96C5\9ED1";
 	min-width: 0;
     margin: 0;
     padding: 0;
 	background-color:#fcfcfc;
+
 }
 
 .middle{
+
 	width:55%;
     overflow:auto;
     margin-left:22%;
+    margin-right:0; 
     overflow-y: auto
+
 }
 
 .left {
+
 	width:22%;
 	height: 100%;
 	float: left;
 	overflow: auto;
-	overflow-y: auto;
-	overflow-x: hidden;
+	/*overflow-y: auto;*/
+	/*overflow-x: hidden;*/
 	position: fixed;
+
+}
+
+.right {
+
+	position: absolute;
+	top: 0;
+	left: 77%;
+	width: 23%;
+	height: 100%;
+	overflow: auto;
+
 }
 
 .line-through {
+
 	text-decoration:line-through
+
 }
 
 .bold{

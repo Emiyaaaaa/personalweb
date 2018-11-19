@@ -52,8 +52,6 @@ body {
 	height: 100%;
 	float: left;
 	overflow: auto;
-	/*overflow-y: auto;*/
-	/*overflow-x: hidden;*/
 	position: fixed;
 
 }

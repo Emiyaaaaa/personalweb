@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="97ee085e-0965-47c9-afdd-5d7ddcf1463c" name="Default" comment="update">
+    <list default="true" id="97ee085e-0965-47c9-afdd-5d7ddcf1463c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/codeDiary/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/mainPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/mainPage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/personalcenter/migrations/0013_signature.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/personalcenter/migrations/0013_signature.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/personalcenter/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/personalcenter/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/font.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/font.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/personalweb.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/personalweb.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -70,7 +63,7 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/personalcenter/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
+            <state relative-caret-position="326">
               <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
             </state>
           </provider>
@@ -705,13 +698,6 @@
       <option name="presentableId" value="Default" />
       <updated>1535974839541</updated>
     </task>
-    <task id="LOCAL-00095" summary="update">
-      <created>1539919415539</created>
-      <option name="number" value="00095" />
-      <option name="presentableId" value="LOCAL-00095" />
-      <option name="project" value="LOCAL" />
-      <updated>1539919415539</updated>
-    </task>
     <task id="LOCAL-00096" summary="添加状态码">
       <created>1539920604677</created>
       <option name="number" value="00096" />
@@ -1048,7 +1034,14 @@
       <option name="project" value="LOCAL" />
       <updated>1542531450893</updated>
     </task>
-    <option name="localTasksCounter" value="144" />
+    <task id="LOCAL-00144" summary="更新签名">
+      <created>1542624568203</created>
+      <option name="number" value="00144" />
+      <option name="presentableId" value="LOCAL-00144" />
+      <option name="project" value="LOCAL" />
+      <updated>1542624568204</updated>
+    </task>
+    <option name="localTasksCounter" value="145" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1061,7 +1054,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32952926" />
@@ -1069,7 +1062,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.9201141" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32952926" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49865952" visible="true" weight="0.4507846" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49865952" weight="0.4507846" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32952926" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49787235" visible="true" weight="0.28150135" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
@@ -1124,7 +1117,6 @@
     <ignored-roots>
       <path value="E:/2345下载/txy (3)" />
     </ignored-roots>
-    <MESSAGE value="添加状态码" />
     <MESSAGE value="xadmin添加markdown支持" />
     <MESSAGE value="css弹窗更新（重构）" />
     <MESSAGE value="fixed bug" />
@@ -1149,7 +1141,8 @@
     <MESSAGE value="细节优化" />
     <MESSAGE value="添加评论密码" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="更新签名" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新签名" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1442,7 +1435,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/personalcenter/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
+        <state relative-caret-position="326">
           <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
         </state>
       </provider>

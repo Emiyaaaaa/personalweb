@@ -63,7 +63,7 @@ class Message(models.Model):
     update_at = models.DateTimeField(auto_now=True, null=False)
 
     class Meta:
-        verbose_name = u"访客留言"
+        verbose_name = u"建议反馈"
         verbose_name_plural = verbose_name
 
     def __str__(self):

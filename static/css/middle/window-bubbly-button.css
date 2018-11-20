@@ -1,4 +1,4 @@
-.bubbly-button {
+.window-bubbly-button {
   
   display: inline-block;
   padding: 8px 17px;
@@ -24,13 +24,13 @@
 
 }
 
-.bubbly-button:focus {
+.window-bubbly-button:focus {
 
   outline: 0;
 
 }
 
-.bubbly-button:before, .bubbly-button:after {
+.window-bubbly-button:before, .window-bubbly-button:after {
 
   position: absolute;
   content: '';
@@ -50,7 +50,7 @@
 
 }
 
-.bubbly-button:before {
+.window-bubbly-button:before {
 
   display: none;
   top: -75%;
@@ -59,7 +59,7 @@
 
 }
 
-.bubbly-button:after {
+.window-bubbly-button:after {
 
   display: none;
   bottom: -75%;
@@ -68,7 +68,7 @@
 
 }
 
-.bubbly-button:active {
+.window-bubbly-button:active {
 
   transform: scale(0.9);
   -webkit-transform: scale(0.9);
@@ -77,11 +77,11 @@
   -ms-transform: scale(0.9);
 
   background-color: #9c9c9c;
-  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+  box-shadow: 0 2px 25px rgba(140, 140, 140, 0.2);
 
 }
 
-.bubbly-button.animate:before {
+.window-bubbly-button.animate:before {
 
   display: block;
   
@@ -92,7 +92,7 @@
   -ms-animation: topBubbles ease-in-out 0.75s forwards;
 
 }
-.bubbly-button.animate:after {
+.window-bubbly-button.animate:after {
 
   display: block;
 

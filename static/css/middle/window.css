@@ -138,7 +138,7 @@
 
 }
 
-.input-field *{
+.window-input-field *{
         
     box-sizing:border-box;
     -webkit-box-sizing: border-box;
@@ -148,7 +148,7 @@
 
 }
 
-.input-field {
+.window-input-field {
 
     position: relative;
     width: 20.5%;
@@ -156,7 +156,7 @@
 
 }
 
-.input-field input {
+.window-input-field input {
 
     background-color: transparent;
     border: none;
@@ -175,7 +175,7 @@
 
 }
 
-.input-field input+span {
+.window-input-field input+span {
 
     position: absolute;
     top: 100%;
@@ -189,7 +189,7 @@
 
 }
 
-.input-field span:after {
+.window-input-field span:after {
 
     content: "";
     position: absolute;
@@ -213,7 +213,7 @@
 
 }
 
-.input-field input:focus+span:after {
+.window-input-field input:focus+span:after {
     
     transform: scale(1);
     -webkit-transform: scale(1);
@@ -223,7 +223,7 @@
 
 }
 
-.input-field.input-field-icon i{
+.window-input-field.window-input-field-icon i{
 
     position:absolute;
     right:0;
@@ -239,31 +239,31 @@
 
 }
 
-.input-field.input-field-icon input{
+.window-input-field.window-input-field-icon input{
 
     padding-right:30px;
 
 }
 
-.input-field.error input+span{
+.window-input-field.error input+span{
 
     border-color: #fccbc7;
 
 }
 
-.input-field.error span:after{
+.window-input-field.error span:after{
 
     background:#f44336;
 
 }
 
-.input-field.input-field-icon.error i{
+.window-input-field.window-input-field-icon.error i{
 
     color: #f44336;
 
 }
 
-.input-field.linear span:after {
+.window-input-field.linear span:after {
 
     background:linear-gradient(left, #8C0044 20%, #00FFFF 50%, #7700FF 80%);
     background:-webkit-linear-gradient(left, #8C0044 20%, #00FFFF 50%, #7700FF 80%);
@@ -273,7 +273,7 @@
 
 }
 
-.input-comment{
+.window-input-comment{
     
     position: absolute;
     left: 26.2%;
@@ -281,13 +281,13 @@
     
 }
 
-.input-comment{
+.window-input-comment{
 
     width: 62.6%
 
 }
 
-.submit-button{
+.window-submit-button{
 
     position: absolute;
     left: 84.9%;

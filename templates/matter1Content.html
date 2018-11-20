@@ -28,21 +28,21 @@
     {% endfor %}
     </ul>
     <div class="windowComment" id="windowComment">
-        <div class="input-field">
-            <input id="nike_name" type="text" placeholder="昵称 (选填)">
+        <div class="window-input-field">
+            <input id="comment_nike_name" type="text" placeholder="昵称 (选填)">
             <span></span>
         </div>
-        <div class="input-field">
-            <input id="user_email" type="text" placeholder="邮箱 (选填)">
+        <div class="window-input-field">
+            <input id="comment_user_email" type="text" placeholder="邮箱 (选填)">
             <span></span>
         </div>
-        <div class="input-field input-comment">
-            <input id="comment" type="text" placeholder="发表您的观点">
+        <div class="window-input-field window-input-comment">
+            <input id="comment_comment" type="text" placeholder="发表您的观点">
             <span></span>
         </div>
         <div class="window-comment-hint"></div>
-        <div class="submit-button">
-            <button class="bubbly-button" onclick="windowSendComment()">发送</button>
+        <div class="window-submit-button">
+            <button class="window-bubbly-button" onclick="windowSendComment()">发送</button>
             <script>
                 var animateButton = function(e) {
 
@@ -56,7 +56,7 @@
 
                 };
 
-                var classname = document.getElementsByClassName("bubbly-button");
+                var classname = document.getElementsByClassName("window-bubbly-button");
 
                 for (var i = 0; i < classname.length; i++) {
                     classname[i].addEventListener('click', animateButton, false);

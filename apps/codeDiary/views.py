@@ -61,9 +61,12 @@ class CodeDiaryView():
             i = 0
             for codeComment in codeComment:
                 nick_name = codeComment.nick_name
-                if nick_name.strip() == '' or nick_name == None:
+                if nick_name == None:
                     nick_name = '路人'+ str(i)
-                    i = i+1
+                    i = i + 1
+                elif nick_name.strip() == '':
+                    nick_name = '路人'+ str(i)
+                    i = i + 1
                 comment.append({
                     'nickname':nick_name,
                     'content':codeComment.content,

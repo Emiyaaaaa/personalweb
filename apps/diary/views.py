@@ -57,9 +57,12 @@ class DiaryView():
             i = 0
             for diaryComment in diaryComment:
                 nick_name = diaryComment.nick_name
-                if nick_name.strip() == '' or nick_name == None:
+                if nick_name == None:
                     nick_name = '路人'+ str(i)
-                    i = i+1
+                    i = i + 1
+                elif nick_name.strip() == '':
+                    nick_name = '路人'+ str(i)
+                    i = i + 1
                 comment.append({
                     'nickname':nick_name,
                     'content':diaryComment.content,

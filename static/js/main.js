@@ -8,7 +8,6 @@ function matterClick(){
 	divFadeIn(URLHASH)
 }
 
-
 function openMatter3() {
   var liNum = $(".personalCenter-menu ul li").length
   for (var i = 0; i < liNum; i++) {

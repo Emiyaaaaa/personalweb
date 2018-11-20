@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="97ee085e-0965-47c9-afdd-5d7ddcf1463c" name="Default" comment="">
+    <list default="true" id="97ee085e-0965-47c9-afdd-5d7ddcf1463c" name="Default" comment="大量css重命名">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/middle/matter0.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/middle/matter0.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/codeDiary/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/codeDiary/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/diary/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/diary/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/font.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/font.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/middle/matter3.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/middle/matter3.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/right/right.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/right/right.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/ajax.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/ajax.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/personalweb.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/personalweb.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,7 +24,7 @@
     <SUITE FILE_PATH="coverage/personalweb$15.coverage" NAME="15 Coverage Results" MODIFIED="1541388069696" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../untitled/草稿箱" />
     <SUITE FILE_PATH="coverage/personalweb$settings.coverage" NAME="settings Coverage Results" MODIFIED="1538219360923" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/personalweb" />
     <SUITE FILE_PATH="coverage/personalweb$git_pull.coverage" NAME="git_pull Coverage Results" MODIFIED="1538131036685" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/personalweb$code_line.coverage" NAME="code_line Coverage Results" MODIFIED="1541833632000" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
+    <SUITE FILE_PATH="coverage/personalweb$code_line.coverage" NAME="code_line Coverage Results" MODIFIED="1542699557066" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
     <SUITE FILE_PATH="coverage/personalweb$14.coverage" NAME="14 Coverage Results" MODIFIED="1538194144219" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../untitled/草稿箱" />
     <SUITE FILE_PATH="coverage/personalweb$code_statistics.coverage" NAME="code_statistics Coverage Results" MODIFIED="1538825919262" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
     <SUITE FILE_PATH="coverage/personalweb$5.coverage" NAME="5 Coverage Results" MODIFIED="1538105222381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../draft" />
@@ -55,7 +59,7 @@
       <file leaf-file-name="mainPage.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/mainPage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
+            <state relative-caret-position="-950">
               <caret line="35" column="60" selection-start-line="35" selection-start-column="60" selection-end-line="35" selection-end-column="60" />
               <folding>
                 <element signature="e#102#137#0" expanded="true" />
@@ -64,11 +68,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="code_line.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tools/code_line.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="125">
+              <caret line="62" column="33" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="33" />
+              <folding>
+                <element signature="e#137#146#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/diary/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="326">
+              <caret line="64" column="28" selection-start-line="64" selection-start-column="28" selection-end-line="64" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#47#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/personalcenter/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="550">
+              <caret line="22" column="51" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -76,8 +104,8 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/personalcenter/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1800">
-              <caret line="72" selection-start-line="72" selection-end-line="82" selection-end-column="29" />
+            <state relative-caret-position="401">
+              <caret line="65" column="30" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -107,25 +135,16 @@
         <entry file="file://$PROJECT_DIR$/templates/personalweb.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2175">
-              <caret line="87" column="40" selection-start-line="87" selection-start-column="40" selection-end-line="87" selection-end-column="40" />
+              <caret line="129" column="40" selection-start-line="129" selection-start-column="40" selection-end-line="129" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="adminx.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/diary/adminx.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="650">
-              <caret line="28" column="90" selection-start-line="28" selection-start-column="90" selection-end-line="28" selection-end-column="90" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/codeDiary/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="8" column="52" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="52" />
+            <state relative-caret-position="275">
+              <caret line="68" column="26" selection-start-line="68" selection-start-column="26" selection-end-line="68" selection-end-column="26" />
               <folding>
                 <element signature="e#0#54#0" expanded="true" />
               </folding>
@@ -226,14 +245,14 @@
         <option value="$PROJECT_DIR$/templates/matter0Content.html" />
         <option value="$PROJECT_DIR$/apps/codeDiary/models.py" />
         <option value="$PROJECT_DIR$/apps/codeDiary/adminx.py" />
-        <option value="$PROJECT_DIR$/apps/codeDiary/views.py" />
-        <option value="$PROJECT_DIR$/apps/diary/views.py" />
         <option value="$PROJECT_DIR$/../untitled/草稿箱/16.py" />
         <option value="$PROJECT_DIR$/templates/personalweb.html" />
         <option value="$PROJECT_DIR$/apps/mainPage.py" />
         <option value="$PROJECT_DIR$/apps/personalcenter/migrations/0014_auto_20181119_1658.py" />
-        <option value="$PROJECT_DIR$/apps/personalcenter/models.py" />
         <option value="$PROJECT_DIR$/apps/personalcenter/views.py" />
+        <option value="$PROJECT_DIR$/apps/personalcenter/models.py" />
+        <option value="$PROJECT_DIR$/apps/diary/views.py" />
+        <option value="$PROJECT_DIR$/apps/codeDiary/views.py" />
       </list>
     </option>
   </component>
@@ -683,10 +702,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.code_line" />
         <item itemvalue="Python.16" />
         <item itemvalue="Python.12" />
         <item itemvalue="Python.11" />
-        <item itemvalue="Python.code_line" />
         <item itemvalue="Python.15" />
       </list>
     </recent_temporary>
@@ -701,20 +720,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1535974839541</updated>
-    </task>
-    <task id="LOCAL-00096" summary="添加状态码">
-      <created>1539920604677</created>
-      <option name="number" value="00096" />
-      <option name="presentableId" value="LOCAL-00096" />
-      <option name="project" value="LOCAL" />
-      <updated>1539920604677</updated>
-    </task>
-    <task id="LOCAL-00097" summary="update">
-      <created>1539948741261</created>
-      <option name="number" value="00097" />
-      <option name="presentableId" value="LOCAL-00097" />
-      <option name="project" value="LOCAL" />
-      <updated>1539948741262</updated>
     </task>
     <task id="LOCAL-00098" summary="update">
       <created>1540020605700</created>
@@ -1045,7 +1050,21 @@
       <option name="project" value="LOCAL" />
       <updated>1542624568204</updated>
     </task>
-    <option name="localTasksCounter" value="145" />
+    <task id="LOCAL-00145" summary="结构调整">
+      <created>1542697187588</created>
+      <option name="number" value="00145" />
+      <option name="presentableId" value="LOCAL-00145" />
+      <option name="project" value="LOCAL" />
+      <updated>1542697187589</updated>
+    </task>
+    <task id="LOCAL-00146" summary="大量css重命名">
+      <created>1542706119966</created>
+      <option name="number" value="00146" />
+      <option name="presentableId" value="LOCAL-00146" />
+      <option name="project" value="LOCAL" />
+      <updated>1542706119966</updated>
+    </task>
+    <option name="localTasksCounter" value="147" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1066,9 +1085,9 @@
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.9201141" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32952926" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49865952" weight="0.4507846" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49865952" visible="true" weight="0.28388017" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32952926" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49787235" visible="true" weight="0.2855228" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49787235" visible="true" weight="0.2855228" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" weight="0.24664879" />
       <window_info anchor="right" id="SciView" order="3" weight="0.23123324" />
@@ -1121,8 +1140,6 @@
     <ignored-roots>
       <path value="E:/2345下载/txy (3)" />
     </ignored-roots>
-    <MESSAGE value="xadmin添加markdown支持" />
-    <MESSAGE value="css弹窗更新（重构）" />
     <MESSAGE value="fixed bug" />
     <MESSAGE value="客户端渲染转为服务端渲染" />
     <MESSAGE value="textfield的bug修复，django更新至2.1.2" />
@@ -1146,7 +1163,9 @@
     <MESSAGE value="添加评论密码" />
     <MESSAGE value="update" />
     <MESSAGE value="更新签名" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新签名" />
+    <MESSAGE value="结构调整" />
+    <MESSAGE value="大量css重命名" />
+    <option name="LAST_COMMIT_MESSAGE" value="大量css重命名" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1165,13 +1184,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9000">
           <caret line="384" column="8" selection-start-line="384" selection-start-column="8" selection-end-line="384" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/code_line.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1750">
-          <caret line="71" selection-start-line="71" selection-end-line="71" />
         </state>
       </provider>
     </entry>
@@ -1314,6 +1326,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2200">
           <caret line="95" column="52" selection-start-line="95" selection-start-column="52" selection-end-line="95" selection-end-column="52" />
+          <folding>
+            <element signature="e#47#81#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1338,13 +1353,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/diary/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1475">
-          <caret line="60" column="38" selection-start-line="60" selection-start-column="38" selection-end-line="60" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/diary/adminx.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="650">
@@ -1366,7 +1374,7 @@
     <entry file="file://$PROJECT_DIR$/templates/personalweb.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2175">
-          <caret line="87" column="40" selection-start-line="87" selection-start-column="40" selection-end-line="87" selection-end-column="40" />
+          <caret line="129" column="40" selection-start-line="129" selection-start-column="40" selection-end-line="129" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -1381,24 +1389,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/codeDiary/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="8" column="52" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/personalcenter/migrations/0014_auto_20181119_1658.py" />
-    <entry file="file://$PROJECT_DIR$/apps/personalcenter/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1800">
-          <caret line="72" selection-start-line="72" selection-end-line="82" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/personalcenter/migrations/0013_signature.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="575">
@@ -1406,9 +1397,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/apps/personalcenter/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="22" column="51" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/personalcenter/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="65" column="30" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/apps/mainPage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
+        <state relative-caret-position="-950">
           <caret line="35" column="60" selection-start-line="35" selection-start-column="60" selection-end-line="35" selection-end-column="60" />
           <folding>
             <element signature="e#102#137#0" expanded="true" />
@@ -1416,10 +1421,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/personalcenter/views.py">
+    <entry file="file://$PROJECT_DIR$/tools/code_line.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="125">
+          <caret line="62" column="33" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="33" />
+          <folding>
+            <element signature="e#137#146#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/diary/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="64" column="28" selection-start-line="64" selection-start-column="28" selection-end-line="64" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/codeDiary/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="68" column="26" selection-start-line="68" selection-start-column="26" selection-end-line="68" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

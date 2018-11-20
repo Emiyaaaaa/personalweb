@@ -116,7 +116,7 @@ function submitMessage(){
 
 // matter3_3建议
 function matter33SendMessage(){
-	
+
 }
 
 //评论
@@ -129,7 +129,7 @@ function windowSendComment(){
 		var comment_to = reply_nickname
 	}
 	var hash = window.location.hash
-	var nickname = $('#commennt_nike_name').val()
+	var nickname = $('#comment_nike_name').val()
 	var email = $('#comment_user_email').val()
 	var comment = $('#comment_comment').val()
 	var matter = hash.split('?')[0]

@@ -75,31 +75,31 @@
         	</nav>
 			<span class="target"></span>
 	    	<div id="matter3_0" class="matter3-0" style="display: block;">
-	    		1
+	    		
        		</div>
         	<div id="matter3_1" class="matter3-1" style="display: none;">
-        		2
+        		
         	</div>
         	<div id="matter3_2" class="matter3-2" style="display: none;">
-	    		3
+	    		
        		</div>
         	<div id="matter3_3" class="matter3-3" style="display: none;">
-        		<div class="windowComment" id="windowComment">
-			        <div class="input-field">
-			            <input id="matter33_nike_name" type="text" placeholder="昵称 (选填)">
+        		<div class="suggestion">
+			        <div class="suggestion-input-field">
+			            <input id="suggestion_nike_name" type="text" placeholder="昵称 (选填)">
 			            <span></span>
 			        </div>
-			        <div class="input-field">
-			            <input id="matter33_user_email" type="text" placeholder="邮箱 (必填)">
+			        <div class="suggestion-input-field suggestion-input-inline">
+			            <input id="suggestion_user_email" type="text" placeholder="邮箱 (必填)">
 			            <span></span>
 			        </div>
-			        <div class="input-field input-comment">
-			            <input id="matter33_comment" type="text" placeholder="发表您的观点">
+			        <div class="suggestion-input-field">
+			            <input id="suggestion_comment" type="text" placeholder="发表您的观点">
 			            <span></span>
 			        </div>
 			        <!-- <div class="comment-hint"></div> -->
-			        <div class="submit-button">
-			            <button class="matter33-bubbly-button" onclick="matter33SendMessage()">发送</button>
+			        <div class="suggestion-submit-button">
+			            <button class="suggestion-bubbly-button" onclick="matter33SendMessage()">发送</button>
 			        </div>
 			        <script>
 		                var animateButton = function(e) {
@@ -114,7 +114,7 @@
 
 		                };
 
-		                var classname = document.getElementsByClassName("matter33-bubbly-button");
+		                var classname = document.getElementsByClassName("suggestion-bubbly-button");
 
 		                for (var i = 0; i < classname.length; i++) {
 		                    classname[i].addEventListener('click', animateButton, false);

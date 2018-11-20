@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="97ee085e-0965-47c9-afdd-5d7ddcf1463c" name="Default" comment="大量css重命名">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/codeDiary/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/codeDiary/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/diary/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/diary/views.py" afterDir="false" />
+    <list default="true" id="97ee085e-0965-47c9-afdd-5d7ddcf1463c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/static/css/font.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/font.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/middle/matter3.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/middle/matter3.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/right/right.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/right/right.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/ajax.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/ajax.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/personalweb.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/personalweb.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -721,13 +716,6 @@
       <option name="presentableId" value="Default" />
       <updated>1535974839541</updated>
     </task>
-    <task id="LOCAL-00098" summary="update">
-      <created>1540020605700</created>
-      <option name="number" value="00098" />
-      <option name="presentableId" value="LOCAL-00098" />
-      <option name="project" value="LOCAL" />
-      <updated>1540020605700</updated>
-    </task>
     <task id="LOCAL-00099" summary="update">
       <created>1540020626088</created>
       <option name="number" value="00099" />
@@ -1064,7 +1052,14 @@
       <option name="project" value="LOCAL" />
       <updated>1542706119966</updated>
     </task>
-    <option name="localTasksCounter" value="147" />
+    <task id="LOCAL-00147" summary="matter33 update;签名颜色调整">
+      <created>1542710453409</created>
+      <option name="number" value="00147" />
+      <option name="presentableId" value="LOCAL-00147" />
+      <option name="project" value="LOCAL" />
+      <updated>1542710453409</updated>
+    </task>
+    <option name="localTasksCounter" value="148" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1077,7 +1072,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32952926" />
@@ -1140,7 +1135,6 @@
     <ignored-roots>
       <path value="E:/2345下载/txy (3)" />
     </ignored-roots>
-    <MESSAGE value="fixed bug" />
     <MESSAGE value="客户端渲染转为服务端渲染" />
     <MESSAGE value="textfield的bug修复，django更新至2.1.2" />
     <MESSAGE value="django bug修复" />
@@ -1165,7 +1159,8 @@
     <MESSAGE value="更新签名" />
     <MESSAGE value="结构调整" />
     <MESSAGE value="大量css重命名" />
-    <option name="LAST_COMMIT_MESSAGE" value="大量css重命名" />
+    <MESSAGE value="matter33 update;签名颜色调整" />
+    <option name="LAST_COMMIT_MESSAGE" value="matter33 update;签名颜色调整" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

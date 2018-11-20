@@ -57,17 +57,20 @@
 }
 
 .suggestion-input-field input::-webkit-input-placeholder{
-            color:#adadad;
-            font-size: 16px;
+    color:#adadad;
+    font-size: 16px;
 }
 .suggestion-input-field input::-moz-placeholder{   /* Mozilla Firefox 19+ */
-            color:#cccccc;
+    color:#adadad;
+    font-size: 16px;
 }
 .suggestion-input-field input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
-            color:#cccccc;
+    color:#adadad;
+    font-size: 16px;
 }
 .suggestion-input-field input:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
-            color:#cccccc;
+    color:#adadad;
+    font-size: 16px;
 }
 
 .suggestion-input-field *{

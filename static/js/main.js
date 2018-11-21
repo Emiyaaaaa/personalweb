@@ -8,18 +8,6 @@ function matterClick(){
 	divFadeIn(URLHASH)
 }
 
-function openMatter3() {
-  var liNum = $(".personalCenter-menu ul li").length
-  for (var i = 0; i < liNum; i++) {
-    if ('hli-'+i == hli_id) {
-      document.getElementById("matter3_" + i).style.display = "block"
-    } 
-    else {
-      document.getElementById("matter3_" + i).style.display = "none"
-    }
-  }
-}
-
 function divFadeIn(urlHash) {
 	var num = hashToMatterNum(urlHash)
 	var liLength = $('#matter'+num+' ul li').length;
@@ -64,55 +52,85 @@ function isNull(str){
 //personalcenter nav
 (function () {
 
-  var target = document.querySelector(".target");
-  var links = document.querySelectorAll(".personalCenter-menu a");
-  var colors = ["#75f966", "#f88c5b", "#5bf8d4", "#4b88dc", "#d2e633", "#97adfb", "#f970fa"];
+  var target = document.querySelectorAll(".target")[0]
+  var target_copy = document.querySelectorAll(".target")[1]
+  var links = document.querySelectorAll(".personalCenter-menu a")
+  var colors = ["#75f966", "#f88c5b", "#5bf8d4", "#4b88dc", "#d2e633", "#97adfb", "#f970fa"]
 
   function mouseenterFunc() {
     if (!this.parentNode.classList.contains("active")) {
       for (var i = 0; i < links.length; i++) {
         if (links[i].parentNode.classList.contains("active")) {
-          links[i].parentNode.classList.remove("active");
+          links[i].parentNode.classList.remove("active")
         }
-        links[i].style.opacity = "0.25";
+        if (typeof click_hli_id_num == "undefined"){
+          links[i].style.opacity = "0.25"
+        }
+        else{
+          if ( i != click_hli_id_num ) {
+            links[i].style.opacity = "0.25"
+          }
+        }
       }
 
-      this.parentNode.classList.add("active");
-      this.style.opacity = "1";
+      this.parentNode.classList.add("active")
+      this.style.opacity = "1"
 
-      var width = this.getBoundingClientRect().width;
-      var height = this.getBoundingClientRect().height;
-      var left = this.getBoundingClientRect().left + window.pageXOffset;
-      var top = this.getBoundingClientRect().top + window.pageYOffset;
-      var color = colors[Math.floor(Math.random() * colors.length)];
-      hli_id = this.parentNode.id;
+      var width = this.getBoundingClientRect().width
+      var height = this.getBoundingClientRect().height
+      var left = this.getBoundingClientRect().left + window.pageXOffset
+      var top = this.getBoundingClientRect().top + window.pageYOffset
+      var color = colors[Math.floor(Math.random() * colors.length)]
+      hli_id = this.parentNode.id
 
-      target.style.width = width + "px";
-      target.style.height = height + "px";
-      target.style.left = left + "px";
-      target.style.top = top + "px";
-      target.style.borderColor = color;
-      target.style.transform = "none";
+      target.style.width = width + "px"
+      target.style.height = height + "px"
+      target.style.left = left + "px"
+      target.style.top = top + "px"
+      target.style.borderColor = color
+      target.style.transform = "none"
     }
+  }
+
+  function openMatter3() {
+    if (typeof click_hli_id_num != "undefined"){
+      links[click_hli_id_num].style.opacity = "0.25"
+    }
+    for (var i = 0; i < links.length; i++) {
+      if ('hli-'+i == hli_id) {
+        document.getElementById("matter3_" + i).style.display = "block"
+        click_hli_id_num = i
+      } 
+      else {
+        document.getElementById("matter3_" + i).style.display = "none"
+      }
+    }
+    target_copy.style.width = target.style.width
+    target_copy.style.height = target.style.height
+    target_copy.style.left = target.style.left
+    target_copy.style.top = target.style.top
+    target_copy.style.borderColor = target.style.borderColor
+    target_copy.style.transform = target.style.transform
   }
   for (var i = 0; i < links.length; i++) {
     links[i].addEventListener("mouseenter", mouseenterFunc)
+    links[i].addEventListener("click",openMatter3)
   }
 
   function resizeFunc() {
-    var active = document.querySelector(".personalCenter-menu li.active");
+    var active = document.querySelector(".personalCenter-menu li.active")
 
     if (active) {
-      var left = active.getBoundingClientRect().left + window.pageXOffset;
-      var top = active.getBoundingClientRect().top + window.pageYOffset;
+      var left = active.getBoundingClientRect().left + window.pageXOffset
+      var top = active.getBoundingClientRect().top + window.pageYOffset
 
-      target.style.left = left + "px";
-      target.style.top = top + "px";
+      target.style.left = left + "px"
+      target.style.top = top + "px"
     }
   }
 
-  window.addEventListener("resize", resizeFunc);
-  document.getElementsByClassName('target')[0].addEventListener('click',openMatter3);
+  window.addEventListener("resize", resizeFunc)
+  document.getElementsByClassName('target')[0].addEventListener('click',openMatter3)
 })();
 
 function fillWindow(){

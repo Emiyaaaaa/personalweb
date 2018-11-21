@@ -21,6 +21,10 @@
 	margin-right: 20px;
 }
 
+.personalCenter-menu li {
+    z-index: 1;
+}
+
 .personalCenter-menu a {
 	display: block;
 	font-size: 18px;

@@ -17,6 +17,7 @@
 	<link rel="stylesheet" type="text/css" href="{% static 'css/middle/window.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/middle/markdown.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/middle/window-bubbly-button.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/middle/suggestion-bubbly-button.css' %}">
     <script type="text/javascript" src="{% static 'js/marked/marked.min.js' %}"></script>
 	<script type="text/javascript" src="{% static 'js/jquery/1.10.2/jquery.min.js' %}"></script>
 </head>
@@ -48,14 +49,7 @@
     <div class="middle" id="middle">
         <div id="matter0" class="matter0 codeDiary" style="display: none;"><ul></ul></div>
         <div id="matter1" class="matter1 diary" style="display: none;"><ul></ul></div>
-		<div id="matter2" class="matter2" style="display: none">
-			<p>项目尚未开发完成，bug反馈或提意见请留言，希望可以留下您的联系方
-				<br>式或联系邮箱emiya@emiya.com.cn, Thanks♪(･ω･)ﾉ </p>
-			<input type="text" id="message" placeholder="留言(必填)" />
-			<input type="text" id="contact" placeholder="联系方式(非必填)" />
-            <button class="btn" tpye = "submit" onclick="submitMessage()">提交</button>
-            <p><br>ps：请先忽略丑陋的字体</p>
-        </div>
+		<div id="matter2" class="matter2" style="display: none"></div>
         <div id="matter3" class="matter3" style="display: none">
         	<nav class="personalCenter-menu">
         		<ul>
@@ -97,10 +91,10 @@
 			            <input id="suggestion_content" type="text" placeholder="留下您的意见">
 			            <span></span>
 			        </div>
-			        <!-- <div class="comment-hint"></div> -->
-			        <!-- <div class="suggestion-submit-button">
+			        <div class="suggestion-comment-hint"></div>
+			        <div class="suggestion-submit-button">
 			            <button class="suggestion-bubbly-button" onclick="matter33SendMessage()">发送</button>
-			        </div> -->
+			        </div>
 			        <script>
 		                var animateButton = function(e) {
 		    

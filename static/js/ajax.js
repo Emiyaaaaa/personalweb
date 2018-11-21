@@ -91,32 +91,62 @@ $(document).ready(function() {
 
 })
 
-//建议
-function submitMessage(){
-	var message = $('#message').val()
-	if (isNull(message)){
-		alert('留言不能为空')
-	}
-	var contact = $('#contact').val()
-	$.ajax({
-	        url:"/",
-	        type:"POST",
-	        async: false,
-	        data:{"type":"submitMessage","message":message,"contact":contact},
-	        success:function(data){
-	        	if (data.statusCode == '1'){
-	        		alert('提交成功！感谢您的建议ღ( ´･ᴗ･` )比心')
-	        	}
-	        	else {
-	        		alert('提交失败！请再试一次')
-	        	}
-	        }
-		})
-}
-
 // matter3_3建议
 function matter33SendMessage(){
 
+	var comment_to = ''
+	var password = ''
+	var disabled_name = new Array('Emiya','emiya')
+	var nickname = $('#suggestion_nike_name').val()
+	var email = $('#suggestion_user_email').val()
+	var content = $('#suggestion_content').val()
+
+	if (isInArray(disabled_name,nickname) == true){
+		password = prompt("使用此昵称需要输入密码","")
+    	$.ajax({
+	        url:"/",
+	        type:"POST",
+	        async: false,
+	        data:{"type":"validatePassword",'password':password},
+	        success:function(data){
+	        	if (data.password == 'right'){
+	        		alert('密码正确！')
+	        		$('#suggestion_nike_name').parent().removeClass("error")
+	        	}
+	        	else{
+	        		alert('密码错误！')
+	        		$('#suggestion_nike_name').val('')
+	        		$('#suggestion_nike_name').parent().addClass("error")
+	        		$('#suggestion_nike_name').focus()
+	        	}
+			}
+		})
+	}
+	if (isNull(content)){
+		$('.suggestion-comment-hint').html('提示：建议内容不能为空哦~')
+		$('#suggestion_content').parent().addClass("error")
+        $('#suggestion_content').focus()
+	}
+	else{
+		$('#suggestion_content').parent().removeClass("error")
+		$.ajax({
+	        url:"/",
+	        type:"POST",
+	        async: false,
+	        data:{"type":"matter33SendMessage","nickname":nickname,"email":email,"content":content},
+	        success:function(data){
+	        	if (data.statusCode == '1'){
+	        		$('.suggestion-comment-hint').html('提示：评论成功！ ღ( ´･ᴗ･` )比心')
+	        		$('#suggestion_nike_name').val('')
+					$('#suggestion_user_email').val('')
+					$('#suggestion_content').val('')
+	        	}
+	        	else {
+	        		$('.suggestion-comment-hint').html('提示：提交失败，请再试一次~')
+	        	}
+	        }
+		})
+	}
 }
 
 //评论
@@ -145,7 +175,6 @@ function windowSendComment(){
 	        	if (data.password == 'right'){
 	        		alert('密码正确！')
 	        		$('#comment_nike_name').parent().removeClass("error")
-					windowSendCommentAjax(nickname,email,comment,matter,text_id,comment_to)
 	        	}
 	        	else{
 	        		alert('密码错误！')
@@ -156,38 +185,30 @@ function windowSendComment(){
 			}
 		})
 	}
-	else{
-		if (isNull(comment)){
-			$('.window-comment-hint').html('提示：评论不能为空哦~')
-			$('#comment_comment').parent().addClass("error")
-	        $('#comment_comment').focus()
-		}
-		else{
-			$('#comment_comment').parent().removeClass("error")
-			windowSendCommentAjax(nickname,email,comment,matter,text_id,comment_to)
-		}
-		reply = 'false'
+	if (isNull(comment)){
+		$('.window-comment-hint').html('提示：评论不能为空哦~')
+		$('#comment_comment').parent().addClass("error")
+        $('#comment_comment').focus()
 	}
-}
-
-
-function windowSendCommentAjax(nickname,email,comment,matter,text_id,comment_to){
-	$.ajax({
-        url:"/",
-        type:"POST",
-        async: false,
-        data:{"type":"windowSendComment","nickname":nickname,"email":email,"comment":comment,"matter":matter,"text_id":text_id,'comment_to':comment_to},
-        success:function(data){
-        	if (data.statusCode == '1'){
-        		$('.window-comment-hint').html('提示：评论成功！ ღ( ´･ᴗ･` )比心')
-        		$('#nike_name').val('')
-				$('#user_email').val('')
-				$('#comment').val('')
-				$('#contact').val('')
-        	}
-        	else {
-        		$('.window-comment-hint').html('提示：提交失败，请再试一次~')
-        	}
-        }
-	})
+	else{
+		$('#comment_comment').parent().removeClass("error")
+		$.ajax({
+	        url:"/",
+	        type:"POST",
+	        async: false,
+	        data:{"type":"windowSendComment","nickname":nickname,"email":email,"comment":comment,"matter":matter,"text_id":text_id,'comment_to':comment_to},
+	        success:function(data){
+	        	if (data.statusCode == '1'){
+	        		$('.window-comment-hint').html('提示：评论成功！ ღ( ´･ᴗ･` )比心')
+	        		$('#comment_nike_name').val('')
+					$('#comment_user_email').val('')
+					$('#comment_comment').val('')
+	        	}
+	        	else {
+	        		$('.window-comment-hint').html('提示：提交失败，请再试一次~')
+	        	}
+	        }
+		})
+	}
+	reply = 'false'	
 }

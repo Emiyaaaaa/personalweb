@@ -38,11 +38,11 @@ body {
 
 .left {
 
+	position: fixed;
 	width:22%;
 	height: 100%;
 	float: left;
 	overflow: auto;
-	position: fixed;
 
 }
 
@@ -58,7 +58,7 @@ body {
 
 .right {
 
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 72%;
 	width: 28%;

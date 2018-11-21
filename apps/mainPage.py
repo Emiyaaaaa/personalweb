@@ -79,17 +79,7 @@ def ajax_post(request):
 
     type = request.POST.get('type')
 
-    if type == 'submitMessage':
-        message = request.POST.get('message')
-        contact = request.POST.get('contact')
-        try:
-            Message.objects.create(message = message,contact=contact)
-            return JsonResponse({'statusCode': '1'})
-        except:
-            return JsonResponse({'statusCode': '0'})
-
-
-    elif type == 'windowSendComment':
+    if type == 'windowSendComment':
         nickname = request.POST.get('nickname')
         email = request.POST.get('email')
         comment_content = request.POST.get('comment')
@@ -123,3 +113,13 @@ def ajax_post(request):
             return JsonResponse({'password':'right'})
         else:
             return JsonResponse({'password':'wrong'})
+
+    elif type == 'matter33SendMessage':
+        nickname = request.POST.get('nickname')
+        email = request.POST.get('email')
+        content = request.POST.get('content')
+        try:
+            Message.objects.create(name=nickname,message = content,contact=email)
+            return JsonResponse({'statusCode': '1'})
+        except:
+            return JsonResponse({'statusCode': '0'})

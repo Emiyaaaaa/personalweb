@@ -58,7 +58,7 @@ class CodeDiaryView():
             content_info['img'] = img
 
             comment = []
-            i = 0
+            i = 1
             for codeComment in codeComment:
                 nick_name = codeComment.nick_name
                 if nick_name == None:

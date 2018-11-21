@@ -39,14 +39,21 @@
 
 }
 
-.input-field input {
+.window-input-field input {
 
-	font-size: 13px
+	font-size: 13px;
 	color: #bababa;
 
 }
 
 .window-comment-hint{
+
+    font-size: 13px;
+    color: #999999;
+
+}
+
+.suggestion-comment-hint{
 
     font-size: 13px;
     color: #999999;
@@ -65,7 +72,7 @@
 .windowReply{
 
 	font-size: 13px;
-	color: #ababab
+	color: #ababab;
 
 }
 

@@ -1,6 +1,6 @@
 .matter3 {
     margin: 30px 5px 0 5px;
-    padding: 0 5px 50px 0;
+    padding: 0 5px 100px 0;
     height: 100%
 }
 
@@ -47,6 +47,7 @@
 	-moz-transition: all .35s ease-in-out;
 	-o-transition: all .35s ease-in-out;
 }
+
 /*matter3-3*/
 .suggestion{
 
@@ -101,7 +102,8 @@
     padding: 0;
     box-shadow: none;
     outline: none;
-    color: #cccccc;
+    font-size: 16px;
+    color: #555555;
     
     transition: all 0.3s;
     -webkit-transition: all 0.3s;
@@ -209,28 +211,6 @@
 
 }
 
-.suggestion-input-comment{
-    
-    position: absolute;
-    left: 26.2%;
-    top: 0px;
-    
-}
-
-.suggestion-input-comment{
-
-    width: 62.6%
-
-}
-
-.suggestion-submit-button{
-
-    position: absolute;
-    left: 84.9%;
-    top: 68%;
-    
-}
-
 .suggestion-user-email{
 
 	position: absolute;
@@ -244,5 +224,21 @@
 	position: relative;
     width: 90%;
     margin: 30px 5% 0 5%;
+
+}
+
+.suggestion-submit-button{
+
+    position: absolute;
+    left: 85%;
+    margin: 25px 0 0 0;
+    
+}
+
+.suggestion-comment-hint{
+
+    position: absolute;
+    left: 5%;
+    margin: 25px 0 0 0;
 
 }

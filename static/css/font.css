@@ -41,8 +41,31 @@
 
 .window-input-field input {
 
-	font-size: 13px;
-	color: #bababa;
+	font-size: 15px;
+	color: #555555;
+
+}
+
+.window-input-field input::-webkit-input-placeholder{
+    color:#adadad;
+    font-size: 14px;
+}
+.window-input-field input::-moz-placeholder{   /* Mozilla Firefox 19+ */
+    color:#adadad;
+    font-size: 14px;
+}
+.window-input-field input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+    color:#adadad;
+    font-size: 14px;
+}
+.window-input-field input:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
+    color:#adadad;
+    font-size: 14px;
+}
+
+.comment_list{
+
+	font-size: 15px;
 
 }
 

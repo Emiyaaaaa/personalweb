@@ -83,12 +83,32 @@ function isNull(str){
       var color = colors[Math.floor(Math.random() * colors.length)]
       hli_id = this.parentNode.id
 
+      target.style.opacity = "1"
       target.style.width = width + "px"
       target.style.height = height + "px"
       target.style.left = left + "px"
       target.style.top = top + "px"
       target.style.borderColor = color
       target.style.transform = "none"
+    }
+  }
+
+  function mouseleaveFunc() {
+    if (typeof click_hli_id_num != "undefined"){
+      for (var i = 0; i < links.length; i++) {
+        if ( i != click_hli_id_num ) {
+          if (links[i].style.opacity == "1"){
+            leave_i = i
+            console.log(leave_i)
+            links[i].style.opacity = "0.25"
+          }
+        }
+      }
+      target.style.opacity = 0
+      target.addEventListener("mouseenter", function(){
+        target.style.opacity = "1"
+        links[leave_i].style.opacity = "1"
+      })
     }
   }
 
@@ -130,7 +150,8 @@ function isNull(str){
   }
 
   window.addEventListener("resize", resizeFunc)
-  document.getElementsByClassName('target')[0].addEventListener('click',openMatter3)
+  target.addEventListener('click',openMatter3)
+  document.getElementsByClassName('personalCenter-menu')[0].addEventListener("mouseleave",mouseleaveFunc)
 })();
 
 function fillWindow(){

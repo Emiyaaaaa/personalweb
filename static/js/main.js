@@ -52,10 +52,33 @@ function isNull(str){
 //personalcenter nav
 (function () {
 
+  var cn = 0 //click_hli_id_num
   var target = document.querySelectorAll(".target")[0]
   var target_copy = document.querySelectorAll(".target")[1]
   var links = document.querySelectorAll(".personalCenter-menu a")
   var colors = ["#75f966", "#f88c5b", "#5bf8d4", "#4b88dc", "#d2e633", "#97adfb", "#f970fa"]
+  hli_num = cn
+
+  window.onload = function initializePersonalcenterNav(){
+    for (var i = 0; i < links.length; i++) {
+        links[i].style.opacity = "0.25"
+    }
+    links[cn].parentNode.classList.add("active")
+    links[cn].style.opacity = "1"
+    console.log(links[cn])
+    var width = links[cn].getBoundingClientRect().width
+    var height = links[cn].getBoundingClientRect().height
+    var left = links[cn].getBoundingClientRect().left + window.pageXOffset
+    var top = links[cn].getBoundingClientRect().top + window.pageYOffset
+    var color = colors[Math.floor(Math.random() * colors.length)]
+
+    target_copy.style.width = width + "px"
+    target_copy.style.height = height + "px"
+    target_copy.style.left = left + "px"
+    target_copy.style.top = top + "px"
+    target_copy.style.borderColor = color
+    target_copy.style.transform = "none"
+   }
 
   function mouseenterFunc() {
     if (!this.parentNode.classList.contains("active")) {
@@ -63,13 +86,8 @@ function isNull(str){
         if (links[i].parentNode.classList.contains("active")) {
           links[i].parentNode.classList.remove("active")
         }
-        if (typeof click_hli_id_num == "undefined"){
+        if (i != cn){
           links[i].style.opacity = "0.25"
-        }
-        else{
-          if ( i != click_hli_id_num ) {
-            links[i].style.opacity = "0.25"
-          }
         }
       }
 
@@ -81,9 +99,8 @@ function isNull(str){
       var left = this.getBoundingClientRect().left + window.pageXOffset
       var top = this.getBoundingClientRect().top + window.pageYOffset
       var color = colors[Math.floor(Math.random() * colors.length)]
-      hli_id = this.parentNode.id
+      hli_num = this.parentNode.id.split("-")[1]
 
-      target.style.opacity = "1"
       target.style.width = width + "px"
       target.style.height = height + "px"
       target.style.left = left + "px"
@@ -94,32 +111,34 @@ function isNull(str){
   }
 
   function mouseleaveFunc() {
-    if (typeof click_hli_id_num != "undefined"){
-      for (var i = 0; i < links.length; i++) {
-        if ( i != click_hli_id_num ) {
-          if (links[i].style.opacity == "1"){
-            leave_i = i
-            console.log(leave_i)
-            links[i].style.opacity = "0.25"
-          }
+    console.log('leave')
+    for (var i = 0; i < links.length; i++) {
+      if ( i != cn ) {
+        if (links[i].style.opacity == "1"){
+          leave_i = i
+          console.log(leave_i)
+          links[i].style.opacity = "0.25"
+          target.style.opacity = 0
+          target.addEventListener("mouseenter", function(){
+            console.log("add")
+            target.style.opacity = "1"
+            links[leave_i].style.opacity = "1"
+          })
         }
       }
-      target.style.opacity = 0
-      target.addEventListener("mouseenter", function(){
-        target.style.opacity = "1"
-        links[leave_i].style.opacity = "1"
-      })
     }
   }
 
   function openMatter3() {
-    if (typeof click_hli_id_num != "undefined"){
-      links[click_hli_id_num].style.opacity = "0.25"
-    }
     for (var i = 0; i < links.length; i++) {
-      if ('hli-'+i == hli_id) {
+      links[i].style.opacity = "0.25"
+    }
+    this.style.opacity = "1"
+
+    for (var i = 0; i < links.length; i++) {
+      if (i == hli_num) {
         document.getElementById("matter3_" + i).style.display = "block"
-        click_hli_id_num = i
+        cn = i
       } 
       else {
         document.getElementById("matter3_" + i).style.display = "none"
@@ -149,9 +168,23 @@ function isNull(str){
     }
   }
 
+  function leaveNav(){
+    if (hli_num != cn){
+      links[hli_num].style.opacity = "0.25"
+    }
+    target.style.display = "none"
+  }
+
+  function enterNav(){
+    links[hli_num].style.opacity = "1"
+    target.style.display = "inline"
+  }
+
   window.addEventListener("resize", resizeFunc)
   target.addEventListener('click',openMatter3)
-  document.getElementsByClassName('personalCenter-menu')[0].addEventListener("mouseleave",mouseleaveFunc)
+  document.getElementsByClassName("personalCenter-menu")[0].addEventListener("mouseleave",leaveNav)
+  document.getElementsByClassName("personalCenter-menu")[0].addEventListener("mouseenter",enterNav)
+  
 })();
 
 function fillWindow(){

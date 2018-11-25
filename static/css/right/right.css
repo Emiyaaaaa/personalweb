@@ -137,9 +137,34 @@
 	
 }
 
+.signature-text{
+
+    width: 70%;
+    margin-left: 13%
+
+}
+
 .weather{
+
     position: fixed;
-    margin:  58px 0 0 15px;
+    margin: 58px 0 0 15px;
     height: 200px;
     width: 80%
+
+}
+
+.weather .tem{
+
+    font-size: 50px;
+    color: #919191;
+    font-family:Arial,Helvetica,sans-serif;
+
+}
+
+.weather .wdp{
+
+    font-size: 20px;
+    color: #919191;
+    font-family:Arial,Helvetica,sans-serif;
+
 }

@@ -25,6 +25,9 @@ $(document).ready(function() {
 		$('#middle > div').css('display','none')
 		$('#matter'+liNum).css('display','block')
 		nowMatter = 'matter'+liNum
+		if (liNum == 3){
+			initializePersonalcenterNav()
+		}
 		//ajax
 		var urlHash = $(this).attr('href')
 		//判断是否需要ajax

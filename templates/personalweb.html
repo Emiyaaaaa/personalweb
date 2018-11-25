@@ -16,6 +16,7 @@
 	<link rel="stylesheet" type="text/css" href="{% static 'css/middle/matter3.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/middle/window.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/middle/markdown.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/weather-icon.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/middle/window-bubbly-button.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/middle/suggestion-bubbly-button.css' %}">
     <script type="text/javascript" src="{% static 'js/marked/marked.min.js' %}"></script>
@@ -122,7 +123,10 @@
 	    </div>
     </div>
     <div class="right">
-    	<div class="signature">
+    	<div class="weather">
+    		
+    	</div>
+    	<div class="signature" style="display: inline;">
     		<span class="qm">签 名</span>
     		<div class="signature-text">
     		<div class="signature-text1"><span style="opacity:0;">{{ signature }}</span></div>

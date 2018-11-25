@@ -5,6 +5,9 @@ function matterClick(){
 	$(URLHASH).addClass('active');
 	$('#matter'+LINUM).css('display','block')
 	nowMatter = 'matter'+LINUM
+  if (LINUM == 3){
+    initializePersonalcenterNav()
+  }
 	divFadeIn(URLHASH)
 }
 
@@ -59,13 +62,13 @@ function isNull(str){
   var colors = ["#75f966", "#f88c5b", "#5bf8d4", "#4b88dc", "#d2e633", "#97adfb", "#f970fa"]
   hli_num = cn
 
-  window.onload = function initializePersonalcenterNav(){
+  function initializePersonalcenterNav(){
+    console.log('open')
     for (var i = 0; i < links.length; i++) {
         links[i].style.opacity = "0.25"
     }
     links[cn].parentNode.classList.add("active")
     links[cn].style.opacity = "1"
-    console.log(links[cn])
     var width = links[cn].getBoundingClientRect().width
     var height = links[cn].getBoundingClientRect().height
     var left = links[cn].getBoundingClientRect().left + window.pageXOffset
@@ -79,6 +82,7 @@ function isNull(str){
     target_copy.style.borderColor = color
     target_copy.style.transform = "none"
    }
+  window.initializePersonalcenterNav = initializePersonalcenterNav
 
   function mouseenterFunc() {
     if (!this.parentNode.classList.contains("active")) {
@@ -181,7 +185,6 @@ function isNull(str){
   }
 
   window.addEventListener("resize", resizeFunc)
-  target.addEventListener('click',openMatter3)
   document.getElementsByClassName("personalCenter-menu")[0].addEventListener("mouseleave",leaveNav)
   document.getElementsByClassName("personalCenter-menu")[0].addEventListener("mouseenter",enterNav)
   

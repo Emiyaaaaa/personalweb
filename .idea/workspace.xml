@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="97ee085e-0965-47c9-afdd-5d7ddcf1463c" name="Default" comment="update">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/personalweb.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/personalweb.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="97ee085e-0965-47c9-afdd-5d7ddcf1463c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -54,8 +51,8 @@
       <file leaf-file-name="mainPage.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/mainPage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="112" column="39" selection-start-line="112" selection-start-column="39" selection-end-line="112" selection-end-column="39" />
+            <state relative-caret-position="1162">
+              <caret line="124" column="52" lean-forward="true" selection-start-line="124" selection-start-column="52" selection-end-line="124" selection-end-column="52" />
               <folding>
                 <element signature="e#102#137#0" expanded="true" />
               </folding>
@@ -282,10 +279,6 @@
             <path>
               <item name="personalweb" type="b2602c69:ProjectViewProjectNode" />
               <item name="personalweb" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="personalweb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="a-colorful-horizontal-navigation-bar" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -638,20 +631,6 @@
       <option name="presentableId" value="Default" />
       <updated>1535974839541</updated>
     </task>
-    <task id="LOCAL-00102" summary="update">
-      <created>1540177455890</created>
-      <option name="number" value="00102" />
-      <option name="presentableId" value="LOCAL-00102" />
-      <option name="project" value="LOCAL" />
-      <updated>1540177455891</updated>
-    </task>
-    <task id="LOCAL-00103" summary="update">
-      <created>1540443608764</created>
-      <option name="number" value="00103" />
-      <option name="presentableId" value="LOCAL-00103" />
-      <option name="project" value="LOCAL" />
-      <updated>1540443608765</updated>
-    </task>
     <task id="LOCAL-00104" summary="update">
       <created>1540471561813</created>
       <option name="number" value="00104" />
@@ -981,7 +960,21 @@
       <option name="project" value="LOCAL" />
       <updated>1542974218642</updated>
     </task>
-    <option name="localTasksCounter" value="151" />
+    <task id="LOCAL-00151" summary="update">
+      <created>1543036844417</created>
+      <option name="number" value="00151" />
+      <option name="presentableId" value="LOCAL-00151" />
+      <option name="project" value="LOCAL" />
+      <updated>1543036844418</updated>
+    </task>
+    <task id="LOCAL-00152" summary="update">
+      <created>1543039125758</created>
+      <option name="number" value="00152" />
+      <option name="presentableId" value="LOCAL-00152" />
+      <option name="project" value="LOCAL" />
+      <updated>1543039125758</updated>
+    </task>
+    <option name="localTasksCounter" value="153" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1004,7 +997,7 @@
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32952926" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49865952" weight="0.28388017" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32952926" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49787235" visible="true" weight="0.14879356" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49787235" visible="true" weight="0.15281501" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" weight="0.24664879" />
       <window_info anchor="right" id="SciView" order="3" weight="0.23123324" />
@@ -1362,8 +1355,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/mainPage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="112" column="39" selection-start-line="112" selection-start-column="39" selection-end-line="112" selection-end-column="39" />
+        <state relative-caret-position="1162">
+          <caret line="124" column="52" lean-forward="true" selection-start-line="124" selection-start-column="52" selection-end-line="124" selection-end-column="52" />
           <folding>
             <element signature="e#102#137#0" expanded="true" />
           </folding>

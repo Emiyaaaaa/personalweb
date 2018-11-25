@@ -1,7 +1,8 @@
 .signature{
 	
 	position: relative;
-	margin:  58px 0 0 15px;
+	margin: 0 0 0 15px;
+    top: 250px;
 	height: 88px;
 	width: 80%
 
@@ -134,4 +135,11 @@
 	width: 100%;
 	left: 0;
 	
+}
+
+.weather{
+    position: fixed;
+    margin:  58px 0 0 15px;
+    height: 200px;
+    width: 80%
 }

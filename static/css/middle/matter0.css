@@ -1,25 +1,36 @@
 .matter0 {
+
     margin: 30px 5px 0 5px;
     padding: 0 5px 50px 0
+
 }
 
 .matter0 ul {
+
     list-style-type: none;
     margin: 0;
     padding: 0;
     width: 100%;
+
 }
 
 .matter0 ul li {
+
     display: none;
+
+}
+
+.title{
+
+    color: #555555
+
 }
 
 .content, .aCopy{
-    /*文本*/
+
     letter-spacing: 2px;
     color: #000000;
     text-decoration:none;
-    /*形状*/
     border-radius: 15px;
     background-color: #FFFFFF;
     padding: 17px 20px;
@@ -27,30 +38,37 @@
     height: 84px;
     margin-left: 5%;
     margin-top: 15px;
-    /*阴影*/
     box-shadow:2px 2px 10px #C4C4C4;
     -o-box-shadow:2px 2px 10px #C4C4C4;
     -moz-box-shadow:2px 2px 10px #C4C4C4;
     -webkit-box-shadow:2px 2px 10px #C4C4C4;
-    /*渐变动画*/
     transition: transform 0.25s;
     -webkit-transition: transform 0.25s;
     -moz-transition: transform 0.25s;
     -o-transition: transform 0.25s;
+
 }
 
 .content {
+
     display: block;
+
 }
 
 .aCopy {
+
     display: none;
+
 }
 
 .content:hover {
+
     transform: scale(1.08,1.15) translate3d(0,0,0);
+
 }
 
 .look-more{
+
     color: #348ae6
+    
 }

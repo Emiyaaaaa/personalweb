@@ -5,14 +5,15 @@
 		var tem = ''
 		var wdp = ''
 		var weather = ''
+		var degreesCelsius = '°<span class="condensed">C</span>'
 		if (data.aq != null){
 			aq = data.aq
 		}
 		if (data.aqi != null){
-			aqi = data.aqi
+			aqi = ':'+data.aqi
 		}
 		if (data.tem != null){
-			tem = data.tem
+			tem = data.tem + degreesCelsius
 		}
 		if (data.wdp != null){
 			wdp = data.wdp
@@ -87,17 +88,25 @@
 		data: {'appKey':'9057ff088d24450b93d896cf317835f4','ip':returnCitySN["cip"],'n7':1},
 		success:function(data){
 			if (data.ERRORCODE == '0'){
-				var city = data.RESULT.area_maybe
+				var city = data.RESULT.area_maybe[0]
 				if (city = []){
 					var area = data.RESULT.areaInfo
-					city = area.county + area.province + area.city
+					city = area.city
 				}
 				var d1 = data.RESULT.weatherInfo.n7.d1
 				var d2 = data.RESULT.weatherInfo.n7.d2
 				var d3 = data.RESULT.weatherInfo.n7.d3
+				var nowJson = data.RESULT.weatherInfo.real
 				var day1 = dayJson2str(d1)
 				var day2 = dayJson2str(d2)
 				var day3 = dayJson2str(d3)
+				var nowWeather = nowJson2str(nowJson)
+
+				document.getElementsByClassName('now-city')[0].innerHTML = city
+				document.getElementsByClassName('now-tem')[0].innerHTML = nowWeather.tem
+				document.getElementsByClassName('now-wdp')[0].innerHTML = nowWeather.wdp
+				document.getElementsByClassName('now-aq')[0].innerHTML = nowWeather.aq + nowWeather.aqi
+
 				console.log(city)
 				console.log(day1.date+': '+day1.weather+' '+day1.tem+' '+day1.wdp)
 				console.log(day2.date+': '+day2.weather+' '+day2.tem+' '+day2.wdp)

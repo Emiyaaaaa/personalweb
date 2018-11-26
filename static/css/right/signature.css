@@ -1,10 +1,15 @@
 .signature{
 	
-	position: relative;
+	position: absolute;
 	margin: 0 0 0 15px;
-    top: 250px;
-	height: 88px;
+    top: 270px;
 	width: 80%
+
+}
+
+.qm{
+
+    margin-left: 9px;
 
 }
 
@@ -12,6 +17,7 @@
 	
 	position: absolute;
 	text-align: center;
+    width: 72%;
 	margin: 15px 20px 20px 2px;
     padding: 10px 10px 10px 13px;
 
@@ -128,7 +134,6 @@
 
 .signature-text{
 
-    width: 70%;
     margin-left: 13%
 
 }

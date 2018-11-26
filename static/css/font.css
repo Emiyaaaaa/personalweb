@@ -107,20 +107,15 @@
 }
 
 .qm{
-
+	
 	color: #adadad;
 	font-size: 17px;
 
 }
 
-.signature-text1{
 
-	font-size: 19px;
-
-}
-
-.signature-text2{
-
+.signature-text2,.signature-text1{
+	
 	color: #7d7d7d;
 	font-size: 19px;
 	

@@ -8,23 +8,12 @@
 
 }
 
-.signature-text1{
+.signature-text2,.signature-text1{
 	
-	position: relative;
+	position: absolute;
 	text-align: center;
-	height: 25px;
 	margin: 15px 20px 20px 2px;
-	padding: 10px 10px 10px 13px;
-
-}
-
-.signature-text2{
-	
-	position: relative;
-	text-align: center;
-	height: 25px;
-	margin: -65px 20px 0 2px;
-	padding: 10px 10px 10px 13px;
+    padding: 10px 10px 10px 13px;
 
 }
 
@@ -141,30 +130,5 @@
 
     width: 70%;
     margin-left: 13%
-
-}
-
-.weather{
-
-    position: fixed;
-    margin: 58px 0 0 15px;
-    height: 200px;
-    width: 80%
-
-}
-
-.weather .tem{
-
-    font-size: 50px;
-    color: #919191;
-    font-family:Arial,Helvetica,sans-serif;
-
-}
-
-.weather .wdp{
-
-    font-size: 20px;
-    color: #919191;
-    font-family:Arial,Helvetica,sans-serif;
 
 }

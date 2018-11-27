@@ -107,13 +107,63 @@
 				document.getElementsByClassName('now-wdp')[0].innerHTML = nowWeather.wdp
 				document.getElementsByClassName('now-aq')[0].innerHTML = nowWeather.aq + nowWeather.aqi
 
-				console.log(city)
-				console.log(day1.date+': '+day1.weather+' '+day1.tem+' '+day1.wdp)
-				console.log(day2.date+': '+day2.weather+' '+day2.tem+' '+day2.wdp)
-				console.log(day3.date+': '+day3.weather+' '+day3.tem+' '+day3.wdp)
+				var weatherDic = {
+					'':'sunny',
+					'晴':'sunny',
+					'多云':'cloudy',
+					'阴':'cloudy',
+					'雨':'rainy',
+					'雪':'snowy',
+					'雷':'stormy'
+				}
+				var backgroundDic = {
+					'':'sunny-background',
+					'晴':'sunny-background',
+					'多云':'cloudy-background',
+					'阴':'overcast-background',
+					'雨':'rainy-background',
+					'雪':'snowy-background',
+					'雷':'stormy-background'
+				}
+
+				var weather = nowWeather.weather
+				if (weather.search("雷") != -1 ){
+					weather = '雷'
+				}
+				else if (weather.search("雨") != -1 ){
+					weather = '雨'
+				}
+				else if (weather.search("雪") != -1 ){
+					weather = '雪'
+				}
+				
+				try {
+					if (weather == '晴' || weather == ''){
+						var nowDate = new Date();
+						var nowHour = nowDate.getHours()
+						if (nowHour >= 20 || nowHour <= 5){
+							document.querySelectorAll(".now-weather .weather-icon")[0].innerHTML = '<div class="starry"></div>'
+							document.querySelectorAll(".now-weather .weather-background")[0].innerHTML = '<div class="starry-background"></div>'
+						}
+						else{
+							document.querySelectorAll(".now-weather .weather-icon")[0].innerHTML = '<div class="sunny"></div>'
+							document.querySelectorAll(".now-weather .weather-background")[0].innerHTML = '<div class="sunny-background"></div>'
+						}
+					}
+					else{
+						document.querySelectorAll(".now-weather .weather-icon")[0].innerHTML = '<div class="' + weatherDic[weather] + '"></div>'
+						document.querySelectorAll(".now-weather .weather-background")[0].innerHTML = '<div class="' + backgroundDic[weather] + '"></div>'
+					}
+				}
+				catch(err){
+					document.querySelectorAll(".now-weather .weather-icon")[0].innerHTML = '<div class="cloudy"></div>'
+					document.querySelectorAll(".now-weather .weather-background")[0].innerHTML = '<div class="sunny-background"></div>'
+					console.log(err)
+				}
 				console.log(data)
 			}
 			else{
+				document.querySelectorAll(".right .weather")[0].style.display = 'none'
 				console.log('error:'+data.ERRORCODE+' result:'+data.RESULT)
 			}
     	}

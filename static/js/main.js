@@ -156,6 +156,15 @@ function isNull(str){
 
     var clickColor = target.style.borderColor
     document.getElementsByClassName("suggestion")[0].style.setProperty('--suggestionColor',clickColor)
+    if (cn == 3){
+      inputField = document.getElementsByClassName("suggestion-input-field")
+      for (var i = 0; i < inputField.length; i++) {
+        if (inputField[i].classList.contains("error")){
+          inputField[i].classList.remove("error")
+        }
+      }
+      document.getElementsByClassName("suggestion-comment-hint")[0].innerHTML = ''
+    }
   }
   for (var i = 0; i < links.length; i++) {
     links[i].addEventListener("mouseenter", mouseenterFunc)

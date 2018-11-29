@@ -11,7 +11,7 @@ from personalcenter.views import PersonalCenterView
 from codeDiary.views import CodeDiaryView
 from diary.views import DiaryView
 
-from personalcenter.models import Message
+from personalcenter.models import Message,WeatherUserStatistics
 from diary.models import DiaryComment,Diary
 from codeDiary.models import CodeComment,CodeDiary,WebsitePsd
 
@@ -123,3 +123,16 @@ def ajax_post(request):
             return JsonResponse({'statusCode': '1'})
         except:
             return JsonResponse({'statusCode': '0'})
+
+    elif type == 'weatherUser':
+        ip_ignore_list = ['123.175.158.25']
+        ip = request.POST.get('ip')
+        city = request.POST.get('city')
+        errorCode = request.POST.get('errorCode')
+        errorJson = request.POST.get('errorJson')
+        if ip not in ip_ignore_list and (errorCode != 0 or errorCode != '0'):
+            try:
+                WeatherUserStatistics.objects.create(ip=ip,address = city,errorCode=errorCode,errorJson=errorJson)
+                return JsonResponse({'statusCode': '1'})
+            except:
+                return JsonResponse({'statusCode': '0'})

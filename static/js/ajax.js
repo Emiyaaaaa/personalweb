@@ -5,15 +5,14 @@ $(document).ready(function() {
 		$.ajax({
 		        url:"/",
 		        type:"GET",
-		        async: false,
 		        data:{"matter":URLHASH,"text_max_length":TEXTMAXLENGTH},
 		        success:function(data){
 		        	fillHtml(data,URLHASH)
+		        	matterClick()
 		        }
 		    })
 	}
 	mainPage()
-	matterClick()
 	
 
 	//其他页面
@@ -35,11 +34,12 @@ $(document).ready(function() {
 			$.ajax({
 		        url:"/",
 		        type:"GET",
-		        async: false,
 		        data:{"matter":urlHash,"text_max_length":TEXTMAXLENGTH},
-		        success:function(data){fillHtml(data,urlHash)}
+		        success:function(data){
+		        	fillHtml(data,urlHash)
+		        	divFadeIn(urlHash)
+		        }
     		})
-    		divFadeIn(urlHash)
 		}
 		var num = hashToMatterNum(urlHash)
 		if ($('#matter'+num+' ul li').css('display') == 'none'){
@@ -69,7 +69,6 @@ $(document).ready(function() {
 		$.ajax({
 			url:'/',
 	        type:"GET",
-	        async: true,
 	        data:{'matter':href.split('?')[0],'text_id':href.split('?')[1].split('=')[1]},
 	        success:function(data){
 	        	$('#ajax_window_html').html(data)
@@ -109,7 +108,6 @@ function matter33SendMessage(){
     	$.ajax({
 	        url:"/",
 	        type:"POST",
-	        async: false,
 	        data:{"type":"validatePassword",'password':password},
 	        success:function(data){
 	        	if (data.password == 'right'){

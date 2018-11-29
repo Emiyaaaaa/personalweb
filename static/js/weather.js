@@ -87,6 +87,7 @@
 		url: 'http://api.shujuzhihui.cn/api/weather/ip',
 		data: {'appKey':'9057ff088d24450b93d896cf317835f4','ip':returnCitySN["cip"],'n7':1},
 		success:function(data){
+			errorJson = ''
 			if (data.ERRORCODE == '0'){
 				var city = data.RESULT.area_maybe[0]
 				if (city = []){
@@ -158,14 +159,19 @@
 				catch(err){
 					document.querySelectorAll(".now-weather .weather-icon")[0].innerHTML = '<div class="cloudy"></div>'
 					document.querySelectorAll(".now-weather .weather-background")[0].innerHTML = '<div class="sunny-background"></div>'
-					console.log(err)
+					errorJson = data
 				}
-				console.log(data)
 			}
 			else{
 				document.querySelectorAll(".right .weather")[0].style.display = 'none'
 				console.log('error:'+data.ERRORCODE+' result:'+data.RESULT)
 			}
+			$.ajax({
+				url:'/',
+	       		type:"POST",
+	       		data:{'type':'weatherUser','ip':returnCitySN["cip"],'city':returnCitySN["cname"],'errorCode':data.ERRORCODE,'errorJson':errorJson},
+	       		success:function(data){}
+	       	})
     	}
 	})
 })()

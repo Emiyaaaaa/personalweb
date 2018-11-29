@@ -82,3 +82,18 @@ class Signature(models.Model):
     def __str__(self):
         return self.signature
 
+
+class WeatherUserStatistics(models.Model):
+    ip = models.CharField(max_length=50,verbose_name='ip',null=True,blank=True)
+    address = models.CharField(max_length=50, verbose_name='地址',null=True,blank=True)
+    errorCode = models.IntegerField(verbose_name='Error Code',default=0)
+    errorJson = models.TextField(null=True,blank=True)
+    created_at = models.DateTimeField(auto_now_add=True, null=False)
+
+    class Meta:
+        verbose_name = u"天气访客"
+        verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return self.ip
+

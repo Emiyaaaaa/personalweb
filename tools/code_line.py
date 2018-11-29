@@ -26,8 +26,11 @@ except_pycache = True
 except_logs = True
 
 except_path = [
-    r'E:\python\personalweb\static\admin'
+    r'E:\python\personalweb\static\admin',
+    r'E:\python\personalweb\extra_apps'
 ]
+
+show_path = True
 
 # Code
 except_files = []
@@ -62,7 +65,6 @@ for file in fileList:
 
 print('Project: {}\nCode line: {}'.format(str(project_name),str(code_line)))
 
-
 # Project size
 project_size = 0
 for root, dirs, files in os.walk(project_path):
@@ -71,3 +73,8 @@ project_size = project_size / 1024 /1024
 project_size = str(project_size)[:str(project_size).find('.')+3] + ' Mb'
 
 print('Project size: {}'.format(project_size))
+
+if show_path == True:
+    print('\nFile:\n')
+    for file in fileList:
+        print(file)

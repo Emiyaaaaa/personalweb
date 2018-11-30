@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
 	//主页面
 	function mainPage() {
 		$.ajax({
@@ -13,6 +12,8 @@ $(document).ready(function() {
 		    })
 	}
 	mainPage()
+
+	
 	
 
 	//其他页面

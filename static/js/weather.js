@@ -139,21 +139,23 @@
 				}
 				
 				try {
-					if (weather == '晴' || weather == ''){
-						var nowDate = new Date();
-						var nowHour = nowDate.getHours()
-						if (nowHour >= 20 || nowHour <= 5){
-							document.querySelectorAll(".now-weather .weather-icon")[0].innerHTML = '<div class="starry"></div>'
-							document.querySelectorAll(".now-weather .weather-background")[0].innerHTML = '<div class="starry-background"></div>'
-						}
-						else{
-							document.querySelectorAll(".now-weather .weather-icon")[0].innerHTML = '<div class="sunny"></div>'
-							document.querySelectorAll(".now-weather .weather-background")[0].innerHTML = '<div class="sunny-background"></div>'
-						}
+					var nowDate = new Date();
+					var nowHour = nowDate.getHours()
+					console.log(nowHour >= 19 || nowHour <= 5)
+
+					if ((nowHour >= 19 || nowHour <= 5) && (weather == '晴' || weather == '' || weather == '多云')){
+						document.querySelectorAll(".now-weather .weather-icon")[0].innerHTML = '<div class="starry"></div>'
+						document.querySelectorAll(".now-weather .weather-background")[0].innerHTML = '<div class="starry-background"></div>'
 					}
 					else{
-						document.querySelectorAll(".now-weather .weather-icon")[0].innerHTML = '<div class="' + weatherDic[weather] + '"></div>'
-						document.querySelectorAll(".now-weather .weather-background")[0].innerHTML = '<div class="' + backgroundDic[weather] + '"></div>'
+						if (weather == ''){
+						document.querySelectorAll(".now-weather .weather-icon")[0].innerHTML = '<div class="sunny"></div>'
+						document.querySelectorAll(".now-weather .weather-background")[0].innerHTML = '<div class="sunny-background"></div>'
+						}
+						else{
+							document.querySelectorAll(".now-weather .weather-icon")[0].innerHTML = '<div class="' + weatherDic[weather] + '"></div>'
+							document.querySelectorAll(".now-weather .weather-background")[0].innerHTML = '<div class="' + backgroundDic[weather] + '"></div>'
+						}
 					}
 				}
 				catch(err){

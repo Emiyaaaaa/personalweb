@@ -53,10 +53,10 @@ function isNull(str){
 }
 
 function rgb2rgba(strRgb){
-  
-  rgb = strRgb.split('(')[1].split(')')[0]
-  strRgba = 'rgba('+rgb+',0.8)'
-  return strRgba
+
+  rgb = strRgb.split('(')[1].split(')')[0];
+  strRgba = 'rgba('+rgb+',0.8)';
+  return strRgba;
 
 }
 

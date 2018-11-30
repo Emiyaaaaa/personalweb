@@ -16,11 +16,23 @@ function divFadeIn(urlHash) {
 	var liLength = $('#matter'+num+' ul li').length;
 	for (var i = 0; i < liLength; i++) {
 		$('#matter'+num+' ul li:eq(' + i +')').delay(140*i).fadeIn();
-		if (i > 10){
+		if (i > 6){
 			$('#matter'+num+' ul li:eq(' + i +')').fadeIn();
 		}
 	}
 }
+
+function scrollBottomOrTop(){
+  var clients=window.innerHeight;
+  var scrollTop=document.documentElement.scrollTop;
+  var wholeHeight=document.body.scrollHeight;
+  console.log(clients,scrollTop,wholeHeight-300)
+  if(clients+scrollTop>=wholeHeight-1){
+    console.log('我到底部了');
+    window.onscroll = function(){};
+  }
+}
+window.onscroll=scrollBottomOrTop;
 
 function getDivPosition(id){
 	var left = document.getElementById(id).getBoundingClientRect().left

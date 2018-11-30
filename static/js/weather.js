@@ -141,7 +141,6 @@
 				try {
 					var nowDate = new Date();
 					var nowHour = nowDate.getHours()
-					console.log(nowHour >= 19 || nowHour <= 5)
 
 					if ((nowHour >= 19 || nowHour <= 5) && (weather == '晴' || weather == '' || weather == '多云')){
 						document.querySelectorAll(".now-weather .weather-icon")[0].innerHTML = '<div class="starry"></div>'

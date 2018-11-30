@@ -13,9 +13,6 @@ $(document).ready(function() {
 	}
 	mainPage()
 
-	
-	
-
 	//其他页面
 	$('.left-menu a').click(function () {
 		//导航栏交互

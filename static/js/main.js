@@ -28,7 +28,6 @@ function scrollBottomOrTop(){
   var wholeHeight=document.body.scrollHeight;
   console.log(clients,scrollTop,wholeHeight-300)
   if(clients+scrollTop>=wholeHeight-1){
-    console.log('我到底部了');
     window.onscroll = function(){};
   }
 }

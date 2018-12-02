@@ -67,7 +67,7 @@ $(document).ready(function() {
 			$.ajax({
 	        url:"/",
 	        type:"GET",
-	        data:{"type":"getMoreContent","matter":nowMatter,"finally_id":finally_id},
+	        data:{"type":"getMoreContent","matter":nowMatter,"finally_id":finally_id,"text_max_length":TEXTMAXLENGTH},
 	        success:function(data){
 	        	console.log(data)
 	        	$('.'+nowMatter+' ul:eq(0)').append(data)

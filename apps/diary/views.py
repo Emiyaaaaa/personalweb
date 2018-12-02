@@ -5,27 +5,23 @@ class DiaryView():
     def get_main_page(self,request,text_max_length=37):
         diary_info = []
         stick_diary = Diary.objects.filter(is_stick=1)
-        all_diary = Diary.objects.all().order_by('-text_id')
-        diary = stick_diary|all_diary
-        i = 0
+        diary = Diary.objects.order_by('-text_id').exclude(is_display=0)[0:10]
+        # diary = stick_diary|all_diary
+
         for diary in diary:
-            if diary.is_display == 1:
-                text_id = diary.text_id
-                line = 2
-                if diary.title != None: line = 1
-                brief_text = self.getBriefText(diary.content, text_max_length,line)
-                diaryImg = DiaryImg.objects.filter(diary=text_id)
-                diary_info.append({
-                    'content':brief_text['brief_text'],
-                    'date_weather':diary.date+ ' ' +diary.weather,
-                    'text_id':text_id,
-                    'title':diary.title,
-                    'is_brief':brief_text['is_brief'],
-                    'img_num': len(diaryImg)
-                })
-                # i = i + 1
-                # if i >= 20:
-                #     break
+            text_id = diary.text_id
+            line = 2
+            if diary.title != None: line = 1
+            brief_text = self.getBriefText(diary.content, text_max_length,line)
+            diaryImg = DiaryImg.objects.filter(diary=text_id)
+            diary_info.append({
+                'content':brief_text['brief_text'],
+                'date_weather':diary.date+ ' ' +diary.weather,
+                'text_id':text_id,
+                'title':diary.title,
+                'is_brief':brief_text['is_brief'],
+                'img_num': len(diaryImg)
+            })
         return render(request, 'matter1.html', {'diary_info': diary_info})
 
     def getBriefText(self,text,text_max_length,line=2):
@@ -72,3 +68,31 @@ class DiaryView():
             break
 
         return render(request,'matter1Content.html',{'diary':content_info})
+
+    def getMoreContent(self,request,finally_id,text_max_length=37):
+        diary_info = []
+        print(finally_id)
+        diary = Diary.objects.order_by('-text_id')
+        print(diary)
+        diary = diary.filter(text_id__lt = finally_id)
+        print(diary)
+
+        diary = diary.exclude(is_display=0)[0:10]
+        print(diary)
+
+
+        for diary in diary:
+            text_id = diary.text_id
+            line = 2
+            if diary.title != None: line = 1
+            brief_text = self.getBriefText(diary.content, text_max_length, line)
+            diaryImg = DiaryImg.objects.filter(diary=text_id)
+            diary_info.append({
+                'content': brief_text['brief_text'],
+                'date_weather': diary.date + ' ' + diary.weather,
+                'text_id': text_id,
+                'title': diary.title,
+                'is_brief': brief_text['is_brief'],
+                'img_num': len(diaryImg)
+            })
+        return render(request, 'matter1.html', {'diary_info': diary_info})

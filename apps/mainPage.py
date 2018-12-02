@@ -33,6 +33,7 @@ def ajax_main(request):
 def ajax_get(request):
     matter = request.GET.get('matter')
     text_max_length = request.GET.get('text_max_length')
+    type = request.GET.get('type')
     simple_personal_info = PersonalCenterView().get_simple_personal_info()
     avatar = simple_personal_info['avatar']
     website_icon = simple_personal_info['website_icon']
@@ -47,30 +48,40 @@ def ajax_get(request):
         return render(request, 'personalweb.html', main_page)
 
     else:
-        if matter == '#codeDiary':
-            text_id = request.GET.get('text_id')
-            if text_id == None:
-                render_page = CodeDiaryView().get(request,text_max_length)
-            else:
-                render_page = CodeDiaryView().get_content(request, text_id)
-            return render_page
-
-        elif matter == '#diary':
-            text_id = request.GET.get('text_id')
-            if text_id == None:
-                render_page = DiaryView().get_main_page(request,text_max_length)
-            else:
-                render_page = DiaryView().get_content(request, text_id)
-            return render_page
-
-        elif matter == '#application':
-            main_page = {}
-
-        elif matter == '#personalCenter':
-            main_page = {}
-
+        if type == 'getMoreContent':
+            if matter == 'matter0':
+                finally_id = request.GET.get('finally_id')
+                render_page = CodeDiaryView().getMoreContent(request, finally_id, text_max_length)
+                return render_page
+            elif matter == 'matter1':
+                finally_id = request.GET.get('finally_id')
+                render_page = DiaryView().getMoreContent(request, finally_id, text_max_length)
+                return render_page
         else:
-            return JsonResponse({'statusCode': '404'})
+            if matter == '#codeDiary':
+                text_id = request.GET.get('text_id')
+                if text_id == None:
+                    render_page = CodeDiaryView().get(request,text_max_length)
+                else:
+                    render_page = CodeDiaryView().get_content(request, text_id)
+                return render_page
+
+            elif matter == '#diary':
+                text_id = request.GET.get('text_id')
+                if text_id == None:
+                    render_page = DiaryView().get_main_page(request,text_max_length)
+                else:
+                    render_page = DiaryView().get_content(request, text_id)
+                return render_page
+
+            elif matter == '#application':
+                main_page = {}
+
+            elif matter == '#personalCenter':
+                main_page = {}
+
+            else:
+                return JsonResponse({'statusCode': '404'})
 
     main_page['statusCode'] = '200'
     return JsonResponse(main_page)

@@ -6,38 +6,26 @@ class CodeDiaryView():
     def get(self,request,text_max_length=37):
         codeDiary_info = []
         stick_diary = CodeDiary.objects.filter(is_stick=1)
-        all_diary = CodeDiary.objects.all().order_by('-text_id')
-        codeDiary = stick_diary|all_diary
+        codeDiary = CodeDiary.objects.order_by('-text_id').exclude(is_display=0)[0:10]
+        # codeDiary = stick_diary|all_diary
 
-        i = 0
         for codeDiary in codeDiary:
-            if codeDiary.is_display == 1:
-                text_id = codeDiary.text_id
-                markdown_text = codeDiary.content
-                unmarkdown_text = re.sub('[#`-]', '', markdown_text).replace(' ', '').replace('\n','')
-                line = 2
-                if codeDiary.title != None:line = 1
-                brief_text = self.getBriefText(unmarkdown_text, text_max_length,line)
-                codeDiaryImg = CodeDiaryImg.objects.filter(codeDiary=text_id)
-                codeDiary_info.append({
-                    'date':codeDiary.date,
-                    'content':brief_text['brief_text'],
-                    'text_id':text_id,
-                    'title':codeDiary.title,
-                    'is_brief':brief_text['is_brief'],
-                    'img_num':len(codeDiaryImg)
-                })
-                # i = i + 1
-                # if i >= 20:
-                #     break
+            text_id = codeDiary.text_id
+            markdown_text = codeDiary.content
+            unmarkdown_text = re.sub('[#`-]', '', markdown_text).replace(' ', '').replace('\n','')
+            line = 2
+            if codeDiary.title != None:line = 1
+            brief_text = self.getBriefText(unmarkdown_text, text_max_length,line)
+            codeDiaryImg = CodeDiaryImg.objects.filter(codeDiary=text_id)
+            codeDiary_info.append({
+                'date':codeDiary.date,
+                'content':brief_text['brief_text'],
+                'text_id':text_id,
+                'title':codeDiary.title,
+                'is_brief':brief_text['is_brief'],
+                'img_num':len(codeDiaryImg)
+            })
         return render(request,'matter0.html',{'codeDiary_info':codeDiary_info})
-
-    def getBriefText(self,text,text_max_length,line=2):
-        text_max_length = int(text_max_length)
-        if len(text) > text_max_length * line - 5:
-            return {'is_brief': 'true', 'brief_text': text[:text_max_length * line - 5]}
-        else:
-            return {'is_brief': 'false','brief_text': text}
 
     def get_content(self,request,text_id):
         codeDiary = CodeDiary.objects.filter(text_id=text_id)
@@ -76,3 +64,33 @@ class CodeDiaryView():
             break
 
         return render(request,'matter0Content.html',{'codeDiary':content_info})
+
+    def getMoreContent(self,request,finally_id,text_max_length=37):
+        codeDiary_info = []
+        moreCodeDiary = CodeDiary.objects.order_by('-text_id').filter(text_id__lt=finally_id).exclude(is_display=0)[0:10]
+
+        for codeDiary in moreCodeDiary:
+            text_id = codeDiary.text_id
+            markdown_text = codeDiary.content
+            unmarkdown_text = re.sub('[#`-]', '', markdown_text).replace(' ', '').replace('\n', '')
+            line = 2
+            if codeDiary.title != None: line = 1
+            brief_text = self.getBriefText(unmarkdown_text, text_max_length, line)
+            codeDiaryImg = CodeDiaryImg.objects.filter(codeDiary=text_id)
+            codeDiary_info.append({
+                'date': codeDiary.date,
+                'content': brief_text['brief_text'],
+                'text_id': text_id,
+                'title': codeDiary.title,
+                'is_brief': brief_text['is_brief'],
+                'img_num': len(codeDiaryImg)
+            })
+        return render(request, 'matter0.html', {'codeDiary_info': codeDiary_info})
+
+
+    def getBriefText(self,text,text_max_length,line=2):
+        text_max_length = int(text_max_length)
+        if len(text) > text_max_length * line - 5:
+            return {'is_brief': 'true', 'brief_text': text[:text_max_length * line - 5]}
+        else:
+            return {'is_brief': 'false','brief_text': text}

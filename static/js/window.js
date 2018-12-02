@@ -19,7 +19,7 @@ $(document).ready(function() {
 		var id = obj.attr('id')
 		windowObj = $('#window')
 		matterObj = $(hash)
-		idNum = id.match(/\d+/)
+		idNum = id.match(/\d+/)[0]
 		objName = id.split(/\d/)[0]
 		aCopyObj = $('#'+objName+'Copyone'+idNum)
 		var scale_X = 1.08

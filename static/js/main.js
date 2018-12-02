@@ -26,8 +26,8 @@ function scrollBottomOrTop(){
   var clients=window.innerHeight;
   var scrollTop=document.documentElement.scrollTop;
   var wholeHeight=document.body.scrollHeight;
-  console.log(clients,scrollTop,wholeHeight-300)
-  if(clients+scrollTop>=wholeHeight-1){
+  if(clients + scrollTop >= wholeHeight-1){
+    getMoreContent()
     window.onscroll = function(){};
   }
 }

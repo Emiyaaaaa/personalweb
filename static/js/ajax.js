@@ -58,9 +58,32 @@ $(document).ready(function() {
 		}
 		else {
 		window.location.href = MAINURL + '404'
-		}
-        	
+		}	
 	}
+
+	function getMoreContent(){
+		if (nowMatter == 'matter0' || nowMatter == 'matter1'){
+			var finally_id = $('.'+nowMatter+' li:last>a:eq(0)').attr('id').match(/\d+/)[0]
+			$.ajax({
+	        url:"/",
+	        type:"GET",
+	        data:{"type":"getMoreContent","matter":nowMatter,"finally_id":finally_id},
+	        success:function(data){
+	        	console.log(data)
+	        	$('.'+nowMatter+' ul:eq(0)').append(data)
+	        	// divFadeIn(urlHash)
+	        	window.onscroll=scrollBottomOrTop
+	        },
+	        error:function (XMLHttpRequest, textStatus, errorThrown) {
+                console.log(XMLHttpRequest.status)
+                console.log(XMLHttpRequest.readyState)
+                console.log(textStatus)
+	        	window.onscroll=scrollBottomOrTop
+            }
+		})
+		}
+	}
+	window.getMoreContent = getMoreContent
 
 	//获取全文	
 	function getMattersContent(href){

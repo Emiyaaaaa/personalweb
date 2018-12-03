@@ -25,6 +25,9 @@ $(document).ready(function() {
 		if (liNum == 3){
 			initializePersonalcenterNav()
 		}
+		if (liNum == 0 || liNum == 1){
+			window.onscroll=scrollBottomOrTop
+		}
 		//ajax
 		var urlHash = $(this).attr('href')
 		//判断是否需要ajax

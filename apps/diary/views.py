@@ -6,7 +6,7 @@ from django.http import JsonResponse
 class DiaryView():
     def get_main_page(self,request,text_max_length=37):
         diary_info = []
-        loadStatus = '加载中'
+        loadStatus = '加载中...'
         stick_diary = Diary.objects.filter(is_stick=1)
         diary = Diary.objects.order_by('-text_id').exclude(is_display=0)[0:10]
         # diary = stick_diary|all_diary

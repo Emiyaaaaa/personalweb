@@ -7,7 +7,7 @@ from django.http import JsonResponse
 class CodeDiaryView():
     def get(self,request,text_max_length=37):
         codeDiary_info = []
-        loadStatus='加载中'
+        loadStatus='加载中...'
         stick_diary = CodeDiary.objects.filter(is_stick=1)
         codeDiary = CodeDiary.objects.order_by('-text_id').exclude(is_display=0)[0:10]
         # codeDiary = stick_diary|all_diary

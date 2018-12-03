@@ -1,12 +1,20 @@
 from .models import Diary,DiaryImg,DiaryComment
 from django.shortcuts import render
+from django.http import JsonResponse
+
 
 class DiaryView():
     def get_main_page(self,request,text_max_length=37):
         diary_info = []
+        loadStatus = '加载中'
         stick_diary = Diary.objects.filter(is_stick=1)
         diary = Diary.objects.order_by('-text_id').exclude(is_display=0)[0:10]
         # diary = stick_diary|all_diary
+
+        if len(diary)==0:
+            return JsonResponse({'status':'ended'})
+        elif len(diary) < 10:
+            loadStatus = '已加载全部'
 
         for diary in diary:
             text_id = diary.text_id
@@ -22,7 +30,7 @@ class DiaryView():
                 'is_brief':brief_text['is_brief'],
                 'img_num': len(diaryImg)
             })
-        return render(request, 'matter1.html', {'diary_info': diary_info})
+        return render(request, 'matter1.html', {'diary_info': diary_info,'loadStatus':loadStatus})
 
     def getBriefText(self,text,text_max_length,line=2):
         text_max_length = int(text_max_length)
@@ -71,17 +79,14 @@ class DiaryView():
 
     def getMoreContent(self,request,finally_id,text_max_length=37):
         diary_info = []
-        print(finally_id)
-        diary = Diary.objects.order_by('-text_id')
-        print(diary)
-        diary = diary.filter(text_id__lt = finally_id)
-        print(diary)
+        loadStatus = '加载中'
+        moreDiary = Diary.objects.order_by('-text_id').filter(text_id__lt = finally_id).exclude(is_display=0)[0:10]
+        if len(moreDiary)==0:
+            return JsonResponse({'status':'ended'})
+        elif len(moreDiary) < 10:
+            loadStatus = '已加载全部'
 
-        diary = diary.exclude(is_display=0)[0:10]
-        print(diary)
-
-
-        for diary in diary:
+        for diary in moreDiary:
             text_id = diary.text_id
             line = 2
             if diary.title != None: line = 1
@@ -95,4 +100,4 @@ class DiaryView():
                 'is_brief': brief_text['is_brief'],
                 'img_num': len(diaryImg)
             })
-        return render(request, 'matter1.html', {'diary_info': diary_info})
+        return render(request, 'matter1.html', {'diary_info': diary_info,'loadStatus':loadStatus})

@@ -64,14 +64,28 @@ $(document).ready(function() {
 	function getMoreContent(){
 		if (nowMatter == 'matter0' || nowMatter == 'matter1'){
 			var finally_id = $('.'+nowMatter+' li:last>a:eq(0)').attr('id').match(/\d+/)[0]
+			var liLength = $('.'+nowMatter+' li').length
 			$.ajax({
-	        url:"/",
-	        type:"GET",
-	        data:{"type":"getMoreContent","matter":nowMatter,"finally_id":finally_id,"text_max_length":TEXTMAXLENGTH},
-	        success:function(data){
-	        	console.log(data)
-	        	$('.'+nowMatter+' ul:eq(0)').append(data)
-	        	// divFadeIn(urlHash)
+		        url:"/",
+		        type:"GET",
+		        data:{"type":"getMoreContent","matter":nowMatter,"finally_id":finally_id,"text_max_length":TEXTMAXLENGTH},
+		        success:function(data){
+		        	if (data.status == 'ended'){
+	        				
+	        		}
+					else{
+						$('.'+nowMatter+' .loadStatus:last').empty()
+		        		$('.'+nowMatter+' ul:eq(0)').append(data)
+			        	//显示
+						var Length = $('.'+nowMatter+' li:lt('+(liLength-1)+')').length
+						for (var i = liLength; i < liLength+Length; i++) {
+							$('.'+nowMatter+' li:eq(' + i +')').delay(100*(i-liLength)).fadeIn()
+							if (i > 3){
+								$('.'+nowMatter+' li:eq(' + i +')').fadeIn()
+							}
+						}
+						$('.'+nowMatter+' .loadStatus').css('display','block')
+					}
 	        	window.onscroll=scrollBottomOrTop
 	        },
 	        error:function (XMLHttpRequest, textStatus, errorThrown) {

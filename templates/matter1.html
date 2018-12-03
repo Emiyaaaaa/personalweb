@@ -1,4 +1,4 @@
- {% for diary in diary_info %}
+{% for diary in diary_info %}
     <li>
         <div class="aCopy" id="diaryCopyone{{ diary.text_id }}"></div>
         <a class="content" id="diary{{ diary.text_id }}" href="#diary?text_id={{ diary.text_id }}">
@@ -17,4 +17,5 @@
             </div>
         </a>
     </li>
- {% endfor %}
+{% endfor %}
+<div class="loadStatus">{{ loadStatus }}</div>

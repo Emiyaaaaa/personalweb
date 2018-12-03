@@ -69,3 +69,11 @@
     color: #348ae6
     
 }
+
+.loadStatus{
+    
+    display: none;
+    text-align: center;
+    padding-top: 22px
+
+}

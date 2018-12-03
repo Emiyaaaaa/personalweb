@@ -15,11 +15,12 @@ function divFadeIn(urlHash) {
 	var num = hashToMatterNum(urlHash)
 	var liLength = $('#matter'+num+' ul li').length;
 	for (var i = 0; i < liLength; i++) {
-		$('#matter'+num+' ul li:eq(' + i +')').delay(140*i).fadeIn();
+		$('#matter'+num+' ul li:eq(' + i +')').delay(140*i).fadeIn()
 		if (i > 6){
-			$('#matter'+num+' ul li:eq(' + i +')').fadeIn();
+			$('#matter'+num+' ul li:eq(' + i +')').fadeIn()
 		}
 	}
+  $('#matter'+num+' .loadStatus:last').delay(140*i).fadeIn(10)
 }
 
 function scrollBottomOrTop(){

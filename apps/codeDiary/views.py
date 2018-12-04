@@ -74,7 +74,7 @@ class CodeDiaryView():
 
     def getMoreContent(self,request,finally_id,text_max_length=37):
         codeDiary_info = []
-        loadStatus = '加载中'
+        loadStatus = '加载中...'
         moreCodeDiary = CodeDiary.objects.order_by('-text_id').filter(text_id__lt=finally_id).exclude(is_display=0)[0:10]
         if len(moreCodeDiary) == 0:
             return JsonResponse({'status': 'ended'})

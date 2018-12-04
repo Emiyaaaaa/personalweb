@@ -79,7 +79,7 @@ class DiaryView():
 
     def getMoreContent(self,request,finally_id,text_max_length=37):
         diary_info = []
-        loadStatus = '加载中'
+        loadStatus = '加载中...'
         moreDiary = Diary.objects.order_by('-text_id').filter(text_id__lt = finally_id).exclude(is_display=0)[0:10]
         if len(moreDiary)==0:
             return JsonResponse({'status':'ended'})

@@ -22,30 +22,30 @@ $(document).ready(function() {
 		$('#middle > div').css('display','none')
 		$('#matter'+liNum).css('display','block')
 		nowMatter = 'matter'+liNum
-		if (liNum == 3){
-			initializePersonalcenterNav()
-		}
+
 		if (liNum == 0 || liNum == 1){
 			window.onscroll=scrollBottomOrTop
+			var urlHash = $(this).attr('href')
+			//判断是否需要ajax
+			if (leftClickNeedAjax() == 'true'){
+				$.ajax({
+			        url:"/",
+			        type:"GET",
+			        data:{"matter":urlHash,"text_max_length":TEXTMAXLENGTH},
+			        success:function(data){
+			        	fillHtml(data,urlHash)
+			        	divFadeIn()
+			        }
+	    		})
+			}
+			if ($('.'+nowMatter+' li').css('display') == 'none'){
+				divFadeIn()
+			}
 		}
-		//ajax
-		var urlHash = $(this).attr('href')
-		//判断是否需要ajax
-		if (leftClickNeedAjax(urlHash) == 'true'){
-			$.ajax({
-		        url:"/",
-		        type:"GET",
-		        data:{"matter":urlHash,"text_max_length":TEXTMAXLENGTH},
-		        success:function(data){
-		        	fillHtml(data,urlHash)
-		        	divFadeIn(urlHash)
-		        }
-    		})
+		else if(liNum == 3){
+			initializePersonalcenterNav()
 		}
-		var num = hashToMatterNum(urlHash)
-		if ($('#matter'+num+' ul li').css('display') == 'none'){
-			divFadeIn(urlHash)
-		}
+		
 	})
 
 	function fillHtml(data,urlHash){
@@ -121,9 +121,8 @@ $(document).ready(function() {
 	}
 	window.getMattersContent = getMattersContent
 
-	function leftClickNeedAjax(urlHash){
-		var num = $(urlHash).parent().attr('id').split('-')[1]
-		var content = $('#matter'+num).html().replace(/\s/g, "")
+	function leftClickNeedAjax(){
+		var content = $('#'+nowMatter).html().replace(/\s/g, "")
 		if (content == '<ul></ul>'){
 			return 'true'
 		}

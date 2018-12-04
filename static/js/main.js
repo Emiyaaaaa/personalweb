@@ -3,24 +3,22 @@ function matterClick(){
 		return 0
 	}
 	$(URLHASH).addClass('active');
-	$('#matter'+LINUM).css('display','block')
-	nowMatter = 'matter'+LINUM
+	$('#'+nowMatter).css('display','block')
   if (LINUM == 3){
     initializePersonalcenterNav()
   }
 	divFadeIn(URLHASH)
 }
 
-function divFadeIn(urlHash) {
-	var num = hashToMatterNum(urlHash)
-	var liLength = $('#matter'+num+' ul li').length;
+function divFadeIn() {
+	var liLength = $('#'+nowMatter+' ul li').length;
 	for (var i = 0; i < liLength; i++) {
-		$('#matter'+num+' ul li:eq(' + i +')').delay(140*i).fadeIn()
+		$('#'+nowMatter+' ul li:eq(' + i +')').delay(140*i).fadeIn()
 		if (i > 6){
-			$('#matter'+num+' ul li:eq(' + i +')').fadeIn()
+			$('#'+nowMatter+' ul li:eq(' + i +')').fadeIn()
 		}
 	}
-  $('#matter'+num+' .loadStatus:last').delay(140*i).fadeIn(10)
+  $('#'+nowMatter+' .loadStatus:last').delay(140*i).fadeIn(10)
 }
 
 function scrollBottomOrTop(){

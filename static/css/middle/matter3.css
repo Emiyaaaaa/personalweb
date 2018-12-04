@@ -4,6 +4,12 @@
     height: 100%
 }
 
+.personalCenter-menu{
+
+    /*position: absolute;*/
+
+}
+
 .personalCenter-menu ul {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -50,6 +56,49 @@
 	-ms-transition: all .35s ease-in-out;
 	-moz-transition: all .35s ease-in-out;
 	-o-transition: all .35s ease-in-out;
+}
+
+/*matter3-0*/
+.cz{
+
+    text-align: center;
+    padding-top: 50px;
+
+}
+
+.cz-content{
+
+    /*text-align: center;*/
+    text-indent: 2em;
+    padding: 30px 65px 0 65px;
+
+}
+
+/*matter3-1*/
+
+.developer-ul{
+
+    margin-top: 30px
+
+}
+
+.developer{
+
+    text-align: center;
+
+}
+
+/*matter3-2*/
+.my-email{
+
+    text-align: center;
+
+}
+
+.MyEmail{
+
+    margin-top: 30px;
+
 }
 
 /*matter3-3*/

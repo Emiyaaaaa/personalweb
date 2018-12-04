@@ -79,8 +79,7 @@ $(document).ready(function() {
 						$('.'+nowMatter+' .loadStatus:last').css('display','none')
 		        		$('.'+nowMatter+' ul:eq(0)').append(data)
 			        	//fadeIn显示
-						var Length = $('.'+nowMatter+' li:lt('+(liLength)+')').length
-						console.log(Length)
+						var Length = $('.'+nowMatter+' li:gt('+(liLength-1)+')').length
 						for (var i = liLength; i < liLength+Length; i++) {
 							$('.'+nowMatter+' li:eq(' + i +')').fadeIn()
 						}

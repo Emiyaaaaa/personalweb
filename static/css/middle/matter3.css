@@ -89,16 +89,48 @@
 }
 
 /*matter3-2*/
-.my-email{
+.matter3-2{
 
-    text-align: center;
+    /*text-align: center;*/
+    margin-left: 180px;
 
 }
 
-.MyEmail{
+.matter3-2 .first_email{
 
     margin-top: 30px;
 
+}
+
+.donation{
+
+    margin-top: 50px;
+
+}
+
+.donation .container1 {
+    position: relative;
+    top: -65px;
+    left: 3em;
+    width: 100px;
+    height: 100px;
+    background: #999999;
+    transition: .3s background;
+}
+
+.donation .container1:hover {
+    background: #09f;
+}
+
+.donation .g1 {
+    width: 100px;
+    height: 100px;
+    background-image: url(/media/donation/g1.ico);
+    background-size: cover;
+    cursor: pointer;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    mix-blend-mode: lighten;
 }
 
 /*matter3-3*/

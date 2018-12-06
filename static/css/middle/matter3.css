@@ -334,7 +334,7 @@
     position: relative;
     border-radius: 25px;
     height: 250px;
-    width: 216px;
+    width: 27%;
     top: 125px;
     left: 53%;
     padding: 20px 20px;
@@ -346,7 +346,7 @@
     
     overflow: auto;
     height: 250px;
-    width: 216px;
+    width: 100%;
 
 }
 

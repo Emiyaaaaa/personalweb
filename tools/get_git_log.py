@@ -3,9 +3,12 @@
 # @Author  : Li Haozheng
 # @Time    : 2018/12/6 12:15
 import os
+from django.conf import settings
+
 from django.shortcuts import render
 
 def get_git_log(request):
+    os.chdir(settings.BASE_DIR)
     log = os.popen('git log --pretty=format:"%cd"')
     log = log.read().split('\n')
     en2num = {

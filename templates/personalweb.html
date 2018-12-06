@@ -78,8 +78,8 @@
 				<span class="target"></span>
 			</div>
 	    	<div id="matter3_0" class="matter3-0" style="display: block;">
-	    		<div class="cz">初衷</div>
-	    		<div class="cz-content">
+	    		<div class="title">初衷</div>
+	    		<div class="content">
 	    			做这个网站的目的呢，一是想提高自己的姿势水平，自己给自己提一些需求并努力完成，也为以后的工作打个基础。二是记录自己对各种框架，优秀代码的学习体会，还有各种踩过的坑以及爬坑办法。以后会在在课余时间开发一些小东西放到“我的应用”里，不过这些都是后话了，目前最重要的是扎实基础。不忘初心，脚踏实地。
 	    		</div>
        		</div>
@@ -145,6 +145,13 @@
 		                }
 		            </script>
 			    </div>
+			    <div class="update_log">
+			    	<ul></ul>
+			    </div>
+			    <div class="update_content">
+			    	<div style="text-indent: 2em;">这里是网站的更新时间，基本每天都会有优化，bug修复及更新，望大家监督。</div>
+			    	<div style="text-indent: 2em;">大佬们如果发现一些安全性问题或bug，请发邮件至2914034404@qq.com与我联系，谢谢！</div>
+			    </div>
         	</div>
 	    </div>
     </div>
@@ -184,6 +191,7 @@
 			LINUM = $(URLHASH).parent().attr('id').split('-')[1]
 		}
 		catch(err){
+			LINUM = 0
 			window.location.href = MAINURL + '404'
 		}
 		var clientWidth = document.documentElement.clientWidth

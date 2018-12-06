@@ -129,18 +129,21 @@
 
 }
 
-.cz{
-	
+.matter3-0{
+
 	font-family:Arial,Helvetica,sans-serif;
- 	color: #8c8c8c;
+	color: #8c8c8c;
+
+}
+
+.matter3-0 .title{
+
  	font-size: 30px;
 
 }
 
-.cz-content{
+.matter3-0 .content{
 
-	font-family:Arial,Helvetica,sans-serif;
-	color: #8c8c8c;
 	line-height:40px;
 	font-size: 20px;
 
@@ -166,5 +169,20 @@
 .matter3-2 .my_email{
 
 	padding-top: 25px;
+
+}
+
+.update_log{
+
+	color: #8c8c8c;
+	font-size: 18px;
+
+}
+
+.update_content,.update_content a{
+
+	color: #8c8c8c;
+	font-size: 21px;
+	line-height: 25px;
 
 }

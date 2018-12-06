@@ -20,13 +20,13 @@
 
 }
 
-.title{
+.matter0 .title{
 
     color: #555555
 
 }
 
-.content, .aCopy{
+.matter0 .content,.matter0 .aCopy,.matter1 .content,.matter1 .aCopy{
 
     letter-spacing: 2px;
     color: #000000;
@@ -46,19 +46,19 @@
 
 }
 
-.content {
+.matter0 .content,.matter1 .content{
 
     display: block;
 
 }
 
-.aCopy {
+.matter0 .aCopy,.matter1 .aCopy{
 
     display: none;
 
 }
 
-.content:hover {
+.matter0 .content:hover,.matter1 .content:hover {
 
     transform: scale(1.08,1.15) translate3d(0,0,0);
 

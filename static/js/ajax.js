@@ -8,6 +8,9 @@ $(document).ready(function() {
 		        success:function(data){
 		        	fillHtml(data,URLHASH)
 		        	matterClick()
+		        	if (LINUM == 3){
+		        		get_update_log()
+		        	}
 		        }
 		    })
 	}
@@ -44,6 +47,7 @@ $(document).ready(function() {
 		}
 		else if(liNum == 3){
 			initializePersonalcenterNav()
+			get_update_log()
 		}
 		
 	})
@@ -245,4 +249,15 @@ function windowSendComment(){
 		})
 	}
 	reply = 'false'	
+}
+
+function get_update_log(){
+	$.ajax({
+	    url:"/",
+	    type:"GET",
+	    data:{"type":"getUpdateLog",'matter':nowMatter},
+	    success:function(data){
+	    	$('.update_log ul').html(data)
+	    }
+	})
 }

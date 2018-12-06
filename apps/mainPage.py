@@ -10,6 +10,7 @@ from django.http import HttpResponse,HttpResponseRedirect
 from personalcenter.views import PersonalCenterView
 from codeDiary.views import CodeDiaryView
 from diary.views import DiaryView
+from tools.get_git_log import get_git_log
 
 from personalcenter.models import Message,WeatherUserStatistics
 from diary.models import DiaryComment,Diary
@@ -38,7 +39,6 @@ def ajax_get(request):
     avatar = simple_personal_info['avatar']
     website_icon = simple_personal_info['website_icon']
     signature = simple_personal_info['signature']
-
     if matter == None:
         main_page = {}
         main_page['signature'] = signature
@@ -57,6 +57,11 @@ def ajax_get(request):
                 finally_id = request.GET.get('finally_id')
                 render_page = DiaryView().getMoreContent(request, finally_id, text_max_length)
                 return render_page
+
+        elif type == 'getUpdateLog':
+            render_page = get_git_log(request)
+            return render_page
+
         else:
             if matter == '#codeDiary':
                 text_id = request.GET.get('text_id')
@@ -136,7 +141,7 @@ def ajax_post(request):
             return JsonResponse({'statusCode': '0'})
 
     elif type == 'weatherUser':
-        ip_ignore_list = ['123.175.158.25']
+        ip_ignore_list = ['']
         ip = request.POST.get('ip')
         city = request.POST.get('city')
         errorCode = request.POST.get('errorCode')

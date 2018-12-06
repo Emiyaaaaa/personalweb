@@ -1,7 +1,8 @@
 .matter3 {
     margin: 30px 5px 0 5px;
-    padding: 0 5px 100px 0;
-    height: 100%
+    padding: 0 5px 10px 0;
+    height: 100%;
+    word-break:break-all;
 }
 
 .personalCenter-menu{
@@ -59,16 +60,15 @@
 }
 
 /*matter3-0*/
-.cz{
+.matter3-0 .title{
 
     text-align: center;
     padding-top: 50px;
 
 }
 
-.cz-content{
+.matter3-0 .content{
 
-    /*text-align: center;*/
     text-indent: 2em;
     padding: 30px 65px 0 65px;
 
@@ -91,8 +91,7 @@
 /*matter3-2*/
 .matter3-2{
 
-    /*text-align: center;*/
-    margin-left: 180px;
+    margin-left: 21%;
 
 }
 
@@ -327,5 +326,36 @@
     position: absolute;
     left: 5%;
     margin: 25px 0 0 0;
+
+}
+
+.update_log{
+
+    position: relative;
+    border-radius: 25px;
+    height: 250px;
+    width: 216px;
+    top: 125px;
+    left: 53%;
+    padding: 20px 20px;
+    box-shadow: 0px 2px 25px rgba(195,195,195,0.9);
+
+}
+
+.update_log ul{
+    
+    overflow: auto;
+    height: 250px;
+    width: 216px;
+
+}
+
+.update_content{
+
+    position: relative;
+    height: 250px;
+    width: 31%;
+    top: -150px;
+    left: 15%;
 
 }

@@ -129,10 +129,13 @@
 }
 
 .donation .g1{
-    width: 45px;
-    height: 45px;
+    position: relative;
+    left: 0.5px;
+    top: 0.7px;
+    width: 43px;
+    height: 43px;
     border-radius: 50%;
-    background-image: url(/media/donation/g1.ico);
+    background-image: url(/media/donation/g111.jpg);
     background-size: cover;
     cursor: pointer;
     background-position: 0 0;

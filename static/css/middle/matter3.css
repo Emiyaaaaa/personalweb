@@ -101,18 +101,6 @@
 
 }
 
-.matter3-2 .first_email{
-
-    margin-top: 70px;
-
-}
-
-.donation{
-
-    margin-top: 50px;
-
-}
-
 .donation .container1 {
     position: relative;
     top: -41px;
@@ -130,12 +118,12 @@
 
 .donation .g1{
     position: relative;
-    left: 0.5px;
-    top: 0.7px;
+    left: 0.3px;
+    top: 0.9px;
     width: 43px;
     height: 43px;
     border-radius: 50%;
-    background-image: url(/media/donation/g111.jpg);
+    background-image: url(/media/donation/g1.jpg);
     background-size: cover;
     cursor: pointer;
     background-position: 0 0;
@@ -366,5 +354,11 @@
     width: 31%;
     top: -150px;
     left: 15%;
+
+}
+
+.matter3-2 .content{
+
+    padding-top: 25px;
 
 }

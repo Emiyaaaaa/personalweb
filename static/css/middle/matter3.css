@@ -103,6 +103,7 @@
 
 .donation .container1 {
     position: relative;
+    overflow: hidden;
     top: -41px;
     left: 3em;
     width: 45px;
@@ -118,12 +119,43 @@
 
 .donation .g1{
     position: relative;
-    left: 0.3px;
-    top: 0.9px;
-    width: 43px;
-    height: 43px;
+    left: 6.3px;
+    top: 3.7px;
+    width: 37px;
+    height: 41px;
     border-radius: 50%;
-    background-image: url(/media/donation/g1.jpg);
+    background-image: url(/media/donation/g11.jpg);
+    background-size: cover;
+    cursor: pointer;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    mix-blend-mode: lighten;
+}
+
+.donation .container2 {
+    position: relative;
+    overflow: hidden;
+    top: -82.6px;
+    left: 5em;
+    width: 45px;
+    height: 38px;
+    border-radius: 50% / 50%;   
+    background: #999999;
+    transition: .3s background;
+}
+
+.donation .container2:hover {
+    background: #3cb035;
+}
+
+.donation .g2{
+    position: relative;
+    left: 5.9px;
+    top: 1.2px;
+    width: 38px;
+    height: 36px;
+    border-radius: 50% / 50%;
+    background-image: url(/media/donation/g22.png);
     background-size: cover;
     cursor: pointer;
     background-position: 0 0;

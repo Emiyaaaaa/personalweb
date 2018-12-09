@@ -51,6 +51,7 @@ class CodeDiaryView():
             for codeDiaryImg in codeDiaryImg:
                 img.append(codeDiaryImg.img)
             content_info['img'] = img
+            content_info['imgLenth'] = len(img)
 
             comment = []
             i = 1

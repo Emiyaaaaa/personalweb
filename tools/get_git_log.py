@@ -35,4 +35,4 @@ def get_git_log(request):
         line = year+'年'+month+'月'+date+'日 '+time
         git_log.append(line)
     # return git_log
-    return render(request,'git_log.html',{'git_log':git_log})
+    return render(request,'gitLog.html',{'git_log':git_log})

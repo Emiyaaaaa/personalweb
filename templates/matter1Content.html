@@ -9,7 +9,11 @@
     <div class="matter1_content">{{ diary.content }}</div>
     <div class="windowImg">
     {% for imgs in diary.img %}
-    <img src="/media/{{ imgs }}">
+        {% if diary.imgLenth == 1 %}
+            <img src="/media/{{ imgs }}" style="width: 600px;">
+        {% else %}
+            <img src="/media/{{ imgs }}">
+        {% endif %}
     {% endfor %}
     </div>
     <div id="fill_window"></div>

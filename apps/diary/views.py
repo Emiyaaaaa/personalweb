@@ -56,6 +56,7 @@ class DiaryView():
             for diaryImg in diaryImg:
                 img.append(diaryImg.img)
             content_info['img'] = img
+            content_info['imgLenth'] = len(img)
 
             comment = []
             i = 0

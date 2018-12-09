@@ -65,8 +65,8 @@
 
 #window img{
 
-    height: 300px;
     width: 300px;
+    max-width: 80%;
     margin: 20px 0 0 5px;
     border-radius: 15px;
 

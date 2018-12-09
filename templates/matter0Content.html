@@ -10,7 +10,11 @@
     <div class="markdown-body">{{ codeDiary.content }}</div>
     <div class="windowImg">
     {% for imgs in codeDiary.img %}
-        <img src="/media/{{ imgs }}">
+        {% if codeDiary.imgLenth == 1 %}
+            <img src="/media/{{ imgs }}" style="width: 600px;">
+        {% else %}
+            <img src="/media/{{ imgs }}">
+        {% endif %}
     {% endfor %}
     </div>
     <div id="fill_window"></div>

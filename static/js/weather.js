@@ -139,6 +139,8 @@
 				}
 				
 				try {
+					document.querySelectorAll(".right .loading-weather")[0].style.display = 'none'
+					document.querySelectorAll(".right .weather")[0].style.display = 'inline'
 					var nowDate = new Date();
 					var nowHour = nowDate.getHours()
 
@@ -164,7 +166,6 @@
 				}
 			}
 			else{
-				document.querySelectorAll(".right .weather")[0].style.display = 'none'
 				console.log('error:'+data.ERRORCODE+' result:'+data.RESULT)
 			}
 			$.ajax({

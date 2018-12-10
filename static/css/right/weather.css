@@ -1,9 +1,26 @@
 .weather{
+    
+    display: none;
+    position: fixed;
+    margin: 58px 0 0 15px;
+    height: 200px;
+    width: 28%
+
+}
+
+.loading-weather{
 
     position: fixed;
     margin: 58px 0 0 15px;
     height: 200px;
-    width: 80%
+    width: 28%
+
+}
+
+.loading-weather .loading{
+
+    margin-left: 30%;
+    margin-top: 16%;
 
 }
 
@@ -16,32 +33,20 @@
 }
 
 .weather .now-city{
-    
-    font-size: 20px;
-    color: #919191;
+
     margin: 30px 0 0 10px;
 
 }
 
 .weather .now-wdp{
 
-    font-size: 20px;
-    color: #919191;
     margin: 5px 0 0 10px;
 
 }
 
 .weather .now-aq{
     
-    font-size: 20px;
-    color: #919191;
     margin: 5px 0 0 10px;
-
-}
-
-.weather-icon{
-
-
 
 }
 

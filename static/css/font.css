@@ -1,3 +1,15 @@
+body{
+
+	font-family: "Microsoft YaHei"
+
+}
+
+.right {
+
+	font-family:Arial,Helvetica,sans-serif;
+
+}
+
 .brief_date{
 	margin: 0 auto;
 	padding: 0px 10px;
@@ -178,5 +190,25 @@
 	color: #8c8c8c;
 	font-size: 21px;
 	line-height: 25px;
+
+}
+
+.weather{
+
+	font-size: 20px;
+    color: #919191;
+
+}
+
+.weather .now-tem{
+    
+    font-size: 50px;
+
+}
+
+.loading-weather{
+	
+	font-size: 20px;
+	color: #a1a1a1;
 
 }

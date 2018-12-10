@@ -27,7 +27,7 @@ $(document).ready(function() {
 		nowMatter = 'matter'+liNum
 
 		if (liNum == 0 || liNum == 1){
-			window.onscroll=scrollBottomOrTop
+			window.onscroll=scrollBottom
 			var urlHash = $(this).attr('href')
 			//判断是否需要ajax
 			if (leftClickNeedAjax() == 'true'){
@@ -70,6 +70,7 @@ $(document).ready(function() {
 
 	function getMoreContent(){
 		if (nowMatter == 'matter0' || nowMatter == 'matter1'){
+			console.log($('.'+nowMatter+' li'))
 			var finally_id = $('.'+nowMatter+' li:last>a:eq(0)').attr('id').match(/\d+/)[0]
 			var liLength = $('.'+nowMatter+' li').length
 			$.ajax({
@@ -89,13 +90,10 @@ $(document).ready(function() {
 						}
 						$('.'+nowMatter+' .loadStatus:last').css('display','block')
 					}
-	        	window.onscroll=scrollBottomOrTop
+	        	window.onscroll=scrollBottom
 	        },
 	        error:function (XMLHttpRequest, textStatus, errorThrown) {
-                console.log(XMLHttpRequest.status)
-                console.log(XMLHttpRequest.readyState)
-                console.log(textStatus)
-	        	window.onscroll=scrollBottomOrTop
+	        	window.onscroll=scrollBottom
             }
 		})
 		}

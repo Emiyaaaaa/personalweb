@@ -32,6 +32,14 @@ def get_git_log(request):
         month = en2num[month]
         date = line[8:10]
         time = line[-19:-14]
+        date = date.strip()
+        # blank_space_length = 8 - len(year+month+date)
+        # if blank_space_length == 1:
+        #     blank_space = '   '
+        # elif blank_space_length == 2:
+        #     blank_space = '   '
+        # else:
+        #     blank_space = ' '
         line = year+'年'+month+'月'+date+'日 '+time
         git_log.append(line)
     # return git_log

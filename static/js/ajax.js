@@ -256,6 +256,8 @@ function get_update_log(){
 	    data:{"type":"getUpdateLog",'matter':nowMatter},
 	    success:function(data){
 	    	$('.update_log ul').html(data)
+	    	var liLength = $('.update_log ul li').length
+	    	$('.update_version').html('(版本: 1.0 更新数: '+liLength+')')
 	    }
 	})
 }

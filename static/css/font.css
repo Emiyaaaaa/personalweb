@@ -1,6 +1,6 @@
 body{
 
-	font-family: "Microsoft YaHei"
+	font-family: Arial,Helvetica,sans-serif;
 
 }
 
@@ -20,7 +20,7 @@ body{
 .brief-content{
 	padding: 9px 10px;
 	line-height:25px;
-	font-size: 15px;
+	font-size: 16px;
 	letter-spacing:2px;
     color: #333333
 }
@@ -41,7 +41,7 @@ body{
 	line-height:25px;
 	font-size: 19px;
 	letter-spacing:2px;
-    color: #333333
+    color: #404040
 }
 
 .windowReplyButton a{

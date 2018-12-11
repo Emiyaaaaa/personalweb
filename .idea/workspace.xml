@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="97ee085e-0965-47c9-afdd-5d7ddcf1463c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/middle/matter3.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/middle/matter3.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/ajax.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/ajax.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/personalweb.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/personalweb.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/get_git_log.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/get_git_log.py" afterDir="false" />
-    </list>
+    <list default="true" id="97ee085e-0965-47c9-afdd-5d7ddcf1463c" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -69,8 +63,8 @@
       <file leaf-file-name="get_git_log.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tools/get_git_log.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="35" column="8" selection-start-line="35" selection-start-column="10" selection-end-line="41" selection-end-column="31" />
+            <state relative-caret-position="526">
+              <caret line="42" column="43" selection-start-line="42" selection-start-column="43" selection-end-line="42" selection-end-column="43" />
               <folding>
                 <element signature="e#101#110#0" expanded="true" />
               </folding>
@@ -1416,8 +1410,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tools/get_git_log.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="35" column="8" selection-start-line="35" selection-start-column="10" selection-end-line="41" selection-end-column="31" />
+        <state relative-caret-position="526">
+          <caret line="42" column="43" selection-start-line="42" selection-start-column="43" selection-end-line="42" selection-end-column="43" />
           <folding>
             <element signature="e#101#110#0" expanded="true" />
           </folding>

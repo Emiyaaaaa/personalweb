@@ -112,6 +112,10 @@ $(document).ready(function() {
 	        		$('.markdown-body').html(marked($('.markdown-body').html()))
 	        	}
 	        	catch(err){}
+	        	markdown_a = $('.markdown-body a')
+	        	for (var i = 0; i < markdown_a.length; i++) {
+	        		markdown_a[i].target="_blank"
+	        	}
 	        	fillWindow()
 	        	replyButton()
 	    }

@@ -37,7 +37,7 @@ class CodeDiaryView():
     def get_content(self,request,text_id):
         codeDiary = CodeDiary.objects.filter(text_id=text_id)
         codeDiaryImg = CodeDiaryImg.objects.filter(codeDiary=text_id)
-        codeComment = CodeComment.objects.filter(comment = text_id)
+        codeComment = CodeComment.objects.exclude(is_display=0).filter(comment = text_id)
         content_info = [{'content':'加载失败'}]
         for codeDiary in codeDiary:
             content_info = {

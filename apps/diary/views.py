@@ -42,7 +42,7 @@ class DiaryView():
     def get_content(self,request,text_id):
         diary = Diary.objects.filter(text_id=text_id)
         diaryImg = DiaryImg.objects.filter(diary=text_id)
-        diaryComment = DiaryComment.objects.filter(comment = text_id)
+        diaryComment = DiaryComment.objects.exclude(is_display=0).filter(comment = text_id)
         content_info = [{'content':'加载失败'}]
         for diary in diary:
             content_info = {

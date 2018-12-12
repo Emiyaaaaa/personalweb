@@ -10,7 +10,7 @@
 			aq = data.aq
 		}
 		if (data.aqi != null){
-			aqi = ':'+data.aqi
+			aqi = ': '+data.aqi
 		}
 		if (data.tem != null){
 			tem = data.tem + degreesCelsius
@@ -66,6 +66,19 @@
 		else{
 			var weather = data.weather_day + '转' + data.weather_night
 		}
+		// weather_icon
+		if (data.weather_day == null && data.weather_night == null){
+			var weather_icon = ''
+		}
+		else if (data.weather_day == null){
+			var weather_icon = data.weather_night
+		}
+		else if (data.weather_night == null){
+			var weather_icon = data.weather_day
+		}
+		else{
+			var weather_icon = data.weather_day
+		}
 		// wdp
 		if (data.wdp_day == null && data.wdp_night == null){
 			var wdp = ''
@@ -80,9 +93,9 @@
 			var wdp = data.wdp_day
 		}
 
-		return {'weather':weather,'tem':tem,'date':date,'wdp':wdp}
+		return {'weather':weather,'weather_icon':weather_icon,'tem':tem,'date':date,'wdp':wdp}
 	}
-	function setWeatherIcon(weather,date){
+	function setWeatherIcon(weather,date,is_now = 0){
 		var weatherDic = {
 			'':'sunny',
 			'晴':'sunny',
@@ -119,7 +132,7 @@
 			var weather_icon = document.querySelectorAll("."+date+"-weather .weather-icon")[0]
 			var weather_background = document.querySelectorAll("."+date+"-weather .weather-background")[0]
 
-			if ((nowHour >= 19 || nowHour <= 5) && (weather == '晴' || weather == '' || weather == '多云')){
+			if ((nowHour >= 19 || nowHour <= 5) && (weather == '晴' || weather == '' || weather == '多云') && (is_now == 1)){
 				weather_icon.innerHTML = '<div class="starry"></div>'
 				weather_background.innerHTML = '<div class="starry-background"></div>'
 			}
@@ -145,6 +158,7 @@
 		url: 'http://api.shujuzhihui.cn/api/weather/ip',
 		data: {'appKey':'9057ff088d24450b93d896cf317835f4','ip':returnCitySN["cip"],'n7':1},
 		success:function(data){
+			console.log(data)
 			errorJson = ''
 			if (data.ERRORCODE == '0'){
 				var city = data.RESULT.area_maybe[0]
@@ -170,10 +184,22 @@
 				document.getElementsByClassName('now-tem')[0].innerHTML = nowWeather.tem
 				document.getElementsByClassName('now-wdp')[0].innerHTML = nowWeather.wdp
 				document.getElementsByClassName('now-aq')[0].innerHTML = nowWeather.aq + nowWeather.aqi
-				setWeatherIcon(nowWeather.weather,"now")
+				setWeatherIcon(nowWeather.weather,"now",1)
 				// today
-				
-				
+				document.getElementsByClassName('today-tem')[0].innerHTML = day1.tem
+				document.getElementsByClassName('today-wea')[0].innerHTML = day1.weather
+				document.getElementsByClassName('today-wdp')[0].innerHTML = day1.wdp
+				setWeatherIcon(day1.weather_icon,"today",1)
+				// tomorrow
+				document.getElementsByClassName('tomorrow-tem')[0].innerHTML = day2.tem
+				document.getElementsByClassName('tomorrow-wea')[0].innerHTML = day2.weather
+				document.getElementsByClassName('tomorrow-wdp')[0].innerHTML = day2.wdp
+				setWeatherIcon(day2.weather_icon,"tomorrow")
+				// after tomorrow
+				document.getElementsByClassName('after-tomorrow-tem')[0].innerHTML = day3.tem
+				document.getElementsByClassName('after-tomorrow-wea')[0].innerHTML = day3.weather
+				document.getElementsByClassName('after-tomorrow-wdp')[0].innerHTML = day3.wdp
+				setWeatherIcon(day3.weather_icon,"after-tomorrow")
 			}
 			else{
 				document.querySelectorAll(".right .loading-weather")[0].innerHTML = '加载失败!'

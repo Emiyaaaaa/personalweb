@@ -82,6 +82,64 @@
 
 		return {'weather':weather,'tem':tem,'date':date,'wdp':wdp}
 	}
+	function setWeatherIcon(weather,date){
+		var weatherDic = {
+			'':'sunny',
+			'晴':'sunny',
+			'多云':'cloudy',
+			'阴':'cloudy',
+			'雨':'rainy',
+			'雪':'snowy',
+			'雷':'stormy'
+		}
+		var backgroundDic = {
+			'':'sunny-background',
+			'晴':'sunny-background',
+			'多云':'cloudy-background',
+			'阴':'overcast-background',
+			'雨':'rainy-background',
+			'雪':'snowy-background',
+			'雷':'stormy-background'
+		}
+
+		if (weather.search("雷") != -1 ){
+			weather = '雷'
+		}
+		else if (weather.search("雨") != -1 ){
+			weather = '雨'
+		}
+		else if (weather.search("雪") != -1 ){
+			weather = '雪'
+		}
+		
+		try {
+
+			var nowDate = new Date()
+			var nowHour = nowDate.getHours()
+			var weather_icon = document.querySelectorAll("."+date+"-weather .weather-icon")[0]
+			var weather_background = document.querySelectorAll("."+date+"-weather .weather-background")[0]
+
+			if ((nowHour >= 19 || nowHour <= 5) && (weather == '晴' || weather == '' || weather == '多云')){
+				weather_icon.innerHTML = '<div class="starry"></div>'
+				weather_background.innerHTML = '<div class="starry-background"></div>'
+			}
+			else{
+				if (weather == ''){
+					weather_icon.innerHTML = '<div class="sunny"></div>'
+					weather_background.innerHTML = '<div class="sunny-background"></div>'
+				}
+				else{
+					weather_icon.innerHTML = '<div class="' + weatherDic[weather] + '"></div>'
+					weather_background.innerHTML = '<div class="' + backgroundDic[weather] + '"></div>'
+				}
+			}
+		}
+		catch(err){
+			weather_icon.innerHTML = '<div class="cloudy"></div>'
+			weather_background.innerHTML = '<div class="sunny-background"></div>'
+			errorJson = data
+		}
+	}
 	$.ajax({
 		type: 'POST',
 		url: 'http://api.shujuzhihui.cn/api/weather/ip',
@@ -94,6 +152,7 @@
 					var area = data.RESULT.areaInfo
 					city = area.city
 				}
+				//now
 				var d1 = data.RESULT.weatherInfo.n7.d1
 				var d2 = data.RESULT.weatherInfo.n7.d2
 				var d3 = data.RESULT.weatherInfo.n7.d3
@@ -103,69 +162,21 @@
 				var day3 = dayJson2str(d3)
 				var nowWeather = nowJson2str(nowJson)
 
+				document.querySelectorAll(".right .loading-weather")[0].style.display = 'none'
+				document.querySelectorAll(".right .weather")[0].style.display = 'inline'
+				addWeatherNevListen()
+				// now
 				document.getElementsByClassName('now-city')[0].innerHTML = city
 				document.getElementsByClassName('now-tem')[0].innerHTML = nowWeather.tem
 				document.getElementsByClassName('now-wdp')[0].innerHTML = nowWeather.wdp
 				document.getElementsByClassName('now-aq')[0].innerHTML = nowWeather.aq + nowWeather.aqi
-
-				var weatherDic = {
-					'':'sunny',
-					'晴':'sunny',
-					'多云':'cloudy',
-					'阴':'cloudy',
-					'雨':'rainy',
-					'雪':'snowy',
-					'雷':'stormy'
-				}
-				var backgroundDic = {
-					'':'sunny-background',
-					'晴':'sunny-background',
-					'多云':'cloudy-background',
-					'阴':'overcast-background',
-					'雨':'rainy-background',
-					'雪':'snowy-background',
-					'雷':'stormy-background'
-				}
-
-				var weather = nowWeather.weather
-				if (weather.search("雷") != -1 ){
-					weather = '雷'
-				}
-				else if (weather.search("雨") != -1 ){
-					weather = '雨'
-				}
-				else if (weather.search("雪") != -1 ){
-					weather = '雪'
-				}
+				setWeatherIcon(nowWeather.weather,"now")
+				// today
 				
-				try {
-					document.querySelectorAll(".right .loading-weather")[0].style.display = 'none'
-					document.querySelectorAll(".right .weather")[0].style.display = 'inline'
-					var nowDate = new Date();
-					var nowHour = nowDate.getHours()
-
-					if ((nowHour >= 19 || nowHour <= 5) && (weather == '晴' || weather == '' || weather == '多云')){
-						document.querySelectorAll(".now-weather .weather-icon")[0].innerHTML = '<div class="starry"></div>'
-						document.querySelectorAll(".now-weather .weather-background")[0].innerHTML = '<div class="starry-background"></div>'
-					}
-					else{
-						if (weather == ''){
-						document.querySelectorAll(".now-weather .weather-icon")[0].innerHTML = '<div class="sunny"></div>'
-						document.querySelectorAll(".now-weather .weather-background")[0].innerHTML = '<div class="sunny-background"></div>'
-						}
-						else{
-							document.querySelectorAll(".now-weather .weather-icon")[0].innerHTML = '<div class="' + weatherDic[weather] + '"></div>'
-							document.querySelectorAll(".now-weather .weather-background")[0].innerHTML = '<div class="' + backgroundDic[weather] + '"></div>'
-						}
-					}
-				}
-				catch(err){
-					document.querySelectorAll(".now-weather .weather-icon")[0].innerHTML = '<div class="cloudy"></div>'
-					document.querySelectorAll(".now-weather .weather-background")[0].innerHTML = '<div class="sunny-background"></div>'
-					errorJson = data
-				}
+				
 			}
 			else{
+				document.querySelectorAll(".right .loading-weather")[0].innerHTML = '加载失败!'
 				console.log('error:'+data.ERRORCODE+' result:'+data.RESULT)
 			}
 			$.ajax({

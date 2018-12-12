@@ -132,3 +132,55 @@
     box-shadow: 0 2px 25px rgba(94,207,103,0.8);
 
 }
+
+.weather-menu{
+
+    position: relative;
+    top: 215px;
+    width: 77%;
+
+}
+
+.weather-menu ul {
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+
+}
+
+.weather-menu li:not(:last-child) {
+
+    margin-right: 9px;
+
+}
+
+.weather-menu li {
+
+    z-index: 1;
+    height: 21px;
+    width: 46px;
+    text-align:center;
+    border-radius: 30px;
+    transition:background-color 0.3s, color 0.2s;
+
+}
+
+.weather-menu li:hover:not(.active) {
+
+    background-color: #B5B5B5;
+    color: white;
+}
+
+.weather-menu li.active {
+
+    background-color: #B5B5B5;
+    color: white;
+}

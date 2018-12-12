@@ -12,6 +12,17 @@ function matterClick(){
 	}
 }
 
+function addWeatherNevListen(){
+	$(".weather-menu li").click(function () {
+		$('.weather-menu li').removeClass('active')
+		$(this).addClass('active')
+		var liNum = $(this).attr('id').split('-')[1]
+		$('.weather > div').css('display','none')
+		$('.weather .weather-menu').css('display','block')
+		$('#w_matter_'+liNum).css('display','block')
+	})
+}
+
 function divFadeIn() {
 	var liLength = $('#'+nowMatter+' ul li').length;
 	for (var i = 0; i < liLength; i++) {

@@ -221,3 +221,11 @@ body{
 	color: #707070
 
 }
+
+.today-weather .weather-info>div,
+.tomorrow-weather .weather-info>div,
+.after-tomorrow-weather .weather-info>div{
+
+    font-size: 23px;
+
+}

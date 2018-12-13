@@ -57,6 +57,22 @@
 
 }
 
+.today-weather .weather-info>div:not(:first-child),
+.tomorrow-weather .weather-info>div:not(:first-child),
+.after-tomorrow-weather .weather-info>div:not(:first-child){
+
+    margin: 7px 0 0 20px;
+
+}
+
+.today-tem,
+.tomorrow-tem,
+.after-tomorrow-tem{
+
+    margin: 45px 0 0 20px;
+
+}
+
 .rainy-background,
 .overcast-background,
 .sunny-background,

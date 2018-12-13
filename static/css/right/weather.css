@@ -26,8 +26,6 @@
 
 .weather .now-tem{
 
-    font-size: 50px;
-    color: #919191;
     margin: 5px 0 0 5px;
 
 }
@@ -57,11 +55,11 @@
 
 }
 
-.today-weather .weather-info>div:not(:first-child),
-.tomorrow-weather .weather-info>div:not(:first-child),
-.after-tomorrow-weather .weather-info>div:not(:first-child){
+.today-weather .weather-info>div:not(:nth-child(2)):not(:nth-child(1)),
+.tomorrow-weather .weather-info>div:not(:nth-child(2)):not(:nth-child(1)),
+.after-tomorrow-weather .weather-info>div:not(:nth-child(2)):not(:nth-child(1)){
 
-    margin: 7px 0 0 20px;
+    margin: 5px 0 0 10px;
 
 }
 
@@ -69,7 +67,7 @@
 .tomorrow-tem,
 .after-tomorrow-tem{
 
-    margin: 45px 0 0 20px;
+    margin: 20px 0 33px 10px;
 
 }
 

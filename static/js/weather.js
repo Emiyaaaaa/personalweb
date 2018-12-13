@@ -187,16 +187,19 @@
 				setWeatherIcon(nowWeather.weather,"now",1)
 				// today
 				document.getElementsByClassName('today-tem')[0].innerHTML = day1.tem
+				document.getElementsByClassName('now-city')[1].innerHTML = city
 				document.getElementsByClassName('today-wea')[0].innerHTML = day1.weather
 				document.getElementsByClassName('today-wdp')[0].innerHTML = day1.wdp
 				setWeatherIcon(day1.weather_icon,"today",1)
 				// tomorrow
 				document.getElementsByClassName('tomorrow-tem')[0].innerHTML = day2.tem
+				document.getElementsByClassName('now-city')[2].innerHTML = city
 				document.getElementsByClassName('tomorrow-wea')[0].innerHTML = day2.weather
 				document.getElementsByClassName('tomorrow-wdp')[0].innerHTML = day2.wdp
 				setWeatherIcon(day2.weather_icon,"tomorrow")
 				// after tomorrow
 				document.getElementsByClassName('after-tomorrow-tem')[0].innerHTML = day3.tem
+				document.getElementsByClassName('now-city')[3].innerHTML = city
 				document.getElementsByClassName('after-tomorrow-wea')[0].innerHTML = day3.weather
 				document.getElementsByClassName('after-tomorrow-wdp')[0].innerHTML = day3.wdp
 				setWeatherIcon(day3.weather_icon,"after-tomorrow")

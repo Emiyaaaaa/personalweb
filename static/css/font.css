@@ -208,6 +208,15 @@ body{
 
 }
 
+.today-tem,
+.tomorrow-tem,
+.after-tomorrow-tem{
+
+    font-size: 35px;
+    color: #808080
+
+}
+
 .loading-weather{
 	
 	font-size: 20px;
@@ -219,13 +228,5 @@ body{
 
 	font-size: 16px;
 	color: #707070
-
-}
-
-.today-weather .weather-info>div,
-.tomorrow-weather .weather-info>div,
-.after-tomorrow-weather .weather-info>div{
-
-    font-size: 23px;
 
 }

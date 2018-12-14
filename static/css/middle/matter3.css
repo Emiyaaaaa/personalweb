@@ -375,7 +375,8 @@
 .update_content{
 
     position: relative;
-    height: 250px;
+    overflow: auto;
+    height:300px;
     width: 31%;
     top: -150px;
     left: 15%;

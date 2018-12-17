@@ -1,14 +1,14 @@
 function matterClick(){
 	if (URLHASH == undefined){
-		return 0
+		return 0;
 	}
 	$(URLHASH).addClass('active');
-	$('#'+nowMatter).css('display','block')
+	$('#'+nowMatter).css('display','block');
 	if (LINUM == 3){
-		initializePersonalcenterNav()
+		initializePersonalcenterNav();
 	}
 	else if (LINUM == 1 || LINUM == 0){
-		divFadeIn(URLHASH)
+		divFadeIn(URLHASH);
 	}
 }
 

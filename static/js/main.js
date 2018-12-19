@@ -26,13 +26,13 @@ function addWeatherNevListen(){
 function divFadeIn() {
 	var liLength = $('#'+nowMatter+' ul li').length;
 	for (var i = 0; i < liLength; i++) {
-		$('#'+nowMatter+' ul li:eq(' + i +')').delay(140*i).fadeIn()
+		$('#'+nowMatter+' ul li:eq(' + i +')').delay(140*i).fadeIn();
 		if (i > 6){
-			$('#'+nowMatter+' ul li:eq(' + i +')').fadeIn()
+			$('#'+nowMatter+' ul li:eq(' + i +')').fadeIn();
 		}
 	}
-  	$('#'+nowMatter+' .loadStatus:last').delay(140*i).fadeIn(10)
-	setTimeout(function(){scrollBottom();},140*i)
+  	$('#'+nowMatter+' .loadStatus:last').delay(140*i).fadeIn(10);
+	setTimeout(function(){scrollBottom();},140*i);
 
 }
 
@@ -41,26 +41,26 @@ function scrollBottom(){
 	var scrollTop=document.documentElement.scrollTop;
 	var wholeHeight=document.body.scrollHeight;
 	if(clients + scrollTop >= wholeHeight-1){
-		getMoreContent()
+		getMoreContent();
 		window.onscroll = function(){};
 	}
 }
 window.onscroll=scrollBottom;
 
 function getDivPosition(id){
-	var left = document.getElementById(id).getBoundingClientRect().left
-	var top = document.getElementById(id).getBoundingClientRect().top
-	return [left,top]
+	var left = document.getElementById(id).getBoundingClientRect().left;
+	var top = document.getElementById(id).getBoundingClientRect().top;
+	return [left,top];
 }
 
 function getClientSize(){
-	clientWidth = document.documentElement.clientWidth
-	clientHeight = document.documentElement.clientHeight
+	clientWidth = document.documentElement.clientWidth;
+	clientHeight = document.documentElement.clientHeight;
 }
 
 
 function hashToMatterNum(urlHash){
-	return $(urlHash).parent().attr('id').split('-')[1]
+	return $(urlHash).parent().attr('id').split('-')[1];
 }
 
 function isNull(str){

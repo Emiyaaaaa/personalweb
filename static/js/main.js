@@ -88,33 +88,32 @@ function rgb2rgba(strRgb){
 
 function fillWindow(){
 
-	var ajaxHtml = document.getElementById('ajax_window_html')
-	var mainContent = document.getElementById('mainContent')
-	var fill_window = document.getElementById('fill_window')
-	var ajaxHtmlHeight = ajaxHtml.offsetHeight + 14
-	var mainContentHeight = mainContent.offsetHeight-17-17//17为padding
-	var fillWindowHeight = mainContentHeight-ajaxHtmlHeight-10//再减10是为了防止计算误差导致的滚动条出现
+	var ajaxHtml = document.getElementById('ajax_window_html');
+	var mainContent = document.getElementById('mainContent');
+	var fill_window = document.getElementById('fill_window');
+	var ajaxHtmlHeight = ajaxHtml.offsetHeight + 14;
+	var mainContentHeight = mainContent.offsetHeight-17-17;//17为padding
+	var fillWindowHeight = mainContentHeight-ajaxHtmlHeight-10;//再减10是为了防止计算误差导致的滚动条出现
 	if (fillWindowHeight <= 0){
-	  fillWindowHeight = 0
+	  fillWindowHeight = 0;
 	}
-	// console.log(ajaxHtmlHeight,mainContentHeight)
-	fill_window.style.setProperty('--padding-top',fillWindowHeight+'px')
+	fill_window.style.setProperty('--padding-top',fillWindowHeight+'px');
 
 }
 
 function replyButton() {
 
-	var comment = document.getElementsByClassName('comment')
-	var replyButton = document.getElementsByClassName('windowReplyButton')
+	var comment = document.getElementsByClassName('comment');
+	var replyButton = document.getElementsByClassName('windowReplyButton');
 	for (var i = 0; i < comment.length; i++) {
 	  !function(i){
 
 	    comment[i].onmouseover = function (){
-	      replyButton[i].style.display = 'inline'
+	      replyButton[i].style.display = 'inline';
 	    }
 
 	    comment[i].onmouseout = function (){
-	      replyButton[i].style.display = 'none'
+	      replyButton[i].style.display = 'none';
 	    }
 
 	  }(i)
@@ -123,18 +122,18 @@ function replyButton() {
 
 function clickReplyButton(obj) {
 
-	document.getElementById("windowComment").scrollIntoView()
-	var nickname = obj.parentNode.parentNode.children[0].innerText
-	$('.window-comment-hint').html('回复：'+ nickname + '<span class="cancelReply"><a href="javascript:void(0)" onclick="cancelReply()">取消回复</a></span>')
-	reply = 'true'
-	reply_nickname = nickname
+	document.getElementById("windowComment").scrollIntoView();
+	var nickname = obj.parentNode.parentNode.children[0].innerText;
+	$('.window-comment-hint').html('回复：'+ nickname + '<span class="cancelReply"><a href="javascript:void(0)" onclick="cancelReply()">取消回复</a></span>');
+	reply = 'true';
+	reply_nickname = nickname;
 
 }
 
 function cancelReply(){
 
-	$('.window-comment-hint').html('')
-	reply = 'false'
+	$('.window-comment-hint').html('');
+	reply = 'false';
 
 }
 

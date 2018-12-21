@@ -6,29 +6,29 @@ $(document).ready(function() {
 		        type:"GET",
 		        data:{"matter":URLHASH,"text_max_length":TEXTMAXLENGTH},
 		        success:function(data){
-		        	fillHtml(data,URLHASH)
-		        	matterClick()
+		        	fillHtml(data,URLHASH);
+		        	matterClick();
 		        	if (LINUM == 3){
-		        		get_update_log()
+		        		get_update_log();
 		        	}
 		        }
 		    })
 	}
-	mainPage()
+	mainPage();
 
 	//其他页面
 	$('.left-menu a').click(function () {
 		//导航栏交互
-		$('.left-menu a').removeClass('active')
-		$(this).addClass('active')
-		var liNum = $(this).parent().attr('id').split('-')[1]
-		$('#middle > div').css('display','none')
-		$('#matter'+liNum).css('display','block')
-		nowMatter = 'matter'+liNum
+		$('.left-menu a').removeClass('active');
+		$(this).addClass('active');
+		var liNum = $(this).parent().attr('id').split('-')[1];
+		$('#middle > div').css('display','none');
+		$('#matter'+liNum).css('display','block');
+		nowMatter = 'matter'+liNum;
 
 		if (liNum == 0 || liNum == 1){
-			window.onscroll=scrollBottom
-			var urlHash = $(this).attr('href')
+			window.onscroll=scrollBottom;
+			var urlHash = $(this).attr('href');
 			//判断是否需要ajax
 			if (leftClickNeedAjax() == 'true'){
 				$.ajax({
@@ -36,35 +36,35 @@ $(document).ready(function() {
 			        type:"GET",
 			        data:{"matter":urlHash,"text_max_length":TEXTMAXLENGTH},
 			        success:function(data){
-			        	fillHtml(data,urlHash)
-			        	divFadeIn()
+			        	fillHtml(data,urlHash);
+			        	divFadeIn();
 			        }
 	    		})
 			}
 			if ($('.'+nowMatter+' li').css('display') == 'none'){
-				divFadeIn()
+				divFadeIn();
 			}
 		}
 		else if(liNum == 3){
-			initializePersonalcenterNav()
-			get_update_log()
+			initializePersonalcenterNav();
+			get_update_log();
 		}
 		
 	})
 
 	function fillHtml(data,urlHash){
 		if (urlHash == '#codeDiary'){
-    		$('.codeDiary ul').html(data)
+    		$('.codeDiary ul').html(data);
 		}
 		else if (urlHash == '#diary'){
-    		$('.diary ul').html(data)
+    		$('.diary ul').html(data);
 		}
 		else if (urlHash == '#application'){
 		}
 		else if (urlHash == '#personalCenter'){
 		}
 		else {
-		window.location.href = MAINURL + '404'
+		window.location.href = MAINURL + '404';
 		}	
 	}
 

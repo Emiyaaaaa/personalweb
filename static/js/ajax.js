@@ -70,9 +70,9 @@ $(document).ready(function() {
 
 	function getMoreContent(){
 		if (nowMatter == 'matter0' || nowMatter == 'matter1'){
-			console.log($('.'+nowMatter+' li'))
-			var finally_id = $('.'+nowMatter+' li:last>a:eq(0)').attr('id').match(/\d+/)[0]
-			var liLength = $('.'+nowMatter+' li').length
+			console.log($('.'+nowMatter+' li'));
+			var finally_id = $('.'+nowMatter+' li:last>a:eq(0)').attr('id').match(/\d+/)[0];
+			var liLength = $('.'+nowMatter+' li').length;
 			$.ajax({
 		        url:"/",
 		        type:"GET",
@@ -81,24 +81,24 @@ $(document).ready(function() {
 		        	if (data.status == 'ended'){
 	        		}
 					else{
-						$('.'+nowMatter+' .loadStatus:last').css('display','none')
-		        		$('.'+nowMatter+' ul:eq(0)').append(data)
+						$('.'+nowMatter+' .loadStatus:last').css('display','none');
+		        		$('.'+nowMatter+' ul:eq(0)').append(data);
 			        	//fadeIn显示
-						var Length = $('.'+nowMatter+' li:gt('+(liLength-1)+')').length
+						var Length = $('.'+nowMatter+' li:gt('+(liLength-1)+')').length;
 						for (var i = liLength; i < liLength+Length; i++) {
-							$('.'+nowMatter+' li:eq(' + i +')').fadeIn()
+							$('.'+nowMatter+' li:eq(' + i +')').fadeIn();
 						}
-						$('.'+nowMatter+' .loadStatus:last').css('display','block')
+						$('.'+nowMatter+' .loadStatus:last').css('display','block');
 					}
-	        	window.onscroll=scrollBottom
+	        	window.onscroll=scrollBottom;
 	        },
 	        error:function (XMLHttpRequest, textStatus, errorThrown) {
-	        	window.onscroll=scrollBottom
+	        	window.onscroll=scrollBottom;
             }
 		})
 		}
 	}
-	window.getMoreContent = getMoreContent
+	window.getMoreContent = getMoreContent;
 
 	//获取全文	
 	function getMattersContent(href){

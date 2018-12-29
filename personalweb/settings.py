@@ -52,7 +52,8 @@ INSTALLED_APPS = [
     'codeDiary',
     'notFoundPage',
     'markdown',
-    'markdown_deux'
+    'markdown_deux',
+    # 'django_crontab'
 ]
 
 MIDDLEWARE = [
@@ -86,6 +87,10 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'personalweb.wsgi.application'
 
+
+# CRONJOBS = [
+#     ('01 20 * * *','changeLog.cron.check','>>/test.log'),
+# ]
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),os.path.join(BASE_DIR, 'media')]

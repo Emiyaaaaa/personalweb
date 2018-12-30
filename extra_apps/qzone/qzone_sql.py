@@ -40,8 +40,8 @@ class GetQzoneToMysql(object):
         cursor.execute('SELECT id FROM qzone_html')
         id_all = cursor.fetchall()
         if id_all == ():
-            sql = 'INSERT INTO qzone_html (html,time,upload_time) VALUES (%s,%s,%s)'
-            cursor.execute(sql, ('lhz', '1970年1月1日 08:00','1970年1月1日 08:00'))
+            sql = 'INSERT INTO qzone_html (html,time,upload_time,is_turned) VALUES (%s,%s,%s,%s)'
+            cursor.execute(sql, ('lhz', '1970年1月1日 08:00','1970年1月1日 08:00',0))
             connect.commit()
         return cursor,connect
 
@@ -60,10 +60,12 @@ class GetQzoneToMysql(object):
 
         timeArray = time.strptime(time_, "%Y年%m月%d日 %H:%M")
         time__ = time.mktime(timeArray)
-        new_time = self.new_time(time__, sql_new_time[0])
+        upload_time_ = time.mktime(time.strptime(sql_new_time[0][0], "%Y年%m月%d日 %H:%M"))
+        new_time = self.new_time(time__, upload_time_)
+        print(time__ ,sql_new_time[0],new_time)
         if new_time == time__ and new_time != sql_new_time[0]:
-            sql = 'INSERT INTO qzone_html (html,time,upload_time) VALUES (%s,%s,%s)'
-            cursor.execute(sql, (text, time_,upload_time))
+            sql = 'INSERT INTO qzone_html (html,time,upload_time,is_turned) VALUES (%s,%s,%s,%s)'
+            cursor.execute(sql, (text, time_,upload_time,0))
             connect.commit()
             return 'ok'
         else:
@@ -126,7 +128,6 @@ class GetQzoneToMysql(object):
                         time.sleep(3)
                         continue
 
-
         # driver.close()
         # driver.quit()
 
@@ -143,7 +144,7 @@ class GetQzoneToMysql(object):
         time_re = r'<a class="c_tx c_tx3 goDetail"[\s\S]+?title="([\s\S]+?)"'
         text_re = r'<a href="http://rc.qzone.qq.com/qzonesoso/\?search=%E6%89%BE%E5%AF%B9%E8%B1%A1&amp;entry=99&amp;businesstype=mood" target="_blank">[\s\S]+?找对象#</a>([\s\S]+?)<(/pre|a)'
 
-        info = ' '
+        info = ''
         for i in range(len(li)):
             if re.findall(text_re,str(li[i])) != []:
                 time_ = re.findall(time_re, str(li[i]))
@@ -153,7 +154,7 @@ class GetQzoneToMysql(object):
                     try:
                         info = self.up_mysql(str(li[i]),time_[0],upload_time)
                         if info == 'ok':
-                            print('succeed')
+                            print('succeed1')
                             time.sleep(1)
                     except BaseException as e:
                         print('failed')
@@ -171,7 +172,7 @@ class GetQzoneToMysql(object):
 
     def new_time(self,time_,upload_time):
 
-        timeArray = time.strptime(upload_time[0], "%Y年%m月%d日 %H:%M")
+        timeArray = time.strptime(upload_time, "%Y年%m月%d日 %H:%M")
         upload_time_ = time.mktime(timeArray)
         new_time = max(int(time_),int(upload_time_))
 

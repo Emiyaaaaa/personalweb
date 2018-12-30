@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97ee085e-0965-47c9-afdd-5d7ddcf1463c" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/extra_apps/qzone/qzone_sql.py" beforeDir="false" afterPath="$PROJECT_DIR$/extra_apps/qzone/qzone_sql.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -76,8 +77,8 @@
       <file leaf-file-name="qzone_sql.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/extra_apps/qzone/qzone_sql.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="65" column="43" selection-start-line="65" selection-start-column="43" selection-end-line="65" selection-end-column="43" />
+            <state relative-caret-position="858">
+              <caret line="179" column="26" selection-start-line="179" selection-start-column="26" selection-end-line="179" selection-end-column="26" />
               <folding>
                 <element signature="e#78#107#0" expanded="true" />
               </folding>
@@ -134,6 +135,8 @@
       <find>from_db_value</find>
       <find>get_db_prep_</find>
       <find>succe</find>
+      <find>exit</find>
+      <find>print</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -987,7 +990,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.9201141" />
       <window_info anchor="bottom" id="Python Console" order="9" weight="0.32952926" />
-      <window_info active="true" anchor="right" id="Run" order="5" sideWeight="0.49798927" visible="true" weight="0.27211797" />
+      <window_info anchor="right" id="Run" order="5" sideWeight="0.49798927" weight="0.27211797" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32952926" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49787235" visible="true" weight="0.18096514" />
       <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
@@ -1369,8 +1372,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/extra_apps/qzone/qzone_sql.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="65" column="43" selection-start-line="65" selection-start-column="43" selection-end-line="65" selection-end-column="43" />
+        <state relative-caret-position="858">
+          <caret line="179" column="26" selection-start-line="179" selection-start-column="26" selection-end-line="179" selection-end-column="26" />
           <folding>
             <element signature="e#78#107#0" expanded="true" />
           </folding>

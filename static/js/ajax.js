@@ -107,26 +107,26 @@ $(document).ready(function() {
 	        type:"GET",
 	        data:{'matter':href.split('?')[0],'text_id':href.split('?')[1].split('=')[1]},
 	        success:function(data){
-	        	$('#ajax_window_html').html(data)
+	        	$('#ajax_window_html').html(data);
 	        	try{
-	        		$('.markdown-body').html(marked($('.markdown-body').html()))
+	        		$('.markdown-body').html(marked($('.markdown-body').html()));
 	        	}
 	        	catch(err){}
-	        	var markdown_a = $('.markdown-body a')
+	        	var markdown_a = $('.markdown-body a');
 	        	for (var i = 0; i < markdown_a.length; i++) {
-	        		markdown_a[i].target="_blank"
+	        		markdown_a[i].target="_blank";
 	        	}
-	        	fillWindow()
-	        	replyButton()
+	        	fillWindow();
+	        	replyButton();
 	    }
 		})
 	}
-	window.getMattersContent = getMattersContent
+	window.getMattersContent = getMattersContent;
 
 	function leftClickNeedAjax(){
-		var content = $('#'+nowMatter).html().replace(/\s/g, "")
+		var content = $('#'+nowMatter).html().replace(/\s/g, "");
 		if (content == '<ul></ul>'){
-			return 'true'
+			return 'true';
 		}
 	}
 
@@ -135,40 +135,40 @@ $(document).ready(function() {
 // matter3_3建议
 function matter33SendMessage(){
 
-	var comment_to = ''
-	var password = ''
-	var disabled_name = new Array('Emiya','emiya')
-	var nickname = $('#suggestion_nike_name').val()
-	var email = $('#suggestion_user_email').val()
-	var content = $('#suggestion_content').val()
+	var comment_to = '';
+	var password = '';
+	var disabled_name = new Array('Emiya','emiya');
+	var nickname = $('#suggestion_nike_name').val();
+	var email = $('#suggestion_user_email').val();
+	var content = $('#suggestion_content').val();
 
 	if (isInArray(disabled_name,nickname) == true){
-		password = prompt("使用此昵称需要输入密码","")
+		password = prompt("使用此昵称需要输入密码","");
     	$.ajax({
 	        url:"/",
 	        type:"POST",
 	        data:{"type":"validatePassword",'password':password},
 	        success:function(data){
 	        	if (data.password == 'right'){
-	        		alert('密码正确！')
-	        		$('#suggestion_nike_name').parent().removeClass("error")
+	        		alert('密码正确！');
+	        		$('#suggestion_nike_name').parent().removeClass("error");
 	        	}
 	        	else{
-	        		alert('密码错误！')
-	        		$('#suggestion_nike_name').val('')
-	        		$('#suggestion_nike_name').parent().addClass("error")
-	        		$('#suggestion_nike_name').focus()
+	        		alert('密码错误！');
+	        		$('#suggestion_nike_name').val('');
+	        		$('#suggestion_nike_name').parent().addClass("error");
+	        		$('#suggestion_nike_name').focus();
 	        	}
 			}
 		})
 	}
 	if (isNull(content)){
-		$('.suggestion-comment-hint').html('提示：建议内容不能为空哦~')
-		$('#suggestion_content').parent().addClass("error")
-        $('#suggestion_content').focus()
+		$('.suggestion-comment-hint').html('提示：建议内容不能为空哦~');
+		$('#suggestion_content').parent().addClass("error");
+        $('#suggestion_content').focus();
 	}
 	else{
-		$('#suggestion_content').parent().removeClass("error")
+		$('#suggestion_content').parent().removeClass("error");
 		$.ajax({
 	        url:"/",
 	        type:"POST",
@@ -176,13 +176,13 @@ function matter33SendMessage(){
 	        data:{"type":"matter33SendMessage","nickname":nickname,"email":email,"content":content},
 	        success:function(data){
 	        	if (data.statusCode == '1'){
-	        		$('.suggestion-comment-hint').html('提示：评论成功！ ღ( ´･ᴗ･` )比心')
-	        		$('#suggestion_nike_name').val('')
-					$('#suggestion_user_email').val('')
-					$('#suggestion_content').val('')
+	        		$('.suggestion-comment-hint').html('提示：评论成功！ ღ( ´･ᴗ･` )比心');
+	        		$('#suggestion_nike_name').val('');
+					$('#suggestion_user_email').val('');
+					$('#suggestion_content').val('');
 	        	}
 	        	else {
-	        		$('.suggestion-comment-hint').html('提示：提交失败，请再试一次~')
+	        		$('.suggestion-comment-hint').html('提示：提交失败，请再试一次~');
 	        	}
 	        }
 		})

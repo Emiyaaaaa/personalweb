@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="97ee085e-0965-47c9-afdd-5d7ddcf1463c" name="Default" comment="update">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/qzone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/qzone/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="97ee085e-0965-47c9-afdd-5d7ddcf1463c" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/extra_apps/qzone/deal_sql.py" beforeDir="false" afterPath="$PROJECT_DIR$/extra_apps/qzone/deal_sql.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/extra_apps/qzone/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/extra_apps/qzone/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/extra_apps/qzone/qzone_sql.py" beforeDir="false" afterPath="$PROJECT_DIR$/extra_apps/qzone/qzone_sql.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -81,11 +82,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/extra_apps/qzone/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="5" column="5" lean-forward="true" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+            <state relative-caret-position="325">
+              <caret line="13" column="33" lean-forward="true" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+              <folding>
+                <element signature="e#77#86#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -93,8 +97,11 @@
       <file leaf-file-name="qzone_sql.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/extra_apps/qzone/qzone_sql.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+            <state relative-caret-position="250">
+              <caret line="10" column="44" lean-forward="true" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
+              <folding>
+                <element signature="e#78#107#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -110,7 +117,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="set_password.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="set_password.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/extra_apps/qzone/config/set_password.py">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
@@ -118,8 +125,8 @@
       <file leaf-file-name="deal_sql.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/extra_apps/qzone/deal_sql.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+            <state relative-caret-position="225">
+              <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -218,10 +225,10 @@
         <option value="$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/fcntl.py" />
         <option value="$PROJECT_DIR$/personalweb/settings.py" />
         <option value="$PROJECT_DIR$/extra_apps/qzone/run.py" />
+        <option value="$PROJECT_DIR$/../untitled/草稿箱/qzone/main.py" />
+        <option value="$PROJECT_DIR$/extra_apps/qzone/main.py" />
         <option value="$PROJECT_DIR$/extra_apps/qzone/qzone_sql.py" />
         <option value="$PROJECT_DIR$/extra_apps/qzone/deal_sql.py" />
-        <option value="$PROJECT_DIR$/extra_apps/qzone/main.py" />
-        <option value="$PROJECT_DIR$/../untitled/草稿箱/qzone/main.py" />
       </list>
     </option>
   </component>
@@ -271,6 +278,13 @@
               <item name="personalweb" type="462c0819:PsiDirectoryNode" />
               <item name="extra_apps" type="462c0819:PsiDirectoryNode" />
               <item name="qzone" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="personalweb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="personalweb" type="462c0819:PsiDirectoryNode" />
+              <item name="extra_apps" type="462c0819:PsiDirectoryNode" />
+              <item name="qzone" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="personalweb" type="b2602c69:ProjectViewProjectNode" />
@@ -634,20 +648,6 @@
       <option name="presentableId" value="Default" />
       <updated>1535974839541</updated>
     </task>
-    <task id="LOCAL-00109" summary="fixed bug">
-      <created>1540787284438</created>
-      <option name="number" value="00109" />
-      <option name="presentableId" value="LOCAL-00109" />
-      <option name="project" value="LOCAL" />
-      <updated>1540787284440</updated>
-    </task>
-    <task id="LOCAL-00110" summary="fixed bug">
-      <created>1540788366121</created>
-      <option name="number" value="00110" />
-      <option name="presentableId" value="LOCAL-00110" />
-      <option name="project" value="LOCAL" />
-      <updated>1540788366121</updated>
-    </task>
     <task id="LOCAL-00111" summary="update">
       <created>1540791178260</created>
       <option name="number" value="00111" />
@@ -977,7 +977,21 @@
       <option name="project" value="LOCAL" />
       <updated>1546086823035</updated>
     </task>
-    <option name="localTasksCounter" value="158" />
+    <task id="LOCAL-00158" summary="update">
+      <created>1546149075940</created>
+      <option name="number" value="00158" />
+      <option name="presentableId" value="LOCAL-00158" />
+      <option name="project" value="LOCAL" />
+      <updated>1546149075941</updated>
+    </task>
+    <task id="LOCAL-00159" summary="update">
+      <created>1546149144538</created>
+      <option name="number" value="00159" />
+      <option name="presentableId" value="LOCAL-00159" />
+      <option name="project" value="LOCAL" />
+      <updated>1546149144538</updated>
+    </task>
+    <option name="localTasksCounter" value="160" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1334,13 +1348,33 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/extra_apps/qzone/run.py" />
-    <entry file="file://$PROJECT_DIR$/extra_apps/qzone/config/set_password.py">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/extra_apps/qzone/qzone_sql.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="10" column="44" lean-forward="true" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
+          <folding>
+            <element signature="e#78#107#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/extra_apps/qzone/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="13" column="33" lean-forward="true" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+          <folding>
+            <element signature="e#77#86#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/extra_apps/qzone/deal_sql.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+        <state relative-caret-position="225">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -1353,22 +1387,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/extra_apps/qzone/qzone_sql.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/extra_apps/qzone/config/set_password.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/extra_apps/qzone/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="5" lean-forward="true" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
-        </state>
-      </provider>
     </entry>
   </component>
 </project>

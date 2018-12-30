@@ -60,10 +60,9 @@ class GetQzoneToMysql(object):
 
         timeArray = time.strptime(time_, "%Y年%m月%d日 %H:%M")
         time__ = time.mktime(timeArray)
-        upload_time_ = time.mktime(time.strptime(sql_new_time[0][0], "%Y年%m月%d日 %H:%M"))
-        new_time = self.new_time(time__, upload_time_)
-        print(time__ ,sql_new_time[0],new_time)
-        if new_time == time__ and new_time != sql_new_time[0]:
+        sql_new_time_ = time.mktime(time.strptime(sql_new_time[0][0], "%Y年%m月%d日 %H:%M"))
+        new_time = self.new_time(time__, sql_new_time[0][0])
+        if new_time == time__ and new_time != sql_new_time_:
             sql = 'INSERT INTO qzone_html (html,time,upload_time,is_turned) VALUES (%s,%s,%s,%s)'
             cursor.execute(sql, (text, time_,upload_time,0))
             connect.commit()
@@ -116,7 +115,7 @@ class GetQzoneToMysql(object):
                 info = self.get_time(driver.page_source)
 
                 if info == 'exit':
-                    exit(0)
+                    break
                 else:
                     #nextpage
                     try:
@@ -166,7 +165,7 @@ class GetQzoneToMysql(object):
                         break
                 else:
                     print('time error!')
-                    exit(1)
+                    break
 
         return info
 

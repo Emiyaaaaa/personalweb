@@ -95,7 +95,7 @@ class GetQzoneToMysql(object):
                 time.sleep(4)
                 driver.implicitly_wait(4)
             else:
-                time.sleep(20)
+                time.sleep(30)
                 #手动扫码
         try:
             driver.find_element_by_id('QM_OwnerInfo_Icon')

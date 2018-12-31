@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97ee085e-0965-47c9-afdd-5d7ddcf1463c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/extra_apps/qzone/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/extra_apps/qzone/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/extra_apps/qzone/qzone_sql.py" beforeDir="false" afterPath="$PROJECT_DIR$/extra_apps/qzone/qzone_sql.py" afterDir="false" />
     </list>
@@ -26,6 +25,7 @@
     <SUITE FILE_PATH="coverage/personalweb$11.coverage" NAME="11 Coverage Results" MODIFIED="1546154051429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../untitled/草稿箱" />
     <SUITE FILE_PATH="coverage/personalweb$qzone_sql.coverage" NAME="qzone_sql Coverage Results" MODIFIED="1546157545260" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/extra_apps/qzone" />
     <SUITE FILE_PATH="coverage/personalweb$10.coverage" NAME="10 Coverage Results" MODIFIED="1544091374536" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../untitled/草稿箱" />
+    <SUITE FILE_PATH="coverage/personalweb$main.coverage" NAME="main Coverage Results" MODIFIED="1546258125116" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/extra_apps/qzone" />
     <SUITE FILE_PATH="coverage/personalweb$get_git_log.coverage" NAME="get_git_log Coverage Results" MODIFIED="1544073668493" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
     <SUITE FILE_PATH="coverage/personalweb$ali.coverage" NAME="ali Coverage Results" MODIFIED="1537155812300" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="E:/2345下载/txy (3)/apps/donate" />
     <SUITE FILE_PATH="coverage/personalweb$git_pull__1_.coverage" NAME="git_pull (1) Coverage Results" MODIFIED="1538630856103" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
@@ -54,22 +54,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/codeDiary/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="950">
-              <caret line="40" column="6" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/extra_apps/qzone/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+            <state relative-caret-position="400">
+              <caret line="16" column="47" lean-forward="true" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
               <folding>
-                <element signature="e#77#86#0" expanded="true" />
+                <element signature="e#77#88#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -78,8 +69,8 @@
       <file leaf-file-name="qzone_sql.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/extra_apps/qzone/qzone_sql.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-850">
-              <caret line="80" column="18" selection-start-line="80" selection-start-column="18" selection-end-line="80" selection-end-column="18" />
+            <state relative-caret-position="250">
+              <caret line="73" column="31" selection-start-line="73" selection-start-column="31" selection-end-line="73" selection-end-column="31" />
               <folding>
                 <element signature="e#78#107#0" expanded="true" />
               </folding>
@@ -90,7 +81,7 @@
       <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/extra_apps/qzone/config/config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
+            <state relative-caret-position="217">
               <caret line="10" selection-start-line="10" selection-end-line="10" />
               <folding>
                 <element signature="e#102#115#0" expanded="true" />
@@ -107,7 +98,7 @@
       <file leaf-file-name="deal_sql.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/extra_apps/qzone/deal_sql.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
+            <state relative-caret-position="25">
               <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
               <folding>
                 <element signature="e#78#92#0" expanded="true" />
@@ -318,7 +309,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.qzone_sql">
+  <component name="RunManager" selected="Python.main">
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -438,7 +429,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="get_git_log" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="personalweb" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -446,12 +437,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tools" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/extra_apps/qzone" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/get_git_log.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/extra_apps/qzone/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -601,18 +592,18 @@
     <list>
       <item itemvalue="Django server.personalweb" />
       <item itemvalue="Python.10" />
-      <item itemvalue="Python.get_git_log" />
       <item itemvalue="Python.18" />
       <item itemvalue="Python.qzone_sql" />
       <item itemvalue="Python.11" />
+      <item itemvalue="Python.main" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.qzone_sql" />
         <item itemvalue="Python.11" />
         <item itemvalue="Python.18" />
         <item itemvalue="Python.10" />
-        <item itemvalue="Python.get_git_log" />
       </list>
     </recent_temporary>
   </component>
@@ -626,20 +617,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1535974839541</updated>
-    </task>
-    <task id="LOCAL-00113" summary="textfield的bug修复，django更新至2.1.2">
-      <created>1541066171886</created>
-      <option name="number" value="00113" />
-      <option name="presentableId" value="LOCAL-00113" />
-      <option name="project" value="LOCAL" />
-      <updated>1541066171886</updated>
-    </task>
-    <task id="LOCAL-00114" summary="django bug修复">
-      <created>1541068975464</created>
-      <option name="number" value="00114" />
-      <option name="presentableId" value="LOCAL-00114" />
-      <option name="project" value="LOCAL" />
-      <updated>1541068975464</updated>
     </task>
     <task id="LOCAL-00115" summary="打开窗口部分的代码重构">
       <created>1541317972699</created>
@@ -970,7 +947,21 @@
       <option name="project" value="LOCAL" />
       <updated>1546150653906</updated>
     </task>
-    <option name="localTasksCounter" value="162" />
+    <task id="LOCAL-00162" summary="test">
+      <created>1546257409624</created>
+      <option name="number" value="00162" />
+      <option name="presentableId" value="LOCAL-00162" />
+      <option name="project" value="LOCAL" />
+      <updated>1546257409625</updated>
+    </task>
+    <task id="LOCAL-00163" summary="update">
+      <created>1546257485880</created>
+      <option name="number" value="00163" />
+      <option name="presentableId" value="LOCAL-00163" />
+      <option name="project" value="LOCAL" />
+      <updated>1546257485880</updated>
+    </task>
+    <option name="localTasksCounter" value="164" />
     <servers />
   </component>
   <component name="TodoView">
@@ -991,7 +982,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.9201141" />
       <window_info anchor="bottom" id="Python Console" order="9" weight="0.32952926" />
-      <window_info anchor="right" id="Run" order="5" sideWeight="0.49798927" weight="0.27211797" />
+      <window_info active="true" anchor="right" id="Run" order="5" sideWeight="0.49798927" visible="true" weight="0.27211797" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32952926" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49787235" visible="true" weight="0.18297587" />
       <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
@@ -1048,7 +1039,6 @@
       <path value="$PROJECT_DIR$/../a-colorful-horizontal-navigation-bar" />
       <path value="$PROJECT_DIR$/extra_apps/qzone" />
     </ignored-roots>
-    <MESSAGE value="django bug修复" />
     <MESSAGE value="打开窗口部分的代码重构" />
     <MESSAGE value="添加多图支持" />
     <MESSAGE value="js调整" />
@@ -1072,6 +1062,7 @@
     <MESSAGE value="matter33 update;签名颜色调整" />
     <MESSAGE value="css update" />
     <MESSAGE value="bug fixed" />
+    <MESSAGE value="test" />
     <MESSAGE value="update" />
     <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
@@ -1297,23 +1288,6 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/codeDiary/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="950">
-          <caret line="40" column="6" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/extra_apps/qzone/deal_sql.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
-          <folding>
-            <element signature="e#78#92#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../untitled/草稿箱/10.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -1345,9 +1319,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/apps/codeDiary/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="950">
+          <caret line="40" column="6" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/extra_apps/qzone/deal_sql.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+          <folding>
+            <element signature="e#78#92#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/extra_apps/qzone/config/set_password.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/extra_apps/qzone/config/config.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
+        <state relative-caret-position="217">
           <caret line="10" selection-start-line="10" selection-end-line="10" />
           <folding>
             <element signature="e#102#115#0" expanded="true" />
@@ -1357,23 +1351,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/extra_apps/qzone/qzone_sql.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-850">
-          <caret line="80" column="18" selection-start-line="80" selection-start-column="18" selection-end-line="80" selection-end-column="18" />
+        <state relative-caret-position="250">
+          <caret line="73" column="31" selection-start-line="73" selection-start-column="31" selection-end-line="73" selection-end-column="31" />
           <folding>
             <element signature="e#78#107#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/extra_apps/qzone/config/set_password.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/extra_apps/qzone/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+        <state relative-caret-position="400">
+          <caret line="16" column="47" lean-forward="true" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
           <folding>
-            <element signature="e#77#86#0" expanded="true" />
+            <element signature="e#77#88#0" expanded="true" />
           </folding>
         </state>
       </provider>

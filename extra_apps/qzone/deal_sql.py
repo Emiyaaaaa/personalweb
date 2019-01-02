@@ -45,8 +45,6 @@ class DealSql():
                     'id':id[0],
                     'time':time
                 })
-                cursor.execute('SELECT time FROM qzone_html WHERE id=' + str(id[0]))
-                time = cursor.fetchall()[0][0]
 
         return html_list
 

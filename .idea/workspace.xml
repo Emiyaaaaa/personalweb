@@ -2,11 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97ee085e-0965-47c9-afdd-5d7ddcf1463c" name="Default" comment="bug">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_apps/qzone/config/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/extra_apps/qzone/config/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extra_apps/qzone/deal_sql.py" beforeDir="false" afterPath="$PROJECT_DIR$/extra_apps/qzone/deal_sql.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/extra_apps/qzone/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/extra_apps/qzone/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/extra_apps/qzone/.idea/dataSources/a9ff4535-2eee-4f15-821f-8fb64b8012f6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/extra_apps/qzone/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/extra_apps/qzone/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/extra_apps/qzone/.idea/qzone.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/extra_apps/qzone/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/extra_apps/qzone/.idea/workspace.xml" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -102,8 +107,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/extra_apps/qzone/qzone_sql.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-269">
-              <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
+            <state relative-caret-position="368">
+              <caret line="68" column="61" lean-forward="true" selection-start-line="68" selection-start-column="61" selection-end-line="68" selection-end-column="61" />
               <folding>
                 <element signature="e#78#107#0" expanded="true" />
               </folding>
@@ -126,8 +131,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/extra_apps/qzone/config/config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            <state relative-caret-position="156">
+              <caret line="8" column="36" lean-forward="true" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
               <folding>
                 <element signature="e#102#115#0" expanded="true" />
               </folding>
@@ -135,11 +140,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/extra_apps/qzone/deal_sql.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="518">
-              <caret line="63" column="42" lean-forward="true" selection-start-line="63" selection-start-column="42" selection-end-line="63" selection-end-column="42" />
+            <state relative-caret-position="300">
+              <caret line="41" column="26" lean-forward="true" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
               <folding>
                 <element signature="e#78#92#0" expanded="true" />
               </folding>
@@ -147,11 +152,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="5" selection-start-column="5" selection-end-column="5" />
+              <caret lean-forward="true" />
             </state>
           </provider>
         </entry>
@@ -241,13 +246,13 @@
         <option value="$PROJECT_DIR$/../untitled/草稿箱/qzone/main.py" />
         <option value="$PROJECT_DIR$/../untitled/草稿箱/11.py" />
         <option value="$PROJECT_DIR$/extra_apps/qzone/config/set_password.py" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/extra_apps/qzone/.gitignore" />
         <option value="$PROJECT_DIR$/extra_apps/qzone/main.py" />
-        <option value="$PROJECT_DIR$/extra_apps/qzone/qzone_sql.py" />
         <option value="$PROJECT_DIR$/extra_apps/qzone/config/config.py" />
         <option value="$PROJECT_DIR$/../untitled/草稿箱/18.py" />
         <option value="$PROJECT_DIR$/extra_apps/qzone/deal_sql.py" />
+        <option value="$PROJECT_DIR$/extra_apps/qzone/qzone_sql.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -681,7 +686,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1535974839541</updated>
-      <workItem from="1546504241496" duration="4470000" />
+      <workItem from="1546504241496" duration="6341000" />
     </task>
     <task id="LOCAL-00115" summary="打开窗口部分的代码重构">
       <created>1541317972699</created>
@@ -1030,7 +1035,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4470000" />
+    <option name="totallyTimeSpent" value="6341000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1045,7 +1050,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49787235" visible="true" weight="0.19638069" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49787235" visible="true" weight="0.19638069" />
       <window_info id="Structure" order="1" sideWeight="0.50212765" side_tool="true" weight="0.27010724" />
       <window_info id="Favorites" order="2" sideWeight="0.50212765" side_tool="true" weight="0.27010724" />
       <window_info anchor="bottom" id="Database Console" weight="0.3286119" />
@@ -1067,7 +1072,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" weight="0.23123324" />
       <window_info anchor="right" id="Database" order="4" weight="0.24664879" />
-      <window_info active="true" anchor="right" id="Run" order="5" sideWeight="0.49798927" visible="true" weight="0.3424933" />
+      <window_info anchor="right" id="Run" order="5" sideWeight="0.49798927" weight="0.15683647" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1399,27 +1404,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" selection-start-column="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../untitled/草稿箱/14.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/extra_apps/qzone/qzone_sql.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-269">
-          <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
-          <folding>
-            <element signature="e#78#107#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1437,12 +1425,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/extra_apps/qzone/config/config.py">
+    <entry file="file://$PROJECT_DIR$/extra_apps/qzone/deal_sql.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        <state relative-caret-position="300">
+          <caret line="41" column="26" lean-forward="true" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
           <folding>
-            <element signature="e#102#115#0" expanded="true" />
+            <element signature="e#78#92#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1457,13 +1445,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/extra_apps/qzone/deal_sql.py">
+    <entry file="file://$PROJECT_DIR$/extra_apps/qzone/qzone_sql.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="63" column="42" lean-forward="true" selection-start-line="63" selection-start-column="42" selection-end-line="63" selection-end-column="42" />
+        <state relative-caret-position="368">
+          <caret line="68" column="61" lean-forward="true" selection-start-line="68" selection-start-column="61" selection-end-line="68" selection-end-column="61" />
           <folding>
-            <element signature="e#78#92#0" expanded="true" />
+            <element signature="e#78#107#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/extra_apps/qzone/config/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="8" column="36" lean-forward="true" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+          <folding>
+            <element signature="e#102#115#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
         </state>
       </provider>
     </entry>

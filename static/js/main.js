@@ -144,3 +144,9 @@ function isInArray(arr,value){
 	}
 	return false;
 }
+
+function a_tag_transform(text){
+
+	return text;
+
+}

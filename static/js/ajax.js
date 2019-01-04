@@ -108,12 +108,13 @@ $(document).ready(function() {
 	        data:{'matter':href.split('?')[0],'text_id':href.split('?')[1].split('=')[1]},
 	        success:function(data){
 	        	$('#ajax_window_html').html(data);
+	        	console.log(data)
 	        	try{
 	        		$('.markdown-body').html(marked($('.markdown-body').html()));
 	        	}
 	        	catch(err){}
 	        	var markdown_a = $('.markdown-body a');
-	        	for (var i = 0; i < markdown_a.length; i++) {
+	        	for (var i = 0; i < markdown_a.length; i++){
 	        		markdown_a[i].target="_blank";
 	        	}
 	        	fillWindow();
@@ -259,9 +260,9 @@ function get_update_log(){
 	    type:"GET",
 	    data:{"type":"getUpdateLog",'matter':nowMatter},
 	    success:function(data){
-	    	$('.update_log ul').html(data)
-	    	var liLength = $('.update_log ul li').length
-	    	$('.update_version').html('(版本: 1.0 更新数: '+liLength+')')
+	    	$('.update_log ul').html(data);
+	    	var liLength = $('.update_log ul li').length;
+	    	$('.update_version').html('(版本: 1.0 更新数: '+liLength+')');
 	    }
 	})
 }

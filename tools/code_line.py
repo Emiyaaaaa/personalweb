@@ -27,10 +27,12 @@ except_logs = True
 
 except_path = [
     r'E:\python\personalweb\static\admin',
-    r'E:\python\personalweb\extra_apps'
+    r'E:\python\personalweb\extra_apps\markdown',
+    r'E:\python\personalweb\extra_apps\markdown_deux',
+    r'E:\python\personalweb\extra_apps\qzone\chromedriver.exe',
 ]
 
-show_path = True
+show_path = False
 
 # Code
 except_files = []

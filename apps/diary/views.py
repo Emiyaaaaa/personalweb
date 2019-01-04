@@ -20,7 +20,7 @@ class DiaryView():
             text_id = diary.text_id
             line = 2
             if diary.title != None: line = 1
-            brief_text = self.getBriefText(diary.content, text_max_length,line)
+            brief_text = self.getBriefText(diary.content, text_max_length, line)
             diaryImg = DiaryImg.objects.filter(diary=text_id)
             diary_info.append({
                 'content':brief_text['brief_text'],
@@ -30,7 +30,7 @@ class DiaryView():
                 'is_brief':brief_text['is_brief'],
                 'img_num': len(diaryImg)
             })
-        return render(request, 'matter1.html', {'diary_info': diary_info,'loadStatus':loadStatus})
+        return render(request, 'matter1.html', {'diary_info': diary_info, 'loadStatus':loadStatus})
 
     def getBriefText(self,text,text_max_length,line=2):
         text_max_length = int(text_max_length)

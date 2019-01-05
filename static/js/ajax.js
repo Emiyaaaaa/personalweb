@@ -193,20 +193,20 @@ function matter33SendMessage(){
 //评论
 function windowSendComment(){
 
-	var comment_to = ''
-	var password = ''
-	var disabled_name = new Array('Emiya','emiya')
+	var comment_to = '';
+	var password = '';
+	var disabled_name = new Array('Emiya','emiya');
 	if (reply == 'true'){
-		var comment_to = reply_nickname
+		var comment_to = reply_nickname;
 	}
-	var hash = window.location.hash
-	var nickname = $('#comment_nike_name').val()
-	var email = $('#comment_user_email').val()
-	var comment = $('#comment_comment').val()
-	var matter = hash.split('?')[0]
-	var text_id = hash.split('?')[1].split('=')[1]
+	var hash = window.location.hash;
+	var nickname = $('#comment_nike_name').val();
+	var email = $('#comment_user_email').val();
+	var comment = $('#comment_comment').val();
+	var matter = hash.split('?')[0];
+	var text_id = hash.split('?')[1].split('=')[1];
 	if (isInArray(disabled_name,nickname) == true){
-		password = prompt("使用此昵称需要输入密码","")
+		password = prompt("使用此昵称需要输入密码","");
     	$.ajax({
 	        url:"/",
 	        type:"POST",
@@ -214,25 +214,25 @@ function windowSendComment(){
 	        data:{"type":"validatePassword",'password':password},
 	        success:function(data){
 	        	if (data.password == 'right'){
-	        		alert('密码正确！')
-	        		$('#comment_nike_name').parent().removeClass("error")
+	        		alert('密码正确！');
+	        		$('#comment_nike_name').parent().removeClass("error");
 	        	}
 	        	else{
-	        		alert('密码错误！')
-	        		$('#comment_nike_name').val('')
-	        		$('#comment_nike_name').parent().addClass("error")
-	        		$('#comment_nike_name').focus()
+	        		alert('密码错误！');
+	        		$('#comment_nike_name').val('');
+	        		$('#comment_nike_name').parent().addClass("error");
+	        		$('#comment_nike_name').focus();
 	        	}
 			}
 		})
 	}
 	if (isNull(comment)){
-		$('.window-comment-hint').html('提示：评论不能为空哦~')
-		$('#comment_comment').parent().addClass("error")
-        $('#comment_comment').focus()
+		$('.window-comment-hint').html('提示：评论不能为空哦~');
+		$('#comment_comment').parent().addClass("error");
+        $('#comment_comment').focus();
 	}
 	else{
-		$('#comment_comment').parent().removeClass("error")
+		$('#comment_comment').parent().removeClass("error");
 		$.ajax({
 	        url:"/",
 	        type:"POST",
@@ -240,18 +240,18 @@ function windowSendComment(){
 	        data:{"type":"windowSendComment","nickname":nickname,"email":email,"comment":comment,"matter":matter,"text_id":text_id,'comment_to':comment_to},
 	        success:function(data){
 	        	if (data.statusCode == '1'){
-	        		$('.window-comment-hint').html('提示：评论成功！ ღ( ´･ᴗ･` )比心')
-	        		$('#comment_nike_name').val('')
-					$('#comment_user_email').val('')
-					$('#comment_comment').val('')
+	        		$('.window-comment-hint').html('提示：评论成功！ ღ( ´･ᴗ･` )比心');
+	        		$('#comment_nike_name').val('');
+					$('#comment_user_email').val('');
+					$('#comment_comment').val('');
 	        	}
 	        	else {
-	        		$('.window-comment-hint').html('提示：提交失败，请再试一次~')
+	        		$('.window-comment-hint').html('提示：提交失败，请再试一次~');
 	        	}
 	        }
 		})
 	}
-	reply = 'false'	
+	reply = 'false';
 }
 
 function get_update_log(){

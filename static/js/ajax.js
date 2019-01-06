@@ -108,9 +108,12 @@ $(document).ready(function() {
 	        data:{'matter':href.split('?')[0],'text_id':href.split('?')[1].split('=')[1]},
 	        success:function(data){
 	        	$('#ajax_window_html').html(data);
-	        	console.log(data)
 	        	try{
 	        		$('.markdown-body').html(marked($('.markdown-body').html()));
+	        	}
+	        	catch(err){}
+	        	try{
+	        		$('#matter1_content').html(str2aTag($('#matter1_content').html()))
 	        	}
 	        	catch(err){}
 	        	var markdown_a = $('.markdown-body a');

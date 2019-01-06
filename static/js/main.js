@@ -138,15 +138,17 @@ function cancelReply(){
 }
 
 function isInArray(arr,value){
+
 	var index = $.inArray(value,arr);
 	if(index >= 0){
 	  return true;
 	}
 	return false;
+
 }
 
-function a_tag_transform(text){
+function str2aTag(text){
 
-	return text;
+	return text
 
 }

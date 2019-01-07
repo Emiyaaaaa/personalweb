@@ -147,6 +147,7 @@ function isInArray(arr,value){
 
 }
 
+// 转换窗口中的a标签
 function str2aTag(str){
 
 	if (str.search(/&lt;a&gt;.*?&lt;\/a&gt;/g) != -1)
@@ -156,8 +157,8 @@ function str2aTag(str){
 		var url = str.substring(qa+9,ha);
 		var html = '<a href="'+url+'" target="_blank" class="window_aTag">'+url+'</a>';
 		str = str.replace(/&lt;a&gt;.*?&lt;\/a&gt;/g,html);
-		str2aTag(str)
+		str2aTag(str);
 	}
-	return str
+	return str;
 
 }

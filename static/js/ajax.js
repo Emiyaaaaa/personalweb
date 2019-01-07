@@ -70,7 +70,6 @@ $(document).ready(function() {
 
 	function getMoreContent(){
 		if (nowMatter == 'matter0' || nowMatter == 'matter1'){
-			console.log($('.'+nowMatter+' li'));
 			var finally_id = $('.'+nowMatter+' li:last>a:eq(0)').attr('id').match(/\d+/)[0];
 			var liLength = $('.'+nowMatter+' li').length;
 			$.ajax({

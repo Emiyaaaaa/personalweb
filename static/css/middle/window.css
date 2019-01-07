@@ -80,6 +80,12 @@
 
 }
 
+.window_aTag{
+
+    color: #1e6df4;
+
+}
+
 #window::-webkit-scrollbar {
     display: none;
 }

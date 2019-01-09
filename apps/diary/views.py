@@ -20,7 +20,10 @@ class DiaryView():
             text_id = diary.text_id
             line = 2
             if diary.title != None: line = 1
-            brief_text = self.getBriefText(diary.content, text_max_length, line)
+            text = diary.content
+            text = text.replace('<a>','')
+            text = text.replace('</a>','')
+            brief_text = self.getBriefText(text, text_max_length, line)
             diaryImg = DiaryImg.objects.filter(diary=text_id)
             diary_info.append({
                 'content':brief_text['brief_text'],

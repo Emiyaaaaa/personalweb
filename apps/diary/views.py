@@ -38,7 +38,7 @@ class DiaryView():
     def getBriefText(self,text,text_max_length,line=2):
         text_max_length = int(text_max_length)
         if len(text) > text_max_length * line - 5:
-            return {'is_brief': 'true', 'brief_text': text[:text_max_length * line - 5]}
+            return {'is_brief': 'true', 'brief_text': text[:text_max_length * line - 7]}
         else:
             return {'is_brief': 'false','brief_text': text}
 

@@ -6,7 +6,9 @@
     {% endif %}
 </div>
 <div style="margin: 20px 5px 0 10px">
-    <div class="matter1_content" id="matter1_content">{{ diary.content }}</div>
+    <div class="matter1_content" id="matter1_content">
+        {{ diary.content }}
+    </div>
     <div class="windowImg">
     {% for imgs in diary.img %}
         {% if diary.imgLenth == 1 %}

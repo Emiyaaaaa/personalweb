@@ -21,7 +21,8 @@ class DiaryView():
             line = 2
             if diary.title != None: line = 1
             text = diary.content
-            text = text.replace('<a>','')
+            text = text.replace('<a>http://','')
+            text = text.replace('<a>https://','')
             text = text.replace('</a>','')
             brief_text = self.getBriefText(text, text_max_length, line)
             diaryImg = DiaryImg.objects.filter(diary=text_id)

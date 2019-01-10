@@ -152,9 +152,15 @@ function str2aTag(str){
 
 	if (str.search(/&lt;a&gt;.*?&lt;\/a&gt;/g) != -1)
 	{
-		var qa = str.search(/&lt;a&gt;/g);
+		var qa = str.search(/&lt;a&gt;http:\/\//g);
+		var qas = str.search(/&lt;a&gt;https:\/\//g);
 		var ha = str.search(/&lt;\/a&gt;/g);
-		var url = str.substring(qa+9,ha);
+		if (qa != -1){
+			var url = str.substring(qa+16,ha);
+		}
+		else{
+			var url = str.substring(qas+17,ha);
+		}
 		var html = '<a href="'+url+'" target="_blank" class="window_aTag">'+url+'</a>';
 		str = str.replace(/&lt;a&gt;.*?&lt;\/a&gt;/g,html);
 		str2aTag(str);

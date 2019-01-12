@@ -1,32 +1,32 @@
 (function () {
 
-  var cn = 0 //click_hli_id_num
-  var target = document.querySelectorAll(".target")[0]
-  var target_copy = document.querySelectorAll(".target")[1]
-  var links = document.querySelectorAll(".personalCenter-menu a")
-  var colors = ["#75f966", "#f88c5b", "#5bf8d4", "#4b88dc", "#d2e633", "#97adfb", "#f970fa"]
-  hli_num = cn
+  var cn = 0; //click_hli_id_num
+  var target = document.querySelectorAll(".target")[0];
+  var target_copy = document.querySelectorAll(".target")[1];
+  var links = document.querySelectorAll(".personalCenter-menu a");
+  var colors = ["#75f966", "#f88c5b", "#5bf8d4", "#4b88dc", "#d2e633", "#97adfb", "#f970fa"];
+  hli_num = cn;
 
   function initializePersonalcenterNav(){
     for (var i = 0; i < links.length; i++) {
-        links[i].style.opacity = "0.25"
+        links[i].style.opacity = "0.25";
     }
-    links[cn].parentNode.classList.add("active")
-    links[cn].style.opacity = "1"
-    var width = links[cn].getBoundingClientRect().width
-    var height = links[cn].getBoundingClientRect().height
-    var left = links[cn].getBoundingClientRect().left + window.pageXOffset
-    var top = links[cn].getBoundingClientRect().top + window.pageYOffset
-    var color = colors[Math.floor(Math.random() * colors.length)]
+    links[cn].parentNode.classList.add("active");
+    links[cn].style.opacity = "1";
+    var width = links[cn].getBoundingClientRect().width;
+    var height = links[cn].getBoundingClientRect().height;
+    var left = links[cn].getBoundingClientRect().left + window.pageXOffset;
+    var top = links[cn].getBoundingClientRect().top + window.pageYOffset;
+    var color = colors[Math.floor(Math.random() * colors.length)];
 
-    target_copy.style.width = width + "px"
-    target_copy.style.height = height + "px"
-    target_copy.style.left = left + "px"
-    target_copy.style.top = top + "px"
-    target_copy.style.borderColor = color
-    target_copy.style.transform = "none"
+    target_copy.style.width = width + "px";
+    target_copy.style.height = height + "px";
+    target_copy.style.left = left + "px";
+    target_copy.style.top = top + "px";
+    target_copy.style.borderColor = color;
+    target_copy.style.transform = "none";
    }
-  window.initializePersonalcenterNav = initializePersonalcenterNav
+  window.initializePersonalcenterNav = initializePersonalcenterNav;
 
   function mouseenterFunc() {
     if (!this.parentNode.classList.contains("active")) {

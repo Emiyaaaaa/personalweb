@@ -67,7 +67,6 @@ $(document).ready(function() {
 		else {
 		window.location.href = MAINURL + '404';
 		}
-		check_line()
 	}
 
 	function getMoreContent(){

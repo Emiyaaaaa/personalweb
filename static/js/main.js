@@ -12,6 +12,10 @@ function matterClick(){
 	}
 }
 
+function sleep(d){
+  for(var t = Date.now();Date.now() - t <= d;);
+}
+
 function addWeatherNevListen(){
 	$(".weather-menu li").click(function () {
 		$('.weather-menu li').removeClass('active');
@@ -32,7 +36,7 @@ function divFadeIn() {
 		}
 	}
   	$('#'+nowMatter+' .loadStatus:last').delay(140*i).fadeIn(10);
-	setTimeout(function(){scrollBottom();},140*i);
+	setTimeout(function(){scrollBottom();check_lines_length()},140*i);
 
 }
 
@@ -169,8 +173,30 @@ function str2aTag(str){
 
 }
 
-function check_line(){
+function rtrim(s){
+    return s.replace(/(\s*$)/g, "");
+}
 
+function check_lines_length(){
 
-	
+	var unchecked_li = document.getElementsByClassName('unchecked');
+	for (var i = 0; i < unchecked_li.length; i++) {
+		var text_Ele = unchecked_li[i].getElementsByClassName('brief-content')['0'];
+		cut_line(text_Ele);
+		// unchecked_li[i].classList.remove("unchecked");
+		// unchecked_li[i].classList.add("checked");
+	}
+}
+
+function cut_line(ele){
+
+	var ele_height = ele.clientHeight;
+	var text = ele.innerHTML;
+	var text = rtrim(text)//去除末尾空格
+	var look_more = '<span class="look-more">[查看更多]</span>'
+	if (ele_height > 70) {
+		var text= rtrim(text.substr(0,text.length - look_more.length))//去除末尾空格
+		ele.innerHTML = text.substr(0,text.length - 1) + look_more;
+		cut_line(ele)
+	}
 }

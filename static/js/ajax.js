@@ -52,6 +52,7 @@ $(document).ready(function() {
 		
 	})
 
+
 	function fillHtml(data,urlHash){
 		if (urlHash == '#codeDiary'){
     		$('.codeDiary ul').html(data);
@@ -65,7 +66,8 @@ $(document).ready(function() {
 		}
 		else {
 		window.location.href = MAINURL + '404';
-		}	
+		}
+		check_line()
 	}
 
 	function getMoreContent(){

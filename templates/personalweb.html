@@ -7,7 +7,6 @@
 	<link rel="icon" type="image/png" href="/media/{{ website_icon }}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/font.css' %}">
-	<link rel="stylesheet" type="text/css" href="{% static 'css/color.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/left/left.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/right/signature.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/middle/matter0.css' %}">
@@ -266,10 +265,10 @@
 		}
 		var clientWidth = document.documentElement.clientWidth
 		var textWidth = Math.round((Math.round(clientWidth*0.55)-19)*0.8-20)
-		var letter_spacing = 2
+		var letter_spacing = 3
 		var font_size = 15
 		TEXTMAXLENGTH = Math.floor((textWidth+letter_spacing)/(letter_spacing+font_size))
-		// TEXMAXLENGTH = 37
+		// TEXMAXLENGTH = 35
 		nowMatter = 'matter'+LINUM
     </script>
     <script type="text/javascript" src="{% static 'js/main.js' %}"></script>

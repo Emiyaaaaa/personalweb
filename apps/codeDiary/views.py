@@ -101,8 +101,18 @@ class CodeDiaryView():
 
 
     def getBriefText(self,text,text_max_length,line=2):
+        text_length = 0
+        text_index = 0
+        cn_char = ['，', '。', '“', '”', '；', '：', '【', '】', '、', '！', '·', '￥', '（', '）', '’', '《', '》']
         text_max_length = int(text_max_length)
-        if len(text) > text_max_length * line - 5:
-            return {'is_brief': 'true', 'brief_text': text[:text_max_length * line - 5]}
+        for uchar in text:
+            if (uchar >= u'\u4e00' and uchar <= u'\u9fa5') or (uchar in cn_char):
+                text_length = text_length + 1  # 中文长度加一
+            else:
+                text_length = text_length + 0.5  # 英文长度加0.5
+            text_index = text_index + 1
+
+            if text_length >= text_max_length * line - 6:
+                return {'is_brief': 'true', 'brief_text': text[:text_index-1]}
         else:
             return {'is_brief': 'false','brief_text': text}

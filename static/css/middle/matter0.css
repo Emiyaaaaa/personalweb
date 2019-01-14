@@ -29,6 +29,7 @@
 .matter0 .content,.matter0 .aCopy,.matter1 .content,.matter1 .aCopy{
 
     letter-spacing: 2px;
+    word-break: break-all;
     color: #000000;
     text-decoration:none;
     border-radius: 15px;

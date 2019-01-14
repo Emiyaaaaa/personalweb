@@ -168,3 +168,9 @@ function str2aTag(str){
 	return str;
 
 }
+
+function check_line(){
+
+
+	
+}

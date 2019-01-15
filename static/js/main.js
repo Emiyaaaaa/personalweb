@@ -179,12 +179,13 @@ function rtrim(s){
 
 function check_lines_length(){
 
-	var unchecked_li = document.getElementsByClassName('unchecked');
+	var unchecked_li = document.querySelectorAll('.unchecked');
+	// var unchecked_li = document.getElementsByClassName('unchecked');
 	for (var i = 0; i < unchecked_li.length; i++) {
 		var text_Ele = unchecked_li[i].getElementsByClassName('brief-content')['0'];
 		cut_line(text_Ele);
-		// unchecked_li[i].classList.remove("unchecked");
-		// unchecked_li[i].classList.add("checked");
+		unchecked_li[i].classList.remove("unchecked");
+		unchecked_li[i].classList.add("checked");
 	}
 }
 

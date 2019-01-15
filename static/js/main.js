@@ -30,13 +30,16 @@ function addWeatherNevListen(){
 function divFadeIn() {
 	var liLength = $('#'+nowMatter+' ul li').length;
 	for (var i = 0; i < liLength; i++) {
-		$('#'+nowMatter+' ul li:eq(' + i +')').delay(140*i).fadeIn();
+		var li_ele = $('#'+nowMatter+' ul li:eq(' + i +')')
+		li_ele.delay(140*i).fadeIn();
+		setTimeout(function(){check_lines_length(li_ele[0])},140*i+50);
 		if (i > 6){
-			$('#'+nowMatter+' ul li:eq(' + i +')').fadeIn();
+			li_ele.fadeIn();
+			check_lines_length(li_ele[0]);
 		}
 	}
   	$('#'+nowMatter+' .loadStatus:last').delay(140*i).fadeIn(10);
-	setTimeout(function(){scrollBottom();check_lines_length()},140*i);
+	setTimeout(function(){scrollBottom();},140*i);
 
 }
 
@@ -177,15 +180,23 @@ function rtrim(s){
     return s.replace(/(\s*$)/g, "");
 }
 
-function check_lines_length(){
-
-	var unchecked_li = document.querySelectorAll('.unchecked');
-	// var unchecked_li = document.getElementsByClassName('unchecked');
-	for (var i = 0; i < unchecked_li.length; i++) {
-		var text_Ele = unchecked_li[i].getElementsByClassName('brief-content')['0'];
+function check_lines_length(chooseEle = 0){
+	if (chooseEle == 0){
+		var unchecked_li = document.querySelectorAll('.unchecked');
+		// var unchecked_li = document.getElementsByClassName('unchecked');
+		for (var i = 0; i < unchecked_li.length; i++) {
+			var text_Ele = unchecked_li[i].getElementsByClassName('brief-content')['0'];
+			cut_line(text_Ele);
+			unchecked_li[i].classList.remove("unchecked");
+			unchecked_li[i].classList.add("checked");
+		}
+	}
+	else{
+		var text_Ele = chooseEle.getElementsByClassName('brief-content')['0']
+		console.log(text_Ele)
 		cut_line(text_Ele);
-		unchecked_li[i].classList.remove("unchecked");
-		unchecked_li[i].classList.add("checked");
+		chooseEle.classList.remove("unchecked");
+		chooseEle.classList.add("checked");
 	}
 }
 
@@ -193,6 +204,7 @@ function cut_line(ele){
 
 	var ele_height = ele.clientHeight;
 	var text = ele.innerHTML;
+	console.log(ele_height)
 	var text = rtrim(text)//去除末尾空格
 	var look_more = '<span class="look-more">[查看更多]</span>'
 	if (ele_height > 70) {

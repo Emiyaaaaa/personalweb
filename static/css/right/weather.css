@@ -150,6 +150,7 @@
 .weather-menu{
 
     position: relative;
+    cursor:default;
     top: 215px;
     width: 77%;
 

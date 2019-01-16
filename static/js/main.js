@@ -30,12 +30,14 @@ function addWeatherNevListen(){
 function divFadeIn() {
 	var liLength = $('#'+nowMatter+' ul li').length;
 	for (var i = 0; i < liLength; i++) {
-		var li_ele = $('#'+nowMatter+' ul li:eq(' + i +')')
-		li_ele.delay(140*i).fadeIn();
-		setTimeout(function(){check_lines_length(li_ele[0])},140*i+50);
-		if (i > 6){
-			li_ele.fadeIn();
-			check_lines_length(li_ele[0]);
+		const li_ele = $('#'+nowMatter+' ul li:eq(' + i +')')
+		if (i<=6){
+			li_ele.delay(140*i).fadeIn();
+			setTimeout(function(){check_lines_length(li_ele)},140*i+5);
+		}
+		else{
+			li_ele.delay(140*6).fadeIn();
+			setTimeout(function(){check_lines_length(li_ele)},140*6+5);
 		}
 	}
   	$('#'+nowMatter+' .loadStatus:last').delay(140*i).fadeIn(10);
@@ -181,6 +183,7 @@ function rtrim(s){
 }
 
 function check_lines_length(chooseEle = 0){
+	console.log(chooseEle)
 	if (chooseEle == 0){
 		var unchecked_li = document.querySelectorAll('.unchecked');
 		// var unchecked_li = document.getElementsByClassName('unchecked');
@@ -192,8 +195,8 @@ function check_lines_length(chooseEle = 0){
 		}
 	}
 	else{
-		var text_Ele = chooseEle.getElementsByClassName('brief-content')['0']
-		console.log(text_Ele)
+		var chooseEle = chooseEle[0];//jquary对象转为js对象
+		var text_Ele = chooseEle.getElementsByClassName('brief-content')['0'];
 		cut_line(text_Ele);
 		chooseEle.classList.remove("unchecked");
 		chooseEle.classList.add("checked");
@@ -204,12 +207,11 @@ function cut_line(ele){
 
 	var ele_height = ele.clientHeight;
 	var text = ele.innerHTML;
-	console.log(ele_height)
-	var text = rtrim(text)//去除末尾空格
-	var look_more = '<span class="look-more">[查看更多]</span>'
+	var text = rtrim(text);//去除末尾空格
+	var look_more = '<span class="look-more">[查看更多]</span>';
 	if (ele_height > 70) {
-		var text= rtrim(text.substr(0,text.length - look_more.length))//去除末尾空格
+		var text= rtrim(text.substr(0,text.length - look_more.length));//去除末尾空格
 		ele.innerHTML = text.substr(0,text.length - 1) + look_more;
-		cut_line(ele)
+		cut_line(ele);
 	}
 }

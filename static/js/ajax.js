@@ -86,8 +86,11 @@ $(document).ready(function() {
 			        	//fadeIn显示
 						var Length = $('.'+nowMatter+' li:gt('+(liLength-1)+')').length;
 						for (var i = liLength; i < liLength+Length; i++) {
-							$('.'+nowMatter+' li:eq(' + i +')').fadeIn();
+							const li_ele = $('.'+nowMatter+' li:eq(' + i +')');
+							li_ele.fadeIn();
+							check_lines_length(li_ele);
 						}
+						//end
 						$('.'+nowMatter+' .loadStatus:last').css('display','block');
 					}
 	        	window.onscroll=scrollBottom;

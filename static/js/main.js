@@ -30,7 +30,7 @@ function addWeatherNevListen(){
 function divFadeIn() {
 	var liLength = $('#'+nowMatter+' ul li').length;
 	for (var i = 0; i < liLength; i++) {
-		const li_ele = $('#'+nowMatter+' ul li:eq(' + i +')')
+		const li_ele = $('#'+nowMatter+' ul li:eq(' + i +')');
 		if (i<=6){
 			li_ele.delay(140*i).fadeIn();
 			setTimeout(function(){check_lines_length(li_ele)},140*i+5);

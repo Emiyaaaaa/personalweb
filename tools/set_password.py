@@ -5,7 +5,7 @@
 
 import pickle
 
-dict = {'password':'1234'}
+dict = {'password':'','Administrator':''}
 path = 'personalWeb.pwd'
 
 with open(path, 'wb') as file:
@@ -14,4 +14,4 @@ with open(path, 'wb') as file:
 with open(path, 'rb') as file:
     dict = pickle.load(file)
 
-print(dict['password'])
+print(dict['Administrator'])

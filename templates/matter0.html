@@ -5,15 +5,17 @@
             <div class="brief_date">{{ codeDiary.date }}</div>
             <div class="brief-content">
                 {% if codeDiary.title != None %}
-                    <span class="bold title">{{ codeDiary.title }}</span><br>
+                    <div class="bold title">{{ codeDiary.title }}</div>
                 {% endif %}
-                {{ codeDiary.content }}
-                {% if codeDiary.img_num != 0 %}
-                    [图片]
-                {% endif %}
-                {% if codeDiary.is_brief == 'true' %}
-                    <span class="look-more">[查看更多]</span>
-                {% endif %}
+                <div class="brief-content-text">
+                    <span class="text">{{ codeDiary.content }}</span>
+                    {% if codeDiary.img_num != 0 %}
+                        <span class="img-text">[图片]</span>
+                    {% endif %}
+                    {% if codeDiary.is_brief == 'true' %}
+                        <span class="look-more">[查看更多]</span>
+                    {% endif %}
+                </div>
             </div>
         </a>
     </li>

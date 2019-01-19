@@ -5,15 +5,17 @@
             <div class="brief_date">{{ diary.date_weather }}</div>
             <div class="brief-content">
                 {% if diary.title != None %}
-                    <span class="bold title">{{ diary.title }}</span><br>
+                    <div class="bold title">{{ diary.title }}</div>
                 {% endif %}
-                {{ diary.content }}
-                {% if diary.img_num != 0 %}
-                    [图片]
-                {% endif %}
-                {% if diary.is_brief == 'true' %}
-                    <span class="look-more">[查看更多]</span>
-                {% endif %}
+                <div class="brief-content-text">
+                    <span class="text">{{ diary.content }}</span>
+                    {% if diary.img_num != 0 %}
+                        <span class="img-text">[图片]</span>
+                    {% endif %}
+                    {% if diary.is_brief == 'true' %}
+                        <span class="look-more">[查看更多]</span>
+                    {% endif %}
+                </div>
             </div>
         </a>
     </li>

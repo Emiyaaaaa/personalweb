@@ -16,6 +16,22 @@ function sleep(d){
   for(var t = Date.now();Date.now() - t <= d;);
 }
 
+function IsPC() {
+   var userAgentInfo = navigator.userAgent;
+   var Agents = ["Android", "iPhone",
+      "SymbianOS", "Windows Phone",
+      "iPad", "iPod"];
+   var flag = true;
+   for (var v = 0; v < Agents.length; v++) {
+      if (userAgentInfo.indexOf(Agents[v]) > 0) {
+         flag = false;
+         break;
+      }
+   }
+   return flag;
+}
+console.log(IsPC())
+
 function addWeatherNevListen(){
 	$(".weather-menu li").click(function () {
 		$('.weather-menu li').removeClass('active');
@@ -182,36 +198,49 @@ function rtrim(s){
     return s.replace(/(\s*$)/g, "");
 }
 
+function get_ele_lines(ele){
+	var styles = window.getComputedStyle(ele, null);
+ 	var lh = parseInt(styles.lineHeight, 10);
+ 	var h = ele.clientHeight
+ 	console.log(lh,h)
+
+ 	var lc = Math.round(h / lh);
+ 	return lc;
+}
+
 function check_lines_length(chooseEle = 0){
-	console.log(chooseEle)
-	if (chooseEle == 0){
-		var unchecked_li = document.querySelectorAll('.unchecked');
-		// var unchecked_li = document.getElementsByClassName('unchecked');
-		for (var i = 0; i < unchecked_li.length; i++) {
-			var text_Ele = unchecked_li[i].getElementsByClassName('brief-content')['0'];
-			cut_line(text_Ele);
-			unchecked_li[i].classList.remove("unchecked");
-			unchecked_li[i].classList.add("checked");
+	var look_more = '<span class="look-more">[查看更多]</span>'
+	var chooseEle = chooseEle[0];//jquary对象转为js对象
+	var text_Ele = chooseEle.getElementsByClassName('brief-content-text')['0'];
+	var title_Ele = chooseEle.getElementsByClassName('title')['0'];
+	if (typeof(title_Ele) != "undefined"){
+		var title_lines = get_ele_lines(title_Ele);
+		if(title_lines == 1){
+			cut_line(text_Ele,1);
+		}
+		else if(title_lines >= 2){
+			title_Ele.innerHTML += look_more;
+			text_Ele.innerHTML = '';
+			cut_line(title_Ele,2);
 		}
 	}
 	else{
-		var chooseEle = chooseEle[0];//jquary对象转为js对象
-		var text_Ele = chooseEle.getElementsByClassName('brief-content')['0'];
-		cut_line(text_Ele);
-		chooseEle.classList.remove("unchecked");
-		chooseEle.classList.add("checked");
+		cut_line(text_Ele,2);
 	}
+	chooseEle.classList.remove("unchecked");
+	chooseEle.classList.add("checked");
 }
 
-function cut_line(ele){
 
-	var ele_height = ele.clientHeight;
+function cut_line(ele,reason_lines=2){
+
+	var ele_height = ele.parentNode.clientHeight;
 	var text = ele.innerHTML;
-	var text = rtrim(text);//去除末尾空格
-	var look_more = '<span class="look-more">[查看更多]</span>';
+	var text = text.trim();//去除首尾空格
+	// console.log(ele_height)
+	// var look_more = '<span class="look-more">[查看更多]</span>';
 	if (ele_height > 70) {
-		var text= rtrim(text.substr(0,text.length - look_more.length));//去除末尾空格
-		ele.innerHTML = text.substr(0,text.length - 1) + look_more;
-		cut_line(ele);
+		ele.innerHTML = text.substr(0,text.length - 1);
+		// cut_line(ele);
 	}
 }

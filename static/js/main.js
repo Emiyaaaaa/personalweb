@@ -210,7 +210,6 @@ function check_lines_length(chooseEle = 0){
 	const look_more = '<span class="look-more">[查看更多]</span>';
 	var chooseEle = chooseEle[0];//jquary对象转为js对象
 	var text_ele = chooseEle.getElementsByClassName('brief-content-text')['0'];
-	console.log(text_ele)
 	var title_ele = chooseEle.getElementsByClassName('title')['0'];
 	if (typeof(title_ele) != "undefined"){
 		var title_lines = get_ele_lines(title_ele);

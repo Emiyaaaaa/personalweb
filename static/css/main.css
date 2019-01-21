@@ -52,7 +52,8 @@ body {
     overflow:auto;
     margin-left:22%;
     margin-right:0; 
-    overflow-y: auto
+    overflow-y: auto;
+    overflow-x: hidden;
 
 }
 

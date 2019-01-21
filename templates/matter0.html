@@ -8,7 +8,7 @@
                     <div class="bold title">{{ codeDiary.title }}</div>
                 {% endif %}
                 <div class="brief-content-text">
-                    <span class="text">{{ codeDiary.content }}</span>
+                    {{ codeDiary.content }}
                     {% if codeDiary.is_brief == 'true' %}
                         <span class="look-more">[查看更多]</span>
                     {% endif %}

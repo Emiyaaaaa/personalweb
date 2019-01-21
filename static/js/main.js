@@ -201,31 +201,30 @@ function rtrim(s){
 function get_ele_lines(ele){
 	var styles = window.getComputedStyle(ele, null);
  	var lh = parseInt(styles.lineHeight, 10);
- 	var h = ele.clientHeight
- 	console.log(lh,h)
-
- 	var lc = Math.round(h / lh);
+ 	var h = ele.clientHeight;
+ 	var lc = Math.round(h/lh);
  	return lc;
 }
 
 function check_lines_length(chooseEle = 0){
-	var look_more = '<span class="look-more">[查看更多]</span>'
+	const look_more = '<span class="look-more">[查看更多]</span>';
 	var chooseEle = chooseEle[0];//jquary对象转为js对象
-	var text_Ele = chooseEle.getElementsByClassName('brief-content-text')['0'];
-	var title_Ele = chooseEle.getElementsByClassName('title')['0'];
-	if (typeof(title_Ele) != "undefined"){
-		var title_lines = get_ele_lines(title_Ele);
+	var text_ele = chooseEle.getElementsByClassName('brief-content-text')['0'];
+	console.log(text_ele)
+	var title_ele = chooseEle.getElementsByClassName('title')['0'];
+	if (typeof(title_ele) != "undefined"){
+		var title_lines = get_ele_lines(title_ele);
 		if(title_lines == 1){
-			cut_line(text_Ele,1);
+			cut_line(text_ele,1);
 		}
 		else if(title_lines >= 2){
-			title_Ele.innerHTML += look_more;
-			text_Ele.innerHTML = '';
-			cut_line(title_Ele,2);
+			title_ele.innerHTML += look_more;
+			text_ele.innerHTML = '';
+			cut_line(title_ele,2);
 		}
-	}
+ 	}
 	else{
-		cut_line(text_Ele,2);
+		cut_line(text_ele,2)
 	}
 	chooseEle.classList.remove("unchecked");
 	chooseEle.classList.add("checked");
@@ -234,13 +233,12 @@ function check_lines_length(chooseEle = 0){
 
 function cut_line(ele,reason_lines=2){
 
-	var ele_height = ele.parentNode.clientHeight;
-	var text = ele.innerHTML;
-	var text = text.trim();//去除首尾空格
-	// console.log(ele_height)
-	// var look_more = '<span class="look-more">[查看更多]</span>';
-	if (ele_height > 70) {
-		ele.innerHTML = text.substr(0,text.length - 1);
-		// cut_line(ele);
+	var now_lines = get_ele_lines(ele);
+	const innerText = ele.innerHTML;
+	var text = innerText.trim();//去除首尾空格
+	var look_more = '<span class="look-more">[查看更多]</span>';
+	if (now_lines > reason_lines) {
+		ele.innerHTML = text.substr(0,text.length - look_more.length - 1) + look_more;
+		cut_line(ele,reason_lines);
 	}
 }

@@ -8,12 +8,10 @@
                     <div class="bold title">{{ diary.title }}</div>
                 {% endif %}
                 <div class="brief-content-text">
-                    <span class="text">
-                        {{ diary.content }}
-                        {% if diary.img_num != 0 %}
-                            [图片]
-                        {% endif %}
-                    </span>
+                    {{ diary.content }}
+                    {% if diary.img_num != 0 %}
+                        [图片]
+                    {% endif %}
                     {% if diary.is_brief == 'true' %}
                         <span class="look-more">[查看更多]</span>
                     {% endif %}

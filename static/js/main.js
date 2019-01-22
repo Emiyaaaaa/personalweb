@@ -118,7 +118,7 @@ function fillWindow(){
 	var fill_window = document.getElementById('fill_window');
 	var ajaxHtmlHeight = ajaxHtml.offsetHeight + 14;
 	var mainContentHeight = mainContent.offsetHeight-17-17;//17为padding
-	var fillWindowHeight = mainContentHeight-ajaxHtmlHeight-10;//再减10是为了防止计算误差导致的滚动条出现
+	var fillWindowHeight = mainContentHeight-ajaxHtmlHeight-12;//再减12是为了防止计算误差导致的滚动条出现
 	if (fillWindowHeight <= 0){
 	  fillWindowHeight = 0;
 	}

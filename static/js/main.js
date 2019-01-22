@@ -182,11 +182,13 @@ function str2aTag(str){
 		var ha = str.search(/&lt;\/a&gt;/g);
 		if (qa != -1){
 			var url = str.substring(qa+16,ha);
+			http = 'http://';
 		}
 		else{
 			var url = str.substring(qas+17,ha);
+			http = 'https://';
 		}
-		var html = '<a href="'+url+'" target="_blank" class="window_aTag">'+url+'</a>';
+		var html = '<a href="'+http+url+'" target="_blank" class="window_aTag">'+url+'</a>';
 		str = str.replace(/&lt;a&gt;.*?&lt;\/a&gt;/g,html);
 		str2aTag(str);
 	}

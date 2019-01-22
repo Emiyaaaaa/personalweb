@@ -28,7 +28,6 @@ body {
 
 	overflow-y:scroll;
 	overflow-x:hidden;
-	font-family:"\5FAE\8F6F\96C5\9ED1";
 	min-width: 0;
     margin: 0;
     padding: 0;
@@ -82,6 +81,10 @@ body {
 
 .bold{
 	font-weight:600;
+}
+
+.ligther-font{
+	font-family:"\5FAE\8F6F\96C5\9ED1",sans-serif;
 }
 
 

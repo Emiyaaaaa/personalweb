@@ -4,7 +4,7 @@ $(document).ready(function() {
 	setWindowWidth = 0.60
 	closeWindowHtml = '<a href="javascript:void(0)" class="windowCloseButton"></a>'
 
-	$(document).on("click",'.content',function openWindow(){
+	$(document).on("click",'.openContent',function openWindow(){
 
 		hash = window.location.hash.split('?')[0]
 		if (hash == '#codeDiary'){

@@ -1,7 +1,7 @@
 {% for codeDiary in codeDiary_info %}
     <li class="unchecked">
         <div class="aCopy" id="codeDiaryCopyone{{ codeDiary.text_id }}"></div>
-        <a class="content" id="codeDiary{{ codeDiary.text_id }}" href="#codeDiary?text_id={{ codeDiary.text_id }}">
+        <a class="content openContent" id="codeDiary{{ codeDiary.text_id }}" href="#codeDiary?text_id={{ codeDiary.text_id }}">
             <div class="brief_date">{{ codeDiary.date }}</div>
             <div class="brief-content">
                 {% if codeDiary.title != None %}

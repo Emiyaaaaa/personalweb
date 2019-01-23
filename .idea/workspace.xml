@@ -2,186 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97ee085e-0965-47c9-afdd-5d7ddcf1463c" name="Default" comment="bug">
-      <change afterPath="$PROJECT_DIR$/apps/applications/adminx.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/applications/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/applications/migrations/0002_application.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/applications/migrations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/changeLog/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/changeLog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/changeLog/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/personalweb/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/personalweb/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/Django-2.1.2.dist-info/DESCRIPTION.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/Django-2.1.2.dist-info/INSTALLER" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/Django-2.1.2.dist-info/LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/Django-2.1.2.dist-info/METADATA" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/Django-2.1.2.dist-info/RECORD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/Django-2.1.2.dist-info/WHEEL" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/Django-2.1.2.dist-info/entry_points.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/Django-2.1.2.dist-info/metadata.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/Django-2.1.2.dist-info/top_level.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/global_settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/global_settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/ar/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/ar/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/az/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/az/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/bg/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/bg/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/bn/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/bn/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/bs/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/bs/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/ca/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/ca/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/cs/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/cs/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/cy/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/cy/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/da/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/da/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/de/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/de/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/de_CH/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/de_CH/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/el/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/el/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/en/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/en/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/en_AU/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/en_AU/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/en_GB/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/en_GB/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/eo/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/eo/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/es/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/es/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/es_AR/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/es_AR/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/et/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/et/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/eu/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/eu/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/fa/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/fa/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/fi/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/fi/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/fr/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/fr/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/fy/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/fy/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/ga/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/ga/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/gd/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/gd/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/gl/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/gl/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/he/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/he/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/hi/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/hi/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/hr/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/hr/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/hu/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/hu/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/id/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/id/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/is/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/is/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/it/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/it/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/ja/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/ja/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/ka/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/ka/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/km/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/km/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/kn/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/kn/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/ko/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/ko/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/lt/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/lt/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/lv/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/lv/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/mk/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/mk/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/ml/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/ml/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/mn/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/mn/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/nb/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/nb/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/nl/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/nl/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/nn/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/nn/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/pl/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/pl/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/pt/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/pt/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/pt_BR/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/pt_BR/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/ro/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/ro/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/ru/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/ru/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/sk/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/sk/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/sl/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/sl/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/sq/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/sq/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/sr/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/sr/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/sr_Latn/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/sr_Latn/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/sv/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/sv/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/ta/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/ta/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/te/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/te/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/th/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/th/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/tr/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/tr/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/uk/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/uk/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/vi/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/vi/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/zh_Hans/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/zh_Hans/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/zh_Hant/formats.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/conf/locale/zh_Hant/formats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/options.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/options.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/static/admin/img/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/static/admin/img/README.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/static/admin/js/core.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/static/admin/js/core.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/static/admin/js/inlines.js" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/static/admin/js/inlines.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/auth/common-passwords.txt.gz" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/auth/common-passwords.txt.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/auth/password_validation.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/auth/password_validation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/gis/gdal/datasource.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/gis/gdal/datasource.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/gis/gdal/driver.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/gis/gdal/driver.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/gis/gdal/envelope.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/gis/gdal/envelope.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/gis/gdal/error.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/gis/gdal/error.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/gis/gdal/feature.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/gis/gdal/feature.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/gis/gdal/field.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/gis/gdal/field.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/gis/gdal/geometries.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/gis/gdal/geometries.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/gis/gdal/layer.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/gis/gdal/layer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/gis/gdal/prototypes/raster.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/gis/gdal/prototypes/raster.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/gis/gdal/raster/const.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/gis/gdal/raster/const.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/gis/geos/prototypes/io.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/gis/geos/prototypes/io.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/gis/utils/ogrinspect.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/gis/utils/ogrinspect.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/sitemaps/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/sitemaps/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/core/files/locks.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/core/files/locks.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/core/files/storage.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/core/files/storage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/core/files/temp.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/core/files/temp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/core/handlers/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/core/handlers/wsgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/core/management/commands/shell.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/core/management/commands/shell.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/core/serializers/pyyaml.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/core/serializers/pyyaml.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/core/serializers/xml_serializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/core/serializers/xml_serializer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/core/servers/basehttp.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/core/servers/basehttp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/core/signing.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/core/signing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/backends/base/features.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/backends/base/features.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/backends/mysql/creation.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/backends/mysql/creation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/backends/mysql/operations.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/backends/mysql/operations.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/backends/oracle/operations.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/backends/oracle/operations.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/backends/postgresql/creation.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/backends/postgresql/creation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/backends/sqlite3/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/backends/sqlite3/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/backends/sqlite3/creation.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/backends/sqlite3/creation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/backends/sqlite3/schema.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/backends/sqlite3/schema.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/migrations/graph.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/migrations/graph.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/migrations/loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/migrations/loader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/migrations/questioner.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/migrations/questioner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/models/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/db/models/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/dispatch/dispatcher.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/dispatch/dispatcher.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/forms/boundfield.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/forms/boundfield.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/template/defaulttags.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/template/defaulttags.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/test/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/test/client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/test/runner.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/test/runner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/test/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/test/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/utils/autoreload.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/utils/autoreload.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/utils/datastructures.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/utils/datastructures.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/utils/decorators.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/utils/decorators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/utils/feedgenerator.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/utils/feedgenerator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/utils/html.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/utils/html.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/utils/module_loading.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/utils/module_loading.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/utils/timesince.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/utils/timesince.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/utils/timezone.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/utils/timezone.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/utils/tree.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/utils/tree.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/utils/xmlutils.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/utils/xmlutils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/views/debug.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/views/debug.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/django/views/defaults.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/django/views/defaults.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz-2018.7.dist-info/DESCRIPTION.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz-2018.7.dist-info/INSTALLER" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz-2018.7.dist-info/LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz-2018.7.dist-info/METADATA" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz-2018.7.dist-info/RECORD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz-2018.7.dist-info/WHEEL" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz-2018.7.dist-info/metadata.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz-2018.7.dist-info/top_level.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz-2018.7.dist-info/zip-safe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Africa/Casablanca" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Africa/Casablanca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Africa/El_Aaiun" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Africa/El_Aaiun" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Africa/Sao_Tome" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Africa/Sao_Tome" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/America/Metlakatla" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/America/Metlakatla" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Asia/Hong_Kong" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Asia/Hong_Kong" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Asia/Qyzylorda" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Asia/Qyzylorda" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Asia/Tehran" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Asia/Tehran" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Hongkong" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Hongkong" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Iran" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Iran" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Kwajalein" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Kwajalein" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Pacific/Chuuk" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Pacific/Chuuk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Pacific/Guam" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Pacific/Guam" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Pacific/Kosrae" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Pacific/Kosrae" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Pacific/Kwajalein" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Pacific/Kwajalein" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Pacific/Majuro" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Pacific/Majuro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Pacific/Nauru" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Pacific/Nauru" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Pacific/Palau" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Pacific/Palau" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Pacific/Pohnpei" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Pacific/Pohnpei" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Pacific/Ponape" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Pacific/Ponape" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Pacific/Saipan" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Pacific/Saipan" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Pacific/Truk" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Pacific/Truk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Pacific/Yap" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/Pacific/Yap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/leapseconds" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/leapseconds" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/tzdata.zi" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/tzdata.zi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/zone.tab" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/zone.tab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/zone1970.tab" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pytz/zoneinfo/zone1970.tab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Scripts/django-admin.exe" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/django-admin.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../untitled/qzone/qzone_sql.py" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/qzone/qzone_sql.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -276,8 +96,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/applications/adminx.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="7" column="49" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
+            <state relative-caret-position="78">
+              <caret line="3" column="31" lean-forward="true" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -952,7 +772,7 @@
       <workItem from="1547633460421" duration="3470000" />
       <workItem from="1547875651658" duration="599000" />
       <workItem from="1548149017227" duration="45000" />
-      <workItem from="1548236018081" duration="3288000" />
+      <workItem from="1548236018081" duration="3537000" />
     </task>
     <task id="LOCAL-00115" summary="打开窗口部分的代码重构">
       <created>1541317972699</created>
@@ -1301,7 +1121,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21825000" />
+    <option name="totallyTimeSpent" value="22074000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1314,6 +1134,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49787235" visible="true" weight="0.21428572" />
       <window_info id="Structure" order="1" sideWeight="0.50212765" side_tool="true" weight="0.27010724" />
@@ -1721,8 +1542,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/applications/adminx.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="7" column="49" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
+        <state relative-caret-position="78">
+          <caret line="3" column="31" lean-forward="true" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>

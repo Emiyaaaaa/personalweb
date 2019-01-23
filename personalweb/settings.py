@@ -53,7 +53,7 @@ INSTALLED_APPS = [
     'notFoundPage',
     'markdown',
     'markdown_deux',
-    # 'django_crontab'
+    'applications'
 ]
 
 MIDDLEWARE = [

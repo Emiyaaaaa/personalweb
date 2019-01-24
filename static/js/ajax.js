@@ -45,6 +45,19 @@ $(document).ready(function() {
 				divFadeIn();
 			}
 		}
+		else if(liNum == 2){
+			var urlHash = $(this).attr('href');
+			if (leftClickNeedAjax() == 'true'){
+				$.ajax({
+			        url:"/",
+			        type:"GET",
+			        data:{"matter":urlHash},
+			        success:function(data){
+			        	fillHtml(data,urlHash);
+			        }
+	    		})
+			}
+		}
 		else if(liNum == 3){
 			initializePersonalcenterNav();
 			get_update_log();
@@ -61,6 +74,7 @@ $(document).ready(function() {
     		$('.diary ul').html(data);
 		}
 		else if (urlHash == '#application'){
+			$('.application').html(data);
 		}
 		else if (urlHash == '#personalCenter'){
 		}
@@ -132,7 +146,8 @@ $(document).ready(function() {
 
 	function leftClickNeedAjax(){
 		var content = $('#'+nowMatter).html().replace(/\s/g, "");
-		if (content == '<ul></ul>'){
+		if (content == '<ul></ul>' || content == ''){
+			console.log(1)
 			return 'true';
 		}
 	}

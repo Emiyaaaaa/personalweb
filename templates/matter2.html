@@ -1,0 +1,6 @@
+{% for application in application_info %}
+    <div class="app">
+        <img src="/media/{{ application.app_img }}" style="width: 60px;">
+        <div class="app-name">{{ application.app_name }}</div>
+    </div>
+{% endfor %}

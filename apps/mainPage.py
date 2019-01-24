@@ -10,6 +10,7 @@ from django.http import HttpResponse,HttpResponseRedirect
 from personalcenter.views import PersonalCenterView
 from codeDiary.views import CodeDiaryView
 from diary.views import DiaryView
+from applications.views import ApplicationsView
 from tools.get_git_log import get_git_log
 
 from personalcenter.models import Message,WeatherUserStatistics
@@ -80,7 +81,8 @@ def ajax_get(request):
                 return render_page
 
             elif matter == '#application':
-                main_page = {}
+                render_page = ApplicationsView().get(request)
+                return render_page
 
             elif matter == '#personalCenter':
                 main_page = {}

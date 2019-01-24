@@ -2,7 +2,6 @@ from .models import Diary,DiaryImg,DiaryComment
 from django.shortcuts import render
 from django.http import JsonResponse
 
-
 class DiaryView():
     def get_main_page(self,request,text_max_length=37):
         diary_info = []

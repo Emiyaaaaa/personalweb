@@ -4,3 +4,30 @@
 	margin: 50px 0 84% 7%;
 
 }
+
+.matter2 .app{
+
+	letter-spacing: 2px;
+    word-break: break-all;
+    color: #000000;
+    text-decoration:none;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+    padding: 17px 20px;
+    width: 180px;
+    height: 180px;
+    margin-left: 5%;
+    margin-top: 15px;
+    box-shadow:0px 2px 15px rgba(212,212,212,0.9);
+    transition: transform 0.25s;
+    -webkit-transition: transform 0.25s;
+    -moz-transition: transform 0.25s;
+    -o-transition: transform 0.25s;
+
+}
+
+.matter2 .app img{
+
+	width: 80px
+
+}

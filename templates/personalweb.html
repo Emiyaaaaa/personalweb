@@ -252,26 +252,26 @@
     <div id="windowBackground" class="windowBackground"></div>
     <div id='window' class="openWindow"></div>
     <script type="text/javascript">
-		URLHREF = window.location.href
-		MAINURL = URLHREF.split('#')[0]
-		URLHASH = URLHREF.split('?')[0].split('/')[3]
+		URLHREF = window.location.href;
+		MAINURL = URLHREF.split('#')[0];
+		URLHASH = URLHREF.split('?')[0].split('/')[3];
 		if (URLHASH == ''){
-			URLHASH = '#codeDiary'
+			URLHASH = '#codeDiary';
 		}
 		try{
-			LINUM = $(URLHASH).parent().attr('id').split('-')[1]
+			LINUM = $(URLHASH).parent().attr('id').split('-')[1];
 		}
 		catch(err){
-			LINUM = 0
-			window.location.href = MAINURL + '404'
+			LINUM = 0;
+			window.location.href = MAINURL + '404';
 		}
-		var clientWidth = document.documentElement.clientWidth
-		var textWidth = Math.round((Math.round(clientWidth*0.55)-19)*0.8-20)
-		var letter_spacing = 3
-		var font_size = 15
-		TEXTMAXLENGTH = Math.floor((textWidth+letter_spacing)/(letter_spacing+font_size))
+		var clientWidth = document.documentElement.clientWidth;
+		var textWidth = Math.round((Math.round(clientWidth*0.55)-19)*0.8-20);
+		var letter_spacing = 3;
+		var font_size = 15;
+		TEXTMAXLENGTH = Math.floor((textWidth+letter_spacing)/(letter_spacing+font_size));
 		// TEXMAXLENGTH = 35
-		nowMatter = 'matter'+LINUM
+		nowMatter = 'matter'+LINUM;
     </script>
     <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/matter3.js' %}"></script>

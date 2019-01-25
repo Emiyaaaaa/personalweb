@@ -64,7 +64,7 @@ def ajax_get(request):
             return render_page
 
         else:
-            if matter == '#codeDiary':
+            if matter == 'matter0':
                 text_id = request.GET.get('text_id')
                 if text_id == None:
                     render_page = CodeDiaryView().get(request,text_max_length)
@@ -72,7 +72,7 @@ def ajax_get(request):
                     render_page = CodeDiaryView().get_content(request, text_id)
                 return render_page
 
-            elif matter == '#diary':
+            elif matter == 'matter1':
                 text_id = request.GET.get('text_id')
                 if text_id == None:
                     render_page = DiaryView().get_main_page(request,text_max_length)
@@ -80,11 +80,11 @@ def ajax_get(request):
                     render_page = DiaryView().get_content(request, text_id)
                 return render_page
 
-            elif matter == '#application':
+            elif matter == 'matter2':
                 render_page = ApplicationsView().get(request)
                 return render_page
 
-            elif matter == '#personalCenter':
+            elif matter == 'matter3':
                 main_page = {}
 
             else:
@@ -104,10 +104,10 @@ def ajax_post(request):
         matter = request.POST.get('matter')
         text_id = request.POST.get('text_id')
         comment_to = request.POST.get('comment_to')
-        if matter == '#diary':
+        if matter == 'matter1':
             object = Diary.objects
             comment_object = DiaryComment.objects
-        elif matter == '#codeDiary':
+        elif matter == 'matter0':
             object = CodeDiary.objects
             comment_object = CodeComment.objects
         else:

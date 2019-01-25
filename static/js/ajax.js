@@ -4,9 +4,9 @@ $(document).ready(function() {
 		$.ajax({
 		        url:"/",
 		        type:"GET",
-		        data:{"matter":URLHASH,"text_max_length":TEXTMAXLENGTH},
+		        data:{"matter":nowMatter,"text_max_length":TEXTMAXLENGTH},
 		        success:function(data){
-		        	fillHtml(data,URLHASH);
+		        	fillHtml(data);
 		        	matterClick();
 		        	if (LINUM == 3){
 		        		get_update_log();
@@ -21,22 +21,21 @@ $(document).ready(function() {
 		//导航栏交互
 		$('.left-menu a').removeClass('active');
 		$(this).addClass('active');
-		var liNum = $(this).parent().attr('id').split('-')[1];
+		LINUM = $(this).parent().attr('id').split('-')[1];
 		$('#middle > div').css('display','none');
-		$('#matter'+liNum).css('display','block');
-		nowMatter = 'matter'+liNum;
+		$('#matter'+LINUM).css('display','block');
+		nowMatter = 'matter'+LINUM;
 
-		if (liNum == 0 || liNum == 1){
+		if (LINUM == 0 || LINUM == 1){
 			window.onscroll=scrollBottom;
-			var urlHash = $(this).attr('href');
 			//判断是否需要ajax
 			if (leftClickNeedAjax() == 'true'){
 				$.ajax({
 			        url:"/",
 			        type:"GET",
-			        data:{"matter":urlHash,"text_max_length":TEXTMAXLENGTH},
+			        data:{"matter":nowMatter,"text_max_length":TEXTMAXLENGTH},
 			        success:function(data){
-			        	fillHtml(data,urlHash);
+			        	fillHtml(data);
 			        	divFadeIn();
 			        }
 	    		})
@@ -45,20 +44,19 @@ $(document).ready(function() {
 				divFadeIn();
 			}
 		}
-		else if(liNum == 2){
-			var urlHash = $(this).attr('href');
+		else if(LINUM == 2){
 			if (leftClickNeedAjax() == 'true'){
 				$.ajax({
 			        url:"/",
 			        type:"GET",
-			        data:{"matter":urlHash},
+			        data:{"matter":nowMatter},
 			        success:function(data){
-			        	fillHtml(data,urlHash);
+			        	fillHtml(data);
 			        }
 	    		})
 			}
 		}
-		else if(liNum == 3){
+		else if(LINUM == 3){
 			initializePersonalcenterNav();
 			get_update_log();
 		}
@@ -66,17 +64,17 @@ $(document).ready(function() {
 	})
 
 
-	function fillHtml(data,urlHash){
-		if (urlHash == '#codeDiary'){
+	function fillHtml(data){
+		if (nowMatter == 'matter0'){
     		$('.codeDiary ul').html(data);
 		}
-		else if (urlHash == '#diary'){
+		else if (nowMatter == 'matter1'){
     		$('.diary ul').html(data);
 		}
-		else if (urlHash == '#application'){
+		else if (nowMatter == 'matter2'){
 			$('.application').html(data);
 		}
-		else if (urlHash == '#personalCenter'){
+		else if (nowMatter == 'matter3'){
 		}
 		else {
 		window.location.href = MAINURL + '404';
@@ -122,7 +120,7 @@ $(document).ready(function() {
 		$.ajax({
 			url:'/',
 	        type:"GET",
-	        data:{'matter':href.split('?')[0],'text_id':href.split('?')[1].split('=')[1]},
+	        data:{'matter':nowMatter,'text_id':href.split('?')[1].split('=')[1]},
 	        success:function(data){
 	        	$('#ajax_window_html').html(data);
 	        	try{
@@ -147,11 +145,9 @@ $(document).ready(function() {
 	function leftClickNeedAjax(){
 		var content = $('#'+nowMatter).html().replace(/\s/g, "");
 		if (content == '<ul></ul>' || content == ''){
-			console.log(1)
 			return 'true';
 		}
 	}
-
 })
 
 // matter3_3建议
@@ -224,7 +220,7 @@ function windowSendComment(){
 	var nickname = $('#comment_nike_name').val();
 	var email = $('#comment_user_email').val();
 	var comment = $('#comment_comment').val();
-	var matter = hash.split('?')[0];
+	var matter = nowMatter;
 	var text_id = hash.split('?')[1].split('=')[1];
 	if (isInArray(disabled_name,nickname) == true){
 		password = prompt("使用此昵称需要输入密码","");

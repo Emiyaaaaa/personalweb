@@ -2,16 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97ee085e-0965-47c9-afdd-5d7ddcf1463c" name="Default" comment="bug">
-      <change afterPath="$PROJECT_DIR$/apps/applications/migrations/0003_application_app_url.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/applications/migrations/0004_auto_20190124_1611.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/matter2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/applications/adminx.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/applications/adminx.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/applications/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/applications/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/applications/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/applications/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/diary/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/diary/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/mainPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/mainPage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/ajax.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/ajax.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../untitled/qzone/qzone_sql.py" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/qzone/qzone_sql.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -109,8 +99,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/applications/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="16" column="65" selection-start-line="16" selection-start-column="65" selection-end-line="16" selection-end-column="65" />
+            <state relative-caret-position="416">
+              <caret line="16" column="83" lean-forward="true" selection-start-line="16" selection-start-column="83" selection-end-line="16" selection-end-column="83" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -136,7 +126,7 @@
         <entry file="file://$PROJECT_DIR$/templates/matter2.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="78">
-              <caret line="3" column="62" selection-start-line="3" selection-start-column="62" selection-end-line="3" selection-end-column="62" />
+              <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -785,7 +775,7 @@
       <workItem from="1547875651658" duration="599000" />
       <workItem from="1548149017227" duration="45000" />
       <workItem from="1548236018081" duration="3537000" />
-      <workItem from="1548308536824" duration="5409000" />
+      <workItem from="1548308536824" duration="5420000" />
     </task>
     <task id="LOCAL-00115" summary="打开窗口部分的代码重构">
       <created>1541317972699</created>
@@ -1134,7 +1124,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27483000" />
+    <option name="totallyTimeSpent" value="27494000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1166,7 +1156,7 @@
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5020107" side_tool="true" weight="0.2719547" />
       <window_info anchor="bottom" id="manage.py@personalweb" order="12" weight="0.46203905" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" id="Run" order="14" sideWeight="0.49798927" visible="true" weight="0.47722343" />
+      <window_info anchor="bottom" id="Run" order="14" sideWeight="0.49798927" weight="0.47722343" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -1552,7 +1542,7 @@
     <entry file="file://$PROJECT_DIR$/templates/matter2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="78">
-          <caret line="3" column="62" selection-start-line="3" selection-start-column="62" selection-end-line="3" selection-end-column="62" />
+          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -1568,8 +1558,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/applications/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="16" column="65" selection-start-line="16" selection-start-column="65" selection-end-line="16" selection-end-column="65" />
+        <state relative-caret-position="416">
+          <caret line="16" column="83" lean-forward="true" selection-start-line="16" selection-start-column="83" selection-end-line="16" selection-end-column="83" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>

@@ -1,9 +1,13 @@
 {% for application in application_info %}
     <div class="app">
     	<a href="{{ application.app_url }}">
-    		<img src="/media/{{ application.app_img }}">
-    		<div class="img-box"></div>
-        	<div class="app-name">{{ application.app_name }}</div>
+    		<div class="bg-bottom-box"></div>
+    		<div class="img-box">
+    			<img src="/media/{{ application.app_img }}">
+    		</div>
+    		<div class="bottom-box">
+    			<div class="app-name">{{ application.app_name }}</div>
+    		</div>
         </a>
     </div>
 {% endfor %}

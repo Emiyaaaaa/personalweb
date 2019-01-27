@@ -36,6 +36,12 @@ body {
 
 }
 
+*{
+
+    box-sizing: content-box;
+
+}
+
 .left {
 
 	position: fixed;

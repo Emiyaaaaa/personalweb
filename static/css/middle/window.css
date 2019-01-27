@@ -17,6 +17,13 @@
 
 }
 
+.windowCloseButton:hover{
+    
+    color: #737373;
+    text-decoration:none;
+
+}
+
 .windowCloseButton:before {
 
     content: "\2716";
@@ -35,7 +42,7 @@
     margin-top: var(--marginTop);
     margin-left: var(--marginLeft);
     /*文本*/
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     color: #000000;
     text-decoration:none;
     /*形状*/

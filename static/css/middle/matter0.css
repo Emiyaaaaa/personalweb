@@ -36,7 +36,7 @@
     background-color: #FFFFFF;
     padding: 17px 20px;
     width: 86%;
-    height: 84px;
+    height: 84%;
     margin-left: 5%;
     margin-top: 15px;
     box-shadow:0px 2px 15px rgba(212,212,212,0.9);
@@ -65,16 +65,17 @@
 
 }
 
-.look-more{
-
-    color: #348ae6
-    
-}
-
 .loadStatus{
     
     display: none;
     text-align: center;
     padding-top: 22px
+
+}
+
+.date{
+
+    margin: 0 auto;
+    padding: 0px 10px;
 
 }

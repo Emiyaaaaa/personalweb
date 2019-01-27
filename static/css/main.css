@@ -32,7 +32,6 @@ body {
     margin: 0;
     padding: 0;
 	background-color:#fcfcfc;
-	letter-spacing: 1px;
 
 }
 
@@ -71,6 +70,12 @@ body {
 	width: 28%;
 	height: 100%;
 	overflow: auto;
+
+}
+
+a:hover{
+
+	text-decoration: none;
 
 }
 

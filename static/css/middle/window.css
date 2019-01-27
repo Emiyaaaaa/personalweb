@@ -93,6 +93,12 @@
 
 }
 
+.window_aTag:hover{
+
+    color: #4078c0;
+
+}
+
 #window::-webkit-scrollbar {
     display: none;
 }

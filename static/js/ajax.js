@@ -25,6 +25,7 @@ $(document).ready(function() {
 		$('#middle > div').css('display','none');
 		$('#matter'+LINUM).css('display','block');
 		nowMatter = 'matter'+LINUM;
+		// scroll2Top();
 
 		if (LINUM == 0 || LINUM == 1){
 			window.onscroll=scrollBottom;

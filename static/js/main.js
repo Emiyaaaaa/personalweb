@@ -16,7 +16,15 @@ function sleep(d){
   for(var t = Date.now();Date.now() - t <= d;);
 }
 
-function IsPC() {
+function scroll2Top() {
+	//FF：document.documentElement.scrollTop获取滚动条滚动的高度
+	//IE：document.body.scrollTop获取滚动条滚动的高度
+	console.log(document.documentElement.scrollTop)
+	console.log(document.body.scrollTop)
+	document.documentElement.scrollTop = document.body.scrollTop = 0;
+}
+
+function isPC() {
    var userAgentInfo = navigator.userAgent;
    var Agents = ["Android", "iPhone",
       "SymbianOS", "Windows Phone",
@@ -30,7 +38,7 @@ function IsPC() {
    }
    return flag;
 }
-console.log(IsPC())
+console.log(isPC())
 
 function addWeatherNevListen(){
 	$(".weather-menu li").click(function () {

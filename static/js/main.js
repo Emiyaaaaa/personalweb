@@ -38,7 +38,7 @@ function isPC() {
    }
    return flag;
 }
-console.log(isPC())
+// console.log(isPC())
 
 function addWeatherNevListen(){
 	$(".weather-menu li").click(function () {
@@ -74,8 +74,10 @@ function scrollBottom(){
 	var scrollTop=document.documentElement.scrollTop;
 	var wholeHeight=document.body.scrollHeight;
 	if(clients + scrollTop >= wholeHeight-1){
-		getMoreContent();
-		window.onscroll = function(){};
+		var reason = getMoreContent();
+		if (reason == true){
+			window.onscroll = function(){};
+		}
 	}
 }
 window.onscroll=scrollBottom;

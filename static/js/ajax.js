@@ -28,9 +28,9 @@ $(document).ready(function() {
 		// scroll2Top();
 
 		if (LINUM == 0 || LINUM == 1){
-			window.onscroll=scrollBottom;
+		    window.onscroll=scrollBottom;
 			//判断是否需要ajax
-			if (leftClickNeedAjax() == 'true'){
+			if (leftClickNeedAjax() == true){
 				$.ajax({
 			        url:"/",
 			        type:"GET",
@@ -41,12 +41,12 @@ $(document).ready(function() {
 			        }
 	    		})
 			}
-			if ($('.'+nowMatter+' li').css('display') == 'none'){
-				divFadeIn();
-			}
+			// if ($('.'+nowMatter+' li').css('display') == 'none'){
+			// 	divFadeIn();
+			// }
 		}
 		else if(LINUM == 2){
-			if (leftClickNeedAjax() == 'true'){
+			if (leftClickNeedAjax() == true){
 				$.ajax({
 			        url:"/",
 			        type:"GET",
@@ -83,7 +83,7 @@ $(document).ready(function() {
 	}
 
 	function getMoreContent(){
-		if (nowMatter == 'matter0' || nowMatter == 'matter1'){
+		if ((nowMatter == 'matter0' || nowMatter == 'matter1') && (leftClickNeedAjax() == false)){
 			var finally_id = $('.'+nowMatter+' li:last>a:eq(0)').attr('id').match(/\d+/)[0];
 			var liLength = $('.'+nowMatter+' li').length;
 			$.ajax({
@@ -106,12 +106,16 @@ $(document).ready(function() {
 						//end
 						$('.'+nowMatter+' .loadStatus:last').css('display','block');
 					}
-	        	window.onscroll=scrollBottom;
-	        },
-	        error:function (XMLHttpRequest, textStatus, errorThrown) {
-	        	window.onscroll=scrollBottom;
-            }
-		})
+					window.onscroll = scrollBottom;
+		        },
+		        error:function (XMLHttpRequest, textStatus, errorThrown) {
+		        	window.onscroll = scrollBottom;
+	            }
+			})
+			return true;
+		}
+		else{
+			return false;
 		}
 	}
 	window.getMoreContent = getMoreContent;
@@ -146,7 +150,10 @@ $(document).ready(function() {
 	function leftClickNeedAjax(){
 		var content = $('#'+nowMatter).html().replace(/\s/g, "");
 		if (content == '<ul></ul>' || content == ''){
-			return 'true';
+			return true;
+		}
+		else{
+			return false;
 		}
 	}
 })

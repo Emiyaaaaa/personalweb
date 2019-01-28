@@ -72,6 +72,10 @@ function divFadeIn() {
 function scrollBottom(){
 	var clients=window.innerHeight;
 	var scrollTop=document.documentElement.scrollTop;
+	if (scrollTop == 0){
+		var scrollTop=document.body.scrollTop;
+	}
+	console.log(scrollTop);
 	var wholeHeight=document.body.scrollHeight;
 	if(clients + scrollTop >= wholeHeight-1){
 		var reason = getMoreContent();

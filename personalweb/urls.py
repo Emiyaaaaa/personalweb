@@ -20,6 +20,7 @@ from django.conf.urls.static import static
 from diary.views import DiaryView
 from codeDiary.views import CodeDiaryView
 from notFoundPage.views import NotFoundPageView
+from mobilePage.views import MobilePageView
 import xadmin
 import mainPage
 from django.shortcuts import render
@@ -30,7 +31,8 @@ urlpatterns = [
     url(r'^$', mainPage.ajax_main),
     url(r'^xadmin/', xadmin.site.urls),
     url(r'^admin/', admin.site.urls),
-    url(r'404',NotFoundPageView.as_view())
+    url(r'404',NotFoundPageView.as_view()),
+    url(r'mobile',MobilePageView.as_view())
 ]
 urlpatterns += static(settings.MEDIA_URL , document_root = settings.MEDIA_ROOT )
 urlpatterns += static(settings.STATIC_URL, document_root = settings.STATIC_ROOT )

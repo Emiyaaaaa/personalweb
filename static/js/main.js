@@ -22,22 +22,6 @@ function rememberScrollTop() {
 	document.documentElement.scrollTop = document.body.scrollTop = matterScrollTop[nowMatter] || 0;
 }
 
-function isPC() {
-   var userAgentInfo = navigator.userAgent;
-   var Agents = ["Android", "iPhone",
-      "SymbianOS", "Windows Phone",
-      "iPad", "iPod"];
-   var flag = true;
-   for (var v = 0; v < Agents.length; v++) {
-      if (userAgentInfo.indexOf(Agents[v]) > 0) {
-         flag = false;
-         break;
-      }
-   }
-   return flag;
-}
-// console.log(isPC())
-
 function addWeatherNevListen(){
 	$(".weather-menu li").click(function () {
 		$('.weather-menu li').removeClass('active');

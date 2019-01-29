@@ -21,11 +21,13 @@ $(document).ready(function() {
 		//导航栏交互
 		$('.left-menu a').removeClass('active');
 		$(this).addClass('active');
+		matterScrollTop[nowMatter] = document.documentElement.scrollTop || document.body.scrollTop;
+		console.log(matterScrollTop)
 		LINUM = $(this).parent().attr('id').split('-')[1];
 		$('#middle > div').css('display','none');
 		$('#matter'+LINUM).css('display','block');
 		nowMatter = 'matter'+LINUM;
-		// scroll2Top();
+		rememberScrollTop();
 
 		if (LINUM == 0 || LINUM == 1){
 		    window.onscroll=scrollBottom;

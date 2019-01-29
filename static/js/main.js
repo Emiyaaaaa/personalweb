@@ -16,12 +16,11 @@ function sleep(d){
   for(var t = Date.now();Date.now() - t <= d;);
 }
 
-function scroll2Top() {
-	//FF：document.documentElement.scrollTop获取滚动条滚动的高度
-	//IE：document.body.scrollTop获取滚动条滚动的高度
-	console.log(document.documentElement.scrollTop)
-	console.log(document.body.scrollTop)
-	document.documentElement.scrollTop = document.body.scrollTop = 0;
+function rememberScrollTop() {
+	//FF：document.documentElement.scrollTop
+	//IE：document.body.scrollTop
+	console.log(matterScrollTop[nowMatter])
+	document.documentElement.scrollTop = document.body.scrollTop = matterScrollTop[nowMatter] || 0;
 }
 
 function isPC() {
@@ -70,13 +69,9 @@ function divFadeIn() {
 }
 
 function scrollBottom(){
-	var clients=window.innerHeight;
-	var scrollTop=document.documentElement.scrollTop;
-	if (scrollTop == 0){
-		var scrollTop=document.body.scrollTop;
-	}
-	console.log(scrollTop);
-	var wholeHeight=document.body.scrollHeight;
+	var clients = window.innerHeight;
+	var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+	var wholeHeight = document.body.scrollHeight;
 	if(clients + scrollTop >= wholeHeight-1){
 		var reason = getMoreContent();
 		if (reason == true){

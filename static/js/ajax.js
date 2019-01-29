@@ -22,7 +22,6 @@ $(document).ready(function() {
 		$('.left-menu a').removeClass('active');
 		$(this).addClass('active');
 		matterScrollTop[nowMatter] = document.documentElement.scrollTop || document.body.scrollTop;
-		console.log(matterScrollTop)
 		LINUM = $(this).parent().attr('id').split('-')[1];
 		$('#middle > div').css('display','none');
 		$('#matter'+LINUM).css('display','block');

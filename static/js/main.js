@@ -19,7 +19,6 @@ function sleep(d){
 function rememberScrollTop() {
 	//FF：document.documentElement.scrollTop
 	//IE：document.body.scrollTop
-	console.log(matterScrollTop[nowMatter])
 	document.documentElement.scrollTop = document.body.scrollTop = matterScrollTop[nowMatter] || 0;
 }
 

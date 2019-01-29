@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97ee085e-0965-47c9-afdd-5d7ddcf1463c" name="Default" comment="bug">
-      <change afterPath="$PROJECT_DIR$/apps/mobilePage/migrations/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/notFoundPage/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/notFoundPage/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/application/1b4c510fd9f9d72a26f9db77df2a2834349bbb3f.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/application/1b4c510fd9f9d72a26f9db77df2a2834349bbb3f_PwvnptS.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/application/1b4c510fd9f9d72a26f9db77df2a2834349bbb3f_Wo6PTO4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/application/1b4c510fd9f9d72a26f9db77df2a2834349bbb3f_Y16yXbG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/personalweb/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/personalweb/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/personalweb.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/personalweb.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/mobilePage/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/mobilePage/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/mobilePage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mobilePage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../untitled/qzone/qzone_sql.py" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/qzone/qzone_sql.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -94,10 +88,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/applications/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
+            <state relative-caret-position="380">
               <caret line="16" column="83" selection-start-line="16" selection-start-column="83" selection-end-line="16" selection-end-column="83" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
@@ -138,11 +132,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/mobilePage/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="78">
-              <caret line="3" column="20" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="20" />
+            <state relative-caret-position="208">
+              <caret line="8" column="46" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -249,8 +243,8 @@
         <option value="$PROJECT_DIR$/apps/mainPage.py" />
         <option value="$PROJECT_DIR$/apps/applications/views.py" />
         <option value="$PROJECT_DIR$/apps/notFoundPage/views.py" />
-        <option value="$PROJECT_DIR$/apps/mobilePage/views.py" />
         <option value="$PROJECT_DIR$/personalweb/urls.py" />
+        <option value="$PROJECT_DIR$/apps/mobilePage/views.py" />
       </list>
     </option>
   </component>
@@ -771,7 +765,7 @@
       <workItem from="1548236018081" duration="3537000" />
       <workItem from="1548308536824" duration="5420000" />
       <workItem from="1548484218401" duration="1279000" />
-      <workItem from="1548750361682" duration="1473000" />
+      <workItem from="1548750361682" duration="2232000" />
     </task>
     <task id="LOCAL-00115" summary="打开窗口部分的代码重构">
       <created>1541317972699</created>
@@ -1120,7 +1114,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30246000" />
+    <option name="totallyTimeSpent" value="31005000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1135,7 +1129,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49787235" visible="true" weight="0.10927505" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49787235" visible="true" weight="0.10927505" />
       <window_info id="Structure" order="1" sideWeight="0.50212765" side_tool="true" weight="0.27010724" />
       <window_info id="Favorites" order="2" sideWeight="0.50212765" side_tool="true" weight="0.27010724" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -1143,16 +1137,16 @@
       <window_info anchor="bottom" id="Debug" order="2" weight="0.39942938" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="5" weight="0.32952926" />
+      <window_info anchor="bottom" id="TODO" order="5" weight="0.3286334" />
       <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.9201141" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" order="9" weight="0.32952926" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.3286334" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5020107" side_tool="true" weight="0.2719547" />
-      <window_info anchor="bottom" id="manage.py@personalweb" order="12" visible="true" weight="0.46203905" />
+      <window_info anchor="bottom" id="manage.py@personalweb" order="12" weight="0.46203905" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="14" sideWeight="0.49798927" weight="0.47722343" />
+      <window_info active="true" anchor="bottom" id="Run" order="14" sideWeight="0.49798927" visible="true" weight="0.47722343" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -1503,16 +1497,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/applications/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="16" column="83" selection-start-line="16" selection-start-column="83" selection-end-line="16" selection-end-column="83" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/applications/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
@@ -1565,8 +1549,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/mobilePage/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="3" column="20" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="20" />
+        <state relative-caret-position="208">
+          <caret line="8" column="46" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/applications/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="16" column="83" selection-start-line="16" selection-start-column="83" selection-end-line="16" selection-end-column="83" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>

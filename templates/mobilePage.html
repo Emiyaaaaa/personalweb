@@ -7,10 +7,33 @@
 	<title>Emiya</title>
 </head>
 <body>
-	<div id="content">
-		<h1>404</h1>
-		<p>网站出了一点故障，Emiya酱正在努力修复中，抱歉o(><)o</p>
+	<div class="avatar">
+		<img src="/media/avatar/123.jpg" width="350" height="350"/>
 	</div>
-
+	<div class="content">
+		<p class="content1">欢迎来到Emiya的博客</p>
+		<p class="content2">请在PC端浏览，使用Chrome浏览器浏览效果会更好哦(〃'▽'〃)</p>
+	</div>
+	<script type="text/javascript">
+		PORT = window.location.port;
+		MAINURL = 'http://' + document.domain + ":" + PORT + '/';
+		function isPC() {
+		   var userAgentInfo = navigator.userAgent;
+		   var Agents = ["Android", "iPhone",
+		      "SymbianOS", "Windows Phone",
+		      "iPad", "iPod"];
+		   var flag = true;
+		   for (var v = 0; v < Agents.length; v++) {
+		      if (userAgentInfo.indexOf(Agents[v]) > 0) {
+		         flag = false;
+		         break;
+		      }
+		   }
+		   return flag;
+		}
+		if (isPC() == true) {
+			window.location.href = MAINURL;
+		}
+	</script>
 </body>
 </html>

@@ -7,8 +7,8 @@ function matterClick(){
 	if (LINUM == 3){
 		initializePersonalcenterNav();
 	}
-	else if (LINUM == 1 || LINUM == 0){
-		divFadeIn(URLHASH);
+	else if (LINUM != 3){
+		divFadeIn();
 	}
 }
 
@@ -50,21 +50,29 @@ function addWeatherNevListen(){
 }
 
 function divFadeIn() {
-	var liLength = $('#'+nowMatter+' ul li').length;
-	for (var i = 0; i < liLength; i++) {
-		const li_ele = $('#'+nowMatter+' ul li:eq(' + i +')');
-		if (i<=6){
-			li_ele.delay(140*i).fadeIn();
-			setTimeout(function(){check_lines_length(li_ele)},140*i+5);
+	if (nowMatter == 'matter0' || nowMatter == 'matter1') {
+		var liLength = $('#'+nowMatter+' ul li').length;
+		for (var i = 0; i < liLength; i++) {
+			const li_ele = $('#'+nowMatter+' ul li:eq(' + i +')');
+			if (i<=6){
+				li_ele.delay(140*i).fadeIn();
+				setTimeout(function(){check_lines_length(li_ele)},140*i+5);
+			}
+			else{
+				li_ele.delay(140*6).fadeIn();
+				setTimeout(function(){check_lines_length(li_ele)},140*6+5);
+			}
 		}
-		else{
-			li_ele.delay(140*6).fadeIn();
-			setTimeout(function(){check_lines_length(li_ele)},140*6+5);
+	  	$('#'+nowMatter+' .loadStatus:last').delay(140*i).fadeIn(10);
+	}
+	else if(nowMatter == 'matter2'){
+		var liLength = $('#'+nowMatter+' .app').length;
+		for (var i = 0; i < liLength; i++) {
+			const div_ele = $('#'+nowMatter+' .app:eq(' + i +')');
+			div_ele.children('.appFadeIn').delay(160*i).fadeIn(800);
 		}
 	}
-  	$('#'+nowMatter+' .loadStatus:last').delay(140*i).fadeIn(10);
 	setTimeout(function(){scrollBottom();},140*i);
-
 }
 
 function scrollBottom(){

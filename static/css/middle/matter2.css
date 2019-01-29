@@ -24,6 +24,12 @@
     
 }
 
+.matter2 .app .appFadeIn{
+
+    display: none;
+
+}
+
 .app .img-box img{
 
     position: absolute;

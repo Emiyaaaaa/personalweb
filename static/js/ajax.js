@@ -42,9 +42,6 @@ $(document).ready(function() {
 			        }
 	    		})
 			}
-			// if ($('.'+nowMatter+' li').css('display') == 'none'){
-			// 	divFadeIn();
-			// }
 		}
 		else if(LINUM == 2){
 			if (leftClickNeedAjax() == true){
@@ -54,6 +51,7 @@ $(document).ready(function() {
 			        data:{"matter":nowMatter},
 			        success:function(data){
 			        	fillHtml(data);
+			        	divFadeIn();
 			        }
 	    		})
 			}
@@ -62,7 +60,6 @@ $(document).ready(function() {
 			initializePersonalcenterNav();
 			get_update_log();
 		}
-		
 	})
 
 

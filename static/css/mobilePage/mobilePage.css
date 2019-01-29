@@ -4,6 +4,7 @@ body,html{
 	height: 100%;
 	overflow-y: auto;
 	overflow-x: hidden;
+	background: rgba(154,208,160,0.2);
 
 }
 
@@ -23,7 +24,7 @@ img {
 	
 	
     border-radius: 35px;
-    box-shadow:0px 0px 30px rgba(170,170,170,0.9);
+    box-shadow:0px 0px 70px rgba(154,208,160,0.6);
 
 }
 
@@ -37,17 +38,22 @@ img {
 .content{
 
 	text-align: center;
+	letter-spacing: 2px;
 
 }
 
 .content1{
-
-	font-size: 30px;
+	
+	margin-top: 100px;
+	color: #333333;
+	font-size: 40px;
 
 }
 
 .content2{
-
-	font-size: 30px;
+	
+	padding: 40px 140px;
+	color: #333333;
+	font-size: 40px;
 
 }

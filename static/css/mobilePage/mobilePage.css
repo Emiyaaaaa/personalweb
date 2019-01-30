@@ -53,8 +53,45 @@ img {
 
 .content2{
 	
-	padding: 40px 140px;
-	color: #333333;
+	padding: 65px 140px 0 140px;
+	color: #444444;
 	font-size: 40px;
+
+}
+
+.content2 p{
+
+	margin: 20px 0;
+
+}
+
+.content3{
+	
+	padding: 65px 140px 0 140px;
+	color: #444444;
+	font-size: 40px;
+
+}
+
+.content3 p{
+
+	margin: 20px 0;
+
+}
+
+.beian{
+	
+	position: absolute;
+	width: 100%;
+	text-align: center;
+    bottom: 46px;
+	font-size: 28px;
+
+}
+
+.beian a{
+	
+	color: #949494;
+	text-decoration: none;
 
 }

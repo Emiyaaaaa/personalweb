@@ -42,7 +42,7 @@ $(document).ready(function() {
 			'marginTop':marginTop+'px',
 			'marginLeft':marginLeft+'px',
 			'contentHeight':windowHeight-34+'px'
-		}
+		};
 	 	setProperty("window",setPripertyDict);
 		if (windowObj.outerWidth(true) - windowObj.outerWidth() != 0){
 			var windowPaddingLeft = (windowObj.outerWidth()-windowWidth)/2;
@@ -68,7 +68,7 @@ $(document).ready(function() {
 			'scaleY':1/scaleY,
 			'translateX':translateX+'px',
 			'translateY':translateY+'px'
-		}
+		};
 	 	setProperty("window",setPripertyDict);
 	 	
 	 	reply = 'false';

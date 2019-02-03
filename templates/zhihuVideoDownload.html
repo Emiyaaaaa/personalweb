@@ -1,7 +1,17 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="cn">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="HandheldFriendly" content="true">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/zhihuVideoDownload/zhihuVideoDownload.css' %}">
+	<script type="text/javascript" src="http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
+	<script type="text/javascript">
+	   $youziku.load("body", "964890101e6740ba87ea0a502555cda0", "jdzhonyuanjian");
+	   $youziku.draw();
+	</script>
 	<title>知乎视频下载</title>
 </head>
 <body>

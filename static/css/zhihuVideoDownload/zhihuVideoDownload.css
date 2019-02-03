@@ -20,3 +20,20 @@ img {
     border: none;
 
 }
+
+.beian{
+	
+	position: absolute;
+	width: 100%;
+	text-align: center;
+    bottom: 46px;
+	font-size: 28px;
+
+}
+
+.beian a{
+	
+	color: #949494;
+	text-decoration: none;
+
+}

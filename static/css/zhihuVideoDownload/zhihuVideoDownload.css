@@ -5,7 +5,7 @@ body,html{
 	margin: 0;
 	overflow-y: auto;
 	overflow-x: hidden;
-	background: #fbfbfb;
+	background: #fafafa;
 
 }
 
@@ -73,8 +73,12 @@ header{
 	height: 40px;
 	border-radius: 20px;
 	border: 2px solid rgba(0,131,255,0.5);
+	outline: none;
 
 	font-size: 18px;
+	padding-left: 10px;
+	padding-right: 10px;
+	caret-color: rgba(0,131,255,0.5);
 
 }
 

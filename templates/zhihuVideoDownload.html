@@ -9,7 +9,8 @@
 	<link rel="stylesheet" type="text/css" href="{% static 'css/zhihuVideoDownload/zhihuVideoDownload.css' %}">
 	<script type="text/javascript" src="http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
 	<script type="text/javascript">
-	   $youziku.load("body", "964890101e6740ba87ea0a502555cda0", "jdzhonyuanjian");
+	   $youziku.load("main-box", "964890101e6740ba87ea0a502555cda0", "jdzhonyuanjian");
+	   $youziku.load("body", "4b25254045ca4c748e0bc0a81fff289d", "Source-Han-Light")
 	   $youziku.draw();
 	</script>
 	<title>知乎视频下载</title>
@@ -17,18 +18,18 @@
 <body>
 	<header>
 		<div class="left">知乎视频下载</div>
-		<div class="right">首页</div>
+		<div class="right"><a href="/#">首页</a></div>
 	</header>
 	<div class="main-box">
-		<div class="search-box"></div>
+		<div class="search-box">
+			<input type="text" name="url">
+		</div>
 		<div class="search-button"></div>
 		<div class="search-reason"></div>
 	</div>
 	<footer>
-		<div class="mzsm">免责声明</div>
-		<div class="beian">
-			<a href="http://www.miitbeian.gov.cn/">晋ICP备18012113号-1</a>
-		</div>
+		<a href="zhihuVideoDownload/mzsm" class="mzsm">免责声明</div>
+		<a href="http://www.miitbeian.gov.cn/" class="beian">晋ICP备18012113号-1</a>
 	</footer>
 </body>
 </html>

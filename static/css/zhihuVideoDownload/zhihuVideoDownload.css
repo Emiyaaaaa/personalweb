@@ -58,12 +58,18 @@ header{
 
 }
 
+.main-box{
+
+	text-align: center;
+
+}
+
 .search-box{
 	
-	text-align: center;
-	margin-top: 130px;
 	width: 70%;
-	margin-left: 15%;
+	max-width: 750px;
+	margin: 0 auto;
+	margin-top: 130px;
 
 }
 

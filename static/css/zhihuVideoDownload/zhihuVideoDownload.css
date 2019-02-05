@@ -31,20 +31,20 @@ header{
 
 	width: 100%;
 	height: 60px;
-	padding: 0;
 
 }
 
 .right{
 
 	float: right;
-	font-size: 20px;
-	padding: 15px;
+	padding: 15px 8px 8px 8px;
 
 }
 
 .right a{
 
+	font-size: 20px;
+	padding: 0 7px 7px 7px;
 	color: #0083FF;
 
 }
@@ -84,7 +84,31 @@ header{
 	font-size: 18px;
 	padding-left: 10px;
 	padding-right: 10px;
-	caret-color: rgba(0,131,255,0.5);
+	caret-color: rgba(0,131,255,0.7);
+
+}
+
+.search-box input::-webkit-input-placeholder {
+
+	color: #cccccc;
+	font-size: 18px;
+
+}
+
+.search-button{
+	
+	color: #ffffff;
+	cursor:pointer;
+	font-size: 19px;
+	letter-spacing: 3px;
+	width: 20%;
+	max-width: 110px;
+	height: 38px;
+	border-radius: 19px;
+	padding-top: 8px;
+	margin: 0 auto;
+	margin-top: 30px;
+	background: rgba(0,131,255,0.8);
 
 }
 

@@ -66,6 +66,7 @@ header{
 
 .search-box{
 	
+	position: relative;
 	width: 70%;
 	max-width: 750px;
 	margin: 0 auto;
@@ -97,6 +98,7 @@ header{
 
 .search-button{
 	
+	position: relative;
 	color: #ffffff;
 	cursor:pointer;
 	font-size: 19px;

@@ -154,7 +154,7 @@ $(document).ready(function() {
 			return false;
 		}
 	}
-})
+});
 
 // matter3_3建议
 function matter33SendMessage(){

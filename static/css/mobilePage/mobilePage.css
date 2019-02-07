@@ -5,7 +5,7 @@ body,html{
 	margin: 0;
 	overflow-y: auto;
 	overflow-x: hidden;
-	background: #fafafa;
+	background: #f5feff;
 
 }
 
@@ -25,7 +25,7 @@ img {
 	
 	
     border-radius: 35px;
-    box-shadow:0px 0px 70px rgba(210,210,210,0.8);
+    box-shadow:0px 0px 80px rgba(199,247,255,0.76);
 
 }
 

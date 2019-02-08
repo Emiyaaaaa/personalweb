@@ -67,10 +67,18 @@ header{
 .search-box{
 	
 	position: relative;
+	top: var(--top,0);
+	left: var(--left,0);
 	width: 70%;
 	max-width: 750px;
 	margin: 0 auto;
 	margin-top: 130px;
+
+	transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -ms-transition: all 0.3s;
 
 }
 
@@ -99,6 +107,8 @@ header{
 .search-button{
 	
 	position: relative;
+	top: var(--top,0);
+	left: var(--left,0);
 	color: #ffffff;
 	cursor:pointer;
 	font-size: 19px;
@@ -111,6 +121,12 @@ header{
 	margin: 0 auto;
 	margin-top: 30px;
 	background: rgba(0,131,255,0.8);
+
+	transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -ms-transition: all 0.3s;
 
 }
 

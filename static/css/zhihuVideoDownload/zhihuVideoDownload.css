@@ -139,6 +139,19 @@ header{
 
 }
 
+.search-reason{
+
+	position: relative;
+	top:var(--top,0);
+
+}
+
+.search-reason div{
+
+	display: none;
+
+}
+
 .Wrapper {
 
 	min-height: 100%;

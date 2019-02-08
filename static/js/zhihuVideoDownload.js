@@ -23,11 +23,7 @@ $(document).ready(function() {
 		};
 		setProperty('search-button',bu_dict);
 		setProperty('search-box',bo_dict);
-
-		console.log(bo_top,bu_top,screen_width)
 		
-
-
 	})
 
 	function setProperty(documentObjId,dictObj){

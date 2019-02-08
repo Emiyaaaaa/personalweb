@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	
 	$('#search-button').click(function () {
 		var search_box = document.getElementById('search-box');
 		var search_button = document.getElementById('search-button');

@@ -1,27 +1,37 @@
 a, abbr, address, blockquote, body, caption, cite, code, dd, del, dfn, div, dl, dt, em, fieldset, form, h1, h2, h3, h4, h5, h6, html, iframe, img, ins, label, legend, li, object, ol, p, pre, q, small, span, strong, sub, sup, table, tbody, td, tfoot, th, thead, tr, ul {
+    
     border: 0;
     margin: 0;
     padding: 0;
+
 }
 
 a {
+
 	text-decoration:none
+
 }
 
 img {
+
 	border:none;
+
 }
 
 ul {
+
 	list-style:none
+
 }
 
 button {
+
 	margin: 0;
 	padding: 0;
 	border: none;
 	outline: none;
 	background-color:transparent
+
 }
 
 body {
@@ -38,6 +48,8 @@ body {
 *{
 
     box-sizing: content-box;
+	margin: 0;  
+	padding: 0;
 
 }
 
@@ -73,6 +85,24 @@ body {
 
 }
 
+.left::-webkit-scrollbar {
+
+    display: none;
+
+}
+
+.right::-webkit-scrollbar {
+
+    display: none;
+
+}
+
+.middle::-webkit-scrollbar {
+
+    display: none;
+
+}
+
 a:hover{
 
 	text-decoration: none;
@@ -92,32 +122,44 @@ a:hover{
 }
 
 .bold{
-	font-weight:600;
-}
 
-.ligther-font{
-	font-family:"\5FAE\8F6F\96C5\9ED1",sans-serif;
+	font-weight:600;
+
 }
 
 
 ::-webkit-scrollbar {
+
 	width:8px;
 	height:10px;
+
 }
+
 ::-webkit-scrollbar-track-piece {
+
 	background-color:#ffffff;
+
 }
+
 ::-webkit-scrollbar-thumb {
+
 	border-radius: 10px;
 	background-color:#cfcece;
 	background-clip:padding-box;
 	min-height:28px;
+
 }
+
 ::-webkit-scrollbar-thumb:hover {
+
 	border-radius: 10px;
 	background-color:#bbb;
+
 }
+
 ::-webkit-scrollbar-track {
+
 	border-radius: 10px;
 	background: #EDEDED;
+
 }

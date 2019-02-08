@@ -8,6 +8,22 @@
 	<link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
 	<script type="text/javascript" src="{% static 'js/jquery/1.10.2/jquery.min.js' %}"></script>
 	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		function isPC() {
+		    var userAgentInfo = navigator.userAgent;
+		    var Agents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
+		    var flag = true;
+		    for (var v = 0; v < Agents.length; v++) {
+		        if (userAgentInfo.indexOf(Agents[v]) > 0) {
+		         	return false;
+		      	}
+		    }
+		   	return true;
+		}
+		if (isPC() == false) {
+			window.location.href = 'http://' + window.location.host + '/mobile';
+		}
+	</script>
 	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/font.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/left/left.css' %}">
@@ -281,25 +297,6 @@
 		// TEXMAXLENGTH = 35
 		matterScrollTop = {};
 		nowMatter = 'matter'+LINUM;
-
-		function isPC() {
-		   var userAgentInfo = navigator.userAgent;
-		   var Agents = ["Android", "iPhone",
-		      "SymbianOS", "Windows Phone",
-		      "iPad", "iPod"];
-		   var flag = true;
-		   for (var v = 0; v < Agents.length; v++) {
-		      if (userAgentInfo.indexOf(Agents[v]) > 0) {
-		         flag = false;
-		         break;
-		      }
-		   }
-		   return flag;
-		}
-		if (isPC() == false) {
-			window.location.href = MAINURL + 'mobile';
-		}
-
     </script>
     <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/matter3.js' %}"></script>

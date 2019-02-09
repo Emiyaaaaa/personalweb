@@ -21,7 +21,7 @@ $(document).ready(function() {
 			var set_bo_top = -(bo_top-70);
 			var set_bu_top = -(bu_top-70);
 			var set_re_top = -(re_top-70-bo_height);
-			console.log(re_top,bu_top)
+			console.log(re_top,bu_top);
 
 			var bo_dict = {
 				'top':set_bo_top+'px',
@@ -35,12 +35,12 @@ $(document).ready(function() {
 				'top':set_re_top+'px'
 			};
 
-			search_button.classList.add('moved')
+			search_button.classList.add('moved');
 			setProperty('search_button',bu_dict);
 			setProperty('search_box',bo_dict);
 			setProperty('search_reason',re_dict);
 		}
-		liFadeln()
+		liFadeln();
 	})
 
 	function liFadeln(){

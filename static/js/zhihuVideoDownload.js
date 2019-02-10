@@ -21,7 +21,6 @@ $(document).ready(function() {
 			var set_bo_top = -(bo_top-70);
 			var set_bu_top = -(bu_top-70);
 			var set_re_top = -(re_top-70-bo_height);
-			console.log(re_top,bu_top);
 
 			var bo_dict = {
 				'top':set_bo_top+'px',

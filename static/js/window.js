@@ -2,15 +2,15 @@ $(document).ready(function() {
 
 	setWindowHeight = 0.70;
 	setWindowWidth = 0.60;
+
 	closeWindowHtml = '<a href="javascript:void(0)" class="windowCloseButton"></a>';
 
 	$(document).on("click",'.openContent',function openWindow(){
 
-		hash = window.location.hash.split('?')[0];
-		if (hash == '#codeDiary'){
+		if (nowMatter == 'matter0'){
 			setWindowHeight = 0.80;
 		}
-		else if (hash == '#diary'){
+		else if (nowMatter == 'matter1'){
 			setWindowHeight = 0.50;
 		}
 

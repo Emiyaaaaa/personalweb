@@ -4,7 +4,7 @@ $(document).ready(function() {
 		$.ajax({
 		        url:"/",
 		        type:"GET",
-		        data:{"matter":nowMatter,"text_max_length":TEXTMAXLENGTH},
+		        data:{"type":"matterPage","matter":nowMatter,"text_max_length":TEXTMAXLENGTH},
 		        success:function(data){
 		        	fillHtml(data);
 		        	matterClick();
@@ -35,7 +35,7 @@ $(document).ready(function() {
 				$.ajax({
 			        url:"/",
 			        type:"GET",
-			        data:{"matter":nowMatter,"text_max_length":TEXTMAXLENGTH},
+			        data:{"type":"matterPage","matter":nowMatter,"text_max_length":TEXTMAXLENGTH},
 			        success:function(data){
 			        	fillHtml(data);
 			        	divFadeIn();
@@ -48,7 +48,7 @@ $(document).ready(function() {
 				$.ajax({
 			        url:"/",
 			        type:"GET",
-			        data:{"matter":nowMatter},
+			        data:{"type":"matterPage","matter":nowMatter},
 			        success:function(data){
 			        	fillHtml(data);
 			        	divFadeIn();
@@ -123,7 +123,7 @@ $(document).ready(function() {
 		$.ajax({
 			url:'/',
 	        type:"GET",
-	        data:{'matter':nowMatter,'text_id':href.split('?')[1].split('=')[1]},
+	        data:{"type":"matterPage",'matter':nowMatter,'text_id':href.split('?')[1].split('=')[1]},
 	        success:function(data){
 	        	$('#ajax_window_html').html(data);
 	        	try{

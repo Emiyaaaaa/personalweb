@@ -1,7 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-# @Author  : Li Haozheng
-# @Time    : 2019/2/12 15:30
 from codeDiary.views import CodeDiaryView
 from diary.views import DiaryView
 from tools.get_git_log import get_git_log
@@ -10,6 +6,7 @@ from applications.views import ApplicationsView
 from personalcenter.models import Message,WeatherUserStatistics
 from diary.models import DiaryComment,Diary
 from codeDiary.models import CodeComment,CodeDiary,WebsitePsd
+from zhuhuVideoDownload.views import ZhuhuVideoDownloadView
 
 def getMoreContent(request):
     matter = request.GET.get('matter')
@@ -111,3 +108,8 @@ def weatherUser(request):
             return JsonResponse({'statusCode': '0'})
     else:
         return JsonResponse({'statusCode': '1'})
+
+def ZhuhuVideoDownload(request):
+    url = request.GET.get('url')
+    render_page = ZhuhuVideoDownloadView().get_result(request,url)
+    return render_page

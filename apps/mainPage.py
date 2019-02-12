@@ -1,7 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-# @Author  : Li Haozheng
-# @Time    : 2018/10/17 18:38
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponseRedirect
@@ -18,7 +14,8 @@ from mainPageFun import *
 get_dict = {
     'getMoreContent':getMoreContent,
     'getUpdateLog':getUpdateLog,
-    'matterPage':matterPage
+    'matterPage':matterPage,
+    'ZhuhuVideoDownload':ZhuhuVideoDownload
 }
 
 post_dict = {

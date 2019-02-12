@@ -156,6 +156,3 @@ def ajax_post(request):
                 return JsonResponse({'statusCode': '0'})
         else:
             return JsonResponse({'statusCode': '1'})
-
-def zhihuVideoDownload(request):
-    return render(request,'zhihuVideoDownload.html')

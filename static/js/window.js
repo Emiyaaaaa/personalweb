@@ -18,7 +18,7 @@ $(document).ready(function() {
 		var obj = $(this);
 		var id = obj.attr('id');
 		windowObj = $('#window');
-		matterObj = $(hash);
+		matterObj = $('.'+nowMatter);
 		idNum = id.match(/\d+/)[0];
 		objName = id.split(/\d/)[0];
 		aCopyObj = $('#'+objName+'Copyone'+idNum);

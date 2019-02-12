@@ -10,7 +10,7 @@
 	<script type="text/javascript" src="http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
 	<script type="text/javascript">
 	   $youziku.load("body", "391439c5ecdc4645b63070e31332aeb0", "YouYuan");
-	   $youziku.load(".main-box", "4b25254045ca4c748e0bc0a81fff289d", "Source-Han-Light")
+	   $youziku.load(".main-box", "4b25254045ca4c748e0bc0a81fff289d", "Source-Han-Light");
 	   $youziku.draw();
 	</script>
 	<script type="text/javascript" src="{% static 'js/jquery/1.10.2/jquery.min.js' %}"></script>
@@ -25,10 +25,10 @@
 		</header>
 		<div class="main-box">
 			<div class="search-box" id="search_box">
-				<input type="text" name="url" placeholder="输入网址">
+				<input type="text" id="search_url" placeholder="输入网址">
 			</div>
 			<div class="search-button" id="search_button">搜索</div>
-			<div class="search-reason" id="search_reason">
+			<div class="search-result" id="search_result">
 				<ul>
 					<li>
 						<img src="">

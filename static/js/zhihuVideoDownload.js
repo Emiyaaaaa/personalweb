@@ -3,11 +3,11 @@ $(document).ready(function() {
 	$('#search_button').click(function () {
 		var search_box = document.getElementById('search_box');
 		var search_button = document.getElementById('search_button');
-		var search_reason = document.getElementById('search_reason');
+		var search_result = document.getElementById('search_result');
 		if(!search_button.classList.contains("moved")){
 			var bo_top = search_box.offsetTop;
 			var bu_top = search_button.offsetTop;
-			var re_top = search_reason.offsetTop;
+			var re_top = search_result.offsetTop;
 			var bo_width = search_box.clientWidth;
 			var bu_width = search_button.clientWidth;
 			var bo_height = search_box.clientHeight;
@@ -37,13 +37,21 @@ $(document).ready(function() {
 			search_button.classList.add('moved');
 			setProperty('search_button',bu_dict);
 			setProperty('search_box',bo_dict);
-			setProperty('search_reason',re_dict);
+			setProperty('search_result',re_dict);
 		}
-		liFadeln();
+		$.ajax({
+	        url:"/",
+	        type:"GET",
+	        data:{"type":"ZhuhuVideoDownload",},
+	        success:function(data){
+	        	fillHtml(data);
+				liFadeln();
+	        }
+		})
 	})
 
 	function liFadeln(){
-		var search_reason = document.getElementById('search_reason');
+		var search_result = document.getElementById('search_result');
 	}
 
 	function setProperty(documentObjId,dictObj){

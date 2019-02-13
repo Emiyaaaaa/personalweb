@@ -45,7 +45,7 @@ $(document).ready(function() {
 	        type:"GET",
 	        data:{"type":"ZhuhuVideoDownload",'url':url},
 	        success:function(data){
-	        	console.log(data)
+	        	$('#search-result ul').html(data);
 				liFadeln();
 	        }
 		})

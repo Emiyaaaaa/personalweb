@@ -39,13 +39,13 @@ $(document).ready(function() {
 			setProperty('search_box',bo_dict);
 			setProperty('search_result',re_dict);
 		}
-		var url = $('#search_result').val();
+		var url = $('#search_url').val();
 		$.ajax({
 	        url:"/",
 	        type:"GET",
 	        data:{"type":"ZhuhuVideoDownload",'url':url},
 	        success:function(data){
-	        	fillHtml(data);
+	        	console.log(data)
 				liFadeln();
 	        }
 		})

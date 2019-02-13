@@ -36,9 +36,9 @@ def ajax_main(request):
 
 
 def ajax_get(request):
-    matter = request.GET.get('matter')
+    get_type = request.GET.get('type')
 
-    if matter == None:
+    if get_type == None:
         simple_personal_info = PersonalCenterView().get_simple_personal_info()
         avatar = simple_personal_info['avatar']
         website_icon = simple_personal_info['website_icon']
@@ -49,11 +49,9 @@ def ajax_get(request):
         main_page['website_icon'] = website_icon
         main_page['statusCode'] = '200'
         return render(request, 'personalweb.html', main_page)
-
     else:
-        type = request.GET.get('type')
-        return get_dict[type](request)
+        return get_dict[get_type](request)
 
 def ajax_post(request):
-    type = request.POST.get('type')
-    return post_dict[type](request)
+    post_type = request.POST.get('type')
+    return post_dict[post_type](request)

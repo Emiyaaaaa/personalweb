@@ -1,10 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% for video_download_list in video_download_list %}
+<li>
+    <a href="{{ video_download_list.playlist }}" download="zhihu_video">
+        <select id="video_cars" name="cars" onchange="changeDefinition();">
+            {% for video in video_download_list.playlist %}
+                <option value="{{ video.definition }}">{{ video.definition }} {{ video.info.size }}</option>
+            {% endfor %}
+        </select>
+    </a>
+</li>
+{% empty %}
+    <div>未找到视频</div>
+{% endfor %}
 
-</body>
-</html>

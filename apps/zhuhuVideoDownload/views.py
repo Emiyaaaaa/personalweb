@@ -38,6 +38,7 @@ class ZhuhuVideoDownloadView(View):
                 dict2['info']['size'] = self.turn_size(dict2['info']['size'])
                 dict1['playlist'].append(dict2)
                 dict1['playlist'] = sorted(dict1['playlist'],key = lambda x: x['info']['size'],reverse=True)
+                dict1['default_url'] = dict1['playlist'][0]['info']['play_url']
             new_video_download_list.append(dict1)
         print(new_video_download_list)
         return new_video_download_list

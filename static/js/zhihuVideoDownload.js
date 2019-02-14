@@ -41,7 +41,7 @@ $(document).ready(function() {
 			setProperty('search_result',re_dict);
 		}
 		if (!isNull(url)){
-			window.location.href = "#/"+url;
+			window.location.href = "zhihu-video-download/?url="+url;//放入ajax中带参数判断是否为刷新操作
 			$.ajax({
 		        url:"/",
 		        type:"GET",

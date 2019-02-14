@@ -8,7 +8,6 @@ null = ''
 class ZhuhuVideoDownloadView(View):
     def get(self,request,url):
         if url == None or url == '':
-            print(url)
             return render(request,'zhihuVideoDownload.html',{'url':''})
         else:
             print(url)

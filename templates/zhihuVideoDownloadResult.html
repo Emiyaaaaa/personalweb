@@ -1,14 +1,15 @@
 {% for video_download_list in video_download_list %}
-<li>
+<li class="video-li">
     <a href="{{ video_download_list.default_url }}" download="zhihu_video">
         <img src="{{ video_download_list.cover_url }}">
         <div class="title">{{ video_download_list.title|default:"无标题" }}</div>
-        <select id="video_cars" onchange="changeDefinition();">
-            {% for video in video_download_list.playlist %}
-                <option value="{{ video.info.play_url }}">{{ video.definition }} {{ video.info.size }}</option>
-            {% endfor %}
-        </select>
     </a>
+    <select id="video_cars" onchange="changeDefinition();">
+        {% for video in video_download_list.playlist %}
+            <option value="{{ video.info.play_url }}">{{ video.definition }} {{ video.info.size }}</option>
+        {% endfor %}
+    </select>
+    
 </li>
 {% empty %}
     <div>未找到视频</div>

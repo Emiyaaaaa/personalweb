@@ -41,6 +41,7 @@ $(document).ready(function() {
 			setProperty('search_result',re_dict);
 		}
 		if (!isNull(url)){
+			window.location.href = "#/"+url;
 			$.ajax({
 		        url:"/",
 		        type:"GET",

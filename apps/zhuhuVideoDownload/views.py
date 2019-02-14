@@ -6,8 +6,13 @@ import re
 null = ''
 
 class ZhuhuVideoDownloadView(View):
-    def get(self,request):
-        return render(request,'zhihuVideoDownload.html')
+    def get(self,request,url):
+        if url == None or url == '':
+            print(url)
+            return render(request,'zhihuVideoDownload.html',{'url':''})
+        else:
+            print(url)
+            return render(request,'zhihuVideoDownload.html',{'url':url})
 
     def post(self,request):
         return render(request,'zhihuVideoDownload.html')
@@ -40,7 +45,6 @@ class ZhuhuVideoDownloadView(View):
                 dict1['playlist'] = sorted(dict1['playlist'],key = lambda x: x['info']['size'],reverse=True)
                 dict1['default_url'] = dict1['playlist'][0]['info']['play_url']
             new_video_download_list.append(dict1)
-        print(new_video_download_list)
         return new_video_download_list
 
     def get_result(self,request,url):

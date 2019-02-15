@@ -183,6 +183,7 @@ header{
 	position: relative;
 	height: 120px;
 	width: 90%;
+	max-width: 860px;
 	margin: 0 auto;
 
 }

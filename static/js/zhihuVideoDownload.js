@@ -4,6 +4,7 @@ $(document).ready(function() {
 		var search_box = document.getElementById('search_box');
 		var search_button = document.getElementById('search_button');
 		var search_result = document.getElementById('search_result');
+		var bubo_spacing = 2;
 		var url = $('#search_url').val();
 		if(!search_button.classList.contains("moved") && !isNull(url)){
 			var bo_top = search_box.offsetTop;
@@ -15,7 +16,6 @@ $(document).ready(function() {
 			var screen_width = document.body.clientWidth;
 			var bo_left = search_box.offsetLeft;
 			var bu_left = search_button.offsetLeft;
-			var bubo_spacing = 2;
 			var a = (screen_width - bo_width - bu_width - bubo_spacing)/2;
 			var set_bo_left = a - bo_left;
 			var set_bu_left = screen_width - a - bu_width - bu_left;
@@ -43,7 +43,6 @@ $(document).ready(function() {
 		if (!isNull(url)){
 			var href = window.location.href;
 			var num = href.length - href.replace(/\//g,'').length;
-			console.log(num)
 			if (num == 4){
 				window.location.href = "#/?turn=1&url="+url;
 			}
@@ -52,7 +51,15 @@ $(document).ready(function() {
 		        type:"GET",
 		        data:{"type":"ZhuhuVideoDownload",'url':url},
 		        success:function(data){
+					var button_width = document.getElementById('search_button').clientWidth;
+					var search_width = document.getElementById('search_box').clientWidth;
+					console.log(button_width,search_width)
 		        	$('#search_result ul').html(data);
+		        	var video_li = document.getElementsByClassName('video-li');
+		        	for (var i = 0; i < video_li.length; i++) {
+		        		console.log(video_li[i])
+		        		video_li[i].style.width = button_width + search_width + 'px'
+		        	}
 					liFadeln();
 		        }
 			})

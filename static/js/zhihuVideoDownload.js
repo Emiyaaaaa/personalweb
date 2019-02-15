@@ -41,7 +41,12 @@ $(document).ready(function() {
 			setProperty('search_result',re_dict);
 		}
 		if (!isNull(url)){
-			window.location.href = "zhihu-video-download/?url="+url;//放入ajax中带参数判断是否为刷新操作
+			var href = window.location.href;
+			var num = href.length - href.replace(/\//g,'').length;
+			console.log(num)
+			if (num == 4){
+				window.location.href = "#/?turn=1&url="+url;
+			}
 			$.ajax({
 		        url:"/",
 		        type:"GET",

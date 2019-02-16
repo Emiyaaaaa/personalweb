@@ -95,4 +95,8 @@ $(document).ready(function() {
    			obj.style.setProperty('--'+key,dictObj[key]);
 		}
 	}
+
+	function changeDefinition(){
+
+	}
 });

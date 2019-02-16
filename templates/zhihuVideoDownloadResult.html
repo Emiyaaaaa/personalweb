@@ -1,18 +1,26 @@
 {% for video_download_list in video_download_list %}
 <li class="video-li">
     <a href="{{ video_download_list.default_url }}" download="zhihu_video" class="video-div">
-        <img src="{{ video_download_list.cover_url }}" class="video-img">
-        <div class="title">{{ video_download_list.title|default:"无标题" }}</div>
+        <div class="img-box">
+            <img src="{{ video_download_list.cover_url }}" class="video-img">
+        </div>
+        <div class="else-box">
+            <div class="video-title">{{ video_download_list.title|default:"无标题" }}</div>
+            <object>
+                <a href="javascript:void(0)">
+                    <div id="video_cars" class="video-cars">
+                        <select onchange="changeDefinition();">
+                            {% for video in video_download_list.playlist %}
+                                <option value="{{ video.info.play_url }}">{{ video.definition }} {{ video.info.size }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </a>
+            </object>
+            
+        </div>
     </a>
-    <div id="video_cars" class="video-cars">
-        <select onchange="changeDefinition();">
-            {% for video in video_download_list.playlist %}
-                <option value="{{ video.info.play_url }}">{{ video.definition }} {{ video.info.size }}</option>
-            {% endfor %}
-        </select>
-    </div>
 </li>
 {% empty %}
     <div>未找到视频</div>
 {% endfor %}
-

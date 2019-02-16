@@ -51,14 +51,18 @@ $(document).ready(function() {
 		        type:"GET",
 		        data:{"type":"ZhuhuVideoDownload",'url':url},
 		        success:function(data){
+		        	$('#search_result ul').html(data);
 					var button_width = document.getElementById('search_button').clientWidth;
 					var search_width = document.getElementById('search_box').clientWidth;
-					console.log(button_width,search_width)
-		        	$('#search_result ul').html(data);
+					var video_img = document.getElementsByClassName('video-img');
 		        	var video_li = document.getElementsByClassName('video-li');
+		        	var else_box = document.getElementsByClassName('else-box');
+		        	console.log(document.getElementsByTagName('img')[0],window.getComputedStyle(document.getElementsByTagName('img')[0], null)['width'])
 		        	for (var i = 0; i < video_li.length; i++) {
-		        		console.log(video_li[i])
-		        		video_li[i].style.width = button_width + search_width + 'px'
+		        		var set_li_width = button_width + search_width - 10 + 'px';
+		        		video_li[i].style.width = set_li_width;
+		        		console.log(video_img[i].clientWidth,video_img[i].style.height,video_img[i].offsetWidth)
+		        		else_box[i].style.width = set_li_width - video_img[i].clientWidth + 'px';
 		        	}
 					liFadeln();
 		        }

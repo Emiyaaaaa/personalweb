@@ -261,12 +261,44 @@ object a{
 
 }
 
+.video-li select {
+
+	text-align: center;
+	text-align-last: center;
+	font-size: 16px;
+	letter-spacing: 1px;
+	color: #555555;
+	width: 200px;
+	height: 40px;
+	border: solid 1px #000;
+	border-radius: 5px;
+	appearance:none;
+	-moz-appearance:none;
+	-webkit-appearance:none;
+	/*background-color: red;*/
+	/*background: url("http://ourjs.github.io/static/2015/arrow.png") no-repeat scroll rightright center transparent;*/
+	padding-right: 14px;
+
+}  
+
 @media only screen and (min-width: 0px){
 
 	.video-title{
+
 		margin: 0 8px 0 10px;
 		padding-top: 8px;
 		font-size: 15px;
+
+	}
+
+	.video-li select {
+		
+		width: 100px;
+		height: 26px;
+		position: relative;
+		top: 17px;
+		font-size: 14px;
+
 	}
 
 }
@@ -274,9 +306,27 @@ object a{
 @media only screen and (min-width: 500px){
 
 	.video-title{
+
 		margin: 0 11px;
 		padding-top: 15px;
 		font-size: 18px;
+
+	}
+
+	header{
+
+		font-size: 21px;
+
+	}
+
+	.video-li select {
+		
+		width: 130px;
+		height: 31px;
+		position: relative;
+		top: 5px;
+		font-size: 15px;
+
 	}
 
 }
@@ -284,19 +334,55 @@ object a{
 @media only screen and (min-width: 750px){
 
 	.video-title{
+
 		margin: 0 14px;
 		padding-top: 20px;
 		font-size: 19px;
+
+	}
+
+	header{
+
+		font-size: 22px;
+
+	}
+
+	.video-li select {
+		
+		width: 170px;
+		height: 36px;
+		position: relative;
+		top: -6px;
+		font-size: 16px;
+
 	}
 
 }
 
-@media only screen and (min-width: 750px){
+@media only screen and (min-width: 1000px){
 
 	.video-title{
+
 		margin: 0 16px;
 		padding-top: 25px;
 		font-size: 20px;
+
+	}
+
+	header{
+
+		font-size: 23px;
+
+	}
+
+	.video-li select {
+		
+		width: 200px;
+		height: 40px;
+		position: relative;
+		top: -20px;
+		font-size: 18px;
+
 	}
 
 }

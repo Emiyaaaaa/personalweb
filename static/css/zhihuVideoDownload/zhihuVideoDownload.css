@@ -209,6 +209,14 @@ header{
 
 }
 
+object a{
+
+	display: block;
+	height: 50px;
+	width: 100%
+
+}
+
 .video-div{
 	
 	position: absolute;
@@ -217,14 +225,12 @@ header{
 	height: 100%;
 	border-radius: 15px;
     box-shadow:1px 1px 5px rgba(195,195,195,0.8);
-	/*border: 1px solid rgba(0,131,255,0.8);*/
 	
 }
 
 .video-cars{
 
-	position: absolute;
-	top: 20px
+	display: block;
 
 }
 
@@ -238,8 +244,12 @@ header{
 }
 .video-title{
 	
-	margin: 0 auto;
-	margin-bottom: 35px;
+	text-align: left;
+	height: 75%;
+	max-height: 150px;
+	min-height: 50px;
+	margin-left: 10px;
+	margin-right: 10px;
 
 }
 
@@ -247,9 +257,49 @@ header{
 
 	color: #333333;
 	letter-spacing: 1px;
+	font-size: 15px;
 
 }
 
+@media only screen and (min-width: 0px){
+
+	.video-title{
+		margin: 0 8px 0 10px;
+		padding-top: 8px;
+		font-size: 15px;
+	}
+
+}
+
+@media only screen and (min-width: 500px){
+
+	.video-title{
+		margin: 0 11px;
+		padding-top: 15px;
+		font-size: 18px;
+	}
+
+}
+
+@media only screen and (min-width: 750px){
+
+	.video-title{
+		margin: 0 14px;
+		padding-top: 20px;
+		font-size: 19px;
+	}
+
+}
+
+@media only screen and (min-width: 750px){
+
+	.video-title{
+		margin: 0 16px;
+		padding-top: 25px;
+		font-size: 20px;
+	}
+
+}
 .Wrapper {
 
 	min-height: 100%;

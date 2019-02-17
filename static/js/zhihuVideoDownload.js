@@ -57,13 +57,15 @@ $(document).ready(function() {
 					var img_box = document.getElementsByClassName('img-box');
 		        	var video_li = document.getElementsByClassName('video-li');
 		        	var else_box = document.getElementsByClassName('else-box');
+		        	var video_title = document.getElementsByClassName('video-title');
 		        	for (var i = 0; i < video_li.length; i++) {
 		        		var set_li_width = button_width + search_width - 10;
-		        		video_li[i].style.width = set_li_width + 'px';
 		        		var set_img_width = Math.ceil((video_li[i].clientHeight*16)/9);
-		        		console.log(set_img_width,set_li_width)
+
+		        		video_li[i].style.width = set_li_width + 'px';
 		        		img_box[i].style.width = set_img_width + 'px';
 		        		else_box[i].style.width = (set_li_width - set_img_width) + 'px';
+		        		video_title[i].style.height = video_li[i].clientHeight - 50 + 'px';
 		        	}
 					liFadeln();
 		        }

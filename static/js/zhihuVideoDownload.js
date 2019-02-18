@@ -58,6 +58,9 @@ $(document).ready(function() {
 		        	var video_li = document.getElementsByClassName('video-li');
 		        	var else_box = document.getElementsByClassName('else-box');
 		        	var video_title = document.getElementsByClassName('video-title');
+	        		var video_cars = document.getElementsByClassName("video-cars");
+	        		var video_cars_ul = document.querySelectorAll(".video-cars ul");
+
 		        	//css调整
 		        	for (var i = 0; i < video_li.length; i++) {
 		        		var set_li_width = button_width + search_width - 10;
@@ -67,16 +70,25 @@ $(document).ready(function() {
 		        		img_box[i].style.width = set_img_width + 'px';
 		        		else_box[i].style.width = (set_li_width - set_img_width) + 'px';
 		        		video_title[i].style.height = video_li[i].clientHeight - 50 + 'px';
-		        	}
-		        	//选择清晰度函数
-	        		var video_cars = document.getElementsByClassName("video-cars")
-					for (var i = 0; i < video_cars.length; i++) {
-						console.log(video_cars[i])
-						video_cars[i].addEventListener("click",function(e){
+		        		console.log(video_title[i])
+
+		        		//下拉菜单函数
+		        		video_cars[i].addEventListener("click",function(e){
 					        e.preventDefault();
-					        //接下来使用js代码进行页面跳转
+					        var li = e['path'][1];
+					        var ul = e['path'][2];
+					        var video_cars_ = e['path'][3];
+					        if (!video_cars_.classList.contains('clicked')) {
+					        	video_cars_.classList.add('clicked');
+					        	video_cars_.style.height = ul.clientHeight + 'px';
+					        }
+					        else{
+					        	video_cars_.style.height = li.clientHeight + 'px';
+					        	video_cars_.classList.remove('clicked');
+					        }
+					        
 					    });
-					}
+		        	}
 					liFadeln();
 		        }
 			})

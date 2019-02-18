@@ -70,7 +70,7 @@ $(document).ready(function() {
 		        		img_box[i].style.width = set_img_width + 'px';
 		        		else_box[i].style.width = (set_li_width - set_img_width) + 'px';
 		        		video_title[i].style.height = video_li[i].clientHeight - 50 + 'px';
-		        		console.log(video_title[i])
+		        		video_li[i].style.zIndex = 1000 - i + '';
 
 		        		//下拉菜单函数
 		        		video_cars[i].addEventListener("click",function(e){
@@ -79,6 +79,13 @@ $(document).ready(function() {
 					        var ul = e['path'][2];
 					        var video_cars_ = e['path'][3];
 					        if (!video_cars_.classList.contains('clicked')) {
+					        	//收回其他菜单
+					        	var clicked_cars = document.getElementsByClassName("clicked");
+					        	for (var i = 0; i < clicked_cars.length; i++) {
+					        		clicked_cars[i].style.height = li.clientHeight + 'px';
+					        		clicked_cars[i].classList.remove('clicked');
+					        	}
+					        	//点开本菜单
 					        	video_cars_.classList.add('clicked');
 					        	video_cars_.style.height = ul.clientHeight + 'px';
 					        }

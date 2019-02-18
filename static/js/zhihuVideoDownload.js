@@ -58,6 +58,7 @@ $(document).ready(function() {
 		        	var video_li = document.getElementsByClassName('video-li');
 		        	var else_box = document.getElementsByClassName('else-box');
 		        	var video_title = document.getElementsByClassName('video-title');
+		        	//css调整
 		        	for (var i = 0; i < video_li.length; i++) {
 		        		var set_li_width = button_width + search_width - 10;
 		        		var set_img_width = Math.ceil((video_li[i].clientHeight*16)/9);
@@ -67,6 +68,15 @@ $(document).ready(function() {
 		        		else_box[i].style.width = (set_li_width - set_img_width) + 'px';
 		        		video_title[i].style.height = video_li[i].clientHeight - 50 + 'px';
 		        	}
+		        	//选择清晰度函数
+	        		var video_cars = document.getElementsByClassName("video-cars")
+					for (var i = 0; i < video_cars.length; i++) {
+						console.log(video_cars[i])
+						video_cars[i].addEventListener("click",function(e){
+					        e.preventDefault();
+					        //接下来使用js代码进行页面跳转
+					    });
+					}
 					liFadeln();
 		        }
 			})
@@ -98,7 +108,7 @@ $(document).ready(function() {
 		}
 	}
 
-	function changeDefinition(){
-
+	function changeDefinition(e){
+		e.preventDefault();
 	}
 });

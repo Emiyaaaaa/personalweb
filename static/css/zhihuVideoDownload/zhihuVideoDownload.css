@@ -209,14 +209,6 @@ header{
 
 }
 
-object a{
-
-	display: block;
-	height: 50px;
-	width: 100%
-
-}
-
 .video-div{
 	
 	position: absolute;
@@ -261,26 +253,42 @@ object a{
 
 }
 
-.video-li select {
-
+.video-li .definition-li {
+	
+	position: relative;
 	text-align: center;
 	text-align-last: center;
 	font-size: 16px;
 	letter-spacing: 1px;
 	color: #555555;
+	width: 100%;
+	padding-right: 10px;
+
+}
+
+.video-cars {
+
 	width: 200px;
 	height: 40px;
-	border: solid 1px #000;
+	margin: 0 auto;
+	overflow: hidden;
 	border-radius: 5px;
-	appearance:none;
-	-moz-appearance:none;
-	-webkit-appearance:none;
-	border: none;
-    box-shadow:inset 0px 0px 2px rgba(195,195,195,0.8);
-	/*background-color: red;*/
-	/*background: url("http://ourjs.github.io/static/2015/arrow.png") no-repeat scroll rightright center transparent;*/
-	padding-right: 0;
-	outline: none;
+    box-shadow: inset 0px 0px 2px rgba(145,145,145,0.8);
+
+}
+
+.select-img{
+	
+	position: relative;
+	float: right;
+	top: 6px;
+	left: -13px;
+
+}
+
+.select-img img{
+
+	width: 10px;
 
 }
 
@@ -294,14 +302,24 @@ object a{
 
 	}
 
-	.video-li select {
+	.video-li .definition-li {
 		
+
+		
+	}
+
+	.video-cars{
+		top: 17px;
+		font-size: 14px;		
+		border-radius: 13px;
 		width: 100px;
 		height: 26px;
-		position: relative;
-		top: 17px;
-		font-size: 14px;
-		border-radius: 13px;
+
+	}
+
+	.definition-li-div{
+
+		height: 26px;
 
 	}
 
@@ -323,13 +341,24 @@ object a{
 
 	}
 
-	.video-li select {
+	.video-li .definition-li {
 		
-		width: 130px;
-		height: 31px;
-		position: relative;
+
+
+	}
+
+	.video-cars{
 		top: 5px;
 		font-size: 15px;
+		width: 130px;
+		height: 31px;
+		border-radius: 16px;
+
+	}
+
+	.definition-li-div{
+
+		height: 31px;
 
 	}
 
@@ -351,13 +380,36 @@ object a{
 
 	}
 
-	.video-li select {
+	.video-li .definition-li {
 		
-		width: 170px;
-		height: 36px;
-		position: relative;
+
+
+
+	}
+
+	.video-cars{
+
 		top: -6px;
 		font-size: 16px;
+		width: 170px;
+		height: 36px;
+		border-radius: 18px;
+		
+
+	}
+
+
+	.definition-li-div{
+		
+		padding-top: 8px;
+		height: 36px;
+
+	}
+
+	.select-img{
+
+		top: 6px;
+		left: -13px;
 
 	}
 
@@ -379,13 +431,27 @@ object a{
 
 	}
 
-	.video-li select {
+	.video-li .definition-li {
 		
+
+		
+		
+
+	}
+
+	.video-cars{
+
+		font-size: 18px;
+		top: -20px;
 		width: 200px;
 		height: 40px;
-		position: relative;
-		top: -20px;
-		font-size: 18px;
+		border-radius: 20px;
+
+	}
+
+	.definition-li-div{
+		
+		height: 40px;
 
 	}
 

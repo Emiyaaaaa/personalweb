@@ -1,21 +1,28 @@
+{% load staticfiles %}
 {% for video_download_list in video_download_list %}
 <li class="video-li">
-    <a href="{{ video_download_list.default_url }}" download="zhihu_video" class="video-div">
+    <a href="{{ video_download_list.default_url }}" download="zhihu_video" target="_blank" class="video-div">
         <div class="img-box">
             <img src="{{ video_download_list.cover_url }}" class="video-img">
         </div>
         <div class="else-box">
             <div class="video-title">{{ video_download_list.title|default:"无标题" }}</div>
             <object>
-                <a href="javascript:void(0)">
-                    <div id="video_cars" class="video-cars">
-                        <select onchange="changeDefinition();">
-                            {% for video in video_download_list.playlist %}
-                                <option value="{{ video.info.play_url }}">{{ video.definition }} {{ video.info.size }}</option>
-                            {% endfor %}
-                        </select>
+                <div id="video_cars" class="video-cars">
+                    <div class="select-img">
+                        <img src="{% static 'images/select.png' %}">
                     </div>
-                </a>
+                    <ul>
+                        {% for video in video_download_list.playlist %}
+                            <li class="definition-li">
+                                <div class="definition-li-div">
+                                    {{ video.definition }} {{ video.info.size }}
+                                </div>
+                                <a href="{{ video.info.play_url }}"></a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
             </object>
             
         </div>

@@ -70,7 +70,7 @@ $(document).ready(function() {
 		        		img_box[i].style.width = set_img_width + 'px';
 		        		else_box[i].style.width = (set_li_width - set_img_width) + 'px';
 		        		video_title[i].style.height = video_li[i].clientHeight - 50 + 'px';
-		        		video_li[i].style.zIndex = 1000 - i + '';
+		        		// video_li[i].style.zIndex = 1000 - i + '';
 		        		//判断li数量是否需要显示下拉箭头
 
 		        		//下拉菜单函数
@@ -91,14 +91,21 @@ $(document).ready(function() {
 					        	video_cars_.style.height = ul.clientHeight + 'px';
 					        }
 					        else{
-					        	video_cars_.style.height = li.clientHeight + 'px';
+		        				var first_li = '';
+					        	for (var i = 0; i < ul.childNodes.length; i++) {
+				        			if (ul.childNodes[i].nodeName != '#text'){
+				        				first_li = ul.childNodes[i];
+				        				break;
+				        			}
+				        		}
+					        	video_cars_.style.height = first_li.clientHeight + 'px';
 					        	video_cars_.classList.remove('clicked');
 					        }
 
 					        
 					    });
 		        	}
-		        	$('.definition-li').click(function(){
+		        	$(document).on("click",'.definition-li',function() {
 		        		var first_li = '';
 		        		for (var i = 0; i < this.parentNode.childNodes.length; i++) {
 		        			if (this.parentNode.childNodes[i].nodeName != '#text'){
@@ -111,8 +118,8 @@ $(document).ready(function() {
 		        			var ul_ele = this.parentNode;
 		        			this.parentNode.removeChild(this);
 		        			var ul_html = ul_ele.innerHTML;
-		        			console.log(ul_html)
 		        			ul_ele.innerHTML = this_html + ul_html;
+		        			//消失是因为回收时height的原因
 		        		}
 			        	
 			        })

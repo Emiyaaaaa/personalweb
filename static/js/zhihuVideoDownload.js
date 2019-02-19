@@ -70,8 +70,12 @@ $(document).ready(function() {
 		        		img_box[i].style.width = set_img_width + 'px';
 		        		else_box[i].style.width = (set_li_width - set_img_width) + 'px';
 		        		video_title[i].style.height = video_li[i].clientHeight - 50 + 'px';
-		        		// video_li[i].style.zIndex = 1000 - i + '';
+		        		video_li[i].style.zIndex = 1000 - i + '';
 		        		//判断li数量是否需要显示下拉箭头
+		        		var li_length = video_cars_ul[i].getElementsByClassName('definition-li').length;
+		        		if (li_length == 1){
+		        			video_cars[i].getElementsByClassName('select-img')[0].style.display = 'none';
+		        		}
 
 		        		//下拉菜单函数
 		        		video_cars[i].addEventListener("click",function(e){
@@ -119,7 +123,6 @@ $(document).ready(function() {
 		        			this.parentNode.removeChild(this);
 		        			var ul_html = ul_ele.innerHTML;
 		        			ul_ele.innerHTML = this_html + ul_html;
-		        			//消失是因为回收时height的原因
 		        		}
 			        	
 			        })

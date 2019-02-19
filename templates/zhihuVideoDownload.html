@@ -33,10 +33,10 @@
 			<div class="right"><a href="/#">首页</a></div>
 		</header>
 		<div class="main-box">
-			<div class="search-box" id="search_box">
+			<div class="search-box search-transition" id="search_box">
 				<input type="text" id="search_url" placeholder="输入网址" value="{{ url }}">
 			</div>
-			<div class="search-button" id="search_button">搜索</div>
+			<div class="search-button search-transition" id="search_button">搜索</div>
 			<div class="search-result" id="search_result">
 				<ul></ul>
 			</div>
@@ -48,4 +48,13 @@
 		<a href="http://www.miitbeian.gov.cn/" class="beian">晋ICP备18012113号-1</a>
 	</div>
 </body>
+<script type="text/javascript">
+	if (k_ind == -1) {
+		var search_transition = document.querySelectorAll('.search-transition');
+		for (var i = 0; i < search_transition.length; i++) {
+			search_transition[i].classList.remove('search-transition');
+		}
+		search();
+	}
+</script>
 </html>

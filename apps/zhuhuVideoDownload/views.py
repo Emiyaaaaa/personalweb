@@ -14,7 +14,6 @@ class ZhuhuVideoDownloadView(View):
             index = url.find('/')
             if url[index+1] != '/':
                 url = url[:index+1] + '/' + url[index+1:]
-            print(url)
             return render(request,'zhihuVideoDownload.html',{'url':url})
 
     def post(self,request):

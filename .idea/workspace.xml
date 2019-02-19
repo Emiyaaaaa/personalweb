@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97ee085e-0965-47c9-afdd-5d7ddcf1463c" name="Default" comment="bug">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/zhihuVideoDownload.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/zhihuVideoDownload.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../untitled/qzone/qzone_sql.py" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/qzone/qzone_sql.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -89,8 +91,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/zhuhuVideoDownload/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="21" />
+            <state relative-caret-position="182">
+              <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -101,7 +103,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/mainPageFun.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1201">
+            <state relative-caret-position="2678">
               <caret line="111" column="32" selection-start-line="111" selection-start-column="32" selection-end-line="111" selection-end-column="32" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
@@ -113,7 +115,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/mainPage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="811">
+            <state relative-caret-position="1170">
               <caret line="50" column="61" selection-start-line="50" selection-start-column="61" selection-end-line="50" selection-end-column="61" />
             </state>
           </provider>
@@ -131,8 +133,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/zhihuVideoDownload.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="20" column="70" selection-start-line="20" selection-start-column="70" selection-end-line="20" selection-end-column="70" />
+            <state relative-caret-position="151">
+              <caret line="24" column="70" selection-start-line="24" selection-start-column="70" selection-end-line="24" selection-end-column="70" />
             </state>
           </provider>
         </entry>
@@ -140,7 +142,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/personalweb/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="719">
+            <state relative-caret-position="650">
               <caret line="36" column="51" selection-start-line="36" selection-start-column="51" selection-end-line="36" selection-end-column="51" />
               <folding>
                 <element signature="e#644#676#0" expanded="true" />
@@ -152,7 +154,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/views/generic/base.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
+            <state relative-caret-position="988">
               <caret line="48" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
             </state>
           </provider>
@@ -266,6 +268,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -322,7 +325,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -717,6 +719,7 @@
       <workItem from="1550050282544" duration="9172000" />
       <workItem from="1550130314595" duration="832000" />
       <workItem from="1550143357900" duration="1964000" />
+      <workItem from="1550561076708" duration="658000" />
     </task>
     <task id="LOCAL-00115" summary="打开窗口部分的代码重构">
       <created>1541317972699</created>
@@ -1065,7 +1068,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57871000" />
+    <option name="totallyTimeSpent" value="58529000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1078,9 +1081,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1152" height="1047" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49787235" visible="true" weight="0.23443224" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49787235" visible="true" weight="0.23901099" />
       <window_info id="Structure" order="1" sideWeight="0.50212765" side_tool="true" weight="0.27010724" />
       <window_info id="Favorites" order="2" sideWeight="0.50212765" side_tool="true" weight="0.27010724" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -1097,7 +1099,7 @@
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5020107" side_tool="true" weight="0.2719547" />
       <window_info anchor="bottom" id="manage.py@personalweb" order="12" weight="0.46203905" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="14" sideWeight="0.49798927" weight="0.44793928" />
+      <window_info anchor="bottom" id="Run" order="14" sideWeight="0.49798927" weight="0.56736034" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -1417,24 +1419,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/views/generic/base.py">
+    <entry file="file://$PROJECT_DIR$/templates/zhihuVideoDownloadResult.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="48" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
+        <state relative-caret-position="130">
+          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/zhuhuVideoDownload/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/mainPageFun.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2678">
+          <caret line="111" column="32" selection-start-line="111" selection-start-column="32" selection-end-line="111" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/mainPage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="811">
+        <state relative-caret-position="1170">
           <caret line="50" column="61" selection-start-line="50" selection-start-column="61" selection-end-line="50" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/zhihuVideoDownloadResult.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -1445,29 +1460,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/mainPageFun.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1201">
-          <caret line="111" column="32" selection-start-line="111" selection-start-column="32" selection-end-line="111" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/zhuhuVideoDownload/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/personalweb/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="719">
+        <state relative-caret-position="650">
           <caret line="36" column="51" selection-start-line="36" selection-start-column="51" selection-end-line="36" selection-end-column="51" />
           <folding>
             <element signature="e#644#676#0" expanded="true" />
@@ -1475,10 +1470,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/views/generic/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="988">
+          <caret line="48" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/zhihuVideoDownload.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="20" column="70" selection-start-line="20" selection-start-column="70" selection-end-line="20" selection-end-column="70" />
+        <state relative-caret-position="151">
+          <caret line="24" column="70" selection-start-line="24" selection-start-column="70" selection-end-line="24" selection-end-column="70" />
         </state>
       </provider>
     </entry>

@@ -40,6 +40,7 @@
 			<div class="search-result" id="search_result">
 				<ul></ul>
 			</div>
+			<div id="tips" class="tips">加载中...</div>
 		</div>
 		<div class="FooterPush"></div>
 	</div>
@@ -49,7 +50,9 @@
 	</div>
 </body>
 <script type="text/javascript">
-	if (k_ind == -1) {
+	var href = window.location.href;
+	var num = href.length - href.replace(/\//g,'').length;
+	if (k_ind == -1 && num != 4) {
 		var search_transition = document.querySelectorAll('.search-transition');
 		for (var i = 0; i < search_transition.length; i++) {
 			search_transition[i].classList.remove('search-transition');

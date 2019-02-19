@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 	$('#search_button').click(search);
-	
+
 });
 
 function search() {
@@ -43,6 +43,8 @@ function search() {
 		setProperty('search_button',bu_dict);
 		setProperty('search_box',bo_dict);
 		setProperty('search_result',re_dict);
+	   	document.getElementById('tips').style.display = 'inline';
+
 	}
 	if (!isNull(url)){
 		var href = window.location.href;
@@ -55,6 +57,7 @@ function search() {
 	        type:"GET",
 	        data:{"type":"ZhuhuVideoDownload",'url':url},
 	        success:function(data){
+	        	document.getElementById('tips').style.display = 'none';
 	        	$('#search_result ul').html(data);
 				var button_width = document.getElementById('search_button').clientWidth;
 				var search_width = document.getElementById('search_box').clientWidth;
@@ -109,8 +112,6 @@ function search() {
 				        	video_cars_.style.height = first_li.clientHeight + 'px';
 				        	video_cars_.classList.remove('clicked');
 				        }
-
-				        
 				    });
 	        	}
 	        	$(document).on("click",'.definition-li',function() {
@@ -131,7 +132,10 @@ function search() {
 		        	
 		        })
 				liFadeln();
-	        }
+	        },
+	       	error:function(XMLHttpRequest, textStatus, errorThrown){
+                $('#tips').html('加载错误，请重试！');
+            }
 		})
 	}
 }

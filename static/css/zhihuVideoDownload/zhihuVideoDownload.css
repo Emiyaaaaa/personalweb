@@ -253,6 +253,15 @@ header{
 
 }
 
+.tips{
+
+	display: none;
+	color: #777777;
+	font-size: 20px;
+	letter-spacing: 3px;
+
+}
+
 .video-li .definition-li {
 	
 	position: relative;

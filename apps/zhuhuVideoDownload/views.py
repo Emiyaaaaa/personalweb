@@ -10,7 +10,6 @@ class ZhuhuVideoDownloadView(View):
         if url == None or url == '':
             return render(request,'zhihuVideoDownload.html',{'url':''})
         else:
-            print(url)
             return render(request,'zhihuVideoDownload.html',{'url':url})
 
     def post(self,request):

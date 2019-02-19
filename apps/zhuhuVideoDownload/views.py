@@ -7,9 +7,14 @@ null = ''
 
 class ZhuhuVideoDownloadView(View):
     def get(self,request,url):
+
         if url == None or url == '':
             return render(request,'zhihuVideoDownload.html',{'url':''})
         else:
+            index = url.find('/')
+            if url[index+1] != '/':
+                url = url[:index+1] + '/' + url[index+1:]
+            print(url)
             return render(request,'zhihuVideoDownload.html',{'url':url})
 
     def post(self,request):

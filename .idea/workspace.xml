@@ -364,7 +364,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.views">
+  <component name="RunManager" selected="Django server.personalweb">
     <configuration default="true" type="DjangoTestsConfigurationType">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />

@@ -41,7 +41,6 @@ $(document).ready(function() {
 			setProperty('search_result',re_dict);
 		}
 		if (!isNull(url)){
-			console.log(1)
 			var href = window.location.href;
 			var num = href.length - href.replace(/\//g,'').length;
 			if (num == 4){
@@ -52,7 +51,6 @@ $(document).ready(function() {
 		        type:"GET",
 		        data:{"type":"ZhuhuVideoDownload",'url':url},
 		        success:function(data){
-		        	console.log(2)
 		        	$('#search_result ul').html(data);
 					var button_width = document.getElementById('search_button').clientWidth;
 					var search_width = document.getElementById('search_box').clientWidth;

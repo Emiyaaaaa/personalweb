@@ -34,6 +34,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^404$',NotFoundPageView.as_view()),
     url(r'^mobile$',MobilePageView.as_view()),
+    url(r'^zhihu-video-download/mzsm$', ZhuhuVideoDownloadView().get_mzsm),
     url(r'^zhihu-video-download/(?P<url>[\S\s]*)', ZhuhuVideoDownloadView.as_view())
 
 ]

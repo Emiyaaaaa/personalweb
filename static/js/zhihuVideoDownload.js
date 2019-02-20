@@ -1,6 +1,14 @@
 $(document).ready(function() {
 
 	$('#search_button').click(search);
+	//点击任意地区都会收回未收回的下拉菜单
+	document.body.addEventListener("click",function remove_clicked(e){
+		var clicked_car = document.getElementsByClassName('clicked')[0];
+		if (clicked_car != undefined && !e['path'][3].classList.contains('video-cars')) {
+			clicked_car.style.height = clicked_car.getElementsByClassName('definition-li')[0].style.height;
+			clicked_car.classList.remove('clicked');
+		}
+	})
 
 });
 

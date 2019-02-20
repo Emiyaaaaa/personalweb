@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
 	$('#search_button').click(search);
+	$('#mzsm').click(mzsm);
 	//点击任意地区都会收回未收回的下拉菜单
 	document.body.addEventListener("click",function remove_clicked(e){
 		var clicked_car = document.getElementsByClassName('clicked')[0];
@@ -9,7 +10,6 @@ $(document).ready(function() {
 			clicked_car.classList.remove('clicked');
 		}
 	})
-
 });
 
 function search() {
@@ -173,6 +173,8 @@ function setProperty(documentObjId,dictObj){
 	}
 }
 
-function changeDefinition(e){
-	e.preventDefault();
+function mzsm(){
+	var href = window.location.href;
+	var index = href.indexOf('zhihu-video-download');
+	window.location.href = href.slice(0,index) + 'zhihu-video-download/mzsm';
 }

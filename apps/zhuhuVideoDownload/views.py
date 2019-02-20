@@ -27,7 +27,7 @@ class ZhuhuVideoDownloadView(View):
         video_download_list = []
 
         html = requests.get(url, headers=header)
-        video_id = re.findall('https://www.zhihu.com/video/(\d+)', html.text)
+        video_id = re.findall('https://www.zhihu.com/video/(\w+)', html.text)
         for id in video_id:
             video_url = 'https://lens.zhihu.com/api/v4/videos/' + id
             video_html = requests.get(video_url, headers=header)

@@ -55,13 +55,17 @@
 	var num = href.length - href.replace(/\//g,'').length;
 	var url = $('#search_url').val();
 	if ((k_ind == -1 && num != 4) || (num == 4 && href.indexOf('zhihu-video-download') + 'zhihu-video-download/'.length + url.length== href.length && url.length != 0)) {
-		console.log(1)
 		var search_transition = document.querySelectorAll('.search-transition');
 		for (var i = 0; i < search_transition.length; i++) {
 			search_transition[i].classList.remove('search-transition');
 		}
 		search();
 	}
-	console.log(url,href.indexOf('zhihu-video-download'),'zhihu-video-download/'.length,href.length)
+	document.onkeydown = function (event) {
+        var e = event || window.event;
+        if (e && e.keyCode == 13) {
+            $("#search_button").click();
+        }
+    };
 </script>
 </html>

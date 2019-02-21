@@ -131,6 +131,7 @@ function search() {
 	        	}
 	        	$(document).on("click",'.definition-li',function() {
 	        		var first_li = '';
+	        		//找到当前显示的选项
 	        		for (var i = 0; i < this.parentNode.childNodes.length; i++) {
 	        			if (this.parentNode.childNodes[i].nodeName != '#text'){
 	        				first_li = this.parentNode.childNodes[i];
@@ -143,6 +144,12 @@ function search() {
 	        			this.parentNode.removeChild(this);
 	        			var ul_html = ul_ele.innerHTML;
 	        			ul_ele.innerHTML = this_html + ul_html;
+	        			//修改href
+	        			var parent_li = ul_ele;
+	        			for (var i = 0; i < 4; i++) {
+	        				parent_li = parent_li.parentNode;
+	        			}
+	        			parent_li.href = this.querySelectorAll('a')[0].href;
 	        		}
 		        	
 		        })

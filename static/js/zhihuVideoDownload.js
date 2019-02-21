@@ -58,7 +58,7 @@ function search() {
 	if (!isNull(url)){
 		var href = window.location.href;
 		var num = href.length - href.replace(/\//g,'').length;
-		if (num == 4 && href.indexOf('zhihu-video-download') + 'zhihu-video-download/'.length + url.length== href.length){
+		if (num == 4 && href.indexOf('zhihu-video-download') + 'zhihu-video-download/'.length == href.length){
 			window.location.href = "#/?turn=1&url="+url;
 		}
 		else{
@@ -148,7 +148,7 @@ function search() {
 		        })
 	        },
 	       	error:function(XMLHttpRequest, textStatus, errorThrown){
-                $('#tips').html('加载错误，请重试！');
+                $('#tips').html('未找到视频');
             }
 		})
 	}

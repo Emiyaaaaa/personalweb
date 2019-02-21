@@ -38,9 +38,10 @@
 			</div>
 			<div class="search-button search-transition" id="search_button">搜索</div>
 			<div class="search-result" id="search_result">
-				<ul></ul>
+				<ul>
+					<div id="tips" class="tips">加载中...</div>
+				</ul>
 			</div>
-			<div id="tips" class="tips">加载中...</div>
 		</div>
 		<div class="FooterPush"></div>
 	</div>
@@ -53,13 +54,14 @@
 	var href = window.location.href;
 	var num = href.length - href.replace(/\//g,'').length;
 	var url = $('#search_url').val();
-	if ((k_ind == -1 && num != 4) || (num == 4 && href.indexOf('zhihu-video-download') + 'zhihu-video-download/'.length + url.length== href.length)) {
+	if ((k_ind == -1 && num != 4) || (num == 4 && href.indexOf('zhihu-video-download') + 'zhihu-video-download/'.length + url.length== href.length && url.length != 0)) {
+		console.log(1)
 		var search_transition = document.querySelectorAll('.search-transition');
 		for (var i = 0; i < search_transition.length; i++) {
 			search_transition[i].classList.remove('search-transition');
 		}
 		search();
 	}
-	console.log(href.indexOf('zhihu-video-download'),'zhihu-video-download/'.length,href.length)
+	console.log(url,href.indexOf('zhihu-video-download'),'zhihu-video-download/'.length,href.length)
 </script>
 </html>

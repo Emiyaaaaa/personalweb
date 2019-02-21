@@ -26,6 +26,15 @@ class ZhuhuVideoDownloadView(View):
         header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36'}
         video_download_list = []
 
+        #url处理
+        if url.find('www') != -1 and url.find('http') == -1:
+            url = 'https://' + url[url.find('www'):]
+       
+        else:
+            index = url.find('http')
+            url = url[index:]
+        print(url)
+        
         html = requests.get(url, headers=header)
         video_id = re.findall('https://www.zhihu.com/video/(\w+)', html.text)
         for id in video_id:

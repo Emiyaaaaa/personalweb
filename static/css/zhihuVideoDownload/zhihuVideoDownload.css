@@ -191,7 +191,8 @@ header{
 }
 
 .video-li{
-
+	
+	display: none;
 	position: relative;
 	height: 20vw;
 	min-height: 100px;

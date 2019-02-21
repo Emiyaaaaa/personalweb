@@ -18,6 +18,7 @@ function search() {
 	var search_result = document.getElementById('search_result');
 	var bubo_spacing = 2;
 	var url = $('#search_url').val();
+
 	if(!search_button.classList.contains("moved") && !isNull(url)){
 		var bo_top = search_box.offsetTop;
 		var bu_top = search_button.offsetTop;
@@ -60,6 +61,12 @@ function search() {
 		if (num == 4){
 			window.location.href = "#/?turn=1&url="+url;
 		}
+		else{
+			var index = href.indexOf('zhihu-video-download');
+			if (encodeURI(url) != href.slice(index+'zhihu-video-download/'.length)){
+				window.location.href = href.slice(0,index) + 'zhihu-video-download/' + url;
+			}
+		}
 		$.ajax({
 	        url:"/",
 	        type:"GET",
@@ -67,6 +74,7 @@ function search() {
 	        success:function(data){
 	        	document.getElementById('tips').style.display = 'none';
 	        	$('#search_result ul').html(data);
+				liFadeln();
 				var button_width = document.getElementById('search_button').clientWidth;
 				var search_width = document.getElementById('search_box').clientWidth;
 				var img_box = document.getElementsByClassName('img-box');
@@ -75,7 +83,6 @@ function search() {
 	        	var video_title = document.getElementsByClassName('video-title');
         		var video_cars = document.getElementsByClassName("video-cars");
         		var video_cars_ul = document.querySelectorAll(".video-cars ul");
-
 	        	//css调整
 	        	for (var i = 0; i < video_li.length; i++) {
 	        		var set_li_width = button_width + search_width - 10;
@@ -139,7 +146,6 @@ function search() {
 	        		}
 		        	
 		        })
-				liFadeln();
 	        },
 	       	error:function(XMLHttpRequest, textStatus, errorThrown){
                 $('#tips').html('加载错误，请重试！');
@@ -150,6 +156,10 @@ function search() {
 
 function liFadeln(){
 	var search_result = document.getElementById('search_result');
+	var result_li = search_result.getElementsByClassName('video-li');
+	for (var i = 0; i < result_li.length; i++) {
+		$(result_li[i]).fadeIn(500*i);
+	}
 }
 
 function isNull(str){

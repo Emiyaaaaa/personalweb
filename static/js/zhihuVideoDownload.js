@@ -58,7 +58,7 @@ function search() {
 	if (!isNull(url)){
 		var href = window.location.href;
 		var num = href.length - href.replace(/\//g,'').length;
-		if (num == 4){
+		if (num == 4 && href.indexOf('zhihu-video-download') + 'zhihu-video-download/'.length + url.length== href.length){
 			window.location.href = "#/?turn=1&url="+url;
 		}
 		else{

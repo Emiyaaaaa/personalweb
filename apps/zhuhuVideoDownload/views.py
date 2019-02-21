@@ -11,9 +11,10 @@ class ZhuhuVideoDownloadView(View):
         if url == None or url == '':
             return render(request,'zhihuVideoDownload.html',{'url':''})
         else:
-            index = url.find('/')
-            if url[index+1] != '/':
-                url = url[:index+1] + '/' + url[index+1:]
+            if url.find('http:/') != -1 or url.find('https:/') != -1:
+                index = url.find('/')
+                if url[index+1] != '/':
+                    url = url[:index+1] + '/' + url[index+1:]
             return render(request,'zhihuVideoDownload.html',{'url':url})
 
     def post(self,request):
@@ -34,7 +35,7 @@ class ZhuhuVideoDownloadView(View):
             index = url.find('http')
             url = url[index:]
         print(url)
-        
+
         html = requests.get(url, headers=header)
         video_id = re.findall('https://www.zhihu.com/video/(\w+)', html.text)
         for id in video_id:

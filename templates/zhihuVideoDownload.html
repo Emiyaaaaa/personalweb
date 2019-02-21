@@ -52,12 +52,14 @@
 <script type="text/javascript">
 	var href = window.location.href;
 	var num = href.length - href.replace(/\//g,'').length;
-	if (k_ind == -1 && num != 4) {
+	var url = $('#search_url').val();
+	if ((k_ind == -1 && num != 4) || (num == 4 && href.indexOf('zhihu-video-download') + 'zhihu-video-download/'.length + url.length== href.length)) {
 		var search_transition = document.querySelectorAll('.search-transition');
 		for (var i = 0; i < search_transition.length; i++) {
 			search_transition[i].classList.remove('search-transition');
 		}
 		search();
 	}
+	console.log(href.indexOf('zhihu-video-download'),'zhihu-video-download/'.length,href.length)
 </script>
 </html>

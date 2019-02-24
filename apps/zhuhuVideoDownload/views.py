@@ -34,7 +34,6 @@ class ZhuhuVideoDownloadView(View):
         else:
             index = url.find('http')
             url = url[index:]
-        print(url)
 
         html = requests.get(url, headers=header)
         video_id = re.findall('https://www.zhihu.com/video/(\w+)', html.text)

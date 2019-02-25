@@ -1,0 +1,69 @@
+@media screen and (min-width: 0px) and (max-width: 1250px){
+
+	.right{
+
+		display: none;
+
+	}
+
+}
+
+@media screen and (min-width: 0px) and (max-width: 1250px){
+
+	.middle{
+
+		width: 75%;
+
+	}
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1000px){
+
+	.middle{
+
+		width: 75%;
+		margin-left: 26%;
+
+	}
+
+	.left{
+
+		width: 26%;
+
+	}
+
+	.matter0 .content,.matter0 .aCopy,.matter1 .content,.matter1 .aCopy{
+
+		margin-left: 3%;
+
+	}
+
+	.left-menu ul {
+
+		width: 138px;
+
+	}
+
+	.left-menu {
+
+		margin-right: 38px;
+		margin-top: 13px;
+
+	}
+
+	.left-avatar img{
+
+		width: 140px;
+		height: 130px;
+		margin-right: 20px;
+
+	}
+
+	.Footer {
+
+	    margin-right: 8px;
+	
+	}
+
+}

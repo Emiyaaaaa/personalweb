@@ -19,9 +19,11 @@
 		   	return true;
 		}
 		if (isPC() == false) {
-			window.location.href = 'http://' + window.location.host + '/mobile';
+			// window.location.href = 'http://' + window.location.host + '/mobile';
 		}
 	</script>
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name=”keywords” content="Emiya的博客">
 	<meta name=”description” content="Emiya的博客">
 	<meta name="baidu-site-verification" content="hfgEjvRlwS" />
@@ -46,6 +48,7 @@
 	<link rel="stylesheet" type="text/css" href="{% static 'css/weather-icon.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/right/weather.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/middle/window-bubbly-button.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/media.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/middle/suggestion-bubbly-button.css' %}">
     <script type="text/javascript" src="{% static 'js/marked/marked.min.js' %}"></script>
 </head>
@@ -54,7 +57,7 @@
 		<div class="Wrapper">
 			<div class="left-avatar">
 				<a href="javascript:void(0)">
-					<img src="/media/{{ avatar }}" width="150" height="140"/>
+					<img src="/media/{{ avatar }}"/>
 				</a>
 			</div>
 			<div class="left-menu" id="left-menu">
@@ -297,7 +300,12 @@
 			window.location.href = MAINURL + '404';
 		}
 		var clientWidth = document.documentElement.clientWidth;
-		var textWidth = Math.round((Math.round(clientWidth*0.55)-19)*0.8-20);
+		if (clientWidth > 1200){
+			var textWidth = Math.round((Math.round(clientWidth*0.55)-19)*0.8-20);
+		}
+		else{
+			var textWidth = Math.round((Math.round(clientWidth*0.85)-19)*0.8-20);
+		}
 		var letter_spacing = 3;
 		var font_size = 15;
 		TEXTMAXLENGTH = Math.floor((textWidth+letter_spacing)/(letter_spacing+font_size));

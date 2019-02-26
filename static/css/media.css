@@ -103,4 +103,36 @@
 
 	}
 
+	#window{
+
+		padding: 13px 5%;
+
+	}
+
+	.markdown-body{
+
+		padding: 0;
+		padding-top: 15px;
+
+	}
+
+	#ajax_window_html{
+
+		position: relative;
+		left: -10px;
+
+	}
+
+	.window-submit-button {
+
+	    left: 77.9%
+
+	}
+
+	.window-input-comment {
+
+	    left: 34.2%;
+
+	}
+
 }

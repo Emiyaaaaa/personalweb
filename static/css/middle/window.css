@@ -163,6 +163,7 @@
 
     position: relative;
     width: 20.5%;
+    min-width: 70px;
     margin: 2.278% 2.847%;
 
 }

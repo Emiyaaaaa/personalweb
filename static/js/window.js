@@ -23,6 +23,9 @@ $(document).ready(function() {
 		if(clientWidth*setWindowWidthRatio > maxWindowWidth){
 			setWindowWidth = 1300;
 		}
+		if(clientWidth <= 768){
+			setWindowWidth = clientWidth*0.8;
+		}
 
 		var obj = $(this);
 		var id = obj.attr('id');
@@ -43,8 +46,8 @@ $(document).ready(function() {
 		var windowMarginLeft = marginLeft;
 		var windowPaddingTop = windowObj.outerHeight()/2;
 		var windowPaddingLeft = windowObj.outerWidth()/2;
-		var windowHeight = clientHeight*setWindowHeight;
-		var windowWidth = clientWidth*setWindowWidth;
+		var windowHeight = setWindowHeight;
+		var windowWidth = setWindowWidth;
 		var setPripertyDict = {
 			'width':windowWidth+'px',
 			'height':windowHeight+'px',

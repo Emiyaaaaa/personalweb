@@ -1,20 +1,29 @@
 $(document).ready(function() {
 
-	setWindowHeight = 0.70;
-	setWindowWidth = 0.60;
-
 	closeWindowHtml = '<a href="javascript:void(0)" class="windowCloseButton"></a>';
 
 	$(document).on("click",'.openContent',function openWindow(){
 
+		getClientSize();
+		var setWindowHeightRatio = 0.70;
+		var setWindowWidthRatio = 0.60;
 		if (nowMatter == 'matter0'){
-			setWindowHeight = 0.80;
+			setWindowHeightRatio = 0.80;
 		}
 		else if (nowMatter == 'matter1'){
-			setWindowHeight = 0.50;
+			setWindowHeightRatio = 0.50;
+		}
+		var maxWindowHeight = 800;
+		var maxWindowWidth = 1300;
+		var setWindowHeight = clientHeight*setWindowHeightRatio;
+		if(clientHeight*setWindowHeightRatio > maxWindowHeight){
+			setWindowHeight = 800;
+		}
+		var setWindowWidth = clientWidth*setWindowWidthRatio;
+		if(clientWidth*setWindowWidthRatio > maxWindowWidth){
+			setWindowWidth = 1300;
 		}
 
-		getClientSize();
 		var obj = $(this);
 		var id = obj.attr('id');
 		windowObj = $('#window');

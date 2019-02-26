@@ -99,10 +99,6 @@
 
 }
 
-#window::-webkit-scrollbar {
-    display: none;
-}
-
 #windowContent{
     display: none;
 }

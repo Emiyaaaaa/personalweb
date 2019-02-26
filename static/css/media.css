@@ -67,3 +67,40 @@
 	}
 
 }
+
+@media screen and (min-width: 0px) and (max-width: 768px){
+
+
+	.left{
+
+		display: none;
+
+	}
+
+	.middle{
+
+		width: 90%;
+		margin-left: 5%;
+
+	}
+
+	.matter0{
+
+		padding: 0 0px 50px 0;
+
+	}
+
+	.matter0 .content, .matter0 .aCopy, .matter1 .content, .matter1 .aCopy{
+
+		margin: 0 auto;
+		margin-top: 15px;
+
+	}
+
+	#mainContent::-webkit-scrollbar {
+
+	    display: none;
+
+	}
+
+}

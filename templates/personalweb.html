@@ -303,8 +303,11 @@
 		if (clientWidth > 1200){
 			var textWidth = Math.round((Math.round(clientWidth*0.55)-19)*0.8-20);
 		}
-		else{
+		else if(clientWidth > 768){
 			var textWidth = Math.round((Math.round(clientWidth*0.85)-19)*0.8-20);
+		}
+		else{
+			var textWidth = Math.round(clientWidth*0.9-20);
 		}
 		var letter_spacing = 3;
 		var font_size = 15;

@@ -85,24 +85,6 @@ body {
 
 }
 
-.left::-webkit-scrollbar {
-
-    display: none;
-
-}
-
-.right::-webkit-scrollbar {
-
-    display: none;
-
-}
-
-.middle::-webkit-scrollbar {
-
-    display: none;
-
-}
-
 a:hover{
 
 	text-decoration: none;
@@ -161,5 +143,23 @@ a:hover{
 
 	border-radius: 10px;
 	background: #EDEDED;
+
+}
+
+.left::-webkit-scrollbar {
+
+    display: none;
+
+}
+
+.right::-webkit-scrollbar {
+
+    display: none;
+
+}
+
+.middle::-webkit-scrollbar {
+
+    display: none;
 
 }

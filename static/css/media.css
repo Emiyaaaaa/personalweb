@@ -135,4 +135,18 @@
 
 	}
 
+	.content .brief_date{
+
+		font-weight: normal;
+		font-size: 12px;
+
+	}
+
+	#windowContent .date{
+
+		font-weight: normal;
+		font-size: 14px;
+
+	}
+
 }

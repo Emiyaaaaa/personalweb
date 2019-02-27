@@ -149,4 +149,16 @@
 
 	}
 
+	#mainContent{
+
+		padding-top: 6px;
+
+	}
+
+	.content-margin{
+
+	    margin: 14px 5px 0 10px;
+
+	}
+
 }

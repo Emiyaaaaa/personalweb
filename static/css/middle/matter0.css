@@ -53,6 +53,12 @@
 
 }
 
+.content-margin{
+
+    margin: 20px 5px 0 10px;
+
+}
+
 .matter0 .aCopy,.matter1 .aCopy{
 
     display: none;

@@ -41,11 +41,11 @@
     height: var(--height);
     margin-top: var(--marginTop);
     margin-left: var(--marginLeft);
-    /*文本*/
+
     letter-spacing: 1px;
     color: #000000;
     text-decoration:none;
-    /*形状*/
+
     border-radius: 15px;
     background-color: #FFFFFF;
     padding: 13px 30px;
@@ -55,8 +55,6 @@
     -moz-transition: all 0.28s;
     -o-transition: all 0.28s;
     -ms-transition: all 0.28s;
-
-    /*box-shadow:2px 2px 9px #bfbfbf;*/
 
 }
 

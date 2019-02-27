@@ -139,6 +139,7 @@
 
 		font-weight: normal;
 		font-size: 12px;
+		color: #555555;
 
 	}
 
@@ -146,6 +147,7 @@
 
 		font-weight: normal;
 		font-size: 14px;
+		color: #555555;
 
 	}
 
@@ -158,6 +160,31 @@
 	.content-margin{
 
 	    margin: 14px 5px 0 10px;
+
+	}
+
+	.bold {
+
+	    font-weight: normal;
+
+	}
+
+	.middle .title{
+
+		color: #000000;
+
+	}
+
+	.brief-content-text{
+
+		color: #777777;
+
+	}
+
+	.markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4, .markdown-body h5, .markdown-body h6{
+
+		font-size: 16px;
+		font-weight: normal;
 
 	}
 

@@ -24,7 +24,7 @@ $(document).ready(function() {
 			setWindowWidth = 1300;
 		}
 		if(clientWidth <= 768){
-			setWindowWidth = clientWidth*0.8;
+			setWindowWidth = clientWidth*0.86;
 		}
 
 		var obj = $(this);
@@ -34,8 +34,13 @@ $(document).ready(function() {
 		idNum = id.match(/\d+/)[0];
 		objName = id.split(/\d/)[0];
 		aCopyObj = $('#'+objName+'Copyone'+idNum);
+
 		var scale_X = 1.08;
 		var scale_Y = 1.15;
+		if(clientWidth <= 768){
+			scale_X = 1;
+			scale_Y = 1;
+		}
 		var width = obj.width();
 		var height = obj.height();
 		var marginLeft = obj.outerWidth(true) - obj.outerWidth();

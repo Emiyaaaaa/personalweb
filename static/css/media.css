@@ -188,4 +188,9 @@
 
 	}
 
+	.matter0 .content:hover, .matter1 .content:hover {
+
+	    transform: none;
+
+	}
 }

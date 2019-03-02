@@ -94,7 +94,7 @@ $(document).ready(function() {
 		$('html').css('overflow','hidden');
 		obj.css('display','none');
 
-		$('#windowBackground').css({'display':'block','width':clientWidth+28,'height':clientHeight+10});
+		$('#windowBackground').css({'display':'block','width':clientWidth+100,'height':clientHeight+1000});
 		$('#middle').css({'width':middle_width});
 		aCopyObj.css('display','block');
 		aCopyObj.html(obj.html());

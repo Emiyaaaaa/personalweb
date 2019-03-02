@@ -6,6 +6,7 @@ class DiaryView():
     def get_main_page(self,request,text_max_length=37):
         diary_info = []
         loadStatus = '加载中...'
+        showBeian = 0
         stick_diary = Diary.objects.filter(is_stick=1)
         diary = Diary.objects.order_by('-text_id').exclude(is_display=0)[0:10]
         # diary = stick_diary|all_diary
@@ -14,6 +15,7 @@ class DiaryView():
             return JsonResponse({'status':'ended'})
         elif len(diary) < 10:
             loadStatus = '已加载全部'
+            showBeian = 1
 
         for diary in diary:
             text_id = diary.text_id
@@ -33,7 +35,7 @@ class DiaryView():
                 'is_brief':brief_text['is_brief'],
                 'img_num': len(diaryImg)
             })
-        return render(request, 'matter1.html', {'diary_info': diary_info, 'loadStatus':loadStatus})
+        return render(request, 'matter1.html', {'diary_info': diary_info, 'loadStatus':loadStatus,'showBeian':showBeian})
 
     def getBriefText(self,text,text_max_length,line=2):
         text_length = 0
@@ -94,11 +96,13 @@ class DiaryView():
     def getMoreContent(self,request,finally_id,text_max_length=37):
         diary_info = []
         loadStatus = '加载中...'
+        showBeian = 0
         moreDiary = Diary.objects.order_by('-text_id').filter(text_id__lt = finally_id).exclude(is_display=0)[0:10]
         if len(moreDiary)==0:
             return JsonResponse({'status':'ended'})
         elif len(moreDiary) < 10:
             loadStatus = '已加载全部'
+            showBeian = 1
 
         for diary in moreDiary:
             text_id = diary.text_id
@@ -114,4 +118,4 @@ class DiaryView():
                 'is_brief': brief_text['is_brief'],
                 'img_num': len(diaryImg)
             })
-        return render(request, 'matter1.html', {'diary_info': diary_info,'loadStatus':loadStatus})
+        return render(request, 'matter1.html', {'diary_info': diary_info,'loadStatus':loadStatus,'showBeian':showBeian})

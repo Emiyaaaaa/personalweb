@@ -37,7 +37,7 @@ $(document).ready(function() {
 
 		var scale_X = 1.08;
 		var scale_Y = 1.15;
-		if(clientWidth <= 768){
+		if(isMobileScreen() == true){
 			scale_X = 1;
 			scale_Y = 1;
 		}
@@ -60,6 +60,8 @@ $(document).ready(function() {
 			'marginLeft':marginLeft+'px',
 			'contentHeight':windowHeight-34+'px'
 		};
+		var middle_width = $('#middle').width();
+
 	 	setProperty("window",setPripertyDict);
 		if (windowObj.outerWidth(true) - windowObj.outerWidth() != 0){
 			var windowPaddingLeft = (windowObj.outerWidth()-windowWidth)/2;
@@ -91,7 +93,9 @@ $(document).ready(function() {
 	 	reply = 'false';
 		$('html').css('overflow','hidden');
 		obj.css('display','none');
+
 		$('#windowBackground').css({'display':'block','width':clientWidth+28,'height':clientHeight+10});
+		$('#middle').css({'width':middle_width});
 		aCopyObj.css('display','block');
 		aCopyObj.html(obj.html());
 		windowObj.css('display','block');

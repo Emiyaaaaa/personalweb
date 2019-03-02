@@ -89,9 +89,7 @@ $(document).ready(function() {
 		        type:"GET",
 		        data:{"type":"getMoreContent","matter":nowMatter,"finally_id":finally_id,"text_max_length":TEXTMAXLENGTH},
 		        success:function(data){
-		        	if (data.status == 'ended'){
-	        		}
-					else{
+		        	if (data.status != 'ended'){
 						$('.'+nowMatter+' .loadStatus:last').css('display','none');
 		        		$('.'+nowMatter+' ul:eq(0)').append(data);
 			        	//fadeIn显示
@@ -103,6 +101,9 @@ $(document).ready(function() {
 						}
 						//end
 						$('.'+nowMatter+' .loadStatus:last').css('display','block');
+						if (isMobileScreen() == true){
+							$('.'+nowMatter+' .mobile_beian:last').css('display','block');
+						}
 					}
 					window.onscroll = scrollBottom;
 		        },

@@ -48,6 +48,9 @@ function divFadeIn() {
 			}
 		}
 	  	$('#'+nowMatter+' .loadStatus:last').delay(140*i).fadeIn(10);
+	  	if (isMobileScreen() == true){
+	  		$('#'+nowMatter+' .mobile_beian:last').delay(140*i).fadeIn(10);
+		}
 	}
 	else if(nowMatter == 'matter2'){
 		var liLength = $('#'+nowMatter+' .app').length;

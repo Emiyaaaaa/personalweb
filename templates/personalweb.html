@@ -287,6 +287,7 @@
 		URLHREF = window.location.href;
 		MAINURL = URLHREF.split('#')[0];
 		// window.location.href = MAINURL + '404';
+		mobile_screen_width = 768;
 
 		URLHASH = URLHREF.split('?')[0].split('/')[3];
 		if (URLHASH == '' || URLHASH == '#'){
@@ -299,7 +300,7 @@
 			LINUM = 0;
 			window.location.href = MAINURL + '404';
 		}
-		var clientWidth = document.documentElement.clientWidth;
+		clientWidth = document.documentElement.clientWidth;
 		if (clientWidth > 1200){
 			var textWidth = Math.round((Math.round(clientWidth*0.55)-19)*0.8-20);
 		}
@@ -309,6 +310,16 @@
 		else{
 			var textWidth = Math.round(clientWidth*0.9-20);
 		}
+		function isMobileScreen(){
+			if (clientWidth <= mobile_screen_width){
+				return true;
+			}
+			else{
+				return false;
+			}
+		}
+
+
 		var letter_spacing = 3;
 		var font_size = 15;
 		TEXTMAXLENGTH = Math.floor((textWidth+letter_spacing)/(letter_spacing+font_size));

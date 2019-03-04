@@ -102,5 +102,5 @@ function outputConsole(argument) {
    aajrjjjjffffffttttttttt///tttttttttt|ftttttttttttttttttnfttttttttttttttttttffftttttttttfttfffftfvunnrjfjffffffffffjjjjjrrrxxxxnunU\n\
   )rrrrrrjjffffftttttttt////////////////trtftttttttttttttfnxtt/tttttttttttttttttttfttfftfffjffffffrunnrffffffffffffffjjjjjjjxxxxxxvnn\n\
   jrrrjjjfjffffttttttttt//tt///////////tttttttttttttttttttxxj/tttttttttttttttttttfffffjfffffffffffunnjftftfffffffffffffjfjjjrxxxxxunnz\n\
- njxrrxrrjfjfffftttttttt|//||/////ttttttttt/xttttttttttttfxxx/ttttttttttt//ttttttttttffffffffffjfnnnjfftttfttfffffff Saber赛高(ノ￣▽￣)﻿ノ")
+ njxrrxrrjfjfffftttttttt|//||/////ttttttttt/xttttttttttttfxxx/ttttttttttt//ttttttttttffffffffffjfnnnjfftttfttfffff Saber赛高(ノ￣▽￣)﻿ノ")
 }

@@ -97,7 +97,8 @@
 }
 
 .list-icon{
-
+    
+    display: none;
     width: 34px;
     margin-top: 10px;
     margin-left: 24px;

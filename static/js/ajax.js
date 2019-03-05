@@ -155,6 +155,10 @@ $(document).ready(function() {
 			return false;
 		}
 	}
+
+	document.getElementById("left_list").addEventListener("click", function openLeftList(){
+		console.log(1)
+	})
 });
 
 // matter3_3建议

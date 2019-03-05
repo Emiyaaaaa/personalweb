@@ -157,7 +157,16 @@ $(document).ready(function() {
 	}
 
 	document.getElementById("left_list").addEventListener("click", function openLeftList(){
-		console.log(1)
+		//动画
+		var middleObj = document.getElementById('middle');
+		if (!middleObj.classList.contains('moved')) {
+			middleObj.classList.add('moved');
+			middleObj.style.marginLeft = '60%';
+		}
+		else{
+			middleObj.classList.remove('moved');
+			middleObj.style.marginLeft = '5%';
+		}
 	})
 });
 

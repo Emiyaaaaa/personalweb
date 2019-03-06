@@ -156,15 +156,20 @@ $(document).ready(function() {
 		}
 	}
 
-	document.getElementById("left_list").addEventListener("click", function openLeftList(){
+	document.getElementById("left_list_button").addEventListener("click", function openLeftList(){
 		//动画
 		var middleObj = document.getElementById('middle');
+		var leftListObj = document.getElementById('left');
 		if (!middleObj.classList.contains('moved')) {
 			middleObj.classList.add('moved');
+			leftListObj.style.display = 'inline';
+	 		setTimeout(function(){leftListObj.style.left = '0%';},0);
 			middleObj.style.marginLeft = '60%';
 		}
 		else{
 			middleObj.classList.remove('moved');
+			leftListObj.style.left = '-55%';
+	 		setTimeout(function(){leftListObj.style.display = 'none';},250);
 			middleObj.style.marginLeft = '5%';
 		}
 	})

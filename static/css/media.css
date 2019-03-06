@@ -74,6 +74,14 @@
 	.left{
 
 		display: none;
+		width: 55%;
+		left: -55%;
+
+	}
+
+	.Footer{
+
+		display: none;
 
 	}
 

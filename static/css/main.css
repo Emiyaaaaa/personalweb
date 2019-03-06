@@ -60,6 +60,9 @@ body {
 	height: 100%;
 	float: left;
 	overflow: auto;
+    -webkit-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -o-transition: all 0.25s;
 
 }
 

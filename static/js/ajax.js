@@ -162,7 +162,7 @@ $(document).ready(function() {
 		var leftListObj = document.getElementById('left');
 		if (!middleObj.classList.contains('moved')) {
 			middleObj.classList.add('moved');
-			leftListObj.style.display = 'inline';
+			leftListObj.style.display = 'inline-block';
 	 		setTimeout(function(){leftListObj.style.left = '0%';},0);
 			middleObj.style.marginLeft = '60%';
 		}

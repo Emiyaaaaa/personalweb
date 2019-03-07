@@ -300,4 +300,17 @@
 		display: inline;
 		
 	}
+
+	.pct-nav{
+
+		display: none;
+
+	}
+
+	.matter3-0 .content {
+
+	    text-indent: 2em;
+	    padding: 30px 0 0 0;
+
+	}
 }

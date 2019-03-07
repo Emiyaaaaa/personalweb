@@ -19,6 +19,7 @@ $(document).ready(function() {
 	//其他页面
 	$('.left-menu a').click(function () {
 		//导航栏交互
+		$('#left .Wrapper').css('padding-top','74px');//解决上移bug
 		$('.left-menu a').removeClass('active');
 		$(this).addClass('active');
 		matterScrollTop[nowMatter] = document.documentElement.scrollTop || document.body.scrollTop;
@@ -27,7 +28,7 @@ $(document).ready(function() {
 		$('#matter'+LINUM).css('display','block');
 		nowMatter = 'matter'+LINUM;
 		rememberScrollTop();
-
+		
 		if (LINUM == 0 || LINUM == 1){
 		    window.onscroll=scrollBottom;
 			//判断是否需要ajax
@@ -161,6 +162,12 @@ $(document).ready(function() {
 		var middleObj = document.getElementById('middle');
 		var leftListObj = document.getElementById('left');
 		if (!middleObj.classList.contains('moved')) {
+			//解决上移bug
+			if (!middleObj.classList.contains('initialized')) {
+				$('#left .Wrapper').css('padding-top','0');
+				middleObj.classList.add('initialized');
+			}
+			//end
 			middleObj.classList.add('moved');
 			leftListObj.style.display = 'inline-block';
 	 		setTimeout(function(){leftListObj.style.left = '0%';},0);

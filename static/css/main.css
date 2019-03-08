@@ -118,30 +118,30 @@ a:hover{
 
 ::-webkit-scrollbar {
 
-	width:8px;
-	height:10px;
+	width: 8px;
+	height: 10px;
 
 }
 
 ::-webkit-scrollbar-track-piece {
 
-	background-color:#ffffff;
+	background-color: #fcfcfc;
 
 }
 
 ::-webkit-scrollbar-thumb {
 
 	border-radius: 10px;
-	background-color:#cfcece;
-	background-clip:padding-box;
-	min-height:28px;
+	background-color: #cfcece;
+	background-clip: padding-box;
+	min-height: 28px;
 
 }
 
 ::-webkit-scrollbar-thumb:hover {
 
 	border-radius: 10px;
-	background-color:#bbb;
+	background-color: #bbb;
 
 }
 

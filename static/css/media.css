@@ -76,6 +76,7 @@
 		display: none;
 		width: 55%;
 		left: -55%;
+		overflow: hidden;
 
 	}
 
@@ -183,6 +184,13 @@
 		margin: 0 auto;
 		margin-top: 13px;
 		padding-bottom: 7px;
+
+	}
+
+	.matter1_content{
+
+		font-size: 17px;
+		line-height: 30px;
 
 	}
 

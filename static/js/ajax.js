@@ -18,8 +18,12 @@ $(document).ready(function() {
 
 	//其他页面
 	$('.left-menu a').click(function () {
+		if (isMobileScreen()) {
+			$('#left .Wrapper').css('padding-top','74px');//解决上移bug
+			document.getElementById("left_list_button").click();//点击后收回列表
+		}
+		
 		//导航栏交互
-		$('#left .Wrapper').css('padding-top','74px');//解决上移bug
 		$('.left-menu a').removeClass('active');
 		$(this).addClass('active');
 		matterScrollTop[nowMatter] = document.documentElement.scrollTop || document.body.scrollTop;
@@ -161,6 +165,7 @@ $(document).ready(function() {
 		//动画
 		var middleObj = document.getElementById('middle');
 		var leftListObj = document.getElementById('left');
+		var bodyObj = document.body;
 		if (!middleObj.classList.contains('moved')) {
 			//解决上移bug
 			if (!middleObj.classList.contains('initialized')) {
@@ -171,12 +176,14 @@ $(document).ready(function() {
 			middleObj.classList.add('moved');
 			leftListObj.style.display = 'inline-block';
 	 		setTimeout(function(){leftListObj.style.left = '0%';},0);
+	 		bodyObj.style.overflowY = "hidden";
 			middleObj.style.marginLeft = '60%';
 		}
 		else{
 			middleObj.classList.remove('moved');
 			leftListObj.style.left = '-55%';
-	 		setTimeout(function(){leftListObj.style.display = 'none';},250);
+	 		
+	 		setTimeout(function(){leftListObj.style.display = 'none';bodyObj.style.overflowY = "scroll";},250);
 			middleObj.style.marginLeft = '5%';
 		}
 	})

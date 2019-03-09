@@ -72,8 +72,21 @@ function scrollBottom(){
 			window.onscroll = function(){};
 		}
 	}
+	if (isMobileScreen()) {
+		console.log(scrollTop)
+		var floatLeftListIcon = document.getElementsByClassName('list-icon-2');
+		if (scrollTop > 80) {
+			floatLeftListIcon[0].style.display = 'inline';
+			floatLeftListIcon[1].style.display = 'inline';
+		}
+		else {
+			floatLeftListIcon[0].style.display = 'none';
+			floatLeftListIcon[1].style.display = 'none';
+		}
+		
+	}
 }
-window.onscroll=scrollBottom;
+window.onscroll = scrollBottom;
 
 function getDivPosition(id){
 	var left = document.getElementById(id).getBoundingClientRect().left;

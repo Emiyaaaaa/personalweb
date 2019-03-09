@@ -34,7 +34,6 @@ $(document).ready(function() {
 		rememberScrollTop();
 		
 		if (LINUM == 0 || LINUM == 1){
-		    window.onscroll=scrollBottom;
 			//判断是否需要ajax
 			if (leftClickNeedAjax() == true){
 				$.ajax({
@@ -161,33 +160,37 @@ $(document).ready(function() {
 		}
 	}
 
-	document.getElementById("left_list_button").addEventListener("click", function openLeftList(){
-		//动画
-		var middleObj = document.getElementById('middle');
-		var leftListObj = document.getElementById('left');
-		var bodyObj = document.body;
-		if (!middleObj.classList.contains('moved')) {
-			//解决上移bug
-			if (!middleObj.classList.contains('initialized')) {
-				$('#left .Wrapper').css('padding-top','0');
-				middleObj.classList.add('initialized');
-			}
-			//end
-			middleObj.classList.add('moved');
-			leftListObj.style.display = 'inline-block';
-	 		setTimeout(function(){leftListObj.style.left = '0%';},0);
-	 		bodyObj.style.overflowY = "hidden";
-			middleObj.style.marginLeft = '60%';
-		}
-		else{
-			middleObj.classList.remove('moved');
-			leftListObj.style.left = '-55%';
-	 		
-	 		setTimeout(function(){leftListObj.style.display = 'none';bodyObj.style.overflowY = "scroll";},250);
-			middleObj.style.marginLeft = '5%';
-		}
-	})
+	document.getElementById("left_list_button").addEventListener("click", openLeftList);
+	document.getElementById("floatLeftListIcon").addEventListener("click", openLeftList);
+	
 });
+
+function openLeftList(){
+	//动画
+	var middleObj = document.getElementById('middle');
+	var leftListObj = document.getElementById('left');
+	var bodyObj = document.body;
+	if (!middleObj.classList.contains('moved')) {
+		//解决上移bug
+		if (!middleObj.classList.contains('initialized')) {
+			$('#left .Wrapper').css('padding-top','0');
+			middleObj.classList.add('initialized');
+		}
+		//end
+		middleObj.classList.add('moved');
+		leftListObj.style.display = 'inline-block';
+ 		setTimeout(function(){leftListObj.style.left = '0%';},0);
+ 		bodyObj.style.overflowY = "hidden";
+		middleObj.style.marginLeft = '60%';
+	}
+	else{
+		middleObj.classList.remove('moved');
+		leftListObj.style.left = '-55%';
+ 		
+ 		setTimeout(function(){leftListObj.style.display = 'none';bodyObj.style.overflowY = "scroll";},250);
+		middleObj.style.marginLeft = '5%';
+	}
+}
 
 // matter3_3建议
 function matter33SendMessage(){

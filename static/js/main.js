@@ -73,7 +73,6 @@ function scrollBottom(){
 		}
 	}
 	if (isMobileScreen()) {
-		console.log(scrollTop)
 		var floatLeftListIcon = document.getElementsByClassName('list-icon-2');
 		if (scrollTop > 80) {
 			floatLeftListIcon[0].style.display = 'inline';
@@ -133,8 +132,8 @@ function fillWindow(){
 	var mainContent = document.getElementById('mainContent');
 	var fill_window = document.getElementById('fill_window');
 	var ajaxHtmlHeight = ajaxHtml.offsetHeight + 14;
-	var mainContentHeight = mainContent.offsetHeight-17-17;//17为padding
-	var fillWindowHeight = mainContentHeight-ajaxHtmlHeight-12;//再减12是为了防止计算误差导致的滚动条出现
+	var mainContentHeight = mainContent.offsetHeight;//原为mainContentHeight = mainContent.offsetHeight-17-17
+	var fillWindowHeight = mainContentHeight-ajaxHtmlHeight-20;//再减12是为了防止计算误差导致的滚动条出现
 	if (fillWindowHeight <= 0){
 	  fillWindowHeight = 0;
 	}

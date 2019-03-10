@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+	windowHeight = document.documentElement.clientHeight;
 	closeWindowHtml = '<a href="javascript:void(0)" class="windowCloseButton"></a>';
 
 	$(document).on("click",'.openContent',function openWindow(){
@@ -109,6 +109,18 @@ $(document).ready(function() {
 	 	setTimeout(function(){$('#windowContent').fadeIn(140);},20);
 	 	
 	});
+
+	//弹出输入法时上移
+ 	$(window).resize(function() {
+ 		var windowObj = document.getElementById('window');
+ 		if (windowObj.style.display == 'block') {
+ 			var nowWindowHeight = document.documentElement.clientHeight;
+ 			if(typeof(windowTop_) == "undefined"){
+ 				windowTop_ = windowObj.offsetTop;
+ 			}
+ 			windowObj.style.setProperty('--top',windowTop_ - (windowHeight - nowWindowHeight) + 'px');
+ 		}
+ 	});
 
 	// matter0，1关闭窗口效果
 	$(document).on('click','.windowCloseButton',function closeWindow(){

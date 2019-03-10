@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	windowHeight = document.documentElement.clientHeight;
+	clientHeight = document.documentElement.clientHeight;
 	closeWindowHtml = '<a href="javascript:void(0)" class="windowCloseButton"></a>';
 
 	$(document).on("click",'.openContent',function openWindow(){
@@ -11,7 +11,7 @@ $(document).ready(function() {
 			setWindowHeightRatio = 0.80;
 		}
 		else if (nowMatter == 'matter1'){
-			setWindowHeightRatio = 0.50;
+			setWindowHeightRatio = 0.70;
 		}
 		var maxWindowHeight = 800;
 		var maxWindowWidth = 1300;
@@ -56,7 +56,7 @@ $(document).ready(function() {
 		var setPripertyDict = {
 			'width':windowWidth+'px',
 			'height':windowHeight+'px',
-			'marginTop':marginTop+'px',
+			// 'marginTop':marginTop+'px',
 			'marginLeft':marginLeft+'px',
 			'contentHeight':windowHeight-34+'px'
 		};
@@ -107,18 +107,23 @@ $(document).ready(function() {
 		getMattersContent($(this).attr('href'));
 	 	setTimeout(function(){windowObj.toggleClass('openWindow');$('#windowBackground').toggleClass('windowOpacity');},8);//不设置延时会有bug,延时>=8mm(可能与浏览器性能有关)
 	 	setTimeout(function(){$('#windowContent').fadeIn(140);},20);
-	 	
+
 	});
 
 	//弹出输入法时上移
  	$(window).resize(function() {
  		var windowObj = document.getElementById('window');
+ 		var windowMarginTop = 13;
+ 		var windowHeight = windowObj.clientHeight;
+ 		var bottomHeight = (clientHeight - windowHeight) / 2 - 1;
  		if (windowObj.style.display == 'block') {
- 			var nowWindowHeight = document.documentElement.clientHeight;
+ 			var nowClientHeight = document.documentElement.clientHeight;
  			if(typeof(windowTop_) == "undefined"){
- 				windowTop_ = windowObj.offsetTop;
+ 				windowTop_ = windowObj.offsetTop - windowMarginTop;//13为marginTop
  			}
- 			windowObj.style.setProperty('--top',windowTop_ - (windowHeight - nowWindowHeight) + 'px');
+ 			if (clientHeight - nowClientHeight >= bottomHeight) {
+ 				windowObj.style.setProperty('--top', windowTop_ - (clientHeight - nowClientHeight) + bottomHeight + 'px');
+ 			}
  		}
  	});
 
@@ -148,3 +153,10 @@ $(document).ready(function() {
 		}
 	}
 });
+
+document.onkeydown = function (event) {
+    var e = event || window.event;
+    if (e && e.keyCode == 13) {
+        $(".window-bubbly-button").click();
+    }
+};

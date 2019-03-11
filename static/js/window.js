@@ -119,7 +119,7 @@ $(document).ready(function() {
  		if (windowObj.style.display == 'block') {
  			var nowClientHeight = document.documentElement.clientHeight;
  			if(typeof(windowTop_) == "undefined"){
- 				windowTop_ = windowObj.offsetTop - windowMarginTop;//13为marginTop
+ 				windowTop_ = windowObj.offsetTop - windowMarginTop;
  			}
  			if (clientHeight - nowClientHeight >= bottomHeight) {
  				windowObj.style.setProperty('--top', windowTop_ - (clientHeight - nowClientHeight) + bottomHeight + 'px');

@@ -75,6 +75,7 @@
 
 		display: none;
 		width: 55%;
+		max-width: 300px;
 		left: -55%;
 		overflow: hidden;
 
@@ -144,6 +145,17 @@
 	}
 
 	.left-menu a.active {
+
+	    box-shadow: none;
+	    background: -webkit-linear-gradient(left, #ffffff, #cccccc, #cccccc, #ffffff); /* Safari 5.1 - 6.0 */
+		background: -o-linear-gradient(right, #ffffff, #cccccc, #cccccc, #ffffff); /* Opera 11.1 - 12.0 */
+		background: -moz-linear-gradient(right, #ffffff, #cccccc, #cccccc, #ffffff); /* Firefox 3.6 - 15 */
+		background: linear-gradient(to right, #ffffff, #cccccc, #cccccc, #ffffff); /* 标准的语法 */
+	    color: #555555;
+
+	}
+
+	.left-menu a:hover:not(.active) {
 
 	    box-shadow: none;
 	    background: -webkit-linear-gradient(left, #ffffff, #cccccc, #cccccc, #ffffff); /* Safari 5.1 - 6.0 */
@@ -363,6 +375,12 @@
 	.matter3-0 .title_1{
 
 	    padding-top: 0px;
+
+	}
+
+	.beian{
+
+		color: #7d7d7d;
 
 	}
 }

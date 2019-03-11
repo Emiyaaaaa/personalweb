@@ -64,7 +64,7 @@ $(document).ready(function() {
 			initializePersonalcenterNav();
 			get_update_log();
 		}
-	})
+	});
 
 
 	function fillHtml(data){
@@ -170,7 +170,18 @@ function openLeftList(){
 	var middleObj = document.getElementById('middle');
 	var leftListObj = document.getElementById('left');
 	var bodyObj = document.body;
+	var setMaxLeftWidth = 300;
+	var setLeftWidthRatio = 0.55;
+	if (clientWidth * setLeftWidthRatio >= 300) {
+		setLeftWidth = 300;
+	}
+	else{
+		setLeftWidth = clientWidth * setLeftWidthRatio;
+	}
+
 	if (!middleObj.classList.contains('moved')) {
+		var middleMarginLeft = middleObj.offsetLeft;
+		console.log(middleMarginLeft)
 		//解决上移bug
 		if (!middleObj.classList.contains('initialized')) {
 			$('#left .Wrapper').css('padding-top','0');
@@ -179,16 +190,17 @@ function openLeftList(){
 		//end
 		middleObj.classList.add('moved');
 		leftListObj.style.display = 'inline-block';
- 		setTimeout(function(){leftListObj.style.left = '0%';},0);
+ 		setTimeout(function(){leftListObj.style.left = '0px';},0);
  		bodyObj.style.overflowY = "hidden";
-		middleObj.style.marginLeft = '60%';
+		middleObj.style.marginLeft = setLeftWidth + middleMarginLeft + 'px';
 	}
 	else{
+		var middleMarginLeft = middleObj.offsetLeft;
 		middleObj.classList.remove('moved');
-		leftListObj.style.left = '-55%';
+		leftListObj.style.left = - setLeftWidth + 'px';
  		
  		setTimeout(function(){leftListObj.style.display = 'none';bodyObj.style.overflowY = "scroll";},250);
-		middleObj.style.marginLeft = '5%';
+		middleObj.style.marginLeft = middleMarginLeft - setLeftWidth + 'px';
 	}
 }
 

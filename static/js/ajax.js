@@ -181,7 +181,6 @@ function openLeftList(){
 
 	if (!middleObj.classList.contains('moved')) {
 		var middleMarginLeft = middleObj.offsetLeft;
-		console.log(middleMarginLeft)
 		//解决上移bug
 		if (!middleObj.classList.contains('initialized')) {
 			$('#left .Wrapper').css('padding-top','0');

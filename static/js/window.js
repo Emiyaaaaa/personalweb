@@ -79,6 +79,9 @@ $(document).ready(function() {
 		var parameterX = 10.5;
 		var translateY = -((clientHeight-height)/2-marginTop-(top+parameterY));
 		var translateX = -((clientWidth-width)/2-marginLeft-(left+parameterX));
+		if (clientWidth <= 768) {
+			translateX = 0;
+		}
 		
 		var setPripertyDict = {
 			'top':windowTop+'px',

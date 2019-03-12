@@ -253,11 +253,12 @@ function check_lines_length(chooseEle = 0){
 function cut_line(ele, reason_lines=2){
 
 	var now_lines = get_ele_lines(ele);
-	const innerText = ele.innerHTML;
-	var text = innerText.trim();//去除首尾空格
 	var look_more = '<span class="look-more">[查看更多]</span>';
+	const inner_text = ele.innerText;
+	var text = inner_text.substr(0, inner_text.length - 6);
+	
 	if (now_lines > reason_lines) {
-		ele.innerHTML = text.substr(0,text.length - look_more.length - 1) + look_more;
+		ele.innerHTML = text.substr(0, text.length - 1) + look_more;
 		cut_line(ele, reason_lines);
 	}
 }

@@ -19,7 +19,7 @@
 		    }
 		   	return true;
 		}
-		if(window.location.host != '127.0.0.1:8000'){
+		if(window.location.host != '127.0.0.1:8000' || window.location.host != '110.176.254.91'){
 			if (isPC() == false) {
 				window.location.href = 'http://' + window.location.host + '/mobile';
 			}

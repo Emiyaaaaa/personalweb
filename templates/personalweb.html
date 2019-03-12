@@ -342,8 +342,11 @@
 		nowMatter = 'matter'+LINUM;
 
 		//左侧列表left值初始化
-		var leftListWidth_ = $('#left').actual('width');
-		document.getElementById('left').style.left = - leftListWidth_ + 'px';
+		if (isMobileScreen()) {
+			var leftListWidth_ = $('#left').actual('width');
+			document.getElementById('left').style.left = - leftListWidth_ + 'px';
+		}
+		
     </script>
     <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/matter3.js' %}"></script>

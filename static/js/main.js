@@ -137,6 +137,9 @@ function fillWindow(){
 	if (fillWindowHeight <= 0){
 	  fillWindowHeight = 0;
 	}
+	if (!isMobileScreen()) {
+		fillWindowHeight = fillWindowHeight - 30;
+	}
 	fill_window.style.setProperty('--padding-top',fillWindowHeight+'px');
 
 }
@@ -247,14 +250,15 @@ function check_lines_length(chooseEle = 0){
 }
 
 
-function cut_line(ele,reason_lines=2){
+function cut_line(ele, reason_lines=2){
 
 	var now_lines = get_ele_lines(ele);
+	console.log(now_lines)
 	const innerText = ele.innerHTML;
 	var text = innerText.trim();//去除首尾空格
 	var look_more = '<span class="look-more">[查看更多]</span>';
 	if (now_lines > reason_lines) {
 		ele.innerHTML = text.substr(0,text.length - look_more.length - 1) + look_more;
-		cut_line(ele,reason_lines);
+		cut_line(ele, reason_lines);
 	}
 }

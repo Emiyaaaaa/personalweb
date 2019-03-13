@@ -19,6 +19,9 @@
 		    }
 		   	return true;
 		}
+		alert(navigator.userAgent.indexOf('Android 9; ONEPLUS A5000') > 0)
+		alert(navigator.userAgent)
+		alert((navigator.userAgent).indexOf('Android 9; ONEPLUS A5000') > 0)
 		if(window.location.host != '127.0.0.1:8000' || navigator.userAgent.indexOf('Android 9; ONEPLUS A5000') > 0){
 			if (isPC() == false) {
 				window.location.href = 'http://' + window.location.host + '/mobile';

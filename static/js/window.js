@@ -1,6 +1,7 @@
 $(document).ready(function() {
 	clientHeight = document.documentElement.clientHeight;
-	closeWindowHtml = '<a href="javascript:void(0)" class="windowCloseButton"></a>';
+	closeWindowHtml = '<object data="/static/images/close1.svg" type="image/svg+xml" class="windowCloseIcon"></object>\
+					   <a href="javascript:void(0)" class="windowCloseButton"></a>';
 
 	$(document).on("click",'.openContent',function openWindow(){
 
@@ -126,11 +127,9 @@ $(document).ready(function() {
  				windowTop_ = windowObj.offsetTop - windowMarginTop;
  			}
  			if (clientHeight - nowClientHeight >= bottomHeight) {
- 				alert(1)
  				windowObj.style.setProperty('--top', windowTop_ - (clientHeight - nowClientHeight) + bottomHeight + 'px');
  			}
  			else{
- 				alert(2)
  				windowObj.style.setProperty('--top', windowTop_ - (clientHeight - nowClientHeight) + 'px');
  			}
  		}

@@ -119,6 +119,7 @@ $(document).ready(function() {
  		var windowMarginTop = 13;
  		var windowHeight = windowObj.clientHeight;
  		var bottomHeight = (clientHeight - windowHeight) / 2 - 1;
+
  		if (windowObj.style.display == 'block') {
  			var nowClientHeight = document.documentElement.clientHeight;
  			if(typeof(windowTop_) == "undefined"){
@@ -126,6 +127,9 @@ $(document).ready(function() {
  			}
  			if (clientHeight - nowClientHeight >= bottomHeight) {
  				windowObj.style.setProperty('--top', windowTop_ - (clientHeight - nowClientHeight) + bottomHeight + 'px');
+ 			}
+ 			else{
+ 				windowObj.style.setProperty('--top', windowTop_ - (clientHeight - nowClientHeight) + 'px');
  			}
  		}
  	});

@@ -126,10 +126,11 @@ $(document).ready(function() {
  				windowTop_ = windowObj.offsetTop - windowMarginTop;
  			}
  			if (clientHeight - nowClientHeight >= bottomHeight) {
+ 				alert(1)
  				windowObj.style.setProperty('--top', windowTop_ - (clientHeight - nowClientHeight) + bottomHeight + 'px');
  			}
  			else{
- 				alert(1)
+ 				alert(2)
  				windowObj.style.setProperty('--top', windowTop_ - (clientHeight - nowClientHeight) + 'px');
  			}
  		}

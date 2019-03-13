@@ -206,7 +206,8 @@
 
 		margin: 0 auto;
 		margin-top: 13px;
-		padding-bottom: 7px;
+		padding: 17px 13px 7px 13px;
+		width: 90%;
 
 	}
 
@@ -262,6 +263,14 @@
 	}
 
 	.content .brief_date{
+
+		font-weight: normal;
+		font-size: 12px;
+		color: #555555;
+
+	}
+
+	.aCopy .brief_date{
 
 		font-weight: normal;
 		font-size: 12px;

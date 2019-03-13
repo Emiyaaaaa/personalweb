@@ -129,6 +129,7 @@ $(document).ready(function() {
  				windowObj.style.setProperty('--top', windowTop_ - (clientHeight - nowClientHeight) + bottomHeight + 'px');
  			}
  			else{
+ 				alert(1)
  				windowObj.style.setProperty('--top', windowTop_ - (clientHeight - nowClientHeight) + 'px');
  			}
  		}

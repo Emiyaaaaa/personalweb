@@ -284,6 +284,12 @@
 
 	}
 
+	.windowReplyButton a:hover {
+	
+		color: #adadad;
+
+	}
+
 	.content-margin{
 
 	    margin: 14px 5px 0 10px;
@@ -348,7 +354,11 @@
 
 	.window-comment-hint {
 
-	    top: 68px;
+	    top: 50px;
+	    width: 39%;
+	    left: 37%;
+	    height: 35px;
+	    overflow: hidden;
 	    
 	}
 

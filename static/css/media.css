@@ -73,7 +73,7 @@
 
 	.left{
 
-		display: none;
+		/*display: none;*/
 		width: 55%;
 		max-width: 300px;
 		left: -55%;

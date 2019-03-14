@@ -130,7 +130,7 @@ $(document).ready(function() {
  				windowObj.style.setProperty('--top', windowTop_ - (clientHeight - nowClientHeight) + bottomHeight + 'px');
  			}
  			else{
- 				windowObj.style.setProperty('--top', windowTop_ - (clientHeight - nowClientHeight) + 'px');
+ 				windowObj.style.setProperty('--top', windowTop_ - (clientHeight - nowClientHeight) + windowMarginTop + 'px');
  			}
  		}
  	});

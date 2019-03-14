@@ -269,3 +269,19 @@ function cut_line(ele, reason_lines=2){
 		cut_line(ele, reason_lines);
 	}
 }
+
+if (window.history && window.history.pushState) {
+
+	$(window).on('popstate', function() { 
+		var hashLocation = location.hash; 
+		var hashSplit = hashLocation.split("#!/");
+ 		var hashName = hashSplit[1]; 
+ 		if (hashName !== '') {
+ 			var hash = window.location.hash;
+ 			if (hash === '') { 
+ 				
+ 			}
+ 		}
+ 	});
+	// window.history.pushState('forward', null, './#forward');
+}

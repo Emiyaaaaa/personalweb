@@ -177,9 +177,22 @@
 		padding-top: 74px;
 
 	}
-	.Footer{
+
+	.beian-left-footer{
 
 		display: none;
+
+	}
+
+	.left-version{
+
+		display: inline;
+
+	}
+
+	.Footer{
+
+		text-align: center;
 
 	}
 

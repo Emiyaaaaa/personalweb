@@ -20,14 +20,15 @@
 		   	return true;
 		}
 
-		if(window.location.host != '127.0.0.1:8000'){
-			if (isPC() == false && navigator.userAgent.indexOf('Android 9; ONEPLUS A5000') == -1) {
-				window.location.href = 'http://' + window.location.host + '/mobile';
-			}
-			else{
-				outputConsole();
-			}
-		}
+		// if(window.location.host != '127.0.0.1:8000'){
+		// 	if (isPC() == false && navigator.userAgent.indexOf('Android 9; ONEPLUS A5000') == -1) {
+		// 		window.location.href = 'http://' + window.location.host + '/mobile';
+		// 	}
+		// 	else{
+		// 		outputConsole();
+		// 	}
+		// }
+		outputConsole();
 		
 	</script>
 	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
@@ -88,7 +89,8 @@
 			</div>
 			<div class="FooterPush"></div>
 		</div>
-		<div class="Footer"><a href="http://www.miitbeian.gov.cn/" target="_blank" class="beian">晋ICP备18012113号-1</a></div>
+		<div class="Footer beian-left-footer"><a href="http://www.miitbeian.gov.cn/" target="_blank" class="beian">晋ICP备18012113号-1</a></div>
+		<div class="Footer left-version">version: 2.0 (Beta)</div>
 	</div>
 	<object data="/static/images/list1.svg" type="image/svg+xml" class="left-list-icon list-icon-1"></object>
 	<div class="left-list-icon-out list-icon-1" id="left_list_button"></div>
@@ -152,7 +154,10 @@
 		    			</br>
 		    			github：<a href="https://github.com/Emiyaaaaa">Emiyaaaaa</a>
 		    			</br>
-		    			即刻：<a href="https://web.okjike.com/user/5a4ddfa6-298a-42b8-b477-8a866b236460">UC震惊部</a>
+		    			即刻：<a href="{% static 'images/jike.jpg' %}">UC震惊部</a>
+		    			</br>
+		    			</br>
+						已知Bug：由于网站设计缺陷，返回键存在不能返回上次浏览页面的Bug，将在近期优先修复，发现其他Bug请联系qq:2914034404或发邮件给我，感谢您的支持。
 		    		</div>
 	    		</div>
 	    		<div style="height: 100px"></div>
@@ -165,7 +170,7 @@
         			<li class="developer">后端: Emiya</li>
         			<li class="developer">数据库: Emiya</li>
         			<li class="developer">运维: Emiya</li>
-        			<!-- <li class="developer">特别鸣谢: 云顶书院</li> -->
+        			<li class="developer">特别鸣谢: 云顶书院</li>
         		</ul>
         	</div>
         	<div id="matter3_2" class="matter3-2" style="display: none;">

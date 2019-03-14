@@ -75,13 +75,13 @@
 
 .window_aTag{
 
-    color: #4a8fe8;
+    color: #2e7aea;
 
 }
 
 .window_aTag:hover{
 
-    color: #4a8fe8;
+    color: #2e7aea;
 
 }
 
@@ -318,7 +318,8 @@
 
 .matter1_content{
 
-    border-top: 1px solid #ddd
+    border-top: 1px solid #ddd;
+    word-wrap: break-word;
 
 }
 

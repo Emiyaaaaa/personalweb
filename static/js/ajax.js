@@ -310,13 +310,13 @@ function windowSendComment(){
 	        data:{"type":"windowSendComment","nickname":nickname,"email":email,"comment":comment,"matter":matter,"text_id":text_id,'comment_to':comment_to},
 	        success:function(data){
 	        	if (data.statusCode == '1'){
-	        		$('.window-comment-hint').html('提示：评论成功！ ღ( ´･ᴗ･` )比心');
+	        		$('.window-comment-hint').html('提示：评论成功！');
 	        		$('#comment_nike_name').val('');
 					$('#comment_user_email').val('');
 					$('#comment_comment').val('');
 	        	}
 	        	else {
-	        		$('.window-comment-hint').html('提示：提交失败，请再试一次~');
+	        		$('.window-comment-hint').html('提示：发送失败');
 	        	}
 	        }
 		})

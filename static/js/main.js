@@ -149,25 +149,31 @@ function replyButton() {
 	var comment = document.getElementsByClassName('comment');
 	var replyButton = document.getElementsByClassName('windowReplyButton');
 	for (var i = 0; i < comment.length; i++) {
-	  !function(i){
+	  	!function(i){
+	    	comment[i].onmouseover = function (){
+		      	replyButton[i].style.display = 'inline';
+		    }
+	    	comment[i].onmouseout = function (){
+		      	replyButton[i].style.display = 'none';
+		    }
 
-	    comment[i].onmouseover = function (){
-	      replyButton[i].style.display = 'inline';
-	    }
-
-	    comment[i].onmouseout = function (){
-	      replyButton[i].style.display = 'none';
-	    }
-
-	  }(i)
+	  	}(i)
 	}
+}
+
+if (isMobileScreen()) {
+
+	function replyButton() {}
+
 }
 
 function clickReplyButton(obj) {
 
 	document.getElementById("windowComment").scrollIntoView();
 	var nickname = obj.parentNode.parentNode.children[0].innerText;
-	$('.window-comment-hint').html('回复：'+ nickname + '<span class="cancelReply"><a href="javascript:void(0)" onclick="cancelReply()">取消回复</a></span>');
+	$('.cancelReply_').parent().html('<a href="javascript:void(0)" onclick="clickReplyButton(this)">回复</a>');
+	obj.parentNode.innerHTML = '<a href="javascript:void(0)" class="cancelReply_" onclick="cancelReply()">取消回复</a>';
+	$('.window-comment-hint').html('回复：'+ nickname);
 	reply = 'true';
 	reply_nickname = nickname;
 
@@ -176,6 +182,7 @@ function clickReplyButton(obj) {
 function cancelReply(){
 
 	$('.window-comment-hint').html('');
+	$('.cancelReply_').parent().html('<a href="javascript:void(0)" onclick="clickReplyButton(this)">回复</a>');
 	reply = 'false';
 
 }

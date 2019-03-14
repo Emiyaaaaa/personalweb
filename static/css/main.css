@@ -118,8 +118,8 @@ a:hover{
 
 ::-webkit-scrollbar {
 	
-	width: 2vw;
-	height: 2vw;
+	width: 1vw;
+	height: 1vw;
 	max-width: 8px;
 	max-height: 10px;
 

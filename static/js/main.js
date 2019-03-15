@@ -270,6 +270,7 @@ function cut_line(ele, reason_lines=2){
 	}
 }
 
+//返回键监听
 if (window.history && window.history.pushState) {
 	$(window).on('popstate', function() {
 

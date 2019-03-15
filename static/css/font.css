@@ -25,7 +25,7 @@ body{
 
 .brief-content .brief-content-text{
 
-	letter-spacing: 2px;
+	letter-spacing: 1px;
 
 }
 
@@ -57,7 +57,7 @@ body{
 	padding: 29px 10px 9px 2.847%;
 	line-height:25px;
 	font-size: 19px;
-	letter-spacing:2px;
+	letter-spacing:1px;
     color: #404040
 
 }

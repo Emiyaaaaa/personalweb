@@ -140,7 +140,10 @@ $(document).ready(function() {
 		var obj = $(this);
 		var aObj = $('#'+objName+idNum);
 		var windowBackground = $('#windowBackground');
+		var urlHref = window.location.href;
+		let urlSearch = urlHref.split('?')[1];
 
+		
 		$('#windowContent').fadeOut(100);
 		windowObj.toggleClass('openWindow');
 		windowBackground.toggleClass('windowOpacity');
@@ -148,7 +151,12 @@ $(document).ready(function() {
 		aCopyObj.css('display','none');
 		aObj.css('display','block');
 		document.getElementById('fill_window').style.setProperty('--padding-top','0');//解决手机版bug
-		setTimeout(function(){windowObj.css('display','none').empty()},280);
+		setTimeout(function(){	
+			windowObj.css('display','none').empty();
+			if (urlSearch != '' && urlSearch != undefined) {
+				window.location.href = urlHref.split('?')[0];
+			}
+		},280);
 		$('body').css({'overflow-y':'scroll','overflow-x':'auto'});
 		$('html').css('overflow','');
 		reply = 'false';

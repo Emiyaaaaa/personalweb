@@ -271,17 +271,32 @@ function cut_line(ele, reason_lines=2){
 }
 
 if (window.history && window.history.pushState) {
+	$(window).on('popstate', function() {
 
-	$(window).on('popstate', function() { 
-		var hashLocation = location.hash; 
-		var hashSplit = hashLocation.split("#!/");
- 		var hashName = hashSplit[1]; 
- 		if (hashName !== '') {
- 			var hash = window.location.hash;
- 			if (hash === '') { 
- 				
- 			}
- 		}
+		let urlHref = window.location.href;
+		let urlHash = urlHref.split('?')[0].split('/')[3];
+		let urlSearch = urlHref.split('?')[1];
+		console.log('move')
+		if (urlHash == '' || urlHash == '#'){
+			urlHash = '#codeDiary';
+		}
+		try{
+			var liNum = $(urlHash).parent().attr('id').split('-')[1];
+		}
+		catch(err){
+			var liNum = 0;
+		}
+		if (LINUM != liNum) {//返回或前进
+			$(urlHash).click();
+		}
+		if (liNum == 0 || liNum == 1) {
+			if (document.getElementById('window').style.display == 'block' && (urlSearch == '' || urlSearch == undefined)) {//此时按返回键则关闭窗口
+				$('.windowCloseButton').click();
+			}
+			if (document.getElementById('window').style.display == 'none' && (urlSearch != '' && urlSearch != undefined)) {//此时按返回键则打开窗口
+				var text_id = urlSearch.split('=')[1];
+				$(urlHash + text_id.toString()).click();
+			}
+		}
  	});
-	// window.history.pushState('forward', null, './#forward');
 }

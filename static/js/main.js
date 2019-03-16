@@ -277,7 +277,6 @@ if (window.history && window.history.pushState) {
 		let urlHref = window.location.href;
 		let urlHash = urlHref.split('?')[0].split('/')[3];
 		let urlSearch = urlHref.split('?')[1];
-		console.log('move')
 		if (urlHash == '' || urlHash == '#'){
 			urlHash = '#codeDiary';
 		}

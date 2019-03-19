@@ -317,13 +317,14 @@
 
 	.middle .title{
 
-		color: #000000;
+		color: #555555;
+		font-weight: bold;
 
 	}
 
 	.brief-content-text{
 
-		color: #777777;
+		color: #555555;
 
 	}
 

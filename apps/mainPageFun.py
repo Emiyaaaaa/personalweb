@@ -7,6 +7,7 @@ from personalcenter.models import Message,WeatherUserStatistics
 from diary.models import DiaryComment,Diary
 from codeDiary.models import CodeComment,CodeDiary,WebsitePsd
 from zhuhuVideoDownload.views import ZhuhuVideoDownloadView
+from diary.sendEmail import *
 
 def getMoreContent(request):
     matter = request.GET.get('matter')
@@ -68,6 +69,10 @@ def windowSendComment(request):
         comment = object.get(text_id=text_id)
         comment_object.create(comment=comment, nick_name=nickname, e_mail=email, content=comment_content,
                               comment_to=comment_to)
+        if nickname != 'Emiya':
+            text = '主题：'+matter+'\n昵称：'+nickname+'\n回复：'+comment_to+'\n内容：'+comment_content
+            sendEmail(text)
+
         return JsonResponse({'statusCode': '1'})
     except:
         return JsonResponse({'statusCode': '0'})

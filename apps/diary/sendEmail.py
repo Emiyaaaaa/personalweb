@@ -17,10 +17,9 @@ with open(os.path.join(settings.BASE_DIR, 'tools','personalWeb.pwd'), 'rb') as f
 
 my_sender = '2914034404@qq.com'
 my_pass = pw_dict['stmppw']
-my_user = '2914034404@qq.com'
 
 
-def sendEmail(email_txt):
+def sendEmail(email_txt,my_user='2914034404@qq.com'):
     try:
         msg = MIMEText(email_txt, 'plain', 'utf-8')
         msg['From'] = formataddr(["Emiya", my_sender])

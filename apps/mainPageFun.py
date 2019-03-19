@@ -8,6 +8,7 @@ from diary.models import DiaryComment,Diary
 from codeDiary.models import CodeComment,CodeDiary,WebsitePsd
 from zhuhuVideoDownload.views import ZhuhuVideoDownloadView
 from diary.sendEmail import *
+import _thread
 
 def getMoreContent(request):
     matter = request.GET.get('matter')
@@ -49,6 +50,15 @@ def matterPage(request):
     elif matter == 'matter3':
         return JsonResponse({'statusCode': '200'})
 
+def sendCommentEmail(matter, nickname, email, comment_content, comment_to):
+    text = '主题：' + matter + '\n昵称：' + nickname + '\n回复：' + comment_to + '\n内容：' + comment_content
+    if email == '':
+        if nickname != 'Emiya':
+            sendEmail(text)
+    else:
+        sendEmail(text,email)
+
+
 def windowSendComment(request):
     nickname = request.POST.get('nickname')
     email = request.POST.get('email')
@@ -69,9 +79,7 @@ def windowSendComment(request):
         comment = object.get(text_id=text_id)
         comment_object.create(comment=comment, nick_name=nickname, e_mail=email, content=comment_content,
                               comment_to=comment_to)
-        if nickname != 'Emiya':
-            text = '主题：'+matter+'\n昵称：'+nickname+'\n回复：'+comment_to+'\n内容：'+comment_content
-            sendEmail(text)
+        _thread.start_new_thread(sendCommentEmail,(matter, nickname, email, comment_content, comment_to))
 
         return JsonResponse({'statusCode': '1'})
     except:

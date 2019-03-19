@@ -144,7 +144,8 @@ $(document).ready(function() {
 	        	}
 	        	catch(err){}
 	        	try{
-	        		$('#matter1_content').html(str2aTag($('#matter1_content').html()))
+	        		var matter1_content = $('#matter1_content').html().trim().split('\n').join('</br>')
+	        		$('#matter1_content').html(str2aTag(matter1_content))
 	        	}
 	        	catch(err){}
 	        	var markdown_a = $('.markdown-body a');

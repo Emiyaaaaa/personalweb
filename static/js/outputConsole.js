@@ -1,4 +1,4 @@
-function outputConsole(argument) {
+function outputConsole1() {
 	console.log("\n\
 没错！这是一枚彩蛋！\n\
 此人正是本网站域名的由来 —— Emiya Shirou (卫宫士郎)\n\
@@ -103,4 +103,11 @@ function outputConsole(argument) {
   )rrrrrrjjffffftttttttt////////////////trtftttttttttttttfnxtt/tttttttttttttttttttfttfftfffjffffffrunnrffffffffffffffjjjjjjjxxxxxxvnn\n\
   jrrrjjjfjffffttttttttt//tt///////////tttttttttttttttttttxxj/tttttttttttttttttttfffffjfffffffffffunnjftftfffffffffffffjfjjjrxxxxxunnz\n\
  njxrrxrrjfjfffftttttttt|//||/////ttttttttt/xttttttttttttfxxx/ttttttttttt//ttttttttttffffffffffjfnnnjfftttfttfffff Saber赛高(ノ￣▽￣)﻿ノ")
+}
+
+function outputConsole2() {
+  console.log("\n\
+没错！这是一枚彩蛋！\n\
+此人正是本网站域名的由来 —— Emiya Shirou (卫宫士郎)\n\
+请拉伸Console(控制台)并确保行每行字数大于144后享用。\n\n")
 }

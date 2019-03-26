@@ -300,3 +300,12 @@ if (window.history && window.history.pushState) {
 		}
  	});
 }
+
+function initializeTimeProgressBar(){
+
+	var myDate = new Date();
+	$('.now-year').html(myDate.getFullYear());
+	var bg_width = $('.my-progress-bar-bg').width();
+
+}
+initializeTimeProgressBar()

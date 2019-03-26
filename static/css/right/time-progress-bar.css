@@ -1,0 +1,47 @@
+.time-progress-bar{
+	
+	position: absolute;
+	margin: 0 0 0 15px;
+    top: 455px;
+	width: 90%;
+	height: 100px;
+
+}
+
+.time-progress-bar .tit{
+
+	margin-left: 9px;
+
+}
+
+.my-progress-bar-cover, .my-progress-bar-bg{
+	
+	position: absolute;
+	margin-left: 44px;
+	margin-top: 30px;
+	height: 20px;
+
+}
+
+.my-progress-bar-txt{
+	
+	position: absolute;
+	margin-left: 300px;
+	margin-top: 30px;
+	height: 20px;
+
+}
+
+.my-progress-bar-bg{
+
+	width: 250px;
+	background-color: #d4d4d4
+
+}
+
+.my-progress-bar-cover{
+
+	width: 50%;
+	background-color: #777777
+
+}

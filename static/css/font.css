@@ -149,7 +149,7 @@ body{
 
 .qm{
 	
-	color: #adadad;
+	color: #666666;
 	font-size: 17px;
 
 }
@@ -256,5 +256,12 @@ body{
 
 	font-size: 20px;
 	color: #707070
+
+}
+
+.time-progress-bar .tit{
+
+	font-size: 17px;
+	color: #666666
 
 }

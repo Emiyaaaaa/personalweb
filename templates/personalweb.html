@@ -20,15 +20,9 @@
 		    }
 		   	return true;
 		}
-
-		// if(window.location.host != '127.0.0.1:8000'){
-		// 	if (isPC() == false && navigator.userAgent.indexOf('Android 9; ONEPLUS A5000') == -1) {
+		// 	if (window.location.host != '127.0.0.1:8000' && isPC() == false && navigator.userAgent.indexOf('Android 9; ONEPLUS A5000') == -1) {
 		// 		window.location.href = 'http://' + window.location.host + '/mobile';
 		// 	}
-		// 	else{
-		// 		outputConsole();
-		// 	}
-		// }
 		if(window.location.host != '127.0.0.1:8000'){
 			outputConsole2();
 			console_out();
@@ -52,6 +46,8 @@
 	<link rel="stylesheet" type="text/css" href="{% static 'css/font.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/left/left.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/right/signature.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/right/weather.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/right/time-progress-bar.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/middle/matter0.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/middle/matter1.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/middle/matter2.css' %}">
@@ -59,7 +55,6 @@
 	<link rel="stylesheet" type="text/css" href="{% static 'css/middle/window.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/middle/markdown.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/weather-icon.css' %}">
-	<link rel="stylesheet" type="text/css" href="{% static 'css/right/weather.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/middle/window-bubbly-button.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/media.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/middle/suggestion-bubbly-button.css' %}">
@@ -316,6 +311,12 @@
     			<div class="signature-text1"><span style="opacity:0;">{{ signature }}</span></div>
     			<div class="signature-text2">{{ signature }}</div>
     		</div>
+    	</div>
+    	<div class="time-progress-bar">
+    		<div class="tit">您的<span class="now-year"></span>使用进度</div>
+    		<div class="my-progress-bar-bg"></div>
+    		<div class="my-progress-bar-cover"></div>
+    		<div class="my-progress-bar-txt">23%</div>
     	</div>
     </div>
     <div id="windowBackground" class="windowBackground"></div>

@@ -96,7 +96,8 @@
 }
 
 .left-version{
-
+    
+    display: none;
     float: left;
     width: 100%;
 

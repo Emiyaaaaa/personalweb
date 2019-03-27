@@ -304,8 +304,16 @@ if (window.history && window.history.pushState) {
 function initializeTimeProgressBar(){
 
 	var myDate = new Date();
+	days = 0;
 	$('.now-year').html(myDate.getFullYear());
 	var bg_width = $('.my-progress-bar-bg').width();
-
+	var mouth2days = {'1':31,'2':28,'3':31,'4':30,'5':31,'6':30,'7':31,'8':31,'9':30,'10':31,'11':30,'12':31};
+	var now_mouth = myDate.getMonth();
+	for (var i = 0; i < now_mouth; i++) {
+		days += mouth2days[i+1];
+	}
+	days += myDate.getDate();
+	$('.my-progress-bar-txt').html((days/3.65).toPrecision(3) + '%');
+	$('.my-progress-bar-cover').width(bg_width*days/365);
 }
-initializeTimeProgressBar()
+initializeTimeProgressBar();

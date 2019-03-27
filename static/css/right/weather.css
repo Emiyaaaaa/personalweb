@@ -1,7 +1,7 @@
 .weather{
     
     display: none;
-    position: fixed;
+    position: absolute;
     margin: 58px 0 0 15px;
     height: 200px;
     width: 28%

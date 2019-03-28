@@ -32,7 +32,7 @@
 
 .weather .now-city{
 
-    margin: 30px 0 0 10px;
+    margin: 20px 0 0 10px;
 
 }
 
@@ -67,7 +67,7 @@
 .tomorrow-tem,
 .after-tomorrow-tem{
 
-    margin: 20px 0 33px 10px;
+    margin: 20px 0 26px 10px;
 
 }
 
@@ -198,4 +198,12 @@
 
     background-color: #B5B5B5;
     color: white;
+}
+
+.wli-txt{
+
+    position: relative;
+    top: -1px;
+    left: 1px;
+
 }

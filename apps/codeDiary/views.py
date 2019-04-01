@@ -32,6 +32,7 @@ class CodeDiaryView():
                 'text_id':text_id,
                 'title':codeDiary.title,
                 'is_brief':brief_text['is_brief'],
+                'tag':codeDiary.tag,
                 'img_num':len(codeDiaryImg)
             })
         return render(request,'matter0.html',{'codeDiary_info':codeDiary_info,'loadStatus':loadStatus,'showBeian':showBeian})

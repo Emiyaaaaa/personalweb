@@ -234,6 +234,14 @@
 	.brief-content{
 
 		padding-top: 7px;
+		width: auto;
+		float: none;
+
+	}
+
+	.content .comment,.aCopy .comment{
+
+    	display: none;
 
 	}
 

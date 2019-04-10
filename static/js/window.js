@@ -59,7 +59,7 @@ $(document).ready(function() {
 			'height':windowHeight+'px',
 			// 'marginTop':marginTop+'px',
 			'marginLeft':marginLeft+'px',
-			'contentHeight':windowHeight-34+'px'
+			'contentHeight':windowHeight-33+'px'
 		};
 		var middle_width = $('#middle').width();
 

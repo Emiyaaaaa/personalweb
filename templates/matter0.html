@@ -8,15 +8,21 @@
                     <span class="codeDiaryTag">{{ codeDiary.tag }}</span>
                 {% endif %}
             </div>
-            <div class="brief-content">
-                {% if codeDiary.title != None %}
-                    <div class="bold title">{{ codeDiary.title }}</div>
-                {% endif %}
-                <div class="brief-content-text">
-                    {{ codeDiary.content }}
-                    {% if codeDiary.is_brief == 'true' %}
-                        <span class="look-more">[查看更多]</span>
+            <div>
+                <div class="brief-content">
+                    {% if codeDiary.title != None %}
+                        <div class="bold title">{{ codeDiary.title }}</div>
                     {% endif %}
+                    <div class="brief-content-text">
+                        {{ codeDiary.content }}
+                        {% if codeDiary.is_brief == 'true' %}
+                            <span class="look-more">[查看更多]</span>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="comment">
+                    <object class="comment-icon" data="/static/images/comment.svg" type="image/svg+xml"></object>
+                    <div class="comment-num">5</div>
                 </div>
             </div>
         </a>

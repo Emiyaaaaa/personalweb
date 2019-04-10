@@ -146,7 +146,7 @@ function fillWindow(){
 
 function replyButton() {
 
-	var comment = document.getElementsByClassName('comment');
+	var comment = document.getElementById('windowContent').getElementsByClassName('comment');
 	var replyButton = document.getElementsByClassName('windowReplyButton');
 	for (var i = 0; i < comment.length; i++) {
 	  	!function(i){

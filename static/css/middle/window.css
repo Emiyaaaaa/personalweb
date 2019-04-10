@@ -293,14 +293,14 @@
     
 }
 
-.comment{
+#windowContent .comment{
 
     border-top: 1px solid #ddd;
     padding: 20px 0 20px 2.847%;
 
 }
 
-.comment *{
+#windowContent .comment *{
 
     box-sizing:border-box;
     -webkit-box-sizing: border-box;

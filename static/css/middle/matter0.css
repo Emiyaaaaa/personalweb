@@ -170,3 +170,34 @@
     box-shadow: 0px 1px 4px rgba(203,241,220,0.4);
 
 }
+
+.content .comment,.aCopy .comment{
+
+    display: inline-block;
+
+}
+
+.content .comment-icon,.aCopy .comment-icon{
+    
+    width: 25px;
+    padding-top: 14px;
+
+}
+
+.content .comment-num,.aCopy .comment-num{
+    
+    color: #696969;
+    text-align: center;
+    width: 20.63px;
+    position: relative;
+    top: -5px;
+
+}
+
+.brief-content{
+
+    padding: 9px 10px;
+    float: left;
+    width: 93%;
+
+}

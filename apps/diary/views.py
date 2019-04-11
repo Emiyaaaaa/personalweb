@@ -46,9 +46,9 @@ class DiaryView():
         text_max_length = int(text_max_length)
         for uchar in text:
             if (uchar >= u'\u4e00' and uchar <= u'\u9fa5') or (uchar in cn_char):
-                text_length = text_length + 1#中文长度加一
+                text_length = text_length + 1 # 中文长度加一
             else:
-                text_length = text_length + 0.5#英文长度加0.5
+                text_length = text_length + 0.5 # 英文长度加0.5
             text_index = text_index + 1
 
             if text_length >= text_max_length * line - 6:
@@ -110,7 +110,11 @@ class DiaryView():
             text_id = diary.text_id
             line = 2
             if diary.title != None: line = 1
-            brief_text = self.getBriefText(diary.content, text_max_length, line)
+            text = diary.content
+            text = text.replace('<a>http://','')
+            text = text.replace('<a>https://','')
+            text = text.replace('</a>','')
+            brief_text = self.getBriefText(text, text_max_length, line)
             diaryImg = DiaryImg.objects.filter(diary=text_id)
             diaryComment = DiaryComment.objects.filter(comment = text_id).exclude(is_display=0)
             diary_info.append({

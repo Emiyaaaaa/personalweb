@@ -26,14 +26,16 @@ class DiaryView():
             text = text.replace('<a>https://','')
             text = text.replace('</a>','')
             brief_text = self.getBriefText(text, text_max_length, line)
-            diaryImg = DiaryImg.objects.filter(diary=text_id)
+            diaryImg = DiaryImg.objects.filter(diary = text_id)
+            diaryComment = DiaryComment.objects.filter(comment = text_id).exclude(is_display=0)
             diary_info.append({
                 'content':brief_text['brief_text'],
                 'date_weather':diary.date+ ' ' +diary.weather,
                 'text_id':text_id,
                 'title':diary.title,
                 'is_brief':brief_text['is_brief'],
-                'img_num': len(diaryImg)
+                'img_num': len(diaryImg),
+                'comment_num': len(diaryComment)
             })
         return render(request, 'matter1.html', {'diary_info': diary_info, 'loadStatus':loadStatus,'showBeian':showBeian})
 
@@ -110,12 +112,14 @@ class DiaryView():
             if diary.title != None: line = 1
             brief_text = self.getBriefText(diary.content, text_max_length, line)
             diaryImg = DiaryImg.objects.filter(diary=text_id)
+            diaryComment = DiaryComment.objects.filter(comment = text_id).exclude(is_display=0)
             diary_info.append({
                 'content': brief_text['brief_text'],
                 'date_weather': diary.date + ' ' + diary.weather,
                 'text_id': text_id,
                 'title': diary.title,
                 'is_brief': brief_text['is_brief'],
-                'img_num': len(diaryImg)
+                'img_num': len(diaryImg),
+                'comment_num': len(diaryComment)
             })
         return render(request, 'matter1.html', {'diary_info': diary_info,'loadStatus':loadStatus,'showBeian':showBeian})

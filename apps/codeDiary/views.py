@@ -26,6 +26,7 @@ class CodeDiaryView():
             if codeDiary.title != None:line = 1
             brief_text = self.getBriefText(unmarkdown_text, text_max_length,line)
             codeDiaryImg = CodeDiaryImg.objects.filter(codeDiary=text_id)
+            codeDiaryComment = CodeComment.objects.filter(comment=text_id).exclude(is_display=0)
             codeDiary_info.append({
                 'date':codeDiary.date,
                 'content':brief_text['brief_text'],
@@ -33,7 +34,8 @@ class CodeDiaryView():
                 'title':codeDiary.title,
                 'is_brief':brief_text['is_brief'],
                 'tag':codeDiary.tag,
-                'img_num':len(codeDiaryImg)
+                'img_num':len(codeDiaryImg),
+                'comment_num':len(codeDiaryComment)
             })
         return render(request,'matter0.html',{'codeDiary_info':codeDiary_info,'loadStatus':loadStatus,'showBeian':showBeian})
 
@@ -94,6 +96,7 @@ class CodeDiaryView():
             if codeDiary.title != None: line = 1
             brief_text = self.getBriefText(unmarkdown_text, text_max_length, line)
             codeDiaryImg = CodeDiaryImg.objects.filter(codeDiary=text_id)
+            codeDiaryComment = CodeComment.objects.filter(comment=text_id).exclude(is_display=0)
             codeDiary_info.append({
                 'date': codeDiary.date,
                 'content': brief_text['brief_text'],
@@ -101,6 +104,7 @@ class CodeDiaryView():
                 'title': codeDiary.title,
                 'is_brief': brief_text['is_brief'],
                 'img_num': len(codeDiaryImg),
+                'comment_num':len(codeDiaryComment)
             })
         return render(request, 'matter0.html', {'codeDiary_info': codeDiary_info,'loadStatus':loadStatus,'showBeian':showBeian})
 
@@ -112,7 +116,7 @@ class CodeDiaryView():
         text_max_length = int(text_max_length)
         for uchar in text:
             if (uchar >= u'\u4e00' and uchar <= u'\u9fa5') or (uchar in cn_char):
-                text_length = text_length + 1  # 中文长度加一
+                text_length = text_length + 1  # 中文长度加1
             else:
                 text_length = text_length + 0.5  # 英文长度加0.5
             text_index = text_index + 1

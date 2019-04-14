@@ -122,64 +122,34 @@
 
 .donation .container1 {
     position: relative;
-    overflow: hidden;
-    top: -41px;
-    left: 3em;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;   
-    background: #999999;
-    transition: .3s background;
-}
-
-.donation .container1:hover {
-    background: #5a9df6;
-}
-
-.donation .g1{
-    position: relative;
-    left: 6.3px;
-    top: 3.7px;
-    width: 37px;
-    height: 41px;
-    border-radius: 50%;
-    background-image: url(/media/donation/g11.jpg);
-    background-size: cover;
-    cursor: pointer;
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    mix-blend-mode: lighten;
+    top: -6px;
 }
 
 .donation .container2 {
     position: relative;
-    overflow: hidden;
-    top: -82.6px;
-    left: 5em;
-    width: 45px;
-    height: 38px;
-    border-radius: 50% / 50%;   
-    background: #999999;
-    transition: .3s background;
+    top: -6px;
+    left: 2em;
 }
 
-.donation .container2:hover {
-    background: #3cb035;
+.donation .d1, .donation .d2{
+    position: absolute;
+    left: 6.3px;
+    top: 3.7px;
+    width: 40px;
+    height: 40px;
 }
 
-.donation .g2{
-    position: relative;
-    left: 5.9px;
-    top: 1.2px;
-    width: 38px;
-    height: 36px;
-    border-radius: 50% / 50%;
-    background-image: url(/media/donation/g22.png);
-    background-size: cover;
-    cursor: pointer;
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    mix-blend-mode: lighten;
+.donation .d2{
+
+    opacity: 0;
+    transition: all 0.3s;
+
+}
+
+.donation .d2:hover{
+
+    opacity: 1
+
 }
 
 /*matter3-3*/
@@ -418,11 +388,5 @@
 .update_version{
 
     padding-top: 10px;
-
-}
-
-.donation{
-
-    display: none;
 
 }

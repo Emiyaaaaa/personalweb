@@ -122,25 +122,34 @@
 
 .donation .container1 {
     position: relative;
-    top: -6px;
+    top: -3px;
+    left: 2px;
 }
 
 .donation .container2 {
     position: relative;
-    top: -6px;
-    left: 2em;
+    top: -5px;
+    left: 61px;
 }
 
-.donation .d1, .donation .d2{
+.container1 .d1, .container1 .d2{
+
     position: absolute;
-    left: 6.3px;
-    top: 3.7px;
-    width: 40px;
-    height: 40px;
+    width: 43px;
+    height: 43px;
+
+}
+
+.container2 .d1, .container2 .d2{
+
+    position: absolute;
+    width: 45px;
+    height: 45px;
+
 }
 
 .donation .d2{
-
+    
     opacity: 0;
     transition: all 0.3s;
 

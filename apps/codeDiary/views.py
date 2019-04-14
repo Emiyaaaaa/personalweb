@@ -27,13 +27,17 @@ class CodeDiaryView():
             brief_text = self.getBriefText(unmarkdown_text, text_max_length,line)
             codeDiaryImg = CodeDiaryImg.objects.filter(codeDiary=text_id)
             codeDiaryComment = CodeComment.objects.filter(comment=text_id).exclude(is_display=0)
+            if codeDiary.tag != None:
+                codeDiaryTag = codeDiary.tag.split(';')
+            else:
+                codeDiaryTag = []
             codeDiary_info.append({
                 'date':codeDiary.date,
                 'content':brief_text['brief_text'],
                 'text_id':text_id,
                 'title':codeDiary.title,
                 'is_brief':brief_text['is_brief'],
-                'tag':codeDiary.tag,
+                'tag':codeDiaryTag,
                 'img_num':len(codeDiaryImg),
                 'comment_num':len(codeDiaryComment)
             })
@@ -97,12 +101,17 @@ class CodeDiaryView():
             brief_text = self.getBriefText(unmarkdown_text, text_max_length, line)
             codeDiaryImg = CodeDiaryImg.objects.filter(codeDiary=text_id)
             codeDiaryComment = CodeComment.objects.filter(comment=text_id).exclude(is_display=0)
+            if codeDiary.tag != None:
+                codeDiaryTag = codeDiary.tag.split(';')
+            else:
+                codeDiaryTag = []
             codeDiary_info.append({
                 'date': codeDiary.date,
                 'content': brief_text['brief_text'],
                 'text_id': text_id,
                 'title': codeDiary.title,
                 'is_brief': brief_text['is_brief'],
+                'tag':codeDiaryTag,
                 'img_num': len(codeDiaryImg),
                 'comment_num':len(codeDiaryComment)
             })

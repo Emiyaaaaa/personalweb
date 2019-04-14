@@ -28,12 +28,17 @@ class DiaryView():
             brief_text = self.getBriefText(text, text_max_length, line)
             diaryImg = DiaryImg.objects.filter(diary = text_id)
             diaryComment = DiaryComment.objects.filter(comment = text_id).exclude(is_display=0)
+            if diary.tag != None:
+                diaryTag = diary.tag.split(';')
+            else:
+                diaryTag = []
             diary_info.append({
                 'content':brief_text['brief_text'],
                 'date_weather':diary.date+ ' ' +diary.weather,
                 'text_id':text_id,
                 'title':diary.title,
                 'is_brief':brief_text['is_brief'],
+                'tag':diaryTag,
                 'img_num': len(diaryImg),
                 'comment_num': len(diaryComment)
             })
@@ -117,12 +122,17 @@ class DiaryView():
             brief_text = self.getBriefText(text, text_max_length, line)
             diaryImg = DiaryImg.objects.filter(diary=text_id)
             diaryComment = DiaryComment.objects.filter(comment = text_id).exclude(is_display=0)
+            if diary.tag != None:
+                diaryTag = diary.tag.split(';')
+            else:
+                diaryTag = []
             diary_info.append({
                 'content': brief_text['brief_text'],
                 'date_weather': diary.date + ' ' + diary.weather,
                 'text_id': text_id,
                 'title': diary.title,
                 'is_brief': brief_text['is_brief'],
+                'tag':diaryTag,
                 'img_num': len(diaryImg),
                 'comment_num': len(diaryComment)
             })

@@ -118,11 +118,9 @@ function isNull(str){
 }
 
 function rgb2rgba(strRgb){
-
-  rgb = strRgb.split('(')[1].split(')')[0];
-  strRgba = 'rgba('+rgb+',0.8)';
-  return strRgba;
-
+	rgb = strRgb.split('(')[1].split(')')[0];
+	strRgba = 'rgba('+rgb+',0.8)';
+	return strRgba;
 }
 
 
@@ -156,19 +154,15 @@ function replyButton() {
 	    	comment[i].onmouseout = function (){
 		      	replyButton[i].style.display = 'none';
 		    }
-
 	  	}(i)
 	}
 }
 
 if (isMobileScreen()) {
-
 	function replyButton() {}
-
 }
 
 function clickReplyButton(obj) {
-
 	document.getElementById("windowComment").scrollIntoView();
 	var nickname = obj.parentNode.parentNode.children[0].innerText;
 	$('.cancelReply_').parent().html('<a href="javascript:void(0)" onclick="clickReplyButton(this)">回复</a>');
@@ -176,30 +170,24 @@ function clickReplyButton(obj) {
 	$('.window-comment-hint').html('回复：'+ nickname);
 	reply = 'true';
 	reply_nickname = nickname;
-
 }
 
 function cancelReply(){
-
 	$('.window-comment-hint').html('');
 	$('.cancelReply_').parent().html('<a href="javascript:void(0)" onclick="clickReplyButton(this)">回复</a>');
 	reply = 'false';
-
 }
 
 function isInArray(arr,value){
-
 	var index = $.inArray(value,arr);
 	if(index >= 0){
 	  return true;
 	}
 	return false;
-
 }
 
 // 转换窗口中的a标签
 function str2aTag(str){
-
 	if (str.search(/&lt;a&gt;.*?&lt;\/a&gt;/g) != -1)
 	{
 		var qa = str.search(/&lt;a&gt;http:\/\//g);
@@ -218,7 +206,6 @@ function str2aTag(str){
 		str2aTag(str);
 	}
 	return str;
-
 }
 
 function rtrim(s){
@@ -258,7 +245,6 @@ function check_lines_length(chooseEle = 0){
 
 
 function cut_line(ele, reason_lines=2){
-
 	var now_lines = get_ele_lines(ele);
 	var look_more = '<span class="look-more">[查看更多]</span>';
 	const inner_text = ele.innerText;
@@ -302,7 +288,6 @@ if (window.history && window.history.pushState) {
 }
 
 function initializeTimeProgressBar(){
-
 	var myDate = new Date();
 	days = 0;
 	$('.now-year').html(myDate.getFullYear());

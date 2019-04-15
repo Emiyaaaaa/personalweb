@@ -333,7 +333,6 @@
     <script type="text/javascript">
 		URLHREF = window.location.href;
 		MAINURL = URLHREF.split('#')[0];
-		// window.location.href = MAINURL + '404';
 		mobile_screen_width = 768;
 
 		URLHASH = URLHREF.split('?')[0].split('/')[3];
@@ -351,7 +350,7 @@
 		if (clientWidth > 1200){
 			var textWidth = Math.round((Math.round(clientWidth*0.55)-19)*0.8-20);
 		}
-		else if(clientWidth > 768){
+		else if (clientWidth > 768){
 			var textWidth = Math.round((Math.round(clientWidth*0.85)-19)*0.8-20);
 		}
 		else{

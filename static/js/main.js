@@ -188,8 +188,7 @@ function isInArray(arr,value){
 
 // 转换窗口中的a标签
 function str2aTag(str){
-	if (str.search(/&lt;a&gt;.*?&lt;\/a&gt;/g) != -1)
-	{
+	if (str.search(/&lt;a&gt;.*?&lt;\/a&gt;/g) != -1) {
 		var qa = str.search(/&lt;a&gt;http:\/\//g);
 		var qas = str.search(/&lt;a&gt;https:\/\//g);
 		var ha = str.search(/&lt;\/a&gt;/g);

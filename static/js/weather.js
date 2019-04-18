@@ -204,7 +204,7 @@
 				setWeatherIcon(day3.weather_icon,"after-tomorrow");
 			}
 			else{
-				document.querySelectorAll(".right .loading-weather")[0].innerHTML = '加载失败!';
+				document.querySelectorAll(".right .loading-weather .loading")[0].innerHTML = '加载失败!';
 				console.log('error:'+data.ERRORCODE+' result:'+data.RESULT);
 			}
 			$.ajax({

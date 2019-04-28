@@ -487,4 +487,12 @@
 		margin-left: 0;
 
 	}
+
+	.windowImg{
+		padding: 0 0 10px 10px;
+	}
+
+	#window img{
+		max-width: 90%;
+	}
 }

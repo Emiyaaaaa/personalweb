@@ -198,8 +198,8 @@
 
 	.middle{
 
-		width: 90%;
-		margin-left: 5%;
+		width: 94%;
+		margin-left: 3%;
 
 	}
 
@@ -221,6 +221,7 @@
 		margin-top: 13px;
 		padding: 17px 13px 7px 13px;
 		width: 90%;
+		box-shadow: 0px 2px 8px rgba(212,212,212,0.9)
 
 	}
 
@@ -351,7 +352,7 @@
 
 	.matter0,.matter1{
 
-		margin-top: -7px;
+		margin-top: -5px;
 
 	}
 

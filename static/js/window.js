@@ -96,6 +96,8 @@ $(document).ready(function() {
 	 	
 	 	reply = 'false';
 		$('html').css('overflow','hidden');
+		// 消除隐藏导航栏带来的影响
+		$('body')[0].style.marginRight = '8px';
 		obj.css('display','none');
 
 		$('#windowBackground').css({'display':'block','width':clientWidth+100,'height':clientHeight+1000});

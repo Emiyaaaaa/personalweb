@@ -56,7 +56,7 @@ function divFadeIn() {
 		var liLength = $('#'+nowMatter+' .app').length;
 		for (var i = 0; i < liLength; i++) {
 			const div_ele = $('#'+nowMatter+' .app:eq(' + i +')');
-			div_ele.children('.appFadeIn').delay(160*i).fadeIn(800);
+			div_ele.children('.appFadeIn').delay(160*i).fadeIn(400);
 		}
 	}
 	setTimeout(function(){scrollBottom();},140*i);

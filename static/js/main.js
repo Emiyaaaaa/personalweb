@@ -125,18 +125,23 @@ function rgb2rgba(strRgb){
 
 
 function fillWindow(){
-
-	var ajaxHtml = document.getElementById('ajax_window_html');
-	var mainContent = document.getElementById('mainContent');
-	var fill_window = document.getElementById('fill_window');
-	var ajaxHtmlHeight = ajaxHtml.offsetHeight + 14;
-	var mainContentHeight = mainContent.offsetHeight;//原为mainContentHeight = mainContent.offsetHeight-17-17
-	var fillWindowHeight = mainContentHeight-ajaxHtmlHeight-20;//再减12是为了防止计算误差导致的滚动条出现
-	if (fillWindowHeight <= 0){
-	  fillWindowHeight = 0;
+	if (isNull(window_img.innerHTML.replace(/[\r\n]/g,""))){
+		var ajaxHtml = document.getElementById('ajax_window_html');
+		var mainContent = document.getElementById('mainContent');
+		var window_img = document.getElementById('mainContent').getElementsByClassName('windowImg')[0];
+		var fill_window = document.getElementById('fill_window');
+		var ajaxHtmlHeight = ajaxHtml.offsetHeight + 14;
+		var mainContentHeight = mainContent.offsetHeight;//原为mainContentHeight = mainContent.offsetHeight-17-17
+		var fillWindowHeight = mainContentHeight-ajaxHtmlHeight-20;//再减20是为了防止计算误差导致的滚动条出现
+		if (fillWindowHeight <= 0){
+		  fillWindowHeight = 0;
+		}
+		if (!isMobileScreen()) {
+			fillWindowHeight = fillWindowHeight - 30;
+		}
 	}
-	if (!isMobileScreen()) {
-		fillWindowHeight = fillWindowHeight - 30;
+	else{
+		fillWindowHeight = 0;
 	}
 	fill_window.style.setProperty('--padding-top',fillWindowHeight+'px');
 

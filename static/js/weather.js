@@ -3,6 +3,7 @@
 	// 	console.log(returnCitySN);
 	// }
 	// checkIP();
+	console.log(returnCitySN["cip"])
 	function nowJson2str(data){
 		var aq = '';
 		var aqi = '';

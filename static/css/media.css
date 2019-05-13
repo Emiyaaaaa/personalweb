@@ -129,6 +129,14 @@
 	    
 	}
 
+	.left-menu #li-0{
+		border-top: 1px solid;
+		border-image: -webkit-linear-gradient(left, #ffffff, #cccccc, #cccccc, #ffffff) 30 1; /* Safari 5.1 - 6.0 */
+		border-image: -o-linear-gradient(right, #ffffff, #cccccc, #cccccc, #ffffff) 30 1; /* Opera 11.1 - 12.0 */
+		border-image: -moz-linear-gradient(right, #ffffff, #cccccc, #cccccc, #ffffff) 30 1; /* Firefox 3.6 - 15 */
+		border-image: linear-gradient(to right, #ffffff, #cccccc, #cccccc, #ffffff) 30 1; /* 标准的语法 */
+	}
+
 	.left-menu {
 
 	    float: left;

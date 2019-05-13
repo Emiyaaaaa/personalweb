@@ -125,10 +125,10 @@ function rgb2rgba(strRgb){
 
 
 function fillWindow(){
+	var window_img = document.getElementById('mainContent').getElementsByClassName('windowImg')[0];
 	if (isNull(window_img.innerHTML.replace(/[\r\n]/g,""))){
 		var ajaxHtml = document.getElementById('ajax_window_html');
 		var mainContent = document.getElementById('mainContent');
-		var window_img = document.getElementById('mainContent').getElementsByClassName('windowImg')[0];
 		var fill_window = document.getElementById('fill_window');
 		var ajaxHtmlHeight = ajaxHtml.offsetHeight + 14;
 		var mainContentHeight = mainContent.offsetHeight;//原为mainContentHeight = mainContent.offsetHeight-17-17

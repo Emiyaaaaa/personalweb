@@ -323,6 +323,12 @@
 
 }
 
+.content-margin .title{
+
+    padding: 15px 0;
+
+}
+
 #fill_window{
 
     padding-top: var(--padding-top,0); 

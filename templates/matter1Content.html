@@ -6,6 +6,7 @@
     {% endif %}
 </div>
 <div class="content-margin">
+    <div class="title">{{ codeDiary.title }}</div>
     <div class="matter1_content" id="matter1_content">
         {{ diary.content }}
     </div>
@@ -53,7 +54,6 @@
                 var animateButton = function(e) {
 
                     e.preventDefault;
-                    //reset animation
                     e.target.classList.remove('animate');
                     e.target.classList.add('animate');
                     setTimeout(function(){

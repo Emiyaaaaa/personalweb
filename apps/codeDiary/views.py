@@ -52,6 +52,7 @@ class CodeDiaryView():
             content_info = {
                 'date':codeDiary.date,
                 'dateTime':codeDiary.dateTime,
+                'title':codeDiary.title,
                 'content':codeDiary.content
             }
             codeDiary.visit_num = codeDiary.visit_num + 1

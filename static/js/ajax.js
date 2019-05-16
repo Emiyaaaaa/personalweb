@@ -96,7 +96,9 @@ $(document).ready(function() {
 		        data:{"type":"getMoreContent","matter":nowMatter,"finally_id":finally_id,"text_max_length":TEXTMAXLENGTH},
 		        success:function(data){
 		        	if (data.status != 'ended'){
-						$('.'+nowMatter+' .loadStatus:last').css('display','none');
+						var last_loadstatus = $('.'+nowMatter+' .loadStatus:last');//上一个loadstatus
+						last_loadstatus.css('display','none');
+						setTimeout(function(){last_loadstatus.css('display','none');},200);//解决divFadeIn()函数造成的关闭上一个loadstatus后又打开的情况
 		        		$('.'+nowMatter+' ul:eq(0)').append(data);
 			        	//fadeIn显示
 						var Length = $('.'+nowMatter+' li:gt('+(liLength-1)+')').length;
@@ -106,6 +108,7 @@ $(document).ready(function() {
 							check_lines_length(li_ele);
 						}
 						//end
+		        		console.log($('.'+nowMatter+' .loadStatus:last'),last_loadstatus)
 						$('.'+nowMatter+' .loadStatus:last').css('display','block');
 						if (isMobileScreen() == true){
 							$('.'+nowMatter+' .mobile_beian:last').css('display','block');

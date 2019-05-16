@@ -127,11 +127,11 @@ function rgb2rgba(strRgb){
 function fillWindow(){
 	var window_img = document.getElementById('mainContent').getElementsByClassName('windowImg')[0];
 	var fill_window = document.getElementById('fill_window');
-	if (isNull(window_img.innerHTML.replace(/[\r\n]/g,""))){
+	if (isNull(window_img.innerHTML.replace(/[\r\n]/g,""))){//如果不含有图片
 		var ajaxHtml = document.getElementById('ajax_window_html');
 		var mainContent = document.getElementById('mainContent');
 		var ajaxHtmlHeight = ajaxHtml.offsetHeight + 14;
-		var mainContentHeight = mainContent.offsetHeight;//原为mainContentHeight = mainContent.offsetHeight-17-17
+		var mainContentHeight = mainContent.offsetHeight;
 		var fillWindowHeight = mainContentHeight-ajaxHtmlHeight-20;//再减20是为了防止计算误差导致的滚动条出现
 		if (fillWindowHeight <= 0){
 		  fillWindowHeight = 0;
@@ -141,7 +141,7 @@ function fillWindow(){
 		}
 	}
 	else{
-		fillWindowHeight = 0;
+		fillWindowHeight = 10;
 	}
 	fill_window.style.setProperty('--padding-top',fillWindowHeight+'px');
 

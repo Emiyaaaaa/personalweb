@@ -503,4 +503,10 @@
 	#window img{
 		max-width: 90%;
 	}
+
+	.brief-content .title{
+
+	    letter-spacing: 1px;
+
+	}
 }

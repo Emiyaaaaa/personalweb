@@ -193,7 +193,7 @@ function openLeftList(){
 	if (!middleObj.classList.contains('moved')) {
 		var middleMarginLeft = middleObj.offsetLeft;
 		//解决上移bug
-		if (!middleObj.classList.contains('initialized')) {
+		if (!middleObj.classList.contains('initialized') && getElemDis(document.getElementsByClassName('left-avatar')[0])['top'] == '148') {
 			$('#left .Wrapper').css('padding-top','0');
 			middleObj.classList.add('initialized');
 		}
@@ -212,6 +212,19 @@ function openLeftList(){
  		setTimeout(function(){leftListObj.style.display = 'none';bodyObj.style.overflowY = "scroll";},250);
 		middleObj.style.marginLeft = middleMarginLeft - setLeftWidth + 'px';
 	}
+}
+
+
+function getElemDis(el) {
+    var tp = document.documentElement.clientTop,
+        lt = document.documentElement.clientLeft,
+        rect = el.getBoundingClientRect();
+    return {
+        top: rect.top - tp,
+        right: rect.right - lt,
+        bottom: rect.bottom - tp,
+        left: rect.left - lt
+    }
 }
 
 // matter3_3建议

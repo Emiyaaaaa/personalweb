@@ -242,7 +242,7 @@ function matter33SendMessage(){
 	var content = $('#suggestion_content').val();
 
 	if (isInArray(disabled_name,nickname) == true){
-		password = prompt("使用此昵称需要输入密码","");
+		password = prompt("请输入神秘代码","");
     	$.ajax({
 	        url:"/",
 	        type:"POST",

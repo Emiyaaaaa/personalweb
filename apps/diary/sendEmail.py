@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # @Author  : Li Haozheng
 # @Time    : 2019/3/18 19:34
-# From     : http://www.runoob.com/python3/python3-smtp.html
+# @From     : http://www.runoob.com/python3/python3-smtp.html
 
 import smtplib
 from email.mime.text import MIMEText
@@ -11,13 +11,11 @@ import os
 import pickle
 from django.conf import settings
 
-
 with open(os.path.join(settings.BASE_DIR, 'tools','personalWeb.pwd'), 'rb') as file:
     pw_dict = pickle.load(file)
 
 my_sender = '2914034404@qq.com'
 my_pass = pw_dict['stmppw']
-
 
 def sendEmail(email_txt,my_user='2914034404@qq.com'):
     try:

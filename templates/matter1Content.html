@@ -6,7 +6,9 @@
     {% endif %}
 </div>
 <div class="content-margin">
-    <div class="title">{{ codeDiary.title }}</div>
+    {% if diary.title != None %}
+        <div class="title">{{ diary.title }}</div>
+    {% endif %}
     <div class="matter1_content" id="matter1_content">
         {{ diary.content }}
     </div>

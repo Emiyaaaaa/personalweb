@@ -108,7 +108,6 @@ $(document).ready(function() {
 							check_lines_length(li_ele);
 						}
 						//end
-		        		console.log($('.'+nowMatter+' .loadStatus:last'),last_loadstatus)
 						$('.'+nowMatter+' .loadStatus:last').css('display','block');
 						if (isMobileScreen() == true){
 							$('.'+nowMatter+' .mobile_beian:last').css('display','block');

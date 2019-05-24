@@ -150,7 +150,7 @@ $(document).ready(function() {
 		setTimeout(function(){windowBackground.css('display','none')},280);
 		aCopyObj.css('display','none');
 		aObj.css('display','block');
-		document.getElementById('fill_window').style.setProperty('--padding-top','0');//解决手机版bug
+		// document.getElementById('fill_window').style.setProperty('--padding-top','0');//解决手机版bug
 		setTimeout(function(){	
 			windowObj.css('display','none').empty();
 			if (urlSearch != '' && urlSearch != undefined) {

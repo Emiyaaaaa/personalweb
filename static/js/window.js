@@ -157,7 +157,7 @@ $(document).ready(function() {
 				window.location.href = urlHref.split('?')[0];
 			}
 		},280);
-		$('body').css({'overflow-y':'scroll','overflow-x':'auto'});
+		$('body').css({'overflow-y':'scroll','overflow-x':'hidden'});
 		$('html').css('overflow','');
 		reply = 'false';
 	});

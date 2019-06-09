@@ -2,17 +2,17 @@ $(document).ready(function() {
 	//主页面
 	function mainPage() {
 		$.ajax({
-		        url:"/",
-		        type:"GET",
-		        data:{"type":"matterPage","matter":nowMatter,"text_max_length":TEXTMAXLENGTH},
-		        success:function(data){
-		        	fillHtml(data);
-		        	matterClick();
-		        	if (LINUM == 3){
-		        		get_update_log();
-		        	}
-		        }
-		    })
+	        url:"/",
+	        type:"GET",
+	        data:{"type":"matterPage","matter":nowMatter,"text_max_length":TEXTMAXLENGTH},
+	        success:function(data){
+	        	fillHtml(data);
+	        	matterClick();
+	        	if (LINUM == 3){
+	        		get_update_log();
+	        	}
+	        }
+	    })
 	}
 	mainPage();
 

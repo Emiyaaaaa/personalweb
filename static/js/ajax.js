@@ -11,6 +11,9 @@ $(document).ready(function() {
 	        	if (LINUM == 3){
 	        		get_update_log();
 	        	}
+	        	if (window.location.href.split('?')[1] != undefined) {
+	        		openWindow(window.location.href.split('?')[1].split('=')[1]);
+	        	}
 	        }
 	    })
 	}

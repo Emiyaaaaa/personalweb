@@ -1,18 +1,21 @@
 $(document).ready(function() {
 	//主页面
 	function mainPage() {
+		if (window.location.href.split('?')[1] != undefined) {
+    		var text_id = window.location.href.split('?')[1].split('=')[1];
+    	}
+    	else{
+    		text_id = 'none';
+    	}
 		$.ajax({
 	        url:"/",
 	        type:"GET",
-	        data:{"type":"matterPage","matter":nowMatter,"text_max_length":TEXTMAXLENGTH},
+	        data:{"type":"matterPage","matter":nowMatter,"text_max_length":TEXTMAXLENGTH,"text_id":text_id},
 	        success:function(data){
 	        	fillHtml(data);
 	        	matterClick();
 	        	if (LINUM == 3){
 	        		get_update_log();
-	        	}
-	        	if (window.location.href.split('?')[1] != undefined) {
-	        		openWindow(window.location.href.split('?')[1].split('=')[1]);
 	        	}
 	        }
 	    })

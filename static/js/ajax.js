@@ -136,7 +136,6 @@ $(document).ready(function() {
 	//获取全文	
 	function getMattersContent(href){
 		if (isMobileScreen()) {
-			// $('#left .Wrapper').css('padding-top','74px');//解决上移bug
 			if (document.getElementById('middle').classList.contains('moved')) {
 				document.getElementById("left_list_button").click();//点击后收回列表
 			}

@@ -10,7 +10,7 @@ $(document).ready(function() {
 		$.ajax({
 	        url:"/",
 	        type:"GET",
-	        data:{"type":"matterPage","matter":nowMatter,"text_max_length":TEXTMAXLENGTH,"text_id":text_id},
+	        data:{"type":"matterPage","matter":nowMatter,"text_max_length":TEXTMAXLENGTH},
 	        success:function(data){
 	        	fillHtml(data);
 	        	matterClick();

@@ -114,25 +114,25 @@ function openWindow(){
 }
 
 //弹出输入法时上移
-	$(window).resize(function() {
-		var windowObj = document.getElementById('window');
-		var windowMarginTop = 13;
-		var windowHeight = windowObj.clientHeight;
-		var bottomHeight = (clientHeight - windowHeight) / 2 - 1;
+$(window).resize(function() {
+	var windowObj = document.getElementById('window');
+	var windowMarginTop = 13;
+	var windowHeight = windowObj.clientHeight;
+	var bottomHeight = (clientHeight - windowHeight) / 2 - 1;
 
-		if (windowObj.style.display == 'block') {
-			var nowClientHeight = document.documentElement.clientHeight;
-			if(typeof(windowTop_) == "undefined"){
-				windowTop_ = windowObj.offsetTop - windowMarginTop;
-			}
-			if (clientHeight - nowClientHeight >= bottomHeight) {
-				windowObj.style.setProperty('--top', windowTop_ - (clientHeight - nowClientHeight) + bottomHeight + 'px');
-			}
-			else{
-				windowObj.style.setProperty('--top', windowTop_ - (clientHeight - nowClientHeight) + windowMarginTop + 'px');
-			}
+	if (windowObj.style.display == 'block') {
+		var nowClientHeight = document.documentElement.clientHeight;
+		if(typeof(windowTop_) == "undefined"){
+			windowTop_ = windowObj.offsetTop - windowMarginTop;
 		}
-	});
+		if (clientHeight - nowClientHeight >= bottomHeight) {
+			windowObj.style.setProperty('--top', windowTop_ - (clientHeight - nowClientHeight) + bottomHeight + 'px');
+		}
+		else{
+			windowObj.style.setProperty('--top', windowTop_ - (clientHeight - nowClientHeight) + windowMarginTop + 'px');
+		}
+	}
+});
 
 // matter0，1关闭窗口效果
 $(document).on('click','.windowCloseButton',closeWindow);

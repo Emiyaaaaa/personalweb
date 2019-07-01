@@ -1,0 +1,103 @@
+.left-avatar {
+
+    height: 260px;
+
+}
+
+.left-avatar img{
+
+    float: right;
+    width: 150px;
+    height: 200px;
+    margin:  58px 33px 0 0;
+    border-radius: 10px;
+    box-shadow:0px 2px 15px rgba(249,209,209,0.8);
+
+}
+
+.left-menu {
+
+    float: right;
+    margin: 20px 41px 50px 0;
+    padding-bottom: 50px
+
+}
+
+.left-menu ul {
+
+    list-style-type: none;
+    padding: 0;
+    width: 160px
+
+}
+
+.left-menu ul::-webkit-scrollbar {
+
+    display: none
+
+}
+
+.left-menu a{
+
+	display:block;
+    font-size: 20px;
+    letter-spacing: 2px;
+	color: #555555;
+	text-align:center;
+	text-decoration:none;
+	border-radius: 30px;
+    background-color: #FFFFFF;
+    padding: 13px 20px 22px 20px;
+    width: 80%;
+    height: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+    box-shadow:0px 2px 12px rgba(249,209,209,0.8);
+    transition:background-color 0.4s, color 0.3s;
+}
+
+.left-menu a:hover:not(.active) {
+
+    box-shadow: 1px 1px 3px rgba(249,209,209,0.8);
+    background-color: #B5B5B5;
+    color: white;
+
+}
+
+.left-menu a.active {
+
+    box-shadow: 1px 1px 3px rgba(249,209,209,0.8);
+    background-color: #B5B5B5;
+    color: white;
+
+}
+
+.Wrapper {
+    
+    height: 100%
+
+}  
+     
+.Wrapper .FooterPush {
+
+    height: 30px;
+
+}  
+     
+.Footer {
+
+    float: right;
+    clear: both;
+    margin-right: 30px;
+    margin-top: -30px; 
+    height: 30px;
+
+}
+
+.left-version{
+    
+    display: none;
+    float: left;
+    width: 100%;
+
+}

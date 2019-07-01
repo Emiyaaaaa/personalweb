@@ -1,0 +1,90 @@
+.matter0 {
+
+    margin: 30px 5px 0 5px;
+    padding: 0 5px 20px 0
+
+}
+
+.matter0 ul {
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+}
+
+.matter0 ul li {
+
+    display: none;
+
+}
+
+.matter0 .title{
+
+    color: #555555
+
+}
+
+.matter0 .content,.matter0 .aCopy,.matter1 .content,.matter1 .aCopy{
+
+    letter-spacing: 2px;
+    word-break: break-all;
+    color: #000000;
+    text-decoration:none;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+    padding: 17px 20px;
+    width: 86%;
+    height: 84px;
+    margin-left: 5%;
+    margin-top: 15px;
+    box-shadow:0px 2px 15px rgba(249,209,209,0.8);
+    transition: transform 0.25s;
+    -webkit-transition: transform 0.25s;
+    -moz-transition: transform 0.25s;
+    -o-transition: transform 0.25s;
+
+}
+
+.matter0 .content,.matter1 .content{
+
+    display: block;
+
+}
+
+.content-margin{
+
+    margin: 20px 5px 0 10px;
+
+}
+
+.matter0 .content:hover,.matter1 .content:hover {
+
+    transform: scale(1.08,1.15) translate3d(0,0,0);
+
+}
+
+.loadStatus{
+    
+    display: none;
+    text-align: center;
+    padding-top: 22px;
+    padding-bottom: 12px;
+
+}
+
+.date{
+
+    margin: 0 auto;
+    padding: 0px 10px;
+
+}
+
+.brief-content{
+
+    padding: 9px 10px;
+    float: left;
+    width: 92%;
+
+}

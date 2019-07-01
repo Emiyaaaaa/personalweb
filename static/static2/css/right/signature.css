@@ -1,0 +1,139 @@
+.signature{
+	
+	position: absolute;
+	margin: 0 0 0 15px;
+    top: 330px;
+	width: 80%
+
+}
+
+.qm{
+
+    margin-left: 9px;
+
+}
+
+.signature-text2,.signature-text1{
+	
+	position: absolute;
+	text-align: center;
+    width: 254px;
+	margin: 15px 20px 20px 2px;
+    padding: 10px 10px 10px 10px;
+
+}
+
+/*left horizontal line*/
+.signature-text1:before {
+
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: auto;
+    right: auto;
+    height: 3px;
+    width: 20%;
+    background-color: #cccccc;
+
+    transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+
+}
+
+.signature-text:hover .signature-text1:before{
+
+	width: 100%
+
+}
+
+/*left vertical line*/
+.signature-text2:before {
+
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: auto;
+    right: auto;
+    height: 45%;
+    width: 3px;
+    background-color: #cccccc;
+
+    transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+
+}
+
+.signature-text:hover .signature-text2:before{
+
+	height: 100%
+	
+}
+
+/*right vertical line*/
+.signature-text1:after {
+
+    content: '';
+    position: absolute;
+    left: auto;
+    top: auto;
+    bottom: 0;
+    right: 0;
+    height: 45%;
+    width: 3px;
+    background-color: #cccccc;
+
+    transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+
+}
+
+.signature-text:hover .signature-text1:after{
+
+	height: 100%
+	
+}
+
+/*right horizontal line*/
+.signature-text2:after {
+
+    content: '';
+    position: absolute;
+    left: 80%;
+    top: auto;
+    bottom: 0;
+    right: auto;
+    height: 3px;
+    width: 20%;
+    background-color: #cccccc;
+
+    transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+
+}
+
+.signature-text:hover .signature-text2:after{
+
+	width: 100%;
+	left: 0;
+	
+}
+
+.signature-text{
+
+    margin-left: 13%
+
+}

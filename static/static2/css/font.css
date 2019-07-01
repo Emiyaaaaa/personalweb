@@ -1,0 +1,143 @@
+body{
+
+	font-family: Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif;
+	letter-spacing: 1px;
+
+}
+
+.brief_date{
+
+	margin: 0 auto;
+	padding: 0px 10px;
+	font-weight: lighter;
+	font-size: 13px;
+
+}
+
+.brief-content{
+
+	line-height:25px;
+	font-size: 16px;
+    color: #333333
+
+}
+
+.brief-content .brief-content-text{
+
+	letter-spacing: 1px;
+
+}
+
+.beian{
+
+    color: #4f4f4f;
+    font-size: 14px;
+
+}
+
+.look-more{
+
+	font-weight: normal;
+	font-size: 14px;
+    color: #348ae6;
+	letter-spacing: 0px;
+
+}
+
+.date{
+
+	font-weight: lighter;
+	font-size: 15px;
+
+}
+
+.matter1_content{
+
+	padding: 29px 10px 9px 2.847%;
+	line-height:25px;
+	font-size: 19px;
+	letter-spacing:1px;
+    color: #404040
+
+}
+
+.suggestion-comment-hint{
+
+    font-size: 13px;
+    color: #999999;
+
+}
+
+.qm{
+	
+	color: #666666;
+	font-size: 17px;
+
+}
+
+
+.signature-text2,.signature-text1{
+	
+	color: #7d7d7d;
+	font-size: 19px;
+	
+}
+
+.loadStatus{
+	
+	color: #7d7d7d;
+	font-size: 17px;
+
+}
+
+.weather{
+
+	font-size: 20px;
+    color: #919191;
+
+}
+
+.weather .now-tem{
+    
+    font-size: 50px;
+    color: #808080
+
+}
+
+.today-tem,
+.tomorrow-tem,
+.after-tomorrow-tem{
+
+    font-size: 30px;
+    color: #808080
+
+}
+
+.loading-weather{
+	
+	font-size: 20px;
+	color: #a1a1a1;
+
+}
+
+.weather-menu{
+
+	font-size: 16px;
+	color: #707070
+
+}
+
+.time-progress-bar .tit{
+
+	font-size: 17px;
+	color: #666666
+
+}
+
+.content-margin .title{
+
+    color: #555555;
+    font-weight: bold;
+    font-size: 16px;
+
+}

@@ -153,66 +153,69 @@
 			errorJson = data;
 		}
 	}
-	$.ajax({
-		type: 'POST',
-		url: 'http://api.shujuzhihui.cn/api/weather/ip',
-		data: {'appKey':'9057ff088d24450b93d896cf317835f4','ip':returnCitySN["cip"],'n7':1},
-		success:function(data){
-			errorJson = '';
-			if (data.ERRORCODE == '0'){
-				var city = data.RESULT.area_maybe[0];
-				if (city = []){
-					var area = data.RESULT.areaInfo;
-					city = area.city;
-				}
-				//now
-				var d1 = data.RESULT.weatherInfo.n7.d1;
-				var d2 = data.RESULT.weatherInfo.n7.d2;
-				var d3 = data.RESULT.weatherInfo.n7.d3;
-				var nowJson = data.RESULT.weatherInfo.real;
-				var day1 = dayJson2str(d1);
-				var day2 = dayJson2str(d2);
-				var day3 = dayJson2str(d3);
-				var nowWeather = nowJson2str(nowJson);
+	if(window.location.host != '127.0.0.1:8000' && isPC() && clientWidth >= 1250){
+		console.log('1')
+		$.ajax({
+			type: 'POST',
+			url: 'http://api.shujuzhihui.cn/api/weather/ip',
+			data: {'appKey':'9057ff088d24450b93d896cf317835f4','ip':returnCitySN["cip"],'n7':1},
+			success:function(data){
+				errorJson = '';
+				if (data.ERRORCODE == '0'){
+					var city = data.RESULT.area_maybe[0];
+					if (city = []){
+						var area = data.RESULT.areaInfo;
+						city = area.city;
+					}
+					//now
+					var d1 = data.RESULT.weatherInfo.n7.d1;
+					var d2 = data.RESULT.weatherInfo.n7.d2;
+					var d3 = data.RESULT.weatherInfo.n7.d3;
+					var nowJson = data.RESULT.weatherInfo.real;
+					var day1 = dayJson2str(d1);
+					var day2 = dayJson2str(d2);
+					var day3 = dayJson2str(d3);
+					var nowWeather = nowJson2str(nowJson);
 
-				document.querySelectorAll(".right .loading-weather")[0].style.display = 'none';
-				document.querySelectorAll(".right .weather")[0].style.display = 'inline';
-				addWeatherNevListen();
-				// now
-				document.getElementsByClassName('now-city')[0].innerHTML = city;
-				document.getElementsByClassName('now-tem')[0].innerHTML = nowWeather.tem;
-				document.getElementsByClassName('now-wdp')[0].innerHTML = nowWeather.wdp;
-				document.getElementsByClassName('now-aq')[0].innerHTML = nowWeather.aq + nowWeather.aqi;
-				setWeatherIcon(nowWeather.weather,"now",1);
-				// today
-				document.getElementsByClassName('today-tem')[0].innerHTML = day1.tem;
-				document.getElementsByClassName('now-city')[1].innerHTML = city;
-				document.getElementsByClassName('today-wea')[0].innerHTML = day1.weather;
-				document.getElementsByClassName('today-wdp')[0].innerHTML = day1.wdp;
-				setWeatherIcon(day1.weather_icon,"today",1);
-				// tomorrow
-				document.getElementsByClassName('tomorrow-tem')[0].innerHTML = day2.tem;
-				document.getElementsByClassName('now-city')[2].innerHTML = city;
-				document.getElementsByClassName('tomorrow-wea')[0].innerHTML = day2.weather;
-				document.getElementsByClassName('tomorrow-wdp')[0].innerHTML = day2.wdp;
-				setWeatherIcon(day2.weather_icon,"tomorrow");
-				// after tomorrow
-				document.getElementsByClassName('after-tomorrow-tem')[0].innerHTML = day3.tem;
-				document.getElementsByClassName('now-city')[3].innerHTML = city;
-				document.getElementsByClassName('after-tomorrow-wea')[0].innerHTML = day3.weather;
-				document.getElementsByClassName('after-tomorrow-wdp')[0].innerHTML = day3.wdp;
-				setWeatherIcon(day3.weather_icon,"after-tomorrow");
-			}
-			else{
-				document.querySelectorAll(".right .loading-weather .loading")[0].innerHTML = '加载失败!';
-				console.log('error:'+data.ERRORCODE+' result:'+data.RESULT);
-			}
-			$.ajax({
-				url:'/',
-	       		type:"POST",
-	       		data:{'type':'weatherUser','ip':returnCitySN["cip"],'city':returnCitySN["cname"],'errorCode':data.ERRORCODE,'errorJson':errorJson},
-	       		success:function(data){}
-	       	})
-    	}
-	})
+					document.querySelectorAll(".right .loading-weather")[0].style.display = 'none';
+					document.querySelectorAll(".right .weather")[0].style.display = 'inline';
+					addWeatherNevListen();
+					// now
+					document.getElementsByClassName('now-city')[0].innerHTML = city;
+					document.getElementsByClassName('now-tem')[0].innerHTML = nowWeather.tem;
+					document.getElementsByClassName('now-wdp')[0].innerHTML = nowWeather.wdp;
+					document.getElementsByClassName('now-aq')[0].innerHTML = nowWeather.aq + nowWeather.aqi;
+					setWeatherIcon(nowWeather.weather,"now",1);
+					// today
+					document.getElementsByClassName('today-tem')[0].innerHTML = day1.tem;
+					document.getElementsByClassName('now-city')[1].innerHTML = city;
+					document.getElementsByClassName('today-wea')[0].innerHTML = day1.weather;
+					document.getElementsByClassName('today-wdp')[0].innerHTML = day1.wdp;
+					setWeatherIcon(day1.weather_icon,"today",1);
+					// tomorrow
+					document.getElementsByClassName('tomorrow-tem')[0].innerHTML = day2.tem;
+					document.getElementsByClassName('now-city')[2].innerHTML = city;
+					document.getElementsByClassName('tomorrow-wea')[0].innerHTML = day2.weather;
+					document.getElementsByClassName('tomorrow-wdp')[0].innerHTML = day2.wdp;
+					setWeatherIcon(day2.weather_icon,"tomorrow");
+					// after tomorrow
+					document.getElementsByClassName('after-tomorrow-tem')[0].innerHTML = day3.tem;
+					document.getElementsByClassName('now-city')[3].innerHTML = city;
+					document.getElementsByClassName('after-tomorrow-wea')[0].innerHTML = day3.weather;
+					document.getElementsByClassName('after-tomorrow-wdp')[0].innerHTML = day3.wdp;
+					setWeatherIcon(day3.weather_icon,"after-tomorrow");
+				}
+				else{
+					document.querySelectorAll(".right .loading-weather .loading")[0].innerHTML = '加载失败!';
+					console.log('error:'+data.ERRORCODE+' result:'+data.RESULT);
+				}
+				$.ajax({
+					url:'/',
+		       		type:"POST",
+		       		data:{'type':'weatherUser','ip':returnCitySN["cip"],'city':returnCitySN["cname"],'errorCode':data.ERRORCODE,'errorJson':errorJson},
+		       		success:function(data){}
+		       	})
+	    	}
+		})
+	}
 })()

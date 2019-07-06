@@ -1,8 +1,4 @@
 (function (){
-	// function checkIP(){
-	// 	console.log(returnCitySN);
-	// }
-	// checkIP();
 	function nowJson2str(data){
 		var aq = '';
 		var aqi = '';

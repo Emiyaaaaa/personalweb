@@ -7,10 +7,3 @@ class MobilePageView(View):
 
     def post(self,request):
         return render(request,'mobilePage.html')
-
-class HehePageView(View):
-    def get(self,request):
-        return render(request,'HehePage.html')
-
-    def post(self,request):
-        return render(request,'HehePage.html')

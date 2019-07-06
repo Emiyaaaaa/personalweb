@@ -20,7 +20,7 @@ from django.conf.urls.static import static
 from diary.views import DiaryView
 from codeDiary.views import CodeDiaryView
 from notFoundPage.views import NotFoundPageView
-from mobilePage.views import MobilePageView,HehePageView
+from mobilePage.views import MobilePageView
 from zhuhuVideoDownload.views import ZhuhuVideoDownloadView
 import xadmin
 import mainPage
@@ -34,7 +34,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^404$',NotFoundPageView.as_view()),
     url(r'^mobile$',MobilePageView.as_view()),
-    url(r'^hehe',HehePageView.as_view()),
     url(r'^zhihu-video-download/mzsm$', ZhuhuVideoDownloadView().get_mzsm),
     url(r'^zhihu-video-download/(?P<url>[\S\s]*)', ZhuhuVideoDownloadView.as_view())
 

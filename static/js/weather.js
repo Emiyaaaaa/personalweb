@@ -154,7 +154,6 @@
 		}
 	}
 	if(window.location.host != '127.0.0.1:8000' && isPC() && clientWidth >= 1250){
-		console.log('1')
 		$.ajax({
 			type: 'POST',
 			url: 'http://api.shujuzhihui.cn/api/weather/ip',

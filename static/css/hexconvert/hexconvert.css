@@ -14,7 +14,7 @@ body,html{
 	margin: 0;
 	overflow-y: auto;
 	overflow-x: hidden;
-	background: #fcfcfc;
+	/*background: #fcfcfc;*/
     font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', 'Microsoft YaHei', 'Source Han Sans SC', 'Noto Sans CJK SC', 'WenQuanYi Micro Hei', sans-serif;
 
 }
@@ -68,7 +68,6 @@ header{
 
 .right a{
 	
-
 	padding: 0 7px 7px 7px;
 
 }
@@ -98,6 +97,8 @@ header{
 .hex-bar{
 	
 	margin: 0 auto;
+	/*background-color: rgba(184,248,212,0.2);*/
+	/*width: 624px;*/
 
 }
 
@@ -106,18 +107,21 @@ header{
 	display: inline-block;
 	width: 100px;
 	height: 40px;
-	padding-top: 8px; 
+	padding-top: 8px;
 	margin-bottom: 20px;
-	border-radius: 20px;
-	transition: all 0.25s;
-    -webkit-transition: all 0.25s;
-    -moz-transition: all 0.25s;
-    -o-transition: all 0.25s;
+	/*border-radius: 20px;*/
+	background: rgba(184,248,212,0.2);
+	transition: background-color 0.25s;
+    -webkit-transition: background-color 0.25s;
+    -moz-transition: background-color 0.25s;
+    -o-transition: background-color 0.25s;
 
 }
 
-.hex:hover{
-	transform: scale(1.5);
+.hex:hover:not(.active){
+
+	background-color: rgba(184,248,212,0.5);
+
 }
 
 .hex-input{
@@ -133,19 +137,19 @@ header{
 }
 
 
-.Wrapper {
+.Wrapper{
 
 	min-height: 100%;
 
 }
 
-.Wrapper .FooterPush {
+.Wrapper .FooterPush{
 
 	height: 30px; /* Footer 的高度 */
 
 }  
      
-.Footer {
+.Footer{
 
 	clear: both;
 	position: relative;  

@@ -135,7 +135,7 @@ header{
 	top: var(--top,0);
 	left: var(--left,0);
 	color: #ffffff;
-	cursor:pointer;
+	cursor: pointer;
 	font-size: 18px;
 	letter-spacing: 3px;
 	width: 20%;

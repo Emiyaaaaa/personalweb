@@ -21,6 +21,7 @@ from diary.views import DiaryView
 from codeDiary.views import CodeDiaryView
 from notFoundPage.views import NotFoundPageView
 from mobilePage.views import MobilePageView
+from hexconvert.views import HexconvertView
 from zhuhuVideoDownload.views import ZhuhuVideoDownloadView
 import xadmin
 import mainPage
@@ -35,8 +36,8 @@ urlpatterns = [
     url(r'^404$',NotFoundPageView.as_view()),
     url(r'^mobile$',MobilePageView.as_view()),
     url(r'^zhihu-video-download/mzsm$', ZhuhuVideoDownloadView().get_mzsm),
-    url(r'^zhihu-video-download/(?P<url>[\S\s]*)', ZhuhuVideoDownloadView.as_view())
-
+    url(r'^zhihu-video-download/(?P<url>[\S\s]*)', ZhuhuVideoDownloadView.as_view()),
+    url(r'^hexconvert$',HexconvertView.as_view())
 ]
 urlpatterns += static(settings.MEDIA_URL , document_root = settings.MEDIA_ROOT )
 urlpatterns += static(settings.STATIC_URL, document_root = settings.STATIC_ROOT )

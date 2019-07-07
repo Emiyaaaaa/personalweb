@@ -109,11 +109,15 @@ header{
 	padding-top: 8px; 
 	margin-bottom: 20px;
 	border-radius: 20px;
-	transition: background-color 0.25s;
-    -webkit-transition: background-color 0.25s;
-    -moz-transition: background-color 0.25s;
-    -o-transition: background-color 0.25s;
+	transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -o-transition: all 0.25s;
 
+}
+
+.hex:hover{
+	transform: scale(1.5);
 }
 
 .hex-input{

@@ -14,6 +14,7 @@ body,html{
 	margin: 0;
 	overflow-y: auto;
 	overflow-x: hidden;
+	text-align: center;
 	/*background: #fcfcfc;*/
     font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', 'Microsoft YaHei', 'Source Han Sans SC', 'Noto Sans CJK SC', 'WenQuanYi Micro Hei', sans-serif;
 
@@ -56,6 +57,7 @@ header{
 
 	width: 100%;
 	height: 60px;
+	background-color: rgba(184,248,212,0.3);
 
 }
 
@@ -82,23 +84,22 @@ header{
 .header{
 
 	font-size: 20px;
-	color: #8affbd;
+	color: #555;
 	font-weight: normal;
 
 }
 
 .main-box{
 
-	text-align: center;
+	margin: 0 auto;
 	margin-top: 100px;
+	width: 92%;
 
 }
 
 .hex-bar{
 	
 	margin: 0 auto;
-	/*background-color: rgba(184,248,212,0.2);*/
-	/*width: 624px;*/
 
 }
 
@@ -109,7 +110,6 @@ header{
 	height: 40px;
 	padding-top: 8px;
 	margin-bottom: 20px;
-	/*border-radius: 20px;*/
 	background: rgba(184,248,212,0.2);
 	transition: background-color 0.25s;
     -webkit-transition: background-color 0.25s;
@@ -124,9 +124,25 @@ header{
 
 }
 
+.hex-input-box{
+
+	margin: 0 auto;
+	margin-bottom: 20px;
+	max-width: 624px;
+
+}
+
 .hex-input{
 
-	margin-bottom: 20px;
+    width: 100%;
+    height: 40px;
+    border: 2px solid rgba(146,246,189,0.9);
+    outline: none;
+    color: #555;
+    font-size: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
+    caret-color: rgba(146,246,189,1);
 
 }
 

@@ -127,10 +127,18 @@ header{
 .hex-input-box{
 
 	margin: 0 auto;
-	margin-bottom: 20px;
-	max-width: 624px;
+	margin-bottom: 30px;
+	width: 624px;
 
 }
+
+/*输入框宽度适配*/
+@media screen and (min-width: 0px) and (max-width: 222px){.hex-input-box{width: 100px;}}
+@media screen and (min-width: 223px) and (max-width: 336px){.hex-input-box{width: 205px;}}
+@media screen and (min-width: 337px) and (max-width: 450px){.hex-input-box{width: 310px;}}
+@media screen and (min-width: 451px) and (max-width: 564px){.hex-input-box{width: 415px;}}
+@media screen and (min-width: 565px) and (max-width: 678px){.hex-input-box{width: 530px;}}
+
 
 .hex-input{
 
@@ -146,12 +154,56 @@ header{
 
 }
 
-.active{
+.hex-bar .active{
 
 	background-color: rgba(184,248,212,0.9);
 
 }
 
+.convert-box{
+	
+	position: relative;
+	width: 77px;
+	height: 36px;
+	margin: auto;
+	margin-bottom: 30px;
+	background-color: rgba(184,248,212,0.2);
+
+}
+
+.convert-button{
+
+	display: inline-block;
+	height: 36px;
+
+}
+
+.convert-img{
+
+	height: 36px;
+
+}
+
+.bc-square{
+
+	position: absolute;
+	left: 0;
+	height: 36px;
+	width: 36px;
+	z-index: -1;
+	background-color: rgba(184,248,212,0.9);
+	transition: left 0.35s;
+    -webkit-transition: left 0.35s;
+    -moz-transition: left 0.35s;
+    -o-transition: left 0.35s;
+
+}
+
+.bc-square-active{
+
+	left: 41px;
+	
+}
 
 .Wrapper{
 

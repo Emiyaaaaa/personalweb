@@ -62,12 +62,22 @@ function inputValidation(this_ele,value){
 		32:value.replace(/[^a-hA-Hj-nJ-Np-rP-Rt-yT-Y0-9\.]/g,''),
 	}
 	var value = hexToReg[hex];
-	value = value.replace(/^\.+/g, '')//去除放在首位的小数点
-
-	console.log(value)
-	return value
+	//去除放在首位的小数点
+	value = value.replace(/^\.+/g, '');
+	//去除末尾多余的小数点
+	var reg1 = /^[0-9a-zA-Z]+\.$/;
+	var reg2 = /^[0-9a-zA-Z]+\.+$/;
+	var reg3 = /^[0-9a-zA-Z]+\.[0-9a-zA-Z]+$/;
+	var reg4 = /^[0-9a-zA-Z]+\.[0-9a-zA-Z]+\.+$/;
+	if (!reg1.test(value) && reg2.test(value)){
+		value = value.replace(/\.+$/g, '.');
+	}
+	if (!reg3.test(value) && reg4.test(value)){
+		value = value.replace(/\.+$/g, '');
+	}
+	return value;
 }
 
 function hexConvert(hexBeforeConvert,hexAfterConvert){
-	var b
+	
 }

@@ -34,7 +34,7 @@
 				<div class="hex">三十二进制</div>
 			</div>
 			<div class="hex-input-box">
-				<input type="text" class="hex-input hex-before-convert" onkeyup="value = inputValidation(this,value)">
+				<input type="text" class="hex-input hex-before-convert" id="result1" onkeydown="return inputValidation(event)">
 			</div>
 			<div class="convert-box">
 				<div id="bc_square" class="bc-square"></div>
@@ -54,7 +54,7 @@
 				<div class="hex">三十二进制</div>
 			</div>
 			<div class="hex-input-box">
-				<input type="text" class="hex-input" onkeyup="value = inputValidation(this,value)">
+				<input type="text" class="hex-input" id="result2" onkeydown="return inputValidation(event)">
 			</div>
 		</div>
 		<div class="FooterPush"></div>

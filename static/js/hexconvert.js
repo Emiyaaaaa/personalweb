@@ -58,7 +58,7 @@ function inputValidation(this_ele,value){
 		4:value.replace(/[^0-3\.]/g,''),
 		8:value.replace(/[^0-7\.]/g,''),
 		10:value.replace(/[^0-9\.]/g,''),
-		16:value.replace(/[^a-fA-F0-9\.]/g,''),//好像可以不用加转义符
+		16:value.replace(/[^a-fA-F0-9\.]/g,''),
 		32:value.replace(/[^a-hA-Hj-nJ-Np-rP-Rt-yT-Y0-9\.]/g,''),
 	}
 	var value = hexToReg[hex];
@@ -79,5 +79,9 @@ function inputValidation(this_ele,value){
 }
 
 function hexConvert(hexBeforeConvert,hexAfterConvert){
-	
+	var value1 = document.getElementById('result1').value;
+	var value2 = document.getElementById('result2').value;
+	var up_down = document.getElementsByClassName('convert-button')[0].classList.contains('convert-button-active');
+	valueBeforeConvert = up_down ? value1 : value2;
+	valueAfterConvert = up_down ? value2 : value1;
 }

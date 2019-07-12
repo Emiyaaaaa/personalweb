@@ -57,7 +57,7 @@ header{
 
 	width: 100%;
 	height: 60px;
-	background-color: rgba(184,248,212,0.3);
+	background-color: rgba(184,248,212,0.2);
 
 }
 
@@ -133,7 +133,7 @@ header{
 }
 
 /*输入框宽度适配*/
-@media screen and (min-width: 0px) and (max-width: 222px){.hex-input-box{width: 100px;}}
+@media screen and (min-width:   0px) and (max-width: 222px){.hex-input-box{width: 100px;}}
 @media screen and (min-width: 223px) and (max-width: 336px){.hex-input-box{width: 205px;}}
 @media screen and (min-width: 337px) and (max-width: 450px){.hex-input-box{width: 310px;}}
 @media screen and (min-width: 451px) and (max-width: 564px){.hex-input-box{width: 415px;}}

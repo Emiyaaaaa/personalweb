@@ -25,7 +25,7 @@
 			<div class="right"><a href="/#application" class="header">首页</a></div>
 		</header>
 		<div class="main-box">
-			<div class="hex-bar hex-before-convert">
+			<div class="hex-bar hex-bar1">
 				<div class="hex active">二进制</div>
 				<div class="hex">四进制</div>
 				<div class="hex">八进制</div>
@@ -34,18 +34,18 @@
 				<div class="hex">三十二进制</div>
 			</div>
 			<div class="hex-input-box">
-				<input type="text" class="hex-input hex-before-convert result1" id="result1" onkeyup="value=inputValidation(this,value)">
+				<input type="text" class="hex-input result1" id="result1" onkeyup="value=inputValidation(this,value)">
 			</div>
 			<div class="convert-box">
 				<div id="bc_square" class="bc-square"></div>
-				<div class="convert-button convert-button-active">
+				<div class="convert-button active">
 					<img src="{% static 'images/jt1.png' %}" class="convert-img">
 				</div>
 				<div class="convert-button">
 					<img src="{% static 'images/jt2.png' %}" class="convert-img">
 				</div>
 			</div>
-			<div class="hex-bar hex-after-convert">
+			<div class="hex-bar hex-bar2">
 				<div class="hex">二进制</div>
 				<div class="hex">四进制</div>
 				<div class="hex">八进制</div>

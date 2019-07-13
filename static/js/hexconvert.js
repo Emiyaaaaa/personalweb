@@ -18,17 +18,20 @@ $(document).ready(function() {
 	for (var i = 0; i < hex.length; i++) {
 		hex[i].onclick = function(){
 			if (!this.classList.contains('active')) {
+				let is_value1 = this.parentNode.classList.contains('hex-bar1');
+				let up_down = document.getElementsByClassName('convert-button')[0].classList.contains('active');
 				var bro_hex = this.parentNode.getElementsByClassName('hex');
 				for (var j = 0; j < bro_hex.length; j++) {
 					bro_hex[j].classList.remove('active');
 				}
 				this.classList.add('active');
-				if (this.parentNode.classList.contains('hex-before-convert')) {
+				if (!up_down^is_value1) {//异或推断 E://jzzh.txt
 					hexBeforeConvert = covertToNum[this.innerText];
 				}
-				else if(this.parentNode.classList.contains('hex-after-convert')) {
+				else{
 					hexAfterConvert = covertToNum[this.innerText];
 				}
+				//进制有变动则开始转换
 				hexConvert();
 			}
 		}
@@ -50,15 +53,17 @@ $(document).ready(function() {
 				var a = hexAfterConvert;
 				hexAfterConvert = hexBeforeConvert;
 				hexBeforeConvert = a;
+				console.log(hexBeforeConvert,hexAfterConvert);
+
 			}
 		}
 	}
 });
 
 function inputValidation(this_ele,value){
-	var is_value1 = this_ele.classList.contains('result1');
-	var initial_value = is_value1 ? value1 : value2;
-	var hex = this_ele.classList.contains('hex-before-convert') ? hexBeforeConvert : hexAfterConvert;
+	let up_down = document.getElementsByClassName('convert-button')[0].classList.contains('active');
+	var initial_value = up_down ? value1 : value2;
+	var hex = this_ele.classList.contains('result1') ? hexBeforeConvert : hexAfterConvert;
 	var hexToReg = {
 		2:value.replace(/[^0-1\.]/g,''),
 		4:value.replace(/[^0-3\.]/g,''),
@@ -83,13 +88,7 @@ function inputValidation(this_ele,value){
 	}
 	//若输入有变动则开始实时转换
 	if (initial_value != value) {
-		let result = hexConvert();
-		if (is_value1) {
-			document.getElementById('result2').value = result;
-		}
-		else{
-			document.getElementById('result1').value = result;
-		}
+		hexConvert();
 	}
 	return value;
 }
@@ -97,12 +96,12 @@ function inputValidation(this_ele,value){
 function hexConvert(){
 	value1 = document.getElementById('result1').value;
 	value2 = document.getElementById('result2').value;
-	up_down = document.getElementsByClassName('convert-button')[0].classList.contains('convert-button-active');
+	let up_down = document.getElementsByClassName('convert-button')[0].classList.contains('active');
 	valueBeforeConvert = up_down ? value1 : value2;
 	console.log(valueBeforeConvert,hexBeforeConvert,hexAfterConvert);
 	var hexToFun = {
-		// '2,2':hex2_2(),
-		// '2,4':hex2_4(),
+		'2,2':hex2_2(),
+		'2,4':hex2_4(),
 		// '2,8':hex2_8(),
 		'2,10':hex2_10(),
 		// '2,16':hex2_16(),
@@ -139,7 +138,41 @@ function hexConvert(){
 		// '32,32':hex32_32()
 	}
 	hex_array = [hexBeforeConvert,hexAfterConvert];
-	return hexToFun[String(hex_array)];
+	let result = hexToFun[String(hex_array)];
+	result = result.replace(/^0+/g, '').replace(/\.$/g, '');//去除前面的0 和 末尾小数点
+	if (up_down) {
+		document.getElementById('result2').value = result;
+	}
+	else{
+		document.getElementById('result1').value = result;
+	}
+}
+
+function hex2_2(){
+	return valueBeforeConvert;
+}
+
+function hex2_4(){
+	let value = String(valueBeforeConvert);
+	let result = '';
+	let num2_4 = {
+		'00':'0',
+		'01':'1',
+		'10':'2',
+		'11':'3'
+	}
+	if (value.indexOf('.') == -1 || value.split('.')[1] == ''){//不含小数的情况
+		if (value.length%2 == 1){
+			value = '0' + value;
+		}
+		for (var i = 1; i < value.length; i = i + 2) {
+			result = result + num2_4[value[i-1] + value[i]];
+		}
+	}
+	else{
+		console.log(1,value.split('.'))
+	}
+	return result;
 }
 
 function hex2_10(){

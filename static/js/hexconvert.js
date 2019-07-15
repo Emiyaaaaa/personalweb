@@ -65,21 +65,21 @@ function inputValidation(this_ele,value){
 	var initial_value = up_down ? value1 : value2;
 	var hex = this_ele.classList.contains('result1') ? hexBeforeConvert : hexAfterConvert;
 	var hexToReg = {
-		2:value.replace(/[^-0-1\.]/g,''),
-		4:value.replace(/[^-0-3\.]/g,''),
-		8:value.replace(/[^-0-7\.]/g,''),
-		10:value.replace(/[^-0-9\.]/g,''),
-		16:value.replace(/[^-a-fA-F0-9\.]/g,''),
-		32:value.replace(/[^-a-hA-Hj-nJ-Np-rP-Rt-yT-Y0-9\.]/g,''),
+		2:value.replace(/[^\-0-1\.]/g,''),
+		4:value.replace(/[^\-0-3\.]/g,''),
+		8:value.replace(/[^\-0-7\.]/g,''),
+		10:value.replace(/[^\-0-9\.]/g,''),
+		16:value.replace(/[^\-a-fA-F0-9\.]/g,''),
+		32:value.replace(/[^\-a-hA-Hj-nJ-Np-rP-Rt-yT-Y0-9\.]/g,''),
 	}
 	var value = hexToReg[hex];
 	//去除放在首位的小数点
 	value = value.replace(/^\.+/g, '');
 	//去除末尾多余的小数点
-	var reg1 = /^[0-9a-zA-Z]+\.$/;
-	var reg2 = /^[0-9a-zA-Z]+\.+$/;
-	var reg3 = /^[0-9a-zA-Z]+\.[0-9a-zA-Z]+$/;
-	var reg4 = /^[0-9a-zA-Z]+\.[0-9a-zA-Z]+\.+$/;
+	var reg1 = /^[\-0-9a-zA-Z]+\.$/;
+	var reg2 = /^[\-0-9a-zA-Z]+\.+$/;
+	var reg3 = /^[\-0-9a-zA-Z]+\.[0-9a-zA-Z]+$/;
+	var reg4 = /^[\-0-9a-zA-Z]+\.[0-9a-zA-Z]+\.+$/;
 	if (!reg1.test(value) && reg2.test(value)){
 		value = value.replace(/\.+$/g, '.');
 	}
@@ -108,13 +108,24 @@ function hexConvert(){
 	var up_down = document.getElementsByClassName('convert-button')[0].classList.contains('active');
 	valueBeforeConvert = up_down ? value1 : value2;
 	// console.log(valueBeforeConvert,hexBeforeConvert,hexAfterConvert);
-	let hex_allTo10_result = hex_allTo10();
+	if (valueBeforeConvert.indexOf('-') != -1) {
+		var unsignedValueBeforeConvert = String(valueBeforeConvert.slice(1));
+		var isNegative = true;
+	}
+	else{
+		var unsignedValueBeforeConvert = String(valueBeforeConvert);
+		var isNegative = false
+	}
+	let hex_allTo10_result = hex_allTo10(unsignedValueBeforeConvert);
 	let result = hex_10ToAll(hex_allTo10_result);
+	let negativeSigned = isNegative ? '-' : ''
+	result = negativeSigned + result;
+
 	result = result.replace(/\.$/g, '');//去除末尾小数点
 	if (result.replace(/^\-{0,1}0+/g, '') != '') {//去除开始的多余0
 		result = /^\-/.test(result) ? result.replace(/^\-{0,1}0+/g, '-') : result.replace(/^\-{0,1}0+/g, '');
 		if (result.indexOf('.') != -1) {//去除小数末尾多余0
-			result = result.replace(/0+$/g, '');
+			result = result.replace(/0+$/g, '').replace(/\.$/g, '');
 		}
 	}
 	if (result == 0) {
@@ -131,26 +142,39 @@ function hexConvert(){
 	}
 }
 
-function hex_allTo10(){
-	let value = String(valueBeforeConvert);
+function hex_allTo10(value){
 	let value_array = value.split('.');
 	value_array[value_array.length] = '';
 	let integer = value_array[0];
 	let decimal = value_array[1];
 	let hb = hexBeforeConvert;
-
+	let integer_result = 0;
+	let decimal_result = 0;
 	if (hb == 10) {
 		return value;
 	}
-	let result = value;
+	for (let i = integer.length-1; i >= 0; i--) {
+		let power = integer.length - i - 1;
+		integer_result += Number(integer[i]) * Math.pow(hb,power);
+	}
+	for (var i = 0; i < decimal.length; i++) {
+		let power = - (i + 1);
+		decimal_result += Number(decimal[i]) * Math.pow(hb,power);
+	}
+	let result = String(integer_result + decimal_result);
 	return result;
 }
 
-function hex_10ToAll(){
-	let value = String(valueBeforeConvert);
-	let result = value;
-	if (hexAfterConvert == 10) {
+function hex_10ToAll(value){
+	let value_array = value.split('.');
+	value_array[value_array.length] = '';
+	let integer = value_array[0];
+	let decimal = value_array[1];
+	let ha = hexAfterConvert;
+	let integer_result = 0;
+	let decimal_result = 0;
+	if (ha == 10) {
 		return value;
 	}
-	return result;
+	return value;
 }

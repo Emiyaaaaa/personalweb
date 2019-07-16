@@ -106,7 +106,7 @@ function hexConvert(){
 	value2 = document.getElementById('result2').value;
 	var up_down = document.getElementsByClassName('convert-button')[0].classList.contains('active');
 	valueBeforeConvert = up_down ? value1 : value2;
-	// console.log(valueBeforeConvert,hexBeforeConvert,hexAfterConvert);
+	console.log(valueBeforeConvert,hexBeforeConvert,hexAfterConvert);
 	//处理负号
 	if (valueBeforeConvert.indexOf('-') != -1) {
 		var unsignedValueBeforeConvert = String(valueBeforeConvert.slice(1));
@@ -173,10 +173,7 @@ function hex_10ToAll(value){
 	value_array[value_array.length] = '';
 	value_array[value_array.length] = '';
 	let integer = value_array[0];
-	let decimal = Number('0.'+value_array[1]);
-	if (decimal == 0) {
-		return value;
-	}
+	let decimal = value_array[1];
 	let ha = hexAfterConvert;
 	let integer_result = '';
 	let decimal_result = '';
@@ -192,10 +189,14 @@ function hex_10ToAll(value){
 	// 小数部分
 	let decimalAfterPoint = '';
 	let i = 0;
+	decimal = Number('0.'+decimal);
 	do{
-		decimal = Number(decimal) * ha;
+		decimal = decimal * ha;
+		console.log(decimal)
 		decimal_result += String(decimal).split('.')[0];
 		decimalAfterPoint = String(decimal).split('.')[1];
+		decimal = Number('0.'+decimalAfterPoint);
+		console.log(decimal_result,decimalAfterPoint,decimal)
 		if (decimalAfterPoint == undefined) {break;}
 		i++;
 		if (i > 30) {break;}

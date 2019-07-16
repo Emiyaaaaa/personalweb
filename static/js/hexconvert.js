@@ -53,8 +53,7 @@ $(document).ready(function() {
 				var a = hexAfterConvert;
 				hexAfterConvert = hexBeforeConvert;
 				hexBeforeConvert = a;
-				console.log(hexBeforeConvert,hexAfterConvert);
-
+				hexConvert();
 			}
 		}
 	}
@@ -63,7 +62,7 @@ $(document).ready(function() {
 function inputValidation(this_ele,value){
 	var up_down = document.getElementsByClassName('convert-button')[0].classList.contains('active');
 	var initial_value = up_down ? value1 : value2;
-	var hex = this_ele.classList.contains('result1') ? hexBeforeConvert : hexAfterConvert;
+	var hex = !(this_ele.classList.contains('result1')^up_down) ? hexBeforeConvert : hexAfterConvert;
 	var hexToReg = {
 		2:value.replace(/[^\-0-1\.]/g,''),
 		4:value.replace(/[^\-0-3\.]/g,''),
@@ -108,6 +107,7 @@ function hexConvert(){
 	var up_down = document.getElementsByClassName('convert-button')[0].classList.contains('active');
 	valueBeforeConvert = up_down ? value1 : value2;
 	// console.log(valueBeforeConvert,hexBeforeConvert,hexAfterConvert);
+	//处理负号
 	if (valueBeforeConvert.indexOf('-') != -1) {
 		var unsignedValueBeforeConvert = String(valueBeforeConvert.slice(1));
 		var isNegative = true;
@@ -145,6 +145,7 @@ function hexConvert(){
 function hex_allTo10(value){
 	let value_array = value.split('.');
 	value_array[value_array.length] = '';
+	value_array[value_array.length] = '';
 	let integer = value_array[0];
 	let decimal = value_array[1];
 	let hb = hexBeforeConvert;
@@ -153,10 +154,12 @@ function hex_allTo10(value){
 	if (hb == 10) {
 		return value;
 	}
+	// 整数部分
 	for (let i = integer.length-1; i >= 0; i--) {
 		let power = integer.length - i - 1;
 		integer_result += Number(integer[i]) * Math.pow(hb,power);
 	}
+	// 小数部分
 	for (var i = 0; i < decimal.length; i++) {
 		let power = - (i + 1);
 		decimal_result += Number(decimal[i]) * Math.pow(hb,power);
@@ -168,13 +171,35 @@ function hex_allTo10(value){
 function hex_10ToAll(value){
 	let value_array = value.split('.');
 	value_array[value_array.length] = '';
+	value_array[value_array.length] = '';
 	let integer = value_array[0];
-	let decimal = value_array[1];
+	let decimal = Number('0.'+value_array[1]);
+	if (decimal == 0) {
+		return value;
+	}
 	let ha = hexAfterConvert;
-	let integer_result = 0;
-	let decimal_result = 0;
+	let integer_result = '';
+	let decimal_result = '';
 	if (ha == 10) {
 		return value;
 	}
-	return value;
+	// 整数部分
+	let integer_quotient = Number(integer);
+	do{
+		integer_result = String(integer_quotient % ha) + integer_result;
+		integer_quotient = Math.floor(integer_quotient / ha);
+	}while(integer_quotient != 0);
+	// 小数部分
+	let decimalAfterPoint = '';
+	let i = 0;
+	do{
+		decimal = Number(decimal) * ha;
+		decimal_result += String(decimal).split('.')[0];
+		decimalAfterPoint = String(decimal).split('.')[1];
+		if (decimalAfterPoint == undefined) {break;}
+		i++;
+		if (i > 30) {break;}
+	}while(decimalAfterPoint != '0');
+	let result = integer_result + '.' + decimal_result;
+	return result;
 }

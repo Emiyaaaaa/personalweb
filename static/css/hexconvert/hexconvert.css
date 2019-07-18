@@ -124,8 +124,18 @@ header{
 	overflow: scroll;
 	float: left;
 	width: 100px;
+	height: 0px;
 	margin-top: 8px;
 	border: solid 1px #bff9d8;/*0.9*/
+	-webkit-transition: height 0.3s;
+    -moz-transition: height 0.3s;
+    -o-transition: height 0.3s;
+
+}
+
+.other-hex-menu-clicked{
+
+	height: 272px;
 
 }
 

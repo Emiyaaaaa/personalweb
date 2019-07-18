@@ -12,21 +12,19 @@ $(document).ready(function() {
 	value1 = document.getElementById('result1').value;
 	value2 = document.getElementById('result2').value;
 
-	// 点击显示下拉菜单
-	var hex_select_box = document.getElementsByClassName('other-hex-select-box');
-	console.log(hex_select_box[0])
-	for (var i = 0; i < hex_select_box.length; i++) {
-		hex_select_box[i].onclick = function(){
-			let hex_menu = this.getElementsByClassName('other-hex-menu')[0];
-			hex_menu.style.height = '272px';
-			hex_menu.style.display = 'inline';
-		}
-	}
-	
-	// 点击进制按钮转换
 	var hex = document.getElementsByClassName('hex');
 	for (var i = 0; i < hex.length; i++) {
 		hex[i].onclick = function(){
+
+			// 选中的情况下再点击点击显示下拉菜单
+			if (this.classList.contains('active') && this.classList.contains('other-hex-select-box') && !this.classList.contains('hex-select-active')) {
+				let hex_menu = this.getElementsByClassName('other-hex-menu')[0];
+				hex_menu.style.display = 'inline';
+				hex_menu.classList.add('other-hex-menu-clicked');
+				this.classList.add('hex-select-active');
+			}
+
+			// 点击进制按钮转换
 			if (!this.classList.contains('active')) {
 				let is_value1 = this.parentNode.classList.contains('hex-bar1');
 				let up_down = document.getElementsByClassName('convert-button')[0].classList.contains('active');
@@ -46,6 +44,35 @@ $(document).ready(function() {
 			}
 		}
 	}
+
+	// 收回下拉菜单
+	document.body.addEventListener("click",function (e){
+		console.log(e);
+		var flag = true;
+		let hex_select_menu = document.getElementsByClassName('hex-select-active')[0];
+		for (var i = 0; i < e['path'].length - 2; i++) {
+			if (e['path'][i].classList.contains('hex-select-active')) {
+				flag = false;
+				break;
+			}
+		}
+		if(hex_select_menu != undefined && flag){
+			let hex_menu = hex_select_menu.getElementsByClassName('other-hex-menu')[0];
+			hex_menu.style.display = 'none';
+			hex_menu.classList.remove('other-hex-menu-clicked');
+			hex_select_menu.classList.remove('hex-select-active');
+		}
+	})
+
+	// 点击显示下拉菜单
+	// var hex_select_box = document.getElementsByClassName('other-hex-select-box');
+	// console.log(hex_select_box[0])
+	// for (var i = 0; i < hex_select_box.length; i++) {
+	// 	hex_select_box[i].onclick = function(){
+			
+	// 	}
+	// }
+	
 
 
 	// 点击按钮背景转换效果

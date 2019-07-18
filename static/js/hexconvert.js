@@ -11,6 +11,17 @@ $(document).ready(function() {
 	};
 	value1 = document.getElementById('result1').value;
 	value2 = document.getElementById('result2').value;
+
+	// 点击显示下拉菜单
+	var hex_select_box = document.getElementsByClassName('other-hex-select-box');
+	console.log(hex_select_box[0])
+	for (var i = 0; i < hex_select_box.length; i++) {
+		hex_select_box[i].onclick = function(){
+			let hex_menu = this.getElementsByClassName('other-hex-menu')[0];
+			hex_menu.style.height = '272px';
+			hex_menu.style.display = 'inline';
+		}
+	}
 	
 	// 点击进制按钮转换
 	var hex = document.getElementsByClassName('hex');
@@ -24,7 +35,7 @@ $(document).ready(function() {
 					bro_hex[j].classList.remove('active');
 				}
 				this.classList.add('active');
-				if (!up_down^is_value1) {//异或推断 E://jzzh.txt
+				if (!up_down^is_value1) {//异或推断过程 E://jzzh.txt
 					hexBeforeConvert = covertToNum[this.innerText];
 				}
 				else{
@@ -35,6 +46,7 @@ $(document).ready(function() {
 			}
 		}
 	}
+
 
 	// 点击按钮背景转换效果
 	var covert_button = document.getElementsByClassName('convert-button');

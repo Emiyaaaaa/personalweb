@@ -7,7 +7,6 @@ $(document).ready(function() {
 		'八进制':8,
 		'十进制':10,
 		'十六进制':16,
-		'三十二进制':32,
 	};
 	value1 = document.getElementById('result1').value;
 	value2 = document.getElementById('result2').value;
@@ -15,9 +14,18 @@ $(document).ready(function() {
 	var hex = document.getElementsByClassName('hex');
 	for (var i = 0; i < hex.length; i++) {
 		hex[i].onclick = function(){
-
 			// 选中的情况下再点击点击显示下拉菜单
 			if (this.classList.contains('active') && this.classList.contains('other-hex-select-box') && !this.classList.contains('hex-select-active')) {
+				// 收回另一个菜单
+				let other_hex_menu = document.getElementsByClassName('other-hex-menu');
+				for (var i = 0; i < other_hex_menu.length; i++) {
+					if (other_hex_menu[i].style.display == 'inline'){
+						other_hex_menu[i].style.display = 'none';
+						other_hex_menu[i].classList.remove('other-hex-menu-clicked');
+						hex_select_menu.classList.remove('hex-select-active');
+					}
+				}
+				// 打开本菜单
 				let hex_menu = this.getElementsByClassName('other-hex-menu')[0];
 				hex_menu.style.display = 'inline';
 				hex_menu.classList.add('other-hex-menu-clicked');
@@ -33,11 +41,13 @@ $(document).ready(function() {
 					bro_hex[j].classList.remove('active');
 				}
 				this.classList.add('active');
-				if (!up_down^is_value1) {//异或推断过程 E://jzzh.txt
-					hexBeforeConvert = covertToNum[this.innerText];
-				}
-				else{
-					hexAfterConvert = covertToNum[this.innerText];
+				if (!this.classList.contains('other-hex-select-box')) {
+					if (!up_down^is_value1) {//异或推断过程 E://jzzh.txt
+						hexBeforeConvert = covertToNum[this.innerText];
+					}
+					else{
+						hexAfterConvert = covertToNum[this.innerText];
+					}
 				}
 				//进制有变动则开始转换
 				hexConvert();
@@ -45,9 +55,9 @@ $(document).ready(function() {
 		}
 	}
 
-	// 收回下拉菜单
+	// 点击任意区域收回下拉菜单
 	document.body.addEventListener("click",function (e){
-		console.log(e);
+		console.log(e)
 		var flag = true;
 		let hex_select_menu = document.getElementsByClassName('hex-select-active')[0];
 		for (var i = 0; i < e['path'].length - 2; i++) {
@@ -64,16 +74,18 @@ $(document).ready(function() {
 		}
 	})
 
-	// 点击显示下拉菜单
-	// var hex_select_box = document.getElementsByClassName('other-hex-select-box');
-	// console.log(hex_select_box[0])
-	// for (var i = 0; i < hex_select_box.length; i++) {
-	// 	hex_select_box[i].onclick = function(){
-			
-	// 	}
-	// }
+	// 下拉菜单内容点击函数
+	var other_hex_menu = document.getElementsByClassName('other-hex-menu');
+	for (var i = 0; i < other_hex_menu.length; i++) {
+		var other_hex_menu_li = other_hex_menu[i].getElementsByTagName('li');
+		for (var i = 0; i < other_hex_menu_li.length; i++) {
+			other_hex_menu_li[i].onclick = function a(){
+				let hex = this.innerText;
+				hex = Number(hex.slice(0,hex.length-2));
+			}
+		}
+	}
 	
-
 
 	// 点击按钮背景转换效果
 	var covert_button = document.getElementsByClassName('convert-button');
@@ -162,6 +174,9 @@ function hexConvert(){
 	value2 = document.getElementById('result2').value;
 	var up_down = document.getElementsByClassName('convert-button')[0].classList.contains('active');
 	valueBeforeConvert = up_down ? value1 : value2;
+	if (valueBeforeConvert == '' || valueBeforeConvert == undefined) {
+		return 0;
+	}
 	// console.log(valueBeforeConvert,hexBeforeConvert,hexAfterConvert);
 	//处理负号
 	if (valueBeforeConvert.indexOf('-') != -1) {

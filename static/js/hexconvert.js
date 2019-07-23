@@ -7,6 +7,7 @@ $(document).ready(function() {
 		'八进制':8,
 		'十进制':10,
 		'十六进制':16,
+		'32进制':32
 	};
 	value1 = document.getElementById('result1').value;
 	value2 = document.getElementById('result2').value;
@@ -66,7 +67,6 @@ $(document).ready(function() {
 
 	// 点击任意区域收回下拉菜单
 	document.body.addEventListener("click",function (e){
-		console.log(e)
 		var flag = true;
 		let hex_select_menu = document.getElementsByClassName('hex-select-active')[0];
 		for (var i = 0; i < e['path'].length - 2; i++) {
@@ -87,18 +87,29 @@ $(document).ready(function() {
 	var other_hex_menu = document.getElementsByClassName('other-hex-menu');
 	for (var i = 0; i < other_hex_menu.length; i++) {
 		var other_hex_menu_li = other_hex_menu[i].getElementsByTagName('li');
-		for (var i = 0; i < other_hex_menu_li.length; i++) {
-			other_hex_menu_li[i].onclick = function a(){
-				let hex = this.innerText;
-				hex = Number(hex.slice(0,hex.length-2));
+		for (var j = 0; j < other_hex_menu_li.length; j++) {
+			other_hex_menu_li[j].onclick = function(){
+				let hexText = this.innerText;
+				hex = Number(hexText.slice(0,hexText.length-2));
+				// 判断进制前后顺序
+				let is_value1 = $(this).parents('.hex-bar')[0].classList.contains('hex-bar1');
+				let up_down = document.getElementsByClassName('convert-button')[0].classList.contains('active');
+				if (!this.classList.contains('other-hex-select-box')) {
+					if (!up_down^is_value1) {
+						hexBeforeConvert = hex;
+					}
+					else{
+						hexAfterConvert = hex;
+					}
+				}
+				//替换显示出的进制
+				$(this).parents('.other-hex-select-box')[0].getElementsByClassName('selected-hex')[0].innerText = hexText;
 			}
 		}
 	}
 	
-	// 选项点击函数
-	
 
-	
+
 	// 点击按钮背景转换效果
 	var covert_button = document.getElementsByClassName('convert-button');
 	var bc_square = document.getElementById('bc_square');
@@ -121,10 +132,12 @@ $(document).ready(function() {
 	}
 });
 
-function inputValidation(this_ele,value){
+function inputValidation(this_ele,value,hex=undefined){
 	var up_down = document.getElementsByClassName('convert-button')[0].classList.contains('active');
 	var initial_value = up_down ? value1 : value2;
-	var hex = !(this_ele.classList.contains('result1')^up_down) ? hexBeforeConvert : hexAfterConvert;
+	if (this_ele != undefined) {
+		var hex = !(this_ele.classList.contains('result1')^up_down) ? hexBeforeConvert : hexAfterConvert;
+	}
 	var hexToReg = {
 		2:value.replace(/[^\-0-1\.]/g,''),
 		4:value.replace(/[^\-0-3\.]/g,''),

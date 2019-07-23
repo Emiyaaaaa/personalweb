@@ -28,9 +28,18 @@ $(document).ready(function() {
 				// 打开本菜单
 				let hex_menu = this.getElementsByClassName('other-hex-menu')[0];
 				hex_menu.style.display = 'inline';
-				hex_menu.classList.add('other-hex-menu-clicked');
+				setTimeout(function(){hex_menu.classList.add('other-hex-menu-clicked');},100);//100毫秒用于浏览器渲染hex_menu
 				this.classList.add('hex-select-active');
 			}
+
+			// 收回本菜单
+			else if (this.classList.contains('active') && this.classList.contains('other-hex-select-box') && this.classList.contains('hex-select-active')) {
+				let hex_menu = this.getElementsByClassName('other-hex-menu')[0];
+				hex_menu.style.display = 'none';
+				hex_menu.classList.remove('other-hex-menu-clicked');
+				this.classList.remove('hex-select-active');
+			}
+
 
 			// 点击进制按钮转换
 			if (!this.classList.contains('active')) {
@@ -86,7 +95,10 @@ $(document).ready(function() {
 		}
 	}
 	
+	// 选项点击函数
+	
 
+	
 	// 点击按钮背景转换效果
 	var covert_button = document.getElementsByClassName('convert-button');
 	var bc_square = document.getElementById('bc_square');

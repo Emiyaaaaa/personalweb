@@ -106,6 +106,7 @@ header{
 .hex{
 
 	display: inline-block;
+	cursor: default;
 	width: 100px;
 	height: 40px;
 	padding-top: 9px;
@@ -115,12 +116,20 @@ header{
     -webkit-transition: background-color 0.25s;
     -moz-transition: background-color 0.25s;
     -o-transition: background-color 0.25s;
+    /*设为不可选*/
+    -webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 
 }
 
 .other-hex-menu{
-
+	
 	display: none;
+	cursor: default;
 	overflow: scroll;
 	float: left;
 	width: 100px;

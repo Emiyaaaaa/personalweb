@@ -138,12 +138,23 @@
 			<div class="hex-input-box">
 				<input type="text" class="hex-input result2" id="result2" onkeyup="value=inputValidation(this)">
 			</div>
-			<div class="instructions-button" onclick="this.classList.toggle('instructions-button-active')">
+			<div class="instructions-button" onclick="showInstructions(this)">
 				<span>使用说明</span>
 				<img src="{% static 'images/triangle1.png' %}" class="triangle">
 			</div>
-			<div class="instructions-text">
-				
+			<div class="instructions-text" id="instructionsText">
+				<div class="title">&#8226 注意</div>
+				<p>1. 目前版本为测试版，可能会有转换数值不准确的情况，测试约至2019.8.15，届时会修复所有数值转换不准确的bug</p>
+				<div class="title">&#8226 使用</div>
+				<p>1. 支持浮点运算，支持任意进制间的相互转换</p>
+				<p>2. 无需点击转换按钮，输入数值自动转换</p>
+				<p>3. 中间的箭头为转换方向，可以随时调整，方便连续转换</p>
+				<p>4. 针对2，4，8，16，32进制间的相互转换做了优化，不存在出现无限小数的情况</p>
+				<p>5. 历史转换记录查看方法: PC端按F12，点击console(控制台)查看历史记录，刷新页面会清除历史记录</p>
+				<div class="title">&#8226 原理&联系</div>
+				<p>1. 虽然网站后端采用Python开发，但本模块运算部分完全采用前端语言JavaScript开发，主要是为了练习JavaScript以及css，提高自己的知识水平</p>
+				<p>2. 由于采用js开发，本人js水平一般，难免会有未知bug，造成网页崩溃，操作无反应等情况。如发现bug，请发送转换前数值，转换前后的进制至2914034404@qq.com，将尽快修复</p>
+				<p>3. 商业合作联系2914034404@qq.com</p>
 			</div>
 		</div>
 		<div class="FooterPush"></div>

@@ -175,16 +175,17 @@ header{
 
 	margin: 0 auto;
 	margin-bottom: 30px;
-	width: 624px;
 
 }
 
 /*输入框宽度适配*/
-@media screen and (min-width:   0px) and (max-width: 222px){.hex-input-box{width: 100px;}}
-@media screen and (min-width: 223px) and (max-width: 336px){.hex-input-box{width: 205px;}}
-@media screen and (min-width: 337px) and (max-width: 450px){.hex-input-box{width: 310px;}}
-@media screen and (min-width: 451px) and (max-width: 564px){.hex-input-box{width: 415px;}}
-@media screen and (min-width: 565px) and (max-width: 678px){.hex-input-box{width: 530px;}}
+@media screen and (min-width:   0px) and (max-width: 222px){.instructions-text-active, .hex-input-box{width: 100px;}}
+@media screen and (min-width: 223px) and (max-width: 336px){.instructions-text-active, .hex-input-box{width: 205px;}}
+@media screen and (min-width: 337px) and (max-width: 450px){.instructions-text-active, .hex-input-box{width: 310px;}}
+@media screen and (min-width: 451px) and (max-width: 564px){.instructions-text-active, .hex-input-box{width: 415px;}}
+@media screen and (min-width: 565px) and (max-width: 678px){.instructions-text-active, .hex-input-box{width: 530px;}}
+@media screen and (min-width: 679px)                       {.instructions-text-active, .hex-input-box{width: 624px;}}
+
 
 
 .hex-input{
@@ -321,19 +322,31 @@ header{
 .instructions-text{
 
 	display: none;
-	opacity: 0;
-	transition: opacity 0.2s;
-    -webkit-transition: opacity 0.2s;
-    -moz-transition: opacity 0.2s;
-    -o-transition: opacity 0.2s;
+	color: #333333;
+	font-size: 15px;
 
 }
 
-.instructions-button-active .instructions-text{
+.instructions-text-active{
 
-	display: inline;
-	opacity: 1;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 50px;
 
+}
+
+.instructions-text-active *{
+	
+	text-align: left;
+	margin-top: 8px;
+
+}
+
+.instructions-text .title{
+
+	color: #000000;
+	font-size: 17px;
+	
 }
 
 .Wrapper{

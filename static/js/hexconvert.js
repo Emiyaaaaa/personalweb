@@ -429,6 +429,8 @@ function hex_10To2(value){
 	return integer_result;
 }
 
-function showInstructions(){
-	
+// 使用说明展示与收回
+function showInstructions(this_ele){
+	this_ele.classList.toggle('instructions-button-active');
+	document.getElementById('instructionsText').classList.toggle('instructions-text-active');
 }

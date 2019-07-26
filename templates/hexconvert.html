@@ -31,7 +31,9 @@
 				<div class="hex">八进制</div>
 				<div class="hex">十进制</div>
 				<div class="hex">十六进制</div>
-				<div class="hex other-hex-select-box"><span class="selected-hex">32进制</span>
+				<div class="hex other-hex-select-box">
+					<span class="selected-hex">32进制</span>
+					<img src="{% static 'images/triangle1.png' %}" class="triangle">
 					<div class="other-hex-menu">
 						<ul>
 							<li>3进制</li>
@@ -90,7 +92,9 @@
 				<div class="hex">八进制</div>
 				<div class="hex active">十进制</div>
 				<div class="hex">十六进制</div>
-				<div class="hex other-hex-select-box"><span class="selected-hex">32进制</span>
+				<div class="hex other-hex-select-box">
+					<span class="selected-hex">32进制</span>
+					<img src="{% static 'images/triangle1.png' %}" class="triangle">
 					<div class="other-hex-menu">
 						<ul>
 							<li>3进制</li>
@@ -133,6 +137,13 @@
 			</div>
 			<div class="hex-input-box">
 				<input type="text" class="hex-input result2" id="result2" onkeyup="value=inputValidation(this)">
+			</div>
+			<div class="instructions-button" onclick="this.classList.toggle('instructions-button-active')">
+				<span>使用说明</span>
+				<img src="{% static 'images/triangle1.png' %}" class="triangle">
+			</div>
+			<div class="instructions-text">
+				
 			</div>
 		</div>
 		<div class="FooterPush"></div>

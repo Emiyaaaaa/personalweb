@@ -15,7 +15,6 @@ body,html{
 	overflow-y: auto;
 	overflow-x: hidden;
 	text-align: center;
-	/*background: #fcfcfc;*/
     font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', 'Microsoft YaHei', 'Source Han Sans SC', 'Noto Sans CJK SC', 'WenQuanYi Micro Hei', sans-serif;
 
 }
@@ -134,7 +133,7 @@ header{
 	float: left;
 	width: 100px;
 	height: 0px;
-	margin-top: 8px;
+	margin-top: 7px;
 	border: solid 1px #bff9d8;/*0.9*/
 	-webkit-transition: height 0.3s;
     -moz-transition: height 0.3s;
@@ -157,12 +156,12 @@ header{
 
 .other-hex-menu li:nth-of-type(odd){ 
 
-	background: #f8fefb;/*0.1*/
+	background: #ffffff;
 
 }
 .other-hex-menu li:nth-of-type(even){ 
 
-	background: #e2fcee;/*0.4*/
+	background: #e9fdf2;/*0.3*/
 
 }
 
@@ -204,7 +203,7 @@ header{
 
 .hex-bar .active{
 
-	background-color: rgba(184,248,212,0.9);
+	background-color: rgba(184,248,212,0.8);
 
 }
 
@@ -239,7 +238,7 @@ header{
 	height: 36px;
 	width: 36px;
 	z-index: -1;
-	background-color: rgba(184,248,212,0.9);
+	background-color: rgba(184,248,212,0.8);
 	transition: left 0.35s;
     -webkit-transition: left 0.35s;
     -moz-transition: left 0.35s;
@@ -250,6 +249,90 @@ header{
 .bc-square-active{
 
 	left: 41px;
+
+}
+
+.other-hex-select-box .triangle{
+
+    width: 11px;
+    margin-left: 5px;
+    transition: transform 0.25s;
+    -webkit-transition: transform 0.25s;
+    -moz-transition: transform 0.25s;
+    -o-transition: transform 0.25s;
+
+}
+
+.hex-select-active .triangle{
+
+	transform:rotate(180deg);
+	-ms-transform:rotate(180deg); 	/* IE 9 */
+	-moz-transform:rotate(180deg); 	/* Firefox */
+	-webkit-transform:rotate(180deg); /* Safari 和 Chrome */
+	-o-transform:rotate(180deg); 	/* Opera */
+
+}
+
+.instructions-button{
+	
+	margin: 0 auto;
+    font-size: 13px;
+    width: 91px;
+    height: 31px;
+    background-color: rgba(184,248,212,0.8);
+    padding-top: 6px;
+
+    -webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+}
+
+.instructions-button span{
+	
+	margin-left: 9px;
+
+}
+
+.instructions-button .triangle{
+
+    width: 10px;
+    margin-left: 1px;
+    transition: transform 0.25s;
+    -webkit-transition: transform 0.25s;
+    -moz-transition: transform 0.25s;
+    -o-transition: transform 0.25s;
+
+}
+
+.instructions-button-active .triangle{
+
+	transform:rotate(180deg);
+	-ms-transform:rotate(180deg); 	/* IE 9 */
+	-moz-transform:rotate(180deg); 	/* Firefox */
+	-webkit-transform:rotate(180deg); /* Safari 和 Chrome */
+	-o-transform:rotate(180deg); 	/* Opera */
+
+}
+
+.instructions-text{
+
+	display: none;
+	opacity: 0;
+	transition: opacity 0.2s;
+    -webkit-transition: opacity 0.2s;
+    -moz-transition: opacity 0.2s;
+    -o-transition: opacity 0.2s;
+
+}
+
+.instructions-button-active .instructions-text{
+
+	display: inline;
+	opacity: 1;
 
 }
 
@@ -273,6 +356,7 @@ header{
 	height: 30px;
 	width: 100%;
 	text-align: center;
+	z-index: -1;
 
 }
 

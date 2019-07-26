@@ -216,7 +216,6 @@ function hexConvert(){
 	if (valueBeforeConvert == '' || valueBeforeConvert == undefined) {
 		return 0;
 	}
-	console.log(valueBeforeConvert,hexBeforeConvert,hexAfterConvert);
 	//处理负号
 	if (valueBeforeConvert.indexOf('-') != -1) {
 		var unsignedValueBeforeConvert = String(valueBeforeConvert.slice(1));
@@ -256,6 +255,7 @@ function hexConvert(){
 	else{
 		if (document.getElementById('result2').value != '') {document.getElementById('result1').value = result;}
 	}
+	console.log(hexBeforeConvert + '进制->' + hexAfterConvert + '进制：',valueBeforeConvert + ' -> ' + result);
 }
 
 function getBaseLog(x, y) {
@@ -427,4 +427,8 @@ function hex_10To2(value){
 		integer_quotient = Math.floor(integer_quotient / 2);
 	}while(integer_quotient != 0);
 	return integer_result;
+}
+
+function showInstructions(){
+	
 }

@@ -408,8 +408,6 @@ function hex_2ToAll(value){
 	return result;
 }
 
-
-
 function hex_2To10(value){
 	let integer = value;
 	let integer_result = 0;

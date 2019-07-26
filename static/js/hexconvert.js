@@ -158,7 +158,6 @@ function inputValidation(this_ele){
 	}
 	else{
 		eval("value = value.replace(/[^\\-0-9a-"+String.fromCharCode(Number(hex)+86).slice(0,1)+"\\.]/ig,'')");
-		console.log("value = value.replace(/[^\\-0-9a-"+String.fromCharCode(Number(hex)+86).slice(0,1)+"\\.]/ig,'')");
 	}
 	
 	//去除放在首位的小数点
@@ -240,20 +239,17 @@ function hexConvert(){
 		var result = hex_10ToAll(hex_allTo10_result);
 	}
 
-	result = negativeSigned + result;//添加负号
 	result = result.replace(/\.$/g, '');//去除末尾小数点
-	if (result.replace(/^\-{0,1}0+/g, '') != '') {//去除开始的多余0
-		result = /^\-/.test(result) ? result.replace(/^\-{0,1}0+/g, '-') : result.replace(/^\-{0,1}0+/g, '');
+	if (result.replace(/^0+/, '') != '' && !/^0\./.test(result)) {//去除开始的多余0
+		result = result.replace(/^0+/g, '');
 		if (result.indexOf('.') != -1) {//去除小数末尾多余0
 			result = result.replace(/0+$/g, '').replace(/\.$/g, '');
 		}
 	}
 	if (result == 0) {
-		if (/^-/.test(result)) {
-			result = '-0';
-		}
-		else result = '0';
+		result = '0';
 	}
+	result = negativeSigned + result;//添加负号
 	if (up_down) {
 		if (document.getElementById('result1').value != '') {document.getElementById('result2').value = result;}
 	}
@@ -323,7 +319,7 @@ function hex_10ToAll(value){
 		decimal = Number('0.'+decimalAfterPoint);
 		if (decimalAfterPoint == undefined) {break;}
 		i++;
-		if (i > 30) {break;}
+		if (i > 50) {break;}
 	}while(decimalAfterPoint != '0');
 	let result = integer_result + '.' + decimal_result;
 	return result;
@@ -338,9 +334,35 @@ function hex_allTo2(value){
 	let hb = hexBeforeConvert;
 	let integer_result = '';
 	let decimal_result = '';
+	let zero = ''
+	let result = '';
+
 	if (hb == 2) {
 		return value;
 	}
+	let digitsGroupNum = getBaseLog(2,hb);
+	for (var i = 0; i < integer.length; i++) {
+		let integerGroup = hex_10To2(charToNum(integer[i]));
+		for (var j = 0; j < digitsGroupNum - integerGroup.length; j++) {
+			zero += '0';
+		}
+		integerGroup = zero + integerGroup;//整数部分前面补0
+		console.log(integerGroup)
+
+		zero = '';
+		integer_result += integerGroup;
+	}
+	for (var i = 0; i < decimal.length; i++) {
+		let decimalGroup = hex_10To2(charToNum(decimal[i]));
+		for (var j = 0; j < digitsGroupNum - decimalGroup.length; j++) {
+			zero += '0';
+		}
+		decimalGroup = zero + decimalGroup;//小数部分前面补0
+		zero = '';
+		decimal_result += decimalGroup;
+	}
+	result = integer_result + '.' + decimal_result;
+	return result;
 }
 
 function hex_2ToAll(value){
@@ -359,7 +381,7 @@ function hex_2ToAll(value){
 		return value;
 	}
 	let digitsGroupNum = getBaseLog(2,ha);
-	for (var i = 0; i < digitsGroupNum - integer.length % digitsGroupNum ; i++) {
+	for (var i = 0; i < digitsGroupNum - integer.length % digitsGroupNum; i++) {
 		zero += '0';
 	}
 	integer = zero + integer;//整数部分前面补0
@@ -386,6 +408,8 @@ function hex_2ToAll(value){
 	return result;
 }
 
+
+
 function hex_2To10(value){
 	let integer = value;
 	let integer_result = 0;
@@ -396,82 +420,13 @@ function hex_2To10(value){
 	return integer_result;
 }
 
-function hex2_8(){
-	let value = String(valueBeforeConvert);
-	let result = '';
-	let zero = '';
-	let num2_8 = {
-		'000':'0',
-		'001':'1',
-		'010':'2',
-		'011':'3',
-		'100':'4',
-		'101':'5',
-		'110':'6',
-		'111':'7'
-	}
-	let value_array = value.split('.');
-	value_array[value_array.length] = '';
-	let integer = value_array[0];
-	let decimal = value_array[1];
-	for (var i = 0; i < 3 - integer.length%3; i++) {
-		zero += '0';
-	}
-	integer = zero + integer;//整数部分前面补0
-	for (var i = 2; i < integer.length; i = i + 3) {
-		result += num2_8[integer[i-2] + integer[i-1] + integer[i]];
-	}
-	result += '.';
-	for (var i = 0; i < 3 - decimal.length%3; i++) {
-		zero += '0';
-	}
-	decimal = decimal + zero;//小数部分后面补0
-	for (var i = 2; i < decimal.length; i = i + 3) {
-		result += num2_8[decimal[i-2] + decimal[i-1] + decimal[i]];
-	}
-	return result;
-}
-
-function hex2_16(){
-	let value = String(valueBeforeConvert);
-	let result = '';
-	let zero = '';
-	let num2_16 = {
-		'0000':'0',
-		'0001':'1',
-		'0010':'2',
-		'0011':'3',
-		'0100':'4',
-		'0101':'5',
-		'0110':'6',
-		'0111':'7',
-		'1000':'8',
-		'1001':'9',
-		'1010':'a',
-		'1011':'b',
-		'1100':'c',
-		'1101':'d',
-		'1110':'e',
-		'1111':'f',
-	}
-	let value_array = value.split('.');
-	value_array[value_array.length] = '';
-	let integer = value_array[0];
-	let decimal = value_array[1];
-	for (var i = 0; i < 4 - integer.length%4; i++) {
-		zero += '0';
-	}
-	integer = zero + integer;//整数部分前面补0
-	for (var i = 3; i < integer.length; i = i + 4) {
-		result += num2_16[integer[i-3] + integer[i-2] + integer[i-1] + integer[i]];
-	}
-	result += '.';
-	for (var i = 0; i < 4 - decimal.length%4; i++) {
-		zero += '0';
-	}
-	decimal = decimal + zero;//小数部分后面补0
-	for (var i = 3; i < decimal.length; i = i + 4) {
-		result += num2_16[decimal[i-3] + decimal[i-2] + decimal[i-1] + decimal[i]];
-	}
-	return result;
+function hex_10To2(value){
+	let integer = value;
+	let integer_result = '';
+	let integer_quotient = Number(integer);
+	do{
+		integer_result = numToChar(String(integer_quotient % 2)) + integer_result;
+		integer_quotient = Math.floor(integer_quotient / 2);
+	}while(integer_quotient != 0);
+	return integer_result;
 }

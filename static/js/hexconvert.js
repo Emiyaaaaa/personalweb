@@ -94,7 +94,7 @@ $(document).ready(function() {
 			hex_menu.classList.remove('other-hex-menu-clicked');
 			hex_select_menu.classList.remove('hex-select-active');
 		}
-	})
+	});
 
 	// 下拉菜单内容点击函数
 	var other_hex_menu = document.getElementsByClassName('other-hex-menu');

@@ -238,12 +238,16 @@ function hexConvert(){
 		var result = hex_10ToAll(hex_allTo10_result);
 	}
 
-	result = result.replace(/\.$/g, '');//去除末尾小数点
-	if (result.replace(/^0+/, '') != '' && !/^0\./.test(result)) {//去除开始的多余0
-		result = result.replace(/^0+/g, '');
-		if (result.indexOf('.') != -1) {//去除小数末尾多余0
-			result = result.replace(/0+$/g, '').replace(/\.$/g, '');
-		}
+	result = result.replace(/\.$/g, '');// 去除末尾小数点
+	result = result.replace(/^0+\./,'0.')// 去除小数开始的多余0
+	if (result.indexOf('.') != -1) {
+		result = result.replace(/0+$/g, '').replace(/\.$/g, '');// 去除小数末尾多余0
+	}
+	if (/^0+\w+\./.test(result)) {
+		result = result.replace(/^0+/,'');
+	}
+	if (result.replace(/^0+/, '') != '' && result.indexOf('.') == -1) {
+		result = result.replace(/^0+/, '');// 去除整数部分开始的多余0
 	}
 	if (result == 0) {
 		result = '0';
@@ -347,8 +351,6 @@ function hex_allTo2(value){
 			zero += '0';
 		}
 		integerGroup = zero + integerGroup;//整数部分前面补0
-		console.log(integerGroup)
-
 		zero = '';
 		integer_result += integerGroup;
 	}

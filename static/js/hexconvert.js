@@ -29,7 +29,7 @@ $(document).ready(function() {
 				// 打开本菜单
 				let hex_menu = this.getElementsByClassName('other-hex-menu')[0];
 				hex_menu.style.display = 'inline';
-				setTimeout(function(){hex_menu.classList.add('other-hex-menu-clicked');},100);//100毫秒用于浏览器渲染hex_menu
+				setTimeout(function(){hex_menu.classList.add('other-hex-menu-clicked');},0);//可以使浏览器渲染hex_menu之后再执行此函数
 				this.classList.add('hex-select-active');
 			}
 

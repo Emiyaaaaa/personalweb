@@ -10,17 +10,13 @@
 
 .loading-weather{
 
-    position: fixed;
-    margin: 58px 0 0 15px;
-    height: 200px;
-    width: 28%
+    text-align: center;
 
 }
 
 .loading-weather .loading{
 
-    margin-left: 30%;
-    margin-top: 16%;
+    margin-top: 150px;
 
 }
 

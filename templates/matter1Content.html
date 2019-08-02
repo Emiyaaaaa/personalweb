@@ -15,9 +15,13 @@
     <div class="windowImg">
     {% for imgs in diary.img %}
         {% if diary.imgLenth == 1 %}
-            <img src="/media/{{ imgs }}" style="width: 1000px;">
+            <a href="/media/{{ imgs }}">
+                <img src="/media/{{ imgs }}" style="width: 1000px;">
+            </a>
         {% else %}
-            <img src="/media/{{ imgs }}">
+            <a href="/media/{{ imgs }}">
+                <img src="/media/{{ imgs }}">
+            </a>
         {% endif %}
     {% endfor %}
     </div>

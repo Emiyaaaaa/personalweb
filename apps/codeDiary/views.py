@@ -22,6 +22,11 @@ class CodeDiaryView():
             text_id = codeDiary.text_id
             markdown_text = codeDiary.content
             unmarkdown_text = re.sub('[#`-]', '', markdown_text).replace(' ', '').replace('\n','')
+            markdownLinkObj = re.search( r'\[(.*)\]\(http.*?\)', unmarkdown_text,re.I)
+            try:
+                unmarkdown_text = re.sub(r'\[.*\]\(http.*?\)',markdownLinkObj.group(1),unmarkdown_text)
+            except:
+                pass
             line = 2
             if codeDiary.title != None:line = 1
             brief_text = self.getBriefText(unmarkdown_text, text_max_length,line)

@@ -4,7 +4,8 @@
 <head>
 	<meta charset="utf-8">
 	<title>Emiya的博客</title>
-	<link rel="icon" type="image/png" href="/media/{{ website_icon }}">
+	<link rel="shortcut icon" href="/media/{{ website_icon }}" /> 
+	<link rel="bookmark" href="/media/{{ website_icon }}" type="image/x-icon"　/> 
 	<script type="text/javascript" src="{% static 'js/jquery/1.10.2/jquery.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/outputConsole.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/console_out.js' %}"></script>
@@ -208,7 +209,6 @@
 			        </div>
 			        <script>
 		                var animateButton = function(e) {
-		    
 		                    e.preventDefault;
 		                    //reset animation
 		                    e.target.classList.remove('animate');
@@ -216,11 +216,8 @@
 		                    setTimeout(function(){
 		                        e.target.classList.remove('animate');
 		                    },700);
-
 		                };
-
 		                var classname = document.getElementsByClassName("suggestion-bubbly-button");
-
 		                for (var i = 0; i < classname.length; i++) {
 		                    classname[i].addEventListener('click', animateButton, false);
 		                }
@@ -239,7 +236,7 @@
     </div>
     <div class="right">
     	<div class="loading-weather">
-    		<div class="loading">加载中...</div>
+    		<div class="loading">天气预报加载中...</div>
     	</div>
     	<div class="weather">
     		<div class="now-weather" id="w_matter_0" style="display: inline;">

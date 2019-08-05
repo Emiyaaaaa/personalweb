@@ -437,7 +437,7 @@ function showInstructions(this_ele){
 	document.getElementById('instructionsText').classList.toggle('instructions-text-active');
 }
 
-//百度站长自动推送
+// 百度站长自动推送
 (function(){
     var bp = document.createElement('script');
     var curProtocol = window.location.protocol.split(':')[0];

@@ -210,11 +210,19 @@
 				}
 	    	}
 		})
+		$.ajax({
+			url:'/',
+	   		type:"POST",
+	   		data:{'type':'weatherUser','ip':returnCitySN["cip"],'city':returnCitySN["cname"],'errorCode':data.ERRORCODE,'errorJson':errorJson},
+	   		success:function(data){}
+	   	})
 	}
-	$.ajax({
-		url:'/',
-   		type:"POST",
-   		data:{'type':'weatherUser','ip':returnCitySN["cip"],'city':returnCitySN["cname"],'errorCode':data.ERRORCODE,'errorJson':errorJson},
-   		success:function(data){}
-   	})
+	else{
+		$.ajax({
+			url:'/',
+	   		type:"POST",
+	   		data:{'type':'weatherUser','ip':returnCitySN["cip"],'city':returnCitySN["cname"],'errorCode':0,'errorJson':0},
+	   		success:function(data){}
+	   	})
+	}
 })()

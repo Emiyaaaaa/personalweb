@@ -58,18 +58,14 @@
             <button class="window-bubbly-button" onclick="windowSendComment()">发送</button>
             <script>
                 var animateButton = function(e) {
-
                     e.preventDefault;
                     e.target.classList.remove('animate');
                     e.target.classList.add('animate');
                     setTimeout(function(){
                         e.target.classList.remove('animate');
                     },700);
-
                 };
-
                 var classname = document.getElementsByClassName("window-bubbly-button");
-
                 for (var i = 0; i < classname.length; i++) {
                     classname[i].addEventListener('click', animateButton, false);
                 }

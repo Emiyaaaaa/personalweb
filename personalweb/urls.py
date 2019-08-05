@@ -39,7 +39,8 @@ urlpatterns = [
     url(r'^zhihu-video-download/mzsm$', ZhuhuVideoDownloadView().get_mzsm),
     url(r'^zhihu-video-download/(?P<url>[\S\s]*)', ZhuhuVideoDownloadView.as_view()),
     url(r'^hexconvert$',HexconvertView.as_view()),
-    url(r'^bilibiliCoverDownload$',BilibiliCoverDownloadView.as_view())
+    url(r'^bilibiliCoverDownload$', BilibiliCoverDownloadView.as_view()),
+    url(r'^bilibiliCoverDownload/mzsm$', BilibiliCoverDownloadView().get_mzsm)
 ]
 urlpatterns += static(settings.MEDIA_URL , document_root = settings.MEDIA_ROOT )
 urlpatterns += static(settings.STATIC_URL, document_root = settings.STATIC_ROOT )

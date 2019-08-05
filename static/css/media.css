@@ -62,6 +62,24 @@
 	
 	}
 
+	.matter2 .app {
+
+    	height: 187px;
+
+	}
+
+	.app .bottom-box{
+
+		top: 125px;
+
+	}
+
+	.app .img-box {
+	
+		height: 125px;
+
+	}
+
 }
 
 @media screen and (min-width: 0px) and (max-width: 768px){
@@ -433,24 +451,23 @@
 		margin-left: 20px;
     	margin-top: 20px;
     	min-width: 140px;
-    	height: 170px;
+    	height: 162px;
+    	letter-spacing: 1px;
+	    margin-left: 10px;
+	    margin-right: 10px;
+	    margin-top: 15px;
+	    margin-bottom: 15px;
+	    box-shadow:0px 0px 15px rgba(212,212,212,0.9);
 
 	}
 
 	.app .img-box {
 		
 		height: 100px;
-	    box-shadow: 0px 0px 10px rgba(170,170,170,0.9);
 
 	}
 
-	.app .bg-bottom-box {
-
-		box-shadow: 0px 0px 7px rgba(212,212,212,0.9)
-
-	}
-
-	.app .bottom-box, .app .bg-bottom-box{
+	.app .bottom-box{
 
 		top: 100px;
 
@@ -504,5 +521,25 @@
 
 	    letter-spacing: 1px;
 
+	}
+
+	@media screen and (min-width: 620px) and (max-width: 768px){
+		.matter2 .app {
+
+	    	height: 202px;
+
+		}
+
+		.app .bottom-box{
+
+			top: 140px;
+
+		}
+
+		.app .img-box {
+		
+			height: 140px;
+
+		}
 	}
 }

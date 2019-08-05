@@ -5,6 +5,12 @@
 
 }
 
+.matter2{
+
+    text-align: center;
+
+}
+
 .matter2 .app{
     
 	display:-moz-inline-box;/* Firefox */
@@ -20,9 +26,12 @@
     min-width: 180px;
     max-width: 220px;
     height: 220px;
-    margin-left: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
     margin-top: 30px;
+    margin-bottom: 30px;
     box-shadow:0px 0px 30px rgba(212,212,212,0.9);
+    text-align: left;
     
 }
 
@@ -70,22 +79,11 @@
 
 }
 
-.app .bg-bottom-box{
-
-    position: absolute;
-    top: 158px;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    background-color: #ffffff; 
-    width: 100%;
-    height: 62px;
-
-}
-
 .matter2 .app-name{
     
     position:absolute;
-    bottom: 20px;
+    top: 50%;
+    transform: translateY(-50%);
     width: 100%;
     text-align: center;
 

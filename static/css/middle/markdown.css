@@ -26,6 +26,9 @@
   border-radius: 0 0 3px 3px;
 
 }
+.markdown-body a:hover{
+  text-decoration: underline;
+}
 .markdown-body > *:first-child {
   margin-top: 0 !important;
 }

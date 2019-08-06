@@ -96,7 +96,6 @@ header{
 .search-box{
 	
 	position: relative;
-	width: 70%;
 	max-width: 750px;
 	margin: 0 auto;
 	margin-top: 12%;
@@ -148,8 +147,13 @@ header{
 	
 	margin: 0 auto;
 	text-align: left;
-	width: 70%;
 	max-width: 750px;
+
+}
+
+.instructions-text,.search-box{
+
+	width: 75%;
 
 }
 
@@ -158,8 +162,8 @@ header{
 	margin-left: 5px;
 	margin-right: 5px;
 	margin-top: 8px;
-	font-size: 17px;
-	color: #888888;
+	font-size: 15px;
+	color: #999999;
 
 }
 
@@ -167,7 +171,7 @@ header{
 	
 	margin-left: 1px;
 	margin-right: 1px;
-	color: #3c9bfe;
+	color: #5dacff;
 
 }
 
@@ -178,9 +182,10 @@ header{
 	margin-bottom: 20px;
 	padding-top: 6px;
 	color: #444444;
-	border-radius: 17px;
-	height: 34px;
+	border-radius: 20px;
+	height: 36px;
 	font-size: 16px;
+	color: #444444;
 	width: 120px;
     box-shadow: 0px 1px 7px rgba(170,170,170,0.8);
     transition: opacity 0.25s;
@@ -207,7 +212,7 @@ header{
      
 .Wrapper .FooterPush {
 
-	height: 102px; /* Footer 的高度 */
+	height: 104px; /* Footer 的高度 */
 
 }  
      
@@ -215,8 +220,8 @@ header{
 
 	clear: both;
 	position: relative;  
-	margin-top: -102px; 
-	height: 102px;
+	margin-top: -104px; 
+	height: 104px;
 	width: 100%;
 	text-align: center;
 
@@ -230,8 +235,7 @@ header{
 }
 
 .mzsm{
-	
-	display: block;
+
 	margin-bottom: 2px;
 
 }

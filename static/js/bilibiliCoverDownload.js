@@ -21,6 +21,7 @@ $(document).ready(function() {
 			type:"GET",
 	        data:{"type":type,"url":url},
 	        success:function(data){
+	        	alert(document.documentElement.clientWidth,document.documentElement.clientHeight)
 	        	if (data.imgUrl != '') {
 	        		downloadIamge(data.imgUrl,'哔哩哔哩封面' + Math.floor(Math.random()*1000) + Math.floor(Math.random()*1000))
 	        	}

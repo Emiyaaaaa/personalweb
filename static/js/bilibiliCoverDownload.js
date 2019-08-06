@@ -22,7 +22,8 @@ $(document).ready(function() {
 	        		downloadIamge(data.imgUrl,'哔哩哔哩封面' + Math.floor(Math.random()*1000) + Math.floor(Math.random()*1000))
 	        	}
 	        	else{
-	        		alert('未找到视频')
+	        		document.getElementById('notFoundVideo').classList.add('not-found-video-active');
+	        		setTimeout(function(){document.getElementById('notFoundVideo').classList.remove('not-found-video-active');},2500);
 	        	}
 	        }
 		})

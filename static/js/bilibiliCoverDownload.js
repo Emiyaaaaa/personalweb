@@ -7,7 +7,10 @@ $(document).ready(function() {
     };
 	document.getElementById('search_button').addEventListener('click', function(){
 		var url = document.getElementById('search_url').value;
-		if (url.slice(0,15).indexOf('live') != -1 || url.slice(0,15).indexOf('zb') != -1) {
+		if (url.slice(0,15).indexOf('vc.') != -1) {
+			var type = 'vc';
+		}
+		else if (url.slice(0,15).indexOf('live') != -1 || url.slice(0,15).indexOf('zb') != -1) {
 			var type = 'live';
 		}
 		else{

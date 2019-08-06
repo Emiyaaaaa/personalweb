@@ -99,7 +99,7 @@ header{
 	width: 70%;
 	max-width: 750px;
 	margin: 0 auto;
-	margin-top: 130px;
+	margin-top: 12%;
 
 }
 
@@ -155,11 +155,19 @@ header{
 
 .instructions-text *{
 
-	margin-left: 15px;
-	margin-right: 15px;
-	margin-top: 10px;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-top: 8px;
 	font-size: 17px;
 	color: #888888;
+
+}
+
+.instructions-text a{
+	
+	margin-left: 1px;
+	margin-right: 1px;
+	color: #3c9bfe;
 
 }
 

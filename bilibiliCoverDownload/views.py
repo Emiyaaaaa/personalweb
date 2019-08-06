@@ -11,10 +11,18 @@ class BilibiliCoverDownloadView(View):
             return render(request, 'bilibiliCoverDownload.html')
         type = request.GET.get('type')
         headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36"}
+        inputUrl = inputUrl.replace('b23','b',1)
         videoNum = re.search(r'(\d+)', inputUrl, re.I)
         if videoNum != None and videoNum != '':
             try:
-                if type == 'video':
+                if type == 'vc':
+                    url = 'http://vc.bilibili.com/mobile/detail?vc=' + videoNum.group(1)
+                    response = requests.get(url, headers=headers).text
+                    print(response)
+                    result = re.search(r'class="video-cover" style="background-image: .*?&quot;(.*?)&quot;', response,re.M | re.I)
+                    img = result.group(1)
+                    return JsonResponse({'imgUrl': img})
+                elif type == 'video':
                     url = 'https://www.bilibili.com/av' + videoNum.group(1)
                     response = requests.get(url, headers=headers).text
                     result = re.search(r'<meta data-vue-meta="true" itemprop="image" content="(.*?)">', response, re.M | re.I)

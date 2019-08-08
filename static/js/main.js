@@ -161,7 +161,7 @@ function openLeftList(){
     if (!middleObj.classList.contains('moved')) {
         try {
             middleMarginLeftBeforeOpen = middleMarginLeftBeforeOpen;
-        } catch {
+        } catch (err){
             middleMarginLeftBeforeOpen = middleObj.offsetLeft;
         }
         //解决上移bug

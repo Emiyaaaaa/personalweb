@@ -153,12 +153,13 @@
 			errorJson = data;
 		}
 	}
-	if(window.location.host != '127.0.0.1:8000' && isPC() && clientWidth >= 1250){
+	if(window.location.host == '127.0.0.1:8000' && isPC() && clientWidth >= 1250){
 		$.ajax({
 			type: 'POST',
-			url: 'http://api.shujuzhihui.cn/api/weather/ip',
-			data: {'appKey':'9057ff088d24450b93d896cf317835f4','ip':returnCitySN["cip"],'n7':1},
+			url: '/',
+			data: {'type':'getWeather','ip':returnCitySN["cip"],'n7':1},
 			success:function(data){
+				console.log(data)
 				errorJson = '';
 				if (data.ERRORCODE == '0'){
 					var city = data.RESULT.area_maybe[0];

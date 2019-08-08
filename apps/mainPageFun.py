@@ -9,6 +9,7 @@ from codeDiary.models import CodeComment,CodeDiary,WebsitePsd
 from zhuhuVideoDownload.views import ZhuhuVideoDownloadView
 from diary.sendEmail import *
 import _thread
+import requests
 
 def getMoreContent(request):
     matter = request.GET.get('matter')
@@ -121,6 +122,12 @@ def weatherUser(request):
             return JsonResponse({'statusCode': '0'})
     else:
         return JsonResponse({'statusCode': '1'})
+
+def getWeather(request):
+    ip = request.POST.get('ip')
+    n7 = request.POST.get('n7')
+    response = requests.post('http://api.shujuzhihui.cn/api/weather/ip?appKey=9057ff088d24450b93d896cf317835f4&n7=1',{'ip':ip,'n7':n7})
+    return JsonResponse(eval(response.text))
 
 def ZhuhuVideoDownload(request):
     url = request.GET.get('url')

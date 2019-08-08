@@ -21,19 +21,17 @@ class BilibiliCoverDownloadView(View):
                     print(response)
                     result = re.search(r'class="video-cover" style="background-image: .*?&quot;(.*?)&quot;', response,re.M | re.I)
                     img = result.group(1)
-                    return JsonResponse({'imgUrl': img})
                 elif type == 'video':
                     url = 'https://www.bilibili.com/av' + videoNum.group(1)
                     response = requests.get(url, headers=headers).text
                     result = re.search(r'<meta data-vue-meta="true" itemprop="image" content="(.*?)">', response, re.M | re.I)
                     img = result.group(1)
-                    return JsonResponse({'imgUrl':img})
                 else:
                     url = 'https://search.bilibili.com/live?keyword=' + videoNum.group(1)
                     response = requests.get(url, headers=headers).text
                     result = re.search(r'"user_cover":"(.*?)"', response, re.M | re.I)
                     img = 'https:'+ result.group(1).replace(r'\u002F','\\')
-                    return JsonResponse({'imgUrl': img})
+                return JsonResponse({'imgUrl': img,'av':videoNum.group(1)})
             except:
                 return JsonResponse({'imgUrl':''})
         return render(request,'bilibiliCoverDownload.html')

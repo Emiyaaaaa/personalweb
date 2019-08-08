@@ -136,10 +136,19 @@ header{
 	max-width: 110px;
 	height: 40px;
 	border-radius: 20px;
-	padding-top: 7px;
 	margin: 0 auto;
 	margin-top: 30px;
 	background: rgba(0,131,255,0.8);
+
+}
+
+.search-button div{
+
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	margin: 0 auto;
+	width: 100%;
 
 }
 

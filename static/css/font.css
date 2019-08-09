@@ -5,6 +5,14 @@ body{
 
 }
 
+.left-menu a{
+
+	font-size: 20px;
+    letter-spacing: 2px;
+	color: #555555;
+
+}
+
 .brief_date{
 
 	margin: 0 auto;

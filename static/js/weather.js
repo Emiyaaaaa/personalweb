@@ -153,7 +153,7 @@
 			errorJson = data;
 		}
 	}
-	if(window.location.host != '127.0.0.1:8000' && isPC() && clientWidth >= 1250){
+	if(window.location.host == '127.0.0.1:8000' && isPC() && clientWidth >= 1250){
 		$.ajax({
 			type: 'POST',
 			url: '/',

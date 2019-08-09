@@ -95,7 +95,8 @@
 
 		return {'weather':weather,'weather_icon':weather_icon,'tem':tem,'date':date,'wdp':wdp};
 	}
-	function setWeatherIcon(weather,date,is_now = 0){
+	function setWeatherIcon(weather,date,is_now){
+		var is_now = is_now||0;
 		var weatherDic = {
 			'':'sunny',
 			'晴':'sunny',
@@ -159,7 +160,6 @@
 			url: '/',
 			data: {'type':'getWeather','ip':returnCitySN["cip"],'n7':1},
 			success:function(data){
-				console.log(data)
 				errorJson = '';
 				if (data.ERRORCODE == '0'){
 					var city = data.RESULT.area_maybe[0];

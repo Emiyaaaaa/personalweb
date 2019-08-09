@@ -265,7 +265,7 @@ function get_ele_lines(ele){
     return lc;
 }
 
-function check_lines_length(chooseEle = 0){
+function check_lines_length(chooseEle){
     const look_more = '<span class="look-more">[查看更多]</span>';
     var chooseEle = chooseEle[0];//jquary对象转为js对象
     var text_ele = chooseEle.getElementsByClassName('brief-content-text')['0'];
@@ -289,7 +289,8 @@ function check_lines_length(chooseEle = 0){
 }
 
 
-function cut_line(ele, reason_lines=2){
+function cut_line(ele, reason_lines){
+    var reason_lines = reason_lines||2;
     var now_lines = get_ele_lines(ele);
     var look_more = '<span class="look-more">[查看更多]</span>';
     const inner_text = ele.innerText;

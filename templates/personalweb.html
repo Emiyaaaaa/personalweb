@@ -4,8 +4,8 @@
 <head>
 	<meta charset="utf-8">
 	<title>Emiya的博客</title>
-	<link rel="shortcut icon" href="/media/{{ website_icon }}" /> 
-	<link rel="bookmark" href="/media/{{ website_icon }}" type="image/x-icon"　/> 
+	<link rel="shortcut icon" href="/media/{{ website_icon }}"/> 
+	<link rel="bookmark" href="/media/{{ website_icon }}" type="image/x-icon"/> 
 	<script type="text/javascript" src="{% static 'js/jquery/1.10.2/jquery.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/outputConsole.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/console_out.js' %}"></script>
@@ -20,10 +20,6 @@
 		      	}
 		    }
 		   	return true;
-		}
-		if(window.location.host != '127.0.0.1:8000' && isPC()){
-			outputConsole2();
-			outputConsole3();
 		}	
 	</script>
 	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
@@ -53,7 +49,7 @@
 	<link rel="stylesheet" type="text/css" href="{% static 'css/middle/matter3.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/middle/window.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/middle/markdown.css' %}">
-	<link rel="stylesheet" type="text/css" href="{% static 'css/weather-icon.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/right/weather-icon.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/middle/window-bubbly-button.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/media.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/middle/suggestion-bubbly-button.css' %}">
@@ -321,9 +317,9 @@
     	<div class="right-fish">
 	    	<div class="right-fish-txt">Emiya养的鱼(可投喂哦~)</div>
 	    	<object type="application/x-shockwave-flash" style="outline:none;" class="right-fish-flash" data="https://cdn.abowman.com/widgets/fish/fish.swf?up_fishColor4=62EA49&up_fishColor9=F45540&up_fishColor6=F45540&up_fishColor5=FB9741&up_fishColor10=F45540&up_foodColor=41A53D&up_fishColor3=81D0CE&up_fishColor1=4097F4&up_fishColor8=F45540&up_fishColor2=E7DC33&up_numFish=6&up_fishName=Fish&up_fishColor7=F45540&up_backgroundImage=http://&up_backgroundColor=F0F7FF&" width="300" height="200">
-	    		<param name="movie" value="https://cdn.abowman.com/widgets/fish/fish.swf?up_fishColor4=62EA49&up_fishColor9=F45540&up_fishColor6=F45540&up_fishColor5=FB9741&up_fishColor10=F45540&up_foodColor=41A53D&up_fishColor3=81D0CE&up_fishColor1=4097F4&up_fishColor8=F45540&up_fishColor2=E7DC33&up_numFish=6&up_fishName=Fish&up_fishColor7=F45540&up_backgroundImage=http://&up_backgroundColor=F0F7FF&"></param>
-	    		<param name="AllowScriptAccess" value="always"></param>
-	    		<param name="wmode" value="opaque"></param>
+	    		<param name="movie" value="https://cdn.abowman.com/widgets/fish/fish.swf?up_fishColor4=62EA49&up_fishColor9=F45540&up_fishColor6=F45540&up_fishColor5=FB9741&up_fishColor10=F45540&up_foodColor=41A53D&up_fishColor3=81D0CE&up_fishColor1=4097F4&up_fishColor8=F45540&up_fishColor2=E7DC33&up_numFish=6&up_fishName=Fish&up_fishColor7=F45540&up_backgroundImage=http://&up_backgroundColor=F0F7FF&"/>
+	    		<param name="AllowScriptAccess" value="always"/>
+	    		<param name="wmode" value="opaque"/>
 	    		<param name="scale" value="noscale"/>
 	    		<param name="salign" value="tl"/>
 	    	</object>
@@ -386,5 +382,11 @@
     <script type="text/javascript" src="{% static 'js/ajax.js' %}"></script>
     <script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
     <script type="text/javascript" src="{% static 'js/weather.js' %}"></script>
+    <script type="text/javascript">
+    	if(window.location.host != '127.0.0.1:8000' && isPC()){
+			outputConsole2();
+			outputConsole3();
+		}
+    </script>
 </body>
 </html>

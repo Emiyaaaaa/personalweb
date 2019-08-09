@@ -3,7 +3,8 @@ function outputConsole1() {
 没错！这是一枚彩蛋！\n\
 此人正是本网站域名的由来 —— Emiya Shirou (卫宫士郎)\n\
 请拉伸Console(控制台)并确保行每行字数大于144后享用。\n\
-彩蛋制作方法已传GitHub: https://github.com/Emiyaaaaa/pic2char\n\n\
+彩蛋制作方法已传GitHub: https://github.com/Emiyaaaaa/pic2char\n\
+换个浏览器可以看到彩色版本(Edge有什么好的，亏你还能看到这个彩蛋)\n\n\
                                                                       r(|((({fxQ-\n\
                                                                       a|||||||(((((((z\n\
                                               j||||/|||((|||||||/txzCmwj||||(((((|(((((|J        (){u\n\

@@ -12,7 +12,7 @@ try:
         pull = os.popen('git pull origin master')
         if pull.read() != 'Already up to date.\n':
             stop_server = os.popen('net stop Apache2.4')
-            time.sleep(5)
+            time.sleep(15)
             start_server = os.popen('net start Apache2.4')
             with open('github.log','a') as f:
                 f.write(str(datetime.now())+
@@ -28,7 +28,7 @@ try:
                   start_server.read()+
                   '\n')
         print(str(datetime.now()) + '\n' + pull.read())
-        time.sleep(60)
+        time.sleep(30)
 except BaseException as e:
     print(str(datetime.now()) + ' ' + str(e))
     os._exit(1)

@@ -508,11 +508,15 @@
 	}
 
 	.windowImg{
-		padding: 0 0 10px 10px;
+
+		padding: 0 10px 10px 10px;
+
 	}
 
 	#window img{
+
 		max-width: 90%;
+		
 	}
 
 	.brief-content .title{

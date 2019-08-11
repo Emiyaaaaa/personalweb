@@ -167,7 +167,6 @@
 						var area = data.RESULT.areaInfo;
 						city = area.city;
 					}
-					//now
 					var d1 = data.RESULT.weatherInfo.n7.d1;
 					var d2 = data.RESULT.weatherInfo.n7.d2;
 					var d3 = data.RESULT.weatherInfo.n7.d3;

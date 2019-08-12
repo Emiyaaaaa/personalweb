@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'personalcenter',
     'bilibiliCoverDownload',
+    'ngaShadiaoImage',
     'changeLog',
     'codeDiary',
     'notFoundPage',

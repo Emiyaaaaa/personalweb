@@ -24,6 +24,7 @@ from mobilePage.views import MobilePageView
 from hexconvert.views import HexconvertView
 from bilibiliCoverDownload.views import BilibiliCoverDownloadView
 from zhuhuVideoDownload.views import ZhuhuVideoDownloadView
+from ngaShadiaoImage.views import NgaShadiaoImageView
 import xadmin
 import mainPage
 from django.shortcuts import render
@@ -35,12 +36,12 @@ urlpatterns = [
     url(r'^xadmin/', xadmin.site.urls),
     url(r'^admin/', admin.site.urls),
     url(r'^404$',NotFoundPageView.as_view()),
-    url(r'^mobile$',MobilePageView.as_view()),
+    url(r'^hexconvert$',HexconvertView.as_view()),
     url(r'^zhihu-video-download/mzsm$', ZhuhuVideoDownloadView().get_mzsm),
     url(r'^zhihu-video-download/(?P<url>[\S\s]*)', ZhuhuVideoDownloadView.as_view()),
-    url(r'^hexconvert$',HexconvertView.as_view()),
     url(r'^bilibiliCoverDownload$', BilibiliCoverDownloadView.as_view()),
-    url(r'^bilibiliCoverDownload/mzsm$', BilibiliCoverDownloadView().get_mzsm)
+    url(r'^bilibiliCoverDownload/mzsm$', BilibiliCoverDownloadView().get_mzsm),
+    url(r'^ngaShadiaoImage$', NgaShadiaoImageView.as_view()),
 ]
 urlpatterns += static(settings.MEDIA_URL , document_root = settings.MEDIA_ROOT )
 urlpatterns += static(settings.STATIC_URL, document_root = settings.STATIC_ROOT )

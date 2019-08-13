@@ -20,7 +20,6 @@ from django.conf.urls.static import static
 from diary.views import DiaryView
 from codeDiary.views import CodeDiaryView
 from notFoundPage.views import NotFoundPageView
-from mobilePage.views import MobilePageView
 from hexconvert.views import HexconvertView
 from bilibiliCoverDownload.views import BilibiliCoverDownloadView
 from zhuhuVideoDownload.views import ZhuhuVideoDownloadView

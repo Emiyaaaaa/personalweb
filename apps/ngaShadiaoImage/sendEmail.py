@@ -45,4 +45,4 @@ def sendEmail(verificationKey,imgName='verification.png',my_user='2914034404@qq.
         print('发送失败')
 
 if __name__ == '__main__':
-    sendEmail()
+    sendEmail('123')

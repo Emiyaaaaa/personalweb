@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97ee085e-0965-47c9-afdd-5d7ddcf1463c" name="Default" comment="bug">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/ngaShadiaoImage/NgaSD.imgdict" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/ngaShadiaoImage/getCookies.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/ngaShadiaoImage/getCookies.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/ngaShadiaoImage/login.cookies" beforeDir="false" afterPath="$PROJECT_DIR$/apps/ngaShadiaoImage/login.cookies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/ngaShadiaoImage/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/ngaShadiaoImage/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/ngaShadiaoImage/sendEmail.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/ngaShadiaoImage/sendEmail.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../untitled/qzone/qzone_sql.py" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/qzone/qzone_sql.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -100,11 +97,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/ngaShadiaoImage/getCookies.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="53" column="23" selection-start-line="53" selection-start-column="15" selection-end-line="53" selection-end-column="23" />
+            <state relative-caret-position="483">
+              <caret line="63" column="95" selection-start-line="63" selection-start-column="95" selection-end-line="63" selection-end-column="95" />
               <folding>
                 <element signature="e#102#132#0" expanded="true" />
               </folding>
@@ -113,22 +110,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/personalweb/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1081">
-              <caret line="47" column="19" lean-forward="true" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
-              <folding>
-                <element signature="e#312#321#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/ngaShadiaoImage/sendEmail.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="22" column="13" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="13" />
+            <state relative-caret-position="1081">
+              <caret line="47" column="20" lean-forward="true" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
               <folding>
                 <element signature="e#164#173#0" expanded="true" />
               </folding>
@@ -139,20 +124,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/ngaShadiaoImage/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="46">
+              <caret line="2" column="25" lean-forward="true" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/ngaShadiaoImage/start.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="81" column="82" lean-forward="true" selection-start-line="81" selection-start-column="82" selection-end-line="81" selection-end-column="82" />
+            <state relative-caret-position="-1014">
+              <caret line="21" column="20" lean-forward="true" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
               <folding>
                 <element signature="e#101#114#0" expanded="true" />
               </folding>
@@ -289,10 +271,10 @@
         <option value="$PROJECT_DIR$/apps/diary/sendEmail.py" />
         <option value="$PROJECT_DIR$/tools/set_password.py" />
         <option value="$PROJECT_DIR$/personalweb/settings.py" />
-        <option value="$PROJECT_DIR$/apps/ngaShadiaoImage/sendEmail.py" />
         <option value="$PROJECT_DIR$/apps/ngaShadiaoImage/adminx.py" />
         <option value="$PROJECT_DIR$/apps/ngaShadiaoImage/models.py" />
         <option value="$PROJECT_DIR$/apps/ngaShadiaoImage/views.py" />
+        <option value="$PROJECT_DIR$/apps/ngaShadiaoImage/sendEmail.py" />
         <option value="$PROJECT_DIR$/apps/ngaShadiaoImage/getCookies.py" />
       </list>
     </option>
@@ -780,7 +762,7 @@
       <workItem from="1565936544004" duration="6181000" />
       <workItem from="1566109477009" duration="9863000" />
       <workItem from="1566120672093" duration="2000" />
-      <workItem from="1566170578153" duration="14123000" />
+      <workItem from="1566170578153" duration="15779000" />
     </task>
     <task id="LOCAL-00115" summary="打开窗口部分的代码重构">
       <created>1541317972699</created>
@@ -1129,7 +1111,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="162782000" />
+    <option name="totallyTimeSpent" value="164438000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1425,9 +1407,6 @@
     <entry file="file://$PROJECT_DIR$/apps/ngaShadiaoImage/login.cookies">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/ngaShadiaoImage/uploadImage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
@@ -1619,28 +1598,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/ngaShadiaoImage/sendEmail.py">
+    <entry file="file://$PROJECT_DIR$/apps/ngaShadiaoImage/verification.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/ngaShadiaoImage/start.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="13" />
+        <state relative-caret-position="-1014">
+          <caret line="21" column="20" lean-forward="true" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
           <folding>
-            <element signature="e#164#173#0" expanded="true" />
+            <element signature="e#101#114#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/ngaShadiaoImage/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="46">
+          <caret line="2" column="25" lean-forward="true" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/ngaShadiaoImage/verification.png">
-      <provider selected="true" editor-type-id="images" />
+    <entry file="file://$PROJECT_DIR$/apps/ngaShadiaoImage/sendEmail.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1081">
+          <caret line="47" column="20" lean-forward="true" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
+          <folding>
+            <element signature="e#164#173#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/personalweb/settings.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -1654,20 +1643,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/ngaShadiaoImage/getCookies.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="53" column="23" selection-start-line="53" selection-start-column="15" selection-end-line="53" selection-end-column="23" />
+        <state relative-caret-position="483">
+          <caret line="63" column="95" selection-start-line="63" selection-start-column="95" selection-end-line="63" selection-end-column="95" />
           <folding>
             <element signature="e#102#132#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/ngaShadiaoImage/start.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="81" column="82" lean-forward="true" selection-start-line="81" selection-start-column="82" selection-end-line="81" selection-end-column="82" />
-          <folding>
-            <element signature="e#101#114#0" expanded="true" />
           </folding>
         </state>
       </provider>

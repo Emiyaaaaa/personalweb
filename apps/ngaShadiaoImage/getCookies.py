@@ -61,7 +61,7 @@ def getCookies():
 def getVerificationNumber(verificationKey):
     verification = NgaShadiaoImageVerification.objects.filter(verificationKey=verificationKey)
     for verification in verification:
-        if str(verification.created_at)[0:10] == time.strftime("%Y-%m-%d", time.localtime()):
+        if str(verification.created_at)[0:10] == time.strftime("%Y-%m-%d", time.localtime()):#仅当日有效
             return verification.verification
     time.sleep(30)#查不到就再来一遍
     return getVerificationNumber(verificationKey)

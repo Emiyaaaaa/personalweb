@@ -4,16 +4,14 @@
 # @Time    : 2019/8/14 14:14
 
 from selenium import webdriver
-import os
-from django.conf import settings
-from ngaShadiaoImage.models import NgaShadiaoImageVerification
-import requests
+from .models import NgaShadiaoImageVerification
 import time
-import pickle
 import random
+from .sendEmail import *
+import os
 
 def login():
-    EXECUTABLE_PATH = "chromedriver.exe"
+    EXECUTABLE_PATH = thisPath('chromedriver.exe')
     chromedriver = EXECUTABLE_PATH
     os.environ["webdriver.chrome.driver"] = chromedriver
     driver = webdriver.Chrome(chromedriver)
@@ -35,8 +33,10 @@ def login():
 #填写验证码
 def inputVerification(driver):
     driver.find_elements_by_tag_name('a')[2].click()
-    verificationKey = random.randint(100,999)
-
+    driver.get_screenshot_as_file(thisPath('verification.png'))
+    verificationKey = str(random.randint(100,999))
+    sendEmail(verificationKey)
+    time.sleep(70)
     verificationNumber = getVerificationNumber(verificationKey)
     driver.find_elements_by_tag_name('input')[2].send_keys(verificationNumber)
     driver.find_elements_by_tag_name('a')[6].click()
@@ -51,16 +51,24 @@ def getCookies():
         cookies_dict = {}
         for i in cookies:
             cookies_dict[i['name']] = i['value']
-        path = 'login.cookies'
+        path = thisPath('login.cookies')
         with open(path, 'wb') as file:
             pickle.dump(cookies_dict,file)
         return '获取cookies成功'
-    except:
-        return '获取cookies失败'
+    except Exception as e:
+        return '获取cookies失败:'+ str(e)
 
 def getVerificationNumber(verificationKey):
-    verificationNumber = NgaShadiaoImageVerification.objects.filter(verificationKey=verificationKey)
+    verification = NgaShadiaoImageVerification.objects.filter(verificationKey=verificationKey)
+    for verification in verification:
+        if str(verification.created_at)[0:10] == time.strftime("%Y-%m-%d", time.localtime()):
+            return verification.verification
+    time.sleep(30)#查不到就再来一遍
+    return getVerificationNumber(verificationKey)
 
-    return verificationNumber
+def thisPath(path):
+    return os.path.join(settings.BASE_DIR, 'apps', 'ngaShadiaoImage', path)
+
+
 if __name__ == '__main__':
     getCookies()

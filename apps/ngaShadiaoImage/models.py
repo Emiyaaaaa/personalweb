@@ -5,7 +5,11 @@ class NgaShadiaoImage(models.Model):
     title = models.TextField(verbose_name=u'标题')
     author = models.CharField(verbose_name=u'作者', max_length=100, default='kemiwjb')
     url = models.CharField(verbose_name=u'链接', max_length=200)
-    text = models.TextField(verbose_name=u'正文')
+    time = models.CharField(verbose_name=u'时间', max_length=100, default='')
+    content = models.TextField(verbose_name=u'正文')
+    visit_num = models.IntegerField(verbose_name='浏览量',default='0')
+    images = models.TextField(verbose_name=u'图片', default='')
+    is_display = models.IntegerField(verbose_name=u'展示', choices=((0, '隐藏'), (1, '显示')), default=1)
     created_at = models.DateTimeField(verbose_name=u'创建时间', auto_now_add=True, null=False)
     update_at = models.DateTimeField(verbose_name=u'更新时间', auto_now=True, null=False)
 

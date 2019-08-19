@@ -6,8 +6,8 @@ from django.db import models
 from .models import NgaShadiaoImage
 
 class NgaShadiaoImageAdmin(object):
-    list_display = ['title','url','created_at']
-    search_field = ['title','url','created_at']
+    list_display = ['title','url','time','is_display']
+    search_field = ['title','url','time','is_display']
     list_editable = ['is_display']
     exclude = ['title_id']
 

@@ -9,7 +9,8 @@ class NgaShadiaoImageView(View):
         if type == 'administrator':
             return render(request, 'ngaShadiaoImageAdmin.html')
         if type == 'Get Cookies':
-            getCookies()
+            status = getCookies()
+            print(status)
         if type == 'Start':
             status = start()
             print(status)

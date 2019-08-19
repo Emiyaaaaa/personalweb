@@ -5,7 +5,13 @@
 
 import pickle
 
-dict = {'password':'','Administrator':'','stmppw':''}
+dict = {'MysqlPwd': '',
+        'Administrator': '',
+        'stmppw': '',
+        'NgaPwd': '',
+        'ram1AccessKeyID': '',
+        'ram1AccessKeySecret': ''
+        }
 path = 'personalWeb.pwd'
 
 # with open(path, 'wb') as file:

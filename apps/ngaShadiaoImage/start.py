@@ -29,7 +29,7 @@ def start():
         return {'massage':'cookies已失效'}
     #获取帖子链接
     allUrl = []
-    for i in range(1,2):#1到10页
+    for i in range(1,10):#1到10页
         response = session.get('https://bbs.nga.cn/thread.php?authorid=33842236&page=' + str(i))
         response.encoding = response.apparent_encoding
         response = response.text
@@ -57,7 +57,7 @@ def start():
             errorMassage = []
             time = ''
             allUrl.append(url)
-            for i in range(1,3):#1,20
+            for i in range(1,20):#1,20
                 response = regetPage(url,session,i)
                 if response == '':
                     errorMassage.append(url + '&page=' + str(i))
@@ -79,7 +79,6 @@ def start():
                     for img_ in img:
                         uploadImages.append(img_)
             NgaShadiaoImage.objects.create(title=urlTuple[1], author='kemiwjb', url=url, time=time, content=contentList, images=uploadImages)
-    print(errorMassage)
     return {'success': allUrl, 'error': errorMassage, 'massage': '获取图片成功，等待上传图片。'}
 
 def regetPage(url,session,i,loopNum=0):

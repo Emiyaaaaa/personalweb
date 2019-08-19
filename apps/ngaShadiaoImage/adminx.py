@@ -3,7 +3,7 @@
 import xadmin
 from django.contrib import admin
 from django.db import models
-from .models import NgaShadiaoImage
+from .models import NgaShadiaoImage,NgaShadiaoImageVerification
 
 class NgaShadiaoImageAdmin(object):
     list_display = ['title','url','time','is_display']
@@ -11,4 +11,8 @@ class NgaShadiaoImageAdmin(object):
     list_editable = ['is_display']
     exclude = ['title_id']
 
+class NgaShadiaoImageVerificationAdmin(object):
+    list_display = ['verificationID','verification','verificationKey','created_at']
+
 xadmin.site.register(NgaShadiaoImage,NgaShadiaoImageAdmin)
+xadmin.site.register(NgaShadiaoImageVerification,NgaShadiaoImageVerificationAdmin)

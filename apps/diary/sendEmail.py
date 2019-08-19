@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # @Author  : Li Haozheng
 # @Time    : 2019/3/18 19:34
-# @From     : http://www.runoob.com/python3/python3-smtp.html
+# @From    : http://www.runoob.com/python3/python3-smtp.html
 
 import smtplib
 from email.mime.text import MIMEText
@@ -29,7 +29,7 @@ def sendEmail(email_txt,my_user='2914034404@qq.com'):
         server.sendmail(my_sender, [my_user, ], msg.as_string())
         server.quit()
     except Exception:
-        pass
+        print('发送失败')
 
 if __name__ == '__main__':
     sendEmail('test')

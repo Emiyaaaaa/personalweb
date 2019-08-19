@@ -19,3 +19,17 @@ class NgaShadiaoImage(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class NgaShadiaoImageVerification(models.Model):
+    verificationID = models.AutoField(primary_key=True)
+    verification = models.CharField(verbose_name=u'验证码', max_length=100, default='')
+    verificationKey = models.CharField(verbose_name=u'Key', max_length=100, default='')
+    created_at = models.DateTimeField(verbose_name=u'创建时间', auto_now_add=True, null=False)
+
+    class Meta:
+        verbose_name = u"验证码"
+        verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return self.verification

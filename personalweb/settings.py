@@ -107,7 +107,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'personalweb1',
         'USER': "root",
-        'PASSWORD': dict['password'],
+        'PASSWORD': dict['MysqlPwd'],
         'HOST': "60.205.207.236"
     }
 }

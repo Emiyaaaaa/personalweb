@@ -8,7 +8,7 @@ import re
 from django.conf import settings
 import os
 import time
-from .models import NgaShadiaoImage,NgaShadiaoImageContent
+from .models import NgaShadiaoImage, NgaShadiaoImageContent, NgaShadiaoImageUpImgList
 from .uploadImage import *
 
 def start():
@@ -57,9 +57,9 @@ def start():
             print(url)
             if url in urlInSqlList:#已存在于数据库
                 continue
-            uploadImages = []
-            contentList = []
             errorMassage = []
+            uploadImages = []
+            floorDictList = []
             time = ''
             allUrl.append(url)
             for i in range(1,20):#1,20
@@ -75,16 +75,27 @@ def start():
                 #开始帖子内匹配图片
                 findObj1 = re.finditer("func=ucp&uid=33842236.*?<h4 class='silver subtitle'>附件</h4>",str(response), re.S | re.I | re.M)
                 for find in findObj1:
+                    contentList = []
                     if time == '':#获取发帖时间
                         time = re.findall("title='reply time'>(.*?)</span></div>", find.group())[0]
+
+                    floor_time = re.findall("title='reply time'>(.*?)</span></div>", find.group())[0]
                     content = re.findall("id='postcontent\d+'.*?>(.*?)</", find.group())[0]
                     img = re.findall("\[img](.*?)\[\/img\]",content)
                     contentList.append(content)
-                    for img_ in img:
-                        uploadImages.append(img_)
-            NgaShadiaoImage.objects.create(title=urlTuple[1], author='kemiwjb', url=url, time=time, img_length=len(uploadImages))
+                    floorDictList.append({
+                        'floor_time': floor_time,
+                    })
+                    for img in img:
+                        uploadImages.append(img)
+
+            NgaShadiaoImage.objects.create(title=urlTuple[1], author='kemiwjb', url=url, time=time, img_length=len(uploadImages))  # 上传主表
             ngaShadiaoImage = NgaShadiaoImage.objects.get(url=url)
-            NgaShadiaoImageContent.objects.create(ngaShadiaoImage=ngaShadiaoImage, content=contentList, )#需要修改
+            NgaShadiaoImageUpImgList.objects.create(ngaShadiaoImage=ngaShadiaoImage, images=uploadImages, images_num=len(uploadImages))
+            # 上传正文表
+            ngaShadiaoImage = NgaShadiaoImage.objects.get(url=url)
+            NgaShadiaoImageContent.objects.create(ngaShadiaoImage=ngaShadiaoImage, content=contentList, )
+
     return {'success': allUrl, 'error': errorMassage, 'massage': '获取图片成功，等待上传图片。'}
 
 def regetPage(url,session,i,loopNum=0):

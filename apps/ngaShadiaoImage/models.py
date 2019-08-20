@@ -28,7 +28,6 @@ class NgaShadiaoImageContent(models.Model):
     content = models.TextField(verbose_name=u'正文')
     floor = models.IntegerField(verbose_name='楼层')
     all_floor_num = models.IntegerField(verbose_name='总楼数')
-    images = models.TextField(verbose_name=u'图片', default='')
     is_display = models.IntegerField(verbose_name=u'展示', choices=((0, '隐藏'), (1, '显示')), default=1)
     created_at = models.DateTimeField(verbose_name=u'创建时间', auto_now_add=True, null=False)
     update_at = models.DateTimeField(verbose_name=u'更新时间', auto_now=True, null=False)
@@ -38,7 +37,24 @@ class NgaShadiaoImageContent(models.Model):
         verbose_name_plural = verbose_name
 
     def __str__(self):
-        return self.title
+        return self.ngaShadiaoImage
+
+
+class NgaShadiaoImageUpImgList(models.Model):
+    upImgList_id = models.AutoField(primary_key=True)
+    ngaShadiaoImage = models.ForeignKey(NgaShadiaoImage, on_delete=models.CASCADE, verbose_name=u'标题')
+    images = models.TextField(verbose_name=u'图片', default='')
+    images_num = models.IntegerField(verbose_name='图片数', default=0)
+    is_upload = models.IntegerField(verbose_name=u'是否上传', choices=((0, '未上传'), (1, '已上传')), default=0)
+    created_at = models.DateTimeField(verbose_name=u'创建时间', auto_now_add=True, null=False)
+    update_at = models.DateTimeField(verbose_name=u'更新时间', auto_now=True, null=False)
+
+    class Meta:
+        verbose_name = u"NGA沙雕图上传"
+        verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return self.ngaShadiaoImage
 
 
 class NgaShadiaoImageVerification(models.Model):

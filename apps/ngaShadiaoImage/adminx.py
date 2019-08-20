@@ -3,7 +3,7 @@
 import xadmin
 from django.contrib import admin
 from django.db import models
-from .models import NgaShadiaoImage, NgaShadiaoImageVerification, NgaShadiaoImageContent
+from .models import NgaShadiaoImage, NgaShadiaoImageVerification, NgaShadiaoImageContent, NgaShadiaoImageUpImgList
 
 
 class NgaShadiaoImageAdmin(object):
@@ -19,6 +19,11 @@ class NgaShadiaoImageVerificationAdmin(object):
 
 class NgaShadiaoImageContentAdmin(object):
     list_display = ['title', 'content', 'floor', 'all_floor_num', 'is_display', 'time']
+
+
+class NgaShadiaoImageUpImgListAdmin(object):
+    list_display = ['title', 'images', 'images_num', 'is_upload', 'created_at']
+    list_editable = ['is_upload']
 
 
 xadmin.site.register(NgaShadiaoImage, NgaShadiaoImageAdmin)

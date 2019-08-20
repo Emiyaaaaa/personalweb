@@ -8,7 +8,7 @@ import re
 from django.conf import settings
 import os
 import time
-from .models import NgaShadiaoImage
+from .models import NgaShadiaoImage,NgaShadiaoImageContent
 from .uploadImage import *
 
 def start():
@@ -82,7 +82,9 @@ def start():
                     contentList.append(content)
                     for img_ in img:
                         uploadImages.append(img_)
-            NgaShadiaoImage.objects.create(title=urlTuple[1], author='kemiwjb', url=url, time=time, content=contentList, images=uploadImages, img_length=len(uploadImages))
+            NgaShadiaoImage.objects.create(title=urlTuple[1], author='kemiwjb', url=url, time=time, img_length=len(uploadImages))
+            ngaShadiaoImage = NgaShadiaoImage.objects.get(url=url)
+            NgaShadiaoImageContent.objects.create(ngaShadiaoImage=ngaShadiaoImage, content=contentList, )#需要修改
     return {'success': allUrl, 'error': errorMassage, 'massage': '获取图片成功，等待上传图片。'}
 
 def regetPage(url,session,i,loopNum=0):

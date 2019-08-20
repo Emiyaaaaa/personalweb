@@ -14,5 +14,10 @@
 	<div class="button" onclick="control(this)"><div>Stop</div></div>
 	<div class="button" onclick="control(this)"><div>Get cookies</div></div>
 	<div class="display"></div>
+	<script type="text/javascript">
+        $.ajaxSetup({
+            data:{csrfmiddlewaretoken:'{{ csrf_token }}'}
+        })
+	</script>
 </body>
 </html>

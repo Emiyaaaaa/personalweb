@@ -30,6 +30,7 @@ def start():
     #获取帖子链接
     allUrl = []
     for i in range(1,10):#1到10页
+        print(i)
         response = session.get('https://bbs.nga.cn/thread.php?authorid=33842236&page=' + str(i))
         response.encoding = response.apparent_encoding
         response = response.text
@@ -45,13 +46,17 @@ def start():
                 b.append((tuple[0],tuple[1]))
         urlAndTitleList = b
         # 获取图片链接
+        urlInSqlList = []
         urlInSql = NgaShadiaoImage.objects.values_list('url')
+        for i in urlInSql:
+            urlInSqlList.append(i[0])
+        print(urlInSql)
         for urlTuple in urlAndTitleList:
             firstFloorFlag = ''#通过页数内第一层楼的楼数来判断是否重复，重复则为末页
             url = 'https://bbs.nga.cn' + urlTuple[0]
-            for i in urlInSql:
-                if url == i[0]:#已存在于数据库
-                    continue
+            print(url)
+            if url in urlInSqlList:#已存在于数据库
+                continue
             uploadImages = []
             contentList = []
             errorMassage = []
@@ -72,13 +77,12 @@ def start():
                 for find in findObj1:
                     if time == '':#获取发帖时间
                         time = re.findall("title='reply time'>(.*?)</span></div>", find.group())[0]
-                    # print(find.group())
                     content = re.findall("id='postcontent\d+'.*?>(.*?)</", find.group())[0]
                     img = re.findall("\[img](.*?)\[\/img\]",content)
                     contentList.append(content)
                     for img_ in img:
                         uploadImages.append(img_)
-            NgaShadiaoImage.objects.create(title=urlTuple[1], author='kemiwjb', url=url, time=time, content=contentList, images=uploadImages)
+            NgaShadiaoImage.objects.create(title=urlTuple[1], author='kemiwjb', url=url, time=time, content=contentList, images=uploadImages, img_length=len(uploadImages))
     return {'success': allUrl, 'error': errorMassage, 'massage': '获取图片成功，等待上传图片。'}
 
 def regetPage(url,session,i,loopNum=0):

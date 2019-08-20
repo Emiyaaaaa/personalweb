@@ -1,14 +1,32 @@
 {% load staticfiles %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cn">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>NGA沙雕图</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/ngaShadiaoImage/ngaShadiaoImage.css' %}">
+	<script type="text/javascript" src="{% static 'js/jquery/1.10.2/jquery.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/ngaShadiaoImage.js' %}"></script>
 </head>
 <body>
-
+	<div class="main">
+		<div>
+			<ul>
+                {% for n in ngaShadiaoImageInfo %}
+                    <li class="main-list">
+                        <div class="left">
+                            <div class="author">{{ n.author }}</div>
+                            <div class="time">{{ n.time }}</div>
+                        </div>
+                        <div class="right">
+                            <div class="title">{{ n.title }}</div>
+                        </div>
+                    </li>
+                {% endfor %}
+			</ul>
+		</div>
+	</div>
 </body>
 </html>

@@ -9,6 +9,8 @@ class NgaShadiaoImage(models.Model):
     content = models.TextField(verbose_name=u'正文')
     visit_num = models.IntegerField(verbose_name='浏览量',default='0')
     images = models.TextField(verbose_name=u'图片', default='')
+    img_length = models.IntegerField(verbose_name='图片数', default=0)
+    like_num = models.IntegerField(verbose_name=u'点赞数',default='0')
     is_display = models.IntegerField(verbose_name=u'展示', choices=((0, '隐藏'), (1, '显示')), default=1)
     created_at = models.DateTimeField(verbose_name=u'创建时间', auto_now_add=True, null=False)
     update_at = models.DateTimeField(verbose_name=u'更新时间', auto_now=True, null=False)

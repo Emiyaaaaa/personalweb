@@ -54,9 +54,9 @@ def getCookies():
         path = thisPath('login.cookies')
         with open(path, 'wb') as file:
             pickle.dump(cookies_dict,file)
-        return '获取cookies成功'
+        return {'massage': '获取cookies成功'}
     except Exception as e:
-        return '获取cookies失败:'+ str(e)
+        return {'massage': '获取cookies成功' + str(e)}
 
 def getVerificationNumber(verificationKey):
     verification = NgaShadiaoImageVerification.objects.filter(verificationKey=verificationKey)

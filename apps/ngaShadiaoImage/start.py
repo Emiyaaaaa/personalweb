@@ -90,13 +90,12 @@ def start():
                     for img in img:
                         uploadImages.append(img)
 
-            NgaShadiaoImage.objects.create(title=urlTuple[1], author='kemiwjb', url=url, time=time, img_length=len(uploadImages))  # 上传主表
+            NgaShadiaoImage.objects.create(title=urlTuple[1], author='kemiwjb', url=url, time=time, images_num=len(uploadImages))  # 上传主表
             ngaShadiaoImage = NgaShadiaoImage.objects.get(url=url)
             NgaShadiaoImageUpImgList.objects.create(ngaShadiaoImage=ngaShadiaoImage, images=uploadImages, images_num=len(uploadImages))
             # 上传正文表
             for fdl in floorDictList:
                 NgaShadiaoImageContent.objects.create(ngaShadiaoImage=ngaShadiaoImage, time=fdl['floor_time'], content=fdl['floor_content'], floor=fdl['floor_num'], all_floor_num=len(floorDictList))
-
     return {'success': allUrl, 'error': errorMassage, 'massage': '获取图片成功，等待上传图片。'}
 
 def regetPage(url,session,i,loopNum=0):

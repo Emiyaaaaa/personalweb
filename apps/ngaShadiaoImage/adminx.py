@@ -7,7 +7,7 @@ from .models import NgaShadiaoImage, NgaShadiaoImageVerification, NgaShadiaoImag
 
 
 class NgaShadiaoImageAdmin(object):
-    list_display = ['title', 'url', 'time', 'is_display']
+    list_display = ['title', 'url', 'time', 'img_num', 'visit_num', 'is_display']
     search_field = ['title', 'url', 'time', 'is_display']
     list_editable = ['is_display']
     exclude = ['title_id']

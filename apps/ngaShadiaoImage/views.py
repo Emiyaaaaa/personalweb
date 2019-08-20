@@ -26,10 +26,10 @@ class NgaShadiaoImageView(View):
             for timeStamp in timeList:
                 n = ngaShadiaoImage.filter(time=timeDict[timeStamp])
                 ngaShadiaoImageInfo.append({
-                    'title': n.values_list('title'),
-                    'time': timeDict[timeStamp],
-                    'author': n.values_list('author'),
-                    'imgNum': n.values_list('img_length')
+                    'title': n.title,
+                    'time': n.time,
+                    'author': n.author,
+                    'imgNum': n.img_length
                 })
         return render(request, 'ngaShadiaoImage.html', {'ngaShadiaoImageInfo': ngaShadiaoImageInfo})
 

@@ -78,7 +78,7 @@ def start():
                         time = re.findall("title='reply time'>(.*?)</span></div>", find.group())[0]
 
                     floor_time = re.findall("title='reply time'>(.*?)</span></div>", find.group())[0]
-                    content = re.findall("id='postcontent(\d+)'.*?>(.*?)</", find.group())
+                    content = re.findall("id='postcontent(\d+)'.*?>(.*?)</", find.group())[0]
                     floor_num = content[0]
                     content = content[1]
                     img = re.findall("\[img](.*?)\[\/img\]",content)

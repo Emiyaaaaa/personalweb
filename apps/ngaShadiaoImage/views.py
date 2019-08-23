@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.views.generic import View
 from .getCookies import *
 from .start import *
+from .upload import *
 from django.http import JsonResponse
 from .models import NgaShadiaoImage
 
@@ -40,5 +41,8 @@ class NgaShadiaoImageView(View):
             return JsonResponse(status)
         if type == 'Start':
             status = start()
+            return JsonResponse(status)
+        if type == 'Upload':
+            status = upload()
             return JsonResponse(status)
         return render(request, '404.html')

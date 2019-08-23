@@ -54,13 +54,14 @@ a{
 body{
 
 	text-align: center;
+	background: rgba(225,252,254,0.2);
 
 }
 
 .button{
 
 	background: #555555;
-	border-radius: 30px;
+	border-radius: 35px;
 	margin: 0 auto;
 	margin-bottom: 20px;
 	height: 60px;
@@ -89,7 +90,42 @@ body{
 }
 
 .main-list{
+	
+	position: relative;
+	margin: 0 auto;
+	height: 100px;
+	width: 90%;
+	margin-top: 10px;
+	box-shadow:2px 2px 5px rgba(195,195,195,0.6);
+	background: #ffffff;
+
+}
+
+.main-list .left{
+	
+	position: absolute;
+	width: 100px;
+	min-width: 100px;
+	
+}
+
+.main-list .right{
+	
+	position: absolute;
+	left: 100px;
+
+}
+
+.updown-center{
+
+	top: 50%;
+	transform: translateY(-50%);
+
+}
+
+.main-list .right .title{
 
 	
 
 }
+

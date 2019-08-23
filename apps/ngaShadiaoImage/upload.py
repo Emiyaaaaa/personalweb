@@ -16,15 +16,23 @@ def upload():
         dict = pickle.load(file)
     auth = oss2.Auth(dict['ram1AccessKeyID'], dict['ram1AccessKeySecret'])
     upload = NgaShadiaoImageUpImgList.objects.filter(is_upload=0)
-    for u in upload:
-        imgListStr = u.images
-        imgList = eval(imgListStr)
-        id = u.upImgList_id
-        NgaShadiaoImageUpImgList.objects.filter(upImgList_id=id, is_upload=0).update(is_upload=1)
-        uploadImage(imgList,auth)
+    imageList = []
+    imageDict = {}
+    for u in upload:  # 避免长连接
+        imageDict['images'] = eval(u.images)
+        imageDict['id'] = u.upImgList_id
+        imageList.append(imageDict)
+    for i in imageList:
+        try:
+            uploadImage(i['images'],auth)
+            NgaShadiaoImageUpImgList.objects.filter(is_upload=0, upImgList_id=i['id']).update(is_upload=1)
+            print('上传完成')
+        except Exception as e:
+            print('上传错误:' + str(e))
     return {'massage': '上传完成'}
 
 def uploadImage(imgList,auth):
+    k = 0
     for imgName in imgList:
         if imgName[:4] != 'http':
             imgUrl = 'https://img.nga.178.com/attachments/' + imgName[2:]
@@ -33,4 +41,5 @@ def uploadImage(imgList,auth):
         bucket = oss2.Bucket(auth, 'oss-cn-shanghai.aliyuncs.com', 'cloudphoto-3')
         input = requests.get(imgUrl)
         bucket.put_object(imgName[2:], input)
-        print(imgUrl)
+        print(str(k) + '  ' + imgUrl)
+        k = k + 1

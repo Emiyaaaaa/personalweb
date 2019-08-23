@@ -23,14 +23,13 @@ class NgaShadiaoImageView(View):
                 timeList.append(myTimeStamp)
                 timeDict[myTimeStamp] = nt[0]
             timeList.sort(reverse=True)
-            print(timeList)
             for timeStamp in timeList:
-                n = ngaShadiaoImage.filter(time=timeDict[timeStamp])
+                n = ngaShadiaoImage.filter(time=timeDict[timeStamp])[0]
                 ngaShadiaoImageInfo.append({
                     'title': n.title,
                     'time': n.time,
                     'author': n.author,
-                    'imgNum': n.img_length
+                    'imgNum': n.images_num
                 })
         return render(request, 'ngaShadiaoImage.html', {'ngaShadiaoImageInfo': ngaShadiaoImageInfo})
 

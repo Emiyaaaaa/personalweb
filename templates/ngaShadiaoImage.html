@@ -10,7 +10,7 @@
 	<script type="text/javascript" src="{% static 'js/jquery/1.10.2/jquery.min.js' %}"></script>
 	<script type="text/javascript" src="{% static 'js/ngaShadiaoImage.js' %}"></script>
 </head>
-<body>
+<body class="ngaShadiaoImage">
     <div class="header">
         <div class="avatar">
             <img src="">
@@ -23,14 +23,16 @@
 		<div>
 			<ul>
                 {% for n in ngaShadiaoImageInfo %}
-                    <li class="main-list">
-                        <div class="left">
-                            <div class="author">{{ n.author }}</div>
-                            <div class="time">{{ n.time }}</div>
-                        </div>
-                        <div class="right">
-                            <div class="title updown-center">{{ n.title }}</div>
-                        </div>
+                    <li>
+                        <a class="main-list">
+                            <div class="left">
+                                <div class="author"><div class="center-relative">{{ n.author }}</div></div>
+                                <div class="time"><div class="center-relative">{{ n.time }}</div></div>
+                            </div>
+                            <div class="right">
+                                <div class="title">{{ n.title }}</div>
+                            </div>
+                        </a>
                     </li>
                 {% endfor %}
 			</ul>

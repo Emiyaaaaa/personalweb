@@ -1,3 +1,4 @@
 *.pwd
 .idea
 .pyc
+venv/*

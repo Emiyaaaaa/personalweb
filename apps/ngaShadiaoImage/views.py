@@ -27,7 +27,7 @@ class NgaShadiaoImageView(View):
                 n = ngaShadiaoImage.filter(time=timeDict[timeStamp])[0]
                 ngaShadiaoImageInfo.append({
                     'title': n.title,
-                    'time': n.time,
+                    'time': n.time[0:10],
                     'author': n.author,
                     'imgNum': n.images_num
                 })

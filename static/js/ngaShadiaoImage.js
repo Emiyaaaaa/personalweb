@@ -1,3 +1,7 @@
+$(document).ready(function() {
+	listFadeIn();
+});
+
 function control(this_ele){
 	$.ajax({
 		url:"/ngaShadiaoImage",
@@ -10,23 +14,34 @@ function control(this_ele){
 }
 
 function sort(this_ele){
+	let mainListEle = document.getElementsByClassName('main-list');
+	// 排序
+	
+	// 先清除
+	document.getElementById('main_ul').classList.add('main-list-opacity-trasition');
+	for (var i = 0; i < mainListEle.length; i++) {
+		mainListEle[i].style.opacity = '0';
+	}
+	// 后淡入
+	fadeIn('main-list')
+}
+
+function listFadeIn(){
+	// 淡入
+	classLength = fadeIn('main-list');
+	// 去除opacity的动画效果（opacity变为0的动画效果）
+	setTimeout(function(){
+		document.getElementById('main_ul').classList.remove('main-list-opacity-trasition');
+	}, (classLength)*100);
 
 }
 
-$(document).ready(function() {
-	function listFadeIn(){
-		let list = document.getElementsByClassName('main-list');
-		for (var i = 0; i < list.length; i++) {
-			setTimeout(function(){
-				console.log(list[i]);
-				list[i].style.opacity = '1';
-			}, i*100);
-		}
-		// setTimeout(function(){
-		// 	document.getElementById('main_ul').classList.toggle('main-list-transition');
-		// }, i*100);
-
+function fadeIn(className){
+	let classEle = document.getElementsByClassName(className);
+	for (let i = 0; i < classEle.length; i++) {
+		setTimeout(function(){
+			classEle[i].style.opacity = '1';
+		}, i*100);
 	}
-	listFadeIn();
-
-});
+	return classEle.length;
+}

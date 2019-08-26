@@ -121,7 +121,7 @@ body{
 
 }
 
-.main-list-transition a{
+.main-list-opacity-transition a{
 
 	transition: opacity 0.28s;
     -webkit-transition: opacity 0.28s;

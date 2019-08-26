@@ -2,8 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97ee085e-0965-47c9-afdd-5d7ddcf1463c" name="Default" comment="bug">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/ngaShadiaoImage/migrations/0011_ngashadiaoimagecontent_url.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/ngaShadiaoImageContent.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/ngaShadiaoImage/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/ngaShadiaoImage/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/ngaShadiaoImage/start.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/ngaShadiaoImage/start.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/ngaShadiaoImage/upload.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/ngaShadiaoImage/upload.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/ngaShadiaoImage/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/ngaShadiaoImage/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/zhuhuVideoDownload/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/zhuhuVideoDownload/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/personalweb/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/personalweb/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/ngaShadiaoImage/ngaShadiaoImage.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/ngaShadiaoImage/ngaShadiaoImage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ngaShadiaoImage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ngaShadiaoImage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../untitled/qzone/qzone_sql.py" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/qzone/qzone_sql.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -99,22 +108,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/ngaShadiaoImage/getCookies.py">
+        <entry file="file://$PROJECT_DIR$/personalweb/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="23" selection-start-line="23" selection-end-line="24" selection-end-column="35" />
+            <state relative-caret-position="690">
+              <caret line="43" column="36" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
               <folding>
-                <element signature="e#102#132#0" expanded="true" />
+                <element signature="e#644#676#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/ngaShadiaoImage/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="736">
-              <caret line="44" column="24" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="24" />
+            <state relative-caret-position="316">
+              <caret line="59" column="90" selection-start-line="59" selection-start-column="90" selection-end-line="59" selection-end-column="90" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -122,14 +131,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/apps/ngaShadiaoImage/upload.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/ngaShadiaoImageContent.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-              <folding>
-                <element signature="e#101#133#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="253">
+              <caret line="11" column="35" lean-forward="true" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -153,6 +159,18 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/zhuhuVideoDownload/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1748">
+              <caret line="79" column="29" selection-start-line="79" selection-start-column="29" selection-end-line="79" selection-end-column="29" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../untitled/草稿箱/5.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="322">
@@ -167,8 +185,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/ngaShadiaoImage/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="4" column="28" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="28" />
+            <state relative-caret-position="598">
+              <caret line="26" column="62" selection-start-line="26" selection-start-column="62" selection-end-line="26" selection-end-column="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/ngaShadiaoImage/start.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2070">
+              <caret line="97" column="95" selection-start-line="97" selection-start-column="95" selection-end-line="97" selection-end-column="95" />
+              <folding>
+                <element signature="e#101#114#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -187,8 +217,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -246,7 +276,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/extra_apps/qzone/qzone_sql.py" />
         <option value="$PROJECT_DIR$/tools/code_line.py" />
         <option value="$PROJECT_DIR$/../untitled/草稿箱/11.py" />
         <option value="$PROJECT_DIR$/apps/codeDiary/views.py" />
@@ -270,13 +299,11 @@
         <option value="$PROJECT_DIR$/../untitled/spider/字符画2.0.py" />
         <option value="$PROJECT_DIR$/../untitled/草稿箱/14.py" />
         <option value="$PROJECT_DIR$/apps/hexconvert/views.py" />
-        <option value="$PROJECT_DIR$/apps/zhuhuVideoDownload/views.py" />
         <option value="$PROJECT_DIR$/bilibiliCoverDownload/views.py" />
         <option value="$PROJECT_DIR$/apps/mainPage.py" />
         <option value="$PROJECT_DIR$/apps/mainPageFun.py" />
         <option value="$PROJECT_DIR$/extra_apps/qzone/main.py" />
         <option value="$PROJECT_DIR$/templates/ngaShadiaoImageAdmin.html" />
-        <option value="$PROJECT_DIR$/personalweb/urls.py" />
         <option value="$PROJECT_DIR$/../untitled/草稿箱/获取nga图片.py" />
         <option value="$PROJECT_DIR$/../untitled/草稿箱/2.py" />
         <option value="$PROJECT_DIR$/templates/1.html" />
@@ -290,17 +317,20 @@
         <option value="$PROJECT_DIR$/apps/ngaShadiaoImage/sendEmail.py" />
         <option value="$PROJECT_DIR$/apps/ngaShadiaoImage/getCookies.py" />
         <option value="$PROJECT_DIR$/apps/ngaShadiaoImage/adminx.py" />
-        <option value="$PROJECT_DIR$/apps/ngaShadiaoImage/start.py" />
         <option value="$PROJECT_DIR$/../untitled/草稿箱/5.py" />
-        <option value="$PROJECT_DIR$/apps/ngaShadiaoImage/models.py" />
         <option value="$PROJECT_DIR$/templates/ngaShadiaoImage.html" />
-        <option value="$PROJECT_DIR$/apps/ngaShadiaoImage/views.py" />
-        <option value="$PROJECT_DIR$/apps/ngaShadiaoImage/upload.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/apps/ngaShadiaoImage/upload.py" />
+        <option value="$PROJECT_DIR$/apps/zhuhuVideoDownload/views.py" />
+        <option value="$PROJECT_DIR$/personalweb/urls.py" />
+        <option value="$PROJECT_DIR$/apps/ngaShadiaoImage/models.py" />
+        <option value="$PROJECT_DIR$/apps/ngaShadiaoImage/start.py" />
+        <option value="$PROJECT_DIR$/apps/ngaShadiaoImage/views.py" />
+        <option value="$PROJECT_DIR$/templates/ngaShadiaoImageContent.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="716" />
     <option name="y" value="24" />
     <option name="width" value="1152" />
@@ -314,7 +344,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -384,6 +413,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -760,10 +790,10 @@
     <list>
       <item itemvalue="Django server.personalweb" />
       <item itemvalue="Python.getCookies" />
+      <item itemvalue="Python.5" />
       <item itemvalue="Python.set_password (1)" />
       <item itemvalue="Python.set_password" />
       <item itemvalue="Python.start" />
-      <item itemvalue="Python.5" />
       <item itemvalue="Python.upload" />
     </list>
     <recent_temporary>
@@ -835,6 +865,11 @@
       <workItem from="1566537676378" duration="15433000" />
       <workItem from="1566559715395" duration="2218000" />
       <workItem from="1566629325945" duration="1618000" />
+      <workItem from="1566650314763" duration="73000" />
+      <workItem from="1566708350073" duration="3640000" />
+      <workItem from="1566726221711" duration="2632000" />
+      <workItem from="1566730047032" duration="2252000" />
+      <workItem from="1566804565407" duration="1496000" />
     </task>
     <task id="LOCAL-00115" summary="打开窗口部分的代码重构">
       <created>1541317972699</created>
@@ -1183,7 +1218,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="205258000" />
+    <option name="totallyTimeSpent" value="215351000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1195,10 +1230,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49787235" visible="true" weight="0.2228145" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49787235" visible="true" weight="0.13646056" />
       <window_info id="Structure" order="1" sideWeight="0.50212765" side_tool="true" weight="0.27010724" />
       <window_info id="Favorites" order="2" sideWeight="0.50212765" side_tool="true" weight="0.27010724" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -1215,7 +1250,7 @@
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5026652" side_tool="true" weight="0.45336226" />
       <window_info anchor="bottom" id="manage.py@personalweb" order="12" weight="0.3470716" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="14" sideWeight="0.49733475" weight="0.45336226" />
+      <window_info active="true" anchor="bottom" id="Run" order="14" sideWeight="0.49733475" visible="true" weight="0.45336226" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -1300,18 +1335,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/personalweb/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/notFoundPage/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/personalcenter/views.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1341,13 +1364,6 @@
           <folding>
             <element signature="e#78#107#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/personalweb/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="17" column="32" lean-forward="true" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -1556,16 +1572,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/zhuhuVideoDownload/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="77" column="40" lean-forward="true" selection-start-line="77" selection-start-column="40" selection-end-line="77" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../untitled/草稿箱/4.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1578,13 +1584,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/ngaShadiaoImage/start.py">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1719">
-          <caret line="19" selection-start-line="19" selection-end-line="20" selection-end-column="40" />
-          <folding>
-            <element signature="e#101#114#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="69">
+          <caret line="3" column="6" lean-forward="true" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/views/generic/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="48" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -1594,6 +1604,26 @@
           <caret line="23" selection-start-line="23" selection-end-line="24" selection-end-column="35" />
           <folding>
             <element signature="e#102#132#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/ngaShadiaoImage/upload.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="667">
+          <caret line="34" column="82" selection-start-line="34" selection-start-column="82" selection-end-line="34" selection-end-column="82" />
+          <folding>
+            <element signature="e#101#133#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/personalweb/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="43" column="36" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
+          <folding>
+            <element signature="e#644#676#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1612,6 +1642,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/apps/zhuhuVideoDownload/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1748">
+          <caret line="79" column="29" selection-start-line="79" selection-start-column="29" selection-end-line="79" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../untitled/草稿箱/5.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
@@ -1624,8 +1664,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/ngaShadiaoImage/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="28" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="28" />
+        <state relative-caret-position="598">
+          <caret line="26" column="62" selection-start-line="26" selection-start-column="62" selection-end-line="26" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/ngaShadiaoImage/start.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2070">
+          <caret line="97" column="95" selection-start-line="97" selection-start-column="95" selection-end-line="97" selection-end-column="95" />
+          <folding>
+            <element signature="e#101#114#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1636,29 +1686,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/ngaShadiaoImageContent.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="35" lean-forward="true" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/apps/ngaShadiaoImage/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="736">
-          <caret line="44" column="24" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="24" />
+        <state relative-caret-position="316">
+          <caret line="59" column="90" selection-start-line="59" selection-start-column="90" selection-end-line="59" selection-end-column="90" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="6" lean-forward="true" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/ngaShadiaoImage/upload.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-          <folding>
-            <element signature="e#101#133#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -24,6 +24,7 @@ class NgaShadiaoImage(models.Model):
 class NgaShadiaoImageContent(models.Model):
     content_id = models.AutoField(primary_key=True)
     ngaShadiaoImage = models.ForeignKey(NgaShadiaoImage, on_delete=models.CASCADE, verbose_name=u'标题')
+    url = models.CharField(verbose_name=u'链接', max_length=200)
     time = models.CharField(verbose_name=u'时间', max_length=100, default='')
     content = models.TextField(verbose_name=u'正文')
     floor = models.IntegerField(verbose_name='楼层')

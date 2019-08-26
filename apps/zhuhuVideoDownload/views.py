@@ -7,7 +7,6 @@ null = ''
 
 class ZhuhuVideoDownloadView(View):
     def get(self,request,url):
-
         if url == None or url == '':
             return render(request,'zhihuVideoDownload.html',{'url':''})
         else:

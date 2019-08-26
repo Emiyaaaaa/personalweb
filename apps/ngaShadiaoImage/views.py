@@ -4,7 +4,7 @@ from .getCookies import *
 from .start import *
 from .upload import *
 from django.http import JsonResponse
-from .models import NgaShadiaoImage
+from .models import NgaShadiaoImage, NgaShadiaoImageContent
 
 class NgaShadiaoImageView(View):
     def get(self,request):
@@ -29,7 +29,8 @@ class NgaShadiaoImageView(View):
                     'title': n.title,
                     'time': n.time[0:10],
                     'author': n.author,
-                    'imgNum': n.images_num
+                    'imgNum': n.images_num,
+                    'url': n.url
                 })
         return render(request, 'ngaShadiaoImage.html', {'ngaShadiaoImageInfo': ngaShadiaoImageInfo})
 
@@ -45,3 +46,15 @@ class NgaShadiaoImageView(View):
             status = upload()
             return JsonResponse(status)
         return render(request, '404.html')
+
+    def get_content(self, request):
+        content_url = request.GET.get('content_url')
+        ngaShadiaoImageContentInfo = []
+        ngaShadiaoImageContent = NgaShadiaoImageContent.objects.filter(url=content_url).order_by('floor')
+        for n in ngaShadiaoImageContent:
+            ngaShadiaoImageContentInfo.append({
+                'content': n.content,
+                'time': n.time,
+                'floor': n.floor,
+            })
+        return render(request, 'ngaShadiaoImageContent.html', {'ngaShadiaoImageContentInfo': ngaShadiaoImageContentInfo})

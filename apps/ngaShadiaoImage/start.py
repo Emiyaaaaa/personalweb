@@ -95,7 +95,7 @@ def start():
             NgaShadiaoImageUpImgList.objects.create(ngaShadiaoImage=ngaShadiaoImage, images=uploadImages, images_num=len(uploadImages))
             # 上传正文表
             for fdl in floorDictList:
-                NgaShadiaoImageContent.objects.create(ngaShadiaoImage=ngaShadiaoImage, time=fdl['floor_time'], content=fdl['floor_content'], floor=fdl['floor_num'], all_floor_num=len(floorDictList))
+                NgaShadiaoImageContent.objects.create(ngaShadiaoImage=ngaShadiaoImage, url=url, time=fdl['floor_time'], content=fdl['floor_content'], floor=fdl['floor_num'], all_floor_num=len(floorDictList))
     return {'success': allUrl, 'error': errorMassage, 'massage': '获取图片成功，等待上传图片。'}
 
 def regetPage(url,session,i,loopNum=0):

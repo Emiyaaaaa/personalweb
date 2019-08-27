@@ -13,22 +13,26 @@ function control(this_ele){
 	})
 }
 
-function sort(this_ele){
-	let mainListEle = document.getElementsByClassName('main-list');
+function sort(){
+	let mainListEle = document.getElementById('main_ul').getElementsByTagName('li');
 	// 排序
-	
-	// 先清除
-	document.getElementById('main_ul').classList.add('main-list-opacity-trasition');
-	for (var i = 0; i < mainListEle.length; i++) {
-		mainListEle[i].style.opacity = '0';
+	let sortListHtml = '';
+	document.getElementById('time_sort').getElementsByClassName('sort-img')[0].classList.toggle('sort-down');
+	for (let i = mainListEle.length - 1; i >= 0; i--) {
+		sortListHtml += '<li>' + mainListEle[i].innerHTML.replace('opacity: 1;','opacity: 0;') + '</li>';
 	}
-	// 后淡入
-	fadeIn('main-list')
+	// 添加淡入效果
+	document.getElementById('main_ul').classList.add('main-list-opacity-trasition');
+	// 放入HTML
+	document.getElementById('main_ul').innerHTML = sortListHtml;
+	// 淡入
+	fadeIn('main-list-a');
+	
 }
 
 function listFadeIn(){
 	// 淡入
-	classLength = fadeIn('main-list');
+	classLength = fadeIn('main-list-a');
 	// 去除opacity的动画效果（opacity变为0的动画效果）
 	setTimeout(function(){
 		document.getElementById('main_ul').classList.remove('main-list-opacity-trasition');

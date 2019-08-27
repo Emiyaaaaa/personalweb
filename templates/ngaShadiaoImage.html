@@ -17,10 +17,13 @@
         </div>
     </div>
     <div class="sort-bar">
-        <div class="left">
-            <div class="center-relative" id="time_sort" onclick="sort(this)">
-                <span>时间</span>
-                <img class="sort-img" src="">
+        <div class="left" onclick="sort()">
+            <div class="center-relative time-sort" id="time_sort">
+                <div class="sort-text">时间</div>
+                <div class="sort-img sort-down">
+                    <img class="up-triangle" src="{% static 'images/up_triangle.png' %}">
+                    <img class="down-triangle" src="{% static 'images/down_triangle.png' %}">
+                </div>
             </div> 
         </div>
         <div class="right"><div class="center-relative">公告: <span class="notice">关于本网站的说明</span></div></div>
@@ -30,7 +33,7 @@
 			<ul class="main-list-opacity-transition" id="main_ul">
                 {% for n in ngaShadiaoImageInfo %}
                     <li>
-                        <a href="ngaShadiaoImage/content/?content_url={{ n.url }}" class="main-list">
+                        <a href="ngaShadiaoImage/content/?content_url={{ n.url }}" class="main-list-a">
                             <div class="left">
                                 <div class="author"><div class="center-relative">{{ n.author }}</div></div>
                                 <div class="time"><div class="center-relative">{{ n.time }}</div></div>

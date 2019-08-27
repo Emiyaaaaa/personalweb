@@ -50,11 +50,37 @@ class NgaShadiaoImageView(View):
     def get_content(self, request):
         content_url = request.GET.get('content_url')
         ngaShadiaoImageContentInfo = []
-        ngaShadiaoImageContent = NgaShadiaoImageContent.objects.filter(url=content_url).order_by('floor')
+        ngaShadiaoImageContent = NgaShadiaoImageContent.objects.filter(url=content_url).filter(floor__lte=0).order_by('floor')#前两楼
+        title = NgaShadiaoImage.objects.get(url=content_url).title
         for n in ngaShadiaoImageContent:
+            content = n.content
+            content = re.sub('\[s:ac:.*?\]', '', content)
+            content = '>' + content.replace('[img]./', '<img class="image" src="https://cloudphoto-3.oss-cn-shanghai.aliyuncs.com/').replace('[/img]', '">') + '<'
+            content = content.replace('><', '$flag1$')  # 保护 ><
+            content = content.replace('>', '$flag2$')
+            content = content.replace('<', '$flag3$')
+            content = content.replace('$flag1$','><').replace('$flag2$', '><span>').replace('$flag3$', '</span><')  # 为文字添加span标签
+            content = content[1:-1]
+            print(content)
             ngaShadiaoImageContentInfo.append({
-                'content': n.content,
+                'content': content,
                 'time': n.time,
                 'floor': n.floor,
             })
-        return render(request, 'ngaShadiaoImageContent.html', {'ngaShadiaoImageContentInfo': ngaShadiaoImageContentInfo})
+        return render(request, 'ngaShadiaoImageContent.html', {'ngaShadiaoImageContentInfo': ngaShadiaoImageContentInfo, 'title': title})
+
+    def ajax_get_content(self, request):
+        content_url = request.GET.get('content_url')
+        ngaShadiaoImageContentInfo = []
+        ngaShadiaoImageContent = NgaShadiaoImageContent.objects.filter(url=content_url).filter(floor__lte=1).order_by('floor')#前两楼
+        for n in ngaShadiaoImageContent:
+            content = n.content
+            content = re.sub('\[s:ac:.*?\]', '', content)
+            content = content.replace('[img]./', '<img class="image" src="https://cloudphoto-3.oss-cn-shanghai.aliyuncs.com/').replace('[/img]', '">')
+            # print(content)
+            ngaShadiaoImageContentInfo.append({
+                'content': content,
+                'time': n.time,
+                'floor': n.floor,
+            })
+        return JsonResponse({'ngaShadiaoImageContentInfo': ngaShadiaoImageContentInfo})

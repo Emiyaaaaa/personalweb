@@ -11,7 +11,7 @@
 	<script type="text/javascript" src="{% static 'js/ngaShadiaoImageContent.js' %}"></script>
 <body >
     <div class="main">
-    	<div class="title">{{ title }}</div>
+    	<div class="title" id="mian_content">{{ title }}</div>
         {% for n in ngaShadiaoImageContentInfo %}
 	        <div id="{{ n.floor }}" class="floor">
 	            <div class="floor-bar">
@@ -21,7 +21,7 @@
 	            <div class="floor-text">{{ n.content|safe }}</div>
 	        </div>
         {% endfor %}
-        <div id="loadFloor" style="display: none;">unlocked</div>
+        <div id="scrollLoadFloor" style="display: none;">unlocked</div>
     </div>
 </body>
 </html>

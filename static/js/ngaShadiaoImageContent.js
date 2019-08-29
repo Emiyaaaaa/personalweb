@@ -10,13 +10,11 @@ function scrollBottom(){
     if(clients + scrollTop >= wholeHeight-300){
     	floor = document.getElementsByClassName('floor').length - 1;
     	content_url = urlSearch('content_url');
-    	if (document.getElementById('loadFloor').innerText != 'locked') {
+    	if (document.getElementById('scrollLoadFloor').innerText != 'locked') {
     		console.log(content_url, floor);
-    		document.getElementById('loadFloor').innerText = 'locked';
+    		document.getElementById('scrollLoadFloor').innerText = 'locked';
     		getFloor(floor, content_url);
     	}
-    	
-
     }
 }
 
@@ -26,7 +24,8 @@ function getFloor(floor, content_url){
         type:"GET",
         data:{"floor":floor, "content_url":content_url},
         success:function(data){
-        	document.getElementById('loadFloor').innerText = 'unlocked';
+        	$(document.getElementById('mian_content')).append(data);
+        	document.getElementById('scrollLoadFloor').innerText = 'unlocked';
         }
 	})
 }

@@ -79,10 +79,9 @@ class NgaShadiaoImageView(View):
             content = n.content
             content = re.sub('\[s:ac:.*?\]', '', content)
             content = content.replace('[img]./', '<img class="image" src="https://cloudphoto-3.oss-cn-shanghai.aliyuncs.com/').replace('[/img]', '">')
-            # print(content)
             ngaShadiaoImageContentInfo.append({
                 'content': content,
                 'time': n.time,
                 'floor': n.floor,
             })
-        return JsonResponse({'ngaShadiaoImageContentInfo': ngaShadiaoImageContentInfo})
+        return render(request, 'ngaShadiaoImageFloor.html', {'ngaShadiaoImageContentInfo': ngaShadiaoImageContentInfo})

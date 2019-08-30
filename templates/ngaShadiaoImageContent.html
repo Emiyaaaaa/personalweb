@@ -10,8 +10,8 @@
 	<script type="text/javascript" src="{% static 'js/jquery/1.10.2/jquery.min.js' %}"></script>
 	<script type="text/javascript" src="{% static 'js/ngaShadiaoImageContent.js' %}"></script>
 <body >
-    <div class="main">
-    	<div class="title" id="mian_content">{{ title }}</div>
+    <div id="mian_content">
+    	<div class="title">{{ title }}</div>
         {% for n in ngaShadiaoImageContentInfo %}
 	        <div id="{{ n.floor }}" class="floor">
 	            <div class="floor-bar">

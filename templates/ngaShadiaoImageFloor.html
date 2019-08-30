@@ -1,9 +1,7 @@
-{% for n in ngaShadiaoImageContentInfo %}
-    <div id="{{ n.floor }}" class="floor">
-        <div class="floor-bar">
-        	<div class="floor-time">{{ n.time }}</div>
-        	<div class="floor-num">{{ n.floor }} L</div>
-        </div>
-        <div class="floor-text">{{ n.content|safe }}</div>
+<div id="{{ n.floor }}" class="floor">
+    <div class="floor-bar">
+        <div class="floor-time">{{ n.time }}</div>
+        <div class="floor-num">{{ n.floor }} L</div>
     </div>
-{% endfor %}
+    <div class="floor-text">{{ n.content|safe }}</div>
+</div>

@@ -73,15 +73,19 @@ class NgaShadiaoImageView(View):
     def ajax_get_floor(self, request):
         content_url = request.GET.get('content_url')
         floor_num = request.GET.get('floor')
-        ngaShadiaoImageContentInfo = []
-        ngaShadiaoImageContent = NgaShadiaoImageContent.objects.filter(url=content_url).filter(floor=int(floor_num))#前两楼
-        for n in ngaShadiaoImageContent:
-            content = n.content
-            content = re.sub('\[s:ac:.*?\]', '', content)
-            content = content.replace('[img]./', '<img class="image" src="https://cloudphoto-3.oss-cn-shanghai.aliyuncs.com/').replace('[/img]', '">')
-            ngaShadiaoImageContentInfo.append({
-                'content': content,
-                'time': n.time,
-                'floor': n.floor,
-            })
-        return render(request, 'ngaShadiaoImageFloor.html', {'ngaShadiaoImageContentInfo': ngaShadiaoImageContentInfo})
+        print(content_url)
+        ngaShadiaoImageContent = NgaShadiaoImageContent.objects.filter(url=content_url).order_by('floor')
+        if int(floor_num) > int(ngaShadiaoImageContent[0].all_floor_num):
+            return render(request, 'ngaShadiaoImageEnd.html')
+        n = ngaShadiaoImageContent[int(floor_num)]
+        content = n.content
+        content = re.sub('\[s:ac:.*?\]', '', content)
+        content = content.replace('[img]./', '<img class="image" src="https://cloudphoto-3.oss-cn-shanghai.aliyuncs.com/').replace('[/img]', '">')
+        ngaShadiaoImageContentInfo = {
+            'content': content,
+            'time': n.time,
+            'floor': floor_num,
+            'initial_floor':n.floor
+        }
+        print(ngaShadiaoImageContentInfo)
+        return render(request, 'ngaShadiaoImageFloor.html', {'n': ngaShadiaoImageContentInfo})

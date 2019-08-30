@@ -15,7 +15,8 @@ def upload():
         dict = pickle.load(file)
     auth = oss2.Auth(dict['ram1AccessKeyID'], dict['ram1AccessKeySecret'])
     uploadImg = NgaShadiaoImageUpImgList.objects.filter(is_upload=0)
-    NgaShadiaoImageUpImgList.objects.filter(is_upload=0).update(is_upload=1)
+    print(len(uploadImg))
+    # NgaShadiaoImageUpImgList.objects.filter(is_upload=0).update(is_upload=1)
     errorList = []
     for u in uploadImg:
         try:

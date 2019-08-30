@@ -14,16 +14,17 @@ def upload():
     with open(os.path.join(settings.BASE_DIR, 'tools', 'personalWeb.pwd'), 'rb') as file:
         dict = pickle.load(file)
     auth = oss2.Auth(dict['ram1AccessKeyID'], dict['ram1AccessKeySecret'])
-    upload = NgaShadiaoImageUpImgList.objects.filter(is_upload=0)
+    uploadImg = NgaShadiaoImageUpImgList.objects.filter(is_upload=0)
     NgaShadiaoImageUpImgList.objects.filter(is_upload=0).update(is_upload=1)
     errorList = []
-    for u in upload:
+    for u in uploadImg:
         try:
             uploadImage(eval(u.images),auth)
         except Exception as e:
             print('上传错误:' + str(e))
             errorList.append('上传错误:' + str(e))
-    return {'massage': '上传完成', 'error': errorList, 'succeed': len(upload)}
+    print('success:'+str(len(uploadImg)))
+    return {'massage': '上传完成', 'error': errorList, 'succeed': len(uploadImg)}
 
 def uploadImage(imgList,auth):
     k = 0

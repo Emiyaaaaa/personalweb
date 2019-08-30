@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97ee085e-0965-47c9-afdd-5d7ddcf1463c" name="Default" comment="bug">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/ngaShadiaoImage/upload.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/ngaShadiaoImage/upload.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/ngaShadiaoImage.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/ngaShadiaoImage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/ngaShadiaoImageContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/ngaShadiaoImageContent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ngaShadiaoImageAdmin.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ngaShadiaoImageAdmin.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../untitled/qzone/qzone_sql.py" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/qzone/qzone_sql.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -137,8 +133,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/ngaShadiaoImage/upload.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="25" column="74" lean-forward="true" selection-start-line="25" selection-start-column="74" selection-end-line="25" selection-end-column="74" />
+            <state relative-caret-position="270">
+              <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
               <folding>
                 <element signature="e#101#133#0" expanded="true" />
               </folding>
@@ -863,7 +859,7 @@
       <workItem from="1566804565407" duration="1496000" />
       <workItem from="1566889792132" duration="9518000" />
       <workItem from="1567064540395" duration="3227000" />
-      <workItem from="1567141476384" duration="996000" />
+      <workItem from="1567141476384" duration="2037000" />
     </task>
     <task id="LOCAL-00115" summary="打开窗口部分的代码重构">
       <created>1541317972699</created>
@@ -1212,7 +1208,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="229092000" />
+    <option name="totallyTimeSpent" value="230133000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1689,8 +1685,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/ngaShadiaoImage/upload.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="25" column="74" lean-forward="true" selection-start-line="25" selection-start-column="74" selection-end-line="25" selection-end-column="74" />
+        <state relative-caret-position="270">
+          <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
           <folding>
             <element signature="e#101#133#0" expanded="true" />
           </folding>

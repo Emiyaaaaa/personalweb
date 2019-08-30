@@ -93,7 +93,7 @@ body{
 
 .floor-text .image{
 	
-	margin-top: 11px;
+	padding-top: 4px;
 	width: 100%;
 
 }
@@ -101,7 +101,12 @@ body{
 .floor-text span{
 	
 	display: inline-block;
-	margin-top: 7px;
+	
+}
+
+.floor-text .image, .floor-text span{
+
+	margin-top: 9px;
 
 }
 

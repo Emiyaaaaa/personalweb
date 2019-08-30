@@ -23,7 +23,7 @@ def upload():
         except Exception as e:
             print('上传错误:' + str(e))
             errorList.append('上传错误:' + str(e))
-    return {'massage': '上传完成', 'error': errorList}
+    return {'massage': '上传完成', 'error': errorList, 'succeed': len(upload)}
 
 def uploadImage(imgList,auth):
     k = 0

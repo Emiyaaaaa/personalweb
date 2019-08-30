@@ -2,17 +2,6 @@ $(document).ready(function() {
 	listFadeIn();
 });
 
-function control(this_ele){
-	$.ajax({
-		url:"/ngaShadiaoImage",
-        type:"POST",
-        data:{"type":this_ele.innerText},
-        success:function(data){
-        	console.log(data)
-        }
-	})
-}
-
 function sort(){
 	let mainListEle = document.getElementById('main_ul').getElementsByTagName('li');
 	// 排序

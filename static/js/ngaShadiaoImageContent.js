@@ -6,7 +6,7 @@ function scrollBottom(){
     var clients = window.innerHeight;
     var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
     var wholeHeight = document.body.scrollHeight;
-    console.log(scrollTop+clients,wholeHeight)
+    console.log(scrollTop+clients,wholeHeight);
     if(clients + scrollTop >= wholeHeight-300){
     	floor = document.getElementsByClassName('floor').length - 1;
     	content_url = urlSearch('content_url');

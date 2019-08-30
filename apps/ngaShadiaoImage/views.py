@@ -73,7 +73,6 @@ class NgaShadiaoImageView(View):
     def ajax_get_floor(self, request):
         content_url = request.GET.get('content_url')
         floor_num = request.GET.get('floor')
-        print(content_url)
         ngaShadiaoImageContent = NgaShadiaoImageContent.objects.filter(url=content_url).order_by('floor')
         if int(floor_num) > int(ngaShadiaoImageContent[0].all_floor_num):
             return render(request, 'ngaShadiaoImageEnd.html')
@@ -87,5 +86,4 @@ class NgaShadiaoImageView(View):
             'floor': floor_num,
             'initial_floor':n.floor
         }
-        print(ngaShadiaoImageContentInfo)
         return render(request, 'ngaShadiaoImageFloor.html', {'n': ngaShadiaoImageContentInfo})

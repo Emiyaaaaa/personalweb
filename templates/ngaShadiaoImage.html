@@ -29,25 +29,24 @@
         <div class="right"><div class="center-relative">公告: <span class="notice">关于本网站的说明</span></div></div>
     </div>
 	<div id="main">
-		<div>
-			<ul class="main-list-opacity-transition" id="main_ul">
-                {% for n in ngaShadiaoImageInfo %}
-                    <li>
-                        <a href="ngaShadiaoImage/content/?content_url={{ n.encodeUrl }}" class="main-list-a">
-                            <div class="left">
-                                <div class="author"><div class="center-relative">{{ n.author }}</div></div>
-                                <div class="time"><div class="center-relative">{{ n.time }}</div></div>
-                            </div>
-                            <div class="right">
-                                <div class="title">{{ n.title }}</div>
-                                <div class="buttom-bar"></div>
-                            </div>
-                        </a>
-                    </li>
-                {% endfor %}
-			</ul>
-            <a href=""></a>
-		</div>
+		<ul class="main-list-opacity-transition" id="main_ul">
+            {% for n in ngaShadiaoImageInfo %}
+                <li>
+                    <a href="ngaShadiaoImage/content/?content_url={{ n.encodeUrl }}" class="main-list-a">
+                        <div class="left">
+                            <div class="author"><div class="center-relative">{{ n.author }}</div></div>
+                            <div class="time"><div class="center-relative">{{ n.time }}</div></div>
+                        </div>
+                        <div class="right">
+                            <div class="title">{{ n.title }}</div>
+                            <div class="buttom-bar"></div>
+                        </div>
+                    </a>
+                </li>
+            {% endfor %}
+		</ul>
+        <a href="/ngaShadiaoImage/mzsm" target="_blank" class="mzsm">免责声明</a>
+        <a href="http://www.miitbeian.gov.cn/" target="_blank" class="beian">晋ICP备18012113号-1</a>
 	</div>
 </body>
 </html>

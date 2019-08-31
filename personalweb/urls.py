@@ -43,6 +43,7 @@ urlpatterns = [
     url(r'^ngaShadiaoImage$', NgaShadiaoImageView.as_view()),
     url(r'^ngaShadiaoImage/content/$', NgaShadiaoImageView().get_content),
     url(r'^ngaShadiaoImage/getFloor$', NgaShadiaoImageView().ajax_get_floor),
+    url(r'^ngaShadiaoImage/mzsm$', NgaShadiaoImageView().get_mzsm),
 ]
 urlpatterns += static(settings.MEDIA_URL , document_root = settings.MEDIA_ROOT )
 urlpatterns += static(settings.STATIC_URL, document_root = settings.STATIC_ROOT )

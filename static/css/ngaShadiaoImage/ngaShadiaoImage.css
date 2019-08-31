@@ -323,3 +323,18 @@ body{
 	opacity: 1;
 
 }
+
+.mzsm,.beian{
+
+	display: block;
+	color: #666;
+	font-size: 13px;
+	margin-top: 5px;
+
+}
+
+.mzsm{
+
+	margin-top: 20px;
+
+}

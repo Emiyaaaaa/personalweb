@@ -87,3 +87,6 @@ class NgaShadiaoImageView(View):
             'initial_floor':n.floor
         }
         return render(request, 'ngaShadiaoImageFloor.html', {'n': ngaShadiaoImageContentInfo})
+
+    def get_mzsm(self,request):
+        return render(request,'ngaShadiaoImageMzsm.html')

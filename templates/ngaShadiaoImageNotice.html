@@ -1,24 +1,21 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="zh">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>免责声明</title>
-	<style type="text/css">
-		body{
-			text-align: center;
-		}
-		p,a{
-			margin: 0 auto;
-			width: 90%;
-			text-align: left;
-		}
-	</style>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/mzsm.css' %}">
 </head>
 <body>
 	<p style="margin-top: 40px">1.本网站所展示的图片均为网络上公开、合法、免费的图片，图片由kemiwjb收集后发布于NGA玩家论坛。</p>
 	<p>2.由于NGA玩家论坛的定时删帖机制，本网站提供将部分帖子备份的服务。</p>
 	<p>3.若本网站所展示的图片侵犯了您的合法权益，请联系 2914034404@qq.com 将图片删除。</p>
 	<p>4.若本网站所提供的服务侵犯了NGA玩家论坛的合法权益，请联系 2914034404@qq.com 将此功能下架。</p>
-	<a href="http://www.emiya.com.cn/ngaShadiaoImage">返回主页</a>
+	<div class="return-div">
+		<a href="http://www.emiya.com.cn/ngaShadiaoImage" class="return">
+			<div class="center-relative">返回主页</div>
+		</a>
+	</div>
 </body>
 </html>

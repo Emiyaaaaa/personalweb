@@ -90,3 +90,6 @@ class NgaShadiaoImageView(View):
 
     def get_mzsm(self,request):
         return render(request,'ngaShadiaoImageMzsm.html')
+
+    def get_notice(self,request):
+        return render(request,'ngaShadiaoImageNotice.html')

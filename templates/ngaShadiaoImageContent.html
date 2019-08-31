@@ -15,13 +15,14 @@
         {% for n in ngaShadiaoImageContentInfo %}
 	        <div id="{{ n.floor }}" class="floor">
 	            <div class="floor-bar">
-	            	<div class="floor-time">{{ n.time }}</div>
 	            	<div class="floor-num">{{ n.floor }} L</div>
+	            	<div class="floor-time">{{ n.time }}</div>
 	            </div>
 	            <div class="floor-text">{{ n.content|safe }}</div>
 	        </div>
         {% endfor %}
         <div id="scrollLoadFloor" style="display: none;">unlocked</div>
     </div>
+    
 </body>
 </html>

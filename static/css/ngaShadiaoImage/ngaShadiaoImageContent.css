@@ -63,8 +63,24 @@ body{
 }
 
 .title{
+	
+	font-size: 18px;
+	margin-bottom: 10px;
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+	font-weight: bold;
 
-	height: 50px;
+}
+
+.floor-bar{
+
+	text-align: left;
+	margin-left: 30px;
+	margin-right: 30px;
+	padding-top: 5px;
+	margin-top: 20px;
+	border-top: 2px solid rgba(0,0,0,0.2)
 
 }
 
@@ -75,11 +91,20 @@ body{
 }
 
 .floor-bar .floor-num{
-
+	
+	font-size: 13px;
 	border-radius: 3px;
 	border: 1px solid #555;
 	padding-left: 5px;
 	padding-right: 5px;
+	margin-right: 10px;
+
+}
+
+.floor-bar .floor-time{
+	
+	font-size: 15px;
+	color: rgba(0,0,0,0.8);
 
 }
 
@@ -106,8 +131,6 @@ body{
 
 .floor-text .image, .floor-text span{
 
-	margin-top: 9px;
+	margin-top: 11px;
 
 }
-
-.floor-text 

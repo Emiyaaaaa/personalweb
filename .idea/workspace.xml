@@ -2,28 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97ee085e-0965-47c9-afdd-5d7ddcf1463c" name="Default" comment="bug">
-      <change afterPath="$PROJECT_DIR$/apps/ngaShadiaoImage/migrations/0002_ngashadiaoimage_ngashadiaoimagecontent_ngashadiaoimageupimglist_ngashadiaoimageverification.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/ngaShadiaoImage/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/ngaShadiaoImage/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/ngaShadiaoImage/migrations/0002_auto_20190818_1540.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/ngaShadiaoImage/migrations/0003_auto_20190818_1613.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/ngaShadiaoImage/migrations/0004_ngashadiaoimage_time.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/ngaShadiaoImage/migrations/0005_ngashadiaoimageverification.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/ngaShadiaoImage/migrations/0006_ngashadiaoimageverification_verificationkey.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/ngaShadiaoImage/migrations/0007_auto_20190819_1717.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/ngaShadiaoImage/migrations/0008_auto_20190820_1624.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/ngaShadiaoImage/migrations/0009_auto_20190820_1734.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/ngaShadiaoImage/migrations/0010_auto_20190820_1849.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/ngaShadiaoImage/migrations/0011_ngashadiaoimagecontent_url.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/ngaShadiaoImage/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/ngaShadiaoImage/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/ngaShadiaoImage/start.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/ngaShadiaoImage/start.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/ngaShadiaoImage/upload.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/ngaShadiaoImage/upload.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/ngaShadiaoImage/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/ngaShadiaoImage/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/personalweb/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/personalweb/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/ngaShadiaoImage/ngaShadiaoImage.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/ngaShadiaoImage/ngaShadiaoImage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/ngaShadiaoImage/ngaShadiaoImageContent.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/ngaShadiaoImage/ngaShadiaoImageContent.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/ngaShadiaoImageContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/ngaShadiaoImageContent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ngaShadiaoImageContent.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ngaShadiaoImageContent.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../untitled/qzone/qzone_sql.py" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/qzone/qzone_sql.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -134,8 +112,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/ngaShadiaoImage/start.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1125">
-              <caret line="170" column="74" selection-start-line="170" selection-start-column="74" selection-end-line="170" selection-end-column="74" />
+            <state relative-caret-position="458">
+              <caret line="153" column="36" lean-forward="true" selection-start-line="153" selection-start-column="36" selection-end-line="153" selection-end-column="36" />
               <folding>
                 <element signature="e#101#114#0" expanded="true" />
               </folding>
@@ -862,7 +840,7 @@
       <workItem from="1566889792132" duration="9518000" />
       <workItem from="1567064540395" duration="3227000" />
       <workItem from="1567141476384" duration="7960000" />
-      <workItem from="1567326928634" duration="12626000" />
+      <workItem from="1567326928634" duration="12877000" />
     </task>
     <task id="LOCAL-00115" summary="打开窗口部分的代码重构">
       <created>1541317972699</created>
@@ -1211,7 +1189,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="248682000" />
+    <option name="totallyTimeSpent" value="248933000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1226,7 +1204,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49787235" visible="true" weight="0.14285715" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49787235" visible="true" weight="0.1391258" />
       <window_info id="Structure" order="1" sideWeight="0.50212765" side_tool="true" weight="0.27010724" />
       <window_info id="Favorites" order="2" sideWeight="0.50212765" side_tool="true" weight="0.27010724" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -1671,8 +1649,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/ngaShadiaoImage/start.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1125">
-          <caret line="170" column="74" selection-start-line="170" selection-start-column="74" selection-end-line="170" selection-end-column="74" />
+        <state relative-caret-position="458">
+          <caret line="153" column="36" lean-forward="true" selection-start-line="153" selection-start-column="36" selection-end-line="153" selection-end-column="36" />
           <folding>
             <element signature="e#101#114#0" expanded="true" />
           </folding>

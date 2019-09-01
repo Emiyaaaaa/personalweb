@@ -6,6 +6,8 @@ from .upload import *
 from django.http import JsonResponse
 from .models import NgaShadiaoImage, NgaShadiaoImageContent
 from urllib.parse import quote
+from django.conf import settings
+
 
 class NgaShadiaoImageView(View):
     def get(self,request):
@@ -54,15 +56,7 @@ class NgaShadiaoImageView(View):
         ngaShadiaoImageContent = NgaShadiaoImageContent.objects.filter(url=content_url).filter(floor__lte=0).order_by('floor')#前两楼
         title = NgaShadiaoImage.objects.get(url=content_url).title
         for n in ngaShadiaoImageContent:
-            content = n.content
-            content = re.sub('\[s:ac:.*?\]', '', content)
-            content = '>' + content.replace('[img]./', '<img class="image" src="https://cloudphoto-3.oss-cn-shanghai.aliyuncs.com/').replace('[/img]', '">') + '<'
-            # 为文字添加span标签
-            content = content.replace('><', '$flag1$')  # 保护 ><
-            content = content.replace('>', '$flag2$')
-            content = content.replace('<', '$flag3$')
-            content = content.replace('$flag1$','><').replace('$flag2$', '><span>').replace('$flag3$', '</span><')
-            content = content[1:-1]
+            content = self.deal_content(n.content)
             ngaShadiaoImageContentInfo.append({
                 'content': content,
                 'time': n.time,
@@ -77,9 +71,7 @@ class NgaShadiaoImageView(View):
         if int(floor_num) > int(ngaShadiaoImageContent[0].all_floor_num):
             return render(request, 'ngaShadiaoImageEnd.html')
         n = ngaShadiaoImageContent[int(floor_num)]
-        content = n.content
-        content = re.sub('\[s:ac:.*?\]', '', content)
-        content = content.replace('[img]./', '<img class="image" src="https://cloudphoto-3.oss-cn-shanghai.aliyuncs.com/').replace('[/img]', '">')
+        content = self.deal_content(n.content)
         ngaShadiaoImageContentInfo = {
             'content': content,
             'time': n.time,
@@ -93,3 +85,19 @@ class NgaShadiaoImageView(View):
 
     def get_notice(self,request):
         return render(request,'ngaShadiaoImageNotice.html')
+
+    def deal_content(self, content):
+        url = settings.ClOUD_PHOTO_NAME + '.' + settings.ClOUD_PHOTO_DOMAIN + '/'
+        content = re.sub('\[s:ac:.*?\]', '', content)
+        content = re.sub('\[img width=(\d+) height=(\d+)\]http', lambda x: '<img class="image" width="{}" height="{}" data-src="{}http'.format(x.group(1), x.group(2), url), content)
+        content = re.sub('\[img width=(\d+) height=(\d+)\]./', lambda x: '<img class="image" width="{}" height="{}" data-src="{}'.format(x.group(1), x.group(2), url), content)
+        content = content.replace('[/img]', '">')
+        # 为文字添加span标签
+        content = '>' + content + '<'
+        content = content.replace('><', '$flag1$')  # 保护><
+        content = content.replace('>', '$flag2$')
+        content = content.replace('<', '$flag3$')
+        content = content.replace('$flag1$','><').replace('$flag2$', '><span>').replace('$flag3$', '</span><')
+        content = content.replace('[del]', '<span class="line-through">').replace('[/del]', '</span>')
+        content = content[1:-1]
+        return content

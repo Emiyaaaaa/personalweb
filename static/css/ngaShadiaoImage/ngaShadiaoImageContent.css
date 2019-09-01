@@ -56,9 +56,10 @@ body{
 
 }
 
-.main{
+.mian_content{
 	
-
+	position: relative;
+	top: 0;
 
 }
 
@@ -130,8 +131,15 @@ body{
 	
 }
 
-.floor-text .image, .floor-text span{
+.floor-text .image, .floor-text span:not(.line-through){
 
 	margin-top: 11px;
+
+}
+
+.line-through{
+	
+	text-decoration: line-through;
+	margin: 0 2px 0 2px;
 
 }

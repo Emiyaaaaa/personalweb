@@ -31,11 +31,12 @@ def uploadImage(imgList,auth):
     k = 0
     for imgName in imgList:
         if imgName[:4] != 'http':
-            imgUrl = 'https://img.nga.178.com/attachments/' + imgName[2:]
+            imgName = imgName[2:]
+            imgUrl = 'https://img.nga.178.com/attachments/' + imgName
         else:
             imgUrl = imgName
-        bucket = oss2.Bucket(auth, 'oss-cn-shanghai.aliyuncs.com', 'cloudphoto-3')
+        bucket = oss2.Bucket(auth, settings.ClOUD_PHOTO_URL, settings.ClOUD_PHOTO_DOMAIN)
         input = requests.get(imgUrl)
-        bucket.put_object(imgName[2:], input)
+        bucket.put_object(imgName, input)
         print(str(k) + '   ' + imgUrl)
         k = k + 1

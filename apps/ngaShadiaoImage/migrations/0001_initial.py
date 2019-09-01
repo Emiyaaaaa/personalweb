@@ -11,20 +11,5 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.CreateModel(
-            name='NgaShadiaoImage',
-            fields=[
-                ('url_id', models.AutoField(primary_key=True, serialize=False)),
-                ('title', models.TextField(verbose_name='标题')),
-                ('author', models.CharField(default='kemiwjb', max_length=100, verbose_name='作者')),
-                ('url', models.CharField(max_length=200, verbose_name='链接')),
-                ('text', models.TextField(verbose_name='正文')),
-                ('created_at', models.DateTimeField(auto_now_add=True, verbose_name='创建时间')),
-                ('update_at', models.DateTimeField(auto_now=True, verbose_name='更新时间')),
-            ],
-            options={
-                'verbose_name': 'NGA沙雕图',
-                'verbose_name_plural': 'NGA沙雕图',
-            },
-        ),
+
     ]

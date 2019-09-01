@@ -146,3 +146,7 @@ MARKDOWN_IMAGE_FORMATS=["jpg", "jpeg", "gif", "png", "bmp", "webp"]
 # text
 MAX_LINE = 2
 LOOK_MORE_LENGTH = 9
+
+#cloud photo
+ClOUD_PHOTO_NAME = 'cloudphoto-3'
+ClOUD_PHOTO_DOMAIN = 'oss-cn-shanghai.aliyuncs.com'

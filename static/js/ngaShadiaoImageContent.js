@@ -6,7 +6,6 @@ function scrollBottom(){
     var clients = window.innerHeight;
     var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
     var wholeHeight = document.body.scrollHeight;
-    console.log(scrollTop+clients,wholeHeight);
     if(clients + scrollTop >= wholeHeight-1000){
     	if (document.getElementById('scrollLoadFloor').innerText != 'locked') {
     		let floor = document.getElementsByClassName('floor').length;

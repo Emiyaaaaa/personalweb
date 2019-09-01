@@ -24,6 +24,8 @@ class NgaShadiaoImage(models.Model):
 class NgaShadiaoImageContent(models.Model):
     content_id = models.AutoField(primary_key=True)
     ngaShadiaoImage = models.ForeignKey(NgaShadiaoImage, on_delete=models.CASCADE, verbose_name=u'标题')
+    cloud_photo_name = models.CharField(verbose_name=u'云相册名称', max_length=200)
+    cloud_photo_domain = models.CharField(verbose_name=u'云相册域名', max_length=200)
     url = models.CharField(verbose_name=u'链接', max_length=200)
     time = models.CharField(verbose_name=u'时间', max_length=100, default='')
     content = models.TextField(verbose_name=u'正文')

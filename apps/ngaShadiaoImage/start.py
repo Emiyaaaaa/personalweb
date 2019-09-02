@@ -170,7 +170,7 @@ def get_img_wh(image_name, i=0):
     except Exception as e:
         i = i + 1
         if i <= 3:
-            print('第{}次尝试:'.format(i) + str(e))
+            print('第{}次尝试:'.format(i) + str(e) + ' ' + img_url)
             return get_img_wh(image_name, i)
         else:
             return 'width="0" height="0"'

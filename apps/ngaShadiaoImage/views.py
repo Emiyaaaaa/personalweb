@@ -53,7 +53,7 @@ class NgaShadiaoImageView(View):
     def get_content(self, request):
         content_url = request.GET.get('content_url')
         ngaShadiaoImageContentInfo = []
-        ngaShadiaoImageContent = NgaShadiaoImageContent.objects.filter(url=content_url).filter(floor__lte=0).order_by('floor')#前两楼
+        ngaShadiaoImageContent = NgaShadiaoImageContent.objects.filter(url=content_url).order_by('floor')
         title = NgaShadiaoImage.objects.get(url=content_url).title
         for n in ngaShadiaoImageContent:
             content = self.deal_content(n.content)
@@ -89,8 +89,8 @@ class NgaShadiaoImageView(View):
     def deal_content(self, content):
         url = settings.CP_NAME + '.' + settings.CP_DOMAIN + '/'
         content = re.sub('\[s:ac:.*?\]', '', content)
-        content = re.sub('\[img width=(\d+) height=(\d+)\]http', lambda x: '<img class="image" width="{}" height="{}" data-src="{}http'.format(x.group(1), x.group(2), url), content)
-        content = re.sub('\[img width=(\d+) height=(\d+)\]./', lambda x: '<img class="image" width="{}" height="{}" data-src="{}'.format(x.group(1), x.group(2), url), content)
+        content = re.sub('\[img width="(\d+)" height="(\d+)"\]http', lambda x: '<img class="image" width="{}" height="{}" data-src="{}http'.format(x.group(1), x.group(2), url), content)
+        content = re.sub('\[img width="(\d+)" height="(\d+)"\]./', lambda x: '<img class="image" width="{}" height="{}" data-src="{}'.format(x.group(1), x.group(2), url), content)
         content = content.replace('[/img]', '">')
         # 为文字添加span标签
         content = '>' + content + '<'

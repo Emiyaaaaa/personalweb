@@ -7,7 +7,7 @@ from .models import NgaShadiaoImage, NgaShadiaoImageVerification, NgaShadiaoImag
 
 
 class NgaShadiaoImageAdmin(object):
-    list_display = ['title', 'url', 'time', 'img_num', 'visit_num', 'is_display']
+    list_display = ['title', 'url', 'time', 'visit_num', 'is_display']
     search_field = ['title', 'url', 'time', 'is_display']
     list_editable = ['is_display']
     exclude = ['title_id']
@@ -18,11 +18,12 @@ class NgaShadiaoImageVerificationAdmin(object):
 
 
 class NgaShadiaoImageContentAdmin(object):
-    list_display = ['title', 'content', 'floor', 'all_floor_num', 'is_display', 'time']
+    list_display = ['ngaShadiaoImage', 'content', 'floor', 'all_floor_num', 'is_display', 'time']
+    list_editable = ['is_display']
 
 
 class NgaShadiaoImageUpImgListAdmin(object):
-    list_display = ['title', 'images', 'images_num', 'is_upload', 'created_at']
+    list_display = ['ngaShadiaoImage', 'images', 'images_num', 'is_upload', 'created_at']
     list_editable = ['is_upload']
 
 

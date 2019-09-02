@@ -87,7 +87,7 @@ class NgaShadiaoImageView(View):
         return render(request,'ngaShadiaoImageNotice.html')
 
     def deal_content(self, content):
-        url = settings.ClOUD_PHOTO_NAME + '.' + settings.ClOUD_PHOTO_DOMAIN + '/'
+        url = settings.CP_NAME + '.' + settings.CP_DOMAIN + '/'
         content = re.sub('\[s:ac:.*?\]', '', content)
         content = re.sub('\[img width=(\d+) height=(\d+)\]http', lambda x: '<img class="image" width="{}" height="{}" data-src="{}http'.format(x.group(1), x.group(2), url), content)
         content = re.sub('\[img width=(\d+) height=(\d+)\]./', lambda x: '<img class="image" width="{}" height="{}" data-src="{}'.format(x.group(1), x.group(2), url), content)

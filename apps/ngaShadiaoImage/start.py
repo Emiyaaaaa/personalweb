@@ -97,11 +97,14 @@ def deal_url_and_title_list(session, urlAndTitleList):
             if response == '':
                 error_massage.append(url + '&page=' + str(i))
                 continue
-            firstFloor = re.search(r"<span id='postdate(\d+)'", str(response))
-            if firstFloor.group(1) == firstFloorFlag:  # 重复，即为末页的下一页
+            try:
+                firstFloor = re.search(r"<.*? id='postdate(\d+)'", str(response))
+                if firstFloor.group(1) == firstFloorFlag:  # 重复，即为末页的下一页
+                    break
+                else:
+                    firstFloorFlag = firstFloor.group(1)
+            except:
                 break
-            else:
-                firstFloorFlag = firstFloor.group(1)
             # 开始帖子内匹配图片
             findObj1 = re.finditer("func=ucp&uid=33842236.*?<.*? class='silver subtitle'>附件</.*?>", str(response), re.S | re.I | re.M)
             for find in findObj1:
@@ -140,8 +143,8 @@ def deal_url_and_title_list(session, urlAndTitleList):
             NgaShadiaoImageContent.objects.create(
                 ngaShadiaoImage=ngaShadiaoImage,
                 url=url,
-                cloud_photo_name=settings.ClOUD_PHOTO_NAME,
-                cloud_photo_domain=settings.ClOUD_PHOTO_DOMAIN,
+                cloud_photo_name=settings.CP_NAME,
+                cloud_photo_domain=settings.CP_DOMAIN,
                 time=fdl['floor_time'],
                 content=floor_content,
                 floor=fdl['floor_num'],
@@ -156,16 +159,18 @@ def add_wh_Info_to_content(content):
     return content
 
 
-def get_img_wh(image_name):
+def get_img_wh(image_name, i=0):
     if image_name[:4] != 'http':
-        image_name = image_name[2:]
-        img_url = 'https://img.nga.178.com/attachments/' + image_name
+        img_url = 'https://img.nga.178.com/attachments/' + image_name[2:]
     else:
         img_url = image_name
     try:
         img_size = Image.open(urllib.request.urlopen(img_url)).size
+        return 'width="{}" height="{}"'.format(str(img_size[0]), str(img_size[1]))
     except Exception as e:
-        img_size = (0, 0)
-        print(e)
-
-    return 'width="{}" height="{}"'.format(str(img_size[0]),str(img_size[1]))
+        i = i + 1
+        if i <= 3:
+            print('第{}次尝试:'.format(i) + str(e))
+            return get_img_wh(image_name, i)
+        else:
+            return 'width="0" height="0"'

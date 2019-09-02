@@ -35,7 +35,7 @@ def uploadImage(imgList,auth):
             imgUrl = 'https://img.nga.178.com/attachments/' + imgName
         else:
             imgUrl = imgName
-        bucket = oss2.Bucket(auth, settings.ClOUD_PHOTO_URL, settings.ClOUD_PHOTO_DOMAIN)
+        bucket = oss2.Bucket(auth, settings.CP_DOMAIN, settings.CP_NAME)
         input = requests.get(imgUrl)
         bucket.put_object(imgName, input)
         print(str(k) + '   ' + imgUrl)

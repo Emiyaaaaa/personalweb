@@ -71,7 +71,7 @@ class NgaShadiaoImageView(View):
         if int(floor_num) > int(ngaShadiaoImageContent[0].all_floor_num):
             return render(request, 'ngaShadiaoImageEnd.html')
         n = ngaShadiaoImageContent[int(floor_num)]
-        content = self.deal_content(n.content)
+        content = self.deal_content(n.content, floor_num)
         ngaShadiaoImageContentInfo = {
             'content': content,
             'time': n.time,
@@ -86,18 +86,16 @@ class NgaShadiaoImageView(View):
     def get_notice(self,request):
         return render(request,'ngaShadiaoImageNotice.html')
 
-    def deal_content(self, content):
-        url = settings.CP_NAME + '.' + settings.CP_DOMAIN + '/'
+    def deal_content(self, content, floor_num=0):
+        url = 'https://' + settings.CP_NAME + '.' + settings.CP_DOMAIN + '/'
         content = re.sub('\[s:ac:.*?\]', '', content)
         content = re.sub('\[img width="(\d+)" height="(\d+)"\]http', lambda x: '<img class="image" width="{}" height="{}" data-src="{}http'.format(x.group(1), x.group(2), url), content)
         content = re.sub('\[img width="(\d+)" height="(\d+)"\]./', lambda x: '<img class="image" width="{}" height="{}" data-src="{}'.format(x.group(1), x.group(2), url), content)
         content = content.replace('[/img]', '">')
         # 为文字添加span标签
-        content = '>' + content + '<'
-        content = content.replace('><', '$flag1$')  # 保护><
-        content = content.replace('>', '$flag2$')
-        content = content.replace('<', '$flag3$')
-        content = content.replace('$flag1$','><').replace('$flag2$', '><span>').replace('$flag3$', '</span><')
+        print(content)
+        content = re.sub('>([^<].+?[^>])<', lambda x: '><span>{}</span><'.format(x.group(1)), '>' + content + '<')[1:-1]
+
         content = content.replace('[del]', '<span class="line-through">').replace('[/del]', '</span>')
-        content = content[1:-1]
+        # print(content)
         return content

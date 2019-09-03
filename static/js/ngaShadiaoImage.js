@@ -38,3 +38,10 @@ function fadeIn(className){
 	}
 	return classEle.length;
 }
+
+function jumpToContent(this_ele){
+	let main_href = window.location.href;
+	let jump_href = this_ele.getAttribute('data-href');
+	let width = document.body.clientWidth;
+	window.location.href = (main_href + jump_href + String(width));
+}

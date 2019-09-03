@@ -34,7 +34,7 @@
 		<ul class="main-list-opacity-transition" id="main_ul">
             {% for n in ngaShadiaoImageInfo %}
                 <li>
-                    <a href="ngaShadiaoImage/content/?content_url={{ n.encodeUrl }}" class="main-list-a">
+                    <div data-href="/content/?content_url={{ n.encodeUrl }}&client_width=" class="main-list-a" onclick='jumpToContent(this)'>
                         <div class="left">
                             <div class="author"><div class="center-relative">{{ n.author }}</div></div>
                             <div class="time"><div class="center-relative">{{ n.time }}</div></div>
@@ -43,7 +43,7 @@
                             <div class="title">{{ n.title }}</div>
                             <div class="buttom-bar"></div>
                         </div>
-                    </a>
+                    </div>
                 </li>
             {% endfor %}
 		</ul>

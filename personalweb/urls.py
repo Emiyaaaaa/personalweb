@@ -42,7 +42,6 @@ urlpatterns = [
     url(r'^bilibiliCoverDownload/mzsm$', BilibiliCoverDownloadView().get_mzsm),
     url(r'^ngaShadiaoImage$', NgaShadiaoImageView.as_view()),
     url(r'^ngaShadiaoImage/content/$', NgaShadiaoImageView().get_content),
-    url(r'^ngaShadiaoImage/getFloor$', NgaShadiaoImageView().ajax_get_floor),
     url(r'^ngaShadiaoImage/mzsm$', NgaShadiaoImageView().get_mzsm),
     url(r'^ngaShadiaoImage/notice$', NgaShadiaoImageView().get_notice),
 ]

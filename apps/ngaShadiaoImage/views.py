@@ -52,12 +52,13 @@ class NgaShadiaoImageView(View):
 
     def get_content(self, request):
         content_url = request.GET.get('content_url')
+        image_width = self.get_image_width(request)
         ngaShadiaoImageContentInfo = []
         ngaShadiaoImageContent = NgaShadiaoImageContent.objects.filter(url=content_url).order_by('floor')
         floor = 1
         title = NgaShadiaoImage.objects.get(url=content_url).title
         for n in ngaShadiaoImageContent:
-            content = self.deal_content(n.content, floor)
+            content = self.deal_content(n.content, floor, image_width)
             ngaShadiaoImageContentInfo.append({
                 'content': content,
                 'time': n.time,
@@ -67,25 +68,33 @@ class NgaShadiaoImageView(View):
             floor = floor + 1
         return render(request, 'ngaShadiaoImageContent.html', {'ngaShadiaoImageContentInfo': ngaShadiaoImageContentInfo, 'title': title})
 
+    def deal_content(self, content, floor_num, image_width):
+        url = 'https://' + settings.CP_NAME + '.' + settings.CP_DOMAIN + '/'
+        content = re.sub('\[s:ac:.*?\]', '', content)
+        if floor_num == 1:
+            content = re.sub('\[img width="(\d+)" height="(\d+)"\]http', lambda x: '<img class="image" width="{}" height="{}" src="{}http'.format(image_width, self.get_height(x, image_width), url), content, 5)
+            content = re.sub('\[img width="(\d+)" height="(\d+)"\]./', lambda x: '<img class="image" width="{}" height="{}" src="{}'.format(image_width, self.get_height(x, image_width), url), content, 5)
+        content = re.sub('\[img width="(\d+)" height="(\d+)"\]http', lambda x: '<img class="image" width="{}" height="{}" data-src="{}http'.format(image_width, self.get_height(x, image_width), url), content)
+        content = re.sub('\[img width="(\d+)" height="(\d+)"\]./', lambda x: '<img class="image" width="{}" height="{}" data-src="{}'.format(image_width, self.get_height(x, image_width), url), content)
+        content = content.replace('[/img]', '">')
+        # 为文字添加span标签
+        print(content)
+        content = re.sub('>([^<].+?[^>])<', lambda x: '><span>{}</span><'.format(x.group(1)), '>' + content + '<')[1:-1]
+        content = content.replace('[del]', '<span class="line-through">').replace('[/del]', '</span>')
+        return content
+
+    def get_image_width(self, request):
+        client_width = request.GET.get('client_width')
+        image_width = int(client_width) - 60
+        if image_width > 570:
+            image_width = 570
+        return image_width
+
+    def get_height(self, x, width):
+        return int(x.group(2)) / int(x.group(1)) * int(width) + 4  # padding-top为4
+
     def get_mzsm(self,request):
         return render(request,'ngaShadiaoImageMzsm.html')
 
     def get_notice(self,request):
         return render(request,'ngaShadiaoImageNotice.html')
-
-    def deal_content(self, content, floor_num):
-        url = 'https://' + settings.CP_NAME + '.' + settings.CP_DOMAIN + '/'
-        content = re.sub('\[s:ac:.*?\]', '', content)
-        if floor_num == 1:
-            content = re.sub('\[img width="(\d+)" height="(\d+)"\]http', lambda x: '<img class="image" width="{}" height="{}" src="{}http'.format(x.group(1), x.group(2), url), content, 5)
-            content = re.sub('\[img width="(\d+)" height="(\d+)"\]./', lambda x: '<img class="image" width="{}" height="{}" src="{}'.format(x.group(1), x.group(2), url), content, 5)
-        content = re.sub('\[img width="(\d+)" height="(\d+)"\]http', lambda x: '<img class="image" width="{}" height="{}" data-src="{}http'.format(x.group(1), x.group(2), url), content)
-        content = re.sub('\[img width="(\d+)" height="(\d+)"\]./', lambda x: '<img class="image" width="{}" height="{}" data-src="{}'.format(x.group(1), x.group(2), url), content)
-        content = content.replace('[/img]', '">')
-        # 为文字添加span标签
-        print(content)
-        content = re.sub('>([^<].+?[^>])<', lambda x: '><span>{}</span><'.format(x.group(1)), '>' + content + '<')[1:-1]
-
-        content = content.replace('[del]', '<span class="line-through">').replace('[/del]', '</span>')
-        # print(content)
-        return content

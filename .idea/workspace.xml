@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97ee085e-0965-47c9-afdd-5d7ddcf1463c" name="Default" comment="bug">
-      <change beforePath="$PROJECT_DIR$/apps/ngaShadiaoImage/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/ngaShadiaoImage/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/personalweb/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/personalweb/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/ngaShadiaoImage/ngaShadiaoImageContent.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/ngaShadiaoImage/ngaShadiaoImageContent.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/ngaShadiaoImage.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/ngaShadiaoImage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ngaShadiaoImage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ngaShadiaoImage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/ngaShadiaoImageContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/ngaShadiaoImageContent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../untitled/qzone/qzone_sql.py" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/qzone/qzone_sql.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -105,8 +102,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/ngaShadiaoImage/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="634">
-              <caret line="95" column="82" selection-start-line="95" selection-start-column="82" selection-end-line="95" selection-end-column="82" />
+            <state relative-caret-position="329">
+              <caret line="82" column="102" lean-forward="true" selection-start-line="82" selection-start-column="102" selection-end-line="82" selection-end-column="102" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -863,7 +860,7 @@
       <workItem from="1567401394216" duration="9205000" />
       <workItem from="1567433387082" duration="242000" />
       <workItem from="1567434272462" duration="3249000" />
-      <workItem from="1567486850482" duration="5344000" />
+      <workItem from="1567486850482" duration="6830000" />
     </task>
     <task id="LOCAL-00115" summary="打开窗口部分的代码重构">
       <created>1541317972699</created>
@@ -1212,7 +1209,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="267585000" />
+    <option name="totallyTimeSpent" value="269071000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1244,7 +1241,7 @@
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5026652" side_tool="true" weight="0.45336226" />
       <window_info anchor="bottom" id="manage.py@personalweb" order="12" weight="0.3470716" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" x="719" y="31" width="1200" height="1008" id="Run" order="14" sideWeight="0.49733475" visible="true" weight="0.3177874" />
+      <window_info anchor="bottom" x="719" y="31" width="1200" height="1008" id="Run" order="14" sideWeight="0.49733475" weight="0.3177874" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -1659,8 +1656,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/ngaShadiaoImage/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="634">
-          <caret line="95" column="82" selection-start-line="95" selection-start-column="82" selection-end-line="95" selection-end-column="82" />
+        <state relative-caret-position="329">
+          <caret line="82" column="102" lean-forward="true" selection-start-line="82" selection-start-column="102" selection-end-line="82" selection-end-column="102" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>

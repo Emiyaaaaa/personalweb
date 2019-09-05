@@ -120,7 +120,7 @@ body{
 
 }
 
-.main-list-opacity-transition a{
+.main-list-opacity-transition .main-list-a{
 
 	transition: opacity 0.28s;
     -webkit-transition: opacity 0.28s;

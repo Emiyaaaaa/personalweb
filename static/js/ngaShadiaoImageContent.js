@@ -2,20 +2,6 @@
 	window.onscroll = lazyLoad;
 })();
 
-function scrollBottom(){
-    var clients = window.innerHeight;
-    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    var wholeHeight = document.body.scrollHeight;
-    if(clients + scrollTop >= wholeHeight-1000){
-    	if (document.getElementById('scrollLoadFloor').innerText != 'locked') {
-    		let floor = document.getElementsByClassName('floor').length;
-    		let content_url = urlSearch('content_url');
-    		document.getElementById('scrollLoadFloor').innerText = 'locked';
-    		getFloor(floor, content_url);
-    	}
-    }
-}
-
 function getFloor(floor, content_url){
 	$.ajax({
 		url:"/ngaShadiaoImage/getFloor",
@@ -38,6 +24,22 @@ function urlSearch(key){
 	return urlDict[key];
 }
 
+function loadImage(imageList){
+            console.log(imageList);
+    for (var i = 0; i < imageList.length; i++) {
+
+        if (imageList[i] != undefined) {
+            let data_src = imageList[i].getAttribute('data-src');
+            console.log(data_src);
+            if (data_src != null){
+                imageList[i].setAttribute('src', data_src);
+                imageList[i].removeAttribute('data-src');
+            }
+        }
+    }
+}
+
+
 function lazyLoad(){
     let clients = window.innerHeight;
     let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
@@ -48,16 +50,16 @@ function lazyLoad(){
         if(floorEle[i].offsetTop < clients + scrollTop && floorEle[i].offsetTop + floorEle[i].offsetHeight > clients + scrollTop){
             loadThisFloor(i, scrollTop, clients);
             if (floorEle[i].offsetTop > scrollTop) {
-                loadLastFloor(i);
+                loadLastFloor(i-1);
             }
             if (floorEle[i].offsetTop + floorEle[i].offsetHeight - clients + scrollTop < 100){
-                loadNextFloor(i);
+                loadNextFloor(i+1);
             }
             console.log(i);
             break;
-            
         }
     }
+    loadImage(imgEleList);
 }
 
 function loadLastFloor(floorNum){
@@ -85,20 +87,8 @@ function loadThisFloor(floorNum, scrollTop, clients){
     if (floorEle != undefined) {
         let imageEle = floorEle.getElementsByTagName('img');
         for (var i = 0; i < imageEle.length; i++) {
-            if (Math.abs(imageEle[i].offsetTop + floorEle.offsetTop - (scrollTop + clients/2)) < clients/2 + 200) {
+            if (Math.abs(imageEle[i].offsetTop - (scrollTop + clients/2)) < clients/2 + 500) {// imageEle[i].offsetTop + floorEle.offsetHeight - (scrollTop + clients/2)) < clients/2 + 500
                 imgEleList.push(imageEle[i]);
-            }
-        }
-    }
-}
-
-function loadImage(imageList){
-    for (var i = 0; i < imageList.length; i++) {
-        if (imageList[i] != undefined) {
-            let data_src = imageList[i].getAttribute('data-src');
-            if (data_src != null){
-                imageList[i].setAttribute('src', data_src);
-                imageList[i].setAttribute('data-src', null);
             }
         }
     }

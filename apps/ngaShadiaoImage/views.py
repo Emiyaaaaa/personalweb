@@ -69,6 +69,7 @@ class NgaShadiaoImageView(View):
         return render(request, 'ngaShadiaoImageContent.html', {'ngaShadiaoImageContentInfo': ngaShadiaoImageContentInfo, 'title': title})
 
     def deal_content(self, content, floor_num, image_width):
+        print(content)
         url = 'https://' + settings.CP_NAME + '.' + settings.CP_DOMAIN + '/'
         content = re.sub('\[s:ac:.*?\]', '', content)
         if floor_num == 1:
@@ -78,7 +79,6 @@ class NgaShadiaoImageView(View):
         content = re.sub('\[img width="(\d+)" height="(\d+)"\]./', lambda x: '<img class="image" width="{}" height="{}" data-src="{}'.format(image_width, self.get_height(x, image_width), url), content)
         content = content.replace('[/img]', '">')
         # 为文字添加span标签
-        print(content)
         content = re.sub('>([^<].+?[^>])<', lambda x: '><span>{}</span><'.format(x.group(1)), '>' + content + '<')[1:-1]
         content = content.replace('[del]', '<span class="line-through">').replace('[/del]', '</span>')
         return content
@@ -86,8 +86,8 @@ class NgaShadiaoImageView(View):
     def get_image_width(self, request):
         client_width = request.GET.get('client_width')
         image_width = int(client_width) - 60
-        if image_width > 570:
-            image_width = 570
+        if image_width > 600:
+            image_width = 600
         return image_width
 
     def get_height(self, x, width):

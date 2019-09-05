@@ -30,7 +30,6 @@ function loadImage(imageList){
 
         if (imageList[i] != undefined) {
             let data_src = imageList[i].getAttribute('data-src');
-            console.log(data_src);
             if (data_src != null){
                 imageList[i].setAttribute('src', data_src);
                 imageList[i].removeAttribute('data-src');
@@ -55,7 +54,6 @@ function lazyLoad(){
             if (floorEle[i].offsetTop + floorEle[i].offsetHeight - clients + scrollTop < 100){
                 loadNextFloor(i+1);
             }
-            console.log(i);
             break;
         }
     }

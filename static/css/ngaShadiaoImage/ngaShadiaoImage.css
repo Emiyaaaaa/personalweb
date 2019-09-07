@@ -158,7 +158,6 @@ body{
 .main-list-a .right{
 	
 	position: absolute;
-	height: 100%;
 	left: 100px;
 	padding-left: 15px;
 	padding-right: 15px;
@@ -201,7 +200,6 @@ body{
 .main-list-a .right .title{
 	
 	position: relative;
-	height: 60px;
 	font-size: 17px;
 	line-height: 24px;
 	text-align: left;
@@ -211,9 +209,9 @@ body{
 .main-list-a .buttom-bar{
 	
 	position: relative;
-	height: 60px;
+	height: 40px;
 	text-align: right;
-	top: 80px;
+	top: 60px;
 
 }
 
@@ -355,12 +353,10 @@ body{
 
 }
 
-.buttom-bar{
+.beian{
 
-/*	padding-right: 15px;
-	padding-left: 15px;*/
-	text-align: right;
-
+	margin-bottom: 10px;
+	
 }
 
 .img-ico-num > div{
@@ -371,12 +367,29 @@ body{
 
 .img-ico-num .img-ico{
 
-	width: 20px;
+	margin-right: 3px;
+
+}
+
+.img-ico-num{
+
+	height: 18px;
+	color: #515151;
+
+}
+
+.img-ico-num .img-ico img{
+
+	width: 18px;
+	height: 18px;
+	top: 3px;
+	position: relative;
 
 }
 
 .img-ico-num .img-num{
 
-	width: 20px;
+	margin-right: 20px;
+	font-size: 14px;
 
 }

@@ -47,6 +47,7 @@ function lazyLoad(){
     imgEleList = []
     for (var i = 0; i < floorEle.length; i++) {
         if(floorEle[i].offsetTop < clients + scrollTop && floorEle[i].offsetTop + floorEle[i].offsetHeight > clients + scrollTop){
+            document.getElementById('floor_num').innerText = (i+1) + 'L';
             loadThisFloor(i, scrollTop, clients);
             if (floorEle[i].offsetTop > scrollTop) {
                 loadLastFloor(i-1);

@@ -4,6 +4,7 @@
     <list default="true" id="97ee085e-0965-47c9-afdd-5d7ddcf1463c" name="Default" comment="bug">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/ngaShadiaoImage/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/ngaShadiaoImage/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/ngaShadiaoImage/ngaShadiaoImageContent.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/ngaShadiaoImage/ngaShadiaoImageContent.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/ngaShadiaoImageContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/ngaShadiaoImageContent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../untitled/qzone/qzone_sql.py" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/qzone/qzone_sql.py" afterDir="false" />
     </list>
@@ -103,8 +104,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/ngaShadiaoImage/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="82" column="102" selection-start-line="82" selection-start-column="102" selection-end-line="82" selection-end-column="102" />
+            <state relative-caret-position="490">
+              <caret line="89" column="29" selection-start-line="89" selection-start-column="29" selection-end-line="89" selection-end-column="29" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -202,7 +203,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>succe</find>
       <find>exit</find>
       <find>print</find>
       <find>&quot;user_cover&quot;</find>
@@ -232,6 +232,7 @@
       <find>\[img width=(\d*)</find>
       <find>\[img width=&quot;(\d+)&quot;</find>
       <find>&gt;[^&lt;](.+?)[^&gt;]&lt;</find>
+      <find>电臀</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -862,7 +863,7 @@
       <workItem from="1567433387082" duration="242000" />
       <workItem from="1567434272462" duration="3249000" />
       <workItem from="1567486850482" duration="6830000" />
-      <workItem from="1567680647820" duration="813000" />
+      <workItem from="1567680647820" duration="1419000" />
     </task>
     <task id="LOCAL-00115" summary="打开窗口部分的代码重构">
       <created>1541317972699</created>
@@ -1211,7 +1212,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="269884000" />
+    <option name="totallyTimeSpent" value="270490000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1224,6 +1225,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49787235" visible="true" weight="0.16950959" />
       <window_info id="Structure" order="1" sideWeight="0.50212765" side_tool="true" weight="0.27010724" />
@@ -1242,7 +1244,7 @@
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5026652" side_tool="true" weight="0.45336226" />
       <window_info anchor="bottom" id="manage.py@personalweb" order="12" weight="0.3470716" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" x="719" y="31" width="1200" height="1008" id="Run" order="14" sideWeight="0.49733475" visible="true" weight="0.3177874" />
+      <window_info anchor="bottom" x="719" y="31" width="1200" height="1008" id="Run" order="14" sideWeight="0.49733475" weight="0.3177874" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -1593,8 +1595,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/ngaShadiaoImage/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="82" column="102" selection-start-line="82" selection-start-column="102" selection-end-line="82" selection-end-column="102" />
+        <state relative-caret-position="490">
+          <caret line="89" column="29" selection-start-line="89" selection-start-column="29" selection-end-line="89" selection-end-column="29" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>

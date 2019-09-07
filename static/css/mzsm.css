@@ -4,12 +4,18 @@ body{
 
 }
 
-p{
+p, h3{
 
 	margin: 0 auto;
 	width: 90%;
 	margin-top: 10px;
 	text-align: left;
+
+}
+
+h3{
+
+	margin-top: 30px;
 
 }
 

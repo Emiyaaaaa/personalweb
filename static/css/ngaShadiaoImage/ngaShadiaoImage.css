@@ -202,7 +202,18 @@ body{
 	
 	position: relative;
 	height: 60px;
+	font-size: 17px;
+	line-height: 24px;
 	text-align: left;
+
+}
+
+.main-list-a .buttom-bar{
+	
+	position: relative;
+	height: 60px;
+	text-align: right;
+	top: 80px;
 
 }
 
@@ -224,7 +235,7 @@ body{
 .main-list-a, .sort-bar{
 
 	width: 90%;
-	max-width: 900px;
+	max-width: 700px;
 	
 }
 
@@ -341,5 +352,31 @@ body{
 .mzsm{
 
 	margin-top: 20px;
+
+}
+
+.buttom-bar{
+
+/*	padding-right: 15px;
+	padding-left: 15px;*/
+	text-align: right;
+
+}
+
+.img-ico-num > div{
+
+	display: inline-block;
+	
+}
+
+.img-ico-num .img-ico{
+
+	width: 20px;
+
+}
+
+.img-ico-num .img-num{
+
+	width: 20px;
 
 }

@@ -38,7 +38,6 @@ function loadImage(imageList){
     }
 }
 
-
 function lazyLoad(){
     let clients = window.innerHeight;
     let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
@@ -92,3 +91,22 @@ function loadThisFloor(floorNum, scrollTop, clients){
         }
     }
 }
+
+function openFloorSelector(thisEle){
+    if (!thisEle.classList.contains('floor-selector-active')) {
+        thisEle.classList.add('locked');  // 上锁，防止触发收回事件
+        thisEle.classList.add('floor-selector-active');
+        setTimeout(function(){thisEle.getElementsByClassName('top')[0].classList.add('top-active');},200);
+        setTimeout(function(){thisEle.classList.remove('locked');},400);  // 解锁
+    }
+}
+
+$(document).ready(function() {
+    document.body.addEventListener("click",function closeFloorSelector(e){
+        let floorSelector = document.getElementById('floorSelector');
+        if (floorSelector.classList.contains('floor-selector-active') && !floorSelector.classList.contains('locked')) {
+            floorSelector.getElementsByClassName('top')[0].classList.remove('top-active');
+            setTimeout(function(){floorSelector.classList.remove('floor-selector-active');},200);
+        }
+    })
+});

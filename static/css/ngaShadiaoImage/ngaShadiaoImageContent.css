@@ -160,36 +160,111 @@ body{
 
 }
 
-.jump-floor{
+.floor-selector{
 
 	position: fixed;
+	overflow: auto;
 	bottom: 60px;
 	left: 10px;
 	width: 60px;
-	height: 30px;
 	border-radius: 20px;
 	font-size: 15px;
 	background-color: #ffffff;
 	color: #515151;
     box-shadow: 0px 1px 4px rgba(173,173,173,0.8);
 
+    transition: width 0.20s;
+    -webkit-transition: width 0.20s;
+    -moz-transition: width 0.20s;
+    -o-transition: width 0.20s;
+
 }
 
-.jump-floor .floor-open-ico ,.jump-floor .floor-num{
+.floor-selector .top{
+
+	overflow: auto;
+	height: 0;
+	transition: height 0.20s;
+    -webkit-transition: height 0.20s;
+    -moz-transition: height 0.20s;
+    -o-transition: height 0.20s;
+
+}
+
+.floor-selector .bottom{
+
+	height: 30px;
+
+}
+
+.floor-selector .bottom .floor-open-ico ,.floor-selector .bottom .floor-num{
 
 	display: inline-block;
 
 }
 
-.jump-floor .floor-open-ico img, .jump-floor .floor-open-ico{
+.floor-selector .floor-open-ico img, .floor-selector .floor-open-ico{
 
 	width: 11px;
 	height: 11px;
 
 }
 
-.jump-floor .floor-open-ico{
+.floor-selector .floor-open-ico{
 
 	margin-left: 2px;
+
+}
+
+.floor-selector .floor-open-ico img{
+
+    transition: transform 0.20s;
+    -webkit-transition: transform 0.20s;
+    -moz-transition: transform 0.20s;
+    -o-transition: transform 0.20s;
+
+}
+
+.floor-selector-active img{
+
+	transform:rotate(180deg);
+	-ms-transform:rotate(180deg); 	/* IE 9 */
+	-moz-transform:rotate(180deg); 	/* Firefox */
+	-webkit-transform:rotate(180deg); /* Safari 和 Chrome */
+	-o-transform:rotate(180deg); 	/* Opera */
+
+}
+
+.floor-selector-active{
+
+	width: 300px;
+
+}
+
+.floor-selector-active .top{
+
+	width: 300px;
+
+}
+
+.floor-selector .top .floor-num{
+	
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	
+}
+
+.floor-selector-active .top-active{
+
+	height: 200px;
+	border-bottom: 1px solid rgba(0,0,0,0.1)
+
+}
+
+.floor-selector .text{
+
+	margin-top: 15px;
+	margin-bottom: 10px;
 
 }

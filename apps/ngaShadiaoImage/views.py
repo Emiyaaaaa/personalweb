@@ -65,8 +65,9 @@ class NgaShadiaoImageView(View):
                 'floor': floor,
                 'initial_floor': n.floor
             })
+            floor_num = n.all_floor_num
             floor = floor + 1
-        return render(request, 'ngaShadiaoImageContent.html', {'ngaShadiaoImageContentInfo': ngaShadiaoImageContentInfo, 'title': title})
+        return render(request, 'ngaShadiaoImageContent.html', {'ngaShadiaoImageContentInfo': ngaShadiaoImageContentInfo, 'title': title, 'floor_num': floor_num})
 
     def deal_content(self, content, floor_num, image_width):
         print(content)

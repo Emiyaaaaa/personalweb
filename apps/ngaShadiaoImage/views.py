@@ -70,7 +70,6 @@ class NgaShadiaoImageView(View):
         return render(request, 'ngaShadiaoImageContent.html', {'ngaShadiaoImageContentInfo': ngaShadiaoImageContentInfo, 'title': title, 'floor_num': floor_num})
 
     def deal_content(self, content, floor_num, image_width):
-        print(content)
         url = 'https://' + settings.CP_NAME + '.' + settings.CP_DOMAIN + '/'
         content = re.sub('\[s:ac:.*?\]', '', content)
         if floor_num == 1:

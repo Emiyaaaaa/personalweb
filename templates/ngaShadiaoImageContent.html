@@ -24,7 +24,7 @@
         <div class="floor-selector" id="floorSelector" onclick="openFloorSelector(this)">
         	<div class="top">
         		<div class="text">选择要跳转的楼层</div>
-        		<a href="/ngaShadiaoImage">首页</a>
+        		<a href="/ngaShadiaoImage" class="floor-num">首页</a>
         		{% for n in ngaShadiaoImageContentInfo %}
         			<a class="floor-num" href="#{{ n.floor }}">{{ n.floor }}</a>
         		{% endfor %}

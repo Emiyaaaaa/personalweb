@@ -263,7 +263,7 @@ body{
 
 }
 
-.sort-bar .right{
+.sort-bar .middle{
 	
 	position: absolute;
 	height: 100%;
@@ -271,6 +271,14 @@ body{
 	padding-left: 15px;
 	padding-right: 15px;
 
+}
+
+.sort-bar .right{
+	
+	position: relative;
+	float: right;
+	height: 100%;
+	padding-right: 15px;
 }
 
 .sort-bar .notice{

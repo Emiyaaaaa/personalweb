@@ -60,42 +60,40 @@ class DiaryView():
         return {'is_brief': 'false','brief_text': text}
 
     def get_content(self,request,text_id):
-        diary = Diary.objects.filter(text_id=text_id)
+        diary = Diary.objects.get(text_id=text_id)
         diaryImg = DiaryImg.objects.filter(diary=text_id)
         diaryComment = DiaryComment.objects.exclude(is_display=0).filter(comment = text_id)
         content_info = [{'content':'加载失败'}]
-        for diary in diary:
-            content_info = {
-                'date':diary.date+ ' ' +diary.weather,
-                'dateTime':diary.dateTime,
-                'title':diary.title,
-                'content':diary.content
-            }
-            diary.visit_num = diary.visit_num + 1
-            diary.save()
-            img = []
-            for diaryImg in diaryImg:
-                img.append(diaryImg.img)
-            content_info['img'] = img
-            content_info['imgLenth'] = len(img)
+        content_info = {
+            'date':diary.date+ ' ' +diary.weather,
+            'dateTime':diary.dateTime,
+            'title':diary.title,
+            'content':diary.content
+        }
+        diary.visit_num = diary.visit_num + 1
+        diary.save()
+        img = []
+        for diaryImg in diaryImg:
+            img.append(diaryImg.img)
+        content_info['img'] = img
+        content_info['imgLenth'] = len(img)
 
-            comment = []
-            i = 0
-            for diaryComment in diaryComment:
-                nick_name = diaryComment.nick_name
-                if nick_name == None:
-                    nick_name = '路人'+ str(i)
-                    i = i + 1
-                elif nick_name.strip() == '':
-                    nick_name = '路人'+ str(i)
-                    i = i + 1
-                comment.append({
-                    'nickname':nick_name,
-                    'content':diaryComment.content,
-                    'comment_to':diaryComment.comment_to
-                })
-            content_info['comment'] = comment
-            break
+        comment = []
+        i = 0
+        for diaryComment in diaryComment:
+            nick_name = diaryComment.nick_name
+            if nick_name == None:
+                nick_name = '路人'+ str(i)
+                i = i + 1
+            elif nick_name.strip() == '':
+                nick_name = '路人'+ str(i)
+                i = i + 1
+            comment.append({
+                'nickname':nick_name,
+                'content':diaryComment.content,
+                'comment_to':diaryComment.comment_to
+            })
+        content_info['comment'] = comment
 
         return render(request,'matter1Content.html',{'diary':content_info})
 

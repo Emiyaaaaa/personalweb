@@ -83,6 +83,12 @@ class NgaShadiaoImageView(View):
         content = content.replace('[del]', '<span class="line-through">').replace('[/del]', '</span>')
         return content
 
+    def add_visit_num(self):
+        content_url = request.GET.get('content_url')
+        nsi = NgaShadiaoImage.objects.get(url=content_url)
+        nsi.visit_num = nsi.visit_num + 1
+        nsi.save()
+
     def get_image_width(self, request):
         client_width = request.GET.get('client_width')
         image_width = int(client_width) - 60

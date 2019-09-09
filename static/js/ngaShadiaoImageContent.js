@@ -1,18 +1,17 @@
 (function () {
 	window.onscroll = lazyLoad;
+    addVisitNum();
 })();
 
-function getFloor(floor, content_url){
-	$.ajax({
-		url:"/ngaShadiaoImage/getFloor",
-        type:"GET",
-        data:{"floor":floor, "content_url":content_url},
-        success:function(data){
-        	$(document.getElementById('mian_content')).append(data);
-        	document.getElementById('scrollLoadFloor').innerText = 'unlocked';
+$(document).ready(function() {
+    document.body.addEventListener("click",function closeFloorSelector(e){
+        let floorSelector = document.getElementById('floorSelector');
+        if (floorSelector.classList.contains('floor-selector-active') && !floorSelector.classList.contains('locked')) {
+            floorSelector.getElementsByClassName('top')[0].classList.remove('top-active');
+            setTimeout(function(){floorSelector.classList.remove('floor-selector-active');},200);
         }
-	})
-}
+    })
+});
 
 function urlSearch(key){
 	let url = window.location.search.slice(1);
@@ -101,12 +100,12 @@ function openFloorSelector(thisEle){
     }
 }
 
-$(document).ready(function() {
-    document.body.addEventListener("click",function closeFloorSelector(e){
-        let floorSelector = document.getElementById('floorSelector');
-        if (floorSelector.classList.contains('floor-selector-active') && !floorSelector.classList.contains('locked')) {
-            floorSelector.getElementsByClassName('top')[0].classList.remove('top-active');
-            setTimeout(function(){floorSelector.classList.remove('floor-selector-active');},200);
-        }
+function addVisitNum(){
+    let content_url = urlSearch('content_url');
+    $.ajax({
+        url:"ngaShadiaoImage/addVisitNum",
+        type:"GET",
+        data:{"content_url":content_url},
+        success:function(data){}
     })
-});
+}

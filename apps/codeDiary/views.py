@@ -49,42 +49,40 @@ class CodeDiaryView():
         return render(request,'matter0.html',{'codeDiary_info':codeDiary_info,'loadStatus':loadStatus,'showBeian':showBeian})
 
     def get_content(self,request,text_id):
-        codeDiary = CodeDiary.objects.filter(text_id=text_id)
+        codeDiary = CodeDiary.objects.get(text_id=text_id)
         codeDiaryImg = CodeDiaryImg.objects.filter(codeDiary=text_id)
         codeComment = CodeComment.objects.exclude(is_display=0).filter(comment = text_id)
         content_info = [{'content':'加载失败'}]
-        for codeDiary in codeDiary:
-            content_info = {
-                'date':codeDiary.date,
-                'dateTime':codeDiary.dateTime,
-                'title':codeDiary.title,
-                'content':codeDiary.content
-            }
-            codeDiary.visit_num = codeDiary.visit_num + 1
-            codeDiary.save()
-            img = []
-            for codeDiaryImg in codeDiaryImg:
-                img.append(codeDiaryImg.img)
-            content_info['img'] = img
-            content_info['imgLenth'] = len(img)
+        content_info = {
+            'date':codeDiary.date,
+            'dateTime':codeDiary.dateTime,
+            'title':codeDiary.title,
+            'content':codeDiary.content
+        }
+        codeDiary.visit_num = codeDiary.visit_num + 1
+        codeDiary.save()
+        img = []
+        for codeDiaryImg in codeDiaryImg:
+            img.append(codeDiaryImg.img)
+        content_info['img'] = img
+        content_info['imgLenth'] = len(img)
 
-            comment = []
-            i = 1
-            for codeComment in codeComment:
-                nick_name = codeComment.nick_name
-                if nick_name == None:
-                    nick_name = '路人'+ str(i)
-                    i = i + 1
-                elif nick_name.strip() == '':
-                    nick_name = '路人'+ str(i)
-                    i = i + 1
-                comment.append({
-                    'nickname':nick_name,
-                    'content':codeComment.content,
-                    'comment_to':codeComment.comment_to
-                })
-            content_info['comment'] = comment
-            break
+        comment = []
+        i = 1
+        for codeComment in codeComment:
+            nick_name = codeComment.nick_name
+            if nick_name == None:
+                nick_name = '路人'+ str(i)
+                i = i + 1
+            elif nick_name.strip() == '':
+                nick_name = '路人'+ str(i)
+                i = i + 1
+            comment.append({
+                'nickname':nick_name,
+                'content':codeComment.content,
+                'comment_to':codeComment.comment_to
+            })
+        content_info['comment'] = comment
 
         return render(request,'matter0Content.html',{'codeDiary':content_info})
 

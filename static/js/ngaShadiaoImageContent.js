@@ -24,9 +24,7 @@ function urlSearch(key){
 }
 
 function loadImage(imageList){
-            console.log(imageList);
     for (var i = 0; i < imageList.length; i++) {
-
         if (imageList[i] != undefined) {
             let data_src = imageList[i].getAttribute('data-src');
             if (data_src != null){
@@ -103,7 +101,7 @@ function openFloorSelector(thisEle){
 function addVisitNum(){
     let content_url = urlSearch('content_url');
     $.ajax({
-        url:"ngaShadiaoImage/addVisitNum",
+        url:"/ngaShadiaoImage/addVisitNum",
         type:"GET",
         data:{"content_url":content_url},
         success:function(data){}

@@ -54,9 +54,12 @@ function divFadeIn() {
     }
     else if(nowMatter == 'matter2'){
         var liLength = $('#'+nowMatter+' .app').length;
-        for (var i = 0; i < liLength; i++) {
-            const div_ele = $('#'+nowMatter+' .app:eq(' + i +')');
-            div_ele.children('.appFadeIn').delay(160*i).fadeIn(400);
+        for (var i = 0; i < liLength-2; i++) {
+            let div_ele = $('#'+nowMatter+' .app:eq(' + i +')')[0];
+            setTimeout(function(){
+                console.log(div_ele.style.opacity)
+                div_ele.style.opacity = 1;
+            }, 120 * i);
         }
     }
     setTimeout(function(){scrollBottom();},140*i);

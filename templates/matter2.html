@@ -1,6 +1,6 @@
 {% for application in application_info %}
     <div class="app">
-    	<a class="appFadeIn" href="{{ application.app_url }}">
+    	<a href="{{ application.app_url }}">
     		<div class="bg-bottom-box"></div>
     		<div class="img-box">
     			<img src="/media/{{ application.app_img }}">
@@ -12,7 +12,14 @@
     </div>
 {% endfor %}
 <div class="app" style="opacity: 0">
-    <a class="appFadeIn" href="#application">
+    <a href="#application">
+        <div class="bg-bottom-box"></div>
+        <div class="img-box"></div>
+        <div class="bottom-box"></div>
+    </a>
+</div>
+<div class="app" style="opacity: 0">
+    <a href="#application">
         <div class="bg-bottom-box"></div>
         <div class="img-box"></div>
         <div class="bottom-box"></div>

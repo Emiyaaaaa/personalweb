@@ -17,6 +17,7 @@
     display:-webkit-inline-box; /* Safari, Chrome, and Opera */
     display:inline-box;/* W3C */
     position: relative;
+    opacity: 0;
 	letter-spacing: 2px;
     border-radius: 15px;
     word-break: break-all;
@@ -32,18 +33,16 @@
     margin-bottom: 30px;
     box-shadow:0px 0px 30px rgba(212,212,212,0.9);
     text-align: left;
-    
+    transition: opacity 0.35s;
+    -webkit-transition: opacity 0.35s;
+    -moz-transition: opacity 0.35s;
+    -o-transition: opacity 0.35s;
+    -ms-transition: opacity 0.35s;
 }
 
 .matter2 .app:hover{
 
     box-shadow:0px 0px 15px rgba(230,230,230,0.9);
-
-}
-
-.matter2 .app .appFadeIn{
-
-    display: none;
 
 }
 

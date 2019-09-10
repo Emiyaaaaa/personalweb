@@ -98,6 +98,8 @@ class NgaShadiaoImageView(View):
         return image_width
 
     def get_height(self, x, width):
+        if int(x.group(1)) == 0:
+            return int(width)
         return int(x.group(2)) / int(x.group(1)) * int(width) + 4  # padding-top为4
 
     def get_mzsm(self,request):

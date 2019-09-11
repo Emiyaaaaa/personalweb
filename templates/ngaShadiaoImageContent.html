@@ -10,8 +10,9 @@
 	<script type="text/javascript" src="{% static 'js/jquery/1.10.2/jquery.min.js' %}"></script>
 	<script type="text/javascript" src="{% static 'js/ngaShadiaoImageContent.js' %}"></script>
 <body>
-    <div id="mian_content" class="mian_content">
+    <div id="main_content" class="main_content">
     	<div class="title">{{ title }}</div>
+        <a href="{{ content_url }}" target="_blank" class="url">[原贴链接]</a>
         {% for n in ngaShadiaoImageContentInfo %}
 	        <div id="{{ n.floor }}" class="floor">
 	            <div class="floor-bar">
@@ -21,22 +22,24 @@
 	            <div class="floor-text">{{ n.content|safe }}</div>
 	        </div>
         {% endfor %}
-        <div class="floor-selector" id="floorSelector" onclick="openFloorSelector(this)">
-        	<div class="top">
-        		<div class="text">选择要跳转的楼层</div>
-        		<a href="/ngaShadiaoImage" class="floor-num">首页</a>
-        		{% for n in ngaShadiaoImageContentInfo %}
-        			<a class="floor-num" href="#{{ n.floor }}">{{ n.floor }}</a>
-        		{% endfor %}
-        	</div>
-        	<div class="bottom">
-	        	<div class="center-relative">
-		        	<div class="floor-num" id="floor_num">1L</div>
-		        	<div class="floor-open-ico">
-		        		<img src="{% static 'images/right.png' %}">
-		        	</div>
-		        </div>
-		    </div>
+        <div class="floor-selector-platform">
+            <div class="floor-selector" id="floorSelector" onclick="openFloorSelector(this)">
+            	<div class="top">
+            		<div class="text">选择要跳转的楼层</div>
+            		<a href="/ngaShadiaoImage" class="floor-num">首页</a>
+            		{% for n in ngaShadiaoImageContentInfo %}
+            			<a class="floor-num" href="#{{ n.floor }}">{{ n.floor }}</a>
+            		{% endfor %}
+            	</div>
+            	<div class="bottom">
+    	        	<div class="center-relative">
+    		        	<div class="floor-num" id="floor_num">1L</div>
+    		        	<div class="floor-open-ico">
+    		        		<img src="{% static 'images/right.png' %}">
+    		        	</div>
+    		        </div>
+    		    </div>
+            </div>
         </div>
     </div>
 </body>

@@ -74,7 +74,7 @@ body{
 
 }
 
-.mian_content{
+.main_content{
 	
 	position: relative;
 	top: 0;
@@ -162,10 +162,8 @@ body{
 
 .floor-selector{
 
-	position: fixed;
+	position: relative;
 	overflow: auto;
-	bottom: 60px;
-	left: 10px;
 	width: 60px;
 	border-radius: 20px;
 	font-size: 15px;
@@ -177,6 +175,23 @@ body{
     -webkit-transition: width 0.20s;
     -moz-transition: width 0.20s;
     -o-transition: width 0.20s;
+
+}
+
+@media screen and (min-width: 800px){
+
+	.floor-selector{
+
+		left: -40px;
+
+	}
+
+}
+
+.floor-selector-platform{
+
+	position: fixed;
+	bottom: 60px;
 
 }
 
@@ -266,5 +281,11 @@ body{
 
 	margin-top: 15px;
 	margin-bottom: 10px;
+
+}
+
+.main_content .url{
+
+	color: #2e7aea;
 
 }

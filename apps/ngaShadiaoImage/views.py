@@ -67,7 +67,7 @@ class NgaShadiaoImageView(View):
             })
             floor_num = n.all_floor_num
             floor = floor + 1
-        return render(request, 'ngaShadiaoImageContent.html', {'ngaShadiaoImageContentInfo': ngaShadiaoImageContentInfo, 'title': title, 'floor_num': floor_num})
+        return render(request, 'ngaShadiaoImageContent.html', {'ngaShadiaoImageContentInfo': ngaShadiaoImageContentInfo, 'title': title, 'floor_num': floor_num, 'content_url':content_url})
 
     def deal_content(self, content, floor_num, image_width):
         url = 'https://' + settings.CP_NAME + '.' + settings.CP_DOMAIN + '/'

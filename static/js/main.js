@@ -172,6 +172,7 @@ function openLeftList(){
             $('#left .Wrapper').css('padding-top','0');
             middleObj.classList.add('initialized');
         }
+        //padding解决bug
         //end
         middleObj.classList.add('moved');
         leftListObj.style.display = 'inline-block';

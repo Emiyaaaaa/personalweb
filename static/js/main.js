@@ -172,12 +172,10 @@ function openLeftList(){
             $('#left .Wrapper').css('padding-top','0');
             middleObj.classList.add('initialized');
         }
-        //padding解决bug
         //end
         middleObj.classList.add('moved');
         leftListObj.style.display = 'inline-block';
         leftListObj.style.left = '0';
-        // setTimeout(function(){leftListObj.style.left = '0';},0);
         bodyObj.style.overflowY = "hidden";
         middleObj.style.marginLeft = setLeftWidth + middleMarginLeftBeforeOpen + 'px';
         middleMarginLeftAfterOpen = setLeftWidth + middleMarginLeftBeforeOpen;
@@ -193,7 +191,6 @@ function openLeftList(){
 }
 
 function replyButton() {
-
     var comment = document.getElementById('windowContent').getElementsByClassName('comment');
     var replyButton = document.getElementsByClassName('windowReplyButton');
     for (var i = 0; i < comment.length; i++) {

@@ -24,6 +24,7 @@ from hexconvert.views import HexconvertView
 from bilibiliCoverDownload.views import BilibiliCoverDownloadView
 from zhuhuVideoDownload.views import ZhuhuVideoDownloadView
 from ngaShadiaoImage.views import NgaShadiaoImageView
+from liveAtc.views import LiveAtcView
 import xadmin
 import mainPage
 from django.shortcuts import render
@@ -45,6 +46,8 @@ urlpatterns = [
     url(r'^ngaShadiaoImage/mzsm$', NgaShadiaoImageView().get_mzsm),
     url(r'^ngaShadiaoImage/notice$', NgaShadiaoImageView().get_notice),
     url(r'^ngaShadiaoImage/addVisitNum$', NgaShadiaoImageView().add_visit_num),
+    url(r'^liveAtc$', LiveAtcView.as_view()),
+    url(r'^liveAtc/mzsm$', LiveAtcView().get_mzsm),
 ]
 urlpatterns += static(settings.MEDIA_URL , document_root = settings.MEDIA_ROOT )
 urlpatterns += static(settings.STATIC_URL, document_root = settings.STATIC_ROOT )

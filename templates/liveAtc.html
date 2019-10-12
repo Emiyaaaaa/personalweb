@@ -1,0 +1,19 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ZBAA-ATC</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/liveAtc/liveAtc.css' %}">
+</head>
+<body>
+    <div class="main">
+        <div class="title">北京首都国际机场 (Rwy 01/19)塔台通信实时收听 (频率118.600)</div>
+        <a href="https://www.liveatc.net/hlisten.php?mount=zbaa&icao=zbaa" class="liveatcLink"><div>点击播放</div></a>
+    </div>
+    <div><a href="/liveAtc/mzsm" class="mzsm">免责声明</a></div>
+    <div><a href="http://www.miitbeian.gov.cn/" target="_blank" class="beian">晋ICP备18012113号-1</a></div>
+</body>
+</html>

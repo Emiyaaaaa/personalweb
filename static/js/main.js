@@ -278,7 +278,7 @@ function check_lines_length(chooseEle){
         }
         else if(title_lines >= 2){
             title_ele.innerHTML += look_more;
-            text_ele.innerHTML = '';
+            text_ele.innerHTML = '';//两行标题时不显示简略内容
             cut_line(title_ele,2);
         }
     }

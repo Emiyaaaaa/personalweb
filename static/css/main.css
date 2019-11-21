@@ -8,7 +8,13 @@ a, abbr, address, blockquote, body, caption, cite, code, dd, del, dfn, div, dl, 
 
 a {
 
-	text-decoration:none
+	text-decoration:none;
+
+}
+
+title{
+
+	display: block;
 
 }
 
@@ -20,7 +26,7 @@ img {
 
 ul {
 
-	list-style:none
+	list-style:none;
 
 }
 
@@ -30,7 +36,7 @@ button {
 	padding: 0;
 	border: none;
 	outline: none;
-	background-color:transparent
+	background-color:transparent;
 
 }
 

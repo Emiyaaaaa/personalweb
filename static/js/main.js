@@ -126,7 +126,7 @@ function rgb2rgba(strRgb){
     return strRgba;
 }
 
-
+// 打开窗口若高度不足则填充窗口
 function fillWindow(){
     var window_img = document.getElementById('mainContent').getElementsByClassName('windowImg')[0];
     var fill_window = document.getElementById('fill_window');
@@ -303,7 +303,7 @@ function cut_line(ele, reason_lines){
     }
 }
 
-//返回键监听
+// 返回键监听
 if (window.history && window.history.pushState) {
     $(window).on('popstate', function() {
 
@@ -326,14 +326,15 @@ if (window.history && window.history.pushState) {
             if (document.getElementById('window').style.display == 'block' && (urlSearch == '' || urlSearch == undefined)) {//此时按返回键则关闭窗口
                 $('.windowCloseButton').click();
             }
-            if (document.getElementById('window').style.display == 'none' && (urlSearch != '' && urlSearch != undefined)) {//此时按返回键则打开窗口
-                var text_id = urlSearch.split('=')[1];
-                $(urlHash + text_id.toString()).click();
-            }
+            // if (document.getElementById('window').style.display == 'none' && (urlSearch != '' && urlSearch != undefined)) {//此时按返回键则打开窗口
+            //     var text_id = urlSearch.split('=')[1];
+            //     $(urlHash + text_id.toString()).click();
+            // }
         }
     });
 }
 
+// 侧边栏日期插件
 function initializeTimeProgressBar(){
     var myDate = new Date();
     days = 0;

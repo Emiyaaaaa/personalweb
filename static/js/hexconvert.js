@@ -1,6 +1,6 @@
 $(document).ready(function() {
-	hexBeforeConvert = 2;
-	hexAfterConvert = 10;
+	hexBeforeConvert = 10;
+	hexAfterConvert = 2;
 	covertToNum = {
 		'二进制':2,
 		'四进制':4,

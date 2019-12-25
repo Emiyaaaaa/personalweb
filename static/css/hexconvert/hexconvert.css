@@ -214,6 +214,7 @@ header{
 	position: relative;
 	width: 77px;
 	height: 36px;
+	z-index: 0;
 	margin: auto;
 	margin-bottom: 30px;
 	background-color: rgba(184,248,212,0.2);

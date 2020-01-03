@@ -205,7 +205,7 @@
 					setWeatherIcon(day3.weather_icon,"after-tomorrow");
 				}
 				else{
-					document.querySelectorAll(".right .loading-weather .loading")[0].innerHTML = '加载失败!';
+					document.querySelectorAll(".right .loading-weather .loading")[0].innerHTML = '原本这里是有个精美的天气预报的，结果做天气接口的服务商跑路了，等我寒假自己做一个：）';
 					console.log('error:'+data.ERRORCODE+' result:'+data.RESULT);
 				}
 				$.ajax({

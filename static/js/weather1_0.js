@@ -1,3 +1,6 @@
+// aq：空气质量
+// aqi：空气指数
+
 (function (){
 	function nowJson2str(data){
 		var aq = '';

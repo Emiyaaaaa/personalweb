@@ -27,6 +27,7 @@ from ngaShadiaoImage.views import NgaShadiaoImageView
 from liveAtc.views import LiveAtcView
 import xadmin
 import mainPage
+from api import getWeatherJson
 from django.shortcuts import render
 
 
@@ -48,6 +49,7 @@ urlpatterns = [
     url(r'^ngaShadiaoImage/addVisitNum$', NgaShadiaoImageView().add_visit_num),
     url(r'^liveAtc$', LiveAtcView.as_view()),
     url(r'^liveAtc/mzsm$', LiveAtcView().get_mzsm),
+    url(r'api/getWeatherJson', getWeatherJson().getWeatherJson)
 ]
 urlpatterns += static(settings.MEDIA_URL , document_root = settings.MEDIA_ROOT )
 urlpatterns += static(settings.STATIC_URL, document_root = settings.STATIC_ROOT )

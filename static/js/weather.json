@@ -1,0 +1,77 @@
+{
+	"error": 0, 
+	"status": "success", 
+	"date": "2020-01-15", 
+	"results": 
+		[
+			{
+				"currentCity": "山西省阳泉市", 
+				"pm25": "112", 
+				"index": 
+					[
+						{
+							"des": "天气寒冷，建议着厚羽绒服、毛皮大衣加厚毛衣等隆冬服装。年老体弱者尤其要注意保暖防冻。", "tipt": "穿衣指数", 
+							"title": "穿衣", 
+							"zs": "寒冷"
+						}, 
+						{
+							"des": "适宜洗车，未来持续两天无雨天气较好，适合擦洗汽车，蓝天白云、风和日丽将伴您的车子连日洁净。", "tipt": "洗车指数", 
+							"title": "洗车", 
+							"zs": "适宜"
+						}, 
+						{
+							"des": "天冷，发生感冒机率较大，请注意适当增加衣服，加强自我防护避免感冒。", 
+							"tipt": "感冒指数", 
+							"title": "感冒", 
+							"zs": "易发"
+						}, 
+						{
+							"des": "天气较好，但考虑天气寒冷，推荐您进行室内运动，若在户外运动请注意保暖并做好准备活动。", "tipt": "运动指数", 
+							"title": "运动", 
+							"zs": "较不宜"
+						}, 
+						{
+							"des": "紫外线强度较弱，建议出门前涂擦SPF在12-15之间、PA+的防晒护肤品。", 
+							"tipt": "紫外线强度指数", 
+							"title": "紫外线强度", 
+							"zs": "弱"
+						}
+					], 
+				"weather_data": 
+					[
+						{
+							"date": "周三 01月15日 (实时：-2℃)", 
+							"dayPictureUrl": "http://api.map.baidu.com/images/weather/day/duoyun.png", 
+							"nightPictureUrl": "http://api.map.baidu.com/images/weather/night/duoyun.png", 
+							"weather": "多云", 
+							"wind": "东北风微风", 
+							"temperature": "-1 ~ -8℃"	
+						}, 
+						{
+							"date": "周四", 
+							"dayPictureUrl": "http://api.map.baidu.com/images/weather/day/duoyun.png", 
+							"nightPictureUrl": "http://api.map.baidu.com/images/weather/night/qing.png", 
+							"weather": "多云转晴", 
+							"wind": "东风微风", 
+							"temperature": "0 ~ -9℃"
+						}, 
+						{
+							"date": "周五", 
+							"dayPictureUrl": "http://api.map.baidu.com/images/weather/day/qing.png", 
+							"nightPictureUrl": "http://api.map.baidu.com/images/weather/night/qing.png", 
+							"weather": "晴", 
+							"wind": "西北风微风", 
+							"temperature": "6 ~ -8℃"
+						}, 
+						{
+							"date": "周六", 
+							"dayPictureUrl": "http://api.map.baidu.com/images/weather/day/qing.png", 
+							"nightPictureUrl": "http://api.map.baidu.com/images/weather/night/qing.png", 
+							"weather": "晴", 
+							"wind": "西北风3-4级", 
+							"temperature": "7 ~ -8℃"
+						}
+					]
+			}
+		]
+}

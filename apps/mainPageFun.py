@@ -126,14 +126,6 @@ def weatherUser(request):
     else:
         return JsonResponse({'statusCode': '1'})
 
-def getWeather(request):
-    ip = request.POST.get('ip')
-    n7 = request.POST.get('n7')
-    try:
-        response = requests.post('http://api.shujuzhihui.cn/api/weather/ip?appKey=9057ff088d24450b93d896cf317835f4&n7=1',{'ip':ip,'n7':n7})
-        return JsonResponse(json.loads(response.text))
-    except Exception as e:
-        return JsonResponse({'ERRORCODE':'500','RESULT':str(e)})
 
 def ZhuhuVideoDownload(request):
     url = request.GET.get('url')

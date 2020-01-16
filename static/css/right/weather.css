@@ -23,7 +23,7 @@
 
 .weather .now-tem{
 
-    margin: 5px 0 0 5px;
+    margin: 5px 0 0 5px !important;
 
 }
 
@@ -39,12 +39,6 @@
 
 }
 
-.weather .now-aq{
-    
-    margin: 5px 0 0 10px;
-
-}
-
 .weather-info{
 
     position: absolute;
@@ -52,30 +46,33 @@
 
 }
 
-.today-weather .weather-info>div:not(:nth-child(2)):not(:nth-child(1)),
-.tomorrow-weather .weather-info>div:not(:nth-child(2)):not(:nth-child(1)),
-.after-tomorrow-weather .weather-info>div:not(:nth-child(2)):not(:nth-child(1)){
+.weather [class^=day][class$=-city]{
+
+    margin: 20px 0 0 10px;
+
+}
+
+.weather [class$=-weather] .weather-info>div:not(:nth-child(2)):not(:nth-child(1)){
 
     margin: 5px 0 0 10px;
 
 }
 
-.today-tem,
-.tomorrow-tem,
-.after-tomorrow-tem{
+.weather [class$=-tem]{
 
     margin: 20px 0 34px 10px;
 
 }
 
-.rainy-background,
+/*.rainy-background,
 .overcast-background,
 .sunny-background,
 .cloudy-background,
 .rainbow-background,
 .starry-background,
 .stormy-background,
-.snowy-background{
+.snowy-background*/
+.weather [class$=background]:not(.weather-background){
 
     position: absolute;
     z-index: -1;

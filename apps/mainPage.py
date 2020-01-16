@@ -22,8 +22,7 @@ post_dict = {
     'windowSendComment':windowSendComment,
     'validatePassword':validatePassword,
     'matter33SendMessage':matter33SendMessage,
-    'weatherUser':weatherUser,
-    'getWeather':getWeather
+    'weatherUser':weatherUser
 }
 
 @csrf_exempt

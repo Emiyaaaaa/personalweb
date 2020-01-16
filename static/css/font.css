@@ -231,14 +231,11 @@ body{
 
 .weather .now-tem{
     
-    font-size: 50px;
-    color: #808080
+    font-size: 50px !important;
 
 }
 
-.today-tem,
-.tomorrow-tem,
-.after-tomorrow-tem{
+.weather [class$=tem]{
 
     font-size: 30px;
     color: #808080

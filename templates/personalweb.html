@@ -57,7 +57,8 @@
 	<link rel="stylesheet" type="text/css" href="{% static 'css/middle/window-bubbly-button.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/media.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/middle/suggestion-bubbly-button.css' %}">
-    <script type="text/javascript" src="{% static 'js/marked/marked.min.js' %}"></script>
+	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- <script type="text/javascript" src="{% static 'js/marked/marked.min.js' %}"></script> -->
     <script type="text/javascript" src="{% static 'js/jquery.actual.js' %}"></script>
 </head>
 <body>
@@ -248,7 +249,7 @@
     </div>
     <aside class="right">
     	<div class="loading-weather">
-    		<div class="loading">原本这里是有个精美的天气预报的，结果做天气接口的服务商跑路了，等我寒假自己做一个：）</div>
+    		<div class="loading">加载中...</div>
     	</div>
     	<div class="weather">
     		<div class="now-weather" id="w_matter_0" style="display: inline;">
@@ -263,36 +264,36 @@
 	    			<div class="weather-background"></div>
 	    		</div>
 	    	</div>
-	    	<div class="today-weather" id="w_matter_1" style="display: none;">
+	    	<div class="day1-weather" id="w_matter_1" style="display: none;">
 	    		<div class="weather-info">
-		    		<div class="today-tem"></div>
-		    		<div class="now-city"></div>
-		    		<div class="today-wdp"></div>
-		    		<div class="today-wea"></div>
+		    		<div class="day1-tem"></div>
+		    		<div class="day1-city"></div>
+		    		<div class="day1-wdp"></div>
+		    		<div class="day1-wea"></div>
 	    		</div>
 	    		<div class="weather-mod">
 	    			<div class="weather-icon"></div>
 	    			<div class="weather-background"></div>
 	    		</div>
 	    	</div>
-	    	<div class="tomorrow-weather" id="w_matter_2" style="display: none;">
+	    	<div class="day2-weather" id="w_matter_2" style="display: none;">
 	    		<div class="weather-info">
-		    		<div class="tomorrow-tem"></div>
-		    		<div class="now-city"></div>
-		    		<div class="tomorrow-wdp"></div>
-		    		<div class="tomorrow-wea"></div>
+		    		<div class="day2-tem"></div>
+		    		<div class="day2-city"></div>
+		    		<div class="day2-wdp"></div>
+		    		<div class="day2-wea"></div>
 	    		</div>
 	    		<div class="weather-mod">
 	    			<div class="weather-icon"></div>
 	    			<div class="weather-background"></div>
 	    		</div>
 	    	</div>
-	    	<div class="after-tomorrow-weather" id="w_matter_3" style="display: none;">
+	    	<div class="day3-weather" id="w_matter_3" style="display: none;">
 	    		<div class="weather-info">
-		    		<div class="after-tomorrow-tem"></div>
-		    		<div class="now-city"></div>
-		    		<div class="after-tomorrow-wdp"></div>
-		    		<div class="after-tomorrow-wea"></div>
+		    		<div class="day3-tem"></div>
+		    		<div class="day3-city"></div>
+		    		<div class="day3-wdp"></div>
+		    		<div class="day3-wea"></div>
 	    		</div>
 	    		<div class="weather-mod">
 	    			<div class="weather-icon"></div>
@@ -388,7 +389,7 @@
     <script type="text/javascript" src="{% static 'js/window.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/ajax.js' %}"></script>
     <script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
-    <script type="text/javascript" src="{% static 'js/weather.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/weather2_0.js' %}"></script>
     <script type="text/javascript">
     	if(window.location.host != '127.0.0.1:8000' && isPC()){
     		if (navigator.userAgent.indexOf('Edge') > -1) {

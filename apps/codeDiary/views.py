@@ -20,9 +20,9 @@ class CodeDiaryView():
 
         for codeDiary in codeDiary:
             text_id = codeDiary.text_id
-            markdown_text = codeDiary.content
-            unmarkdown_text = re.sub('[#`-]', '', markdown_text).replace(' ', '').replace('\n','')
-            markdownLinkObj = re.search( r'\[(.*)\]\(http.*?\)', unmarkdown_text,re.I)
+            mardown_text = codeDiary.content
+            unmarkdown_text = re.sub('[#`-]|\n|\s', '', mardown_text)# 简单还原markdown,方便裁剪制作brief_text
+            markdownLinkObj = re.search(r'\[(.*)\]\(http.*?\)', unmarkdown_text, re.I)
             try:
                 unmarkdown_text = re.sub(r'\[.*\]\(http.*?\)',markdownLinkObj.group(1),unmarkdown_text)
             except:
@@ -30,6 +30,10 @@ class CodeDiaryView():
             line = 2
             if codeDiary.title != None:line = 1
             brief_text = self.getBriefText(unmarkdown_text, text_max_length,line)
+            # 将<和>转义后再传入模板
+            # re.sub('<', '\<', brief_text['brief_text'])
+            # re.sub('>', '\>', brief_text['brief_text'])
+            print(brief_text['brief_text'])
             codeDiaryImg = CodeDiaryImg.objects.filter(codeDiary=text_id)
             codeDiaryComment = CodeComment.objects.filter(comment=text_id).exclude(is_display=0)
             if codeDiary.tag != None:
@@ -99,7 +103,7 @@ class CodeDiaryView():
         for codeDiary in moreCodeDiary:
             text_id = codeDiary.text_id
             markdown_text = codeDiary.content
-            unmarkdown_text = re.sub('[#`-]', '', markdown_text).replace(' ', '').replace('\n', '')
+            unmarkdown_text = re.sub('[#`-]|\n|\s', '', markdown_text)# 简单还原markdown,方便裁剪制作brief_text
             line = 2
             if codeDiary.title != None: line = 1
             brief_text = self.getBriefText(unmarkdown_text, text_max_length, line)
@@ -123,15 +127,17 @@ class CodeDiaryView():
 
 
     def getBriefText(self,text,text_max_length,line=2):
+        print(text,text_max_length)
         text_length = 0
         text_index = 0
-        cn_char = ['，', '。', '“', '”', '；', '：', '【', '】', '、', '！', '·', '￥', '（', '）', '’', '《', '》']
         text_max_length = int(text_max_length)
         for uchar in text:
-            if (uchar >= u'\u4e00' and uchar <= u'\u9fa5') or (uchar in cn_char):
-                text_length = text_length + 1  # 中文长度加1
+            # 全角字符加一，半角字符加0.5
+            # if判断条件依次为：汉字全角，符号全角
+            if (uchar >= u'\u4e00' and uchar <= u'\u9fa5') or (uchar >= u'\uff01' and uchar <= u'\uff5e'):
+                text_length = text_length + 1  # 全角字符加一
             else:
-                text_length = text_length + 0.5  # 英文长度加0.5
+                text_length = text_length + 0.5  # 半角字符加0.5
             text_index = text_index + 1
 
             if text_length >= text_max_length * line - 6:

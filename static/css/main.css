@@ -180,6 +180,12 @@ a:hover{
 
 }
 
+pre::-webkit-scrollbar {
+
+	max-height: 6px;
+
+}
+
 .left::-webkit-scrollbar {
 
     display: none;

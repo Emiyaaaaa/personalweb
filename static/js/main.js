@@ -350,3 +350,17 @@ function initializeTimeProgressBar(){
     $('.my-progress-bar-cover').width(bg_width*days/365);
 }
 initializeTimeProgressBar();
+
+// HTML转文本
+function htmlTotext(html) {
+    return $('<div>').text(html).html();
+}
+
+//文本转HTML
+function textTohtml(text) {
+    return $('<div>').html(text).html();
+}
+
+
+console.log(typeof(textTohtml('<p>aa</p><br/>')));
+console.log(htmlTotext('<p>aa</p><br/>'));

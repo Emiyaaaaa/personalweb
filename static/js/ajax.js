@@ -78,6 +78,13 @@ $(document).ready(function() {
 	function fillHtml(data){
 		if (nowMatter == 'matter0'){
     		$('.codeDiary ul').html(data);
+    		// var briefContentObj = document.getElementsByClassName('codeDiary')[0].getElementsByClassName('brief-content-text')
+    		// for (var i = 0; i < briefContentObj.length; i++) {
+    		// 	briefContent = briefContentObj[i].innerHTML;
+    		// 	console.log(briefContent)
+    		// 	briefContentObj[i].innerText = briefContentObj[i].innerHTML
+    		// 	console.log(briefContentObj[i].innerText)
+    		// }
 		}
 		else if (nowMatter == 'matter1'){
     		$('.diary ul').html(data);

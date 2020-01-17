@@ -269,8 +269,8 @@ function get_ele_lines(ele){
 function check_lines_length(chooseEle){
     const look_more = '<span class="look-more">[查看更多]</span>';
     var chooseEle = chooseEle[0];//jquary对象转为js对象
-    var text_ele = chooseEle.getElementsByClassName('brief-content-text')['0'];
-    var title_ele = chooseEle.getElementsByClassName('title')['0'];
+    var text_ele = chooseEle.getElementsByClassName('brief-content-text')[0];
+    var title_ele = chooseEle.getElementsByClassName('title')[0];
     if (typeof(title_ele) != "undefined"){
         var title_lines = get_ele_lines(title_ele);
         if(title_lines == 1){
@@ -293,12 +293,15 @@ function check_lines_length(chooseEle){
 function cut_line(ele, reason_lines){
     var reason_lines = reason_lines||2;
     var now_lines = get_ele_lines(ele);
-    var look_more = '<span class="look-more">[查看更多]</span>';
+    var look_more = document.createElement("span");
+        look_more.setAttribute("class", "look-more"); 
+        look_more.innerText = '[查看更多]'
     const inner_text = ele.innerText;
     var text = inner_text.substr(0, inner_text.length - 6);
     
     if (now_lines > reason_lines) {
-        ele.innerHTML = text.substr(0, text.length - 1) + look_more;
+        ele.innerText = text.substr(0, text.length - 1);
+        ele.appendChild(look_more);
         cut_line(ele, reason_lines);
     }
 }

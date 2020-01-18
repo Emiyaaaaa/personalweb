@@ -42,23 +42,6 @@ class DiaryView():
             })
         return render(request, 'matter1.html', {'diary_info': diary_info, 'loadStatus':loadStatus,'showBeian':showBeian})
 
-    def getBriefText(self,text,text_max_length,line=2):
-        text_length = 0
-        text_index = 0
-        cn_char = ['，','。','“','”','；','：','【','】','、','！','·','￥','（','）','’','《','》']
-        text_max_length = int(text_max_length)
-        for uchar in text:
-            if (uchar >= u'\u4e00' and uchar <= u'\u9fa5') or (uchar in cn_char):
-                text_length = text_length + 1 # 中文长度加一
-            else:
-                text_length = text_length + 0.5 # 英文长度加0.5
-            text_index = text_index + 1
-
-            if text_length >= text_max_length * line - 6:
-                return {'is_brief': 'true', 'brief_text': text[:text_index-1]}
-
-        return {'is_brief': 'false','brief_text': text}
-
     def get_content(self,request,text_id):
         diary = Diary.objects.get(text_id=text_id)
         diaryImg = DiaryImg.objects.filter(diary=text_id)
@@ -132,3 +115,21 @@ class DiaryView():
                 'comment_num': len(diaryComment)
             })
         return render(request, 'matter1.html', {'diary_info': diary_info,'loadStatus':loadStatus,'showBeian':showBeian})
+
+        def getBriefText(self,text,text_max_length,line=2):
+            text_length = 0
+            text_index = 0
+            text_max_length = int(text_max_length)
+            for uchar in text:
+                # 全角字符加一，半角字符加0.5
+                # if判断条件依次为：汉字全角，符号全角
+                if (uchar >= u'\u4e00' and uchar <= u'\u9fa5') or (uchar >= u'\uff01' and uchar <= u'\uff5e'):
+                    text_length = text_length + 1  # 全角字符加一
+                else:
+                    text_length = text_length + 0.5  # 半角字符加0.5
+                text_index = text_index + 1
+
+                if text_length >= text_max_length * line - 6:
+                    return {'is_brief': 'true', 'brief_text': text[:text_index-1]}
+            else:
+                return {'is_brief': 'false','brief_text': text}

@@ -33,7 +33,6 @@ class CodeDiaryView():
             # 将<和>转义后再传入模板
             # re.sub('<', '\<', brief_text['brief_text'])
             # re.sub('>', '\>', brief_text['brief_text'])
-            print(brief_text['brief_text'])
             codeDiaryImg = CodeDiaryImg.objects.filter(codeDiary=text_id)
             codeDiaryComment = CodeComment.objects.filter(comment=text_id).exclude(is_display=0)
             if codeDiary.tag != None:
@@ -127,7 +126,6 @@ class CodeDiaryView():
 
 
     def getBriefText(self,text,text_max_length,line=2):
-        print(text,text_max_length)
         text_length = 0
         text_index = 0
         text_max_length = int(text_max_length)

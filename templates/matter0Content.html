@@ -11,7 +11,7 @@
         {% if codeDiary.title != None %}
             <div class="title">{{ codeDiary.title }}</div>
         {% endif %}
-        <div class="markdown-body">{{ codeDiary.content }}</div>
+        <div class="markdown-body" id="markdownBody">{{ codeDiary.content }}</div>
         <div class="windowImg">
         {% for imgs in codeDiary.img %}
             {% if codeDiary.imgLenth == 1 %}

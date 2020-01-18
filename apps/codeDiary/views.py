@@ -70,6 +70,7 @@ class CodeDiaryView():
         content_info['img'] = img
         content_info['imgLenth'] = len(img)
 
+        # 评论
         comment = []
         i = 1
         for codeComment in codeComment:
@@ -86,7 +87,7 @@ class CodeDiaryView():
                 'comment_to':codeComment.comment_to
             })
         content_info['comment'] = comment
-
+        print(content_info['content'])
         return render(request,'matter0Content.html',{'codeDiary':content_info})
 
     def getMoreContent(self,request,finally_id,text_max_length=37):

@@ -146,22 +146,26 @@ $(document).ready(function() {
 	        data:{"type":"matterPage",'matter':nowMatter,'text_id':href.split('?')[1].split('=')[1]},
 	        success:function(data){
 	        	$('#ajax_window_html').html(data);
+
 	        	// 填充matter0内容
 	        	try{
 	        		var mardownBodyObj = document.getElementById('markdownBody');
 	        		mardownBodyObj.innerHTML = marked(mardownBodyObj.innerHTML);
 	        		var markdownBodyCodeTagObj = mardownBodyObj.getElementsByTagName('code');
 	        		for (var i = 0; i < markdownBodyCodeTagObj.length; i++) {
-	        			markdownBodyCodeTagObj[i].innerText = markdownBodyCodeTagObj[i].innerText.replace(/&lt;/g,'<').replace(/&gt;/g,'>');
+	        			markdownBodyCodeTagObj[i].innerText = markdownBodyCodeTagObj[i].innerText.replace(/&lt;/g,'<').replace(/&gt;/g,'>');	        			
 	        		}
+
 	        	}
-	        	catch(err){console.log('matter0:error')}
+	        	catch(err){console.log('matter0:error    '+String(err))}
+
 	        	// 填充matter1内容
 	        	try{
 	        		var matter1_content = $('#matter1_content').html().trim().split('\n').join('</br>')
 	        		$('#matter1_content').html(str2aTag(matter1_content))
 	        	}
-	        	catch(err){console.log('matter1:error')}
+	        	catch(err){console.log('matter1:error    '+String(err))}
+
 	        	var markdown_a = $('.markdown-body a');
 	        	for (var i = 0; i < markdown_a.length; i++){
 	        		markdown_a[i].target="_blank";

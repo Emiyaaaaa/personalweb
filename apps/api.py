@@ -19,9 +19,11 @@ class getWeatherJson(View):
         weatherAPI = 'http://api.map.baidu.com/telematics/v3/weather'
         baiduWeatherJson = requests.get(weatherAPI, params={'location': area, 'output': 'json', 'ak': 'dEO2SdyPBFGyEdD5ij0Dd4rM8PwFp4w7'})
         baiduWeatherJson = baiduWeatherJson.content.decode('utf-8')
+        print(area)
         print(baiduWeatherJson)
         baiduWeatherJson = json.loads(baiduWeatherJson)
         myWeatherJson = self.baiduWeatherJson2myWeatherJson(baiduWeatherJson)
+        print(myWeatherJson)
         return JsonResponse(dict2Json(myWeatherJson))
 
     def getWeatherArea(self,request):

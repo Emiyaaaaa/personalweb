@@ -10,4 +10,4 @@ def dict2Json(dict):
 	print(dict)
 	result = str(re.sub("'", '"', str(dict)))
 	print(result)
-    return json.loads(result)
+	return json.loads(result)

@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97ee085e-0965-47c9-afdd-5d7ddcf1463c" name="Default" comment="bug">
-      <change beforePath="$PROJECT_DIR$/apps/codeDiary/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/codeDiary/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/diary/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/diary/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/ajax.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/ajax.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../untitled/qzone/qzone_sql.py" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/qzone/qzone_sql.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -108,42 +105,41 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/zhuhuVideoDownload/views.py">
+        <entry file="file://$PROJECT_DIR$/personalweb/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+            <state relative-caret-position="519">
+              <caret line="51" column="62" selection-start-line="51" selection-start-column="62" selection-end-line="51" selection-end-column="62" />
               <folding>
-                <element signature="e#0#35#0" expanded="true" />
+                <element signature="e#644#676#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/personalweb/wsgi.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="12" column="49" lean-forward="true" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
+              <folding>
+                <element signature="e#227#236#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/mainPage.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="1" selection-start-line="1" selection-end-line="2" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/personalweb/__init__.py">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/mainPageFun.py">
+        <entry file="file://$PROJECT_DIR$/personalweb/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/api.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
+            <state relative-caret-position="389">
+              <caret line="136" lean-forward="true" selection-start-line="136" selection-end-line="136" />
               <folding>
-                <element signature="e#102#138#0" expanded="true" />
+                <element signature="e#312#321#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -161,11 +157,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/shortcuts.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="257">
               <caret line="39" column="17" lean-forward="true" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -185,15 +190,6 @@
               <folding>
                 <element signature="e#101#116#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/matter0.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -292,7 +288,6 @@
         <option value="$PROJECT_DIR$/apps/ngaShadiaoImage/sendEmail.py" />
         <option value="$PROJECT_DIR$/apps/ngaShadiaoImage/getCookies.py" />
         <option value="$PROJECT_DIR$/../untitled/草稿箱/5.py" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/apps/zhuhuVideoDownload/views.py" />
         <option value="$PROJECT_DIR$/templates/ngaShadiaoImageContent.html" />
         <option value="$PROJECT_DIR$/templates/ngaShadiaoImage.html" />
@@ -325,6 +320,7 @@
         <option value="$PROJECT_DIR$/templates/matter0.html" />
         <option value="$PROJECT_DIR$/apps/codeDiary/views.py" />
         <option value="$PROJECT_DIR$/../untitled/草稿箱/10.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -441,7 +437,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.10">
+  <component name="RunManager" selected="Django server.personalweb">
     <configuration default="true" type="DjangoTestsConfigurationType">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -889,7 +885,7 @@
       <workItem from="1579167620179" duration="7158000" />
       <workItem from="1579273427585" duration="237000" />
       <workItem from="1579274387819" duration="426000" />
-      <workItem from="1579354943395" duration="2468000" />
+      <workItem from="1579354943395" duration="3934000" />
     </task>
     <task id="LOCAL-00115" summary="打开窗口部分的代码重构">
       <created>1541317972699</created>
@@ -1238,7 +1234,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="343158000" />
+    <option name="totallyTimeSpent" value="344624000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1251,8 +1247,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49787235" visible="true" weight="0.1098081" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49787235" visible="true" weight="0.1098081" />
       <window_info id="Structure" order="1" sideWeight="0.50212765" side_tool="true" weight="0.27010724" />
       <window_info id="Favorites" order="2" sideWeight="0.50212765" side_tool="true" weight="0.27010724" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -1265,11 +1262,11 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.9197397" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" order="9" weight="0.3286334" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3286334" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3286334" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5026652" side_tool="true" weight="0.45336226" />
       <window_info anchor="bottom" id="manage.py@personalweb" order="12" visible="true" weight="0.3470716" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" x="719" y="31" width="1200" height="1008" id="Run" order="14" sideWeight="0.49733475" visible="true" weight="0.5835141" />
+      <window_info anchor="bottom" x="719" y="31" width="1200" height="1008" id="Run" order="14" sideWeight="0.49733475" weight="0.5835141" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -1354,29 +1351,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/apps/ngaShadiaoImage/getCookies.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
-          <folding>
-            <element signature="e#102#132#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/ngaShadiaoImage/adminx.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
-          <folding>
-            <element signature="e#47#60#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/liveAtc/models.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/matter2.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1411,16 +1385,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
           <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/personalweb/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1173">
-          <caret line="56" column="18" selection-start-line="56" selection-start-column="18" selection-end-line="56" selection-end-column="18" />
-          <folding>
-            <element signature="e#312#321#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1623,16 +1587,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/personalweb/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="828">
-          <caret line="51" column="62" selection-start-line="51" selection-start-column="62" selection-end-line="51" selection-end-column="62" />
-          <folding>
-            <element signature="e#644#676#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/bilibiliCoverDownload/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
@@ -1720,6 +1674,46 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="257">
           <caret line="39" column="17" lean-forward="true" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/personalweb/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="519">
+          <caret line="51" column="62" selection-start-line="51" selection-start-column="62" selection-end-line="51" selection-end-column="62" />
+          <folding>
+            <element signature="e#644#676#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/personalweb/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/personalweb/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="136" lean-forward="true" selection-start-line="136" selection-end-line="136" />
+          <folding>
+            <element signature="e#312#321#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/personalweb/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="12" column="49" lean-forward="true" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
+          <folding>
+            <element signature="e#227#236#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -16,6 +16,7 @@
 			'晴':'sunny',
 			'多云':'cloudy',
 			'阴':'cloudy',
+			'雾':'cloudy',
 			'雨':'rainy',
 			'雪':'snowy',
 			'雷':'stormy'
@@ -25,6 +26,7 @@
 			'晴':'sunny-background',
 			'多云':'cloudy-background',
 			'阴':'overcast-background',
+			'雾':'cloudy-background',
 			'雨':'rainy-background',
 			'雪':'snowy-background',
 			'雷':'stormy-background'

@@ -7,7 +7,4 @@ import json
 
 # 字典转换为Json（确保全部是双引号）
 def dict2Json(dict):
-	print(dict)
-	result = str(re.sub("'", '"', str(dict)))
-	print(result)
-	return json.loads(result)
+    return json.loads(str(re.sub("'", '"', str(dict))))

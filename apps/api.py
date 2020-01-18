@@ -16,25 +16,29 @@ from toolFunction import *
 class getWeatherJson(View):
     def getWeatherJson(self,request):
         area = self.getWeatherArea(request)
-        weatherAPI = 'http://api.map.baidu.com/telematics/v3/weather'
-        baiduWeatherJson = requests.get(weatherAPI, params={'location': '山西省阳泉市', 'output': 'json', 'ak': 'dEO2SdyPBFGyEdD5ij0Dd4rM8PwFp4w7'})
-        baiduWeatherJson = baiduWeatherJson.content.decode('utf-8')
-        print(area)
-        print(baiduWeatherJson)
-        baiduWeatherJson = json.loads(baiduWeatherJson)
-        myWeatherJson = self.baiduWeatherJson2myWeatherJson(baiduWeatherJson)
-        print(myWeatherJson)
-        return JsonResponse(dict2Json(myWeatherJson))
+        if area:
+            weatherAPI = 'http://api.map.baidu.com/telematics/v3/weather'
+            baiduWeatherJson = requests.get(weatherAPI, params={'location': '北京市大兴区', 'output': 'json', 'ak': 'dEO2SdyPBFGyEdD5ij0Dd4rM8PwFp4w7'})
+            baiduWeatherJson = baiduWeatherJson.content.decode('utf-8')
+            print(area)
+            baiduWeatherJson = json.loads(baiduWeatherJson)
+            myWeatherJson = self.baiduWeatherJson2myWeatherJson(baiduWeatherJson)
+            return JsonResponse(dict2Json(myWeatherJson))
+        else:
+            return JsonResponse(json.load({"error":"-1"}))
 
     def getWeatherArea(self,request):
         ip = request.GET.get('ip')
         try:
             response = requests.get('http://www.ip138.com/iplookup.asp',params={'ip':ip})
             weatherHTML = response.content.decode('gbk')
+            print(weatherHTML)
+            print
             area = re.search('<ul class="ul1"><li>.*?</li>',weatherHTML)
             if area:
                 area = area.group(0)
-                area = re.sub('(<ul class="ul1"><li>)|本站数据：|\s|电信|联通|移动|(</li>)','',area)
+                area = re.sub('(<ul class="ul1"><li>)|本站数据：|(</li>)','',area)
+                area = area.split(' ')[0]
             else:
                 area = False
             return area

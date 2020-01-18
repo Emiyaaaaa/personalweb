@@ -82,7 +82,7 @@
 					document.getElementsByClassName('now-aq')[0].innerHTML = 'PM2.5:'+nowWeather.pm25;
 					setWeatherIcon(nowWeather.weather,"now");
 					nowWeather = data[0]
-					for (var i = 1; i < data.length; i++) {
+					for (var i = 1; i < (data.length>=4?4:data.length); i++) {
 						document.getElementsByClassName('day'+i+'-tem')[0].innerHTML = data[i].temperature;
 						document.getElementsByClassName('day'+i+'-city')[0].innerHTML = city;
 						document.getElementsByClassName('day'+i+'-wea')[0].innerHTML = data[i].weather;

@@ -63,5 +63,3 @@ class getWeatherJson(View):
         except Exception as e:
             print(e)
             return {'error': '-1'}
-
-

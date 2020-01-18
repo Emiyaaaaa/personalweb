@@ -294,7 +294,7 @@ function cut_line(ele, reason_lines){
     var reason_lines = reason_lines||2;
     var now_lines = get_ele_lines(ele);
     var look_more = document.createElement("span");
-        look_more.setAttribute("class", "look-more"); 
+        look_more.setAttribute("class", "look-more");
         look_more.innerText = '[查看更多]'
     const inner_text = ele.innerText;
     var text = inner_text.substr(0, inner_text.length - 6);

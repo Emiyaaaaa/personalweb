@@ -62,13 +62,34 @@
 
 
 	if(true){
+		// areaIframe = document.createElement('div');
+		// areaIframe.innerHTML = '<iframe src="http://www.ip138.com/iplookup.asp?ip='+returnCitySN["cip"]+'" id="areaIframe"></iframe>'
+
+		// areaIframe.style.display = 'none';
+		// areaIframe.setAttribute('id', 'areaIframe');
+		// areaIframe.setAttribute('src', 'http://www.ip138.com/iplookup.asp?ip='+returnCitySN["cip"]);
+		// document.getElementById('weather').appendChild(areaIframe)
+		// var ul = document.getElementById('areaIframe')
+		// console.log(ul)
+		// $.ajax({
+		// 	type: 'GET',
+		// 	url: 'http://www.ip138.com/iplookup.asp',
+		// 	async: true,
+		// 	data: {'ip':returnCitySN["cip"]},
+ 	// 		crossDomain: true,
+		// 	dataType: 'jsonp',
+
+		// 	success:function(data){
+		// 		console.log(data)
+		// 	}
+		// })
 		$.ajax({
 			type: 'GET',
 			url: '/api/getWeatherJson',
 			async: true,
 			data: {'ip':returnCitySN["cip"]},
 			success:function(data){
-				console.log(data)
+				console.log(data);
 				if (data['error'] == 0) {
 					// 初始化
 					document.querySelectorAll(".right .loading-weather")[0].style.display = 'none';

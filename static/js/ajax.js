@@ -145,6 +145,7 @@ $(document).ready(function() {
 	        type:"GET",
 	        data:{"type":"matterPage",'matter':nowMatter,'text_id':href.split('?')[1].split('=')[1]},
 	        success:function(data){
+	        	console.log(data)
 	        	$('#ajax_window_html').html(data);
 
 	        	// 填充matter0内容

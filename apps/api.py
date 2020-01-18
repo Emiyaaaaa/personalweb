@@ -18,7 +18,7 @@ class getWeatherJson(View):
         area = self.getWeatherArea(request)
         if area:
             weatherAPI = 'http://api.map.baidu.com/telematics/v3/weather'
-            baiduWeatherJson = requests.get(weatherAPI, params={'location': '北京市大兴区', 'output': 'json', 'ak': 'dEO2SdyPBFGyEdD5ij0Dd4rM8PwFp4w7'})
+            baiduWeatherJson = requests.get(weatherAPI, params={'location': area, 'output': 'json', 'ak': 'dEO2SdyPBFGyEdD5ij0Dd4rM8PwFp4w7'})
             baiduWeatherJson = baiduWeatherJson.content.decode('utf-8')
             print(area)
             baiduWeatherJson = json.loads(baiduWeatherJson)
@@ -30,10 +30,12 @@ class getWeatherJson(View):
     def getWeatherArea(self,request):
         ip = request.GET.get('ip')
         try:
-            response = requests.get('http://www.ip138.com/iplookup.asp',params={'ip':ip})
+            proxy = {
+                'http': 'http://' + ip,
+                'https': 'https://' + ip
+            }
+            response = requests.get('http://www.ip138.com/iplookup.asp',params={'ip':ip}, proxies=proxy)
             weatherHTML = response.content.decode('gbk')
-            print(weatherHTML)
-            print
             area = re.search('<ul class="ul1"><li>.*?</li>',weatherHTML)
             if area:
                 area = area.group(0)

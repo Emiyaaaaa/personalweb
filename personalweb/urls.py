@@ -25,12 +25,10 @@ from bilibiliCoverDownload.views import BilibiliCoverDownloadView
 from zhuhuVideoDownload.views import ZhuhuVideoDownloadView
 from ngaShadiaoImage.views import NgaShadiaoImageView
 from liveAtc.views import LiveAtcView
+from computerVocabulary.views import ComputerVocabularyView
 import xadmin
 import mainPage
 from api import getWeatherJson
-from django.shortcuts import render
-
-
 
 urlpatterns = [
     url(r'^$', mainPage.ajax_main),
@@ -49,6 +47,7 @@ urlpatterns = [
     url(r'^ngaShadiaoImage/addVisitNum$', NgaShadiaoImageView().add_visit_num),
     url(r'^liveAtc$', LiveAtcView.as_view()),
     url(r'^liveAtc/mzsm$', LiveAtcView().get_mzsm),
+    url(r'^computerVocabulary', ComputerVocabularyView.as_view()),
     url(r'api/getWeatherJson', getWeatherJson().getWeatherJson)
 ]
 urlpatterns += static(settings.MEDIA_URL , document_root = settings.MEDIA_ROOT )

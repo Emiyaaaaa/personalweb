@@ -54,7 +54,8 @@ INSTALLED_APPS = [
     'notFoundPage',
     'markdown',
     'markdown_deux',
-    'applications'
+    'applications',
+    'computerVocabulary'
 ]
 
 MIDDLEWARE = [

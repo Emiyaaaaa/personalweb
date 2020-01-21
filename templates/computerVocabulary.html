@@ -1,0 +1,36 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+    <title>计算机专业词汇</title>
+    <style type="text/css">
+        span{
+            margin: 10px;
+            width: 300px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <form action="computerVocabulary" method="post" style="margin-top: 100px;">
+        {% csrf_token %}
+        <label for="english">英文：</label>
+        <input type="text" id="english" name="english">
+        <label for="chinese">中文：</label>
+        <input type="text" id="chinese" name="chinese">
+        <label for="remark">备注：</label>
+        <input type="text" id="remark" name="remark">
+        <input type="text" name="submit" value="1" hidden>
+        <input type="submit" value="提交">
+        <input type="reset" value="重置">
+    </form>
+    <div style="height: 80px;"></div>
+    {% for voc in vocabularyInfo %}
+        <span>{{ voc.english }}</span>
+        <span>{{ voc.chinese }}</span>
+        <span>{{ voc.remark }}</span>
+        <br/>
+    {% endfor %}
+</body>
+</html>

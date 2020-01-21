@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97ee085e-0965-47c9-afdd-5d7ddcf1463c" name="Default" comment="bug">
-      <change afterPath="$PROJECT_DIR$/apps/computerVocabulary/adminx.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/computerVocabulary/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/computerVocabulary/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/computerVocabulary.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/personalweb/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/personalweb/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/personalweb/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/personalweb/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/computerVocabulary.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/computerVocabulary.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../untitled/qzone/qzone_sql.py" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/qzone/qzone_sql.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -115,7 +110,7 @@
         <entry file="file://$PROJECT_DIR$/personalweb/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="247">
-              <caret line="40" column="50" lean-forward="true" selection-start-line="40" selection-start-column="50" selection-end-line="40" selection-end-column="50" />
+              <caret line="40" column="50" selection-start-line="40" selection-start-column="50" selection-end-line="40" selection-end-column="50" />
               <folding>
                 <element signature="e#644#676#0" expanded="true" />
               </folding>
@@ -124,19 +119,46 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/zhihuVideoDownload.html">
+        <entry file="file://$PROJECT_DIR$/personalweb/wsgi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="14" selection-end-column="50" />
+            <state relative-caret-position="276">
+              <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
+              <folding>
+                <element signature="e#227#236#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/codeDiary/migrations/__init__.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/codeDiary/migrations/0001_initial.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/apps/computerVocabulary/migrations/0001_initial.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="25" column="51" lean-forward="true" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/computerVocabulary/migrations/__init__.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/computerVocabulary/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="11" column="51" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
+            <state relative-caret-position="437">
+              <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -145,28 +167,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/computerVocabulary/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/computerVocabulary.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/hexconvert.html">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="22" lean-forward="true" selection-start-column="22" selection-end-column="22" />
+              <caret column="22" selection-start-column="22" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -313,6 +317,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -329,13 +334,14 @@
               <item name="personalweb" type="b2602c69:ProjectViewProjectNode" />
               <item name="personalweb" type="462c0819:PsiDirectoryNode" />
               <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="codeDiary" type="462c0819:PsiDirectoryNode" />
+              <item name="computerVocabulary" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="personalweb" type="b2602c69:ProjectViewProjectNode" />
               <item name="personalweb" type="462c0819:PsiDirectoryNode" />
               <item name="apps" type="462c0819:PsiDirectoryNode" />
               <item name="computerVocabulary" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="personalweb" type="b2602c69:ProjectViewProjectNode" />
@@ -373,6 +379,17 @@
             </path>
             <path>
               <item name="personalweb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="personalweb" type="462c0819:PsiDirectoryNode" />
+              <item name="venv" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="personalweb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="personalweb" type="462c0819:PsiDirectoryNode" />
+              <item name="venv" type="462c0819:PsiDirectoryNode" />
+              <item name="Lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="personalweb" type="b2602c69:ProjectViewProjectNode" />
               <item name="草稿箱" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -394,7 +411,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -887,6 +903,7 @@
       <workItem from="1579274387819" duration="426000" />
       <workItem from="1579354943395" duration="4624000" />
       <workItem from="1579505931512" duration="7623000" />
+      <workItem from="1579599588945" duration="2558000" />
     </task>
     <task id="LOCAL-00115" summary="打开窗口部分的代码重构">
       <created>1541317972699</created>
@@ -1235,7 +1252,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="352937000" />
+    <option name="totallyTimeSpent" value="355495000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1250,7 +1267,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49787235" visible="true" weight="0.1108742" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49787235" visible="true" weight="0.18496802" />
       <window_info id="Structure" order="1" sideWeight="0.50212765" side_tool="true" weight="0.27010724" />
       <window_info id="Favorites" order="2" sideWeight="0.50212765" side_tool="true" weight="0.27010724" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -1265,7 +1282,7 @@
       <window_info anchor="bottom" id="Python Console" order="9" weight="0.3286334" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.3275488" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5026652" side_tool="true" weight="0.45336226" />
-      <window_info anchor="bottom" id="manage.py@personalweb" order="12" weight="0.3470716" />
+      <window_info active="true" anchor="bottom" id="manage.py@personalweb" order="12" visible="true" weight="0.3470716" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.3286119" />
       <window_info anchor="bottom" x="719" y="31" width="1200" height="1008" id="Run" order="14" sideWeight="0.49733475" weight="0.3286334" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -1352,47 +1369,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../untitled/草稿箱/6.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/zhuhuVideoDownload/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/api.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
-          <folding>
-            <element signature="e#102#138#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/matter0.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
           <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/personalweb/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
-          <folding>
-            <element signature="e#227#236#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1552,12 +1532,6 @@
     <entry file="file://$PROJECT_DIR$/apps/computerVocabulary/admin.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/computerVocabulary/migrations/0001_initial.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/computerVocabulary/migrations/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/forms/widgets.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
@@ -1606,23 +1580,10 @@
     <entry file="file://$PROJECT_DIR$/apps/computerVocabulary/tests.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/gitLog.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/hexconvert.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="22" lean-forward="true" selection-start-column="22" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/personalweb.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/liveAtc.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/liveAtcMzsm.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/shortcuts.py">
@@ -1659,16 +1620,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/personalweb/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="40" column="50" lean-forward="true" selection-start-line="40" selection-start-column="50" selection-end-line="40" selection-end-column="50" />
-          <folding>
-            <element signature="e#644#676#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/zhihuVideoDownload.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1685,18 +1636,74 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/computerVocabulary.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+        <state relative-caret-position="552">
+          <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/hexconvert.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="22" selection-start-column="22" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/liveAtcMzsm.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/gitLog.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://E:/Anaconda3/Lib/json/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="295" selection-start-line="295" selection-end-line="295" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/computerVocabulary/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="51" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
+        <state relative-caret-position="437">
+          <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/personalweb/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="40" column="50" selection-start-line="40" selection-start-column="50" selection-end-line="40" selection-end-column="50" />
+          <folding>
+            <element signature="e#644#676#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/personalweb/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
+          <folding>
+            <element signature="e#227#236#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/codeDiary/migrations/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/codeDiary/migrations/0001_initial.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/computerVocabulary/migrations/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/computerVocabulary/migrations/0001_initial.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="25" column="51" lean-forward="true" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
         </state>
       </provider>
     </entry>

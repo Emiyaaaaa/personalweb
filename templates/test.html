@@ -1,30 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .block{
+            position: relative;
+            width: 660px;
+            height: 50px;
+            border: 1px solid black;
+            margin: 100px auto;
+        }
+        .res{
+            width: 550px;
+            height: 50px;
+            border-style: none;
+            outline: none;
+            box-sizing: border-box;
+            padding-left: 20px;
+            font-size: 16px;
+            float: left;
+        }
+        .btn{
+            display: block;
+            width: 110px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            background-color: #68b5ff;
+            color: white;
+            font-size: 16px;
+            float: left;
+        }
+        .menu{
+            margin: 0;
+            padding: 0;
+            width: 550px;
+            border: 1px solid silver;
+            margin-left: -1px;
+        }
+        .menu>li{
+            font-size: 14px;
+            list-style: none;
+            line-height: 30px;
+            padding-left: 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .menu>li>a{
+            color: black;
+            text-decoration: none;
+        }
+        .menu>li:hover{
+            background-color: #e7e7e7;
+        }
+    </style>
 </head>
 <body>
-	<script type="text/javascript">
-		// function compare(value1,value2){
-		// 	console.log(value1 - value2)
-		// 	return value1 - value2;
-		// }
-		// var a = new Array(2,6,1,'a',4,5,3);
-		// function d(b){
-		// 	var c = b;
-		// 	c.sort(compare);
-		// 	return c;
-		// }
-		// e = d(a);
-		// console.log(a)
-		// console.log(e)
-		    var hello = function(job, name){
-        console.log('hello, my job is ' + job + ', my name is ' + name);
-    };
-
-    var hello = hello.bind(undefined, 'coder');
-    hello('Tom'); // hello, my job is coder, my name is Tom
-	</script>
+<div class="block">
+    <input class="res" type="text">
+    <span class="btn">百度一下</span>
+</div>
+<script>
+    var result=document.getElementsByClassName("res")[0];
+    var block=document.getElementsByClassName("block")[0];
+    result.onkeyup=function(e){
+        var val=this.value;
+        //动态创建script标签
+        var sc=document.createElement("script");
+        sc.src="https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd="+val+"&cb=showData";
+        document.body.appendChild(sc);
+        sc.remove();
+    }
+    //回调函数
+    function showData(data){
+        var menu=document.getElementsByClassName("menu")[0];
+        if(menu){
+            menu.remove();
+        }
+        var ul=document.createElement("ul");
+        ul.className="menu";
+        for(var i=0;i<data.s.length;i++){
+            var li=document.createElement("li");
+            li.innerHTML="<a href='https://www.baidu.com/s?wd="+data.s[i]+"'>"+data.s[i]+"</a>";
+            ul.appendChild(li);
+        }
+        block.appendChild(ul);
+    }
+</script>
 </body>
 </html>

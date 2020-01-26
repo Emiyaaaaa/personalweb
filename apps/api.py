@@ -25,22 +25,37 @@ class getWeatherJson(View):
             myWeatherJson = self.baiduWeatherJson2myWeatherJson(baiduWeatherJson)
             return JsonResponse(dict2Json(myWeatherJson))
         else:
-            return JsonResponse(json.load({"error":"-1"}))
+            return JsonResponse({"error": "-1"})
 
-    def getWeatherArea(self,request):
+    # def getWeatherArea(self,request):
+    #     ip = request.GET.get('ip')
+    #     try:
+    #         proxy = {
+    #             'http': 'http://' + ip,
+    #             'https': 'https://' + ip
+    #         }
+    #         response = requests.get('http://www.ip138.com/iplookup.asp',params={'ip':ip}, proxies=proxy)
+    #         weatherHTML = response.content.decode('gbk')
+    #         area = re.search('<ul class="ul1"><li>.*?</li>',weatherHTML)
+    #         if area:
+    #             area = area.group(0)
+    #             area = re.sub('(<ul class="ul1"><li>)|本站数据：|(</li>)','',area)
+    #             area = area.split(' ')[0]
+    #         else:
+    #             area = False
+    #         return area
+    #     except Exception as e:
+    #         print(e)
+    #         return False
+
+    def getWeatherArea(self, request):
         ip = request.GET.get('ip')
         try:
-            proxy = {
-                'http': 'http://' + ip,
-                'https': 'https://' + ip
-            }
-            response = requests.get('http://www.ip138.com/iplookup.asp',params={'ip':ip}, proxies=proxy)
-            weatherHTML = response.content.decode('gbk')
-            area = re.search('<ul class="ul1"><li>.*?</li>',weatherHTML)
-            if area:
-                area = area.group(0)
-                area = re.sub('(<ul class="ul1"><li>)|本站数据：|(</li>)','',area)
-                area = area.split(' ')[0]
+            response = requests.get('https://api.map.baidu.com/location/ip', params={'ip': ip, 'ak': 'NPXqmOiP4v331qdiZEdn4NYw6jxQCRwV'})
+            area = response.json()
+            print(area)
+            if area['status'] == 0:
+                return area['content']['address']
             else:
                 area = False
             return area

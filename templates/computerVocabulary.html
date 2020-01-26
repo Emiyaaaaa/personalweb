@@ -26,11 +26,55 @@
         <input type="reset" value="重置">
     </form>
     <div style="height: 80px;"></div>
+    <div id="vocabulary">
     {% for voc in vocabularyInfo %}
-        <span>{{ voc.english }}</span>
-        <span>{{ voc.chinese }}</span>
-        <span>{{ voc.remark }}</span>
-        <br/>
+        <div class="single-vocabulary" data-english="{{ voc.english }}">
+            <span>{{ voc.english }}</span>
+            <span>{{ voc.chinese }}</span>
+            <span>{{ voc.remark }}</span>
+        </div>
     {% endfor %}
+    </div>
+    <script type="text/javascript">
+        function HTMLCollectionToArray(HTMLCollectionObject) {
+            var HTMLArray = [];
+            for (var i = 0; i < HTMLCollectionObject.length; i++) {
+                HTMLArray[i] = HTMLCollectionObject[i];
+            }
+            return HTMLArray;
+        }
+
+        function creatVocabularyHTMLCompare(order) {
+            return function(html1, html2) {
+                var orderValue = 1;
+                if (order == 'desc') {
+                    orderValue = -1;
+                }
+                console.log(orderValue)
+
+                if(html1.getAttribute('data-english').toLowerCase() > html2.getAttribute('data-english').toLowerCase()) {
+                    return orderValue;
+                }
+                else if (html1.getAttribute('data-english').toLowerCase() < html2.getAttribute('data-english').toLowerCase()) {
+                    return -orderValue;
+                }
+                else{
+                    return 0;
+                }
+            }
+        }
+
+        function HTMLArrayToHTMLText(HTMLArray) {
+            var orderedHTML = document.createElement('div');
+            for (var i = 0; i < HTMLArray.length; i++) {
+                orderedHTML.appendChild(HTMLArray[i]);
+            }
+            return orderedHTML.innerHTML;
+        }
+
+        vocabularyHTMLArray = HTMLCollectionToArray(document.getElementsByClassName('single-vocabulary'));
+        orderedVocabularyHTMLArray = vocabularyHTMLArray.sort(creatVocabularyHTMLCompare('asc'));
+        document.getElementById('vocabulary').innerHTML = HTMLArrayToHTMLText(orderedVocabularyHTMLArray);
+    </script>
 </body>
 </html>

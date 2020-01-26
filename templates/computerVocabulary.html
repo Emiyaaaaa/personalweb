@@ -50,8 +50,6 @@
                 if (order == 'desc') {
                     orderValue = -1;
                 }
-                console.log(orderValue)
-
                 if(html1.getAttribute('data-english').toLowerCase() > html2.getAttribute('data-english').toLowerCase()) {
                     return orderValue;
                 }
@@ -72,8 +70,8 @@
             return orderedHTML.innerHTML;
         }
 
-        vocabularyHTMLArray = HTMLCollectionToArray(document.getElementsByClassName('single-vocabulary'));
-        orderedVocabularyHTMLArray = vocabularyHTMLArray.sort(creatVocabularyHTMLCompare('asc'));
+        var vocabularyHTMLArray = HTMLCollectionToArray(document.getElementsByClassName('single-vocabulary'));
+        var orderedVocabularyHTMLArray = vocabularyHTMLArray.sort(creatVocabularyHTMLCompare('asc'));
         document.getElementById('vocabulary').innerHTML = HTMLArrayToHTMLText(orderedVocabularyHTMLArray);
     </script>
 </body>

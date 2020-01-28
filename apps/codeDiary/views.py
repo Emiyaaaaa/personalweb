@@ -87,7 +87,6 @@ class CodeDiaryView():
                 'comment_to':codeComment.comment_to
             })
         content_info['comment'] = comment
-        print(content_info)
         return render(request,'matter0Content.html',{'codeDiary':content_info})
 
     def getMoreContent(self,request,finally_id,text_max_length=37):

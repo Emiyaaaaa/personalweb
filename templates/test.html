@@ -1,92 +1,41 @@
 <!DOCTYPE html>
 <html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-    <style>
-        .block{
-            position: relative;
-            width: 660px;
-            height: 50px;
-            border: 1px solid black;
-            margin: 100px auto;
-        }
-        .res{
-            width: 550px;
-            height: 50px;
-            border-style: none;
-            outline: none;
-            box-sizing: border-box;
-            padding-left: 20px;
-            font-size: 16px;
-            float: left;
-        }
-        .btn{
-            display: block;
-            width: 110px;
-            height: 50px;
-            line-height: 50px;
-            text-align: center;
-            background-color: #68b5ff;
-            color: white;
-            font-size: 16px;
-            float: left;
-        }
-        .menu{
-            margin: 0;
-            padding: 0;
-            width: 550px;
-            border: 1px solid silver;
-            margin-left: -1px;
-        }
-        .menu>li{
-            font-size: 14px;
-            list-style: none;
-            line-height: 30px;
-            padding-left: 10px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-        .menu>li>a{
-            color: black;
-            text-decoration: none;
-        }
-        .menu>li:hover{
-            background-color: #e7e7e7;
-        }
-    </style>
-</head>
-<body>
-<div class="block">
-    <input class="res" type="text">
-    <span class="btn">百度一下</span>
-</div>
-<script>
-    var result=document.getElementsByClassName("res")[0];
-    var block=document.getElementsByClassName("block")[0];
-    result.onkeyup=function(e){
-        var val=this.value;
-        //动态创建script标签
-        var sc=document.createElement("script");
-        sc.src="https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd="+val+"&cb=showData";
-        document.body.appendChild(sc);
-        sc.remove();
-    }
-    //回调函数
-    function showData(data){
-        var menu=document.getElementsByClassName("menu")[0];
-        if(menu){
-            menu.remove();
-        }
-        var ul=document.createElement("ul");
-        ul.className="menu";
-        for(var i=0;i<data.s.length;i++){
-            var li=document.createElement("li");
-            li.innerHTML="<a href='https://www.baidu.com/s?wd="+data.s[i]+"'>"+data.s[i]+"</a>";
-            ul.appendChild(li);
-        }
-        block.appendChild(ul);
-    }
-</script>
-</body>
+    <head>
+        <meta charset="utf-8">
+        <title>HTML中的& nbsp; & ensp; & emsp;等6种空格标记</title>
+        <style type="text/css">
+            *{
+                margin: 0 auto;
+            }
+            body{
+                margin: 15vh 0;
+            }
+            button{
+                /* font-family: "仿宋"; */
+                display: block;
+                height: 18vw;
+                width: 70vw;
+                border-radius: 50px;
+                outline: none;
+                font-size: 3rem;
+                color: #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- &nbsp; 不会累加的（只算1个），且该空格占据宽度受【字体】影响明显而强烈 -->
+        <button type="button">提&#9;交</button><br />
+        <!-- &ensp; 占据的宽度正好是1/2个中文宽度，且基本上不受字体影响 -->
+        <button type="button">提&ensp;&ensp;交</button><br />
+        <!-- &emsp; 占据的宽度正好是1个中文宽度，且基本上不受字体影响 -->
+        <button type="button">提&emsp;交</button><br />
+        <!-- &thinsp; 占据的宽度比较小，它是em之六分之一宽 -->
+        <button type="button">提&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;交</button><br />
+        
+        <!-- &zwnj; （零宽不连字）是一个不打印字符，放在电子文本的两个字符之间，抑制本来会发生的连字，
+        而是以这两个字符原本的字形来绘制 -->
+        <!-- &zwj; （零宽连字）是一个不打印字符，放在某些需要复杂排版语言（如阿拉伯语、印地语）的两个字符之间，
+        使得这两个本不会发生连字的字符产生了连字效果 -->
+        
+    </body>
 </html>

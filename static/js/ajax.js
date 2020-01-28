@@ -146,16 +146,15 @@ $(document).ready(function() {
 	        data:{"type":"matterPage",'matter':nowMatter,'text_id':href.split('?')[1].split('=')[1]},
 	        success:function(data){
 	        	$('#ajax_window_html').html(data);
-
 	        	// 填充matter0内容
 	        	try{
 	        		var mardownBodyObj = document.getElementById('markdownBody');
+	        		// mardownBodyObj.innerHTML = mardownBodyObj.innerText.replace(/\t/g,'\t').replace(/\n/g,'\n')
 	        		mardownBodyObj.innerHTML = marked(mardownBodyObj.innerHTML);
 	        		var markdownBodyCodeTagObj = mardownBodyObj.getElementsByTagName('code');
 	        		for (var i = 0; i < markdownBodyCodeTagObj.length; i++) {
 	        			markdownBodyCodeTagObj[i].innerText = markdownBodyCodeTagObj[i].innerText.replace(/&lt;/g,'<').replace(/&gt;/g,'>');	        			
 	        		}
-
 	        	}
 	        	catch(err){console.log('matter0:error    '+String(err))}
 

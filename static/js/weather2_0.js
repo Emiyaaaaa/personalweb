@@ -61,7 +61,7 @@
 	}
 
 
-	if(true){
+	if(window.location.host != '127.0.0.1:8000' && isPC() && clientWidth >= 1250){
 		// areaIframe = document.createElement('div');
 		// areaIframe.innerHTML = '<iframe src="http://www.ip138.com/iplookup.asp?ip='+returnCitySN["cip"]+'" id="areaIframe"></iframe>'
 

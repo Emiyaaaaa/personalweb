@@ -1,41 +1,25 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
-        <title>HTML中的& nbsp; & ensp; & emsp;等6种空格标记</title>
-        <style type="text/css">
-            *{
-                margin: 0 auto;
-            }
-            body{
-                margin: 15vh 0;
-            }
-            button{
-                /* font-family: "仿宋"; */
-                display: block;
-                height: 18vw;
-                width: 70vw;
-                border-radius: 50px;
-                outline: none;
-                font-size: 3rem;
-                color: #fff;
-            }
-        </style>
     </head>
     <body>
-        <!-- &nbsp; 不会累加的（只算1个），且该空格占据宽度受【字体】影响明显而强烈 -->
-        <button type="button">提&#9;交</button><br />
-        <!-- &ensp; 占据的宽度正好是1/2个中文宽度，且基本上不受字体影响 -->
-        <button type="button">提&ensp;&ensp;交</button><br />
-        <!-- &emsp; 占据的宽度正好是1个中文宽度，且基本上不受字体影响 -->
-        <button type="button">提&emsp;交</button><br />
-        <!-- &thinsp; 占据的宽度比较小，它是em之六分之一宽 -->
-        <button type="button">提&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;交</button><br />
-        
-        <!-- &zwnj; （零宽不连字）是一个不打印字符，放在电子文本的两个字符之间，抑制本来会发生的连字，
-        而是以这两个字符原本的字形来绘制 -->
-        <!-- &zwj; （零宽连字）是一个不打印字符，放在某些需要复杂排版语言（如阿拉伯语、印地语）的两个字符之间，
-        使得这两个本不会发生连字的字符产生了连字效果 -->
-        
+        <script type="text/javascript">
+            function A(){
+
+                var  array1=[];
+
+                for(var i=0;i<5;i++){
+                array1[i]=function (){
+
+                return i;
+
+                }}
+
+                for(j=0;j<5;j++){
+
+                console.log(  array1 [j] ( ));}
+
+                }
+        </script>
     </body>
 </html>

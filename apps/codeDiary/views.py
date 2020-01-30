@@ -2,6 +2,7 @@ from .models import CodeDiary,CodeDiaryImg,CodeComment
 from django.shortcuts import render
 import re
 from django.http import JsonResponse
+import markdown2
 
 
 class CodeDiaryView():

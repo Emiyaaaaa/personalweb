@@ -131,7 +131,21 @@ $(document).ready(function() {
 			return false;
 		}
 	}
+
 	window.getMoreContent = getMoreContent;
+
+	function myMarked(Ele){
+		var text = Ele.innerHTML.replace(/&gt;/g,'>'); //将全文的&gt;转换成>使其支持markdown引用
+		Ele.innerHTML = marked(text)
+		//使markdown支持引用中的分段
+		EleHTML = Ele.innerHTML.replace(/<\/blockquote>\s{0,1}<blockquote>/g,'');//将可合并的blockquote合并，并添加<br/>，注意</blockquote>和<blockquote>之间会有一到两个\n
+		Ele.innerHTML = EleHTML;
+		//将code标签中的&lt;转换为<
+		var codeEle = Ele.getElementsByTagName('code');
+		for (var i = 0; i < codeEle.length; i++) {
+			codeEle[i].innerText = codeEle[i].innerText.replace(/&lt;/g,'<');
+		}
+	}
 
 	//获取全文	
 	function getMattersContent(href){
@@ -145,17 +159,12 @@ $(document).ready(function() {
 	        type:"GET",
 	        data:{"type":"matterPage",'matter':nowMatter,'text_id':href.split('?')[1].split('=')[1]},
 	        success:function(data){
-	        	console.log(data)
 	        	$('#ajax_window_html').html(data);
 	        	// 填充matter0内容
 	        	try{
 	        		var mardownBodyObj = document.getElementById('markdownBody');
 	        		// mardownBodyObj.innerHTML = mardownBodyObj.innerText.replace(/\t/g,'\t').replace(/\n/g,'\n')
-	        		mardownBodyObj.innerHTML = marked(mardownBodyObj.innerHTML);
-	        		var markdownBodyCodeTagObj = mardownBodyObj.getElementsByTagName('code');
-	        		for (var i = 0; i < markdownBodyCodeTagObj.length; i++) {
-	        			markdownBodyCodeTagObj[i].innerText = markdownBodyCodeTagObj[i].innerText.replace(/&lt;/g,'<').replace(/&gt;/g,'>');	        			
-	        		}
+	        		myMarked(mardownBodyObj);
 	        	}
 	        	catch(err){console.log('matter0:error    '+String(err))}
 

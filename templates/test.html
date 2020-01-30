@@ -1,25 +1,15 @@
 <!DOCTYPE html>
 <html>
-    <head>
-    </head>
-    <body>
-        <script type="text/javascript">
-            function A(){
-
-                var  array1=[];
-
-                for(var i=0;i<5;i++){
-                array1[i]=function (){
-
-                return i;
-
-                }}
-
-                for(j=0;j<5;j++){
-
-                console.log(  array1 [j] ( ));}
-
-                }
-        </script>
-    </body>
+<head>
+  <meta charset="utf-8"/>
+  <title>Marked in the browser</title>
+</head>
+<body>
+  <div id="content"></div>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    document.getElementById('content').innerHTML =
+      marked('># Marked in browser\n\nRendered by **marked**.');
+  </script>
+</body>
 </html>

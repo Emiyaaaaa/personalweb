@@ -2,7 +2,7 @@ from .models import CodeDiary,CodeDiaryImg,CodeComment
 from django.shortcuts import render
 import re
 from django.http import JsonResponse
-import markdown2
+from itertools import chain
 
 
 class CodeDiaryView():
@@ -10,14 +10,21 @@ class CodeDiaryView():
         codeDiary_info = []
         loadStatus='加载中...'
         showBeian = 0
-        stick_diary = CodeDiary.objects.filter(is_stick=1)
-        codeDiary = CodeDiary.objects.order_by('-text_id').exclude(is_display=0)[0:10]
-        # codeDiary = stick_diary|all_diary
-        if len(codeDiary) == 0:
+        stickCodeDiary = CodeDiary.objects.filter(is_stick=1)
+        unstickCodeDiary = CodeDiary.objects.filter(is_stick=0).order_by('-text_id').exclude(is_display=0)[0:10]
+
+        if len(unstickCodeDiary) == 0:
             return JsonResponse({'status': 'ended'})
-        elif len(codeDiary) < 10:
+        elif len(unstickCodeDiary) < 10:
             loadStatus = '已加载全部'
             showBeian = 1
+
+        # 合并
+        codeDiary = []
+        for sc in stickCodeDiary:
+            codeDiary.append(sc)
+        for usc in unstickCodeDiary:
+            codeDiary.append(usc)
 
         for codeDiary in codeDiary:
             text_id = codeDiary.text_id
@@ -48,7 +55,8 @@ class CodeDiaryView():
                 'is_brief':brief_text['is_brief'],
                 'tag':codeDiaryTag,
                 'img_num':len(codeDiaryImg),
-                'comment_num':len(codeDiaryComment)
+                'comment_num':len(codeDiaryComment),
+                'is_stick':codeDiary.is_stick
             })
         return render(request,'matter0.html',{'codeDiary_info':codeDiary_info,'loadStatus':loadStatus,'showBeian':showBeian})
 

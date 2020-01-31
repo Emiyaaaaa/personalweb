@@ -4,6 +4,9 @@
         <a class="content openContent" id="codeDiary{{ codeDiary.text_id }}" href="#codeDiary?text_id={{ codeDiary.text_id }}">
             <div class="brief_date ligther-font">
                 {{ codeDiary.date }}
+                {% if codeDiary.is_stick == 1 %}
+                    <span class="codeDiaryTag redTag">置顶</span>
+                {% endif %}
                 {% for tag in codeDiary.tag %}
                     <span class="codeDiaryTag">{{ tag }}</span>
                 {% endfor %}

@@ -4,6 +4,9 @@
         <a class="content openContent" id="diary{{ diary.text_id }}" href="#diary?text_id={{ diary.text_id }}">
             <div class="brief_date ligther-font">
                 {{ diary.date_weather }}
+                {% if diary.is_stick == 1 %}
+                    <span class="diaryTag redTag">置顶</span>
+                {% endif %}
                 {% for tag in diary.tag %}
                     <span class="diaryTag">{{ tag }}</span>
                 {% endfor %}

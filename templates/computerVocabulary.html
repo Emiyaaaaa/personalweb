@@ -36,14 +36,6 @@
     {% endfor %}
     </div>
     <script type="text/javascript">
-        function HTMLCollectionToArray(HTMLCollectionObject) {
-            var HTMLArray = [];
-            for (var i = 0; i < HTMLCollectionObject.length; i++) {
-                HTMLArray[i] = HTMLCollectionObject[i];
-            }
-            return HTMLArray;
-        }
-
         function creatVocabularyHTMLCompare(order) {
             return function(html1, html2) {
                 var orderValue = 1;
@@ -70,7 +62,7 @@
             return orderedHTML.innerHTML;
         }
 
-        var vocabularyHTMLArray = HTMLCollectionToArray(document.getElementsByClassName('single-vocabulary'));
+        var vocabularyHTMLArray = Array.prototype.slice.call(document.getElementsByClassName('single-vocabulary'));
         var orderedVocabularyHTMLArray = vocabularyHTMLArray.sort(creatVocabularyHTMLCompare('asc'));
         document.getElementById('vocabulary').innerHTML = HTMLArrayToHTMLText(orderedVocabularyHTMLArray);
     </script>

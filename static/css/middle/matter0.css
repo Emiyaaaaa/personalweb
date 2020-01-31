@@ -174,6 +174,13 @@
 
 }
 
+.redTag{
+
+    background-color: rgba(255,160,160,0.8) !important;
+    box-shadow: 0px 1px 4px rgba(255,160,160,0.5) !important;
+
+}
+
 .content .comment,.aCopy .comment{
 
     display: inline-block;

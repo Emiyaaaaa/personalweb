@@ -7,15 +7,21 @@ class DiaryView():
         diary_info = []
         loadStatus = '加载中...'
         showBeian = 0
-        stick_diary = Diary.objects.filter(is_stick=1)
-        diary = Diary.objects.order_by('-text_id').exclude(is_display=0)[0:10]
-        # diary = stick_diary|all_diary
+        stickDiary = Diary.objects.filter(is_stick=1)
+        unstickDiary = Diary.objects.filter(is_stick=0).order_by('-text_id').exclude(is_display=0)[0:10]
 
-        if len(diary)==0:
+        if len(unstickDiary)==0:
             return JsonResponse({'status':'ended'})
-        elif len(diary) < 10:
+        elif len(unstickDiary) < 10:
             loadStatus = '已加载全部'
             showBeian = 1
+
+        # 合并
+        diary = []
+        for sc in stickDiary:
+            diary.append(sc)
+        for usc in unstickDiary:
+            diary.append(usc)
 
         for diary in diary:
             text_id = diary.text_id
@@ -38,7 +44,8 @@ class DiaryView():
                 'is_brief':brief_text['is_brief'],
                 'tag':diaryTag,
                 'img_num': len(diaryImg),
-                'comment_num': len(diaryComment)
+                'comment_num': len(diaryComment),
+                'is_stick': diary.is_stick
             })
         return render(request, 'matter1.html', {'diary_info': diary_info, 'loadStatus':loadStatus,'showBeian':showBeian})
 

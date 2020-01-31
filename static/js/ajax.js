@@ -175,7 +175,7 @@ $(document).ready(function() {
 	        	}
 	        	catch(err){console.log('matter1:error    '+String(err))}
 
-	        	var markdown_a = $('.markdown-body a');
+	        	var markdown_a = document.getElementsByClassName('markdown-body')[0].links;
 	        	for (var i = 0; i < markdown_a.length; i++){
 	        		markdown_a[i].target="_blank";
 	        	}
@@ -217,12 +217,12 @@ function matter33SendMessage(){
 
 	var comment_to = '';
 	var password = '';
-	var disabled_name = new Array('Emiya','emiya');
+	var disabled_name = new Array('emiya','李浩正','李浩正的爸爸','李浩正爸爸');
 	var nickname = $('#suggestion_nike_name').val();
 	var email = $('#suggestion_user_email').val();
 	var content = $('#suggestion_content').val();
 
-	if (isInArray(disabled_name,nickname) == true){
+	if (isInArray(disabled_name,nickname.toLowerCase()) == true){
 		password = prompt("请输入神秘代码","");
     	$.ajax({
 	        url:"/",

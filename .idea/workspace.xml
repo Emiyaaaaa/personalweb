@@ -958,7 +958,7 @@
       <workItem from="1580033225068" duration="701000" />
       <workItem from="1580044475758" duration="3444000" />
       <workItem from="1580373308183" duration="3507000" />
-      <workItem from="1580453806494" duration="3116000" />
+      <workItem from="1580453806494" duration="3137000" />
     </task>
     <task id="LOCAL-00115" summary="打开窗口部分的代码重构">
       <created>1541317972699</created>
@@ -1307,7 +1307,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="366263000" />
+    <option name="totallyTimeSpent" value="366284000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1339,7 +1339,7 @@
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50373137" side_tool="true" visible="true" weight="0.3373102" />
       <window_info active="true" anchor="bottom" id="manage.py@personalweb" order="12" visible="true" weight="0.3470716" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.3286119" />
-      <window_info anchor="bottom" x="719" y="31" width="1200" height="1008" id="Run" order="14" sideWeight="0.49626866" visible="true" weight="0.3373102" />
+      <window_info anchor="bottom" x="719" y="31" width="1200" height="1008" id="Run" order="14" sideWeight="0.49626866" weight="0.3373102" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />

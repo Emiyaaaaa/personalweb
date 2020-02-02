@@ -31,7 +31,11 @@
         <div class="single-vocabulary" data-english="{{ voc.english }}">
             <span>{{ voc.english }}</span>
             <span>{{ voc.chinese }}</span>
-            <span>{{ voc.remark }}</span>
+            {% if voc.remark != None %}
+                <span>{{ voc.remark }}</span>
+            {% else %}
+                <span>&nbsp</span>
+            {% endif %}
         </div>
     {% endfor %}
     </div>

@@ -10,7 +10,7 @@ class CodeDiaryView():
         codeDiary_info = []
         loadStatus='加载中...'
         showBeian = 0
-        stickCodeDiary = CodeDiary.objects.filter(is_stick=1)
+        stickCodeDiary = CodeDiary.objects.filter(is_stick=1).exclude(is_display=0)
         unstickCodeDiary = CodeDiary.objects.filter(is_stick=0).order_by('-text_id').exclude(is_display=0)[0:10]
 
         if len(unstickCodeDiary) == 0:

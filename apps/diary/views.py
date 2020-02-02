@@ -7,7 +7,7 @@ class DiaryView():
         diary_info = []
         loadStatus = '加载中...'
         showBeian = 0
-        stickDiary = Diary.objects.filter(is_stick=1)
+        stickDiary = Diary.objects.filter(is_stick=1).exclude(is_display=0)
         unstickDiary = Diary.objects.filter(is_stick=0).order_by('-text_id').exclude(is_display=0)[0:10]
 
         if len(unstickDiary)==0:

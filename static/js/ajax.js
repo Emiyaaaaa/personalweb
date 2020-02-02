@@ -164,7 +164,7 @@ $(document).ready(function() {
 	        	// 修改matter0内容
 	        	try{
 	        		var mardownBodyObj = document.getElementById('markdownBody');
-	        		// mardownBodyObj.innerHTML = mardownBodyObj.innerText.replace(/\t/g,'\t').replace(/\n/g,'\n')
+	        		mardownBodyObj.innerHTML = mardownBodyObj.innerHTML.replace(/\$s\$/g,' ').replace(/\$n\$/g,'\n').replace(/\$t\$/g,'\t')
 	        		myMarked(mardownBodyObj);
 	        	}
 	        	catch(err){console.log('matter0:error    '+String(err))}

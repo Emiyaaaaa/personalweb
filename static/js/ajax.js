@@ -159,7 +159,6 @@ $(document).ready(function() {
 	        type:"GET",
 	        data:{"type":"matterPage",'matter':nowMatter,'text_id':href.split('?')[1].split('=')[1]},
 	        success:function(data){
-	        	console.log(data)
 	        	document.getElementById('ajax_window_html').innerHTML = data;
 	        	// 修改matter0内容
 	        	try{

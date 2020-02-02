@@ -64,7 +64,6 @@ class CodeDiaryView():
         codeDiary = CodeDiary.objects.get(text_id=text_id)
         codeDiaryImg = CodeDiaryImg.objects.filter(codeDiary=text_id)
         codeComment = CodeComment.objects.exclude(is_display=0).filter(comment = text_id)
-        content_info = [{'content':'加载失败'}]
         content = codeDiary.content
         content = re.sub('\n', '$n$', content)
         content = re.sub('\t', '$t$', content)

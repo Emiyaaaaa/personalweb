@@ -1,15 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8"/>
-  <title>Marked in the browser</title>
+	<meta charset="utf-8"/>
+	<title>Marked in the browser</title>
+	<script type="text/javascript" src="../static/js/jquery/1.10.2/jquery.min.js"></script>
 </head>
 <body>
-  <div id="content"></div>
-  <input type="text" name="content2">
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+	<div id="content0" class="a"></div>
+	<div id="content1" class="b"></div>
+	<div id="content2" class="a b"></div>
+	<div id="content3"></div>
+	<div id="content4"></div>
+	<div id="content5">
+	  	<div id="content6"></div>
+	  	<div id="content7"></div>
+	  	<div id="content8"></div>
+	  	<div id="content9"></div>
+	  	<div id="content10">
+			<div id="content11"></div>
+			<div id="content12"></div>
+			<div id="content13"></div>
+			<div id="content14"></div>
+			<div id="content15"></div>
+	  	</div>
+  </div>
   <script>
-    console.log(document.getElementById('content2'))
+    function select1(id){
+    	console.log('do1')
+    	for (var i = 0; i < 100000; i++) {
+    		var a = document.getElementById(id);
+    	}
+    	console.log(a)
+    }
+    function select2(id){
+    	console.log('do2')
+    	for (var i = 0; i < 100000; i++) {
+    		var a = document.querySelector(id);
+    	}
+    	console.log(a)
+    }
+    function select3(id){
+    	console.log('do3')
+    	for (var i = 0; i < 100000; i++) {
+    		var a = $(id);
+    	}
+    	console.log(a)
+    }
+    function time(func, id){
+    	var start = Date.now();
+    	func(id);
+    	var stop = Date.now();
+    	return stop - start;
+    }
+    console.log(time(select1, 'content15'));
+    console.log(time(select2,'#content15'));
+    console.log(time(select3,'#content15'));
+
   </script>
 </body>
 </html>

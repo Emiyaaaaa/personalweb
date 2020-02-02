@@ -159,8 +159,9 @@ $(document).ready(function() {
 	        type:"GET",
 	        data:{"type":"matterPage",'matter':nowMatter,'text_id':href.split('?')[1].split('=')[1]},
 	        success:function(data){
-	        	$('#ajax_window_html').html(data);
-	        	// 填充matter0内容
+	        	console.log(data)
+	        	document.getElementById('ajax_window_html').innerHTML = data;
+	        	// 修改matter0内容
 	        	try{
 	        		var mardownBodyObj = document.getElementById('markdownBody');
 	        		// mardownBodyObj.innerHTML = mardownBodyObj.innerText.replace(/\t/g,'\t').replace(/\n/g,'\n')
@@ -168,14 +169,14 @@ $(document).ready(function() {
 	        	}
 	        	catch(err){console.log('matter0:error    '+String(err))}
 
-	        	// 填充matter1内容
+	        	// 修改matter1内容
 	        	try{
 	        		var matter1_content = $('#matter1_content').html().trim().split('\n').join('</br>')
 	        		$('#matter1_content').html(str2aTag(matter1_content))
 	        	}
 	        	catch(err){console.log('matter1:error    '+String(err))}
 
-	        	var markdown_a = document.getElementsByClassName('markdown-body')[0].links;
+	        	var markdown_a = document.getElementById('markdownBody').getElementsByTagName('a');
 	        	for (var i = 0; i < markdown_a.length; i++){
 	        		markdown_a[i].target="_blank";
 	        	}

@@ -39,7 +39,7 @@ class CodeDiaryView():
             if codeDiary.title != None:line = 1
             brief_text = self.getBriefText(unmarkdown_text, text_max_length,line)
             # 将<和>转义后再传入模板
-            # re.sub('<', '\<', brief_text['brief_text'])
+            # brief_text['brief_text'] = re.sub('\n', '$n$', brief_text['brief_text'])
             # re.sub('>', '\>', brief_text['brief_text'])
             codeDiaryImg = CodeDiaryImg.objects.filter(codeDiary=text_id)
             codeDiaryComment = CodeComment.objects.filter(comment=text_id).exclude(is_display=0)
@@ -65,11 +65,15 @@ class CodeDiaryView():
         codeDiaryImg = CodeDiaryImg.objects.filter(codeDiary=text_id)
         codeComment = CodeComment.objects.exclude(is_display=0).filter(comment = text_id)
         content_info = [{'content':'加载失败'}]
+        content = codeDiary.content
+        content = re.sub('\n', '$n$', content)
+        content = re.sub('\t', '$t$', content)
+        content = re.sub(' ', '$s$', content)
         content_info = {
             'date':codeDiary.date,
             'dateTime':codeDiary.dateTime,
             'title':codeDiary.title,
-            'content':codeDiary.content
+            'content':content
         }
         codeDiary.visit_num = codeDiary.visit_num + 1
         codeDiary.save()

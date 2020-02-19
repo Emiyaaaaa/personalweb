@@ -16,9 +16,9 @@
     <form action="computerVocabulary" method="post" style="margin-top: 100px;">
         {% csrf_token %}
         <label for="english">英文：</label>
-        <input type="text" id="english" name="english">
+        <input type="text" id="english" name="english" required>
         <label for="chinese">中文：</label>
-        <input type="text" id="chinese" name="chinese">
+        <input type="text" id="chinese" name="chinese" required>
         <label for="remark">备注：</label>
         <input type="text" id="remark" name="remark">
         <input type="text" name="submit" value="1" hidden>

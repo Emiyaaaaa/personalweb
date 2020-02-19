@@ -1,45 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
+	<style type="text/css">
+		body{
+			cursor:url("https://www.emiya.com.cn/media/avatar/123.jpg"),auto
+		}
+	</style>
 </head>
 <body>
-	<div id="content"></div>
+	<div id="a"></div>
 	<script type="text/javascript">
-		var content = document.getElementById('content');
-		var testNum = 10000;
-		for (var i = 0; i < testNum; i++) {
-			var a = document.createElement('div');
-			a.setAttribute('class','a')
-			content.appendChild(a);
-		}
-
-		function time(func, id){
-	    	var start = Date.now();
-	    	func(id);
-	    	var stop = Date.now();
-	    	return stop - start;
-	    }
-
-	    function test1(ele){
-	    	var nodeList = ele.getElementsByClassName('a');
-    		for (var i = 0; i < nodeList.length; i++) {
-	    		var a = nodeList[i];
-	    		var b = nodeList[i];
-	    	}
-	    }
-
-	    function test2(ele){
-    		var nodeListCopy = ele.cloneNode(true);
-    		var nodeList = nodeListCopy.getElementsByClassName('a');
-    		for (var i = 0; i < nodeListCopy.length; i++) {
-    			var a = nodeListCopy[i];
-	    		var b = nodeListCopy[i];
-	    	}
-	    }
-	    console.log(time(test1,content))
-	    console.log(time(test2,content))
+		var ev = new Event("look", {"bubbles":true, "cancelable":false}),
+			a = document.getElementById('a');
+		document.addEventListener('look',function(){
+			console.log('document look!');
+		})
+		a.addEventListener('look',function(){
+			console.log('a look!');
+		})
+		a.dispatchEvent(ev);
+		document.dispatchEvent(ev);
 	</script>
 </body>
 </html>

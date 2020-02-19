@@ -25,26 +25,34 @@
 	  	</div>
   </div>
   <script>
-    function select1(id){
-    	console.log('do1')
-    	for (var i = 0; i < 100000; i++) {
-    		var a = document.getElementById(id);
-    	}
-    	console.log(a)
+    function charToNum(char){
+    var char = String(char);
+    if (char.charCodeAt() <= 57) {
+        return Number(char);
     }
-    function select2(id){
-    	console.log('do2')
-    	for (var i = 0; i < 100000; i++) {
-    		var a = document.querySelector(id);
-    	}
-    	console.log(a)
+    else{
+        return char.charCodeAt() - 87;
     }
-    function select3(id){
-    	console.log('do3')
-    	for (var i = 0; i < 100000; i++) {
-    		var a = $(id);
-    	}
-    	console.log(a)
+}
+    function select1(){
+        for (var p = 0; p < 10000; p++) {
+            integer = '10001000';
+            integer_result = 0
+            hb = 2;
+            for (let i = integer.length-1; i >= 0; i--) {
+                let power = integer.length - i - 1;
+                integer_result += Number(charToNum(integer[i])) * Math.pow(hb,power);
+            }
+        }
+            console.log(integer_result)
+
+    }
+    function select2(){
+        for (var p = 0; p < 10000; p++) {
+            a = parseInt('10001000',2);
+        }
+        console.log(a)
+
     }
     function time(func, id){
     	var start = Date.now();
@@ -52,9 +60,8 @@
     	var stop = Date.now();
     	return stop - start;
     }
-    console.log(time(select1, 'content15'));
-    console.log(time(select2,'#content15'));
-    console.log(time(select3,'#content15'));
+    console.log(time(select1));
+    console.log(time(select2));
 
   </script>
 </body>

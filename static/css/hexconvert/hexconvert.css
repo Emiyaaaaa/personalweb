@@ -129,8 +129,9 @@ header{
 .other-hex-menu{
 	
 	display: none;
+	position: fixed;
 	cursor: default;
-	overflow: scroll;
+	overflow-y: scroll;
 	float: left;
 	width: 100px;
 	height: 0px;
@@ -139,6 +140,13 @@ header{
 	-webkit-transition: height 0.3s;
     -moz-transition: height 0.3s;
     -o-transition: height 0.3s;
+
+}
+
+.opened .other-hex-menu{
+
+	display: block;
+	height: 250px;
 
 }
 

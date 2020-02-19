@@ -1,6 +1,6 @@
 {% load staticfiles %}
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="cn-ZH">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
@@ -14,10 +14,11 @@
     <meta http-equiv="Expires" content="0" />
     <meta name="referrer" content="no-referrer" />
     <link rel="shortcut icon" href="{% static 'images/favicon1.ico' %}" /> 
-	<link rel="bookmark" href="{% static 'images/favicon1.ico' %}" type="image/x-icon"　/> 
+	<link rel="bookmark" href="{% static 'images/favicon1.ico' %}" type="image/x-icon" /> 
 	<link rel="stylesheet" type="text/css" href="{% static 'css/hexconvert/hexconvert.css' %}">
 	<script type="text/javascript" src="{% static 'js/jquery/1.10.2/jquery.min.js' %}"></script>
-	<script type="text/javascript" src="{% static 'js/hexconvert.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/EventUtil.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/timer.js' %}"></script>
 	<title>在线进制转换</title>
 </head>
 <body>
@@ -28,56 +29,27 @@
 		</header>
 		<div class="main-box">
 			<div class="hex-bar hex-bar1">
-				<div class="hex">二进制</div>
-				<div class="hex">四进制</div>
-				<div class="hex">八进制</div>
-				<div class="hex active">十进制</div>
-				<div class="hex">十六进制</div>
+				<div class="hex" data-num="2">二进制</div>
+				<div class="hex" data-num="4">四进制</div>
+				<div class="hex" data-num="8">八进制</div>
+				<div class="hex active" data-num="10">十进制</div>
+				<div class="hex" data-num="16">十六进制</div>
 				<div class="hex other-hex-select-box">
 					<span class="selected-hex">32进制</span>
 					<img src="{% static 'images/triangle1.png' %}" class="triangle">
 					<div class="other-hex-menu">
-						<ul>
-							<li>3进制</li>
-							<li>4进制</li>
-							<li>5进制</li>
-							<li>6进制</li>
-							<li>7进制</li>
-							<li>8进制</li>
-							<li>9进制</li>
-							<li>10进制</li>
-							<li>11进制</li>
-							<li>12进制</li>
-							<li>13进制</li>
-							<li>14进制</li>
-							<li>15进制</li>
-							<li>16进制</li>
-							<li>17进制</li>
-							<li>18进制</li>
-							<li>19进制</li>
-							<li>20进制</li>
-							<li>21进制</li>
-							<li>22进制</li>
-							<li>23进制</li>
-							<li>24进制</li>
-							<li>25进制</li>
-							<li>26进制</li>
-							<li>27进制</li>
-							<li>28进制</li>
-							<li>29进制</li>
-							<li>30进制</li>
-							<li>31进制</li>
-							<li>32进制</li>
-							<li>33进制</li>
-							<li>34进制</li>
-							<li>35进制</li>
-							<li>36进制</li>
+						<ul data-hex="hex1ul">
+							<script type="text/javascript">
+								var liHtml = '';
+								for (let i = 3; i <= 36; i++) {liHtml += '<li>'+i+'进制</li>';}
+								document.write(liHtml);
+							</script>
 						</ul>
 					</div>
 				</div>
 			</div>
 			<div class="hex-input-box">
-				<input type="text" class="hex-input result1" id="result1" onkeyup="value=inputValidation(this)">
+				<input type="text" class="hex-input input1" id="input1" data-hex="" data-value="">
 			</div>
 			<div class="convert-box">
 				<div id="bc_square" class="bc-square"></div>
@@ -89,72 +61,46 @@
 				</div>
 			</div>
 			<div class="hex-bar hex-bar2">
-				<div class="hex active">二进制</div>
-				<div class="hex">四进制</div>
-				<div class="hex">八进制</div>
-				<div class="hex">十进制</div>
-				<div class="hex">十六进制</div>
+				<div class="hex active" data-num="2">二进制</div>
+				<div class="hex" data-num="4">四进制</div>
+				<div class="hex" data-num="8">八进制</div>
+				<div class="hex" data-num="10">十进制</div>
+				<div class="hex" data-num="16">十六进制</div>
 				<div class="hex other-hex-select-box">
 					<span class="selected-hex">32进制</span>
 					<img src="{% static 'images/triangle1.png' %}" class="triangle">
 					<div class="other-hex-menu">
-						<ul>
-							<li>3进制</li>
-							<li>4进制</li>
-							<li>5进制</li>
-							<li>6进制</li>
-							<li>7进制</li>
-							<li>8进制</li>
-							<li>9进制</li>
-							<li>10进制</li>
-							<li>11进制</li>
-							<li>12进制</li>
-							<li>13进制</li>
-							<li>14进制</li>
-							<li>15进制</li>
-							<li>16进制</li>
-							<li>17进制</li>
-							<li>18进制</li>
-							<li>19进制</li>
-							<li>20进制</li>
-							<li>21进制</li>
-							<li>22进制</li>
-							<li>23进制</li>
-							<li>24进制</li>
-							<li>25进制</li>
-							<li>26进制</li>
-							<li>27进制</li>
-							<li>28进制</li>
-							<li>29进制</li>
-							<li>30进制</li>
-							<li>31进制</li>
-							<li>32进制</li>
-							<li>33进制</li>
-							<li>34进制</li>
-							<li>35进制</li>
-							<li>36进制</li>
+						<ul data-hex="hex2ul">
+							<script type="text/javascript">
+								var liHtml = '';
+								for (let i = 3; i <= 36; i++) {liHtml += '<li>'+i+'进制</li>';}
+								document.write(liHtml);
+							</script>
 						</ul>
 					</div>
 				</div>
 			</div>
 			<div class="hex-input-box">
-				<input type="text" class="hex-input result2" id="result2" onkeyup="value=inputValidation(this)">
+				<input type="text" class="hex-input input2" id="input2" data-hex="" data-value="">
 			</div>
-			<div class="instructions-button" onclick="showInstructions(this)">
+			<div class="instructions-button" id="instructionsButton">
 				<span>使用说明</span>
 				<img src="{% static 'images/triangle1.png' %}" class="triangle">
 			</div>
 			<div class="instructions-text" id="instructionsText">
+				<div class="title">version 2.0</div>
 				<div class="title">&#8226 使用</div>
-				<p>1. 支持浮点运算，支持任意进制间的相互转换</p>
-				<p>2. 无需点击转换按钮，输入数值自动转换</p>
-				<p>3. 中间的箭头为转换方向，可以随时调整，方便连续转换</p>
-				<p>4. 针对2，4，8，16，32进制间的相互转换做了优化，不存在出现无限小数的情况</p>
-				<p>5. 历史转换记录查看方法: PC端按F12，点击console(控制台)查看历史记录，刷新页面会清除历史记录</p>
+				<p>1. 支持浮点运算，支持任意进制间的相互转换。</p>
+				<p>2. 无需点击转换按钮，输入数值自动转换。</p>
+				<p>3. 中间的箭头为转换方向，可以随时调整，方便连续转换。</p>
+				<p>4. 针对2，4，8，16，32进制间的相互转换做了优化，不存在出现无限小数的情况。</p>
+				<p>5. 历史转换记录查看方法: PC端按F12，点击console(控制台)查看历史记录，刷新页面会清除历史记录。</p>
 				<div class="title">&#8226 原理&联系</div>
-				<p>1. 虽然网站后端采用Python开发，但本模块运算部分完全采用前端语言JavaScript开发，主要是为了练习JavaScript，提高自己的知识水平</p>
-				<p>2. 由于本人js水平一般，难免会有未知bug，造成网页崩溃，操作无反应等情况。如发现bug，请发送转换前数值，转换前后的进制至2914034404@qq.com，将尽快修复</p>
-				<p>3. 商业合作联系2914034404@qq.com</p>
+				<p>1. 虽然网站后端采用Python开发，但本模块运算部分完全采用前端语言JavaScript开发，主要是为了练习JavaScript，提高自己的知识水平。</p>
+				<p>2. 由于本人js水平有限，难免会有未知bug，造成网页崩溃，操作无反应等情况。如发现bug，请发送转换前数值，转换前后的进制至2914034404@qq.com，将尽快修复。</p>
+				<div class="title">&#8226 更新</div>
+				<p>2020.2.19：响应时间缩短95.19%，按下数字键后仅7ms便可显示结果，输入的字符与结果同时显示。</p>
+				<p></p>
 			</div>
 		</div>
 		<div class="FooterPush"></div>
@@ -162,5 +108,6 @@
 	<div class="Footer">
 		<a href="http://www.miitbeian.gov.cn/" class="beian">晋ICP备18012113号-1</a>
 	</div>
+	<script type="text/javascript" src="{% static 'js/hexconvert.js' %}"></script>
 </body>
 </html>

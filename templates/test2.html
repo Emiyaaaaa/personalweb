@@ -10,6 +10,10 @@
 <body>
 	<div id="a"></div>
 	<script type="text/javascript">
+		function b(a=1,b=2){
+			console.log(a,b);
+		}
+		b();
 		var ev = new Event("look", {"bubbles":true, "cancelable":false}),
 			a = document.getElementById('a');
 		document.addEventListener('look',function(){

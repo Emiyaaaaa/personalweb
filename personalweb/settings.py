@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     'markdown_deux',
     'applications',
     'computerVocabulary',
+    'goodGoodStudy'
 ]
 
 MIDDLEWARE = [

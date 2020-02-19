@@ -117,7 +117,7 @@ function hexOptionClickEvent(){
 
 // 取消掉兄弟节点的active，设置ele为active
 function setElementActive(ele,className,activeSign,ancestorNode){
-	if (typeof parentNode === 'undefined') {
+	if (typeof ancestorNode === 'undefined') {
 		ancestorNode = ele.parentNode;
 	}
 	var brotherNode = ancestorNode.getElementsByClassName(className);

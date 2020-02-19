@@ -171,14 +171,16 @@ $(document).ready(function() {
 	        	// 修改matter1内容
 	        	try{
 	        		var matter1_content = $('#matter1_content').html().trim().split('\n').join('</br>')
-	        		$('#matter1_content').html(str2aTag(matter1_content))
+	        		$('#matter1_content').html(str2aTag(matter1_content));
+	        		//将a标签统一改为在新标签页中打开
+		        	var markdown_a = document.getElementById('markdownBody').getElementsByTagName('a');
+		        	for (var i = 0; i < markdown_a.length; i++){
+		        		markdown_a[i].target="_blank";
+		        	}
 	        	}
 	        	catch(err){console.log('matter1:error    '+String(err))}
 
-	        	var markdown_a = document.getElementById('markdownBody').getElementsByTagName('a');
-	        	for (var i = 0; i < markdown_a.length; i++){
-	        		markdown_a[i].target="_blank";
-	        	}
+	        	
 	        	fillWindow();
 	        	replyButton();
 	    }

@@ -369,3 +369,12 @@
     color: #737373
 
 }
+
+.markdowm-body img{
+
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+    border-radius: 5px;
+
+}

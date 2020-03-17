@@ -8,10 +8,9 @@ function openWindow(){
 	var setWindowHeightRatio = 0.70;
 	var setWindowWidthRatio = 0.60;
 	if (nowMatter == 'matter0'){
-		setWindowHeightRatio = 0.80;
-	}
-	else if (nowMatter == 'matter1'){
-		setWindowHeightRatio = 0.70;
+		setWindowHeightRatio = 0.85;
+		setWindowWidthRatio = 0.75;
+
 	}
 	var maxWindowHeight = 800;
 	var maxWindowWidth = 1300;

@@ -56,7 +56,7 @@
 
 }
 
-#window img{
+.window img{
 
     width: 300px;
     max-width: 80%;
@@ -370,7 +370,7 @@
 
 }
 
-.markdowm-body img{
+.markdown-body img{
 
     width: 96%;
     margin-left: 2%;

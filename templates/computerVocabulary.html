@@ -40,12 +40,9 @@
     {% endfor %}
     </div>
     <script type="text/javascript">
-        function creatVocabularyHTMLCompare(order) {
+        function creatVocabularyHTMLCompare(isAsc) {
             return function(html1, html2) {
-                var orderValue = 1;
-                if (order == 'desc') {
-                    orderValue = -1;
-                }
+                var orderValue = isAsc ? 1 : -1;
                 if(html1.getAttribute('data-english').toLowerCase() > html2.getAttribute('data-english').toLowerCase()) {
                     return orderValue;
                 }
@@ -67,7 +64,7 @@
         }
 
         var vocabularyHTMLArray = Array.prototype.slice.call(document.getElementsByClassName('single-vocabulary'));
-        var orderedVocabularyHTMLArray = vocabularyHTMLArray.sort(creatVocabularyHTMLCompare('asc'));
+        var orderedVocabularyHTMLArray = vocabularyHTMLArray.sort(creatVocabularyHTMLCompare(true));
         document.getElementById('vocabulary').innerHTML = HTMLArrayToHTMLText(orderedVocabularyHTMLArray);
     </script>
 </body>

@@ -333,7 +333,7 @@
 
 #fill_window{
 
-    padding-top: var(--padding-top,0); 
+    padding-top: var(--padding-top,0);
 
 }
 
@@ -371,9 +371,19 @@
 }
 
 .markdown-body img{
-
+    
     width: 96%;
     margin-left: 2%;
     margin-right: 2%;
 
+}
+
+@media (min-width: 1250px){
+.markdown-body img{
+    
+    width: auto;
+    max-height: 400px !important;
+    margin-left: 1%;
+
+}
 }

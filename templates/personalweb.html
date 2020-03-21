@@ -7,8 +7,6 @@
 	<link rel="shortcut icon" href="/media/{{ website_icon }}"/> 
 	<link rel="bookmark" href="/media/{{ website_icon }}" type="image/x-icon"/> 
 	<script type="text/javascript" src="{% static 'js/jquery/1.10.2/jquery.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/outputConsole.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/console_out.js' %}"></script>
 	<script type="text/javascript">
 		function isPC() {
 		    var userAgentInfo = navigator.userAgent;
@@ -392,6 +390,8 @@
     <script type="text/javascript" src="{% static 'js/ajax.js' %}"></script>
     <script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
     <script type="text/javascript" src="{% static 'js/weather2_0.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/outputConsole.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/console_out.js' %}"></script>
     <script type="text/javascript">
     	if(window.location.host != '127.0.0.1:8000' && isPC()){
     		if (navigator.userAgent.indexOf('Edge') > -1) {

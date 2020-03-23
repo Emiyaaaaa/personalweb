@@ -36,7 +36,7 @@ $(document).ready(function() {
 	        		let hours = formattingDate(myDate.getDay());
 	        		let minutes = formattingDate(myDate.getMinutes());
 	        		let seconds = formattingDate(myDate.getSeconds());
-	        		downloadIamge(data.imgUrl,'bili_av' + data.av + '_' + year + month + day + hours + minutes + seconds);
+	        		downloadIamge(data.imgUrl,'bili_bv_cover_' + year + month + day + hours + minutes + seconds);
 	        	}
 	        	else{
 	        		document.getElementById('notFoundVideo').classList.add('not-found-video-active');

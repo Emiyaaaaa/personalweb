@@ -1,4 +1,4 @@
-function console_out(){                    console.log("\n\
+function outputConsole3(){                    console.log("\n\
 %c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@\n\
 %c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@\n\
 %c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@%c@\n\

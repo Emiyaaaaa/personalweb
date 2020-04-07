@@ -175,6 +175,7 @@
 	content: normal;
 }
 .markdown-body code {
+	color: inherit;
 	font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
 	padding: 0;
 	padding-top: 0.2em;

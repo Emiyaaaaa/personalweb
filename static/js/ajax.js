@@ -135,15 +135,15 @@ $(document).ready(function() {
 	window.getMoreContent = getMoreContent;
 
 	function myMarked(Ele){
-		var text = Ele.innerHTML.replace(/&gt;/g,'>'); //将全文的&gt;转换成>使其支持markdown引用
+		var text = Ele.innerHTML.replace(/&gt;/g,'>'); //将全文的&gt;转换成>使其支持markdown的引用符
 		Ele.innerHTML = marked(text)
 		//使markdown支持引用中的分段
 		EleHTML = Ele.innerHTML.replace(/<\/blockquote>\s{0,1}<blockquote>/g,'');//将可合并的blockquote合并，并添加<br/>，注意</blockquote>和<blockquote>之间会有一到两个\n
 		Ele.innerHTML = EleHTML;
-		//将code标签中的&lt;转换为<
+		//将code标签中的&lt;转换为<，&amp;转换为&
 		var codeEle = Ele.getElementsByTagName('code');
 		for (var i = 0; i < codeEle.length; i++) {
-			codeEle[i].innerText = codeEle[i].innerText.replace(/&lt;/g,'<');
+			codeEle[i].innerText = codeEle[i].innerText.replace(/&lt;/g,'<').replace(/&amp;/g,'&');
 		}
 	}
 

@@ -75,11 +75,10 @@ body {
 .middle{
 
 	width:50%;
-    overflow:auto;
     margin-left:22%;
     margin-right:0; 
-    overflow-y: auto;
-    overflow-x: hidden;
+    /*overflow-y: auto;*/
+    /*overflow-x: hidden;*/
     -webkit-transition: all 0.25s;
     -moz-transition: all 0.25s;
     -o-transition: all 0.25s;

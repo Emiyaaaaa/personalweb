@@ -12,8 +12,6 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 
 import os
 import sys
-import urllib.request
-import re
 import pickle
 import tools
 

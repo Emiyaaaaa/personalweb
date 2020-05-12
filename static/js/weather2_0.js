@@ -48,9 +48,13 @@
 					weather_icon.innerHTML = '<div class="sunny"></div>';
 					weather_background.innerHTML = '<div class="sunny-background"></div>';
 				}
-				else{
+				else if(weatherDic[weather]){
 					weather_icon.innerHTML = '<div class="' + weatherDic[weather] + '"></div>';
 					weather_background.innerHTML = '<div class="' + backgroundDic[weather] + '"></div>';
+				}
+				else{
+					weather_icon.innerHTML = '<div class="sunny"></div>';
+					weather_background.innerHTML = '<div class="sunny-background"></div>';
 				}
 			}
 		}

@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="97ee085e-0965-47c9-afdd-5d7ddcf1463c" name="Default" comment="bug">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/personalweb/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/personalweb/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/qzone/qzone_sql.py" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/qzone/qzone_sql.py" afterDir="false" />
-    </list>
+    <list default="true" id="97ee085e-0965-47c9-afdd-5d7ddcf1463c" name="Default" comment="bug" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,9 +53,6 @@
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="personalweb" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -126,16 +119,17 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://E:/python/draft/listfeild.py" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="database.console.LAST_STATE" value="true" />
-    <property name="last_opened_file_path" value="E:/春雨的项目/overlab" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -157,7 +151,7 @@
       <recent name="E:\python\untitled\草稿箱" />
     </key>
   </component>
-  <component name="RunManager" selected="Django server.personalweb">
+  <component name="RunManager" selected="Django Server.personalweb">
     <configuration default="true" type="DjangoTestsConfigurationType">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -427,7 +421,7 @@
         <env name="PYTHONUNBUFFERED" value="1" />
         <env name="DJANGO_SETTINGS_MODULE" value="personalweb.settings" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="D:\anaconda3\envs\python36\python.exe" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -436,7 +430,7 @@
       <option name="port" value="8000" />
       <option name="host" value="" />
       <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="" />
+      <option name="browserUrl" value="http://127.0.0.1:8001/" />
       <option name="runTestServer" value="false" />
       <option name="runNoReload" value="false" />
       <option name="useCustomRunCommand" value="false" />
@@ -544,11 +538,20 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Django Server.personalweb" />
+      <item itemvalue="Python.getCookies" />
+      <item itemvalue="Python.3" />
+      <item itemvalue="Python.18" />
+      <item itemvalue="Python.hellopython" />
+      <item itemvalue="Python.守望先锋柱形图" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.守望先锋柱形图" />
@@ -679,6 +682,9 @@
       <workItem from="1585922180010" duration="300000" />
       <workItem from="1588336224926" duration="2265000" />
       <workItem from="1588346765427" duration="1248000" />
+      <workItem from="1594128067434" duration="358000" />
+      <workItem from="1594128448276" duration="599000" />
+      <workItem from="1594176518989" duration="2717000" />
     </task>
     <task id="LOCAL-00115" summary="打开窗口部分的代码重构">
       <created>1541317972699</created>
@@ -1036,24 +1042,23 @@
     </todo-panel>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
-      <path value="E:/2345下载/txy (3)" />
+      <path value="$PROJECT_DIR$/../../2345下载/txy (3)" />
       <path value="$PROJECT_DIR$/../a-colorful-horizontal-navigation-bar" />
       <path value="$PROJECT_DIR$/extra_apps/qzone" />
     </ignored-roots>
@@ -1085,13 +1090,19 @@
     <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588346870631">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="194" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594177720455">
+      <screen x="0" y="0" width="1280" height="760" />
     </state>
+    <state x="194" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.760@0.0.1280.760" timestamp="1594177720455" />
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588346870631" />
-    <state x="770" y="272" key="FileChooserDialogImpl" timestamp="1588339079937">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="390" y="250" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1594128422472">
+      <screen x="0" y="0" width="1280" height="760" />
     </state>
+    <state x="390" y="250" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.1280.760@0.0.1280.760" timestamp="1594128422472" />
+    <state x="513" y="199" key="FileChooserDialogImpl" timestamp="1594176946559">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="513" y="199" key="FileChooserDialogImpl/0.0.1280.760@0.0.1280.760" timestamp="1594176946559" />
     <state x="770" y="272" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1588339079937" />
     <state width="1877" height="347" key="GridCell.Tab.0.bottom" timestamp="1588348345675">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -1125,9 +1136,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="347" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588348345675" />
-    <state x="461" y="162" key="SettingsEditor" timestamp="1588336298435">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="286" y="51" key="SettingsEditor" timestamp="1594178451061">
+      <screen x="0" y="0" width="1280" height="760" />
     </state>
+    <state x="286" y="51" key="SettingsEditor/0.0.1280.760@0.0.1280.760" timestamp="1594178451061" />
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1588336298435" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">

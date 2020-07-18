@@ -26,6 +26,7 @@ from zhuhuVideoDownload.views import ZhuhuVideoDownloadView
 from ngaShadiaoImage.views import NgaShadiaoImageView
 from liveAtc.views import LiveAtcView
 from computerVocabulary.views import ComputerVocabularyView
+from dwz.views import DwzView
 import xadmin
 import mainPage
 from api import getWeatherJson
@@ -49,7 +50,8 @@ urlpatterns = [
     url(r'^liveAtc/mzsm$', LiveAtcView().get_mzsm),
     url(r'^computerVocabulary', ComputerVocabularyView.as_view()),
     url(r'api/getWeatherJson', getWeatherJson().getWeatherJson),
-    url(r'^markdown/',include('markdown.urls'))
+    url(r'^markdown/',include('markdown.urls')),
+    url(r'^dwz', DwzView.as_view())
 ]
 urlpatterns += static(settings.MEDIA_URL , document_root = settings.MEDIA_ROOT )
 urlpatterns += static(settings.STATIC_URL, document_root = settings.STATIC_ROOT )

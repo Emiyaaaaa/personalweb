@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97ee085e-0965-47c9-afdd-5d7ddcf1463c" name="Default" comment="bug">
-      <change beforePath="$PROJECT_DIR$/.idea/personalweb.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/personalweb.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/dwz/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/dwz/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/dwz.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dwz.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../untitled/qzone/qzone_sql.py" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/qzone/qzone_sql.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -649,7 +647,7 @@
       <workItem from="1594128067434" duration="358000" />
       <workItem from="1594128448276" duration="599000" />
       <workItem from="1594176518989" duration="2717000" />
-      <workItem from="1595140824119" duration="3737000" />
+      <workItem from="1595140824119" duration="5394000" />
     </task>
     <task id="LOCAL-00115" summary="打开窗口部分的代码重构">
       <created>1541317972699</created>
@@ -1065,6 +1063,10 @@
       <screen x="0" y="0" width="1280" height="760" />
     </state>
     <state x="390" y="250" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.1280.760@0.0.1280.760" timestamp="1594128422472" />
+    <state x="594" y="210" key="CommitChangelistDialog2" timestamp="1595148034383">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="594" y="210" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1595148034383" />
     <state x="513" y="199" key="FileChooserDialogImpl" timestamp="1594176946559">
       <screen x="0" y="0" width="1280" height="760" />
     </state>

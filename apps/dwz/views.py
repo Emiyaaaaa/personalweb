@@ -26,6 +26,7 @@ class DwzView(View):
 
     def get(self,request):
         dwz_url = request.META['HTTP_HOST']+request.path_info# 获取短链接
+        dwz_url = dwz_url.replace('www.','')
         path = request.path_info[5:]
         if(path == ''):
             return render(request, 'dwz.html')

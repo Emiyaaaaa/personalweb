@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="97ee085e-0965-47c9-afdd-5d7ddcf1463c" name="Default" comment="bug">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/dwz/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/dwz/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/hexconvert.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/hexconvert.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/hexconvert.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hexconvert.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../untitled/qzone/qzone_sql.py" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/qzone/qzone_sql.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -647,7 +648,7 @@
       <workItem from="1594128067434" duration="358000" />
       <workItem from="1594128448276" duration="599000" />
       <workItem from="1594176518989" duration="2717000" />
-      <workItem from="1595140824119" duration="5394000" />
+      <workItem from="1595140824119" duration="7488000" />
     </task>
     <task id="LOCAL-00115" summary="打开窗口部分的代码重构">
       <created>1541317972699</created>
@@ -1072,22 +1073,22 @@
     </state>
     <state x="513" y="199" key="FileChooserDialogImpl/0.0.1280.760@0.0.1280.760" timestamp="1594176946559" />
     <state x="770" y="272" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1588339079937" />
-    <state width="1877" height="299" key="GridCell.Tab.0.bottom" timestamp="1595144815485">
+    <state width="1877" height="299" key="GridCell.Tab.0.bottom" timestamp="1595151974210">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="299" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1595144815485" />
-    <state width="1877" height="299" key="GridCell.Tab.0.center" timestamp="1595144815485">
+    <state width="1877" height="299" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1595151974210" />
+    <state width="1877" height="299" key="GridCell.Tab.0.center" timestamp="1595151974210">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="299" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1595144815485" />
-    <state width="1877" height="299" key="GridCell.Tab.0.left" timestamp="1595144815485">
+    <state width="1877" height="299" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1595151974210" />
+    <state width="1877" height="299" key="GridCell.Tab.0.left" timestamp="1595151974210">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="299" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1595144815485" />
-    <state width="1877" height="299" key="GridCell.Tab.0.right" timestamp="1595144815485">
+    <state width="1877" height="299" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1595151974210" />
+    <state width="1877" height="299" key="GridCell.Tab.0.right" timestamp="1595151974210">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="299" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1595144815485" />
+    <state width="1877" height="299" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1595151974210" />
     <state width="1877" height="347" key="GridCell.Tab.1.bottom" timestamp="1588348345675">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

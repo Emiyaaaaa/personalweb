@@ -247,8 +247,6 @@ function convert(mutationList, observer){
 		console.log('convert函数资格判断出错');
 		console.log(err)
 	}
-	
-	console.log('转换开始：' + Date.now())
 	var input0Editable = inputBox[0].hc.editable,
 		inputBoxBeforeConvert = input0Editable ? inputBox[0] : inputBox[1],
 		inputBoxAfterConvert = input0Editable ? inputBox[1] : inputBox[0],
@@ -287,6 +285,8 @@ function convert(mutationList, observer){
 
 function hex_allTo10(valueObj,hex){
 	if (hex == 10) {
+		valueObj.integerResult = valueObj.integer;
+		valueObj.decimalResult = valueObj.decimal;
 		return valueObj;
 	}
 
@@ -313,8 +313,7 @@ function hex_10ToAll(valueObj,hex){
 	if (hex == 10) {
 		return valueObj;
 	}
-
-	var integer = valueObj.integerResult,// 这里要注意是integerResult而不是integer，下方hex_2ToAll同理
+	var integer = valueObj.integerResult,// 这里要注意是integerResult而不是integer，因为10进制需要两步运算，这里需要的数字为第一次运算的结果，也就是integerResult，下方hex_2ToAll同理
 		decimal = valueObj.decimalResult,
 		integerResult = '',
 		decimalResult = '',
@@ -325,6 +324,7 @@ function hex_10ToAll(valueObj,hex){
 		decimal = Number('0.'+decimal);
 
 	// 整数部分
+	console.log(integer,hex)
 	integerResult = Number(integer).toString(hex);
 	// 小数部分
 	do{
@@ -344,6 +344,8 @@ function hex_10ToAll(valueObj,hex){
 
 function hex_allTo2(valueObj,hex){
 	if (hex == 2) {
+		valueObj.integerResult = valueObj.integer;
+		valueObj.decimalResult = valueObj.decimal;
 		return valueObj;
 	}
 
@@ -390,6 +392,7 @@ function hex_2ToAll(valueObj,hex){
 		digitsGroupNum = getBaseLog(2,hex);
 
 	// 整数部分
+	console.log(digitsGroupNum - integer.length % digitsGroupNum)
 	integer = getZero(digitsGroupNum - integer.length % digitsGroupNum) + integer;//整数部分前面补0
 	for (var i = digitsGroupNum - 1; i < integer.length; i = i + digitsGroupNum) {
 		let integerGroup = ''
@@ -415,6 +418,7 @@ function hex_2ToAll(valueObj,hex){
 }
 
 function getZero(len){
+	zero = '';
 	for (var i = 0; i < len; i++) {
 		zero += '0';
 	}

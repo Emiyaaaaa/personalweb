@@ -65,7 +65,7 @@
 	}
 
 
-	if(window.location.host != '127.0.0.1:8000' && isPC() && clientWidth >= 1250){
+	if(isPC() && clientWidth >= 1250){
 		// areaIframe = document.createElement('div');
 		// areaIframe.innerHTML = '<iframe src="http://www.ip138.com/iplookup.asp?ip='+returnCitySN["cip"]+'" id="areaIframe"></iframe>'
 
@@ -93,7 +93,6 @@
 			async: true,
 			data: {'ip':returnCitySN["cip"]},
 			success:function(data){
-				console.log(data);
 				if (data['error'] == 0) {
 					// 初始化
 					document.querySelectorAll(".right .loading-weather")[0].style.display = 'none';
@@ -121,13 +120,13 @@
 					document.querySelectorAll(".right .loading-weather .loading")[0].innerHTML = '加载失败！';
 					console.log('error:'+data.error);
 				}
-				$.ajax({
-					url:'/',
-			   		type:"POST",
-			   		data:{'type':'weatherUser','ip':returnCitySN["cip"],'city':returnCitySN["cname"],'error':data.error},
-			   		success:function(data){}
-			   	})
 	    	}
 		})
 	}
+	$.ajax({
+		url:'/',
+   		type:"POST",
+   		data:{'type':'weatherUser','ip':returnCitySN["cip"],'city':returnCitySN["cname"]},
+   		success:function(data){}
+   	})
 })()

@@ -112,19 +112,14 @@ def matter33SendMessage(request):
         return JsonResponse({'statusCode': '0'})
 
 def weatherUser(request):
-    ip_ignore_list = ['']
     ip = request.POST.get('ip')
     city = request.POST.get('city')
-    errorCode = request.POST.get('errorCode')
-    errorJson = request.POST.get('errorJson')
-    if ip not in ip_ignore_list and (errorCode != 0 or errorCode != '0'):
-        try:
-            WeatherUserStatistics.objects.create(ip=ip, address=city, errorCode=errorCode, errorJson=errorJson)
-            return JsonResponse({'statusCode': '1'})
-        except:
-            return JsonResponse({'statusCode': '0'})
-    else:
+    try:
+        WeatherUserStatistics.objects.create(ip=ip, address=city, errorCode=0, errorJson=' ')
         return JsonResponse({'statusCode': '1'})
+    except Exception as e:
+        print(e)
+        return JsonResponse({'statusCode': '0'})
 
 
 def ZhuhuVideoDownload(request):

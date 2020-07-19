@@ -10,14 +10,18 @@
     <button id="submit">提交</button>
     <div id="dwzUrl"></div>
     <script>
-        $.ajax({
-	        url:"/dwz",
-	        type:"POST",
-	        data:{"dwzLongUrl":dwzLongUrl},
-	        success:function(data){
-	            document.getElementById("dwzUrl").innerText = data.dwzUrl;
-	        }
-	    })
+        document.getElementById('submit').addEventListener('click',function () {
+            $.post("/dwz",
+                {
+                    dwzLongUrl: document.getElementById('dwzLongUrl').value,
+                    full_path: window.location.href,
+                    csrfmiddlewaretoken: '{{ csrf_token  }}'
+                },
+                function(data){
+                    document.getElementById("dwzUrl").innerText = data.dwzUrl;
+                })
+        });
+
     </script>
 </body>
 </html>

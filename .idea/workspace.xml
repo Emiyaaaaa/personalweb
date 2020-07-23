@@ -151,7 +151,7 @@
       <recent name="E:\python\untitled\草稿箱" />
     </key>
   </component>
-  <component name="RunManager" selected="Django Server.personalweb">
+  <component name="RunManager" selected="Python.set_password">
     <configuration default="true" type="DjangoTestsConfigurationType">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -212,28 +212,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../untitled/草稿箱/守望先锋柱形图.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="18" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="草稿箱" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../untitled/草稿箱" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../untitled/草稿箱/18.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -413,6 +391,50 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="sendEmail" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="personalweb" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/apps/ngaShadiaoImage" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/apps/ngaShadiaoImage/sendEmail.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="set_password" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="personalweb" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tools" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/set_password.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="personalweb" type="Python.DjangoServer" factoryName="Django server">
       <module name="personalweb" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -430,7 +452,7 @@
       <option name="port" value="8000" />
       <option name="host" value="" />
       <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="http://127.0.0.1:8001/" />
+      <option name="browserUrl" value="http://127.0.0.1:8000/" />
       <option name="runTestServer" value="false" />
       <option name="runNoReload" value="false" />
       <option name="useCustomRunCommand" value="false" />
@@ -548,12 +570,15 @@
       <item itemvalue="Django Server.personalweb" />
       <item itemvalue="Python.getCookies" />
       <item itemvalue="Python.3" />
-      <item itemvalue="Python.18" />
-      <item itemvalue="Python.hellopython" />
       <item itemvalue="Python.守望先锋柱形图" />
+      <item itemvalue="Python.hellopython" />
+      <item itemvalue="Python.sendEmail" />
+      <item itemvalue="Python.set_password" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.set_password" />
+        <item itemvalue="Python.sendEmail" />
         <item itemvalue="Python.守望先锋柱形图" />
       </list>
     </recent_temporary>
@@ -685,6 +710,12 @@
       <workItem from="1594128067434" duration="358000" />
       <workItem from="1594128448276" duration="599000" />
       <workItem from="1594176518989" duration="2717000" />
+      <workItem from="1594279987912" duration="65000" />
+      <workItem from="1594283124466" duration="3000" />
+      <workItem from="1594365451322" duration="47000" />
+      <workItem from="1594711572144" duration="1000" />
+      <workItem from="1595317012024" duration="68000" />
+      <workItem from="1595406355291" duration="392000" />
     </task>
     <task id="LOCAL-00115" summary="打开窗口部分的代码重构">
       <created>1541317972699</created>
@@ -1090,35 +1121,39 @@
     <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="194" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594177720455">
+    <state x="194" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594280048476">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state x="194" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.760@0.0.1280.760" timestamp="1594177720455" />
+    <state x="194" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.760@0.0.1280.760" timestamp="1594280048476" />
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588346870631" />
     <state x="390" y="250" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1594128422472">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
     <state x="390" y="250" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.1280.760@0.0.1280.760" timestamp="1594128422472" />
-    <state x="513" y="199" key="FileChooserDialogImpl" timestamp="1594176946559">
+    <state x="513" y="199" key="FileChooserDialogImpl" timestamp="1595317057122">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state x="513" y="199" key="FileChooserDialogImpl/0.0.1280.760@0.0.1280.760" timestamp="1594176946559" />
+    <state x="513" y="199" key="FileChooserDialogImpl/0.0.1280.760@0.0.1280.760" timestamp="1595317057122" />
     <state x="770" y="272" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1588339079937" />
-    <state width="1877" height="347" key="GridCell.Tab.0.bottom" timestamp="1588348345675">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1204" height="353" key="GridCell.Tab.0.bottom" timestamp="1594280052675">
+      <screen x="0" y="0" width="1280" height="760" />
     </state>
+    <state width="1204" height="353" key="GridCell.Tab.0.bottom/0.0.1280.760@0.0.1280.760" timestamp="1594280052675" />
     <state width="1877" height="347" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588348345675" />
-    <state width="1877" height="347" key="GridCell.Tab.0.center" timestamp="1588348345675">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1204" height="353" key="GridCell.Tab.0.center" timestamp="1594280052674">
+      <screen x="0" y="0" width="1280" height="760" />
     </state>
+    <state width="1204" height="353" key="GridCell.Tab.0.center/0.0.1280.760@0.0.1280.760" timestamp="1594280052674" />
     <state width="1877" height="347" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588348345675" />
-    <state width="1877" height="347" key="GridCell.Tab.0.left" timestamp="1588348345675">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1204" height="353" key="GridCell.Tab.0.left" timestamp="1594280052674">
+      <screen x="0" y="0" width="1280" height="760" />
     </state>
+    <state width="1204" height="353" key="GridCell.Tab.0.left/0.0.1280.760@0.0.1280.760" timestamp="1594280052674" />
     <state width="1877" height="347" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588348345675" />
-    <state width="1877" height="347" key="GridCell.Tab.0.right" timestamp="1588348345675">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1204" height="353" key="GridCell.Tab.0.right" timestamp="1594280052675">
+      <screen x="0" y="0" width="1280" height="760" />
     </state>
+    <state width="1204" height="353" key="GridCell.Tab.0.right/0.0.1280.760@0.0.1280.760" timestamp="1594280052675" />
     <state width="1877" height="347" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588348345675" />
     <state width="1877" height="347" key="GridCell.Tab.1.bottom" timestamp="1588348345675">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -1143,7 +1178,9 @@
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1588336298435" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/personalweb_master$sendEmail.coverage" NAME="sendEmail Coverage Results" MODIFIED="1595406480176" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/ngaShadiaoImage" />
     <SUITE FILE_PATH="coverage/personalweb$.coverage" NAME="守望先锋柱形图 Coverage Results" MODIFIED="1585542312803" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../untitled/草稿箱" />
+    <SUITE FILE_PATH="coverage/personalweb_master$set_password.coverage" NAME="set_password Coverage Results" MODIFIED="1595406537806" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
   </component>
   <component name="masterDetails">
     <states>

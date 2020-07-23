@@ -16,7 +16,7 @@ from email.header import Header
 
 with open(os.path.join(settings.BASE_DIR, 'tools', 'personalWeb.pwd'), 'rb') as file:
     pw_dict = pickle.load(file)
-
+print(pw_dict)
 my_sender = '2914034404@qq.com'
 my_pass = pw_dict['stmppw']
 

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>生成短链接</title>
+    <script type="text/javascript" src="/static/js/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+    <input type="text" id="dwzLongUrl">
+    <button id="submit">提交</button>
+    <div id="dwzUrl"></div>
+    <script>
+        document.getElementById('submit').addEventListener('click',function () {
+            $.post("/dwz",
+                {
+                    dwzLongUrl: document.getElementById('dwzLongUrl').value,
+                    full_path: window.location.href,
+                    csrfmiddlewaretoken: '{{ csrf_token  }}'
+                },
+                function(data){
+                    document.getElementById("dwzUrl").innerText = data.dwzUrl;
+                })
+        });
+
+    </script>
+</body>
+</html>

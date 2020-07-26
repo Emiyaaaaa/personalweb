@@ -31,7 +31,7 @@ function openWindow(){
 	windowObj = $('#window');
 	windowObj.html(
 		'<div id="windowContent">\
-			<div id="mainContent"><div id="ajax_window_html"></div></div>'+
+			<div id="ajax_window_html" class="content-margin"></div>'+
 			closeWindowHtml+
 		'</div>');
 	getMattersContent($(this).attr('href'));

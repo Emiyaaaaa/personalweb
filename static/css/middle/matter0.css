@@ -54,7 +54,7 @@
 
 .content-margin{
 
-    margin: 20px 5px 0 10px;
+    padding: 10px 5px 0 10px;
 
 }
 
@@ -85,8 +85,7 @@
 
 .date{
 
-    margin: 0 auto;
-    padding: 0px 10px;
+    margin-bottom: 10px;
 
 }
 

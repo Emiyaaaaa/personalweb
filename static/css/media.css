@@ -286,8 +286,8 @@
 
 	#ajax_window_html{
 
-		position: relative;
-		left: -10px;
+		/*position: relative;
+		left: -10px;*/
 
 	}
 
@@ -319,21 +319,9 @@
 
 	}
 
-	#window #mainContent{
-
-		padding-top: 6px;
-
-	}
-
 	.windowReplyButton a:hover {
 	
 		color: #adadad;
-
-	}
-
-	.content-margin{
-
-	    margin: 14px 5px 0 10px;
 
 	}
 

@@ -161,20 +161,19 @@ $(document).ready(function() {
 	        data:{"type":"matterPage",'matter':nowMatter,'text_id':href.split('?')[1].split('=')[1]},
 	        success:function(data){
 	        	ajax_window_html = document.getElementById('ajax_window_html');
-	        	var virtual_ajax_window_html = document.createElement('div');
-	        	virtual_ajax_window_html.innerHTML = data;
 	        	// 修改matter0内容
-	        	try{
+	        	if (LINUM == 0){
+	        		var virtual_ajax_window_html = document.createElement('div');
+	        		virtual_ajax_window_html.innerHTML = data;
 	        		var mardownBodyObj = virtual_ajax_window_html.getElementsByClassName('markdown-body')[0];
 	        		mardownBodyObj.innerHTML = mardownBodyObj.innerHTML.replace(/\$s\$/g,' ').replace(/\$n\$/g,'\n').replace(/\$t\$/g,'\t')
 	        		mardownBodyObj.innerHTML = myMarked(mardownBodyObj);
 	        		ajax_window_html.innerHTML = virtual_ajax_window_html.innerHTML;
-
 	        	}
-	        	catch(err){console.log('matter0:error    '+String(err))}
 
 	        	// 修改matter1内容
-	        	try{
+	        	if (LINUM == 1){
+	        		ajax_window_html.innerHTML = data;
 	        		var matter1_content = $('#matter1_content').html().trim().split('\n').join('</br>')
 	        		$('#matter1_content').html(str2aTag(matter1_content));
 	        		//将a标签统一改为在新标签页中打开
@@ -183,10 +182,7 @@ $(document).ready(function() {
 		        		markdown_a[i].target="_blank";
 		        	}
 	        	}
-	        	catch(err){console.log('matter1:error    '+String(err))}
 
-	        	
-	        	fillWindow();
 	        	replyButton();
 	    }
 		})

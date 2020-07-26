@@ -5,71 +5,68 @@
         {{ diary.date }}
     {% endif %}
 </div>
-<div class="content-margin">
-    {% if diary.title != None %}
-        <div class="title">{{ diary.title }}</div>
+{% if diary.title != None %}
+    <div class="title">{{ diary.title }}</div>
+{% endif %}
+<div class="matter1_content" id="matter1_content">
+    {{ diary.content }}
+</div>
+<div class="windowImg">
+{% for imgs in diary.img %}
+    {% if diary.imgLenth == 1 %}
+        <a href="/media/{{ imgs }}">
+            <img src="/media/{{ imgs }}" style="width: 95%;">
+        </a>
+    {% else %}
+        <a href="/media/{{ imgs }}">
+            <img src="/media/{{ imgs }}">
+        </a>
     {% endif %}
-    <div class="matter1_content" id="matter1_content">
-        {{ diary.content }}
+{% endfor %}
+</div>
+<ul class="comment_list">
+{% for comment in diary.comment %}
+<li class="comment">
+    <span class="nickname">{{ comment.nickname }}</span>
+    {% if comment.comment_to != None and comment.comment_to != '' %}
+        <span class="windowReply">回复</span>
+        <span class="comment_to">{{ comment.comment_to }}</span>
+    {% endif %}
+    <span class="comment-colon">:</span>
+    <span class="comment_content">{{ comment.content }}</span>
+    <span class="windowReplyButton"><a href="javascript:void(0)" onclick="clickReplyButton(this)">回复</a></span>
+</li>
+{% endfor %}
+</ul>
+<div class="windowComment" id="windowComment">
+    <div class="window-input-field">
+        <input id="comment_nike_name" type="text" placeholder="昵称 (选填)">
+        <span></span>
     </div>
-    <div class="windowImg">
-    {% for imgs in diary.img %}
-        {% if diary.imgLenth == 1 %}
-            <a href="/media/{{ imgs }}">
-                <img src="/media/{{ imgs }}" style="width: 95%;">
-            </a>
-        {% else %}
-            <a href="/media/{{ imgs }}">
-                <img src="/media/{{ imgs }}">
-            </a>
-        {% endif %}
-    {% endfor %}
+    <div class="window-input-field">
+        <input id="comment_user_email" type="text" placeholder="邮箱 (选填)">
+        <span></span>
     </div>
-    <div id="fill_window"></div>
-    <ul class="comment_list">
-    {% for comment in diary.comment %}
-    <li class="comment">
-        <span class="nickname">{{ comment.nickname }}</span>
-        {% if comment.comment_to != None and comment.comment_to != '' %}
-            <span class="windowReply">回复</span>
-            <span class="comment_to">{{ comment.comment_to }}</span>
-        {% endif %}
-        <span class="comment-colon">:</span>
-        <span class="comment_content">{{ comment.content }}</span>
-        <span class="windowReplyButton"><a href="javascript:void(0)" onclick="clickReplyButton(this)">回复</a></span>
-    </li>
-    {% endfor %}
-    </ul>
-    <div class="windowComment" id="windowComment">
-        <div class="window-input-field">
-            <input id="comment_nike_name" type="text" placeholder="昵称 (选填)">
-            <span></span>
-        </div>
-        <div class="window-input-field">
-            <input id="comment_user_email" type="text" placeholder="邮箱 (选填)">
-            <span></span>
-        </div>
-        <div class="window-input-field window-input-comment">
-            <input id="comment_comment" type="text" placeholder="发表您的观点">
-            <span></span>
-        </div>
-        <div class="window-comment-hint"></div>
-        <div class="window-submit-button">
-            <button class="window-bubbly-button" onclick="windowSendComment()">发送</button>
-            <script>
-                var animateButton = function(e) {
-                    e.preventDefault;
+    <div class="window-input-field window-input-comment">
+        <input id="comment_comment" type="text" placeholder="发表您的观点">
+        <span></span>
+    </div>
+    <div class="window-comment-hint"></div>
+    <div class="window-submit-button">
+        <button class="window-bubbly-button" onclick="windowSendComment()">发送</button>
+        <script>
+            var animateButton = function(e) {
+                e.preventDefault;
+                e.target.classList.remove('animate');
+                e.target.classList.add('animate');
+                setTimeout(function(){
                     e.target.classList.remove('animate');
-                    e.target.classList.add('animate');
-                    setTimeout(function(){
-                        e.target.classList.remove('animate');
-                    },700);
-                };
-                var classname = document.getElementsByClassName("window-bubbly-button");
-                for (var i = 0; i < classname.length; i++) {
-                    classname[i].addEventListener('click', animateButton, false);
-                }
-            </script>
-        </div>
+                },700);
+            };
+            var classname = document.getElementsByClassName("window-bubbly-button");
+            for (var i = 0; i < classname.length; i++) {
+                classname[i].addEventListener('click', animateButton, false);
+            }
+        </script>
     </div>
 </div>

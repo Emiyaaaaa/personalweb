@@ -136,15 +136,16 @@ $(document).ready(function() {
 
 	function myMarked(Ele){
 		var text = Ele.innerHTML.replace(/&gt;/g,'>'); //将全文的&gt;转换成>使其支持markdown的引用符
-		Ele.innerHTML = marked(text)
+		var markedHTMLObj = document.createElement('div')
+		var markedHTMLText = marked(text)// 初步markdown转换
 		//使markdown支持引用中的分段
-		EleHTML = Ele.innerHTML.replace(/<\/blockquote>\s{0,1}<blockquote>/g,'');//将可合并的blockquote合并，并添加<br/>，注意</blockquote>和<blockquote>之间会有一到两个\n
-		Ele.innerHTML = EleHTML;
+		markedHTMLObj.innerHTML = markedHTMLText.replace(/<\/blockquote>\s{0,1}<blockquote>/g,'');//将可合并的blockquote合并，并添加<br/>，注意</blockquote>和<blockquote>之间会有一到两个\n
 		//将code标签中的&lt;转换为<，&amp;转换为&
-		var codeEle = Ele.getElementsByTagName('code');
+		var codeEle = markedHTMLObj.getElementsByTagName('code');
 		for (var i = 0; i < codeEle.length; i++) {
 			codeEle[i].innerText = codeEle[i].innerText.replace(/&lt;/g,'<').replace(/&amp;/g,'&');
 		}
+		return markedHTMLObj.innerHTML;
 	}
 
 	//获取全文	
@@ -159,12 +160,16 @@ $(document).ready(function() {
 	        type:"GET",
 	        data:{"type":"matterPage",'matter':nowMatter,'text_id':href.split('?')[1].split('=')[1]},
 	        success:function(data){
-	        	document.getElementById('ajax_window_html').innerHTML = data;
+	        	ajax_window_html = document.getElementById('ajax_window_html');
+	        	var virtual_ajax_window_html = document.createElement('div');
+	        	virtual_ajax_window_html.innerHTML = data;
 	        	// 修改matter0内容
 	        	try{
-	        		var mardownBodyObj = document.getElementById('markdownBody');
+	        		var mardownBodyObj = virtual_ajax_window_html.getElementsByClassName('markdown-body')[0];
 	        		mardownBodyObj.innerHTML = mardownBodyObj.innerHTML.replace(/\$s\$/g,' ').replace(/\$n\$/g,'\n').replace(/\$t\$/g,'\t')
-	        		myMarked(mardownBodyObj);
+	        		mardownBodyObj.innerHTML = myMarked(mardownBodyObj);
+	        		ajax_window_html.innerHTML = virtual_ajax_window_html.innerHTML;
+
 	        	}
 	        	catch(err){console.log('matter0:error    '+String(err))}
 

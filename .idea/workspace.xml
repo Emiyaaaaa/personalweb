@@ -151,7 +151,7 @@
       <recent name="E:\python\untitled\草稿箱" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.set_password">
+  <component name="RunManager" selected="Django Server.personalweb">
     <configuration default="true" type="DjangoTestsConfigurationType">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -452,7 +452,7 @@
       <option name="port" value="8000" />
       <option name="host" value="" />
       <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="http://127.0.0.1:8000/" />
+      <option name="browserUrl" value="" />
       <option name="runTestServer" value="false" />
       <option name="runNoReload" value="false" />
       <option name="useCustomRunCommand" value="false" />
@@ -716,6 +716,7 @@
       <workItem from="1594711572144" duration="1000" />
       <workItem from="1595317012024" duration="68000" />
       <workItem from="1595406355291" duration="392000" />
+      <workItem from="1595745155253" duration="2131000" />
     </task>
     <task id="LOCAL-00115" summary="打开窗口部分的代码重构">
       <created>1541317972699</created>
@@ -1121,10 +1122,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="194" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594280048476">
+    <state x="194" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595746025450">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state x="194" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.760@0.0.1280.760" timestamp="1594280048476" />
+    <state x="194" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.760@0.0.1280.760" timestamp="1595746025450" />
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588346870631" />
     <state x="390" y="250" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1594128422472">
       <screen x="0" y="0" width="1280" height="760" />
@@ -1135,25 +1136,25 @@
     </state>
     <state x="513" y="199" key="FileChooserDialogImpl/0.0.1280.760@0.0.1280.760" timestamp="1595317057122" />
     <state x="770" y="272" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1588339079937" />
-    <state width="1204" height="353" key="GridCell.Tab.0.bottom" timestamp="1594280052675">
+    <state width="1204" height="353" key="GridCell.Tab.0.bottom" timestamp="1595746137592">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1204" height="353" key="GridCell.Tab.0.bottom/0.0.1280.760@0.0.1280.760" timestamp="1594280052675" />
+    <state width="1204" height="353" key="GridCell.Tab.0.bottom/0.0.1280.760@0.0.1280.760" timestamp="1595746137592" />
     <state width="1877" height="347" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588348345675" />
-    <state width="1204" height="353" key="GridCell.Tab.0.center" timestamp="1594280052674">
+    <state width="1204" height="353" key="GridCell.Tab.0.center" timestamp="1595746137592">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1204" height="353" key="GridCell.Tab.0.center/0.0.1280.760@0.0.1280.760" timestamp="1594280052674" />
+    <state width="1204" height="353" key="GridCell.Tab.0.center/0.0.1280.760@0.0.1280.760" timestamp="1595746137592" />
     <state width="1877" height="347" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588348345675" />
-    <state width="1204" height="353" key="GridCell.Tab.0.left" timestamp="1594280052674">
+    <state width="1204" height="353" key="GridCell.Tab.0.left" timestamp="1595746137592">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1204" height="353" key="GridCell.Tab.0.left/0.0.1280.760@0.0.1280.760" timestamp="1594280052674" />
+    <state width="1204" height="353" key="GridCell.Tab.0.left/0.0.1280.760@0.0.1280.760" timestamp="1595746137592" />
     <state width="1877" height="347" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588348345675" />
-    <state width="1204" height="353" key="GridCell.Tab.0.right" timestamp="1594280052675">
+    <state width="1204" height="353" key="GridCell.Tab.0.right" timestamp="1595746137592">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1204" height="353" key="GridCell.Tab.0.right/0.0.1280.760@0.0.1280.760" timestamp="1594280052675" />
+    <state width="1204" height="353" key="GridCell.Tab.0.right/0.0.1280.760@0.0.1280.760" timestamp="1595746137592" />
     <state width="1877" height="347" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588348345675" />
     <state width="1877" height="347" key="GridCell.Tab.1.bottom" timestamp="1588348345675">
       <screen x="0" y="0" width="1920" height="1040" />

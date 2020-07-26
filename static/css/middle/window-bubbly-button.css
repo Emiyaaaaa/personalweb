@@ -20,7 +20,7 @@
   -moz-transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
   -ms-transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
 
-  box-shadow: 0 2px 25px rgba(140, 140, 140, 0.8);
+  box-shadow: 0 2px 15px rgba(140, 140, 140, 0.8);
 
 }
 

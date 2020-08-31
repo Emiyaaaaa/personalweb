@@ -13,7 +13,7 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url,include
+from django.conf.urls import url, include
 from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
@@ -37,8 +37,8 @@ urlpatterns = [
     url(r'^$', mainPage.ajax_main),
     url(r'^xadmin/', xadmin.site.urls),
     url(r'^admin/', admin.site.urls),
-    url(r'^404$',NotFoundPageView.as_view()),
-    url(r'^hexconvert$',HexconvertView.as_view()),
+    url(r'^404$', NotFoundPageView.as_view()),
+    url(r'^hexconvert$', HexconvertView.as_view()),
     url(r'^zhihu-video-download/mzsm$', ZhuhuVideoDownloadView().get_mzsm),
     url(r'^zhihu-video-download/(?P<url>[\S\s]*)', ZhuhuVideoDownloadView.as_view()),
     url(r'^bilibiliCoverDownload$', BilibiliCoverDownloadView.as_view()),
@@ -52,9 +52,9 @@ urlpatterns = [
     url(r'^liveAtc/mzsm$', LiveAtcView().get_mzsm),
     url(r'^computerVocabulary', ComputerVocabularyView.as_view()),
     url(r'api/getWeatherJson', getWeatherJson().getWeatherJson),
-    url(r'^markdown/',include('markdown.urls')),
+    url(r'^markdown/', include('markdown.urls')),
     url(r'^dwz', DwzView.as_view()),
     url(r'^e-note', TemplateView.as_view(template_name='e-note/index.html')),
 ]
-urlpatterns += static(settings.MEDIA_URL , document_root = settings.MEDIA_ROOT )
-urlpatterns += static(settings.STATIC_URL, document_root = settings.STATIC_ROOT )
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

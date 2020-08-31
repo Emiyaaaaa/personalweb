@@ -54,7 +54,7 @@ urlpatterns = [
     url(r'api/getWeatherJson', getWeatherJson().getWeatherJson),
     url(r'^markdown/', include('markdown.urls')),
     url(r'^dwz', DwzView.as_view()),
-    url(r'^e-note', TemplateView.as_view(template_name='e-note/index.html')),
+    url(r'^e-note/((?!static).)*$', TemplateView.as_view(template_name='e-note/index.html')),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

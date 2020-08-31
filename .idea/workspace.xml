@@ -680,7 +680,8 @@
       <workItem from="1595826672739" duration="609000" />
       <workItem from="1595850123733" duration="798000" />
       <workItem from="1596029302926" duration="19000" />
-      <workItem from="1598855632788" duration="5491000" />
+      <workItem from="1598855632788" duration="6834000" />
+      <workItem from="1598868578263" duration="2403000" />
     </task>
     <task id="LOCAL-00115" summary="打开窗口部分的代码重构">
       <created>1541317972699</created>
@@ -1098,22 +1099,22 @@
       <screen x="0" y="0" width="1280" height="760" />
     </state>
     <state x="513" y="199" key="FileChooserDialogImpl/0.0.1280.760@0.0.1280.760" timestamp="1596029319308" />
-    <state width="1238" height="294" key="GridCell.Tab.0.bottom" timestamp="1598860970831">
+    <state width="1238" height="294" key="GridCell.Tab.0.bottom" timestamp="1598864160703">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1238" height="294" key="GridCell.Tab.0.bottom/0.0.1280.760@0.0.1280.760" timestamp="1598860970831" />
-    <state width="1238" height="294" key="GridCell.Tab.0.center" timestamp="1598860970830">
+    <state width="1238" height="294" key="GridCell.Tab.0.bottom/0.0.1280.760@0.0.1280.760" timestamp="1598864160703" />
+    <state width="1238" height="294" key="GridCell.Tab.0.center" timestamp="1598864160703">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1238" height="294" key="GridCell.Tab.0.center/0.0.1280.760@0.0.1280.760" timestamp="1598860970830" />
-    <state width="1238" height="294" key="GridCell.Tab.0.left" timestamp="1598860970830">
+    <state width="1238" height="294" key="GridCell.Tab.0.center/0.0.1280.760@0.0.1280.760" timestamp="1598864160703" />
+    <state width="1238" height="294" key="GridCell.Tab.0.left" timestamp="1598864160702">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1238" height="294" key="GridCell.Tab.0.left/0.0.1280.760@0.0.1280.760" timestamp="1598860970830" />
-    <state width="1238" height="294" key="GridCell.Tab.0.right" timestamp="1598860970831">
+    <state width="1238" height="294" key="GridCell.Tab.0.left/0.0.1280.760@0.0.1280.760" timestamp="1598864160702" />
+    <state width="1238" height="294" key="GridCell.Tab.0.right" timestamp="1598864160703">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1238" height="294" key="GridCell.Tab.0.right/0.0.1280.760@0.0.1280.760" timestamp="1598860970831" />
+    <state width="1238" height="294" key="GridCell.Tab.0.right/0.0.1280.760@0.0.1280.760" timestamp="1598864160703" />
     <state x="286" y="51" key="SettingsEditor" timestamp="1594178451061">
       <screen x="0" y="0" width="1280" height="760" />
     </state>

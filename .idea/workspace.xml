@@ -62,47 +62,6 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>postdate0</find>
-      <find>emiwjb</find>
-      <find>postdate</find>
-      <find>uid</find>
-      <find>33842236</find>
-      <find>vertical-align:top' id='postcontai.*?&lt;a n</find>
-      <find>func=ucp&amp;uid=33842236</find>
-      <find>func=ucp&amp;uid=33842236.*?\n</find>
-      <find>&lt;span id='postcontent\d+'.*?&gt;(.*?)&lt;/span&gt;</find>
-      <find>/[img](.*?)/[/img]</find>
-      <find>\[img](.*?)\[\/img\]</find>
-      <find>id='postcontent</find>
-      <find>id='postcontent(\d+)'.*?&gt;(.*?)&lt;/</find>
-      <find>[</find>
-      <find>]</find>
-      <find>\[s:ac:.*?\]</find>
-      <find>&lt;.*? id='postdate(\d+)'</find>
-      <find>\[img width=(\d*)</find>
-      <find>\[img width=&quot;(\d+)&quot;</find>
-      <find>&gt;[^&lt;](.+?)[^&gt;]&lt;</find>
-      <find>电臀</find>
-      <find>&lt;script&gt;\n[\s\S]+?&lt;/script&gt;</find>
-      <find>&lt;/g&gt;</find>
-      <find>&lt;/style&gt;\n\s+&lt;/div&gt;</find>
-      <find>subject</find>
-      <find>阳泉</find>
-      <find>ul1</find>
-      <find>7314</find>
-      <find>date</find>
-      <find>dat</find>
-    </findStrings>
-    <replaceStrings>
-      <replace />
-      <replace>codeComment</replace>
-    </replaceStrings>
-    <dirStrings>
-      <dir>E:\python\personalweb</dir>
-    </dirStrings>
-  </component>
   <component name="Git.Settings">
     <option name="PUSH_TAGS">
       <GitPushTagMode>
@@ -449,7 +408,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="launchJavascriptDebuger" value="false" />
-      <option name="port" value="8000" />
+      <option name="port" value="8010" />
       <option name="host" value="" />
       <option name="additionalOptions" value="" />
       <option name="browserUrl" value="" />
@@ -718,6 +677,10 @@
       <workItem from="1595406355291" duration="392000" />
       <workItem from="1595745155253" duration="3407000" />
       <workItem from="1595768733687" duration="624000" />
+      <workItem from="1595826672739" duration="609000" />
+      <workItem from="1595850123733" duration="798000" />
+      <workItem from="1596029302926" duration="19000" />
+      <workItem from="1598855632788" duration="3587000" />
     </task>
     <task id="LOCAL-00115" summary="打开窗口部分的代码重构">
       <created>1541317972699</created>
@@ -1123,66 +1086,43 @@
     <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="194" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595746025450">
+    <state x="194" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598856115475">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state x="194" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.760@0.0.1280.760" timestamp="1595746025450" />
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588346870631" />
+    <state x="194" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.760@0.0.1280.760" timestamp="1598856115475" />
     <state x="390" y="250" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1594128422472">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
     <state x="390" y="250" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.1280.760@0.0.1280.760" timestamp="1594128422472" />
-    <state x="513" y="199" key="FileChooserDialogImpl" timestamp="1595317057122">
+    <state x="513" y="199" key="FileChooserDialogImpl" timestamp="1596029319308">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state x="513" y="199" key="FileChooserDialogImpl/0.0.1280.760@0.0.1280.760" timestamp="1595317057122" />
-    <state x="770" y="272" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1588339079937" />
-    <state width="1204" height="353" key="GridCell.Tab.0.bottom" timestamp="1595768065466">
+    <state x="513" y="199" key="FileChooserDialogImpl/0.0.1280.760@0.0.1280.760" timestamp="1596029319308" />
+    <state width="1238" height="294" key="GridCell.Tab.0.bottom" timestamp="1598858221082">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1204" height="353" key="GridCell.Tab.0.bottom/0.0.1280.760@0.0.1280.760" timestamp="1595768065466" />
-    <state width="1877" height="347" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588348345675" />
-    <state width="1204" height="353" key="GridCell.Tab.0.center" timestamp="1595768065465">
+    <state width="1238" height="294" key="GridCell.Tab.0.bottom/0.0.1280.760@0.0.1280.760" timestamp="1598858221082" />
+    <state width="1238" height="294" key="GridCell.Tab.0.center" timestamp="1598858221082">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1204" height="353" key="GridCell.Tab.0.center/0.0.1280.760@0.0.1280.760" timestamp="1595768065465" />
-    <state width="1877" height="347" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588348345675" />
-    <state width="1204" height="353" key="GridCell.Tab.0.left" timestamp="1595768065465">
+    <state width="1238" height="294" key="GridCell.Tab.0.center/0.0.1280.760@0.0.1280.760" timestamp="1598858221082" />
+    <state width="1238" height="294" key="GridCell.Tab.0.left" timestamp="1598858221082">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1204" height="353" key="GridCell.Tab.0.left/0.0.1280.760@0.0.1280.760" timestamp="1595768065465" />
-    <state width="1877" height="347" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588348345675" />
-    <state width="1204" height="353" key="GridCell.Tab.0.right" timestamp="1595768065465">
+    <state width="1238" height="294" key="GridCell.Tab.0.left/0.0.1280.760@0.0.1280.760" timestamp="1598858221082" />
+    <state width="1238" height="294" key="GridCell.Tab.0.right" timestamp="1598858221082">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state width="1204" height="353" key="GridCell.Tab.0.right/0.0.1280.760@0.0.1280.760" timestamp="1595768065465" />
-    <state width="1877" height="347" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588348345675" />
-    <state width="1877" height="347" key="GridCell.Tab.1.bottom" timestamp="1588348345675">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="347" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588348345675" />
-    <state width="1877" height="347" key="GridCell.Tab.1.center" timestamp="1588348345675">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="347" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588348345675" />
-    <state width="1877" height="347" key="GridCell.Tab.1.left" timestamp="1588348345675">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="347" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588348345675" />
-    <state width="1877" height="347" key="GridCell.Tab.1.right" timestamp="1588348345675">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="347" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588348345675" />
+    <state width="1238" height="294" key="GridCell.Tab.0.right/0.0.1280.760@0.0.1280.760" timestamp="1598858221082" />
     <state x="286" y="51" key="SettingsEditor" timestamp="1594178451061">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
     <state x="286" y="51" key="SettingsEditor/0.0.1280.760@0.0.1280.760" timestamp="1594178451061" />
-    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1588336298435" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/personalweb_master$sendEmail.coverage" NAME="sendEmail Coverage Results" MODIFIED="1595406480176" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/ngaShadiaoImage" />
     <SUITE FILE_PATH="coverage/personalweb$.coverage" NAME="守望先锋柱形图 Coverage Results" MODIFIED="1585542312803" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../untitled/草稿箱" />
-    <SUITE FILE_PATH="coverage/personalweb_master$set_password.coverage" NAME="set_password Coverage Results" MODIFIED="1595406537806" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
+    <SUITE FILE_PATH="coverage/personalweb_master$set_password.coverage" NAME="set_password Coverage Results" MODIFIED="1595850314977" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
   </component>
   <component name="masterDetails">
     <states>

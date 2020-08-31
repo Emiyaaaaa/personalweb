@@ -44,12 +44,12 @@ function lazyLoad(){
     for (var i = 0; i < floorEle.length; i++) {
         if(floorEle[i].offsetTop < clients + scrollTop && floorEle[i].offsetTop + floorEle[i].offsetHeight > clients + scrollTop){
             document.getElementById('floor_num').innerText = (i+1) + 'L';
-            loadThisFloor(i, scrollTop, clients);
+            loadThisFloor(i, scrollTop, clients);// 加载本楼
             if (floorEle[i].offsetTop > scrollTop) {
-                loadLastFloor(i-1);
+                loadLastFloor(i-1);// 加载上层楼
             }
             if (floorEle[i].offsetTop + floorEle[i].offsetHeight - clients + scrollTop < 100){
-                loadNextFloor(i+1);
+                loadNextFloor(i+1);// 加载下层楼
             }
             break;
         }

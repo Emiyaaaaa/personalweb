@@ -17,6 +17,8 @@ from django.conf.urls import url,include
 from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
+from django.views.generic import TemplateView
+
 from diary.views import DiaryView
 from codeDiary.views import CodeDiaryView
 from notFoundPage.views import NotFoundPageView
@@ -51,7 +53,8 @@ urlpatterns = [
     url(r'^computerVocabulary', ComputerVocabularyView.as_view()),
     url(r'api/getWeatherJson', getWeatherJson().getWeatherJson),
     url(r'^markdown/',include('markdown.urls')),
-    url(r'^dwz', DwzView.as_view())
+    url(r'^dwz', DwzView.as_view()),
+    url(r'^e-note', TemplateView.as_view(template_name='e-note/index.html')),
 ]
 urlpatterns += static(settings.MEDIA_URL , document_root = settings.MEDIA_ROOT )
 urlpatterns += static(settings.STATIC_URL, document_root = settings.STATIC_ROOT )

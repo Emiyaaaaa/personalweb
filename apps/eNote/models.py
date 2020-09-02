@@ -5,6 +5,7 @@ from django.db import models
 
 class ENote(models.Model):
     text_id = models.AutoField(primary_key=True)
+    path = models.TextField(verbose_name="路径", default='')
     title = models.CharField(max_length=200, verbose_name=u'标题')
     content = models.TextField(verbose_name=u'正文')
     tag = models.CharField(max_length=50, verbose_name=u'标签', null=True, blank=True)

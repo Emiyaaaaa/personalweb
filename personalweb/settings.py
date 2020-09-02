@@ -56,7 +56,8 @@ INSTALLED_APPS = [
     'applications',
     'computerVocabulary',
     'goodGoodStudy',
-    'dwz'
+    'dwz',
+    'eNote',
 ]
 
 MIDDLEWARE = [

@@ -88,26 +88,26 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="database.console.LAST_STATE" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/apps/eNote" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\python\personalweb\apps" />
-      <recent name="E:\python\untitled\草稿箱\邮件机器人" />
-      <recent name="E:\python\untitled\草稿箱" />
-      <recent name="E:\python\personalweb\extra_apps" />
-      <recent name="E:\python\personalweb\apps\changeLog" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\python\personalweb-master\apps\eNote" />
       <recent name="E:\python\personalweb\apps" />
       <recent name="E:\python\personalweb\apps\computerVocabulary" />
       <recent name="E:\python\personalweb\apps\ngaShadiaoImage" />
       <recent name="E:\python\personalweb\tools" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\python\personalweb-master\apps" />
+      <recent name="E:\python\personalweb\apps" />
+      <recent name="E:\python\untitled\草稿箱\邮件机器人" />
       <recent name="E:\python\untitled\草稿箱" />
+      <recent name="E:\python\personalweb\extra_apps" />
     </key>
   </component>
   <component name="RunManager" selected="Django Server.personalweb">
@@ -681,7 +681,8 @@
       <workItem from="1595850123733" duration="798000" />
       <workItem from="1596029302926" duration="19000" />
       <workItem from="1598855632788" duration="6834000" />
-      <workItem from="1598868578263" duration="2403000" />
+      <workItem from="1598868578263" duration="2991000" />
+      <workItem from="1599017856553" duration="3570000" />
     </task>
     <task id="LOCAL-00115" summary="打开窗口部分的代码重构">
       <created>1541317972699</created>
